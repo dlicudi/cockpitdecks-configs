@@ -17,3 +17,9 @@ buttons:
     page: pfi
     colored-led: green
 
+  - index: b4
+    name: P4
+    type: page
+    page: fcu
+    colored-led: green
+

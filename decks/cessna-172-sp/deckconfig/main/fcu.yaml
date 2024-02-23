@@ -1,0 +1,302 @@
+description: FCU
+includes: pager
+name: fcu
+
+buttons:
+# KNOBS 1 to 7
+  - index: e0
+    name: FCU Airspeed
+    type: encoder-push
+    commands:
+      - sim/autopilot/airspeed_sync
+      - sim/autopilot/airspeed_down
+      - sim/autopilot/airspeed_up
+    long-press: AirbusFBW/PullSPDSel
+  - index: e1
+    name: FCU Heading
+    type: encoder-push
+    commands:
+      - sim/autopilot/heading_sync
+      - sim/autopilot/heading_down
+      - sim/autopilot/heading_up
+    long-press: AirbusFBW/PullHDGSel
+  - index: e2
+    name: FCU Baro
+    type: encoder-push
+    commands:
+      - sim/instruments/barometer_std
+      - sim/instruments/barometer_down
+      - sim/instruments/barometer_up
+    options: modulo
+  - index: e3
+    name: FCU Altitude
+    type: encoder-push
+    commands:
+      - sim/autopilot/altitude_sync
+      - sim/autopilot/altitude_down
+      - sim/autopilot/altitude_up
+    long-press: AirbusFBW/PullAltitude
+  - index: e4
+    name: FCU V Speed
+    type: encoder-value
+    dataref: sim/cockpit/autopilot/vertical_velocity
+    step: 100
+    stepxl: 1000
+    value: 0
+    value-min: -6000
+    value-max: 6000
+    set-dataref: sim/cockpit/autopilot/vertical_velocity
+    commands:
+      - AirbusFBW/PullVSSel
+      - AirbusFBW/PushVSSel
+  - index: e5
+    name: FCU Unused
+    type: none
+    options: nostate
+
+# KEYS 1 to 12
+
+  - index: 0
+    name: AP
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/servos_on}
+        B1:
+          text: AP
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/servos_toggle
+    vibrate: RUMBLE5
+
+  - index: 1
+    name: FD
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/flight_director_mode}
+        B1:
+          text: FD
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/fdir_toggle
+    vibrate: RUMBLE5
+
+
+  - index: 2
+    name: HDG
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/heading_mode}
+        B1:
+          text: HDG
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/heading
+    vibrate: RUMBLE5
+
+  - index: 3
+    name: ALT
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/altitude_hold_armed} not
+        B1:
+          text: ALT
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/altitude_hold
+    vibrate: RUMBLE5
+
+
+  - index: 4
+    name: NAV
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/nav_status}
+        B1:
+          text: NAV
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/NAV
+    vibrate: RUMBLE5
+
+
+  - index: 5
+    name: VNV
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/vnav_status}
+        B1:
+          text: VNV
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/vnav
+    vibrate: RUMBLE5
+
+
+  - index: 6
+    name: APR
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/approach_status}
+        B1:
+          text: APR
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/approach
+    vibrate: RUMBLE5
+
+
+  - index: 7
+    name: BC
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/backcourse_status}
+        B1:
+          text: BC
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/back_course
+    vibrate: RUMBLE5
+
+
+
+  - index: 8
+    name: VS
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/altitude_mode} 4 eq
+        B1:
+          text: VS
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/vertical_speed
+    vibrate: RUMBLE5
+
+
+
+  - index: 9
+    name: FLC
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/speed_status}
+        B1:
+          text: FLC
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/speed_hold
+    vibrate: RUMBLE5
+
+#
+# SIDE KEYS
+#
+# Note: For type side, you MUST give either an icon at proper size or a icon-color.
+  - index: left
+    name: FCU-L
+    type: none
+    multi-datarefs:
+      - sim/cockpit2/autopilot/airspeed_dial_kts_mach
+      - sim/cockpit/autopilot/heading_mag
+      - sim/cockpit/autopilot/airspeed_is_mach
+      - AirbusFBW/HDGTRKmode
+      - AirbusFBW/SPDmanaged
+      - AirbusFBW/HDGmanaged
+      - AirbusFBW/SPDdashed
+      - AirbusFBW/HDGdashed
+      - AirbusFBW/BaroStdCapt
+      - AirbusFBW/BaroUnitCapt
+      - sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot
+    fcu:
+      mode: vertical-left
+      text-size: 36
+      text-font: B612-Bold
+      text-color: "gold"
+      value-size: 48
+      value-font: Segment7Standard
+      value-color: "white"
+  - index: right
+    name: FCU-R
+    type: none
+    multi-datarefs:
+      - sim/cockpit2/autopilot/altitude_dial_ft
+      - sim/cockpit/autopilot/vertical_velocity
+      - AirbusFBW/HDGTRKmode
+      - AirbusFBW/ALTmanaged
+      - AirbusFBW/VSdashed
+    fcu:
+      mode: vertical-right
+      text-size: 36
+      text-font: B612-Bold
+      text-color: "gold"
+      value-size: 48
+      value-font: Segment7Standard
+      value-color: "white"
+
