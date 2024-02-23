@@ -1,0 +1,78 @@
+name: pfi
+includes: pager
+
+buttons:
+
+- index: 0
+  name: ALTITUDE
+  type: none
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: green
+        text-size: 42
+        formula: ${sim/cockpit2/gauges/indicators/altitude_ft_pilot} round
+        text: ${formula}
+      B1:
+        text: ALTITUDE
+        text-size: 42
+        text-font: DIN Bold
+        formula: "1"
+
+- index: 1
+  name: HEADING
+  type: none
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: green
+        text-size: 36
+        formula: ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag} round
+        text: ${formula}
+      B1:
+        text: HEADING
+        text-size: 42
+        text-font: DIN Bold
+        formula: "1"
+
+- index: 2
+  name: AIRSPEED
+  type: none
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: green
+        text-size: 36
+        formula: ${sim/cockpit2/gauges/indicators/airspeed_kts_pilot} round
+        text: ${formula}
+      B1:
+        text: AIRSPEED
+        text-size: 42
+        text-font: DIN Bold
+        formula: "1"
+
+
+- index: 3
+  name: VVI
+  type: none
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: green
+        text-size: 36
+        formula: ${sim/cockpit2/gauges/indicators/vvi_fpm_pilot} round
+        text: ${formula}
+      B1:
+        text: VVI
+        text-size: 42
+        text-font: DIN Bold
+        formula: "1"
+

@@ -1,0 +1,6 @@
+# This is at layout level
+default-icon-color: (94, 111, 130)
+default-label-color: blue
+default-label-font: DIN Bold.ttf
+default-label-size: 13
+default-page-name: page1

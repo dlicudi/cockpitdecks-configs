@@ -1,0 +1,8 @@
+# Definition of decks for Cessna 172 SP
+#
+aircraft: Cessna 172 SP
+decks:
+  - name: XPLive
+    type: loupedecklive
+    layout: main
+    brightness: 70

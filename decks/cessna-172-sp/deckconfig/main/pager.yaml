@@ -1,0 +1,19 @@
+buttons:
+  - index: b1
+    name: P1
+    type: page
+    page: page1
+    colored-led: green
+
+  - index: b2
+    name: P2
+    type: page
+    page: radio
+    colored-led: green
+
+  - index: b3
+    name: P3
+    type: page
+    page: pfi
+    colored-led: green
+
