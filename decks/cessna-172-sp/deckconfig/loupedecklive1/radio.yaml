@@ -41,8 +41,6 @@ buttons:
         text-font: DIN Bold
         formula: "1"
 
-
-
 - index: 2
   name: COM1
   type: none
@@ -81,6 +79,36 @@ buttons:
         text-font: DIN Bold
         formula: "1"
 
+- index: 4
+  name: PRESSURE
+  type: none
+  data:
+    top-line-color: deepskyblue
+    top-line-width: 10
+    icon: "fa:gauge"
+    icon-size: 60
+    icon-color: deepskyblue
+    data: ${formula}
+    data-format: "{:04.0f}"
+    data-font: DIN Condensed Light
+    data-size: 80
+    data-color: white
+#      data-unit: "hPa"
+    formula: ${data:weather:pressure}
+    bottomline: hPa
+    bottomline-size: 30
+    bottomline-color: red
+    mark: ${fa:arrow-right}
+    mark-size: 20
+    mark-font: fontawesome.otf
+    mark-color: red
+
+- index: 5
+  name: METAR
+  type: none
+  label: "Weather"
+  weather:
+    weather-font: B612
 
 - index: 6
   name: COM1
@@ -108,21 +136,41 @@ buttons:
         text-size: 48
         formula: "1"
 
+- index: 7
+  name: QNH
+  type: none
+  label: "INHG"
+  text: "${sim/weather/barometer_current_inhg}"
+  text-format: "{0:.2f}"
+  text-size: 18
 
-- index: 10
-  name: AP
-  type: push
+- index: 11
+  name: XPDR
+  type: none
   annunciator:
-    size: full
+    size: medium
     model: B
     parts:
       B0:
-        color: lime
-        led: bars
-        formula: ${sim/cockpit2/autopilot/servos_on}
+        color: green
+        text-size: 36
+        formula: ${data:transponder_code}
+        text: ${formula}
+        text-format: "{0:.0f}"
+
       B1:
-        text: AP1
+        text: XPDR
         text-size: 60
         text-font: DIN Bold
         formula: "1"
-  command: sim/autopilot/servos_toggle
+
+- index: e5
+  name: XPDR_KNOB
+  type: encoder-value
+  step: 1
+  stepxl: 100
+  value-min: 0
+  value-max: 7777
+  initial-value: 1200
+  set-dataref: data:transponder_code
+

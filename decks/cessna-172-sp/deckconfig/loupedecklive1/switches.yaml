@@ -1,0 +1,226 @@
+description: Switch Panel
+includes: pager
+name: switches
+
+buttons:
+  - index: 0
+    type: longpress
+    label: "START"
+    command: sim/ignition/engage_starter_1
+    push-switch:
+      button-size: 90
+      button-fill-color: red
+      button-stroke-width: 0
+      witness-size: 1
+
+  - index: 1
+    type: onoff
+    label: ALTERNATOR
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        dataref: sim/cockpit2/electrical/generator_on[0]
+    set-dataref: sim/cockpit2/electrical/generator_on[0]
+
+  - index: 2
+    type: onoff
+    label: BATTERY
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/electrical/battery_on[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        dataref: sim/cockpit/electrical/battery_on[0]
+    set-dataref: sim/cockpit/electrical/battery_on[0]
+
+  - index: 3
+    type: onoff
+    label: FUEL PUMP
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/engine/fuel_pump_on[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        dataref: sim/cockpit/engine/fuel_pump_on[0]
+    set-dataref: sim/cockpit/engine/fuel_pump_on[0]
+
+  - index: 4
+    type: onoff
+    label: BCN
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/beacon_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        dataref: sim/cockpit2/switches/beacon_on[0]
+    set-dataref: sim/cockpit2/switches/beacon_on[0]
+
+  - index: 5
+    type: onoff
+    label: LAND
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        framed: true
+        formula: ${sim/cockpit/electrical/landing_lights_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
+    set-dataref: sim/cockpit/electrical/landing_lights_on
+    vibrate: LONG
+
+  - index: 6
+    type: onoff
+    label: TAXI
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/electrical/taxi_light_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        dataref: sim/cockpit/electrical/taxi_light_on
+    set-dataref: sim/cockpit/electrical/taxi_light_on
+
+  - index: 7
+    type: onoff
+    label: NAV
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        dataref: sim/cockpit2/switches/navigation_lights_on
+    set-dataref: sim/cockpit2/switches/navigation_lights_on
+
+  - index: 8
+    type: onoff
+    label: STRB
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        dataref: sim/cockpit2/switches/strobe_lights_on
+    set-dataref: sim/cockpit2/switches/strobe_lights_on
+
+  - index: 9
+    type: onoff
+    label: PITOT
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/switches/pitot_heat_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        dataref: sim/cockpit/switches/pitot_heat_on
+    set-dataref: sim/cockpit/switches/pitot_heat_on
+    vibrate: RUMBLE5
+
+  - index: 10
+    type: onoff
+    label: AVIONICS 1
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/avionics_power_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        dataref: sim/cockpit2/switches/avionics_power_on
+    set-dataref: sim/cockpit2/switches/avionics_power_on
+
+  - index: 11
+    type: onoff
+    label: AVIONICS 2
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/cross_tie} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        dataref: sim/cockpit2/electrical/cross_tie
+    set-dataref: sim/cockpit2/electrical/cross_tie

@@ -1,0 +1,147 @@
+buttons:
+
+  - index: b1
+    name: P1
+    type: page
+    page: pfi
+    colored-led: green
+
+  - index: b2
+    name: P2
+    type: page
+    page: switches
+    colored-led: green
+
+  - index: b3
+    name: P3
+    type: page
+    page: fcu
+    colored-led: green
+
+  - index: b5
+    name: P5
+    type: page
+    page: engine
+    colored-led: green
+
+  - index: b6
+    name: P6
+    type: page
+    page: transponder
+    colored-led: green
+
+  - index: b7
+    name: P7
+    type: page
+    page: weather
+    colored-led: orange
+
+  - index: e0
+    name: FCU Airspeed
+    type: encoder-push
+    commands:
+      - sim/autopilot/airspeed_sync
+      - sim/autopilot/airspeed_down
+      - sim/autopilot/airspeed_up
+    long-press: AirbusFBW/PullSPDSel
+
+  - index: e1
+    name: FCU Heading
+    type: encoder-push
+    commands:
+      - sim/autopilot/heading_sync
+      - sim/autopilot/heading_down
+      - sim/autopilot/heading_up
+    long-press: AirbusFBW/PullHDGSel
+
+  - index: e2
+    name: FCU Baro
+    type: encoder-push
+    commands:
+      - sim/instruments/barometer_std
+      - sim/instruments/barometer_down
+      - sim/instruments/barometer_up
+    options: modulo
+
+  - index: e3
+    name: FCU Altitude
+    type: encoder-push
+    commands:
+      - sim/autopilot/altitude_sync
+      - sim/autopilot/altitude_down
+      - sim/autopilot/altitude_up
+    long-press: AirbusFBW/PullAltitude
+
+  - index: e4
+    name: FCU V Speed
+    type: encoder-value
+    dataref: sim/cockpit/autopilot/vertical_velocity
+    step: 100
+    stepxl: 1000
+    value: 0
+    value-min: -6000
+    value-max: 6000
+    set-dataref: sim/cockpit/autopilot/vertical_velocity
+    commands:
+      - AirbusFBW/PullVSSel
+      - AirbusFBW/PushVSSel
+
+  - index: e5
+    name: FCU XPDR
+    type: encoder-value
+    dataref: sim/cockpit/radios/transponder_code
+    step: 1
+    stepxl: 100
+    value: 1200
+    value-min: 0
+    value-max: 7777
+    set-dataref: sim/cockpit/radios/transponder_code
+    commands:
+      - AirbusFBW/PullVSSel
+      - AirbusFBW/PushVSSel
+
+
+#
+# SIDE KEYS
+#
+# Note: For type side, you MUST give either an icon at proper size or a icon-color.
+  - index: left
+    name: FCU-L
+    type: none
+    multi-datarefs:
+      - sim/cockpit2/autopilot/airspeed_dial_kts_mach
+      - sim/cockpit/autopilot/heading_mag
+      - sim/cockpit/autopilot/airspeed_is_mach
+      - AirbusFBW/HDGTRKmode
+      - AirbusFBW/SPDmanaged
+      - AirbusFBW/HDGmanaged
+      - AirbusFBW/SPDdashed
+      - AirbusFBW/HDGdashed
+      - AirbusFBW/BaroStdCapt
+      - AirbusFBW/BaroUnitCapt
+      - sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot
+    fcu:
+      mode: vertical-left
+      text-size: 36
+      text-font: B612-Bold
+      text-color: "gold"
+      value-size: 48
+      value-font: Segment7Standard
+      value-color: "white"
+  - index: right
+    name: FCU-R
+    type: none
+    multi-datarefs:
+      - sim/cockpit2/autopilot/altitude_dial_ft
+      - sim/cockpit/autopilot/vertical_velocity
+      - AirbusFBW/HDGTRKmode
+      - AirbusFBW/ALTmanaged
+      - AirbusFBW/VSdashed
+    fcu:
+      mode: vertical-right
+      text-size: 36
+      text-font: B612-Bold
+      text-color: "gold"
+      value-size: 48
+      value-font: Segment7Standard
+      value-color: "white"

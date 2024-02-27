@@ -1,0 +1,302 @@
+name: pfi
+includes: pager
+
+
+# PRIMARY/SECONDARY INSTRUMENTS
+# Airspeed Indicator: 1 DONE
+# Heading Indicator: 1
+# Altimeter: 1
+# Vertical Speed Indicator: 1
+# Fuel: 1
+# EGT/Fuel Flow: 1
+# Oil temp/press: 1
+# Vac/Amp: 1
+# Prop RPM + Hobbs: 1
+# VOR1/ILS Receiver: 1
+# VOR2: 1
+# ADF: 1
+
+buttons:
+
+  - index: 0 # Speed
+    name: SPD
+    type: none
+    label: SPD
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: A
+      parts:
+        A0:
+          color: lime
+          text-size: 100
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/airspeed_kts_pilot}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+
+  - index: 1 # Heading
+    name: HDG
+    type: none
+    label: HDG
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: A
+      parts:
+        A0:
+          color: lime
+          text-size: 100
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/compass_heading_deg_mag}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+
+  - index: 2 # Altitude and baro
+    name: ALT
+    type: none
+    label: ALT
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          text-size: 80
+          # dararef-rpn: "${sim/cockpit2/gauges/indicators/altitude_ft_pilot}"
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/altitude_ft_pilot}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+        B1:
+          color: white
+          text-size: 32
+          # dataref-rpn: "${sim/cockpit/misc/barometer_setting} mb"
+          formula: "1"
+          text: "${sim/cockpit/misc/barometer_setting}"
+          text-format: "{0:.2f}"
+
+  - index: 3 # Heading
+    name: VS
+    type: none
+    label: VS
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: A
+      parts:
+        A0:
+          color: lime
+          text-size: 80
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/vvi_fpm_pilot}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+
+  - index: 4 # Fuel
+    name: FUEL
+    type: none
+    annunciator:
+      size: full
+      model: E
+      parts:
+        E0:
+          color: yellow
+          text-size: 32
+          formula: "${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn"
+          text: "${formula}\nLEFT"
+        E1:
+          color: yellow
+          text-size: 32
+          formula: "${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn"
+          text: "${formula}\nRIGHT"
+        E2:
+          text: "FUEL QTY\n(gallons)"
+          color: white
+          text-size: 32
+          formula: "1"
+
+  - index: 5 # EGT/Fuel Flow
+    name: FUEL
+    type: none
+    annunciator:
+      size: full
+      model: E
+      parts:
+        E0:
+          color: yellow
+          text-size: 32
+          formula: "${sim/cockpit2/engine/indicators/EGT_deg_cel[0]}"
+          text: "${formula}\nEGT"
+          text-format: "{0:.2f}"
+        E1:
+          color: yellow
+          text-size: 28
+          formula: "${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3600 * 0.8 / 3.78541"
+          text: "${formula} GPH\nFUEL FLOW"
+          text-format: "{0:.2f}"
+        E2:
+          text: "EGT/FUEL FLOW"
+          color: white
+          text-size: 32
+          formula: "1"
+
+  - index: 6 # Oil temp/press
+    name: OIL
+    type: none
+    annunciator:
+      size: full
+      model: E
+      parts:
+        E0:
+          color: yellow
+          text-size: 32
+          formula: "${sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]}"
+          text: "${formula} F\nTEMP"
+          text-format: "{0:.0f}"
+        E1:
+          color: yellow
+          text-size: 32
+          formula: "${sim/cockpit2/engine/indicators/oil_pressure_psi[0]}"
+          text: "${formula} PSI\nPRESS"
+          text-format: "{0:.0f}"
+        E2:
+          text: "OIL"
+          color: white
+          text-size: 70
+          formula: "1"
+
+  - index: 7 # Vac/Amp
+    name: VACAMP
+    type: none
+    annunciator:
+      size: full
+      model: E
+      parts:
+        E0:
+          color: yellow
+          text-size: 32
+          text: "${sim/cockpit/misc/vacuum}\nVAC"
+          text-format: "{0:.2f}"
+          formula: "1"
+        E1:
+          color: yellow
+          text-size: 32
+          text: "${laminar/c172/electrical/battery_amps}\nAMP"
+          text-format: "{0:.2f}"
+          formula: "1"
+        E2:
+          text: "VAC/AMP"
+          color: white
+          text-size: 50
+          formula: "1"
+
+  - index: 8 # prop rpm and hobbs (todo)
+    name: PROP_RPM
+    type: none
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: green
+          text-size: 42
+          formula: "${sim/cockpit2/engine/indicators/prop_speed_rpm[0]} round"
+          text: "${formula}"
+          text-format: "{0:.0f}"
+        B1:
+          text: PROP SPD
+          text-size: 42
+          text-font: DIN Bold
+          formula: "1"
+
+  - index: 9
+    name: CAUTION
+    type: none
+    label: CAUTION
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          text: "OIL PRESS"
+          text-color: firebrick
+          text-font: DIN Condensed Black.otf
+          text-size: 50
+          formula: ${sim/cockpit/warnings/annunciators/oil_pressure}
+        B1:
+          text: "VOLTS"
+          text-color: firebrick
+          text-font: DIN Condensed Black.otf
+          text-size: 50
+          formula: ${sim/cockpit/warnings/annunciators/low_voltage}
+
+  - index: 10
+    name: WARNING
+    type: none
+    label: WARNING
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          text: "L FUEL R"
+          text-color: darkorange
+          text-font: DIN Condensed Black.otf
+          text-size: 50
+          formula: ${sim/cockpit/warnings/annunciators/fuel_pressure}
+        B1:
+          text: "L VAC R"
+          text-color: darkorange
+          text-font: DIN Condensed Black.otf
+          text-size: 50
+          formula: ${sim/cockpit/warnings/annunciators/low_vacuum}
+
+
+  - index: 11
+    name: NAVAID
+    type: none
+    label: NAVAID
+    label-size: 6
+    label-color: black
+    annunciator:
+      size: large
+      model: F
+      parts:
+        F0:
+          text: "${sim/cockpit2/radios/indicators/nav1_gs_deflection_dots}\nGS"
+          text-color: green
+          text-font: Seven Segment.ttf
+          text-size: 40
+          text-format: "{0:.0f}"
+          formula: "1"
+        F1:
+          text: "${sim/cockpit2/radios/indicators/nav1_hdef_dot}\nNAV1"
+          text-color: green
+          text-font: Seven Segment.ttf
+          text-size: 40
+          text-format: "{0:.0f}"
+          formula: "1"
+        F2:
+          text: "${sim/cockpit2/radios/indicators/nav2_hdef_dot}\nNAV2"
+          text-color: green
+          text-font: Seven Segment.ttf
+          text-size: 40
+          text-format: "{0:.0f}"
+          formula: "1"
+        F3:
+          text: "${sim/cockpit2/radios/indicators/adf2_relative_bearing_deg}\nADF"
+          text-color: green
+          text-font: Seven Segment.ttf
+          text-size: 40
+          text-format: "{0:.0f}"
+          formula: "1"

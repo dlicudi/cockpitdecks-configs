@@ -1,0 +1,125 @@
+description: Transponder
+includes: pager
+name: transponder
+
+buttons:
+
+  - index: 0
+    type: push
+    label: "0"
+    command: sim/transponder/transponder_digit_0
+    push-switch:
+      button-size: 120
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+
+  - index: 1
+    type: push
+    label: "1"
+    command: sim/transponder/transponder_digit_1
+    push-switch:
+      button-size: 120
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+
+  - index: 2
+    type: push
+    label: "2"
+    command: sim/transponder/transponder_digit_2
+    push-switch:
+      button-size: 120
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+
+  - index: 3
+    type: push
+    label: "3"
+    command: sim/transponder/transponder_digit_3
+    push-switch:
+      button-size: 120
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+
+  - index: 4
+    type: push
+    label: "4"
+    command: sim/transponder/transponder_digit_4
+    push-switch:
+      button-size: 120
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+
+  - index: 5
+    type: push
+    label: "5"
+    command: sim/transponder/transponder_digit_5
+    push-switch:
+      button-size: 120
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+
+  - index: 6
+    type: push
+    label: "6"
+    command: sim/transponder/transponder_digit_6
+    push-switch:
+      button-size: 120
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+
+  - index: 7
+    type: push
+    label: "7"
+    command: sim/transponder/transponder_digit_7
+    push-switch:
+      button-size: 120
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+
+  - index: 8
+    name: XPDR1
+    type: none
+    annunciator:
+      size: full
+      model: B
+      parts:
+        B0:
+          color: yellow
+          text-size: 74
+          formula: "${sim/cockpit2/radios/actuators/transponder_code}"
+          text: "${formula}"
+          text-format: "{0:04.0f}"
+
+        B1:
+          text: "TRANSPONDER\nCODE"
+          text-size: 30
+          text-font: DIN Bold
+          formula: "1"
+
+
+  - index: 9
+    name: IDENT
+    type: push
+    annunciator:
+      size: full
+      model: B
+      parts:
+        B0:
+          color: yellow
+          led: bars
+          formula: ${sim/cockpit/radios/transponder_id}
+        B1:
+          text: IDENT
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/radios/transponder_ident
+    vibrate: RUMBLE5
