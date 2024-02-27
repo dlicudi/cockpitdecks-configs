@@ -22,24 +22,23 @@ buttons:
     command: sim/autopilot/servos_toggle
     vibrate: RUMBLE5
 
-  - index: 1
-    name: FD
-    type: push
-    annunciator:
-      size: medium
-      model: B
-      parts:
-        B0:
-          color: lime
-          led: bars
-          formula: ${sim/cockpit2/autopilot/flight_director_mode}
-        B1:
-          text: FD
-          text-size: 60
-          text-font: DIN Bold
-          formula: "1"
-    command: sim/autopilot/fdir_toggle
-    vibrate: RUMBLE5
+  # - index: 1
+  #   name: FD
+  #   type: push
+  #   annunciator:
+  #     size: medium
+  #     model: B
+  #     parts:
+  #       B0:
+  #         color: lime
+  #         led: bars
+  #         formula: ${sim/cockpit2/autopilot/flight_director_mode}
+  #       B1:
+  #         text: FD
+  #         text-size: 60
+  #         text-font: DIN Bold
+  #         formula: "1"
+  #   command: sim/autopilot/fdir_toggle
 
   - index: 2
     name: HDG
@@ -100,25 +99,24 @@ buttons:
     vibrate: RUMBLE5
 
 
-  - index: 5
-    name: VNV
-    type: push
-    annunciator:
-      size: medium
-      model: B
-      parts:
-        B0:
-          color: lime
-          led: bars
-          formula: ${sim/cockpit2/autopilot/vnav_status}
-        B1:
-          text: VNV
-          text-size: 60
-          text-font: DIN Bold
-          formula: "1"
-    command: sim/autopilot/vnav
-    vibrate: RUMBLE5
-
+  # - index: 5
+  #   name: VNV
+  #   type: push
+  #   annunciator:
+  #     size: medium
+  #     model: B
+  #     parts:
+  #       B0:
+  #         color: lime
+  #         led: bars
+  #         formula: ${sim/cockpit2/autopilot/vnav_status}
+  #       B1:
+  #         text: VNV
+  #         text-size: 60
+  #         text-font: DIN Bold
+  #         formula: "1"
+  #   command: sim/autopilot/vnav
+  #   vibrate: RUMBLE5
 
   - index: 6
     name: APR
@@ -141,7 +139,7 @@ buttons:
 
 
   - index: 7
-    name: BC
+    name: REV
     type: push
     annunciator:
       size: medium
@@ -158,8 +156,6 @@ buttons:
           formula: "1"
     command: sim/autopilot/back_course
     vibrate: RUMBLE5
-
-
 
   - index: 8
     name: VS
