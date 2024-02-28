@@ -128,3 +128,15 @@ Fuel is in kg and is converted to gallons using RPN 0.264172 *
 
 ### FLC
 *Not available on S-TEC 55 Autopilot model.*
+
+## Radios and Transponder Functions
+Placeholder
+
+## Engine Data
+Placeholder
+
+## Section 6 TODO
+Placeholder
+
+## Weather
+Placeholder
