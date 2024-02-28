@@ -1,10 +1,12 @@
 # Cessna 172 SP (G530 model)
 
+
 ## TODO
 - Radio/transponder page
 - Complete page for engine data
 
 ## Primary Instrument Display
+<img src="https://github.com/dlicudi/cockpitdecks-configs/assets/2129148/66a73b17-dec6-47a7-9cda-1aaee5aaadf9" align="right" width="400">
 
 ### Airspeed Indicator
 *Displays speed in knots.*
@@ -45,6 +47,7 @@ Fuel is in kg and is converted to gallons using RPN 0.264172 *
 *Display for navigation mode and also a push button to toggle between NAV (VLOC) and GPS.*
 
 ## Switch Panel
+<img src="https://github.com/dlicudi/cockpitdecks-configs/assets/2129148/b9daa4e4-d57a-43a3-bb09-acff8c53c0ae" align="right" width="400">
 
 ### Ignition
 *Starter motor long press push button.*
@@ -90,7 +93,10 @@ Fuel is in kg and is converted to gallons using RPN 0.264172 *
 - VOR2
 - ADF
 
+
 ## Flight Control Unit (FCU)
+<img src="https://github.com/dlicudi/cockpitdecks-configs/assets/2129148/341b8c7e-d62f-4445-95ea-9c907e373c47" align="right" width="400">
+
 *Push buttons for autpilot functions.*
 
 ### AP
