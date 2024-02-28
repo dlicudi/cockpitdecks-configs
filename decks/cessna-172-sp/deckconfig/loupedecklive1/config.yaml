@@ -1,5 +1,6 @@
 # This is at layout level
-# default-icon-color: (94, 111, 130)
+default-icon-color: (94, 111, 130)
+default-text-bg-color: (40, 40, 40)
 default-label-color: blue
 default-label-font: DIN Bold.ttf
 default-label-size: 13

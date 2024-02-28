@@ -1,5 +1,5 @@
 name: weather
-includes: pager
+includes: pager,fcu_encoders
 
 buttons:
 

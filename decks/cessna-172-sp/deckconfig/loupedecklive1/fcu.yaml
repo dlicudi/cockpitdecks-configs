@@ -1,5 +1,5 @@
 description: FCU
-includes: pager
+includes: pager,fcu_encoders
 name: fcu
 
 buttons:
@@ -89,34 +89,14 @@ buttons:
         B0:
           color: lime
           led: bars
-          formula: ${sim/cockpit2/autopilot/nav_status}
+          formula: ${sim/cockpit2/autopilot/gpss_status} 2 eq
         B1:
           text: NAV
           text-size: 60
           text-font: DIN Bold
           formula: "1"
-    command: sim/autopilot/NAV
-    vibrate: RUMBLE5
+    command: sim/autopilot/gpss
 
-
-  # - index: 5
-  #   name: VNV
-  #   type: push
-  #   annunciator:
-  #     size: medium
-  #     model: B
-  #     parts:
-  #       B0:
-  #         color: lime
-  #         led: bars
-  #         formula: ${sim/cockpit2/autopilot/vnav_status}
-  #       B1:
-  #         text: VNV
-  #         text-size: 60
-  #         text-font: DIN Bold
-  #         formula: "1"
-  #   command: sim/autopilot/vnav
-  #   vibrate: RUMBLE5
 
   - index: 6
     name: APR
@@ -135,8 +115,6 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: sim/autopilot/approach
-    vibrate: RUMBLE5
-
 
   - index: 7
     name: REV
@@ -150,12 +128,11 @@ buttons:
           led: bars
           formula: ${sim/cockpit2/autopilot/backcourse_status}
         B1:
-          text: BC
+          text: REV
           text-size: 60
           text-font: DIN Bold
           formula: "1"
     command: sim/autopilot/back_course
-    vibrate: RUMBLE5
 
   - index: 8
     name: VS
@@ -174,7 +151,6 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: sim/autopilot/vertical_speed
-    vibrate: RUMBLE5
 
 
 

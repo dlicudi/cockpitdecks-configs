@@ -1,5 +1,5 @@
 description: Switch Panel
-includes: pager
+includes: pager,fcu_encoders
 name: switches
 
 buttons:
@@ -100,7 +100,6 @@ buttons:
       B0:
         text: "OFF"
         color: darkorange
-        framed: true
         formula: ${sim/cockpit/electrical/landing_lights_on} 0 eq
       B1:
         text: "ON"
