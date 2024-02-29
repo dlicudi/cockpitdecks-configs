@@ -5,7 +5,8 @@ name: switches
 buttons:
   - index: 0
     type: longpress
-    label: "START"
+    vibrate: LONG
+    label: "IGNITION"
     command: sim/ignition/engage_starter_1
     push-switch:
       button-size: 90
@@ -14,6 +15,7 @@ buttons:
       witness-size: 1
 
   - index: 1
+    vibrate: LONG
     type: onoff
     label: ALTERNATOR
     label-color: black
