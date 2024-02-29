@@ -197,23 +197,27 @@ buttons:
           formula: "1"
 
   - index: 8 # prop rpm and hobbs (todo)
-    name: PROP_RPM
+    name: RPM
     type: none
+    label: RPM
+    label-color: Black
+    label-size: 10
     annunciator:
       size: medium
       model: B
       parts:
         B0:
-          color: green
+          color: lime
           text-size: 42
-          formula: "${sim/cockpit2/engine/indicators/prop_speed_rpm[0]} round"
-          text: "${formula}"
+          text: "${sim/cockpit2/engine/indicators/prop_speed_rpm[0]}"
           text-format: "{0:.0f}"
-        B1:
-          text: PROP SPD
-          text-size: 42
-          text-font: DIN Bold
           formula: "1"
+        B1:
+          color: white
+          text-size: 30
+          text: "${sim/cockpit2/clock_timer/hobbs_time_hours}:${sim/cockpit2/clock_timer/hobbs_time_minutes}:${sim/cockpit2/clock_timer/hobbs_time_seconds}"
+          formula: "1"
+          text-format: "{0:.0f}"
 
   - index: 9
     name: CAUTION
