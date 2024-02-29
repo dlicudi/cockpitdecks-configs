@@ -4,6 +4,7 @@
 ## TODO
 - Radio/transponder page
 - Complete page for engine data
+- Custom FCU side panels
 
 ## Primary Instrument Display
 <img src="https://github.com/dlicudi/cockpitdecks-configs/assets/2129148/66a73b17-dec6-47a7-9cda-1aaee5aaadf9" align="right" width="400">
