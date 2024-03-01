@@ -2,6 +2,11 @@
 A collection of aircraft configs for [cockpitdecks](https://github.com/devleaks/cockpitdecks).
 
 
+## Aircraft
+
+### Cessna 172 SP (Garmin 520 model)
+A complete set of pages covering most cockpit functions and gauges for the Cessna 172 SP.
+
 ## Notes on long press buttons and helper plugin
 
 1. The helper plugin must be copied to PythonScripts e.g.
