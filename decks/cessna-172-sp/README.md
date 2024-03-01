@@ -54,6 +54,8 @@ Fuel is in kg and is converted to gallons using RPN 0.264172 *
 ### Ignition
 *Starter motor long press push button.*
 
+PythonPlugin required for long press button (<X-Plane Path>/Resources/Plugins/PythonPlugins/PI_cockpitdecks_helper.py)
+
 ### Alternator
 *On/off button for alternator (when engine is running provides power to systems and charges battery).*
 
