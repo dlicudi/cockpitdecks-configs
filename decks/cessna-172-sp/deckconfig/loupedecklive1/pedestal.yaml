@@ -40,6 +40,62 @@ buttons:
         text-format: "{0:.0f}"
 
 
+- index: 2
+  type: push
+  vibrate: SHORT
+  label: "TOGGLE BRAKES"
+  label-size: 8
+  label-color: White
+  command: sim/flight_controls/brakes_toggle_max
+  text-bg-color: Black
+  multi-texts:
+    - text: "OFF"
+      text-color: Lime
+    - text: "ON"
+      text-color: Red
+  formula: ${sim/cockpit2/controls/parking_brake_ratio}
+
+
+# FLAPS UP/FLAPS RATIO/FLAPS DOWN
+
+- index: 3
+  type: push
+  vibrate: SHORT
+  text: "UP"
+  text-color: Lime
+  command: sim/flight_controls/flaps_up
+  text-bg-color: Black
+
+- index: 11
+  type: push
+  text: "DOWN"
+  text-color: Lime
+  command: sim/flight_controls/flaps_down
+  text-bg-color: Black
+
+- index: 7
+  type: none
+  label: FLAPS RATIO
+  label-color: black
+  label-size: 9
+  annunciator:
+    model: B
+    size: medium
+    B0:
+      text: "DISAGREE"
+      color: darkorange
+      formula: ${sim/cockpit2/controls/flap_disagree} 1 eq
+    B1:
+      color: deepskyblue
+      framed: true
+      text: ${sim/cockpit2/controls/flap_ratio}
+      text-format: "{0:.2f}"
+      formula: "1"
+
+
+
+
+
 
 - index: left
   name: left_screen
