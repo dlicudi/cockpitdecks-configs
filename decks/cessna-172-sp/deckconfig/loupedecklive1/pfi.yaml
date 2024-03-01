@@ -269,14 +269,14 @@ buttons:
     name: WAYPOINT
     type: none
     label: NEXT WAYPOINT
-    label-size: 7
+    label-size: 8
     label-color: black
     annunciator:
       size: medium
       model: D
       parts:
         D0:
-          text: "${sim/cockpit2/radios/indicators/gps_dme_distance_nm} DIS"
+          text: "${sim/cockpit2/radios/indicators/gps_dme_distance_nm} nm DIS"
           text-color: Lime
           text-font: Seven Segment.ttf
           text-size: 48
@@ -290,7 +290,7 @@ buttons:
           text-format: "{0:.0f}"
           formula: "1"
         D2:
-          text: "${sim/cockpit2/radios/indicators/gps_dme_time_min}\nETA"
+          text: "${sim/cockpit2/radios/indicators/gps_dme_time_min} min \nETA"
           text-color: Lime
           text-font: Seven Segment.ttf
           text-size: 40
