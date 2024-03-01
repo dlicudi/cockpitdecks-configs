@@ -2,20 +2,31 @@ description: Switch Panel
 includes: pager,fcu_encoders
 name: switches
 
+
 buttons:
   - index: 0
     type: longpress
     vibrate: LONG
     label: "IGNITION"
+    label-color: Lime
     command: sim/ignition/engage_starter_1
-    push-switch:
-      button-size: 90
-      button-fill-color: red
-      button-stroke-width: 0
-      witness-size: 1
+    text-bg-color: Black
+    multi-texts:
+      - text: "OFF"
+        text-color: White
+      - text: "R"
+        text-color: Orange
+      - text: "L"
+        text-color: Orange
+      - text: "BOTH"
+        text-color: Orange
+      - text: "START"
+        text-color: Red
+    formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
+
 
   - index: 1
-    vibrate: LONG
+    vibrate: SHORT
     type: onoff
     label: ALTERNATOR
     label-color: black
@@ -109,7 +120,7 @@ buttons:
         framed: true
         formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
     set-dataref: sim/cockpit/electrical/landing_lights_on
-    vibrate: LONG
+    vibrate: SHORT
 
   - index: 6
     type: onoff
