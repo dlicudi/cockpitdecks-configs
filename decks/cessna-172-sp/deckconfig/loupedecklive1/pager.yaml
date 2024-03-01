@@ -10,13 +10,13 @@ buttons:
     name: P2
     type: page
     page: switches
-    colored-led: green
+    colored-led: blue
 
   - index: b3
     name: P3
     type: page
     page: fcu
-    colored-led: green
+    colored-led: red
 
   - index: b4
     name: P4
