@@ -36,65 +36,68 @@ buttons:
 - index: 0
   name: SQUAWK0
   vibrate: SHORT
-  label: SQUAWK DIGIT 0
-  label-size: 8
-  label-color: black
+  label: "S Q U "
+  label-position: rt
+  label-size: 10
+  label-color: White
   type: push
   text: ${formula}
   text-format: "{:01.0f}"
-  text-color: khaki
   text-size: 50
   text-font: Seven Segment.ttf
+  text-color: Lime
+  text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 1000 / floor
   command: sim/radios/transponder_1000_up
-
 
 - index: 1
   name: SQUAWK1
   vibrate: SHORT
-  label: SQUAWK DIGIT 1
-  label-size: 8
-  label-color: black
+  label: " A W K"
+  label-position: lt
+  label-size: 10
+  label-color: White
   type: push
   text: ${formula}
   text-format: "{:01.0f}"
-  text-color: khaki
   text-size: 50
   text-font: Seven Segment.ttf
-  text-bg-color: Green
+  text-color: Lime
+  text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 100 / floor 10 %
   command: sim/radios/transponder_100_up
-
 
 - index: 2
   name: SQUAWK2  
   vibrate: SHORT
-  label: SQUAWK DIGIT 2
-  label-size: 8
-  label-color: black
+  label: "C O "
+  label-position: rt
+  label-size: 10
+  label-color: White
   type: push
   text: ${formula}
   text-format: "{:01.0f}"
-  text-color: khaki
   text-size: 50
   text-font: Seven Segment.ttf
-  text-bg-color: (40, 40, 40)
+  text-color: Lime
+  text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 10 / floor 10 %
   command: sim/radios/transponder_10_up
 
 - index: 3
   name: SQUAWK3
   vibrate: SHORT
-  label: SQUAWK DIGIT 3
-  label-size: 8
-  label-color: black
+  label: " D E"
+  label-position: lt
+  label-size: 10
+  label-color: White
   type: push
   text: ${formula}
   text-format: "{:01.0f}"
-  text-color: khaki
   text-size: 50
   text-font: Seven Segment.ttf  
-  text-bg-color: (40, 40, 40)
+  text-color: Lime
+  text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 10 %
   command: sim/radios/transponder_1_up
 
