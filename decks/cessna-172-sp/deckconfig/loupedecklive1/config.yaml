@@ -7,4 +7,4 @@ default-label-size: 13
 default-text-size: 24
 default-label-position: ct
 default-homepage-name: pfi
-default-vibrate: SHORT
+default-vibrate: BUZZ

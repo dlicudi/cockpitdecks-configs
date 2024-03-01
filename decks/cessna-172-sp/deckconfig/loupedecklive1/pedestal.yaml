@@ -1,0 +1,73 @@
+name: pedestal
+includes: pager
+
+buttons:
+
+- index: 0
+  name: THROTTLE
+  type: none
+  label: THROTTLE
+  label-size: 9
+  label-color: black
+  annunciator:
+    size: medium
+    model: A
+    parts:
+      A0:
+        color: lime
+        text-size: 100
+        formula: "${sim/flightmodel/engine/ENGN_thro[0]} 100 *"
+        text: "${formula}%"
+        text-font: Seven Segment.ttf
+        text-format: "{0:.0f}"
+
+- index: 4
+  name: MIXTURE
+  type: none
+  label: MIXTURE
+  label-size: 9
+  label-color: black
+  annunciator:
+    size: medium
+    model: A
+    parts:
+      A0:
+        color: lime
+        text-size: 100
+        formula: "${sim/flightmodel/engine/ENGN_mixt[0]} 100 *"
+        text: "${formula}%"
+        text-font: Seven Segment.ttf
+        text-format: "{0:.0f}"
+
+
+
+- index: left
+  name: left_screen
+  type: none
+  text-bg-color: Green
+  side:
+    labels:
+      - label: "THROTTLE"
+        label-color: Black
+        label-size: 10
+      - label: "MIXTURE"
+        label-color: Black
+        label-size: 10
+
+
+- index: e0
+  name: throttle_encoder
+  type: encoder-push
+  commands:
+  - sim/engines/throttle_full # push
+  - sim/engines/throttle_down
+  - sim/engines/throttle_up
+
+- index: e1
+  name: mixture_encoder
+  type: encoder-push
+  commands:
+  - sim/engines/mixture_max # push
+  - sim/engines/mixture_down
+  - sim/engines/mixture_up
+
