@@ -265,27 +265,34 @@ buttons:
           text-size: 50
           formula: ${sim/cockpit/warnings/annunciators/low_vacuum}
 
-
   - index: 11
-    name: NAVGPS
-    type: push
-    label: NAVGPS
-    label-size: 10
+    name: WAYPOINT
+    type: none
+    label: NEXT WAYPOINT
+    label-size: 7
     label-color: black
-    command: sim/GPS/g430n1_cdi
     annunciator:
       size: medium
-      model: B
+      model: D
       parts:
-        B0:
-          text: "NAV"
-          text-color: yellow
-          text-font: DIN Condensed Black.otf
-          text-size: 50
-          formula: ${sim/cockpit/switches/HSI_selector} 0 eq
-        B1:
-          text: "GPS"          
-          text-color: lime
-          text-font: DIN Condensed Black.otf
-          text-size: 50
-          formula: ${sim/cockpit/switches/HSI_selector} 2 eq
+        D0:
+          text: "${sim/cockpit2/radios/indicators/gps_dme_distance_nm} DIS"
+          text-color: Lime
+          text-font: Seven Segment.ttf
+          text-size: 48
+          text-format: "{0:.1f}"
+          formula: "1"
+        D1:
+          text: "${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}\nDTK"
+          text-color: Lime
+          text-font: Seven Segment.ttf
+          text-size: 40
+          text-format: "{0:.0f}"
+          formula: "1"
+        D2:
+          text: "${sim/cockpit2/radios/indicators/gps_dme_time_min}\nETA"
+          text-color: Lime
+          text-font: Seven Segment.ttf
+          text-size: 40
+          text-format: "{0:.0f}"
+          formula: "1"
