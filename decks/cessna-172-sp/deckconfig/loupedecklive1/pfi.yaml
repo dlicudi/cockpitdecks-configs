@@ -75,14 +75,14 @@ buttons:
           color: white
           text-size: 32
           formula: "1"
-          text: "${sim/cockpit/misc/barometer_setting}"
           text-format: "{0:.2f}"
+          text: "${sim/cockpit/misc/barometer_setting}\ninHg"
         D2:
           color: white
           text-size: 32
           formula: "${sim/cockpit/misc/barometer_setting} 33.8639 *"
           text-format: "{0:.0f}"
-          text: "${formula}"
+          text: "${formula}\nhPa"
 
   - index: 3 # Heading
     name: VS
