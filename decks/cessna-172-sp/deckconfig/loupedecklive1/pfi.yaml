@@ -62,23 +62,27 @@ buttons:
     label-color: black
     annunciator:
       size: medium
-      model: B
+      model: D
       parts:
-        B0:
+        D0:
           color: lime
           text-size: 80
-          # dararef-rpn: "${sim/cockpit2/gauges/indicators/altitude_ft_pilot}"
           formula: "1"
           text: "${sim/cockpit2/gauges/indicators/altitude_ft_pilot}"
           text-font: Seven Segment.ttf
           text-format: "{0:.0f}"
-        B1:
+        D1:
           color: white
           text-size: 32
-          # dataref-rpn: "${sim/cockpit/misc/barometer_setting} mb"
           formula: "1"
           text: "${sim/cockpit/misc/barometer_setting}"
           text-format: "{0:.2f}"
+        D2:
+          color: white
+          text-size: 32
+          formula: "${sim/cockpit/misc/barometer_setting} 33.8639 *"
+          text-format: "{0:.0f}"
+          text: "${formula}"
 
   - index: 3 # Heading
     name: VS
