@@ -38,17 +38,12 @@ buttons:
 
   - index: e4
     name: FCU V Speed
-    type: encoder-value
-    dataref: sim/cockpit/autopilot/vertical_velocity
-    step: 100
-    stepxl: 1000
-    value: 0
-    value-min: -6000
-    value-max: 6000
-    set-dataref: sim/cockpit/autopilot/vertical_velocity
+    type: encoder-push
     commands:
-      - AirbusFBW/PullVSSel
-      - AirbusFBW/PushVSSel
+      - sim/autopilot/vertical_speed_sync
+      - sim/autopilot/vertical_speed_down
+      - sim/autopilot/vertical_speed_up
+    long-press: AirbusFBW/PullSPDSel
 
   - index: e5
     name: FCU XPDR
