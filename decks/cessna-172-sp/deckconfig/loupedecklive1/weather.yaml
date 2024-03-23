@@ -1,5 +1,5 @@
 name: weather
-includes: pager,fcu_encoders
+includes: pager,encoders_fcu
 
 buttons:
 
@@ -25,7 +25,6 @@ buttons:
       data-font: DIN Condensed Light
       data-size: 80
       data-color: white
-#      data-unit: "hPa"
       formula: ${data:weather:pressure}
       bottomline: hPa
       bottomline-size: 30
@@ -130,3 +129,57 @@ buttons:
       mark-size: 20
       mark-font: fontawesome.otf
       mark-color: red
+
+
+
+  - index: 11
+    name: ICE WARNING
+    type: push
+    command: sim/annunciator/clear_master_caution
+    annunciator:
+      text: "ICE\nDETECTED"
+      text-color: darkorange
+      text-font: DIN Condensed Black.otf
+      text-size: 48
+      dataref: sim/cockpit/warnings/annunciators/ice
+
+
+
+  - index: 9
+    name: ICE DETECTION
+    type: none
+    label: ICE DETECTION
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: F
+      parts:
+        F0:
+          text-color: firebrick
+          text-font: DIN Condensed Black.otf
+          text-size: 28
+          formula: ${sim/flightmodel/failures/frm_ice} 100 * round
+          text: "${formula}\nFRAME"
+          text-format: "{0:.0f}"
+        F1:
+          text-color: firebrick
+          text-font: DIN Condensed Black.otf
+          text-size: 28
+          formula: ${sim/flightmodel/failures/inlet_ice} 100 * round
+          text: "${formula}\nINLET"
+          text-format: "{0:.0f}"
+        F2:
+          text-color: firebrick
+          text-font: DIN Condensed Black.otf
+          text-size: 28
+          formula: ${sim/flightmodel/failures/pitot_ice} 100 * round
+          text: "${formula}\nPITOT"
+          text-format: "{0:.0f}"
+        F3:
+          text-color: firebrick
+          text-font: DIN Condensed Black.otf
+          text-size: 28
+          formula: ${sim/flightmodel/failures/prop_ice} 100 * round
+          text: "${formula}\nPROP"
+          text-format: "{0:.0f}"

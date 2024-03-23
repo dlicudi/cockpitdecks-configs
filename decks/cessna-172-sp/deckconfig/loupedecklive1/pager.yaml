@@ -1,10 +1,10 @@
 buttons:
 
-  - index: b0
-    name: P0
-    type: page
-    page: extras
-    colored-led: pink
+  # - index: b0
+  #   name: P0
+  #   type: page
+  #   page: extras
+  #   colored-led: pink
 
   - index: b1
     name: P1
@@ -47,6 +47,3 @@ buttons:
     type: page
     page: weather
     colored-led: orange
-
-
-

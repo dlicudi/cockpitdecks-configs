@@ -92,25 +92,6 @@ buttons:
       text-format: "{0:.2f}"
       formula: "1"
 
-
-
-
-
-
-- index: left
-  name: left_screen
-  type: none
-  text-bg-color: Green
-  side:
-    labels:
-      - label: "THROTTLE"
-        label-color: Black
-        label-size: 10
-      - label: "MIXTURE"
-        label-color: Black
-        label-size: 10
-
-
 - index: e0
   name: throttle_encoder
   type: encoder-push

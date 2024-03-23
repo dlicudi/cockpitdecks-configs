@@ -1,5 +1,5 @@
 description: Switch Panel
-includes: pager,fcu_encoders
+includes: pager,encoders_fcu
 name: switches
 
 

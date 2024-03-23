@@ -1,5 +1,5 @@
 name: pfi
-includes: pager,fcu_encoders
+includes: pager,encoders_fcu
 
 
 # PRIMARY/SECONDARY INSTRUMENTS

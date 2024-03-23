@@ -1,37 +1,8 @@
 name: radio
-includes: pager
+includes: pager,encoders_radio
 
 buttons:
 
-- index: left
-  name: left_screen
-  type: none
-  text-bg-color: Green
-  side:
-    labels:
-      - label: N/A
-        label-color: Gray
-      - label: "COM1 stby\nCoarse"
-        label-color: Black
-        label-size: 10
-      - label: "COM1 stby\nFine"
-        label-color: Black
-        label-size: 10
-
-- index: right
-  name: right_screen
-  type: none
-  text-bg-color: Green
-  side:
-    labels:
-      - label: N/A
-        label-color: Gray
-      - label: "NAV1 stby\nCoarse"
-        label-color: Black
-        label-size: 10
-      - label: "NAV1 stby\nFine"
-        label-color: Black
-        label-size: 10
 
 - index: 0
   name: SQUAWK0
@@ -47,7 +18,7 @@ buttons:
   text-font: Seven Segment.ttf
   text-color: Lime
   text-bg-color: Black
-  formula: ${sim/cockpit/radios/transponder_code} 1000 / floor
+  formula: ${data:sim/cockpit/radios/transponder_code} 1000 / floor
   command: sim/radios/transponder_1000_up
 
 - index: 1
@@ -64,7 +35,7 @@ buttons:
   text-font: Seven Segment.ttf
   text-color: Lime
   text-bg-color: Black
-  formula: ${sim/cockpit/radios/transponder_code} 100 / floor 10 %
+  formula: ${data:sim/cockpit/radios/transponder_code} 100 / floor 10 %
   command: sim/radios/transponder_100_up
 
 - index: 2
@@ -81,7 +52,7 @@ buttons:
   text-font: Seven Segment.ttf
   text-color: Lime
   text-bg-color: Black
-  formula: ${sim/cockpit/radios/transponder_code} 10 / floor 10 %
+  formula: ${data:sim/cockpit/radios/transponder_code} 10 / floor 10 %
   command: sim/radios/transponder_10_up
 
 - index: 3
@@ -98,10 +69,10 @@ buttons:
   text-font: Seven Segment.ttf  
   text-color: Lime
   text-bg-color: Black
-  formula: ${sim/cockpit/radios/transponder_code} 10 %
+  formula: ${data:sim/cockpit/radios/transponder_code} 10 %
   command: sim/radios/transponder_1_up
 
-- index: 5
+- index: 4
   name: TRANSPONDER_MODE
   label: TRANSPONDER
   label-color: black
@@ -132,7 +103,7 @@ buttons:
   dataref: sim/cockpit/radios/transponder_mode
   set-dataref: sim/cockpit/radios/transponder_mode
 
-- index: 6
+- index: 5
   name: IDENT
   type: push
   vibrate: LONG
@@ -151,7 +122,33 @@ buttons:
         formula: "1"
   command: sim/radios/transponder_ident
   
+
 - index: 8
+  name: ADF
+  label: "ADF FREQ"
+  type: push
+  command: sim/radios/adf1_standy_flip
+  label-color: black
+  label-size: 9
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: red
+        text-size: 36
+        formula: "${sim/cockpit/radios/adf1_freq_hz}"
+        text: "ADF ${formula}"
+        text-format: "{0:04.0f}"
+      B1:
+        color: red
+        text-size: 36
+        formula: "${sim/cockpit/radios/adf1_stdby_freq_hz}"
+        text: "FRQ ${formula}"
+        text-format: "{0:04.0f}"
+        frame: True
+
+- index: 7
   name: COM1
   label: "COM 1"
   type: push
@@ -202,41 +199,37 @@ buttons:
         text-format: "{0:.2f}"
         frame: True
 
+# sim/cockpit/radios/adf1_stdby_freq_hz
 
-- index: e1
-  name: com_coarse
-  type: encoder-push
-  commands:
-  - sim/radios/com1_standy_flip
-  - sim/radios/stby_com1_coarse_down
-  - sim/radios/stby_com1_coarse_up
-  long-press: sim/radios/com1_standy_flip
-
-- index: e2
-  name: com_fine
-  type: encoder-push
-  commands:
-    - sim/radios/com1_standy_flip
-    - sim/radios/stby_com1_fine_down
-    - sim/radios/stby_com1_fine_up
-  long-press: sim/radios/com1_standy_flip
 
 - index: e4
-  name: nav_coarse
-  type: encoder-push
+  name: com_encoder
+  type: encoder-toggle
   commands:
-  - sim/radios/nav1_standy_flip
-  - sim/radios/stby_nav1_coarse_down
-  - sim/radios/stby_nav1_coarse_up
-  long-press: sim/radios/nav1_standy_flip
+  - sim/radios/stby_com1_coarse_down
+  - sim/radios/stby_com1_coarse_up
+  - sim/radios/stby_com1_fine_down
+  - sim/radios/stby_com1_fine_up
+  long-press: sim/radios/com1_standy_flip
 
 - index: e5
-  name: nav_fine
-  type: encoder-push
+  name: nav_encoder
+  type: encoder-toggle
   commands:
-    - sim/radios/nav1_standy_flip
-    - sim/radios/stby_nav1_fine_down
-    - sim/radios/stby_nav1_fine_up
+  - sim/radios/stby_nav1_coarse_down
+  - sim/radios/stby_nav1_coarse_up
+  - sim/radios/stby_nav1_fine_down
+  - sim/radios/stby_nav1_fine_up
   long-press: sim/radios/nav1_standy_flip
+
+- index: e3
+  name: transponder_encoder_right
+  type: encoder-toggle
+  commands:
+  - sim/transponder/transponder_12_down
+  - sim/transponder/transponder_12_up
+  - sim/transponder/transponder_34_down
+  - sim/transponder/transponder_34_up
+
 
 

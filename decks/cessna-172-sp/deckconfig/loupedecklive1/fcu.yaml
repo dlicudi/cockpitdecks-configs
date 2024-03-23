@@ -1,5 +1,5 @@
 description: FCU
-includes: pager,fcu_encoders
+includes: pager,encoders_fcu
 name: fcu
 
 buttons:
@@ -21,24 +21,6 @@ buttons:
           formula: "1"
     command: sim/autopilot/servos_toggle
     vibrate: RUMBLE5
-
-  # - index: 1
-  #   name: FD
-  #   type: push
-  #   annunciator:
-  #     size: medium
-  #     model: B
-  #     parts:
-  #       B0:
-  #         color: lime
-  #         led: bars
-  #         formula: ${sim/cockpit2/autopilot/flight_director_mode}
-  #       B1:
-  #         text: FD
-  #         text-size: 60
-  #         text-font: DIN Bold
-  #         formula: "1"
-  #   command: sim/autopilot/fdir_toggle
 
   - index: 2
     name: HDG
@@ -151,27 +133,6 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: sim/autopilot/vertical_speed
-
-
-
-  - index: 9
-    name: FLC
-    type: push
-    annunciator:
-      size: medium
-      model: B
-      parts:
-        B0:
-          color: lime
-          led: bars
-          formula: ${sim/cockpit2/autopilot/speed_status}
-        B1:
-          text: FLC
-          text-size: 60
-          text-font: DIN Bold
-          formula: "1"
-    command: sim/autopilot/speed_hold
-    vibrate: RUMBLE5
 
   - index: 11
     name: NAVGPS
