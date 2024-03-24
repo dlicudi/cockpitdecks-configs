@@ -186,17 +186,30 @@ buttons:
   command: sim/transponder/transponder_test
   vibrate: SHORT
 
+# - index: 10
+#   name: CLR
+#   type: push
+#   text: "CLR"
+#   text-color: Lime
+#   command: sim/transponder/transponder_CLR
+#   text-bg-color: Black
+
 - index: 10
-  name: CLR
-  type: push
-  text: "CLR"
-  text-color: Lime
-  command: sim/transponder/transponder_CLR
-  text-bg-color: Black
+  name: LIGHT
+  type: none
+  annunciator:
+    size: medium
+    model: A
+    parts:
+      A0:
+        color: Orange
+        led: dot
+        formula: ${sim/cockpit/radios/transponder_light}
 
 - index: 11
   name: MODE
   type: none
+  size: medium
   label: MODE
   label-color: White
   text-color: Lime
