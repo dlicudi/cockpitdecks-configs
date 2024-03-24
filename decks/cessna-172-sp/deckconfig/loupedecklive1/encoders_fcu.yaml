@@ -109,7 +109,7 @@ buttons:
       - label: "ALT"
         label-size: 16
         label-font: B612-Bold
-        label-color: Gold
+        label-color: Grey
         formula: "${sim/cockpit2/autopilot/altitude_dial_ft}"
         text-size: 16
         text-font: Seven Segment.ttf
