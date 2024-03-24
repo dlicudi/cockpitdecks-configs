@@ -45,5 +45,5 @@ buttons:
   - index: b7
     name: P7
     type: page
-    page: weather
+    page: transponder
     colored-led: orange
