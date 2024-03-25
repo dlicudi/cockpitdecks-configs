@@ -233,36 +233,3 @@ buttons:
         text-position: tr
   formula: ${sim/cockpit2/radios/actuators/transponder_mode}
 
-
-
-- index: e4
-  name: com_encoder
-  type: encoder-toggle
-  commands:
-  - sim/radios/stby_com1_coarse_down
-  - sim/radios/stby_com1_coarse_up
-  - sim/radios/stby_com1_fine_down
-  - sim/radios/stby_com1_fine_up
-  long-press: sim/radios/com1_standy_flip
-
-- index: e5
-  name: nav_encoder
-  type: encoder-toggle
-  commands:
-  - sim/radios/stby_nav1_coarse_down
-  - sim/radios/stby_nav1_coarse_up
-  - sim/radios/stby_nav1_fine_down
-  - sim/radios/stby_nav1_fine_up
-  long-press: sim/radios/nav1_standy_flip
-
-- index: e3
-  name: transponder_encoder_right
-  type: encoder-toggle
-  commands:
-  - sim/transponder/transponder_12_down
-  - sim/transponder/transponder_12_up
-  - sim/transponder/transponder_34_down
-  - sim/transponder/transponder_34_up
-
-
-
