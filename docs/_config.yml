@@ -3,10 +3,9 @@ site_name: Cockpitdecks Configs Documentation
 copyright: |
   Copyright &copy; 2024 <a href="https://github.com/dlicudi"  target="_blank" rel="noopener">Duane Licudi</a>
 
-
-nav:
-- Home:
-    - Cockpitdecks Configs: index.md
-    - Decks: decks/index.md
-- Decks:
-    - Cessna 172 SP: decks/cessna-172-sp/index.md
+sidebar:
+  - label: Section One
+    children:
+      - document-one
+      - document-two
+      - document-three
