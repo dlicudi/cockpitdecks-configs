@@ -1,11 +1,3 @@
+title: Cockpitdecks Configs Documentation
+description: Documentation for Cockpitdecks Configs project.
 theme: jekyll-theme-minimal
-site_name: Cockpitdecks Configs Documentation
-copyright: |
-  Copyright &copy; 2024 <a href="https://github.com/dlicudi"  target="_blank" rel="noopener">Duane Licudi</a>
-
-sidebar:
-  - label: Section One
-    children:
-      - document-one
-      - document-two
-      - document-three
