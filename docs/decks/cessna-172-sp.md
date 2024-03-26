@@ -1,3 +1,11 @@
+---
+layout: default
+title: Cessna 172 SP
+parent: Decks
+has_children: false
+nav_order: 6
+---
+
 # Cessna 172 SP (G530 model)
 
 

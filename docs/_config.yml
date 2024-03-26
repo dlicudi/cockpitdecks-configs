@@ -1,3 +1,11 @@
-title: Cockpitdecks Configs Documentation
-description: Documentation for Cockpitdecks Configs project.
-theme: jekyll-theme-minimal
+title: Cockpitdecks Configs
+description: Documentation for cockpitdecks-configs
+theme: just-the-docs
+
+url: https://dlicudi.github.io/cockpitdecks-configs-docs
+
+aux_links:
+  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+
+search_enabled: true
+color_scheme: light
