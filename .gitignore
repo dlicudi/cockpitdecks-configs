@@ -3,3 +3,4 @@ cockpitdecks.log
 examples
 secret.yaml
 resources
+docs/_site/*
