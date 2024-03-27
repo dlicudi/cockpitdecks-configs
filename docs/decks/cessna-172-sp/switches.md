@@ -8,7 +8,9 @@ nav_order: 2
 ---
 
 ## Switch Panel
-<img src="https://github.com/dlicudi/cockpitdecks-configs/assets/2129148/b9daa4e4-d57a-43a3-bb09-acff8c53c0ae" align="right" width="400">
+
+![](../../../assets/images/switches.png)
+
 
 ### Ignition
 *Starter motor long press push button.*

@@ -8,9 +8,8 @@ nav_order: 3
 ---
 
 ## Flight Control Unit (FCU)
-<img src="https://github.com/dlicudi/cockpitdecks-configs/assets/2129148/341b8c7e-d62f-4445-95ea-9c907e373c47" align="right" width="400">
+![](../../../assets/images/fcu.png)
 
-*Push buttons for autpilot functions.*
 
 ### AP
 *On/off button to engage/dis-engage autopilot system.*
@@ -41,3 +40,8 @@ nav_order: 3
 
 ### FLC
 *Not available on S-TEC 55 Autopilot model.*
+
+
+
+{: .note }
+> Additional functions will be added to support G1000 functions

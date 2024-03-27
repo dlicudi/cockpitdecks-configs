@@ -10,7 +10,7 @@ nav_order: 1
 
 ## Primary Instrument Display
 
-![](../../assets/images/pfi.png)
+![](../../../assets/images/pfi.png)
 
 
 ### Airspeed Indicator
@@ -50,3 +50,6 @@ Fuel is in kg and is converted to gallons using RPN 0.264172 *
 
 ### NAVGPS mode
 *Display for navigation mode and also a push button to toggle between NAV (VLOC) and GPS.*
+
+### Next Waypoint
+*If there is a flight plan being followed this button will display data related to the next waypoint e.g. nautical miles left, desired track (bearing) and ETA in minutes.* 

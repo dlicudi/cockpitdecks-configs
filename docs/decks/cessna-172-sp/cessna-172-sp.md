@@ -8,11 +8,25 @@ nav_order: 1
 
 # Cessna 172 SP (G530 model)
 
+{: .highlight}
+<dl>
+  <dt>Range</dt>
+  <dd>518 nm</dd>
+  <dt>Ceiling</dt>
+  <dd>13,000 ft</dd>
+  <dt>MTOW</dt>
+  <dd>2,400 lbs</dd>
+  <dt>Cruise</dt>
+  <dd>111 kts</dd>
+  <dt>Fuel Type</dt>
+  <dd>AVGAS</dd>
+</dl>
 
-{: .note-title }
+{: .highlight}
 > Developer
 >
 > [Laminar Research](https://www.x-plane.com){: .btn }
+
 
 {: .note-title }
 > Supported Variants
