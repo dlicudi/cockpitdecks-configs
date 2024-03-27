@@ -41,11 +41,6 @@ Fuel Type AVGAS
 - [x] Cessna_172SP_seaplane
 - [x] Cessna_172SP
 
-- [ ] Fuel Type AVGAS
-{: .label .label-green }
-
-
-
 {: .highlight }
 Support for Cessna 172 SP G1000 coming soon.
 
