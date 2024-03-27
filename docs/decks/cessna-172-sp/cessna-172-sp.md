@@ -35,16 +35,7 @@ Fuel Type AVGAS
 
 ----
 
-
-## Supported Variants 
-- [ ] Cessna_172SP_G1000
-- [x] Cessna_172SP_seaplane
-- [x] Cessna_172SP
-
-{: .highlight }
-Support for Cessna 172 SP G1000 coming soon.
-
-
+## Overview
 Deck consists of 7 pages which can be accessed via the lower hardware numbered button.
 
 1
@@ -73,3 +64,10 @@ Deck consists of 7 pages which can be accessed via the lower hardware numbered b
 
 ----
 
+## Supported Variants 
+- [ ] Cessna_172SP_G1000
+- [x] Cessna_172SP_seaplane
+- [x] Cessna_172SP
+
+{: .highlight }
+Support for Cessna 172 SP G1000 coming soon.
