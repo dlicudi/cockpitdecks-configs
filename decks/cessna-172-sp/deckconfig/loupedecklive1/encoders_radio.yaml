@@ -63,30 +63,6 @@ buttons:
   long-press: sim/radios/adf1_standy_flip
 
 
-- index: e3
-  name: alt_encoder
-  type: encoder-push
-  commands:
-  - sim/autopilot/altitude_sync # push
-  - sim/autopilot/altitude_down
-  - sim/autopilot/altitude_up
-
-- index: e4
-  name: FCU V Speed
-  type: encoder-push
-  commands:
-    - sim/autopilot/vertical_speed_sync
-    - sim/autopilot/vertical_speed_down
-    - sim/autopilot/vertical_speed_up
-  long-press: AirbusFBW/PullSPDSel
-
-- index: e5
-  name: mixture_encoder
-  type: encoder-push
-  commands:
-  - sim/engines/mixture_max # push
-  - sim/engines/mixture_down
-  - sim/engines/mixture_up
 
 
 - index: left
@@ -132,7 +108,7 @@ buttons:
   side:
     icon-color: Black
     labels:
-      - label: "ALT"
+      - label: "---"
         label-size: 16
         label-font: B612-Bold
         label-color: Gold
