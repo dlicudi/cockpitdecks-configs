@@ -8,32 +8,43 @@ nav_order: 1
 
 # Cessna 172 SP (G530 model)
 
-{: .highlight}
-<dl>
-  <dt>Range</dt>
-  <dd>518 nm</dd>
-  <dt>Ceiling</dt>
-  <dd>13,000 ft</dd>
-  <dt>MTOW</dt>
-  <dd>2,400 lbs</dd>
-  <dt>Cruise</dt>
-  <dd>111 kts</dd>
-  <dt>Fuel Type</dt>
-  <dd>AVGAS</dd>
-</dl>
 
-{: .highlight}
-> Developer
->
-> [Laminar Research](https://www.x-plane.com){: .btn }
+Range 518 nm
+{: .label .label-green }
+
+Ceiling 13,000 ft
+{: .label .label-green }
+
+MTOW 2,400 lbs
+{: .label .label-green }
+
+Cruise 111 kts
+{: .label .label-green }
+
+Fuel Type AVGAS
+{: .label .label-green }
 
 
-{: .note-title }
-> Supported Variants
-> 
-> - [ ] Cessna_172SP_G1000
-> - [x] Cessna_172SP_seaplane
-> - [x] Cessna_172SP
+![](../../../assets/images/pfi.png){: width="100" }
+![](../../../assets/images/switches.png){: width="100" }
+![](../../../assets/images/fcu.png){: width="100" }
+![](../../../assets/images/radio.png){: width="100" }
+![](../../../assets/images/engine.png){: width="100" }
+![](../../../assets/images/pedestal.png){: width="100" }
+![](../../../assets/images/transponder.png){: width="100" }
+
+----
+
+
+## Supported Variants 
+- [ ] Cessna_172SP_G1000
+- [x] Cessna_172SP_seaplane
+- [x] Cessna_172SP
+
+- [ ] Fuel Type AVGAS
+{: .label .label-green }
+
+
 
 {: .highlight }
 Support for Cessna 172 SP G1000 coming soon.
@@ -64,3 +75,6 @@ Deck consists of 7 pages which can be accessed via the lower hardware numbered b
 5. Engine (Displays engine data)
 6. Pedestal (Flaps, gear)
 7. Transponder (Change transponder mode and id)
+
+----
+
