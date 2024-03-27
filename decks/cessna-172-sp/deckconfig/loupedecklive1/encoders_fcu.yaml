@@ -39,11 +39,13 @@ buttons:
 
 - index: e3
   name: alt_encoder
-  type: encoder-push
+  type: encoder-toggle
   commands:
-  - sim/autopilot/altitude_sync # push
-  - sim/autopilot/altitude_down
-  - sim/autopilot/altitude_up
+  - sim/GPS/g1000n1_alt_outer_down
+  - sim/GPS/g1000n1_alt_outer_up
+  - sim/GPS/g1000n1_alt_inner_down
+  - sim/GPS/g1000n1_alt_inner_up
+  long-press: sim/autopilot/altitude_sync
 
 - index: e4
   name: FCU V Speed
