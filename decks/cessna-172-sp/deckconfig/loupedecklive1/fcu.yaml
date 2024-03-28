@@ -20,7 +20,28 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: sim/autopilot/servos_toggle
-    vibrate: RUMBLE5
+    vibrate: SHORT
+
+  - index: 1
+    name: FD
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/flight_director_mode}
+        B1:
+          text: FD
+          text-size: 60
+          text-font: DIN Bold
+          text-color: Turquoise
+          formula: "1"
+    command: sim/autopilot/fdir_toggle
+    vibrate: SHORT
+
 
   - index: 2
     name: HDG
@@ -39,7 +60,7 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: sim/autopilot/heading
-    vibrate: RUMBLE5
+    vibrate: SHORT
 
   - index: 3
     name: ALT
@@ -58,7 +79,7 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: sim/autopilot/altitude_hold
-    vibrate: RUMBLE5
+    vibrate: SHORT
 
 
   - index: 4
@@ -79,6 +100,26 @@ buttons:
           formula: "1"
     command: sim/autopilot/gpss
 
+
+  - index: 5
+    name: VNAV
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/vnav_armed}
+        B1:
+          text: VNAV
+          text-size: 60
+          text-font: DIN Bold
+          text-color: Turquoise
+          formula: "1"
+    command: sim/autopilot/vnav
+    vibrate: SHORT
 
   - index: 6
     name: APR
@@ -110,8 +151,8 @@ buttons:
           led: bars
           formula: ${sim/cockpit2/autopilot/backcourse_status}
         B1:
-          text: REV
-          text-size: 60
+          text: REV/BC
+          text-size: 50
           text-font: DIN Bold
           formula: "1"
     command: sim/autopilot/back_course
@@ -133,6 +174,26 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: sim/autopilot/vertical_speed
+
+  - index: 10
+    name: FLC
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/altitude_mode} 5 eq
+        B1:
+          text: FLC
+          text-size: 60
+          text-font: DIN Bold
+          text-color: Turquoise
+          formula: "1"
+    command: sim/autopilot/level_change
+    vibrate: SHORT
 
   - index: 11
     name: NAVGPS
