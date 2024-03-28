@@ -12,36 +12,38 @@ nav_order: 3
 
 
 ### AP
-*On/off button to engage/dis-engage autopilot system.*
+Engages or disengages the autopilot system.
 
 ### FD
 *Not available on S-TEC 55 Autopilot model.*
+Provides visual cues for manual flight control based on autopilot logic without actually controlling the aircraft.
 
 ### HDG
-*Heading mode. Autopilot turns the aircraft to heading selected via Heading Bug knob.*
+Heading mode. Autopilot turns the aircraft to heading selected via Heading Bug knob.
 
 ### ALT
-*Altitude mode holds the current altitude.*
+Altitude mode holds the current altitude.
 
-### Nav
-*Directs aircraft heading according to flight plan programmed into GPS (GPS mode) or to/from a radio navigation aid (VLOC mode).*
+### NAV
+Directs aircraft heading according to flight plan programmed into GPS (GPS mode) or to/from a radio navigation aid (VLOC mode).
 
-### VNV
+### VNAV
 *Not available on S-TEC 55 Autopilot model.*
+Manages aircraft's vertical path according to a predefined route or waypoint altitudes
 
 ### APR
-*Used to engage an ILS approach.*
+Activates an Instrument Landing System (ILS) approach mode for precision guidance during landing approaches.
 
-### REV
-*Used when flying ILS localiser back-course.*
+### REV/BC
+Engages mode for flying an ILS localiser back-course approach, used for approaches where the aircraft is flying away from the beacon.
 
 ### VS
-*Vertical speed mode to maintain an ascent or descent rate.*
+Vertical speed mode to maintain an ascent or descent rate.
 
 ### FLC
 *Not available on S-TEC 55 Autopilot model.*
-
+Maintains a set airspeed while climbing or descending to a selected altitude.
 
 
 {: .note }
-> Additional functions will be added to support G1000 functions
+> Some functions are not available on S-TEC 55 Autopilot (Cessna 172 G530 model).
