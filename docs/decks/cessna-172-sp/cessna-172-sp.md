@@ -6,8 +6,7 @@ has_children: true
 nav_order: 1
 ---
 
-# Cessna 172 SP (G530 model)
-
+# Cessna 172 SP
 
 Range 518 nm
 {: .label .label-green }
