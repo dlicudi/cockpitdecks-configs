@@ -3,6 +3,8 @@ A collection of aircraft configs for [cockpitdecks](https://github.com/devleaks/
 
 Important: New config currently requires this experimental build of [cockpitdecks](https://github.com/dlicudi/cockpitdecks).
 
+Documentation: [Cockpitdecks Configs Docs](http://dlicudi.github.io/cockpitdecks-configs/)
+
 ## Aircraft
 
 ### Cessna 172 SP (Garmin 520 model)
