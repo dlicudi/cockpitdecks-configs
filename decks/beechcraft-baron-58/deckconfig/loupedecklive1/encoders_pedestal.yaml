@@ -1,0 +1,128 @@
+
+buttons:
+
+- index: e0
+  name: Throttle 1
+  type: encoder-push
+  commands:
+    - sim/engines/throttle_full
+    - sim/engines/throttle_down_1
+    - sim/engines/throttle_up_1
+  long-press: sim/engines/throttle_idle
+
+- index: e1
+  name: Prop 1
+  type: encoder-push
+  commands:
+    - noop
+    - sim/engines/prop_down_1
+    - sim/engines/prop_up_1
+
+- index: e2
+  name: Mix 1
+  type: encoder-push
+  commands:
+    - noop
+    - sim/engines/mixture_down_1
+    - sim/engines/mixture_up_1
+
+- index: e3
+  name: Throttle 2
+  type: encoder-push
+  commands:
+    - sim/engines/throttle_full
+    - sim/engines/throttle_down_2
+    - sim/engines/throttle_up_2
+  long-press: sim/engines/throttle_idle
+
+
+- index: e4
+  name: Prop 2
+  type: encoder-push
+  commands:
+    - noop
+    - sim/engines/prop_down_2
+    - sim/engines/prop_up_2
+
+- index: e5
+  name: Mix 2
+  type: encoder-push
+  commands:
+    - noop
+    - sim/engines/mixture_down_2
+    - sim/engines/mixture_up_2
+
+
+- index: left
+  name: left_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: "THROT"
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Yellow
+        formula: "${sim/cockpit2/engine/actuators/throttle_ratio[0]} 100 *"
+        text-size: 16
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:01.0f}"
+        text: "${formula}%"
+      - label: "PROP"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit2/engine/actuators/prop_rotation_speed_rad_sec[0]}"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:00.0f}"
+        text: "${formula}"
+      - label: "MIX"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/flightmodel/engine/ENGN_mixt[0]} 100 *"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:01.0f}"
+        text: "${formula}%"
+
+- index: right
+  name: right_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: "THROT"
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit2/engine/actuators/throttle_ratio[1]} 100 *"
+        text-size: 16
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:01.0f}"
+        text: "${formula}%"
+      - label: "PROP"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit2/engine/actuators/prop_rotation_speed_rad_sec[1]}"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:00.0f}"
+        text: "${formula}"
+      - label: "MIX"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/flightmodel/engine/ENGN_mixt[1]} 100 *"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:01.0f}"
+        text: "${formula}%"

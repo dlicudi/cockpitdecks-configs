@@ -1,0 +1,179 @@
+description: Switch Panel
+includes: pager,encoders_fcu
+name: lights
+
+
+buttons:
+
+
+  - index: 0
+    type: push
+    label: ICE
+    label-color: black
+    label-size: 9
+    command: sim/lights/generic_01_light_tog
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 1 eq
+
+
+  - index: 1
+    type: push
+    command: sim/lights/strobe_lights_toggle
+    label: STRB
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
+
+  - index: 2
+    type: push
+    label: BCN
+    label-color: black
+    label-size: 9
+    command: sim/lights/beacon_lights_toggle
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/beacon_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/beacon_on} 1 eq
+
+  - index: 3
+    type: push
+    command: sim/lights/nav_lights_toggle
+    label: NAV
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
+
+  - index: 4
+    type: push
+    label: FLOOD LIGHTS
+    label-color: black
+    label-size: 9
+    command: laminar/b58/lighting/flood_light_switch    
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${laminar/b58/flood_light_toggle/switch_pos} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${laminar/b58/flood_light_toggle/switch_pos} 1 eq
+
+  - index: 5
+    type: push
+    label: PANEL
+    label-color: black
+    label-size: 9
+    command: laminar/b58/lighting/panel_light_switch    
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${laminar/b58/panel_light_toggle/switch_pos} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${laminar/b58/panel_light_toggle/switch_pos} 1 eq
+
+  - index: 6
+    type: push
+    command: sim/lights/taxi_lights_toggle
+    label: TAXI
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/electrical/taxi_light_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/taxi_light_on} 1 eq
+
+  - index: 8
+    type: push
+    label: LDG L
+    label-color: black
+    label-size: 9
+    command: sim/lights/landing_01_light_tog    
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq
+
+  - index: 9
+    type: push
+    label: LDG R
+    label-color: black
+    label-size: 9
+    command: sim/lights/landing_02_light_tog    
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/landing_lights_switch[1]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/landing_lights_switch[1]} 1 eq
