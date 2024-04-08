@@ -1,0 +1,22 @@
+name: gcu478
+includes: pager,encoders/encoders_gcu478
+
+buttons:
+
+- index: 0
+  name: THROTTLE
+  type: none
+  label: THROTTLE
+  label-size: 9
+  label-color: black
+  annunciator:
+    size: medium
+    model: A
+    parts:
+      A0:
+        color: lime
+        text-size: 100
+        formula: "${sim/flightmodel/engine/ENGN_thro[0]} 100 *"
+        text: "${formula}%"
+        text-font: Seven Segment.ttf
+        text-format: "{0:.0f}"

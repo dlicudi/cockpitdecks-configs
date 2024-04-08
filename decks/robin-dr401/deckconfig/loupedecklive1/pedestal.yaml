@@ -1,0 +1,110 @@
+name: pedestal
+includes: pager
+
+buttons:
+
+- index: 0
+  name: THROTTLE
+  type: none
+  label: THROTTLE
+  label-size: 9
+  label-color: black
+  annunciator:
+    size: medium
+    model: A
+    parts:
+      A0:
+        color: lime
+        text-size: 100
+        formula: "${sim/flightmodel/engine/ENGN_thro[0]} 100 *"
+        text: "${formula}%"
+        text-font: Seven Segment.ttf
+        text-format: "{0:.0f}"
+
+- index: 4
+  name: MIXTURE
+  type: none
+  label: MIXTURE
+  label-size: 9
+  label-color: black
+  annunciator:
+    size: medium
+    model: A
+    parts:
+      A0:
+        color: lime
+        text-size: 100
+        formula: "${sim/flightmodel/engine/ENGN_mixt[0]} 100 *"
+        text: "${formula}%"
+        text-font: Seven Segment.ttf
+        text-format: "{0:.0f}"
+
+
+- index: 2
+  type: push
+  vibrate: SHORT
+  label: "TOGGLE BRAKES"
+  label-size: 8
+  label-color: White
+  command: sim/flight_controls/brakes_toggle_max
+  text-bg-color: Black
+  multi-texts:
+    - text: "OFF"
+      text-color: Lime
+    - text: "ON"
+      text-color: Red
+  formula: ${sim/cockpit2/controls/parking_brake_ratio}
+
+
+# FLAPS UP/FLAPS RATIO/FLAPS DOWN
+
+- index: 3
+  type: push
+  vibrate: SHORT
+  text: "UP"
+  text-color: Lime
+  command: sim/flight_controls/flaps_up
+  text-bg-color: Black
+
+- index: 11
+  type: push
+  text: "DOWN"
+  text-color: Lime
+  command: sim/flight_controls/flaps_down
+  text-bg-color: Black
+
+- index: 7
+  type: none
+  label: FLAPS RATIO
+  label-color: black
+  label-size: 9
+  annunciator:
+    model: B
+    size: medium
+    B0:
+      text: "DISAGREE"
+      color: darkorange
+      formula: ${sim/cockpit2/controls/flap_disagree} 1 eq
+    B1:
+      color: deepskyblue
+      framed: true
+      text: ${sim/cockpit2/controls/flap_ratio}
+      text-format: "{0:.2f}"
+      formula: "1"
+
+- index: e0
+  name: throttle_encoder
+  type: encoder-push
+  commands:
+  - sim/engines/throttle_full # push
+  - sim/engines/throttle_down
+  - sim/engines/throttle_up
+
+- index: e1
+  name: mixture_encoder
+  type: encoder-push
+  commands:
+  - sim/engines/mixture_max # push
+  - sim/engines/mixture_down
+  - sim/engines/mixture_up
+

@@ -3,21 +3,23 @@ buttons:
 
 
 - index: e0
-  name: throttle_encoder
+  name: range_encoder
   type: encoder-push
   commands:
-  - sim/engines/throttle_full # push
-  - sim/engines/throttle_down
-  - sim/engines/throttle_up
+  - sim/GPS/gcu478/pan_push # push
+  - sim/GPS/gcu478/range_down
+  - sim/GPS/gcu478/range_up
 
 - index: e1
-  name: FCU Heading
-  type: encoder-push
+  name: fms_encoder
+  type: encoder-toggle
   commands:
-    - sim/autopilot/heading_sync
-    - sim/autopilot/heading_down
-    - sim/autopilot/heading_up
-  long-press: sim/autopilot/servos_toggle
+  - sim/GPS/g1000n3_fms_outer_down
+  - sim/GPS/g1000n3_fms_outer_up
+  - sim/GPS/g1000n3_fms_inner_down
+  - sim/GPS/g1000n3_fms_inner_up
+  long-press: sim/GPS/gcu479/cursor
+
 
 - index: e2
   name: FCU Baro
@@ -62,7 +64,7 @@ buttons:
   side:
     icon-color: Black
     labels:
-      - label: "THR"
+      - label: "RNG"
         label-size: 14
         label-font: B612-Bold
         label-color: Gold
@@ -72,7 +74,7 @@ buttons:
         text-color: White
         text-format: "{0:01.0f}"
         text: "${formula}%"
-      - label: "HDG"
+      - label: "FMS"
         label-size: 14
         label-font: B612-Bold
         label-color: Gold

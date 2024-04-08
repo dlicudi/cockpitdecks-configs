@@ -1,0 +1,185 @@
+name: weather
+includes: pager,encoders/encoders_fcu
+
+buttons:
+
+  - index: 0
+    name: METAR
+    type: none
+    label: "Weather"
+    live-weather:
+      weather-font: B612
+      mode: region
+
+  - index: 1
+    name: PRESSURE
+    type: none
+    data:
+      top-line-color: deepskyblue
+      top-line-width: 10
+      icon: "fa:gauge"
+      icon-size: 60
+      icon-color: deepskyblue
+      data: ${formula}
+      data-format: "{:04.0f}"
+      data-font: DIN Condensed Light
+      data-size: 80
+      data-color: white
+      formula: ${data:weather:pressure}
+      bottomline: hPa
+      bottomline-size: 30
+      bottomline-color: red
+      mark: ${fa:arrow-right}
+      mark-size: 20
+      mark-font: fontawesome.otf
+      mark-color: red
+  - index: 2
+    name: TEMPERATURE
+    type: none
+    data:
+      top-line-color: gold
+      top-line-width: 10
+      icon: "fa:temperature-half"
+      icon-size: 60
+      icon-color: gold
+      data: ${formula}
+      data-format: "{:3.0f}"
+      data-font: DIN Condensed Light
+      data-size: 80
+      data-color: white
+#      data-unit: "°C"
+      formula: ${data:weather:temperature}
+      bottomline: "°C"
+      bottomline-size: 30
+      bottomline-color: red
+      mark: ${fa:arrow-right}
+      mark-size: 20
+      mark-font: fontawesome.otf
+      mark-color: red
+  - index: 3
+    name: WIND
+    type: none
+    data:
+      top-line-color: darkorchid
+      top-line-width: 10
+      icon: "fa:wind"
+      icon-size: 60
+      icon-color: darkorchid
+      data: ${formula}
+      data-format: "{:4.1f}"
+      data-font: DIN Condensed Light
+      data-size: 80
+      data-color: white
+#      data-unit: "mph"
+      formula: ${data:weather:wind}
+      bottomline: mph
+      bottomline-size: 30
+      bottomline-color: red
+      mark: ${fa:arrow-right}
+      mark-size: 20
+      mark-font: fontawesome.otf
+      mark-color: red
+  - index: 4
+    name: DEWPOINT
+    type: none
+    data:
+      top-line-color: ivory
+      top-line-width: 10
+      icon: "fa:droplet"
+      icon-size: 60
+      icon-color: ivory
+      data: ${formula}
+      data-format: "{:3.0f}"
+      data-font: DIN Condensed Light
+      data-size: 80
+      data-color: white
+#      data-unit: "°C"
+      data-progress: 31
+      formula: ${data:weather:dew_point}
+      bottomline: "°C"
+      bottomline-size: 30
+      bottomline-color: red
+      mark: ${fa:arrow-right}
+      mark-size: 20
+      mark-font: fontawesome.otf
+      mark-color: red
+
+
+  - index: 5
+    name: PRESSURE2
+    type: none
+    data:
+      top-line-color: deepskyblue
+      top-line-width: 10
+      icon: "fa:gauge"
+      icon-size: 60
+      icon-color: deepskyblue
+      data: ${formula}
+      data-format: "{:04.2f}"
+      data-font: DIN Condensed Light
+      data-size: 80
+      data-color: white
+      # data-unit: "hPa"
+      # formula: ${data:weather:pressure}
+      formula: "${data:weather:pressure} 0.02953 *"
+      bottomline: hPa
+      bottomline-size: 30
+      bottomline-color: red
+      mark: ${fa:arrow-right}
+      mark-size: 20
+      mark-font: fontawesome.otf
+      mark-color: red
+
+
+
+  - index: 11
+    name: ICE WARNING
+    type: push
+    command: sim/annunciator/clear_master_caution
+    annunciator:
+      text: "ICE\nDETECTED"
+      text-color: darkorange
+      text-font: DIN Condensed Black.otf
+      text-size: 48
+      dataref: sim/cockpit/warnings/annunciators/ice
+
+
+
+  - index: 9
+    name: ICE DETECTION
+    type: none
+    label: ICE DETECTION
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: F
+      parts:
+        F0:
+          text-color: firebrick
+          text-font: DIN Condensed Black.otf
+          text-size: 28
+          formula: ${sim/flightmodel/failures/frm_ice} 100 * round
+          text: "${formula}\nFRAME"
+          text-format: "{0:.0f}"
+        F1:
+          text-color: firebrick
+          text-font: DIN Condensed Black.otf
+          text-size: 28
+          formula: ${sim/flightmodel/failures/inlet_ice} 100 * round
+          text: "${formula}\nINLET"
+          text-format: "{0:.0f}"
+        F2:
+          text-color: firebrick
+          text-font: DIN Condensed Black.otf
+          text-size: 28
+          formula: ${sim/flightmodel/failures/pitot_ice} 100 * round
+          text: "${formula}\nPITOT"
+          text-format: "{0:.0f}"
+        F3:
+          text-color: firebrick
+          text-font: DIN Condensed Black.otf
+          text-size: 28
+          formula: ${sim/flightmodel/failures/prop_ice} 100 * round
+          text: "${formula}\nPROP"
+          text-format: "{0:.0f}"

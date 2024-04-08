@@ -22,6 +22,28 @@
       ],
       "console": "integratedTerminal",
       "pythonPath": "python3.10"
+    },
+    {
+      "name": "Cirrus SR22",
+      "type": "python",
+      "request": "launch",
+      "program": "~/Documents/GitHub/cockpitdecks/bin/cockpitdecks_upd_start.py",
+      "args": [
+        "~/Documents/Github/cockpitdecks-configs/decks/cirrus-sr22/"
+      ],
+      "console": "integratedTerminal",
+      "pythonPath": "python3.10"
+    },
+    {
+      "name": "Baron DR401",
+      "type": "python",
+      "request": "launch",
+      "program": "~/Documents/GitHub/cockpitdecks/bin/cockpitdecks_upd_start.py",
+      "args": [
+        "${workspaceFolder}/decks/baron-dr401/"
+      ],
+      "console": "integratedTerminal",
+      "pythonPath": "python3.10"
     }
   ]
 }

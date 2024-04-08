@@ -1,0 +1,284 @@
+description: Switch Panel
+includes: pager,encoders/encoders_fcu
+name: switches
+
+
+buttons:
+  - index: 0
+    type: push
+    command: sim/electrical/battery_2_toggle
+    label: BAT 2
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/electrical/battery_on[1]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/battery_on[1]} 1 eq
+
+  - index: 1
+    type: push
+    command: sim/electrical/battery_1_toggle
+    label: BAT 1
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/electrical/battery_on[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/battery_on[0]} 1 eq
+
+  - index: 2
+    vibrate: SHORT
+    type: push
+    command: sim/electrical/generator_1_toggle    
+    label: ALT 1
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
+
+  - index: 3
+    vibrate: SHORT
+    type: push
+    command: sim/electrical/generator_2_toggle    
+    label: ALT 2
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/generator_on[1]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
+
+  - index: 4
+    type: push
+    command: sim/systems/avionics_toggle
+    label: AVIONICS
+    label-color: black
+    label-size: 10
+    label-position: ct
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/avionics_power_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
+
+
+
+
+  # - index: 5
+  #   type: push
+  #   command: sim/fuel/fuel_pump_1_tog
+  #   label: FUEL PUMP L
+  #   label-color: black
+  #   label-size: 9
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     B0:
+  #       text: "OFF"
+  #       color: darkorange
+  #       formula: ${sim/cockpit/engine/fuel_pump_on[0]} 0 eq
+  #     B1:
+  #       text: "ON"
+  #       color: deepskyblue
+  #       framed: true
+  #       formula: ${sim/cockpit/engine/fuel_pump_on[0]} 1 eq
+
+  # - index: 6
+  #   type: push
+  #   command: sim/fuel/fuel_pump_2_tog
+  #   label: FUEL PUMP R
+  #   label-color: black
+  #   label-size: 9
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     B0:
+  #       text: "OFF"
+  #       color: darkorange
+  #       formula: ${sim/cockpit/engine/fuel_pump_on[1]} 0 eq
+  #     B1:
+  #       text: "ON"
+  #       color: deepskyblue
+  #       framed: true
+  #       formula: ${sim/cockpit/engine/fuel_pump_on[1]} 1 eq
+
+  - index: 10
+    name: Icing
+    type: page
+    page: icing
+    label: ICING
+    label-size: 12
+    text: 📁
+    text-font: fontawesome.otf
+    text-size: 32
+    text-color: Gold
+
+  - index: 11
+    name: Lights
+    type: page
+    page: lights
+    label: LIGHTS
+    label-size: 12
+    text: 📁
+    text-font: fontawesome.otf
+    text-size: 32
+    text-color: Gold
+
+
+  # - index: 4
+  #   type: push
+  #   label: BCN
+  #   label-color: black
+  #   label-size: 9
+  #   command: sim/lights/beacon_lights_toggle
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     B0:
+  #       text: "OFF"
+  #       color: darkorange
+  #       formula: ${sim/cockpit2/switches/beacon_on} 0 eq
+  #     B1:
+  #       text: "ON"
+  #       color: deepskyblue
+  #       framed: true
+  #       dataref: sim/cockpit2/switches/beacon_on[0] 1 eq
+
+  # - index: 5
+  #   type: push
+  #   label: LAND
+  #   label-color: black
+  #   label-size: 9
+  #   command: sim/lights/landing_lights_toggle    
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     B0:
+  #       text: "OFF"
+  #       color: darkorange
+  #       formula: ${sim/cockpit/electrical/landing_lights_on} 0 eq
+  #     B1:
+  #       text: "ON"
+  #       color: deepskyblue
+  #       framed: true
+  #       formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
+
+  # - index: 6
+  #   type: push
+  #   command: sim/lights/taxi_lights_toggle
+  #   label: TAXI
+  #   label-color: black
+  #   label-size: 9
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     B0:
+  #       text: "OFF"
+  #       color: darkorange
+  #       formula: ${sim/cockpit/electrical/taxi_light_on} 0 eq
+  #     B1:
+  #       text: "ON"
+  #       color: deepskyblue
+  #       framed: true
+  #       formula: ${sim/cockpit/electrical/taxi_light_on} 1 eq
+
+  # - index: 7
+  #   type: push
+  #   command: sim/lights/nav_lights_toggle
+  #   label: NAV
+  #   label-color: black
+  #   label-size: 9
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     B0:
+  #       text: "OFF"
+  #       color: darkorange
+  #       formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+  #     B1:
+  #       text: "ON"
+  #       color: deepskyblue
+  #       framed: true
+  #       formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
+
+  # - index: 8
+  #   type: push
+  #   command: sim/lights/strobe_lights_toggle
+  #   label: STRB
+  #   label-color: black
+  #   label-size: 9
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     B0:
+  #       text: "OFF"
+  #       color: darkorange
+  #       formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
+  #     B1:
+  #       text: "ON"
+  #       color: deepskyblue
+  #       framed: true
+  #       formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
+
+
+
+
+  # - index: 11
+  #   type: push
+  #   command: sim/electrical/cross_tie_toggle
+  #   label: AVIONICS 2
+  #   label-color: black
+  #   label-size: 9
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     B0:
+  #       text: "OFF"
+  #       color: darkorange
+  #       formula: ${sim/cockpit2/electrical/cross_tie} 0 eq
+  #     B1:
+  #       text: "ON"
+  #       color: deepskyblue
+  #       framed: true
+  #       formula: ${sim/cockpit2/electrical/cross_tie} 1 eq
