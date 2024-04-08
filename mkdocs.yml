@@ -28,6 +28,7 @@ site_description: >-
 # Repository
 repo_name: dlicudi/cockpitdecks-configs
 repo_url: https://github.com/dlicudi/cockpitdecks-configs
+edit_uri: blob/main/docs/
 
 # Copyright
 copyright: Copyright &copy; 2023 - 2024 Duane Licudi

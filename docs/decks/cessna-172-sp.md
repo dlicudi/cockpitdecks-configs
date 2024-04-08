@@ -73,9 +73,6 @@
     - [x] L VAC R
     - [x] VOLTS
 
-
-
-
 </div>
 
 ## Specifications
@@ -111,8 +108,9 @@
 
 ## Supported Variants 
 
-!!! note
+!!! note inline end "G1000"
     Additional buttons were added to support the additional G1000 AP functions (FD/VNAV/FLC).# Engine
+
 
 - [x] Cessna_172SP_G1000
 - [x] Cessna_172SP_seaplane
@@ -121,15 +119,14 @@
 
 ## Pages
 
-!!! Note
-    Deck consists of 7 pages which can be accessed via the lower hardware numbered button.
+Deck consists of 7 pages which can be accessed via the lower hardware numbered button.
+
 
 
 === "PFI"
     PFI (Primary flight instruments)
-    ![](../../assets/images/pfi.png)
 
-    Airspeed indicator, Heading, Altimeter, Vertical Speed, Fuel Quantity, EGT/Fuel Flow, Oil, Vacuum/Pressure and Battery Ammeter, Propeller Speed, Caution Annunciators, Warning Annunciators, NAVGPS mode, Next Waypoint.
+    ![PFI](../assets/images/pfi.png)
 
     1. Altimeter includes barometer settings.
     2. Fuel quantity is displayed for both left and right tank.
@@ -142,7 +139,7 @@
 
 === "Switches"
     Switches (Battery, alternator, lights etc)
-    ![](../../assets/images/switches.png)
+    ![](../assets/images/switches.png)
 
     !!! Warning
         PythonPlugin required for long press button (<X-Plane Path>/Resources/Plugins/PythonPlugins/PI_cockpitdecks_helper.py)
@@ -163,7 +160,7 @@
 
 === "FCU"
     FCU (Provides autopilot functions)
-    ![](../../assets/images/fcu.png)
+    ![](../assets/images/fcu.png)
 
     !!! Note
           Some functions are not available on S-TEC 55 Autopilot (Cessna 172 G530 model).
@@ -182,7 +179,7 @@
 
 === "Radio"
     Radio (ADF, COM/NAV functions)
-    ![](../../assets/images/radio.png)
+    ![](../assets/images/radio.png)
 
     - **ADF FREQ:** Displays ADF frequency and ADF standby frequency. Pressing button will swap frequencies.
     - **COM 1:** Displays COM1 frequency and COM1 standby frequency. Pressing button will swap frequencies.
@@ -191,7 +188,7 @@
 
 === "Engine"
     Engine (Displays engine data)
-    ![](../../assets/images/engine.png)
+    ![](../assets/images/engine.png)
 
     - **ENG RPM:** Displays engine/prop RPM.
     - **MANIFOLD PRESSURE:** Displays manifold pressure.
@@ -210,7 +207,7 @@
 
 === "Pedestal"
     Pedestal (Flaps, gear)
-    ![](../../assets/images/pedestal.png)
+    ![](../assets/images/pedestal.png)
 
     - **THROTTLE:** Displays throttle as a percentage.
     - **TOGGLE BRAKES:** Displays the state of the parking brake. Push will toggle parking brake on/off.
@@ -221,7 +218,7 @@
 
 === "Transponder"
     Transponder (Change transponder mode and id)
-    ![](../../assets/images/transponder.png)
+    ![](../assets/images/transponder.png)
 
     - **SQUAWK CODE BUTTONS:** The top four buttons display the squawk code and serve as push buttons to increment the transponder digits.
     - **Transponder Mode Buttons:**

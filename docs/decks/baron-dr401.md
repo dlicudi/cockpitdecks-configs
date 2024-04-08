@@ -20,13 +20,13 @@ Fuel Type AVGAS
 {: .label .label-green }
 
 
-![](../../assets/images/pfi.png){: width="100" }
-![](../../assets/images/switches.png){: width="100" }
-![](../../assets/images/fcu.png){: width="100" }
-![](../../assets/images/radio.png){: width="100" }
-![](../../assets/images/engine.png){: width="100" }
-![](../../assets/images/pedestal.png){: width="100" }
-![](../../assets/images/transponder.png){: width="100" }
+![](../assets/images/pfi.png){: width="100" }
+![](../assets/images/switches.png){: width="100" }
+![](../assets/images/fcu.png){: width="100" }
+![](../assets/images/radio.png){: width="100" }
+![](../assets/images/engine.png){: width="100" }
+![](../assets/images/pedestal.png){: width="100" }
+![](../assets/images/transponder.png){: width="100" }
 
 ----
 
@@ -70,7 +70,7 @@ Additional buttons were added to support the additional G1000 AP functions (FD/V
 
 ## Primary Instrument Display
 
-![](../../assets/images/pfi.png)
+![](../assets/images/pfi.png)
 
 
 ### Airspeed Indicator
@@ -118,7 +118,7 @@ Fuel is in kg and is converted to gallons using RPN 0.264172 *
 
 ## Switch Panel
 
-![](../../assets/images/switches.png)
+![](../assets/images/switches.png)
 
 
 ### Ignition
@@ -169,7 +169,7 @@ PythonPlugin required for long press button (<X-Plane Path>/Resources/Plugins/Py
 
 
 ## Flight Control Unit (FCU)
-![](../../assets/images/fcu.png)
+![](../assets/images/fcu.png)
 
 
 ### AP
@@ -209,7 +209,7 @@ Maintains a set airspeed while climbing or descending to a selected altitude.
 
 # Radio functions
 
-![](../../assets/images/radio.png)
+![](../assets/images/radio.png)
 
 
 ## ADF FREQ
@@ -229,7 +229,7 @@ Pressing button will swap frequencies.
 Transponder functions will be deprecated after moving to a new page.
 
 # Transponder
-![](../../assets/images/transponder.png)
+![](../assets/images/transponder.png)
 
 
 ## SQUAWK CODE BUTTONS
@@ -252,7 +252,7 @@ Displays an R if the transponder is broadcasting. This will display intermittent
 Displays current mode of the transponder.
 
 # Engine
-![](../../assets/images/engine.png)
+![](../assets/images/engine.png)
 
 ## ENG RPM
 Displays engine/prop RPM.
@@ -291,7 +291,7 @@ Displays fuel mixture as a percentage.
 
 
 # Pedestal
-![](../../assets/images/pedestal.png)
+![](../assets/images/pedestal.png)
 
 ## THROTTLE
 Displays throttle as a percentage.
