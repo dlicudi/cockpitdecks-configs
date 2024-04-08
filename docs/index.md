@@ -1,11 +1,3 @@
----
-title: Home
-subtitle: Nullam urna elit, malesuada eget finibus ut, ac tortor
-icon: material/emoticon-happy
-description: Cockpitdeck Configs is a set of configs for Cockpitdecks.
-
----
-
 # Cockpitdecks Configs
 
 Cockpitdecks Configs provides a set of configurations for different aircraft for use with Cockpitdecks and X-Plane. Development is primarily on the Loupedeck Live but they can be easily customised for other decks.
