@@ -1,15 +1,5 @@
 # Cessna 172 SP
 
-Understood, here's the revised table without the fuel type:
-
-| Parameter            | Value         |
-|----------------------|---------------|
-| Range                | 518 NM        |
-| Service Ceiling      | 13,000 ft     |
-| Max Takeoff Weight   | 2,400 lbs     |
-| Cruise Speed         | 111 knots     |
-
-
 ![](../../assets/images/pfi.png){: width="100" }
 ![](../../assets/images/switches.png){: width="100" }
 ![](../../assets/images/fcu.png){: width="100" }
@@ -20,9 +10,35 @@ Understood, here's the revised table without the fuel type:
 
 ----
 
+## Specifications
 
+=== "Engine"
+    - **Model**: 1 x Lycoming IO-360-L2A (piston)
+    - **Power**: 180 horsepower @ 2,700 rpm
+    - **Propeller**: McCauley, 2-Bladed Fixed Pitch
 
+=== "Fuel"
+    - **Capacity**: 53 Gallons / 318 Lbs.
+    - **Recommended fuel**: 100 Octane Low Lead (100LL)
+    - **Fuel Burn (average)**: 8 Gallons per hour / 30 Liters per hour
 
+=== "Weights and Capacities"
+    - **Max. Takeoff Weight**: 2,550 lb. (1,157 kg)
+    - **Max. Landing Weight**: 2,550 lb. (1,157 kg)
+    - **Basic Empty Weight**: 1,640 lb. (744 kg)
+    - **Max. Gross Weight**: 2,558 lb. (1088 kg)
+    - **Max. Useful Load**: 918 lb. (416 kg)
+    - **Maximum Payload**: 910 lb. (413 kg)
+
+=== "Performance"
+    - **Cruise Speed**: 124 KIAS
+    - **Stall Speed (Clean)**: 48 KIAS
+    - **Stall Speed (Landing Configuration)**: 40 KIAS
+    - **Best Climb Rate**: 730 ft. pm (223 m. pm)
+    - **Maximum Structural Speed**: 129 KIAS
+    - **Landing Distance**: 1,335 ft. (407 m)
+    - **Service Ceiling**: 14,000 ft. (4,267 m)
+    - **Takeoff Distance**: 1,630 ft. (497 m)
 
 
 ## Supported Variants 
@@ -51,8 +67,6 @@ Deck consists of 7 pages which can be accessed via the lower hardware numbered b
     6. Warning annunciators provide fuel pressure and vacuum pressure alarms.
     7. NAVGPS displays NAV mode and provides toggle between NAV (VLOC) and GPS.
     8. Next Waypoint provides ETA, desired track (bearing) and NM left to reach waypoint.
-
-
 
 === "Switches"
     Switches (Battery, alternator, lights etc)
