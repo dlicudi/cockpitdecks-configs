@@ -42,7 +42,7 @@
     - [ ] ADF Panel
     - [x] NAV / GPS Button
 
--   :material-scale-balance:{ .lg .middle } __Switch Panel__
+-   :material-light-switch:{ .lg .middle } __Switch Panel__
 
     ---
 
@@ -53,7 +53,7 @@
     - [ ] Panel and Radio Brightness Controls
     - [ ] Pedestal and Glare-Shield Brightness Controls
 
--   :material-scale-balance:{ .lg .middle } __Throttle & Mixture / Pedestal__
+-   :material-engine:{ .lg .middle } __Throttle & Mixture / Pedestal__
 
     ---
 
@@ -64,7 +64,7 @@
     - [ ] Panel and Radio Brightness Controls
     - [ ] Pedestal and Glare-Shield Brightness Controls
 
--   :material-scale-balance:{ .lg .middle } __Annunciator Panel__
+-   :warning:{ .lg .middle } __Annunciator Panel__
 
     ---
 
@@ -75,40 +75,10 @@
 
 </div>
 
-## Specifications
-
-=== "Engine"
-    - **Model**: 1 x Lycoming IO-360-L2A (piston)
-    - **Power**: 180 horsepower @ 2,700 rpm
-    - **Propeller**: McCauley, 2-Bladed Fixed Pitch
-
-=== "Fuel"
-    - **Capacity**: 53 Gallons / 318 Lbs.
-    - **Recommended fuel**: 100 Octane Low Lead (100LL)
-    - **Fuel Burn (average)**: 8 Gallons per hour / 30 Liters per hour
-
-=== "Weights and Capacities"
-    - **Max. Takeoff Weight**: 2,550 lb. (1,157 kg)
-    - **Max. Landing Weight**: 2,550 lb. (1,157 kg)
-    - **Basic Empty Weight**: 1,640 lb. (744 kg)
-    - **Max. Gross Weight**: 2,558 lb. (1088 kg)
-    - **Max. Useful Load**: 918 lb. (416 kg)
-    - **Maximum Payload**: 910 lb. (413 kg)
-
-=== "Performance"
-    - **Cruise Speed**: 124 KIAS
-    - **Stall Speed (Clean)**: 48 KIAS
-    - **Stall Speed (Landing Configuration)**: 40 KIAS
-    - **Best Climb Rate**: 730 ft. pm (223 m. pm)
-    - **Maximum Structural Speed**: 129 KIAS
-    - **Landing Distance**: 1,335 ft. (407 m)
-    - **Service Ceiling**: 14,000 ft. (4,267 m)
-    - **Takeoff Distance**: 1,630 ft. (497 m)
-
 
 ## Supported Variants 
 
-!!! note inline end "G1000"
+!!! note "G1000"
     Additional buttons were added to support the additional G1000 AP functions (FD/VNAV/FLC).# Engine
 
 
