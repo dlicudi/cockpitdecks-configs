@@ -72,3 +72,70 @@
           formula: "1"
           text-format: "{0:.0f}"
 ```
+
+
+
+## Caution Annunciator
+```
+  - index: 9
+    name: CAUTION
+    type: none
+    label: CAUTION
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          text: "OIL PRESS"
+          text-color: firebrick
+          text-font: DIN Condensed Black.otf
+          text-size: 50
+          formula: ${sim/cockpit/warnings/annunciators/oil_pressure}
+        B1:
+          text: "VOLTS"
+          text-color: firebrick
+          text-font: DIN Condensed Black.otf
+          text-size: 50
+          formula: ${sim/cockpit/warnings/annunciators/generator}
+```
+
+``` py title="bubble_sort.py"
+def bubble_sort(items):
+    for i in range(len(items)):
+        for j in range(len(items) - 1 - i):
+            if items[j] > items[j + 1]:
+                items[j], items[j + 1] = items[j + 1], items[j]
+```
+
+## Warning Annunciator
+
+``` py title="Warning Annunciator"
+  - index: 10
+    name: WARNING
+    type: none
+    label: WARNING
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          text: "L FUEL R"
+          text-color: darkorange
+          text-font: DIN Condensed Black.otf
+          text-size: 50
+          formula: ${sim/cockpit/warnings/annunciators/fuel_pressure}
+        B1:
+          text: "L VAC R"
+          text-color: darkorange
+          text-font: DIN Condensed Black.otf
+          text-size: 50
+          formula: ${sim/cockpit/warnings/annunciators/low_vacuum}
+```
+
+
+## Test
+Testing
