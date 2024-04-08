@@ -1,4 +1,8 @@
-# Cockpitdecks Configs
+---
+title: Home
+---
+
+# Home
 
 Cockpitdecks Configs provides a set of configurations for different aircraft for use with Cockpitdecks and X-Plane. Development is primarily on the Loupedeck Live but they can be easily customised for other decks.
 
