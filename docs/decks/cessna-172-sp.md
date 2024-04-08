@@ -1,14 +1,82 @@
 # Cessna 172 SP
 
-![](../../assets/images/pfi.png){: width="100" }
-![](../../assets/images/switches.png){: width="100" }
-![](../../assets/images/fcu.png){: width="100" }
-![](../../assets/images/radio.png){: width="100" }
-![](../../assets/images/engine.png){: width="100" }
-![](../../assets/images/pedestal.png){: width="100" }
-![](../../assets/images/transponder.png){: width="100" }
+## Supported Functions
 
-----
+<div class="grid cards" markdown>
+
+-   :material-clock-fast:{ .lg .middle } __Primary Instruments__
+
+    ---
+
+    - [x] Airspeed Indicator
+    - [ ] Attitude Indicator
+    - [x] Heading Indicator
+    - [ ] Turn Coordinator
+    - [x] Altimeter
+    - [x] Vertical Speed Indicator
+  
+-   :fontawesome-brands-markdown:{ .lg .middle } __Secondary Instruments__
+
+    ---
+
+    - [ ] Chronometer
+    - [x] Fuel
+    - [x] Exhaust Gas Temp / Fuel Flow
+    - [x] Oil Temperature / Pressure
+    - [x] Vac Pressure / Battery Ammeter
+    - [x] Propeller RPM / Hobbs Meter
+    - [ ] VOR1 / ILS Receiver
+    - [ ] VOR2 Receiver
+    - [ ] ADF Receiver
+
+
+-   :material-format-font:{ .lg .middle } __Avionics__
+
+    ---
+
+    - [ ] Audio Switching Panel
+    - [ ] GNS 530
+    - [ ] GNS 430
+    - [x] Transponder Panel
+    - [x] Autopilot Panel
+    - [ ] ADF Panel
+    - [x] NAV / GPS Button
+
+-   :material-scale-balance:{ .lg .middle } __Switch Panel__
+
+    ---
+
+    - [x] Magneto-Select, and Starter
+    - [x] Master Alternator and Battery Switch
+    - [x] Toggle Switches
+    - [x] Avionics Bus Switches
+    - [ ] Panel and Radio Brightness Controls
+    - [ ] Pedestal and Glare-Shield Brightness Controls
+
+-   :material-scale-balance:{ .lg .middle } __Throttle & Mixture / Pedestal__
+
+    ---
+
+    - [x] Throttle Lever
+    - [x] Mixture Lever
+    - [ ] Elevator Trim
+    - [ ] Fuel Selector
+    - [ ] Panel and Radio Brightness Controls
+    - [ ] Pedestal and Glare-Shield Brightness Controls
+
+-   :material-scale-balance:{ .lg .middle } __Annunciator Panel__
+
+    ---
+
+    - [x] L FUEL R
+    - [x] OIL PRESS
+    - [x] L VAC R
+    - [x] VOLTS
+
+
+
+
+</div>
 
 ## Specifications
 
@@ -42,17 +110,21 @@
 
 
 ## Supported Variants 
-- [x] Cessna_172SP_G1000
-- [x] Cessna_172SP_seaplane
-- [x] Cessna_172SP
 
 !!! note
     Additional buttons were added to support the additional G1000 AP functions (FD/VNAV/FLC).# Engine
 
+- [x] Cessna_172SP_G1000
+- [x] Cessna_172SP_seaplane
+- [x] Cessna_172SP
 
-Deck consists of 7 pages which can be accessed via the lower hardware numbered button.
 
 ## Pages
+
+!!! Note
+    Deck consists of 7 pages which can be accessed via the lower hardware numbered button.
+
+
 === "PFI"
     PFI (Primary flight instruments)
     ![](../../assets/images/pfi.png)
