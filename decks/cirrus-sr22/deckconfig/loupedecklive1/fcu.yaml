@@ -175,6 +175,18 @@ buttons:
           formula: "1"
     command: sim/autopilot/vertical_speed
 
+  - index: 9
+    name: GCU478
+    type: page
+    page: gcu478
+    label: GCU-478
+    label-size: 12
+    text: 📁
+    text-font: fontawesome.otf
+    text-size: 32
+    text-color: Gold
+
+
   - index: 10
     name: FLC
     type: push

@@ -1,81 +1,107 @@
-name: gcu478
-includes: pager,encoders/encoders_gcu478
+name: home
+includes: pager
 
 buttons:
 
   - index: 0
-    type: push
-    name: DIRECT
-    text: DIRECT
+    type: page
+    page: pfi
+    text: PFI
     text-color: khaki
     text-size: 24
     text-font: DIN Condensed Light
     text-position: cm
     text-bg-color: (40, 40, 40)
-    command: sim/GPS/gcu478/direct
 
   - index: 1
-    type: push
-    name: MENU
-    text: MENU
+    type: page
+    page: switches
+    text: Switches
     text-color: khaki
     text-size: 24
     text-font: DIN Condensed Light
     text-position: cm
     text-bg-color: (40, 40, 40)
-    command: sim/GPS/gcu478/menu
 
   - index: 2
-    type: push
-    name: FPL
-    text: FPL
+    type: page
+    page: icing
+    text: Icing
     text-color: khaki
     text-size: 24
     text-font: DIN Condensed Light
     text-position: cm
     text-bg-color: (40, 40, 40)
-    command: sim/GPS/gcu478/fpl
 
   - index: 3
-    type: push
-    name: PROC
-    text: PROC
+    type: page
+    page: lights
+    text: Lights
     text-color: khaki
     text-size: 24
     text-font: DIN Condensed Light
     text-position: cm
     text-bg-color: (40, 40, 40)
-    command: sim/GPS/gcu478/proc
 
   - index: 4
-    type: push
-    name: CLR
-    text: CLR
+    type: page
+    page: fcu
+    text: FCU
     text-color: khaki
     text-size: 24
     text-font: DIN Condensed Light
     text-position: cm
     text-bg-color: (40, 40, 40)
-    command: sim/GPS/gcu478/clr
 
   - index: 5
-    type: push
-    name: ENT
-    text: ENT
+    type: page
+    page: gcu478
+    text: GCU-478
     text-color: khaki
     text-size: 24
     text-font: DIN Condensed Light
     text-position: cm
     text-bg-color: (40, 40, 40)
-    command: sim/GPS/gcu478/ent
+
 
   - index: 6
-    type: push
-    name: HOME
-    text: HOME
+    type: page
+    page: radio
+    text: Radio
     text-color: khaki
     text-size: 24
     text-font: DIN Condensed Light
     text-position: cm
     text-bg-color: (40, 40, 40)
-    command: sim/GPS/gcu479/home
+
+  - index: 7
+    type: page
+    page: engine
+    text: Engine
+    text-color: khaki
+    text-size: 24
+    text-font: DIN Condensed Light
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 8
+    type: page
+    page: pedestal
+    text: Pedestal
+    text-color: khaki
+    text-size: 24
+    text-font: DIN Condensed Light
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 9
+    type: page
+    page: transponder
+    text: XPDR
+    text-color: khaki
+    text-size: 24
+    text-font: DIN Condensed Light
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+

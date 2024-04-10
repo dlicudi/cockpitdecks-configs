@@ -6,56 +6,43 @@ buttons:
   name: range_encoder
   type: encoder-push
   commands:
-  - sim/GPS/gcu478/pan_push # push
-  - sim/GPS/gcu478/range_down
+  - sim/GPS/gcu478/pan_push
   - sim/GPS/gcu478/range_up
+  - sim/GPS/gcu478/range_down
 
 - index: e1
-  name: fms_encoder
-  type: encoder-toggle
+  name: range_leftright
+  type: encoder-push
   commands:
-  - sim/GPS/g1000n3_fms_outer_down
-  - sim/GPS/g1000n3_fms_outer_up
-  - sim/GPS/g1000n3_fms_inner_down
-  - sim/GPS/g1000n3_fms_inner_up
-  long-press: sim/GPS/gcu479/cursor
-
+  - sim/GPS/gcu478/pan_push
+  - sim/GPS/gcu478/pan_left
+  - sim/GPS/gcu478/pan_right
 
 - index: e2
-  name: FCU Baro
+  name: range_updown
   type: encoder-push
   commands:
-    - sim/instruments/barometer_std
-    - sim/instruments/barometer_down
-    - sim/instruments/barometer_up
-  options: modulo
+  - sim/GPS/gcu478/pan_push
+  - sim/GPS/gcu478/pan_down
+  - sim/GPS/gcu478/pan_up
+
 
 - index: e3
-  name: alt_encoder
-  type: encoder-toggle
+  name: fms_encoder_outer
+  type: encoder-push
   commands:
-  - sim/GPS/g1000n1_alt_outer_down
-  - sim/GPS/g1000n1_alt_outer_up
-  - sim/GPS/g1000n1_alt_inner_down
-  - sim/GPS/g1000n1_alt_inner_up
-  long-press: sim/autopilot/altitude_sync
+  - sim/GPS/gcu479/cursor
+  - sim/GPS/g1000n3_fms_outer_down
+  - sim/GPS/g1000n3_fms_outer_up
 
 - index: e4
-  name: FCU V Speed
+  name: fms_encoder_inner
   type: encoder-push
   commands:
-    - sim/autopilot/vertical_speed_sync
-    - sim/autopilot/vertical_speed_down
-    - sim/autopilot/vertical_speed_up
-  long-press: AirbusFBW/PullSPDSel
+  - sim/GPS/gcu479/cursor
+  - sim/GPS/g1000n3_fms_inner_down
+  - sim/GPS/g1000n3_fms_inner_up
 
-- index: e5
-  name: mixture_encoder
-  type: encoder-push
-  commands:
-  - sim/engines/mixture_max # push
-  - sim/engines/mixture_down
-  - sim/engines/mixture_up
 
 
 - index: left
@@ -68,32 +55,26 @@ buttons:
         label-size: 14
         label-font: B612-Bold
         label-color: Gold
-        formula: "${sim/flightmodel/engine/ENGN_thro[0]} 100 *"
         text-size: 18
         text-font: Seven Segment.ttf
         text-color: White
-        text-format: "{0:01.0f}"
-        text: "${formula}%"
-      - label: "FMS"
+        text: "+/-"
+      - label: "PAN"
         label-size: 14
         label-font: B612-Bold
         label-color: Gold
-        formula: "${sim/cockpit/autopilot/heading_mag}"
         text-size: 18
         text-font: Seven Segment.ttf
         text-color: White
-        text-format: "{0:00.0f}"
-        text: "${formula}"
-      - label: "QNH"
+        text: "L/R"
+      - label: "PAN"
         label-size: 14
         label-font: B612-Bold
         label-color: Gold
-        formula: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}"
         text-size: 18
         text-font: Seven Segment.ttf
         text-color: White
-        text-format: "{0:01.2f}"
-        text: "${formula}"
+        text: "U/D"
 
 - index: right
   name: right_screen
@@ -101,33 +82,27 @@ buttons:
   side:
     icon-color: Black
     labels:
-      - label: "ALT"
-        label-size: 16
-        label-font: B612-Bold
-        label-color: Grey
-        formula: "${sim/cockpit2/autopilot/altitude_dial_ft}"
-        text-size: 16
-        text-font: Seven Segment.ttf
-        text-color: White
-        text-format: "{0:04.0f}"
-        text: "${formula}"
-      - label: "VS"
+      - label: "FMS"
         label-size: 14
         label-font: B612-Bold
         label-color: Gold
-        formula: "${sim/cockpit/autopilot/vertical_velocity} 100 /"
         text-size: 18
         text-font: Seven Segment.ttf
         text-color: White
-        text-format: "{0:+01.0f}"
-        text: "${formula}"
-      - label: "MIX"
+        text: "Outer"
+      - label: "FMS"
         label-size: 14
         label-font: B612-Bold
         label-color: Gold
-        formula: "${sim/flightmodel/engine/ENGN_mixt[0]} 100 *"
         text-size: 18
         text-font: Seven Segment.ttf
         text-color: White
-        text-format: "{0:01.0f}"
-        text: "${formula}%"
+        text: "Inner"
+      - label: "---"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text: ""
