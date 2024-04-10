@@ -43,6 +43,16 @@ buttons:
   - sim/GPS/g1000n3_fms_inner_down
   - sim/GPS/g1000n3_fms_inner_up
 
+- index: e5
+  name: gcu478_encoder
+  type: encoder-toggle
+  commands:
+  - sim/GPS/gcu478/outer_down
+  - sim/GPS/gcu478/outer_up
+  - sim/GPS/gcu478/inner_down
+  - sim/GPS/gcu478/inner_up
+  long-press: sim/GPS/gcu479/1_2_ctr
+
 
 
 - index: left
@@ -98,11 +108,11 @@ buttons:
         text-font: Seven Segment.ttf
         text-color: White
         text: "Inner"
-      - label: "---"
+      - label: "GCU478"
         label-size: 14
         label-font: B612-Bold
         label-color: Gold
         text-size: 18
         text-font: Seven Segment.ttf
         text-color: White
-        text: ""
+        text: "COMBO"
