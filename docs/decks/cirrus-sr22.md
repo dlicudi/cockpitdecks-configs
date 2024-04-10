@@ -15,20 +15,76 @@ Cruise 111 kts
 Fuel Type AVGAS
 {: .label .label-green }
 
-
-![](../assets/images/pfi.png){: width="100" }
-![](../assets/images/switches.png){: width="100" }
-![](../assets/images/fcu.png){: width="100" }
-![](../assets/images/radio.png){: width="100" }
-![](../assets/images/engine.png){: width="100" }
-![](../assets/images/pedestal.png){: width="100" }
-![](../assets/images/transponder.png){: width="100" }
+![](../assets/images/cirrus-sr22/pfi.png){: width="100" }
+![](../assets/images/cirrus-sr22/lights.png){: width="100" }
+![](../assets/images/cirrus-sr22/icing.png){: width="100" }
+![](../assets/images/cirrus-sr22/gcu478.png){: width="100" }
+![](../assets/images/cirrus-sr22/fcu.png){: width="100" }
+![](../assets/images/cirrus-sr22/radio.png){: width="100" }
+![](../assets/images/cirrus-sr22/engine.png){: width="100" }
+![](../assets/images/cirrus-sr22/pedestal.png){: width="100" }
+![](../assets/images/cirrus-sr22/transponder.png){: width="100" }
 
 ----
 
+
+
 ## Functions
 
+
+
+Battery and Electrical Panel(1), G1000 Control Panel(2), Autopilot Controls(3), Audio Panel(4), Flap Panel(5), Throttle Quadrant(6), Backup Instrumentation(7), Parking Brake and Alternate Air Selector(8), G1000 Avionics Panels(9).
+{ .annotate }
+
+1.  :man_raising_hand: Battery and Electrical Panel:
+    - [x] Ignition
+    - [x] BAT 1
+    - [x] BAT 2
+    - [x] ALT 1
+    - [x] ALT 2
+    - [x] AVIONICS
+    - [x] Lights
+        - [x] NAV
+        - [x] STROBE
+        - [x] LAND
+        - [x] ICE
+    - [x] Ice
+        - [x] PITOT HEAT
+        - [x] ICE PROTECT
+        - [x] PUMP BKUP
+        - [x] WIND SHLD
+    - [ ] Instrument Lighting
+
+
+2.  G1000 Control Panel
+    - [x] Direct To (a waypoint)
+    - [x] MENU key
+    - [x] PROC key
+    - [x] FMS rotary
+    - [ ] NAV button
+    - [ ] COM button
+    - [ ] XPDR button
+    - [ ] CRS button
+    - [ ] COM/NAV/CRS/XPDR rotary combo
+    - [ ] IDENT button
+    - [ ] Frequency toggle button
+    - [ ] Keypad
+    - [x] Range rotary
+    - [x] FPL button
+    - [x] CLR button
+    - [x] ENT button
+    - [x] Home button
+
+
+
+### Home
+![](../assets/images/cirrus-sr22/home.png)
+Provides links to pages (up to 12)
+PFI, Switches, Icing, Lights, FCU, GCU 478, Radio, Engine, Pedestal, XPDR.
+
 ### Switches
+![](../assets/images/cirrus-sr22/switches.png)
+
 - [ ] Ignition
 - [x] BAT 2
 - [x] BAT 1
@@ -90,7 +146,7 @@ Deck consists of 7 pages which can be accessed via the lower hardware numbered b
 Additional buttons were added to support the additional G1000 AP functions (FD/VNAV/FLC).
 
 # Engine
-![](../assets/images/engine.png)
+![](../assets/images/cirrus-sr22/engine.png)
 
 ## ENG RPM
 Displays engine/prop RPM.
@@ -126,7 +182,7 @@ Provides an estimate on fuel remaining in hours, based on current fuel flow.
 
 ## MIXTURE
 Displays fuel mixture as a percentage.## Flight Control Unit (FCU)
-![](../assets/images/fcu.png)
+![](../assets/images/cirrus-sr22/fcu.png)
 
 
 ### AP
@@ -165,7 +221,7 @@ Maintains a set airspeed while climbing or descending to a selected altitude.
 
 {: .note }
 > Some functions are not available on S-TEC 55 Autopilot (Cessna 172 G530 model).# Pedestal
-![](../assets/images/pedestal.png)
+![](../assets/images/cirrus-sr22/pedestal.png)
 
 ## THROTTLE
 Displays throttle as a percentage.
@@ -184,19 +240,12 @@ Displays flaps state as a number between 0 and 1 (0 fully retracted, 1 fully ext
 
 ## FLAPS DOWN
 Detracts flaps one notch.
----
-layout: default
-title: PFI
-parent: Cirrus SR22
-grand_parent: Decks
-has_children: false
-nav_order: 1
----
+
 
 
 ## Primary Instrument Display
 
-![](../assets/images/pfi.png)
+![](../assets/images/cirrus-sr22/pfi.png)
 
 
 ### Airspeed Indicator
@@ -240,7 +289,7 @@ Fuel is in kg and is converted to gallons using RPN 0.264172 *
 ### Next Waypoint
 *If there is a flight plan being followed this button will display data related to the next waypoint e.g. nautical miles left, desired track (bearing) and ETA in minutes.* # Radio functions
 
-![](../assets/images/radio.png)
+![](../assets/images/cirrus-sr22/radio.png)
 
 
 ## ADF FREQ
@@ -259,7 +308,7 @@ Pressing button will swap frequencies.
 {: .highlight }
 Transponder functions will be deprecated after moving to a new page.## Switch Panel
 
-![](../assets/images/switches.png)
+![](../assets/images/cirrus-sr22/switches.png)
 
 
 ### Ignition
@@ -308,7 +357,7 @@ PythonPlugin required for long press button (<X-Plane Path>/Resources/Plugins/Py
 - VOR2
 - ADF
 # Transponder
-![](../assets/images/transponder.png)
+![](../assets/images/cirrus-sr22/transponder.png)
 
 
 ## SQUAWK CODE BUTTONS
