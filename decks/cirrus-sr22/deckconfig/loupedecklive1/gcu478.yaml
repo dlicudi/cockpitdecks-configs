@@ -136,18 +136,24 @@ buttons:
   - index: 10
     type: push
     command: sim/GPS/gcu479/crs
+    longpush: sim/autopilot/hsi_toggle_nav
     label: CRS
     label-color: black
     label-size: 9
     annunciator:
-      model: B
+      model: E
       size: medium
-      B0:
+      E0:
         text: "${sim/cockpit/radios/nav1_obs_degm}°"
         text-format: "{:01.0f}"
         color: darkorange
         formula: "1"
-      B1:
+      E1:
+        text: "${sim/cockpit/radios/nav2_obs_degm}°"
+        text-format: "{:01.0f}"
+        color: darkorange
+        formula: "1"
+      E2:
         text: "ON"
         color: deepskyblue
         framed: true

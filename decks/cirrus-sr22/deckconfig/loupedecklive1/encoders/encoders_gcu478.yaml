@@ -1,7 +1,6 @@
 
 buttons:
 
-
 - index: e0
   name: range_encoder
   type: encoder-push
@@ -25,7 +24,6 @@ buttons:
   - sim/GPS/gcu478/pan_push
   - sim/GPS/gcu478/pan_down
   - sim/GPS/gcu478/pan_up
-
 
 - index: e3
   name: fms_encoder_outer
@@ -52,8 +50,6 @@ buttons:
   - sim/GPS/gcu478/inner_down
   - sim/GPS/gcu478/inner_up
   long-press: sim/GPS/gcu479/1_2_ctr
-
-
 
 - index: left
   name: left_screen
