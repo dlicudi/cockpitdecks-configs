@@ -104,4 +104,12 @@ buttons:
     text-position: cm
     text-bg-color: (40, 40, 40)
 
-
+  - index: 10
+    type: page
+    page: weather
+    text: Weather
+    text-color: khaki
+    text-size: 24
+    text-font: DIN Condensed Light
+    text-position: cm
+    text-bg-color: (40, 40, 40)

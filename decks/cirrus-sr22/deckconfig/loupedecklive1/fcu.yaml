@@ -176,18 +176,6 @@ buttons:
     command: sim/autopilot/vertical_speed
 
   - index: 9
-    name: GCU478
-    type: page
-    page: gcu478
-    label: GCU-478
-    label-size: 12
-    text: 📁
-    text-font: fontawesome.otf
-    text-size: 32
-    text-color: Gold
-
-
-  - index: 10
     name: FLC
     type: push
     annunciator:
@@ -207,26 +195,50 @@ buttons:
     command: sim/autopilot/level_change
     vibrate: SHORT
 
-  - index: 11
-    name: NAVGPS
+  - index: 10
+    name: GPS
     type: push
-    label: NAVGPS
+    label: HSI GPS
     label-size: 10
     label-color: black
-    command: sim/GPS/g430n1_cdi
+    command: sim/autopilot/hsi_toggle_gps
     annunciator:
       size: medium
       model: B
       parts:
         B0:
-          text: "NAV"
+          text: "GPS"
+          text-color: yellow
+          text-font: DIN Condensed Black.otf
+          text-size: 50
+          formula: ${sim/cockpit/switches/HSI_selector} 2 eq
+        B1:
+          text: "GPS2"          
+          text-color: lime
+          text-font: DIN Condensed Black.otf
+          text-size: 50
+          formula: ${sim/cockpit/switches/HSI_selector} 3 eq
+
+  - index: 11
+    name: VOR
+    type: push
+    label: HSI NAV
+    label-size: 10
+    label-color: black
+    command: sim/autopilot/hsi_toggle_nav
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          text: "VOR1"
           text-color: yellow
           text-font: DIN Condensed Black.otf
           text-size: 50
           formula: ${sim/cockpit/switches/HSI_selector} 0 eq
         B1:
-          text: "GPS"          
+          text: "VOR2"          
           text-color: lime
           text-font: DIN Condensed Black.otf
           text-size: 50
-          formula: ${sim/cockpit/switches/HSI_selector} 2 eq
+          formula: ${sim/cockpit/switches/HSI_selector} 1 eq
