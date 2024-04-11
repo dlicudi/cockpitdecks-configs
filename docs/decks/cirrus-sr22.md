@@ -1,25 +1,8 @@
 # Cirrus SR22
 
-Range 518 nm
-{: .label .label-green }
-
-Ceiling 13,000 ft
-{: .label .label-green }
-
-MTOW 2,400 lbs
-{: .label .label-green }
-
-Cruise 111 kts
-{: .label .label-green }
-
-Fuel Type AVGAS
-{: .label .label-green }
-
-![](../assets/images/cirrus-sr22/pfi.png){: width="100" }
 ![](../assets/images/cirrus-sr22/lights.png){: width="100" }
 ![](../assets/images/cirrus-sr22/icing.png){: width="100" }
 ![](../assets/images/cirrus-sr22/gcu478.png){: width="100" }
-![](../assets/images/cirrus-sr22/fcu.png){: width="100" }
 ![](../assets/images/cirrus-sr22/radio.png){: width="100" }
 ![](../assets/images/cirrus-sr22/engine.png){: width="100" }
 ![](../assets/images/cirrus-sr22/pedestal.png){: width="100" }
@@ -28,12 +11,9 @@ Fuel Type AVGAS
 ----
 
 
-
 ## Functions
 
-
-
-Battery and Electrical Panel(1), G1000 Control Panel(2), Autopilot Controls(3), Audio Panel(4), Flap Panel(5), Throttle Quadrant(6), Backup Instrumentation(7), Parking Brake and Alternate Air Selector(8), G1000 Avionics Panels(9).
+Battery and Electrical Panel(1) G1000 Control Panel(2) Autopilot Controls(3) Audio Panel(4) Flap Panel(5) Throttle Quadrant(6) Backup Instrumentation(7) Parking Brake and Alternate Air Selector(8) PFD Controls & Features(9) MFD Controls & Features(10).
 { .annotate }
 
 1.  :man_raising_hand: Battery and Electrical Panel:
@@ -55,17 +35,16 @@ Battery and Electrical Panel(1), G1000 Control Panel(2), Autopilot Controls(3), 
         - [x] WIND SHLD
     - [ ] Instrument Lighting
 
-
-2.  G1000 Control Panel
+2.  :man_raising_hand: G1000 Control Panel:
     - [x] Direct To (a waypoint)
     - [x] MENU key
     - [x] PROC key
     - [x] FMS rotary
-    - [ ] NAV button
-    - [ ] COM button
-    - [ ] XPDR button
-    - [ ] CRS button
-    - [ ] COM/NAV/CRS/XPDR rotary combo
+    - [x] COM/NAV/CRS/XPDR rotary combo
+        - [x] NAV button
+        - [x] COM button
+        - [x] XPDR button
+        - [x] CRS button
     - [ ] IDENT button
     - [ ] Frequency toggle button
     - [ ] Keypad
@@ -75,175 +54,100 @@ Battery and Electrical Panel(1), G1000 Control Panel(2), Autopilot Controls(3), 
     - [x] ENT button
     - [x] Home button
 
+3.  :man_raising_hand: Autopilot Controls:
+    - [x] Rotary
+        - [x] HDG Rotary
+        - [x] DN/UP VS Rotary
+        - [x] ALT SEL Rotary
+    - [x] APR
+    - [x] AP
+    - [x] LVL
+    - [x] FLC
+    - [x] VNV
+    - [x] ALT
+    - [x] VS
+    - [x] FD
+    - [x] NAV
+    - [x] HDG
+
+4.  :man_raising_hand: Audio Panel:
+    - [ ] COM1/COM2
+    - [ ] MIC1/MIC2
+    - [ ] NAV1/NAV2
+    - [ ] MKR MUTE
+
+5.  :man_raising_hand: Flap Panel:
+    - [x] FLAP LEVER
+    - [ ] SUPPLIMENTAL OXYGEN
+
+6.  :man_raising_hand: Throttle Quadrant:
+    - [x] THROTTLE
+    - [x] MIXTURE
+    - [ ] FUEL (TANK) SELECTOR
+
+7.  :man_raising_hand: Backup Instrumentation:
+    Not Implemented
+
+8.  :man_raising_hand: Parking Brake and Alternate Air selector:
+    - [ ] PARKING BRAKE
+    - [ ] ALTERNATE AIR SOURCE
+
+9.  :man_raising_hand: PFD Controls & Features:
+    - [ ] NAV Audio Squelch
+    - [ ] Active & Stand-by NAV1 and NAV2 Frequencies
+    - [ ] Attitude Indicator
+    - [x] Next Waypoint
+    - [ ] Active & Stand-by COM1 and COM Frequencies
+    - [ ] COM Frequency Toggle
+    - [ ] COM Audio Squelch
+    - [ ] COM Rotary
+    - [ ] CRS/BARO Rotary
+    - [x] Altimeter
+    - [ ] Joystick
+    - [ ] Flight Plan Key Group
+    - [ ] FMS Rotary
+    - [ ] Horizontal Situation Indicator (HSI)
+    - [ ] Soft Keys
+    - [x] ALT Rotary
+    - [ ] Autopilot Key Group
+    - [ ] HDG Rotary
+    - [x] Airspeed Indicator
+    - [ ] NAV Rotary
+    - [ ] NAV Frequency Toggle
+
+10. :man_raising_hand: MFD Controls & Features:
+    - [ ] NAV Audio Squelch
+    - [ ] Active & Stand-by NAV1 and NAV2 Frequencies
+    - [ ] Navigation Map
+    - [ ] Data Fields
+    - [ ] COM Frequency Toggle
+    - [ ] COM Audio Squelch
+    - [ ] COM Rotary
+    - [ ] CRS/BARO Control
+    - [ ] Joystick
+    - [ ] Flight Plan Key Group
+    - [ ] FMS Rotary
+    - [ ] Soft Keys
+    - [ ] ALT Rotary
+    - [ ] Autopilot Key Group
+    - [ ] HDG Rotary
+    - [ ] NAV Rotary
+    - [ ] NAV Frequency Toggle
+    - [ ] Engine Indication System (EIS)
 
 
-### Home
+
+## Home
+Provides links to pages (up to 12).
+!!! note inline end
+    The numbered buttons (1 to 7) also provide links to pages but this is limited to 7.
+
 ![](../assets/images/cirrus-sr22/home.png)
-Provides links to pages (up to 12)
-PFI, Switches, Icing, Lights, FCU, GCU 478, Radio, Engine, Pedestal, XPDR.
-
-### Switches
-![](../assets/images/cirrus-sr22/switches.png)
-
-- [ ] Ignition
-- [x] BAT 2
-- [x] BAT 1
-- [x] ALT 1
-- [x] ALT 2
-- [ ] PITOT HEAT
-
-### Lights
-- [x] NAV
-- [x] STROBE
-- [x] LAND
-- [x] ICE
-
-### ICE PROTECT
-- [ ] ON/OFF
-- [ ] NORM/HIGH
-- [ ] MAX
-- [ ] PUMP BKUP
-- [ ] WIND SHLD
-
-## Switches
-
-
-### Overview
-Deck consists of 7 pages which can be accessed via the lower hardware numbered button.
-
-1
-{: .label .label-green }
-2
-{: .label .label-blue }
-3
-{: .label .label-red }
-4
-{: .label .label-yellow }
-5
-{: .label .label-green }
-6
-{: .label .label-red }
-7
-{: .label .label-yellow }
-
-
-1. PFI (Primary flight instruments)
-2. Switches (Battery, alternator, lights etc)
-3. FCU (Provides autopilot functions)
-4. Radio (ADF, COM/NAV functions)
-5. Engine (Displays engine data)
-6. Pedestal (Flaps, gear)
-7. Transponder (Change transponder mode and id)
-
-----
-
-## Supported Variants 
-- [x] Cessna_172SP_G1000
-- [x] Cessna_172SP_seaplane
-- [x] Cessna_172SP
-
-{: .highlight }
-Additional buttons were added to support the additional G1000 AP functions (FD/VNAV/FLC).
-
-# Engine
-![](../assets/images/cirrus-sr22/engine.png)
-
-## ENG RPM
-Displays engine/prop RPM.
-
-## MANIFOLD PRESSURE
-Displays manifold pressure.
-
-## OIL TEMP
-Displays oil temperature.
-
-## OIL PRESSURE
-Displays oil pressure.
-
-## FUEL FLOW
-Display fuel flow in GPH.
-
-```fuel_flow_kg_sec 3600 * 0.8 / 3.78541 / 2 roundn```
-
-## CHT
-Displays cylinder head temp in celsius.
-
-## BATTERY
-1. Displays battery charge in watts per hour.
-2. Displays battery amps (negative value means battery is discharging)
-
-## THROTTLE
-Displays throttle as a percentage.
-
-## FUEL EST
-Provides an estimate on fuel remaining in hours, based on current fuel flow.
-
-```fuel_flow_kg_sec[0]} 3 roundn 0.000001 + / 3600 / 1 roundn```
-
-## MIXTURE
-Displays fuel mixture as a percentage.## Flight Control Unit (FCU)
-![](../assets/images/cirrus-sr22/fcu.png)
-
-
-### AP
-Engages or disengages the autopilot system.
-
-### FD
-*Not available on S-TEC 55 Autopilot model.*
-Provides visual cues for manual flight control based on autopilot logic without actually controlling the aircraft.
-
-### HDG
-Heading mode. Autopilot turns the aircraft to heading selected via Heading Bug knob.
-
-### ALT
-Altitude mode holds the current altitude.
-
-### NAV
-Directs aircraft heading according to flight plan programmed into GPS (GPS mode) or to/from a radio navigation aid (VLOC mode).
-
-### VNAV
-*Not available on S-TEC 55 Autopilot model.*
-Manages aircraft's vertical path according to a predefined route or waypoint altitudes
-
-### APR
-Activates an Instrument Landing System (ILS) approach mode for precision guidance during landing approaches.
-
-### REV/BC
-Engages mode for flying an ILS localiser back-course approach, used for approaches where the aircraft is flying away from the beacon.
-
-### VS
-Vertical speed mode to maintain an ascent or descent rate.
-
-### FLC
-*Not available on S-TEC 55 Autopilot model.*
-Maintains a set airspeed while climbing or descending to a selected altitude.
-
-
-{: .note }
-> Some functions are not available on S-TEC 55 Autopilot (Cessna 172 G530 model).# Pedestal
-![](../assets/images/cirrus-sr22/pedestal.png)
-
-## THROTTLE
-Displays throttle as a percentage.
-
-## TOGGLE BRAKES
-Displays state of the parking brake. Push will toggle parking brake on/off.
-
-## MIXTURE
-Displays fuel mixture as a percentage.
-
-## FLAPS UP
-Extends flaps one notch.
-
-## FLAPS RATIO
-Displays flaps state as a number between 0 and 1 (0 fully retracted, 1 fully extended).
-
-## FLAPS DOWN
-Detracts flaps one notch.
 
 
 
-## Primary Instrument Display
+## PFI
+Primary Flight Instruments.
 
 ![](../assets/images/cirrus-sr22/pfi.png)
 
@@ -287,7 +191,68 @@ Fuel is in kg and is converted to gallons using RPN 0.264172 *
 *Display for navigation mode and also a push button to toggle between NAV (VLOC) and GPS.*
 
 ### Next Waypoint
-*If there is a flight plan being followed this button will display data related to the next waypoint e.g. nautical miles left, desired track (bearing) and ETA in minutes.* # Radio functions
+*If there is a flight plan being followed this button will display data related to the next waypoint e.g. nautical miles left, desired track (bearing) and ETA in minutes.*
+
+
+
+## Switches
+Main switches and access to light and ice related functions.
+
+![](../assets/images/cirrus-sr22/switches.png)
+
+
+## FCU
+Autopilot related functions.
+
+![](../assets/images/cirrus-sr22/fcu.png)
+
+
+!!! warning
+    *FD/VNAV/FLC not available on S-TEC 55 Autopilot model.*
+
+    FD provides visual cues for manual flight control based on autopilot logic without actually controlling the aircraft.
+
+    Manages aircraft's vertical path according to a predefined route or waypoint altitudes
+
+    Maintains a set airspeed while climbing or descending to a selected altitude.
+
+
+# Engine
+Displays engine related data.
+
+![](../assets/images/cirrus-sr22/engine.png)
+
+!!! note
+    Fuel flow uses the following formula for GPH:
+    ```fuel_flow_kg_sec 3600 * 0.8 / 3.78541 / 2 roundn```
+
+    Fuel estimate uses the following formula:
+    ```fuel_flow_kg_sec[0]} 3 roundn 0.000001 + / 3600 / 1 roundn```
+
+
+# Pedestal
+![](../assets/images/cirrus-sr22/pedestal.png)
+
+## THROTTLE
+Displays throttle as a percentage.
+
+## TOGGLE BRAKES
+Displays state of the parking brake. Push will toggle parking brake on/off.
+
+## MIXTURE
+Displays fuel mixture as a percentage.
+
+## FLAPS UP
+Extends flaps one notch.
+
+## FLAPS RATIO
+Displays flaps state as a number between 0 and 1 (0 fully retracted, 1 fully extended).
+
+## FLAPS DOWN
+Detracts flaps one notch.
+
+
+# Radio functions
 
 ![](../assets/images/cirrus-sr22/radio.png)
 
