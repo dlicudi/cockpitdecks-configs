@@ -1,3 +1,7 @@
+---
+icon: material/tooltip-plus
+---
+
 # Cirrus SR22
 
 ![](../assets/images/cirrus-sr22/lights.png){: width="100" }
@@ -152,126 +156,54 @@ Primary Flight Instruments.
 ![](../assets/images/cirrus-sr22/pfi.png)
 
 
-### Airspeed Indicator
-*Displays speed in knots.*
+Airspeed Indicator(1) Heading(2) Altimeter(3) Vertical Speed(4) Fuel Quantity(5) EGT and Fuel Flow(6) 
+{ .annotate }
 
-### Heading
-*Displays magnetic bearing.*
+1.  Airspeed Indicator 
+    *Displays speed in knots.*
 
-### Altimeter
-*Displays altitude and barometer setting.*
+2.  Heading
+    *Displays magnetic bearing.*
 
-### Vertical Speed
-*Displays vertical speed.*
+3.  Altimeter
+    *Displays altitude and barometer setting.*
 
-### Fuel Quantity
-*Displays fuel remaining in left and right tank.*
+4.  Vertical Speed
+    *Displays vertical speed.*
 
-Fuel is in kg and is converted to gallons using RPN 0.264172 *
+5.  Fuel Quantity
+    *Displays fuel remaining in left and right tank.*
 
-### EGT and Fuel Flow
-*Displays exhaust gas temperature and fuel flow.*
+6.  EGT and Fuel Flow
 
-### Oil
-*Displays oil temperature and pressure.*
+    *Displays exhaust gas temperature and fuel flow.*
+    *Fuel is in kg and is converted to gallons using `RPN 0.264172 *`*
 
-### Vacuum/Pressure and Battery Ammeter
-*Displays vaccuum pressure (necessary for operating of air driven instruments) and displays battery current (positive indicates charging, negative depleting).*
+6.  Oil
+    *Displays oil temperature and pressure.*
 
-### Propeller Speed
-*The propeller speed in RPM. Engine RPM is also the same given that it is direct drive.*
+7.  Vacuum/Pressure and Battery Ammeter
+    *Displays vaccuum pressure (necessary for operating of air driven instruments) and displays battery current (positive indicates charging, negative depleting).*
 
-### Caution Annunciators
-*Displays oil pressure and voltage caution annunciators.*
+8.  Propeller Speed
+    *The propeller speed in RPM. Engine RPM is also the same given that it is direct drive.*
 
-### Warning Annunciators
-*Displays fuel pressure and vacuum pressure warning annunciators.*
+9.  Caution Annunciators
+    *Displays oil pressure and voltage caution annunciators.*
 
-### NAVGPS mode
-*Display for navigation mode and also a push button to toggle between NAV (VLOC) and GPS.*
+10. Warning Annunciators
+    *Displays fuel pressure and vacuum pressure warning annunciators.*
 
-### Next Waypoint
-*If there is a flight plan being followed this button will display data related to the next waypoint e.g. nautical miles left, desired track (bearing) and ETA in minutes.*
+11. NAVGPS mode
+    *Display for navigation mode and also a push button to toggle between NAV (VLOC) and GPS.*
+
+12. Next Waypoint
+    *If there is a flight plan being followed this button will display data related to the next waypoint e.g. nautical miles left, desired track (bearing) and ETA in minutes.*
 
 
 
 ## Switches
 Main switches and access to light and ice related functions.
-
-![](../assets/images/cirrus-sr22/switches.png)
-
-
-## FCU
-Autopilot related functions.
-
-![](../assets/images/cirrus-sr22/fcu.png)
-
-
-!!! warning
-    *FD/VNAV/FLC not available on S-TEC 55 Autopilot model.*
-
-    FD provides visual cues for manual flight control based on autopilot logic without actually controlling the aircraft.
-
-    Manages aircraft's vertical path according to a predefined route or waypoint altitudes
-
-    Maintains a set airspeed while climbing or descending to a selected altitude.
-
-
-# Engine
-Displays engine related data.
-
-![](../assets/images/cirrus-sr22/engine.png)
-
-!!! note
-    Fuel flow uses the following formula for GPH:
-    ```fuel_flow_kg_sec 3600 * 0.8 / 3.78541 / 2 roundn```
-
-    Fuel estimate uses the following formula:
-    ```fuel_flow_kg_sec[0]} 3 roundn 0.000001 + / 3600 / 1 roundn```
-
-
-# Pedestal
-![](../assets/images/cirrus-sr22/pedestal.png)
-
-## THROTTLE
-Displays throttle as a percentage.
-
-## TOGGLE BRAKES
-Displays state of the parking brake. Push will toggle parking brake on/off.
-
-## MIXTURE
-Displays fuel mixture as a percentage.
-
-## FLAPS UP
-Extends flaps one notch.
-
-## FLAPS RATIO
-Displays flaps state as a number between 0 and 1 (0 fully retracted, 1 fully extended).
-
-## FLAPS DOWN
-Detracts flaps one notch.
-
-
-# Radio functions
-
-![](../assets/images/cirrus-sr22/radio.png)
-
-
-## ADF FREQ
-Displays ADF frequency and ADF standby frequency
-Pressing button will swap frequencies.
-
-## COM 1
-Displays COM1 frequency and COM1 standby frequency.
-Pressing button will swap frequencies.
-
-## VLOC 1
-Displays NAV1 frequency and NAV1 standby frequency.
-Pressing button will swap frequencies.
-
-
-{: .highlight }
-Transponder functions will be deprecated after moving to a new page.## Switch Panel
 
 ![](../assets/images/cirrus-sr22/switches.png)
 
@@ -321,25 +253,102 @@ PythonPlugin required for long press button (<X-Plane Path>/Resources/Plugins/Py
 - G430 GPS
 - VOR2
 - ADF
-# Transponder
+
+## FCU
+Autopilot related functions.
+
+![](../assets/images/cirrus-sr22/fcu.png)
+
+
+!!! warning
+    *FD/VNAV/FLC not available on S-TEC 55 Autopilot model.*
+
+    FD provides visual cues for manual flight control based on autopilot logic without actually controlling the aircraft.
+
+    Manages aircraft's vertical path according to a predefined route or waypoint altitudes
+
+    Maintains a set airspeed while climbing or descending to a selected altitude.
+
+
+## Engine
+Displays engine related data.
+
+![](../assets/images/cirrus-sr22/engine.png)
+
+!!! note
+    Fuel flow uses the following formula for GPH:
+    ```fuel_flow_kg_sec 3600 * 0.8 / 3.78541 / 2 roundn```
+
+    Fuel estimate uses the following formula:
+    ```fuel_flow_kg_sec[0]} 3 roundn 0.000001 + / 3600 / 1 roundn```
+
+
+## Pedestal
+![](../assets/images/cirrus-sr22/pedestal.png)
+
+### THROTTLE
+Displays throttle as a percentage.
+
+### TOGGLE BRAKES
+Displays state of the parking brake. Push will toggle parking brake on/off.
+
+### MIXTURE
+Displays fuel mixture as a percentage.
+
+### FLAPS UP
+Extends flaps one notch.
+
+### FLAPS RATIO
+Displays flaps state as a number between 0 and 1 (0 fully retracted, 1 fully extended).
+
+### FLAPS DOWN
+Detracts flaps one notch.
+
+
+## Radio
+
+![](../assets/images/cirrus-sr22/radio.png)
+
+
+### ADF FREQ
+Displays ADF frequency and ADF standby frequency
+Pressing button will swap frequencies.
+
+### COM 1
+Displays COM1 frequency and COM1 standby frequency.
+Pressing button will swap frequencies.
+
+### VLOC 1
+Displays NAV1 frequency and NAV1 standby frequency.
+Pressing button will swap frequencies.
+
+
+{: .highlight }
+Transponder functions will be deprecated after moving to a new page.## Switch Panel
+
+![](../assets/images/cirrus-sr22/switches.png)
+
+
+
+## Transponder
 ![](../assets/images/cirrus-sr22/transponder.png)
 
 
-## SQUAWK CODE BUTTONS
+### SQUAWK CODE BUTTONS
 The top four buttons display the squawk code. They also serve as push buttons to increment the transponder digits.
 
-## Transponder Mode Buttons
+### Transponder Mode Buttons
 1. ON
 2. OFF
 3. STBY
 4. ALT
 5. TEST
 
-## IDENT
+### IDENT
 Transmits radio beacon for a short period of time.
 
-## RADIO BEACON
+### RADIO BEACON
 Displays an R if the transponder is broadcasting. This will display intermittently or constantly for short period of time if IDENT is pushed. 
 
-## MODE
+### MODE
 Displays current mode of the transponder.
