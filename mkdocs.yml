@@ -36,6 +36,7 @@ copyright: Copyright &copy; 2023 - 2024 Duane Licudi
 # Configuration
 theme:
   name: material
+
   # custom_dir: material/overrides
   features:
     - announce.dismiss
@@ -90,6 +91,8 @@ theme:
   favicon: assets/favicon.png
   icon:
     logo: logo
+    annotation: material/plus-circle-outline
+
 
 # Plugins
 plugins:
