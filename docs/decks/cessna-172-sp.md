@@ -1,3 +1,7 @@
+---
+icon: material/airplane
+---
+
 # Cessna 172 SP
 
 ## Supported Functions

@@ -1,5 +1,5 @@
 ---
-title: Baron DR401
+icon: material/airplane
 ---
 
 # Baron DR401

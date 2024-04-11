@@ -1,5 +1,5 @@
 ---
-title: Beechcraft Baron 58
+icon: material/airplane
 ---
 
 # Beechcraft Baron 58
