@@ -135,7 +135,3 @@ def bubble_sort(items):
           text-size: 50
           formula: ${sim/cockpit/warnings/annunciators/low_vacuum}
 ```
-
-
-## Test
-Testing
