@@ -161,31 +161,45 @@ buttons:
 
 
 - index: 9 # Fuel
-  name: FUEL
-  type: none
-  label: FUEL QTY
+  name: FUEL_L
+  type: push
+  command: laminar/sr22/fuel_sel_left_select 
+  label: FUEL L
   label-color: Black
   label-size: 10
   annunciator:
     size: medium
-    model: F
+    model: B
     parts:
-      F0:
-        color: yellow
+      B0:
+        color: lime
         text-size: 32
         formula: "${laminar/sr22/fuel_selector_pos} 1 eq"
-        led: dot
-      F1:
-        color: yellow
-        text-size: 32
-        formula: "${laminar/sr22/fuel_selector_pos} 2 eq"
-        led: dot
-      F2:
+        led: bar
+      B1:
         color: yellow
         text-size: 24
         formula: "${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn"
         text: "${formula} g"
-      F3:
+
+
+- index: 10 # Fuel
+  name: FUEL_R
+  type: push
+  command: laminar/sr22/fuel_sel_right_select
+  label: FUEL R
+  label-color: Black
+  label-size: 10
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        text-size: 32
+        formula: "${laminar/sr22/fuel_selector_pos} 2 eq"
+        led: bar
+      B1:
         color: yellow
         text-size: 24
         formula: "${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn"
