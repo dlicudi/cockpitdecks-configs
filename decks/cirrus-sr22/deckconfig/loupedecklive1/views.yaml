@@ -1,0 +1,114 @@
+name: views
+includes: pager,encoders/encoders_fcu
+
+buttons:
+
+- index: 0
+  type: push
+  name: QUICKLOOK0
+  label: QUICK LOOK
+  label-color: Gold
+  label-size: 10
+  text: 0
+  text-color: khaki
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/quick_look_0
+
+- index: 1
+  type: push
+  name: QUICKLOOK1
+  label: QUICK LOOK
+  label-color: Gold
+  label-size: 10
+  text: 0
+  text-color: khaki
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/quick_look_1
+
+- index: 2
+  type: push
+  name: QUICKLOOK2
+  label: QUICK LOOK
+  label-color: Gold
+  label-size: 10
+  text: 0
+  text-color: khaki
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/quick_look_2
+
+- index: 3
+  type: push
+  name: QUICKLOOK3
+  label: QUICK LOOK
+  label-color: Gold
+  label-size: 10
+  text: 0
+  text-color: khaki
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/quick_look_3
+
+
+
+- index: 8
+  type: push
+  name: COCKPIT
+  label: VIEW
+  label-color: Gold
+  text: 3D COCKPIT
+  text-color: khaki
+  text-size: 20
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/3d_cockpit
+
+- index: 9
+  type: push
+  name: CHASE
+  label: VIEW
+  label-color: Gold
+  text: CHASE
+  text-color: khaki
+  text-size: 20
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/chase
+
+- index: 10
+  type: push
+  name: FORWARD
+  label: VIEW
+  label-color: Gold
+  text: FORWARD
+  text-color: khaki
+  text-size: 20
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/forward
+
+- index: 11
+  type: push
+  name: PHYSICS
+  label: VIEW
+  label-color: Gold
+  text: PHYSICS
+  text-color: khaki
+  text-size: 20
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/show_physics_model

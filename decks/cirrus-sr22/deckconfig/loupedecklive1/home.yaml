@@ -6,81 +6,97 @@ buttons:
   - index: 0
     type: page
     page: pfi
-    text: PFI
+    label: PFI
+    label-color: Gold
+    label-bg-color: Black
+    text: 
     text-color: khaki
-    text-size: 24
-    text-font: DIN Condensed Light
+    text-size: 40
+    text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 
   - index: 1
     type: page
     page: switches
-    text: Switches
+    label: SWITCHES
+    label-color: Gold
+    text: 
     text-color: khaki
-    text-size: 24
-    text-font: DIN Condensed Light
+    text-size: 40
+    text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 
   - index: 2
     type: page
     page: icing
-    text: Icing
+    label: ICING
+    label-color: Gold
+    text: ❄
     text-color: khaki
-    text-size: 24
-    text-font: DIN Condensed Light
+    text-size: 40
+    text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 
   - index: 3
     type: page
     page: lights
-    text: Lights
+    label: LIGHTS
+    label-color: Gold
+    text: 💡
     text-color: khaki
-    text-size: 24
-    text-font: DIN Condensed Light
+    text-size: 40
+    text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 
   - index: 4
     type: page
     page: fcu
-    text: FCU
+    label: FCU
+    label-color: Gold
+    text: 
     text-color: khaki
-    text-size: 24
-    text-font: DIN Condensed Light
+    text-size: 40
+    text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 
   - index: 5
     type: page
     page: gcu478
-    text: GCU-478
+    label: GCU-478
+    label-color: Gold
+    text: 
     text-color: khaki
-    text-size: 24
-    text-font: DIN Condensed Light
+    text-size: 40
+    text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 30, 40)
-
 
   - index: 6
     type: page
     page: radio
-    text: Radio
+    label: RADIO
+    label-color: Gold
+    text: 
     text-color: khaki
-    text-size: 24
-    text-font: DIN Condensed Light
+    text-size: 40
+    text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 
   - index: 7
     type: page
     page: engine
-    text: Engine
+    label: ENGINE
+    label-color: Gold
+    text: ⛽
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 
@@ -107,9 +123,23 @@ buttons:
   - index: 10
     type: page
     page: weather
-    text: Weather
+    label: WEATHER
+    label-color: Gold
+    text: 🌦
     text-color: khaki
-    text-size: 24
-    text-font: DIN Condensed Light
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 11
+    type: page
+    page: views
+    label: VIEWS
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
