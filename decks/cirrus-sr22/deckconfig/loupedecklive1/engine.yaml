@@ -159,7 +159,6 @@ buttons:
         text-font: DIN Bold
         formula: "1"
 
-
 - index: 9 # Fuel
   name: FUEL_L
   type: push
@@ -181,7 +180,6 @@ buttons:
         text-size: 24
         formula: "${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn"
         text: "${formula} g"
-
 
 - index: 10 # Fuel
   name: FUEL_R
@@ -205,8 +203,6 @@ buttons:
         formula: "${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn"
         text: "${formula} g"
 
-
-
 - index: 11
   name: MIXTURE
   type: none
@@ -226,9 +222,6 @@ buttons:
         text-size: 32
         text-font: DIN Bold
         formula: "1"
-
-
-
 
 - index: 8
   name: FUEL EST
