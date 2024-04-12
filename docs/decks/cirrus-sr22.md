@@ -22,21 +22,10 @@ Battery and Electrical Panel(1) G1000 Control Panel(2) Autopilot Controls(3) Aud
 
 1.  :man_raising_hand: Battery and Electrical Panel:
     - [x] Ignition
-    - [x] BAT 1
-    - [x] BAT 2
-    - [x] ALT 1
-    - [x] ALT 2
+    - [x] Electrics (BAT 1, BAT 2, ALT 1, ALT 2)
     - [x] AVIONICS
-    - [x] Lights
-        - [x] NAV
-        - [x] STROBE
-        - [x] LAND
-        - [x] ICE
-    - [x] Ice
-        - [x] PITOT HEAT
-        - [x] ICE PROTECT
-        - [x] PUMP BKUP
-        - [x] WIND SHLD
+    - [x] Lights (NAV, STROBE, LAND, ICE)
+    - [x] Ice Protection (PITOT HEAT, ICE PROTECT, PUMP BKUP, WIND SHLD)
     - [ ] Instrument Lighting
 
 2.  :man_raising_hand: G1000 Control Panel:
@@ -119,7 +108,7 @@ Battery and Electrical Panel(1) G1000 Control Panel(2) Autopilot Controls(3) Aud
     - [ ] NAV Rotary
     - [ ] NAV Frequency Toggle
 
-10. :man_raising_hand: MFD Controls & Features:
+10.  :man_raising_hand: MFD Controls & Features:
     - [ ] NAV Audio Squelch
     - [ ] Active & Stand-by NAV1 and NAV2 Frequencies
     - [ ] Navigation Map
@@ -140,14 +129,13 @@ Battery and Electrical Panel(1) G1000 Control Panel(2) Autopilot Controls(3) Aud
     - [ ] Engine Indication System (EIS)
 
 
-
 ## Home
 Provides links to pages (up to 12).
-!!! note inline end
-    The numbered buttons (1 to 7) also provide links to pages but this is limited to 7.
 
 ![](../assets/images/cirrus-sr22/home.png)
 
+!!! note
+    The numbered buttons (1 to 7) also provide links to pages but this is limited to 7.
 
 
 ## PFI
@@ -207,67 +195,96 @@ Main switches and access to light and ice related functions.
 
 ![](../assets/images/cirrus-sr22/switches.png)
 
+IGNITION(1) AVIONICS(2) BAT 2(3) BAT 1(4)
+{ .annotate }
 
-### Ignition
-*Starter motor long press push button.*
+ALT 1(5) ALT 2(6) LIGHTS(7) ICING(8)
+{ .annotate }
 
-PythonPlugin required for long press button (<X-Plane Path>/Resources/Plugins/PythonPlugins/PI_cockpitdecks_helper.py)
+FUEL OFF(9) FUEL LEFT(10) FUEL OFF(11)
+{ .annotate }
 
-### Alternator
-*On/off button for alternator (when engine is running provides power to systems and charges battery).*
 
-### Battery
-*On/off button for battery (provides power when engine is not running).*
+1.  Ignition: *Starter motor long press push button.*
+    PythonPlugin required for long press button `<X-Plane Path>/Resources/Plugins/PythonPlugins/PI_cockpitdecks_helper.py)`
+2.  AVIONICS: *On/off button to power BUS1/BUS2.*
+3.  BAT 2: *On/off button for battery 2 (provides power when engine is not running).*
+4.  BAT 1: *On/off button for battery 1 (provides power when engine is not running).*
+5.  ALT 1: *On/off button for alternator (when engine is running provides power to systems and charges battery 1).*
+6.  ALT 2: *On/off button for alternator (when engine is running provides power to systems and charges battery 2).*
+7.  LIGHTS: *Takes you to Lights page.*
+8.  ICING: *Takes you to Icing page.*
+9.  FUEL OFF: Sets fuel selector to left off position.
+10. FUEL LEFT: Sets fuel selector to left position.
+11. FUEL RIGHT: Sets fuel selector to right position.
+12.  FUEL OFF: Sets fuel selector to right off position.
 
-### Fuel Pump
-*On/off button for electric fuel pump. Used for priming engine before start (also substitutes mechanical pump in case of a failure).*
 
-### Beacon
-*On/off for rotating beacon light.*
+### Lights
 
-### Landing lights
-*On/off button for landing light.*
+NAV(1) STROBE(2) LAND(3) ICE(4)
+{ .annotate }
 
-### Taxi lights
-*On/off button for taxi light.*
+1.  Navigation lights
+    *On/off button for navigation lights (wings/tail).*
+2.  Strobe Lights
+    *On/off button for strobe lights (wing).*
+3.  Landing lights
+    *On/off button for landing light.*
+4.  Ice lights
+    *On/off button for ice light (Illuminates the leading edges of the wings).*
 
-### Navigation lights
-*On/off button for navigation lights (wings/tail).*
 
-### Strobe Lights
-*On/off button for strobe lights (wing).*
+### Icing
 
-### Pitot Heat
-*On/off button for pitot tube heater.*
+PITOT(1) ICE PROTECT(2) PUMP BKUP(3) NORM/HIGH(4)
+{ .annotate }
 
-### Avionics Bus 1
-*On/off button to power BUS1.*
-- Comm Panel
-- G530 GPS
-- Transponder
-- Autopilot
-- BUS2
+PROP(5) WSHLD(6)
+{ .annotate }
 
-### Avionics Bus 2
-*On/off button to power BUS2.*
-- G430 GPS
-- VOR2
-- ADF
+1.  Pitot Heat
+    *Activates the pitot tube heating element.*
+2.  Ice Protect
+    *Set to ON to inject de-icing fluid along the wing, horizontal stabilizer, and propeller blades.*
+3.  PUMP BKUP
+    *Activates backup de-icing fluid pump.*
+4.  NORM/HIGH
+    Use NORM when icing conditions are encountered and prior to icing occurring.
+    Use MAX when ice buildup has occurred.
+    MAX switch does not toggle – it must be held in position for the duration of the process.  
+5.  PROP
+    *On/off button for prop heating element.*
+6.  WSHLD
+    *On/off button for windshield de-icing.*
+
 
 ## FCU
 Autopilot related functions.
 
 ![](../assets/images/cirrus-sr22/fcu.png)
 
+AP(1) FD(2) HDG(3) ALT(4)
+{ .annotate }
 
-!!! warning
-    *FD/VNAV/FLC not available on S-TEC 55 Autopilot model.*
+NAV(5) VNAV(6) APR(7) REV/BC(8)
+{ .annotate }
 
-    FD provides visual cues for manual flight control based on autopilot logic without actually controlling the aircraft.
+VS(9) FLC(10) HSI GPS(11) HSI NAV(12)
+{ .annotate }
 
-    Manages aircraft's vertical path according to a predefined route or waypoint altitudes
-
-    Maintains a set airspeed while climbing or descending to a selected altitude.
+1.  AP
+2.  FD provides visual cues for manual flight control based on autopilot logic without actually controlling the aircraft.
+3.  HDG
+4.  ALT
+5.  NAV
+6.  VNAV manages aircraft's vertical path according to a predefined route or waypoint altitudes.
+7.  APR
+8.  REV/BC
+9.  VS
+10. FLC Maintains a set airspeed while climbing or descending to a selected altitude.
+11. HSI GPS Toggles between GPS 1 and GPS 2 navigation modes.
+12. HSI NAV Toggles between VOR 1 and VOR 2 navigation modes.
 
 
 ## Engine

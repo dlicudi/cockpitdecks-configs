@@ -103,20 +103,24 @@ buttons:
   - index: 8
     type: page
     page: pedestal
-    text: Pedestal
+    label: PEDESTAL
+    label-color: Gold
+    text: 
     text-color: khaki
-    text-size: 24
-    text-font: DIN Condensed Light
+    text-size: 40
+    text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 
   - index: 9
     type: page
     page: transponder
-    text: XPDR
+    label: XPDR
+    label-color: Gold
+    text: 
     text-color: khaki
-    text-size: 24
-    text-font: DIN Condensed Light
+    text-size: 40
+    text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 
