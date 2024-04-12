@@ -13,4 +13,4 @@ Cockpitdecks Configs provides a set of configurations for different aircraft for
     Some of the configurations provided make use of new features which require this experimental build of [Cockpitecks](https://github.com/dlicudi/cockpitdecks).
 
 
-[Get Started](getting-started.md){ .md-button .md-button--primary }
+[Get Started](getting-started/installation.md){ .md-button .md-button--primary }
