@@ -20,6 +20,9 @@ Documentation: [Cockpitdecks Configs Docs](http://dlicudi.github.io/cockpitdecks
 ### Primary Flight Instruments
 ![PFI](./docs/assets/images/cirrus-sr22/pfi.png)
 
+### Garmin GCU-478
+![GCU-478](./docs/assets/images/cirrus-sr22/gcu478.png)
+
 
 ## Notes on long press buttons and helper plugin
 
