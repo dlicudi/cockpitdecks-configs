@@ -6,8 +6,19 @@ Important: New config currently requires this experimental build of [cockpitdeck
 Documentation: [Cockpitdecks Configs Docs](http://dlicudi.github.io/cockpitdecks-configs/)
 
 ## Aircraft
-- Cessna 172 SP (Laminar Research)
-- Beechcraft Baron 58 (Laminar Research)
+- [x] Cessna 172 SP (Laminar Research)
+- [x] Cirrus SR22 (Laminar Research)
+- [ ] Beechcraft Baron 58 (Laminar Research)
+- [ ] Robin DR401 (Aerobask)
+- [ ] Lancair Evolution (Laminar Research)
+
+## Examples
+
+### Home
+![Home](./docs/assets/images/cirrus-sr22/home.png)
+
+### Primary Flight Instruments
+![PFI](./docs/assets/images/cirrus-sr22/pfi.png)
 
 
 ## Notes on long press buttons and helper plugin
