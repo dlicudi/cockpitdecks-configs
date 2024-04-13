@@ -4,17 +4,6 @@ icon: material/airplane
 
 # Cirrus SR22
 
-![](../assets/images/cirrus-sr22/lights.png){: width="100" }
-![](../assets/images/cirrus-sr22/icing.png){: width="100" }
-![](../assets/images/cirrus-sr22/gcu478.png){: width="100" }
-![](../assets/images/cirrus-sr22/radio.png){: width="100" }
-![](../assets/images/cirrus-sr22/engine.png){: width="100" }
-![](../assets/images/cirrus-sr22/pedestal.png){: width="100" }
-![](../assets/images/cirrus-sr22/transponder.png){: width="100" }
-
-----
-
-
 ## Functions
 
 Battery and Electrical Panel(1) G1000 Control Panel(2) Autopilot Controls(3) Audio Panel(4) Flap Panel(5) Throttle Quadrant(6) Backup Instrumentation(7) Parking Brake and Alternate Air Selector(8) PFD Controls & Features(9) MFD Controls & Features(10).
@@ -303,45 +292,49 @@ Displays engine related data.
 ## Pedestal
 ![](../assets/images/cirrus-sr22/pedestal.png)
 
-### THROTTLE
-Displays throttle as a percentage.
+THROTTLE(1) TOGGLE BRAKES(2) FLAPS UP(3)
+{ .annotate }
 
-### TOGGLE BRAKES
-Displays state of the parking brake. Push will toggle parking brake on/off.
+MIXTURE(4) FLAPS RATIO(5)
+{ .annotate }
 
-### MIXTURE
-Displays fuel mixture as a percentage.
+FLAPS DOWN(6)
+{ .annotate }
 
-### FLAPS UP
-Extends flaps one notch.
-
-### FLAPS RATIO
-Displays flaps state as a number between 0 and 1 (0 fully retracted, 1 fully extended).
-
-### FLAPS DOWN
-Detracts flaps one notch.
+1.  THROTTLE Displays throttle as a percentage.
+2.  TOGGLE BRAKES Displays state of the parking brake. Push will toggle parking brake on/off.
+3.  FLAPS UP Extends flaps one notch.
+4.  MIXTURE Displays fuel mixture as a percentage.
+5.  FLAPS RATIO Displays flaps state as a number between 0 and 1 (0 fully retracted, 1 fully extended).
+6.  FLAPS DOWN Detracts flaps one notch.
 
 
 ## Radio
 
 ![](../assets/images/cirrus-sr22/radio.png)
 
+SQUAWK DIGIT 1(1) SQUAWK DIGIT 2(2) SQUAWK DIGIT 3(3) SQUAWK DIGIT 4(4)
+{ .annotate }
 
-### ADF FREQ
-Displays ADF frequency and ADF standby frequency
-Pressing button will swap frequencies.
+Transponder Mode(5) Ident(6) COM 1(7)
+{ .annotate }
 
-### COM 1
-Displays COM1 frequency and COM1 standby frequency.
-Pressing button will swap frequencies.
+ADF FREQ(8) VLOC 1(9)
+{ .annotate }
 
-### VLOC 1
-Displays NAV1 frequency and NAV1 standby frequency.
-Pressing button will swap frequencies.
+1.  SQUAWK DIGIT 1
+2.  SQUAWK DIGIT 2
+3.  SQUAWK DIGIT 3
+4.  SQUAWK DIGIT 4
+5.  Transponder Mode
+6.  IDENT
+7.  COM 1 Displays COM1 frequency and COM1 standby frequency. Pressing button will swap frequencies.
+8.  ADF FREQ Displays ADF frequency and ADF standby frequency. Pressing button will swap frequencies.
+9.  VLOC 1 Displays NAV1 frequency and NAV1 standby frequency. Pressing button will swap frequencies.
 
 
-{: .highlight }
-Transponder functions will be deprecated after moving to a new page.## Switch Panel
+!!! note
+    Transponder functions will be deprecated after moving to a new page.## Switch Panel
 
 ![](../assets/images/cirrus-sr22/switches.png)
 
