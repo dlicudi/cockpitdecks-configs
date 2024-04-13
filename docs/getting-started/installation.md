@@ -1,5 +1,22 @@
 # Installation
 
+## Python
+https://www.python.org/
+
+1. Download Python https://www.python.org/downloads/
+2. Install
+
+
+## XPPython
+
+https://xppython3.readthedocs.io/en/latest/index.html
+
+1. Download XPPython3 zipfile
+2.  Extract the xp3xxx.zip into your `X-Plane/Resources/plugins`
+3.  Follow steps for MAC quarantine https://xppython3.readthedocs.io/en/latest/usage/mac_quarantine.html
+4.  Start X-Plane
+
+
 ## Cockpitdecks
 You can also follow installation instructions specific to cockpitdecks here: https://devleaks.github.io/cockpitdecks-docs/Installation/
 
