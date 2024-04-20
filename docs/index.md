@@ -8,9 +8,18 @@ Cockpitdecks Configs provides a set of configurations for different aircraft for
 
 ---
 
-
 !!! warning "Cockpitdecks build"
-    Some of the configurations provided make use of new features which require this experimental build of [Cockpitecks](https://github.com/dlicudi/cockpitdecks).
+    Some buttons make use of new features which require this experimental build of [Cockpitecks](https://github.com/dlicudi/cockpitdecks).
 
 
 [Get Started](getting-started/installation.md){ .md-button .md-button--primary }
+
+
+## Examples
+
+![](./assets/images/cirrus-sr22/home.png){ width="200" }
+![](./assets/images/cirrus-sr22/pfi.png){ width="200" }
+![](./assets/images/cirrus-sr22/engine.png){ width="200" }
+
+
+

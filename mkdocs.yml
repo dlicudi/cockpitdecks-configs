@@ -143,6 +143,7 @@ markdown_extensions:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.details
+  - pymdownx.critic
   - pymdownx.emoji:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -274,3 +275,7 @@ markdown_extensions:
 #       - insiders/community-experts-program/index.md
 #   - Blog:
 #     - blog/index.md
+
+
+extra_css:
+  - stylesheets/extra.css

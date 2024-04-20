@@ -13,7 +13,7 @@ https://xppython3.readthedocs.io/en/latest/index.html
 
 1. Download XPPython3 zipfile
 2.  Extract the xp3xxx.zip into your `X-Plane/Resources/plugins`
-3.  Follow steps for MAC quarantine https://xppython3.readthedocs.io/en/latest/usage/mac_quarantine.html
+3.  Follow steps f§or MAC quarantine https://xppython3.readthedocs.io/en/latest/usage/mac_quarantine.html
 4.  Start X-Plane
 
 

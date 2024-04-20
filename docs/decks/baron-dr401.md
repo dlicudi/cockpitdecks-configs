@@ -4,68 +4,56 @@ icon: material/airplane
 
 # Baron DR401
 
-Range 518 nm
-{: .label .label-green }
+This config is for Aerobask's Robin DR401 (155 CDI version)
 
-Ceiling 13,000 ft
-{: .label .label-green }
+## Some meta data about this aircraft
 
-MTOW 2,400 lbs
-{: .label .label-green }
-
-Cruise 111 kts
-{: .label .label-green }
-
-Fuel Type AVGAS
-{: .label .label-green }
-
-
-![](../assets/images/pfi.png){: width="100" }
-![](../assets/images/switches.png){: width="100" }
-![](../assets/images/fcu.png){: width="100" }
-![](../assets/images/radio.png){: width="100" }
-![](../assets/images/engine.png){: width="100" }
-![](../assets/images/pedestal.png){: width="100" }
-![](../assets/images/transponder.png){: width="100" }
-
-----
-
-## Overview
-Deck consists of 7 pages which can be accessed via the lower hardware numbered button.
-
-1
-{: .label .label-green }
-2
-{: .label .label-blue }
-3
-{: .label .label-red }
-4
-{: .label .label-yellow }
-5
-{: .label .label-green }
-6
-{: .label .label-red }
-7
-{: .label .label-yellow }
+| Name                          | Value                                    |     |
+| ----------------------------- | ---------------------------------------- | --- |
+| Developer                     | :material-check:     Aerobask            |     |
+| Aircraft                      | :material-check:     Robin DR401 CDI 155 |     |
+| Cruise speed eco kts          | :material-check-all: 122                 |     |
+| Cruise speed max kts          | :material-close:     132                 |     |
+| Climb Rate (ASML) ISA fp/m    | :material-check: 740                     |     |
+| Climb Rate (8000fts) ISA fp/m | :material-check: 656                     |     |
+| Flying range km               | :material-check: 1654                    |     |
+| Max operating height fts      | :material-check: 16000                   |     |
 
 
-1. PFI (Primary flight instruments)
-2. Switches (Battery, alternator, lights etc)
-3. FCU (Provides autopilot functions)
-4. Radio (ADF, COM/NAV functions)
-5. Engine (Displays engine data)
-6. Pedestal (Flaps, gear)
-7. Transponder (Change transponder mode and id)
+## Cockpit Tour
 
-----
+### Baro setting Stby instrument
 
-## Supported Variants 
-- [x] Cessna_172SP_G1000
-- [x] Cessna_172SP_seaplane
-- [x] Cessna_172SP
+### Annunciators test switch and Annunciators
 
-{: .highlight }
-Additional buttons were added to support the additional G1000 AP functions (FD/VNAV/FLC).
+### Flaps indicator
+
+### Laminar G1000 PFD
+
+### Laminar G1000 MFD
+
+### Audio Panel
+
+### EIS
+
+### Trim Pitch indicator
+
+### ELT
+
+### Internal Lights rheostats
+
+### Strobe/Beacon switch
+
+### Nav / Pitot switches
+
+### External sound control
+
+### Throttle
+
+### Park brakes
+
+### Fuel Selector
+
 
 
 ## Primary Instrument Display
