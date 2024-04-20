@@ -35,12 +35,12 @@
       "pythonPath": "python3.10"
     },
     {
-      "name": "Baron DR401",
+      "name": "Robin DR401",
       "type": "python",
       "request": "launch",
       "program": "~/Documents/GitHub/cockpitdecks/bin/cockpitdecks_upd_start.py",
       "args": [
-        "${workspaceFolder}/decks/baron-dr401/"
+        "${workspaceFolder}/decks/robin-dr401/"
       ],
       "console": "integratedTerminal",
       "pythonPath": "python3.10"
