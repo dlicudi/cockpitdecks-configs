@@ -25,9 +25,10 @@ buttons:
     formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
 
   - index: 1
-    vibrate: SHORT
     type: push
-    command: sim/electrical/generator_1_toggle    
+    command: sim/electrical/generator_1_toggle
+    # type: onoff
+    # set-dataref: sim/cockpit/electrical/generator_on[0]
     label: ALTERNATOR
     label-color: black
     label-size: 9
@@ -43,6 +44,11 @@ buttons:
         color: deepskyblue
         framed: true
         formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
+    guard:
+      dataref: aerobask/dr401/cover_alternator
+      model: grid
+      color: red
+
 
   - index: 2
     type: push
