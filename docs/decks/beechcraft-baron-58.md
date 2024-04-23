@@ -123,6 +123,8 @@ YAW ON
 :small_blue_diamond:
 
 ## Deck Functions
+### Home
+![](../assets/images/beechcraft-baron-58/home.png){ :width="200" }
 
 ### PFI
 ![](../assets/images/beechcraft-baron-58/pfi.png){: width="100" }
