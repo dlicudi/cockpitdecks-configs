@@ -46,7 +46,7 @@ VOR / ILS Receiver
 :small_blue_diamond:
 Audio Switching Panel
 :small_blue_diamond:
-Transponder
+**Transponder**
 :small_blue_diamond:
 COMM 1 and COMM 2 Radios
 :small_blue_diamond:
