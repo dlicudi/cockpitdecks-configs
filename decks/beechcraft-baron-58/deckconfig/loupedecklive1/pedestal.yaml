@@ -3,26 +3,6 @@ includes: pager,encoders_pedestal
 
 buttons:
 
-- index: 0
-  type: longpress
-  vibrate: LONG
-  label: "IGNITION"
-  label-color: Lime
-  command: "sim/ignition/engage_starter_1"
-  text-bg-color: Black
-  multi-texts:
-    - text: "OFF"
-      text-color: White
-    - text: "R"
-      text-color: Orange
-    - text: "L"
-      text-color: Orange
-    - text: "BOTH"
-      text-color: Orange
-    - text: "START"
-      text-color: Red
-  formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
-
 
 - index: 2
   type: push
@@ -38,27 +18,6 @@ buttons:
     - text: "ON"
       text-color: Red
   formula: ${sim/cockpit2/controls/parking_brake_ratio}
-
-- index: 3
-  type: longpress
-  vibrate: LONG
-  label: "IGNITION"
-  label-color: Lime
-  command: "sim/ignition/engage_starter_2"
-  text-bg-color: Black
-  multi-texts:
-    - text: "OFF"
-      text-color: White
-    - text: "R"
-      text-color: Orange
-    - text: "L"
-      text-color: Orange
-    - text: "BOTH"
-      text-color: Orange
-    - text: "START"
-      text-color: Red
-  formula: ${sim/cockpit2/engine/actuators/ignition_key[1]}
-
 
 
 # - index: 3

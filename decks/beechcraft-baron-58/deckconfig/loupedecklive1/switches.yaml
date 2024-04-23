@@ -141,6 +141,48 @@ buttons:
         framed: true
         formula: ${sim/cockpit/engine/fuel_pump_on[1]} 1 eq
 
+
+  - index: 8
+    type: longpress
+    vibrate: LONG
+    label: "IGN 1"
+    label-color: Lime
+    command: sim/ignition/engage_starter_1
+    text-bg-color: Black
+    multi-texts:
+      - text: "OFF"
+        text-color: White
+      - text: "R"
+        text-color: Orange
+      - text: "L"
+        text-color: Orange
+      - text: "BOTH"
+        text-color: Orange
+      - text: "START"
+        text-color: Red
+    formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
+
+  - index: 9
+    type: longpress
+    vibrate: LONG
+    label: "IGN 2"
+    label-color: Lime
+    command: sim/ignition/engage_starter_2
+    text-bg-color: Black
+    multi-texts:
+      - text: "OFF"
+        text-color: White
+      - text: "R"
+        text-color: Orange
+      - text: "L"
+        text-color: Orange
+      - text: "BOTH"
+        text-color: Orange
+      - text: "START"
+        text-color: Red
+    formula: ${sim/cockpit2/engine/actuators/ignition_key[1]}
+
+
   - index: 10
     name: Icing
     type: page

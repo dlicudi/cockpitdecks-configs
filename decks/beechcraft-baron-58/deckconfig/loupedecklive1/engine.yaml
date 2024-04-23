@@ -65,7 +65,6 @@ buttons:
         formula: "${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3600 * 0.8 / 3.78541 / 2 roundn"
         text: "${formula} GPH"
         text-format: "{0:.2f}"
-
       B1:
         color: green
         text-size: 42
