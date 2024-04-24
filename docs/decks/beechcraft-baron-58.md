@@ -125,7 +125,30 @@ YAW ON
 :small_blue_diamond:
 
 ## Deck Functions
-### Home
+
+This section provides details on this deck and its pages, buttons and encoders.
+
+### Encoders
+
+#### FCU
+
+Provides barometer setting (QNH), throttle/mix (**THR**/**MIX**) controls and autopilot controls such as **HDG** and **VS**. 
+
+#### Pedestal
+In progress.
+
+#### Radio
+
+These encoders are not working currently.
+- [ ] XPDR (not currently functioning)
+- [ ] MODE (Changes transponder mode)
+- [ ] ADF (not currently functioning)
+- [ ] COM (not currently functioning)
+- [ ] VLOC (not currently functioning)
+
+### Pages
+
+#### Home
 ![](../assets/images/beechcraft-baron-58/home.png){ :width="200" }
 
 The home page provides an index to all the various pages available (up to a total of 12).
@@ -139,7 +162,7 @@ The bottom buttons can provide quick access to up to 7 different pages.
     GCU-478 will be replaced with another page.
 
 
-### PFI
+#### PFI
 ![](../assets/images/beechcraft-baron-58/pfi.png){ :width="200" }
 
 Central to this page is data you would consider primary flight instruments.
@@ -154,7 +177,7 @@ The third row consists of:
 - Warning annunciators.
 - Information on the next waypoint in flight plan.
 
-### Switches
+#### Switches
 ![](../assets/images/beechcraft-baron-58/switches.png){ :width="200" }
 
 This page provides buttons for **battery**, **alternators**, **avionics**, **prop sync** and **fuel pumps**.
@@ -164,7 +187,7 @@ There are also two ignition buttons **IGN 1** and **IGN 2** which are longpress 
 **Icing** and **lights** have had to be placed in separate pages as it was impossible to fit them here.
 
 
-### Icing
+#### Icing
 ![](../assets/images/beechcraft-baron-58/icing.png){ :width="200" }
 
 There are buttons to cover icing functions for left and right pitot (**PITOT L** and **PITOT R**), stall warn, prop and windshield.
@@ -173,27 +196,27 @@ For boots functions there is a **BOOTS AUTO** which can set the boots to inflate
 
 
 
-### Lights
+#### Lights
 ![](../assets/images/beechcraft-baron-58/lights.png){ :width="200" }
 
 Most of these are self explanatory. One possible improvement will be to add encoders for the panel lights.  
 
-### FCU
+#### FCU
 ![](../assets/images/beechcraft-baron-58/fcu.png){ :width="200" }
 
-### Radio
+#### Radio
 ![](../assets/images/beechcraft-baron-58/radio.png){ :width="200" }
 
-### Engine
+#### Engine
 ![](../assets/images/beechcraft-baron-58/engine.png){ :width="200" }
 
-### Pedestal
+#### Pedestal
 ![](../assets/images/beechcraft-baron-58/pedestal.png){ :width="200" }
 
-### Transponder
+#### Transponder
 ![](../assets/images/beechcraft-baron-58/transponder.png){ :width="200" }
 
-### Weather
+#### Weather
 ![](../assets/images/beechcraft-baron-58/weather.png){ :width="200" }
 
 This page provides comprehensive weather data including coverage for different cloud layers and tropo data.
