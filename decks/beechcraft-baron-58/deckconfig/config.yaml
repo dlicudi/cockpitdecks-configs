@@ -5,11 +5,10 @@ icao: BE58
 model:  Beechcraft Baron 58
 decks:
   - name: XPLive
-    type: loupedecklive
+    type: LoupedeckLive
     layout: loupedecklive1
     brightness: 70
 description: Decks for Beechcraft Baron 58
-
 
 # cache-icon: True
 # dataref-roundings:

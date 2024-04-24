@@ -263,7 +263,7 @@ buttons:
 
   - index: 11
     name: CLOUD1
-    label: Cloud 1
+    label: Clouds
     label-color: Black
     label-size: 10
     type: none
@@ -298,7 +298,7 @@ buttons:
 
   - index: 7
     name: CLOUD2
-    label: Cloud 2
+    label: Clouds
     label-color: Black
     label-size: 10
     type: none
@@ -333,7 +333,7 @@ buttons:
 
   - index: 3
     name: CLOUD3
-    label: Cloud 3
+    label: Clouds
     label-color: Black
     label-size: 10
     type: none

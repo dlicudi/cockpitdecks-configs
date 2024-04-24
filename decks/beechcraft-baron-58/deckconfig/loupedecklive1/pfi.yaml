@@ -240,8 +240,50 @@ buttons:
           text-format: "{0:.0f}°C\nEGT"
           formula: "1"
 
+  # - index: 8
+  #   name: FUEL EST
+  #   label: FUEL EST
+  #   label-size: 9
+  #   label-color: black
+  #   type: none
+  #   annunciator:
+  #     size: medium
+  #     model: B
+  #     parts:
+  #       B0:
+  #         color: green
+  #         text-size: 42
+  #         formula: "${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[1]} + ${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3 roundn 0.000001 + / 3600 / 1 roundn"
+  #         text: "${formula} hrs"
+  #       B1:
+  #         text: FUEL EST
+  #         text-size: 42
+  #         text-font: DIN Bold
+  #         formula: "1"
 
 
+  - index: 8
+    name: FUEL_DURATION
+    type: none
+    label: FUEL DURATION
+    label-size: 8
+    label-position: ct
+    label-color: Lime
+    data-bg-color: Black
+    data:
+      icon: "fa:gas-pump"
+      icon-size: 60
+      icon-color: Gold
+      data: ${formula}
+      data-format: "{:02.0f}"
+      data-font: DIN Condensed Light
+      data-color: White
+      data-size: 70
+      data-unit: "hrs"
+      data-progress: 20
+      data-trend: 1
+      formula: "${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[1]} + ${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3 roundn 0.000001 + / 3600 / 1 roundn"
+      bottomline: Go Faster
 
   - index: 9
     name: CAUTION

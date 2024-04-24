@@ -5,7 +5,7 @@ icao: C172
 model:  Cessna 172 SP
 decks:
   - name: XPLive
-    type: loupedecklive
+    type: LoupedeckLive
     layout: loupedecklive1
     brightness: 70
 description: Decks for Cessna 172 SP

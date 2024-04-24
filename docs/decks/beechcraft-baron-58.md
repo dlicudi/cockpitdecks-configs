@@ -48,32 +48,32 @@ Audio Switching Panel
 :small_blue_diamond:
 **Transponder**
 :small_blue_diamond:
-COMM 1 and COMM 2 Radios
+**COMM 1 and COMM 2 Radios**
 :small_blue_diamond:
-NAV 1 and NAV 2 Radios
+**NAV 1 and NAV 2 Radios**
 :small_blue_diamond:
 GNS 530
 :small_blue_diamond:
-ADF Frequency Selection Panel
+**ADF Frequency Selection Panel**
 :small_blue_diamond:
 
 ### Instrument Sub Panel
 :small_blue_diamond:
-Master Electrical Switches
+**Master Electrical Switches**
 :small_blue_diamond:
-Avionics Master Power and Prop Sync
+**Avionics Master Power and Prop Sync**
 :small_blue_diamond:
-Pitot Heat Switches
+**Pitot Heat Switches**
 :small_blue_diamond:
-Icing Switches
+**Icing Switches**
 :small_blue_diamond:
-Fuel Boost Pump Switches
+**Fuel Boost Pump Switches**
 :small_blue_diamond:
-Lights Panel
+**Lights Panel**
 :small_blue_diamond:
 Landing Gear Lever
 :small_blue_diamond:
-Parking Brake
+**Parking Brake**
 :small_blue_diamond:
 **Fuel Gauges**
 :small_blue_diamond:
@@ -126,8 +126,12 @@ YAW ON
 ### Home
 ![](../assets/images/beechcraft-baron-58/home.png){ :width="200" }
 
+The home page provides an index to all the various pages available (up to a total of 12).
+
+The bottom buttons can provide quick access to up to 7 different pages. 
+
 ### PFI
-![](../assets/images/beechcraft-baron-58/pfi.png){: width="100" }
+![](../assets/images/beechcraft-baron-58/pfi.png){ :width="200" }
 
 :small_blue_diamond:
 SPD
