@@ -128,63 +128,68 @@ YAW ON
 
 The home page provides an index to all the various pages available (up to a total of 12).
 
-The bottom buttons can provide quick access to up to 7 different pages. 
+The bottom buttons can provide quick access to up to 7 different pages.
+
+
+!!! note warning
+    Various pages are still work in progress (e.g. Pedestal, Views)
+
+    GCU-478 will be replaced with another page.
+
 
 ### PFI
 ![](../assets/images/beechcraft-baron-58/pfi.png){ :width="200" }
 
-:small_blue_diamond:
-SPD
-:small_blue_diamond:
-HDG
-:small_blue_diamond:
-ALT
-:small_blue_diamond:
-VS
-:small_blue_diamond:
+Central to this page is data you would consider primary flight instruments.
+The **speed**, **bearing**, **altitude** and **vertical speed** fill the first row.
 
-:small_blue_diamond:
-FUEL QTY
-:small_blue_diamond:
-EGT/FF
-:small_blue_diamond:
-OIL
-:small_blue_diamond:
-VAC/AMP
-:small_blue_diamond:
+The second row consists of engine data in a more compact form than that found in the engine page.
 
-:small_blue_diamond:
-RPM
-:small_blue_diamond:
-CAUTION
-:small_blue_diamond:
-WARNING
-:small_blue_diamond:
-NEXT WAYPOINT
-:small_blue_diamond:
+The third row consists of:
 
-
-
+- Fuel duration (a calculation of time remaining based on fuel flow and fuel quantity).
+- Caution annunciators.
+- Warning annunciators.
+- Information on the next waypoint in flight plan.
 
 ### Switches
-![](../assets/images/beechcraft-baron-58/switches.png){: width="100" }
-![](../assets/images/beechcraft-baron-58/icing.png){: width="100" }
-![](../assets/images/beechcraft-baron-58/lights.png){: width="100" }
+![](../assets/images/beechcraft-baron-58/switches.png){ :width="200" }
+
+This page provides buttons for **battery**, **alternators**, **avionics**, **prop sync** and **fuel pumps**.
+
+There are also two ignition buttons **IGN 1** and **IGN 2** which are longpress buttons to start engines.
+
+**Icing** and **lights** have had to be placed in separate pages as it was impossible to fit them here.
+
+
+### Icing
+![](../assets/images/beechcraft-baron-58/icing.png){ :width="200" }
+
+There are buttons to cover icing functions for left and right pitot (**PITOT L** and **PITOT R**), stall warn, prop and windshield.
+
+For boots functions there is a **BOOTS AUTO** which can set the boots to inflate automatically at intervals, a button to switch boots off (**BOOTS OFF**) and a longpress button (**BOOTS**) that can be used to manually inflate boots.
+
+
+
+### Lights
+![](../assets/images/beechcraft-baron-58/lights.png){ :width="200" }
+
+Most of these are self explanatory. One possible improvement will be to add encoders for the panel lights.  
 
 ### FCU
-![](../assets/images/beechcraft-baron-58/fcu.png){: width="100" }
+![](../assets/images/beechcraft-baron-58/fcu.png){ :width="200" }
 
 ### Radio
-![](../assets/images/beechcraft-baron-58/radio.png){: width="100" }
+![](../assets/images/beechcraft-baron-58/radio.png){ :width="200" }
 
 ### Engine
-![](../assets/images/beechcraft-baron-58/engine.png){: width="100" }
+![](../assets/images/beechcraft-baron-58/engine.png){ :width="200" }
 
 ### Pedestal
-![](../assets/images/beechcraft-baron-58/pedestal.png){: width="100" }
+![](../assets/images/beechcraft-baron-58/pedestal.png){ :width="200" }
 
 ### Transponder
-![](../assets/images/beechcraft-baron-58/transponder.png){: width="100" }
+![](../assets/images/beechcraft-baron-58/transponder.png){ :width="200" }
 
 ----
 
