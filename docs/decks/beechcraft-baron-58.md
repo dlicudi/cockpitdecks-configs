@@ -6,6 +6,8 @@ icon: material/airplane
 
 ## Cockpit Functions
 
+This section covers cockpit functions for the Beechcraft Baron 58. In bold are functions which are currently supported by this deck.
+
 ### Primary Instruments
 :small_blue_diamond:
 **Airspeed Indicator**
