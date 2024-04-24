@@ -191,6 +191,11 @@ Most of these are self explanatory. One possible improvement will be to add enco
 ### Transponder
 ![](../assets/images/beechcraft-baron-58/transponder.png){ :width="200" }
 
+### Weather
+![](../assets/images/beechcraft-baron-58/weather.png){ :width="200" }
+
+This page provides comprehensive weather data including coverage for different cloud layers and tropo data.
+
 ----
 
 
