@@ -2,7 +2,7 @@
 icon: material/airplane
 ---
 
-# Baron DR401
+# Robin DR401
 
 This config is for Aerobask's Robin DR401 (155 CDI version)
 
