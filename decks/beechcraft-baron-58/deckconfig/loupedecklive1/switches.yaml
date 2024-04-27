@@ -143,7 +143,7 @@ buttons:
 
 
   - index: 8
-    type: longpress
+    type: long-press
     vibrate: LONG
     label: "IGN 1"
     label-color: Lime
@@ -163,7 +163,7 @@ buttons:
     formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
 
   - index: 9
-    type: longpress
+    type: long-press
     vibrate: LONG
     label: "IGN 2"
     label-color: Lime
