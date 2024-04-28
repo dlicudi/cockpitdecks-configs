@@ -269,7 +269,7 @@ buttons:
     label-size: 8
     label-position: ct
     label-color: Lime
-    data-bg-color: Black
+    # data-bg-color: Black
     data:
       icon: "fa:gas-pump"
       icon-size: 60

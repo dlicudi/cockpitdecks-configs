@@ -128,12 +128,13 @@ buttons:
       model: B
       size: medium
       B0:
-        text: "OFF"
-        color: darkorange
+        color: grey
+        led: bars
         formula: ${sim/cockpit/switches/anti_ice_surf_boot} 0 eq not
       B1:
-        text: "ON"
-        color: deepskyblue
+        color: lime
+        led: bars
+        # color: deepskyblue
         framed: true
         formula: ${sim/cockpit/switches/anti_ice_surf_boot} 0 eq
 

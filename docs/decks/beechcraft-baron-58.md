@@ -223,5 +223,34 @@ This page provides comprehensive weather data including coverage for different c
 
 ----
 
+## Procedures
+Procedures in relation to Loupedeck functions.
 
 
+### Before Starting Engines
+- [ ] Exterior Inspection – COMPLETED
+- [x] Parking Brake – ON
+- [x] Power Levers – SLIGHTLY FORWARD
+- [ ] Propeller Levers – FULL FORWARD
+- [x] Mixture Levers – FULL FORWARD
+- [x] All switches – OFF
+- [x] Battery Switch – ON
+- [x] Fuel Quantity – CHECK
+- [ ] Check Annunciator Panel Warning Lights.
+
+### Engine Start 
+
+- [x] Master Battery Switch – CHECK ON
+- [x] Avionics Master Switch – OFF
+- [ ] Left Alternator Switch – ON
+- [x] Left Magneto Switch – START (hold until engine running)
+
+#### When Left Engine Running
+- [x] Left Power Lever – IDLE (FULL BACK)
+- [ ] Left Magneto Switch – CHECK BOTH
+- [ ] Right Alternator Switch – ON
+- [x] Right Magneto Switch – START (hold until engine running)
+
+#### When Right Engine Running
+- [x] Right Power Lever – IDLE (FULL BACK)
+- [x] Right Magneto Switch – CHECK BOTH
