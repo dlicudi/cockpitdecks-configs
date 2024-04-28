@@ -19,6 +19,11 @@ Cockpitdecks Configs provides a set of configurations for different aircraft for
 
 [Get Started](getting-started/installation.md){ .md-button .md-button--primary }
 
+## Known Issues
+
+- Data icons (such as those found in weather page of Beechcraft Baron 58) not currently working with latest cockpitdecks build.
+- Issues with latest build and EncoderValueExtended/EncoderToggle but should be having a fix soon.
+- IconSide used for the custom sides may be renamed to not conflict with original IconSide.
 
 ## Examples
 
