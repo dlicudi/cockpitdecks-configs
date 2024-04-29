@@ -187,6 +187,36 @@ buttons:
         text: "R ${formula} gal"
 
 
+- index: 8
+  name: FUEL_QTY_TOTAL
+  label: FUEL QTY
+  label-size: 10
+  label-color: Lime
+  type: none
+  data-bg-color: Black
+  data:
+    icon: "fa:gas-pump"
+    top-line-color: ivory
+    top-line-width: 10
+    icon-size: 60
+    icon-color: white
+    data: ${formula}
+    data-format: "{:3.0f}"
+    data-font: DIN Condensed Light
+    data-size: 50
+    data-color: white
+    data-progress: 141
+    data-trend: 1
+    data-unit: "gal"
+    formula: "${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[1]} + 0.264172 * 2 roundn"
+    bottomline: "Gallons"
+    bottomline-size: 30
+    bottomline-color: ivory
+    mark: ${fa:arrow-right}
+    mark-size: 20
+    mark-font: fontawesome.otf
+    mark-color: red
+
 
 - index: 11
   name: FUEL EST

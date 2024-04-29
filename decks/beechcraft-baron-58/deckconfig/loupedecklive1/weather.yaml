@@ -71,6 +71,7 @@ buttons:
       icon: "fa:binoculars"
       icon-size: 60
       icon-color: deepskyblue
+      data-bg-color: black      
       data: ${formula}
       data-format: "{:00.0f}"
       data-font: DIN Condensed Light
