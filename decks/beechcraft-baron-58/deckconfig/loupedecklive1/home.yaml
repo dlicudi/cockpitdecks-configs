@@ -1,5 +1,5 @@
 name: home
-includes: pager,encoders_fcu
+includes: pager,encoders/encoders_fcu
 
 buttons:
 
@@ -66,8 +66,8 @@ buttons:
 
   - index: 5
     type: page
-    page: gcu478
-    label: GCU-478
+    page: g530
+    label: G530
     label-color: Gold
     text: 
     text-color: khaki

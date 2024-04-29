@@ -1,0 +1,114 @@
+
+buttons:
+
+- index: e0
+  name: range_encoder
+  type: encoder
+  commands:
+  - sim/GPS/g430n1_zoom_in
+  - sim/GPS/g430n1_zoom_out
+
+- index: e1
+  name: comvloc_outer
+  type: encoder-push
+  commands:
+  - sim/GPS/g430n1_nav_com_tog
+  - sim/GPS/g430n1_coarse_down
+  - sim/GPS/g430n1_coarse_up
+
+- index: e2
+  name: comvloc_inner
+  type: encoder-push
+  commands:
+  - sim/GPS/g430n1_nav_com_tog
+  - sim/GPS/g430n1_fine_down
+  - sim/GPS/g430n1_fine_up
+
+- index: e3
+  name: gcu478_encoder
+  type: encoder-toggle
+  commands:
+  - sim/GPS/g430n1_chapter_dn
+  - sim/GPS/g430n1_chapter_up
+  - sim/GPS/g430n1_page_dn
+  - sim/GPS/g430n1_page_up
+  long-press: sim/GPS/g430n1_cursor
+
+
+- index: e4
+  name: fms_encoder_outer
+  type: encoder-push
+  commands:
+  - sim/GPS/g430n1_cursor
+  - sim/GPS/g430n1_chapter_dn
+  - sim/GPS/g430n1_chapter_up
+
+- index: e5
+  name: fms_encoder_inner
+  type: encoder-push
+  commands:
+  - sim/GPS/g430n1_cursor
+  - sim/GPS/g430n1_page_dn
+  - sim/GPS/g430n1_page_up
+
+- index: left
+  name: left_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: "RNG"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text: "+/-"
+      - label: "COM/VLOC"
+        label-size: 10
+        label-font: B612-Bold
+        label-color: Gold
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text: "OUTER"
+      - label: "COM/VLOC"
+        label-size: 10
+        label-font: B612-Bold
+        label-color: Gold
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text: "INNER"
+
+- index: right
+  name: right_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: "---"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text: "---"
+      - label: "GPS"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text: "Outer"
+      - label: "GPS"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text: "Inner"

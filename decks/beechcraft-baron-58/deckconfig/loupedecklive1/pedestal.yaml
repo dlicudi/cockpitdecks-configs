@@ -1,5 +1,5 @@
 name: pedestal
-includes: pager,encoders_pedestal
+includes: pager,encoders/encoders_pedestal
 
 buttons:
 
