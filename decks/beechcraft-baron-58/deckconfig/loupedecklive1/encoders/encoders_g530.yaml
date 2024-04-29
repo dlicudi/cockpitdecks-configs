@@ -25,15 +25,13 @@ buttons:
   - sim/GPS/g430n1_fine_up
 
 - index: e3
-  name: gcu478_encoder
+  name: volume_encoder
   type: encoder-toggle
   commands:
-  - sim/GPS/g430n1_chapter_dn
-  - sim/GPS/g430n1_chapter_up
-  - sim/GPS/g430n1_page_dn
-  - sim/GPS/g430n1_page_up
-  long-press: sim/GPS/g430n1_cursor
-
+  - sim/GPS/g430n1_cvol_dn
+  - sim/GPS/g430n1_cvol_up
+  - sim/GPS/g430n1_vvol_dn
+  - sim/GPS/g430n1_vvol_up
 
 - index: e4
   name: fms_encoder_outer
@@ -88,14 +86,14 @@ buttons:
   side:
     icon-color: Black
     labels:
-      - label: "---"
+      - label: "VOLUME"
         label-size: 14
         label-font: B612-Bold
         label-color: Gold
         text-size: 18
         text-font: Seven Segment.ttf
         text-color: White
-        text: "---"
+        text: "C/V"
       - label: "GPS"
         label-size: 14
         label-font: B612-Bold
