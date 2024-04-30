@@ -22,9 +22,11 @@ Cockpitdecks Configs provides a set of configurations for different aircraft for
 ## Known Issues
 
 !!! warning "Known issues with latest build"
-    - Data icons (such as those found in weather page of Beechcraft Baron 58) not currently working with latest cockpitdecks build.
-    - Issues with latest build and EncoderValueExtended/EncoderToggle but should be having a fix soon.
-    - IconSide used for the custom sides may be renamed to not conflict with original IconSide.
+    - ~~Data icons (such as those found in weather page of Beechcraft Baron 58) not currently working with latest cockpitdecks build.~~
+    - ~~Issues with latest build and EncoderValueExtended/EncoderToggle but should be having a fix soon.~~
+    - ~~IconSide used for the custom sides may be renamed to not conflict with original IconSide.~~
+
+    Issues above all resolved in latest build of cockpitdecks and cockpitdecks-configs.
 
 ## Examples
 
