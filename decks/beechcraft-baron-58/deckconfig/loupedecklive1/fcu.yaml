@@ -175,6 +175,18 @@ buttons:
           formula: "1"
     command: sim/autopilot/vertical_speed
 
+  - index: 9
+    type: page
+    page: g530
+    label: G530
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 30, 40)
+
   - index: 10
     name: FLC
     type: push

@@ -14,7 +14,7 @@ Cockpitdecks Configs provides a set of configurations for different aircraft for
     Compatible / supported versions as of writing:
 
     - [x] Experimental fork [Cockpitecks](https://github.com/dlicudi/cockpitdecks)
-    - [x] [Cockpitdecks](https://github.com/devleaks/cockpitdecks/tree/414e49697db0c583a5871fe84d9611005c86147b)
+    - [x] [Cockpitdecks](https://github.com/devleaks/cockpitdecks/)
 
 
 [Get Started](getting-started/installation.md){ .md-button .md-button--primary }

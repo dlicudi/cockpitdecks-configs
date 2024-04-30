@@ -4,147 +4,98 @@ icon: material/airplane
 
 # Beechcraft Baron 58
 
-## Cockpit Functions
+## Cockpit Overview
 
-This section covers cockpit functions for the Beechcraft Baron 58. In bold are functions which are currently supported by this deck.
 
-### Primary Instruments
-:small_blue_diamond:
-**Airspeed Indicator**
-:small_blue_diamond:
-Attitude Indicator (AI)
-:small_blue_diamond:
-Horizontal Situation Indicator (HSI)
-:small_blue_diamond:
-Turn Coordinator
-:small_blue_diamond:
-**Altimeter**
-:small_blue_diamond:
-Distance Measuring Equipment (DME) Master Display
-:small_blue_diamond:
-**Vacuum Gauge**
-:small_blue_diamond:
-ADF (Automatic Direction Finder)
-:small_blue_diamond:
-**Variometer**
-:small_blue_diamond:
-VOR / ILS Receiver
-:small_blue_diamond:
+![](../assets/images/beechcraft-baron-58/beechcraft-baron-58.png){ :width="200" }
 
-### Engine Instrumentation
-:small_blue_diamond:
-**Manifold Pressure**
-:small_blue_diamond:
-**Propeller RPM**
-:small_blue_diamond:
-**Fuel Flow**
-:small_blue_diamond:
-**Engine Temperature**
-:small_blue_diamond:
-**Oil Temperature and Pressure**
-:small_blue_diamond:
 
-### Avionics Panel
-:small_blue_diamond:
-Audio Switching Panel
-:small_blue_diamond:
-**Transponder**
-:small_blue_diamond:
-**COMM 1 and COMM 2 Radios**
-:small_blue_diamond:
-**NAV 1 and NAV 2 Radios**
-:small_blue_diamond:
-GNS 530
-:small_blue_diamond:
-**ADF Frequency Selection Panel**
-:small_blue_diamond:
+This configuration supports various cockpit functions for the Beechcraft Baron 58.
 
-### Instrument Sub Panel
-:small_blue_diamond:
-**Master Electrical Switches**
-:small_blue_diamond:
-**Avionics Master Power and Prop Sync**
-:small_blue_diamond:
-**Pitot Heat Switches**
-:small_blue_diamond:
-**Icing Switches**
-:small_blue_diamond:
-**Fuel Boost Pump Switches**
-:small_blue_diamond:
-**Lights Panel**
-:small_blue_diamond:
-Landing Gear Lever
-:small_blue_diamond:
-**Parking Brake**
-:small_blue_diamond:
-**Fuel Gauges**
-:small_blue_diamond:
-Prop Amps and De-Icing Gauges
-:small_blue_diamond:
-Flap Lever
-:small_blue_diamond:
-Panel Light Dimmers
-:small_blue_diamond:
+Primary Instruments (1)
+Engine Instrumentations (2)
+Avionics Panel (3)
+Instrument Sub Panel (4)
+Throttle Quadrant / Center Console (5)
+Autopilot (6)
+{ .annotate }
 
-### Throttle Quadrant and Center Console
-:small_blue_diamond:
-**Throttle Levers**
-:small_blue_diamond:
-Prop Levers
-:small_blue_diamond:
-**Mixture Levers**
-:small_blue_diamond:
-Rudder Trim Wheel
-:small_blue_diamond:
-Elevator Trim Wheel
-:small_blue_diamond:
-Aileron Trim Wheel
-:small_blue_diamond:
-Cowl Flap Levers
-:small_blue_diamond:
+1.  **Primary Instruments**
+    - [x] Airspeed Indicator
+    - [x] Altimeter
+    - [x] Vacuum Gauge
+    - [x] Variometer
+2.  **Engine Instrumentations**
+    - [x] Manifold Pressure
+    - [x] Propeller RPM
+    - [x] Fuel Flow
+    - [x] Engine Temperature
+    - [x] Oil Temperature and Pressure
+3.  **Avionics Panel**
+    - [x] Transponder
+    - [x] COMM 1 and COMM 2 Radios
+    - [x] NAV 1 and NAV 2 Radios
+    - [x] GNS 530
+    - [x] ADF Frequency Selection Panel
+4.  **Instrument Sub Panel**
+    - [x] Master Electrical Switches
+    - [x] Avionics Master Power and Prop Sync
+    - [x] Pitot Heat Switches
+    - [x] Icing Switches
+    - [x] Fuel Boost Pump Switches
+    - [x] Lights Panel
+    - [x] Landing Gear Lever
+    - [x] Parking Brake
+    - [x] Fuel Gauges
+5.  **Throttle Quadrant / Center Console**
+    - [x] Throttle Levers
+    - [x] Prop Levers
+    - [x] Mixture Levers
+6.  **Autopilot**  
+    - [x] AP
+    - [x] HDG
+    - [x] FD
+    - [x] ALT
+    - [x] NAV
+    - [x] BC
+    - [x] APPR
+    - [x] DN / UP Rocker Switch
 
-### Autopilot
-:small_blue_diamond:
-**AP ON/OFF**
-:small_blue_diamond:
-**HDG (Heading) Mode**
-:small_blue_diamond:
-**FD ON**
-:small_blue_diamond:
-**ALT (Altitude) Mode**
-:small_blue_diamond:
-**NAV (Navigation) Mode**
-:small_blue_diamond:
-**BC (Back Course) Mode**
-:small_blue_diamond:
-**APPR Mode**
-:small_blue_diamond:
-YAW ON
-:small_blue_diamond:
-**DN / UP Rocker Switch**
-:small_blue_diamond:
 
 ## Deck Functions
 
-This section provides details on this deck and its pages, buttons and encoders.
+This cockpit deck consists of 13 pages and 4 unique encoder configurations.
 
-### Encoders
+The pages can be accessed via the hardware buttons 1 through to 7 or buy navigating to the home page via the 0 button.
 
-#### FCU
+``` mermaid
+mindmap
+  Loupedeck Live
+    Button 0
+      Home
+        G530
+        WEATHER
+        VIEWS
+    Button 1
+        PFI
+    Button 2
+        SWITCHES        
+            ICING
+            LIGHTS
+            G530
+    Button 3
+        AUTOPILOT
+            G530
+    Button 4
+        RADIO
+    Button 5
+        ENGINE
+    Button 6
+        PEDESTAL
+    Button 7
+        XPDR
+```
 
-Provides barometer setting (QNH), throttle/mix (**THR**/**MIX**) controls and autopilot controls such as **HDG** and **VS**. 
-
-#### Pedestal
-In progress.
-
-#### Radio
-
-These encoders are not working currently.
-- [ ] XPDR (not currently functioning)
-- [ ] MODE (Changes transponder mode)
-- [ ] ADF (not currently functioning)
-- [ ] COM (not currently functioning)
-- [ ] VLOC (not currently functioning)
 
 ### Pages
 
@@ -159,7 +110,6 @@ The bottom buttons can provide quick access to up to 7 different pages.
 !!! note warning
     Various pages are still work in progress (e.g. Pedestal, Views)
 
-    GCU-478 will be replaced with another page.
 
 
 #### PFI
@@ -204,6 +154,9 @@ Most of these are self explanatory. One possible improvement will be to add enco
 #### FCU
 ![](../assets/images/beechcraft-baron-58/fcu.png){ :width="200" }
 
+#### G530
+![](../assets/images/beechcraft-baron-58/g530.png){ :width="200" }
+
 #### Radio
 ![](../assets/images/beechcraft-baron-58/radio.png){ :width="200" }
 
@@ -222,6 +175,100 @@ Most of these are self explanatory. One possible improvement will be to add enco
 This page provides comprehensive weather data including coverage for different cloud layers and tropo data.
 
 ----
+
+
+### Encoders
+
+#### FCU
+Provides barometer setting (QNH), throttle/mix (**THR**/**MIX**) controls and autopilot controls such as **HDG** and **VS**. Throttle and Mixture can be set to 100% by pressing the encoder.
+
+<div class="grid cards" markdown>
+
+-   :material-clock-fast:{ .lg .middle } __Left__
+
+    ---
+    - [x] **THR** Throttle control (both engines).
+    - [x] **HDG** Heading/bearing for autopilot.
+    - [x] **QNH** Altimeter barometer setting.
+
+-   :material-clock-fast:{ .lg .middle } __Right__
+
+    ---
+    - [ ] **ALT** Not used.
+    - [x] **VS** Vertical speed.
+    - [x] **MIX** Fuel mixture (both engines).
+
+</div>
+
+
+#### Radio
+Provides controls for XPDR, Transponder mode, ADF frequency, COM and VLOC. XPDR, ADF, COM and VLOC encoders have a coarse/fine toggle; pressing the encoder will toggle between coarse/fine adjustment.
+
+<div class="grid cards" markdown>
+
+-   :material-clock-fast:{ .lg .middle } __Left__
+
+    ---
+    - [x] **XPDR** Transponder identifier.
+    - [x] **Mode** Transponder ^STBY/ON/ALT/TEST^.
+    - [x] **ADF** ADF frequency.
+
+
+-   :material-clock-fast:{ .lg .middle } __Right__
+
+    ---
+    - [ ] Not used.
+    - [x] **COM** COM1 frequency.
+    - [x] **VLOC** VLOC frequency.
+
+</div>
+
+#### Pedestal
+Provides individual throttle, prop and mixture engine controls.
+
+
+<div class="grid cards" markdown>
+
+-   :material-clock-fast:{ .lg .middle } __Left__
+
+    ---
+    - [x] **THROT** Throttle for left engine.
+    - [x] **PROP** Propeller speed for left engine.
+    - [x] **MIX** Fuel mixture control for left engine.
+
+
+-   :material-clock-fast:{ .lg .middle } __Right__
+
+    ---
+    - [x] **THROT** Throttle for right engine.
+    - [x] **PROP** Propeller speed for right engine.
+    - [x] **MIX** Fuel mixture control for right engine.
+
+</div>
+
+
+#### G530
+These encoders provide control of G530 elements.
+
+<div class="grid cards" markdown>
+
+-   :material-clock-fast:{ .lg .middle } __Left__
+
+    ---
+    - [x] **RNG** Zoom in and out of map.
+    - [x] **COM/VLOC OUTER** Coarse control for COM or VLOC frequency. 
+    - [x] **COM/VLOC INNER** Fine control for COM or VLOC frequency.
+
+
+-   :material-clock-fast:{ .lg .middle } __Right__
+
+    ---
+    - [x] **VOLUME** Controls COM1 or VLOC volume (push button to toggle between).
+    - [x] **GPS OUTER** Coarse control for GPS knob. 
+    - [x] **GPS INNER** Fine control for GPS knob.
+
+</div>
+
 
 ## Procedures
 Procedures in relation to Loupedeck functions.

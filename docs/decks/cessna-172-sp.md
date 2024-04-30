@@ -98,7 +98,7 @@ Deck consists of 7 pages which can be accessed via the lower hardware numbered b
 
 ### PFI (Primary flight instruments)
 
-![PFI](../assets/images/pfi.png)
+![PFI](../assets/images/cessna-172-sp/pfi.png)
 
 - **Airspeed Indicator:** Displays speed in knots.
 - **Heading:** Displays magnetic bearing.
@@ -118,7 +118,7 @@ Deck consists of 7 pages which can be accessed via the lower hardware numbered b
 ### Switches
 Switches (Battery, alternator, lights etc)
 
-![](../assets/images/switches.png)
+![](../assets/images/cessna-172-sp/switches.png)
 
 !!! warning
     PythonPlugin required for long press button (<X-Plane Path>/Resources/Plugins/PythonPlugins/PI_cockpitdecks_helper.py)
@@ -141,7 +141,7 @@ Switches (Battery, alternator, lights etc)
 ### FCU
 FCU (Provides autopilot functions)
 
-![](../assets/images/fcu.png)
+![](../assets/images/cessna-172-sp/fcu.png)
 
 !!! Note
       Some functions are not available on S-TEC 55 Autopilot (Cessna 172 G530 model).
@@ -161,7 +161,7 @@ FCU (Provides autopilot functions)
 ### Radio
 Radio (ADF, COM/NAV functions)
 
-![](../assets/images/radio.png)
+![](../assets/images/cessna-172-sp/radio.png)
 
 - **ADF FREQ:** Displays ADF frequency and ADF standby frequency. Pressing button will swap frequencies.
 - **COM 1:** Displays COM1 frequency and COM1 standby frequency. Pressing button will swap frequencies.
@@ -171,7 +171,7 @@ Radio (ADF, COM/NAV functions)
 ### Engine
 Engine (Displays engine data)
 
-![](../assets/images/engine.png)
+![](../assets/images/cessna-172-sp/engine.png)
 
 - **ENG RPM:** Displays engine/prop RPM.
 - **MANIFOLD PRESSURE:** Displays manifold pressure.
@@ -191,7 +191,7 @@ Engine (Displays engine data)
 ### Pedestal
 Pedestal (Flaps, gear)
 
-![](../assets/images/pedestal.png)
+![](../assets/images/cessna-172-sp/pedestal.png)
 
 - **THROTTLE:** Displays throttle as a percentage.
 - **TOGGLE BRAKES:** Displays the state of the parking brake. Push will toggle parking brake on/off.
@@ -202,7 +202,7 @@ Pedestal (Flaps, gear)
 
 ### Transponder
 Transponder (Change transponder mode and id)
-![](../assets/images/transponder.png)
+![](../assets/images/cessna-172-sp/transponder.png)
 
 - **SQUAWK CODE BUTTONS:** The top four buttons display the squawk code and serve as push buttons to increment the transponder digits.
 - **Transponder Mode Buttons:**
