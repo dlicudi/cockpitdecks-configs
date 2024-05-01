@@ -1,5 +1,5 @@
 name: radio
-includes: pager,encoders_radio
+includes: pager,encoders/encoders_radio
 
 buttons:
 

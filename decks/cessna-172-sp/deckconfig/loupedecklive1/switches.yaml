@@ -1,11 +1,10 @@
 description: Switch Panel
-includes: pager,encoders_fcu
+includes: pager,encoders/encoders_fcu
 name: switches
-
 
 buttons:
   - index: 0
-    type: longpress
+    type: long-press
     vibrate: LONG
     label: "IGNITION"
     label-color: Lime

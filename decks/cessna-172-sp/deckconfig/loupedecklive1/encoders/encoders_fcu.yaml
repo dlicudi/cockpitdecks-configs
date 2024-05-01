@@ -1,23 +1,13 @@
 
 buttons:
 
-
 - index: e0
-  name: FCU Airspeed
-  type: encoder-value-extended
-  dataref: sim/cockpit2/autopilot/airspeed_dial_kts_mach
-  set-dataref: sim/cockpit2/autopilot/airspeed_dial_kts_mach
-  step: 1
-  stepxl: 10
-  value: 1250
-  value-min: 40
-  value-max: 163
-  initial-value: 100
+  name: throttle_encoder
+  type: encoder-push
   commands:
-    - AirbusFBW/PullVSSel
-    - AirbusFBW/PushVSSel
-  long-press: sim/autopilot/servos_toggle
-
+  - sim/engines/throttle_full # push
+  - sim/engines/throttle_down
+  - sim/engines/throttle_up
 
 - index: e1
   name: FCU Heading
@@ -71,16 +61,16 @@ buttons:
   side:
     icon-color: Black
     labels:
-      - label: "SPD"
-        label-size: 16
+      - label: "THR"
+        label-size: 14
         label-font: B612-Bold
-        label-color: Grey
-        formula: "${data:sim/cockpit2/autopilot/airspeed_dial_kts_mach}"
-        text-size: 16
+        label-color: Gold
+        formula: "${sim/flightmodel/engine/ENGN_thro[0]} 100 *"
+        text-size: 18
         text-font: Seven Segment.ttf
         text-color: White
-        text-format: "{0:00.0f}"
-        text: "${formula}"
+        text-format: "{0:01.0f}"
+        text: "${formula}%"
       - label: "HDG"
         label-size: 14
         label-font: B612-Bold
@@ -111,7 +101,7 @@ buttons:
       - label: "ALT"
         label-size: 16
         label-font: B612-Bold
-        label-color: Grey
+        label-color: Gold
         formula: "${sim/cockpit2/autopilot/altitude_dial_ft}"
         text-size: 16
         text-font: Seven Segment.ttf
