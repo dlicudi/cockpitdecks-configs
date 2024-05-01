@@ -1,14 +1,14 @@
 # cockpitdecks-configs
 A collection of aircraft configs for [cockpitdecks](https://github.com/devleaks/cockpitdecks).
 
-Important: New config currently requires this experimental build of [cockpitdecks](https://github.com/dlicudi/cockpitdecks).
+~~Important: New config currently requires this experimental build of [cockpitdecks](https://github.com/dlicudi/cockpitdecks).~~
 
 Documentation: [Cockpitdecks Configs Docs](http://dlicudi.github.io/cockpitdecks-configs/)
 
 ## Aircraft
 - [x] Cessna 172 SP (Laminar Research)
 - [x] Cirrus SR22 (Laminar Research)
-- [ ] Beechcraft Baron 58 (Laminar Research)
+- [x] Beechcraft Baron 58 (Laminar Research)
 - [ ] Robin DR401 (Aerobask)
 - [ ] Lancair Evolution (Laminar Research)
 
@@ -34,4 +34,4 @@ Documentation: [Cockpitdecks Configs Docs](http://dlicudi.github.io/cockpitdecks
 > `ln -s ~/Documents/GitHub/cockpitdecks-configs/decks/cessna-172-sp/deckconfig ~/X-Plane\ 12/Aircraft/Laminar\ Research/Cessna\ 172\ SP`
 
 ## Issues
-- Possible issues with helper plugin not working for multiple long press buttons 
+- ~~Possible issues with helper plugin not working for multiple long press buttons~~
