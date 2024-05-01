@@ -4,6 +4,9 @@ icon: material/airplane
 
 # Cirrus SR22
 
+![](../assets/images/cirrus-sr22/cirrus-sr22.png){ :width="200" }
+
+
 ## Functions
 
 Battery and Electrical Panel(1) G1000 Control Panel(2) Autopilot Controls(3) Audio Panel(4) Flap Panel(5) Throttle Quadrant(6) Backup Instrumentation(7) Parking Brake and Alternate Air Selector(8) PFD Controls & Features(9) MFD Controls & Features(10).
