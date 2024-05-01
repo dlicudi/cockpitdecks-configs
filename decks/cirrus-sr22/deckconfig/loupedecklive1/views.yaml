@@ -16,6 +16,7 @@ buttons:
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_0
+  long-press: sim/view/quick_look_0_mem
 
 - index: 1
   type: push
@@ -23,13 +24,14 @@ buttons:
   label: QUICK LOOK
   label-color: Gold
   label-size: 10
-  text: 0
+  text: 1
   text-color: khaki
   text-size: 40
   text-font: DIN Condensed Light
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_1
+  long-press: sim/view/quick_look_1_mem
 
 - index: 2
   type: push
@@ -37,13 +39,14 @@ buttons:
   label: QUICK LOOK
   label-color: Gold
   label-size: 10
-  text: 0
+  text: 2
   text-color: khaki
   text-size: 40
   text-font: DIN Condensed Light
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_2
+  long-press: sim/view/quick_look_2_mem
 
 - index: 3
   type: push
@@ -51,14 +54,74 @@ buttons:
   label: QUICK LOOK
   label-color: Gold
   label-size: 10
-  text: 0
+  text: 3
   text-color: khaki
   text-size: 40
   text-font: DIN Condensed Light
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_3
+  long-press: sim/view/quick_look_3_mem
 
+- index: 4
+  type: push
+  name: QUICKLOOK4
+  label: QUICK LOOK
+  label-color: Gold
+  label-size: 10
+  text: 4
+  text-color: khaki
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/quick_look_4
+  long-press: sim/view/quick_look_4_mem
+
+- index: 5
+  type: push
+  name: QUICKLOOK5
+  label: QUICK LOOK
+  label-color: Gold
+  label-size: 10
+  text: 5
+  text-color: khaki
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/quick_look_5
+  long-press: sim/view/quick_look_5_mem
+
+- index: 6
+  type: push
+  name: QUICKLOOK6
+  label: QUICK LOOK
+  label-color: Gold
+  label-size: 10
+  text: 6
+  text-color: khaki
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/quick_look_6
+  long-press: sim/view/quick_look_6_mem
+
+- index: 7
+  type: push
+  name: QUICKLOOK7
+  label: QUICK LOOK
+  label-color: Gold
+  label-size: 10
+  text: 7
+  text-color: khaki
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/quick_look_7
+  long-press: sim/view/quick_look_7_mem
 
 
 - index: 8

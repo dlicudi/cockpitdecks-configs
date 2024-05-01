@@ -5,7 +5,7 @@ icao: SR22
 model:  Cirrus SR22
 decks:
   - name: XPLive
-    type: loupedecklive
+    type: LoupedeckLive
     layout: loupedecklive1
     brightness: 70
 description: Decks for Cirrus SR22
