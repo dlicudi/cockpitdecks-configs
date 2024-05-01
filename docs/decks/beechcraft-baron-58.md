@@ -4,8 +4,6 @@ icon: material/airplane
 
 # Beechcraft Baron 58
 
-## Cockpit Overview
-
 
 ![](../assets/images/beechcraft-baron-58/beechcraft-baron-58.png){ :width="200" }
 
