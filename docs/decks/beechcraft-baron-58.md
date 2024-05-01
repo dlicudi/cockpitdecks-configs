@@ -174,6 +174,13 @@ Most of these are self explanatory. One possible improvement will be to add enco
 
 This page provides comprehensive weather data including coverage for different cloud layers and tropo data.
 
+#### Views
+![](../assets/images/beechcraft-baron-58/views.png){ :width="200" }
+
+Provides quick look functions (long press to memorise views).
+Also provides standard views (3D Cockpit, Chase, Forward, Physics)
+
+
 ----
 
 
