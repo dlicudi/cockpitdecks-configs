@@ -140,49 +140,6 @@ buttons:
         formula: "1"
 
 - index: 7
-  name: THROTTLE
-  type: none
-  annunciator:
-    size: medium
-    model: B
-    parts:
-      B0:
-        color: lime
-        text-size: 60
-        formula: "${sim/flightmodel/engine/ENGN_thro[0]} 100 *"
-        text: "${formula}%"
-        text-font: Seven Segment.ttf
-        text-format: "{0:.0f}"
-      B1:
-        text: "THROTTLE"
-        text-size: 32
-        text-font: DIN Bold
-        formula: "1"
-
-- index: 11
-  name: MIXTURE
-  type: none
-  annunciator:
-    size: medium
-    model: B
-    parts:
-      B0:
-        color: lime
-        text-size: 60
-        formula: "${sim/flightmodel/engine/ENGN_mixt[0]} 100 *"
-        text: "${formula}%"
-        text-font: Seven Segment.ttf
-        text-format: "{0:.0f}"
-      B1:
-        text: "MIXTURE"
-        text-size: 32
-        text-font: DIN Bold
-        formula: "1"
-
-
-
-
-- index: 8
   name: FUEL EST
   type: none
   annunciator:
@@ -199,3 +156,64 @@ buttons:
         text-size: 42
         text-font: DIN Bold
         formula: "1"
+
+
+- index: 8
+  vibrate: SHORT
+  type: push
+  command: laminar/c172/fuel_selector_dwn    
+  label: LEFT TANK
+  label-color: black
+  label-size: 9
+  annunciator:
+    model: B
+    size: medium
+    B0:
+      bar: "OFF"
+      color: grey
+      formula: ${sim/cockpit2/fuel/fuel_tank_selector} 1 eq not
+    B1:
+      text: "ON"
+      color: lime
+      framed: true
+      formula: ${sim/cockpit2/fuel/fuel_tank_selector} 1 eq
+
+
+- index: 9
+  vibrate: SHORT
+  type: none
+  label: BOTH
+  label-color: black
+  label-size: 9
+  annunciator:
+    model: B
+    size: medium
+    B0:
+      bar: "OFF"
+      color: grey
+      formula: ${sim/cockpit2/fuel/fuel_tank_selector} 4 eq not
+    B1:
+      text: "ON"
+      color: lime
+      framed: true
+      formula: ${sim/cockpit2/fuel/fuel_tank_selector} 4 eq
+
+- index: 10
+  vibrate: SHORT
+  type: push
+  command: laminar/c172/fuel_selector_up 
+  label: RIGHT TANK
+  label-color: black
+  label-size: 9
+  annunciator:
+    model: B
+    size: medium
+    B0:
+      bar: "OFF"
+      color: grey
+      formula: ${sim/cockpit2/fuel/fuel_tank_selector} 3 eq not
+    B1:
+      text: "ON"
+      color: lime
+      framed: true
+      formula: ${sim/cockpit2/fuel/fuel_tank_selector} 3 eq
