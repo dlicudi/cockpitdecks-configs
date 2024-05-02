@@ -1,0 +1,87 @@
+# CHANGELOG
+#
+# 1.0.0  03-APR-2023  Initial version
+#
+---
+aircraft: Toliss A321neo
+description: Encodersfor X-Touch mini (common to page A and B)
+version: 1.0.0
+# ########################
+buttons:
+  - index: e0
+    name: encoder0
+    type: encoder-value
+    step: 1
+    value: 0
+    value-min: 0
+    value-max: 13
+    dataref: data:_enc0
+    set-dataref: data:_enc0
+    formula: ${data:_enc0}
+    encoder-leds: 0
+  - index: e1
+    name: encoder1
+    type: encoder-value
+    step: 1
+    value: 0
+    value-min: 0
+    value-max: 13
+    dataref: data:_enc0
+    set-dataref: data:_enc0
+    formula: ${data:_enc0}
+    encoder-leds: 1
+  - index: e2
+    name: encoder2
+    type: encoder-value
+    step: 1
+    value: 0
+    value-min: 0
+    value-max: 13
+    dataref: data:_enc0
+    set-dataref: data:_enc0
+    formula: ${data:_enc0}
+    encoder-leds: 2
+  - index: e3
+    name: encoder3
+    type: encoder-value
+    step: 1
+    value: 0
+    value-min: 0
+    value-max: 6
+    dataref: data:_enc0
+    set-dataref: data:_enc0
+    formula: ${data:_enc0}
+    encoder-leds: 3
+  - index: 2
+    name: BUTTON ON
+    type: push
+    led: single
+    options: counter
+    dataref-rpn: 1
+  - index: 6
+    name: INSPECT
+    led: single
+    type: inspect
+    dataref-rpn: 1
+  - index: 10
+    name: BUTTON BLINK
+    type: push
+    dataref-rpn: 1
+    options: blink
+    led: single
+  - index: 15
+    name: RELOAD
+    type: reload
+    led: single
+  #
+  - index: A
+    name: Page A
+    type: none
+    led: single
+    dataref-rpn: 1
+  - index: B
+    name: Page B
+    type: page
+    page: B
+    led: single
+    dataref-rpn: 0

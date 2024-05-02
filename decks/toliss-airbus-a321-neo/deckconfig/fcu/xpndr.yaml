@@ -1,0 +1,259 @@
+# CHANGELOG
+#
+# 1.0.0  03-APR-2023  Initial version
+#
+---
+aircraft: Toliss A321neo
+description: Transponder and other communication for Loupedeck Live
+version: 1.0.0
+#
+# BUTTONS
+#
+buttons:
+  #
+  # ENCODERS
+  #
+  #
+  # KEYS
+  #
+  - index: 2
+    name: RELOAD
+    type: reload
+    text: ${fa:rotate-right}
+    text-font: fontawesome.otf
+    text-color: rgba(0,255,0,0)
+    text-size: 60
+    text-position: cm
+  - index: 3
+    name: BACK
+    type: page
+    page: back
+    text: BACK
+    text-font: DIN Bold
+    text-color: white
+    text-size: 24
+    text-position: cm
+  - index: 0
+    name: ATCONOFF
+    type: onoff
+    stops: 2
+    circular-switch:
+      button-size: 50
+      switch-style: medium
+      down: 30
+      tick-from: 160
+      tick-to: 200
+      tick-space: 40
+      tick-underline-width: 8
+      # tick-color: white
+      # tick-underline-color: white
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      tick-labels:
+        - AUTO
+        - "ON"
+      left: 10
+    dataref: AirbusFBW/XPDRTCASMode
+    set-dataref: AirbusFBW/XPDRTCASMode
+  - index: 4
+    name: ATCSYS
+    type: updown
+    label: "S\nY\nS"
+    label-size: 8
+    label-position: lm
+    stops: 3
+    initial-value: 2
+    circular-switch:
+      button-size: 50
+      switch-style: medium
+      down: 30
+      tick-from: 140
+      tick-to: 200
+      tick-space: 40
+      tick-underline-width: 8
+      # tick-color: white
+      # tick-underline-color: white
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      tick-labels:
+        - " "
+        - "1"
+        - "2"
+      left: 10
+    # updown=0,1; dataref=1,2
+    dataref: AirbusFBW/XPDRSystem
+    set-dataref: AirbusFBW/XPDRSystem
+  # - index: 5
+  #   name: SQUAWK
+  #   type: none
+  #   text: ${sim/cockpit/radios/transponder_code}
+  #   text-format: "{:04.0f}"
+  #   text-color: khaki
+  #   text-size: 40
+  #   text-font: Seven Segment.ttf
+  #   text-bg-color: (40, 40, 40)
+  - index: 5
+    name: SQUAWK00XX
+    type: none
+    text: ${formula}
+    text-format: "{:02.0f}"
+    text-color: khaki
+    text-size: 50
+    text-font: 7-segment-display-extended.otf
+    text-bg-color: (40, 40, 40)
+    # left two numbers
+    text-position: rm
+    formula: ${sim/cockpit/radios/transponder_code} 100 / floor
+  - index: 6
+    name: SQUAWKXX00
+    type: none
+    text: ${formula}
+    text-format: "{:02.0f}"
+    text-color: khaki
+    text-size: 50
+    text-font: 7-segment-display-extended.otf
+    text-bg-color: (40, 40, 40)
+    text-position: lm
+    # right two numbers
+    formula: ${sim/cockpit/radios/transponder_code} ${sim/cockpit/radios/transponder_code} 100 / floor 100 * -
+  - index: 7
+    name: TCASMODE
+    type: updown
+    stops: 5
+    circular-switch:
+      button-size: 50
+      switch-style: medium
+      down: 30
+      tick-from: 200
+      tick-to: 340
+      tick-space: 40
+      tick-underline-width: 8
+      # tick-color: white
+      # tick-underline-color: white
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      tick-label-font: DIN Bold
+      tick-labels:
+        - STBY
+        - ALT RPTG OFF
+        - XPNDR
+        - TA ONLY
+        - TA/RA
+      up: 30
+      left: 55
+    dataref: AirbusFBW/XPDRPower
+    set-dataref: AirbusFBW/XPDRPower
+  - index: 8
+    name: ATCMODE
+    type: updown
+    stops: 3
+    initial-value: 2
+    circular-switch:
+      button-size: 50
+      switch-style: medium
+      down: 30
+      tick-from: 220
+      tick-to: 320
+      tick-space: 40
+      tick-underline-width: 8
+      # tick-color: white
+      # tick-underline-color: white
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      tick-labels:
+        - ABV
+        - "N"
+        - BLW
+      left: 30
+      up: 20
+    set-dataref: AirbusFBW/XPDRTCASAltSelect
+  - index: 9
+    type: push
+    name: ATCCLR
+    command: AirbusFBW/ATCCodeKeyCLR
+    text: CLR
+    text-font: DIN Bold
+    text-color: white
+    text-size: 24
+    text-position: cm
+  - index: 10
+    type: none
+    label: "ATC\n\n\n\nFAIL"
+    label-position: cm
+    label-size: 11
+    name: ATCFAIL
+    push-switch:
+      button-size: 100
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 40
+      witness-fill-color: (64, 32, 0)
+      witness-stroke-color: (128, 64, 0)
+  - index: 11
+    type: push
+    label: IDENT
+    name: ATCIDENT
+    command: sim/radios/transponder_ident
+    push-switch:
+      button-size: 100
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+
+  #
+  # SIDE KEYS
+  #
+  # Buttons
+  #
+  - index: b0
+    name: ATC0
+    type: push
+    colored-led: (255, 128, 0)
+    command: AirbusFBW/ATCCodeKey0
+    formula: 1
+  - index: b1
+    name: ATC1
+    type: push
+    colored-led: (255, 128, 0)
+    command: AirbusFBW/ATCCodeKey1
+    formula: 1
+  - index: b2
+    name: ATC2
+    type: push
+    colored-led: (255, 128, 0)
+    command: AirbusFBW/ATCCodeKey2
+    formula: 1
+  - index: b3
+    name: ATC3
+    type: push
+    colored-led: (255, 128, 0)
+    command: AirbusFBW/ATCCodeKey3
+    formula: 1
+  - index: b4
+    name: ATC4
+    type: push
+    colored-led: (255, 128, 0)
+    command: AirbusFBW/ATCCodeKey4
+    formula: 1
+  - index: b5
+    name: ATC5
+    type: push
+    colored-led: (255, 128, 0)
+    command: AirbusFBW/ATCCodeKey5
+    formula: 1
+  - index: b6
+    name: ATC6
+    type: push
+    colored-led: (255, 128, 0)
+    command: AirbusFBW/ATCCodeKey6
+    formula: 1
+  - index: b7
+    name: ATC7
+    type: push
+    colored-led: (255, 128, 0)
+    command: AirbusFBW/ATCCodeKey7
+    formula: 1

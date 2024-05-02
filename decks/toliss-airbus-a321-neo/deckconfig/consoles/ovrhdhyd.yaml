@@ -1,0 +1,195 @@
+name: ovrhdhyd
+buttons:
+  # ### LINE 1 ###  0- 7 ######################################################
+  - index: 0
+    type: none
+    text: GREEN
+    text-color: "#00ff00"
+    text-size: 24
+  - index: 2
+    type: none
+    text: BLUE
+    text-color: "#0000ff"
+    text-size: 24
+  - index: 4
+    type: none
+    text: YELLOW
+    text-color: "#ffff00"
+    text-size: 24
+  - index: 7
+    name: up
+    type: page
+    page: ovrhdfire
+    text: ${fa:arrow-up}
+    text-font: fontawesome.otf
+    text-size: 60
+  # ### LINE 2 ###  8-15 ######################################################
+  - index: 8
+    type: none
+    decor:
+      type: segment
+      code: BGKLNS
+      width: 10/20
+  - index: 16
+    type: none
+    decor:
+      type: segment
+      code: BGNS
+      width: 20
+  - index: 10
+    type: none
+    decor:
+      type: segment
+      code: BGIL0123LNS
+      width: 10/20
+  - index: 18
+    type: none
+    decor:
+      type: segment
+      code: BGIJNS
+      width: 10/20
+  - index: 9
+    type: none
+    decor:
+      type: segment
+      code: IJKL
+      width: 10
+  - index: 11
+    type: none
+    decor:
+      type: segment
+      code: IJKL
+      width: 10
+  - index: 12
+    type: none
+    decor:
+      type: segment
+      code: BGIJKLNS
+      width: 10/20
+  - index: 13
+    type: none
+    decor:
+      type: segment
+      code: IJNS
+      width: 10
+  - index: 20
+    type: none
+    decor:
+      type: segment
+      code: BGNS
+      width: 20
+  - index: 24
+    name: ENG1PUMP
+    type: none
+    label: ENG 1 PUMP
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+      B1:
+        text: "OFF"
+        color: white
+        framed: true
+        formula: ${AirbusFBW/HydOHPArray[0]} not
+  - index: 17
+    name: RAT
+    type: none
+    label: RAT MAN ON
+    annunciator:
+      model: A
+      size: large
+      A0:
+        text: "ON"
+        color: red
+        framed: true
+    guard:
+      dataref: AirbusFBW/OHPGuardsAllATA[2]
+    command: toliss_airbus/hydcommands/PressRATReleaseButton
+  - index: 26
+    name: ELECPUMP1
+    type: none
+    label: ELEC PUMP/BLUE
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+      B1:
+        text: "OFF"
+        color: white
+        framed: true
+        formula: ${AirbusFBW/HydOHPArray[2]} not
+    guard:
+      dataref: AirbusFBW/OHPGuardsAllATA[1]
+      model: grid
+      color: (40,40,40)
+  - index: 19
+    name: PTU
+    type: none
+    label: PTU
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+      B1:
+        text: "OFF"
+        color: white
+        framed: true
+        formula: ${AirbusFBW/HydOHPArray[4]} not
+  - index: 28
+    name: ENG2PUMP
+    type: none
+    label: ENG 2 PUMP
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+      B1:
+        text: "OFF"
+        color: white
+        framed: true
+        formula: ${AirbusFBW/HydOHPArray[1]} not
+  - index: 21
+    name: ELECPUMP
+    type: onoff
+    label: ELEC PUMP
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+        formula: ${AirbusFBW/HydYElecMode} 2 eq
+      B1:
+        text: "ON"
+        color: white
+        framed: true
+        dataref: AirbusFBW/fmod/sys/hydpumps[0]
+    set-dataref: AirbusFBW/fmod/sys/hydpumps[0]
+  - index: 15
+    name: left
+    type: page
+    page: adirs
+    text: ${fa:arrow-left}
+    text-font: fontawesome.otf
+    text-size: 60
+  # ### LINE 3 ### 16-23 ######################################################
+  - index: 23
+    name: down
+    type: page
+    page: ovrhdfuel
+    text: ${fa:arrow-down}
+    text-font: fontawesome.otf
+    text-size: 60
+  # ### LINE 4 ### 24-31 ######################################################
+  - index: 31
+    name: Index
+    type: page
+    icon: TOLISS-A21N

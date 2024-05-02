@@ -1,0 +1,118 @@
+# FCU control with FM annunciators display
+# 
+default-annunciator-style: v
+buttons:
+# ####################
+# Keys
+# 
+  - index: 1
+    name: MASTER CAUTION
+    type: push
+    command: sim/annunciator/clear_master_caution
+    annunciator:
+      text: "MASTER\nCAUT"
+      text-color: darkorange
+      text-font: DIN Condensed Black.otf
+      text-size: 72
+      dataref: AirbusFBW/MasterCaut
+    vibrate: RUMBLE5
+    # options: animation_speed=0.5
+  - index: 2
+    name: MASTER WARNING
+    type: push
+    command: sim/annunciator/clear_master_warning
+    annunciator-animate:
+      text: "MASTER\nWARN"
+      text-color: firebrick
+      text-font: DIN Condensed Black.otf
+      text-size: 72
+      dataref: AirbusFBW/MasterWarn
+      animation-speed: 2.0
+    vibrate: LONG
+  - index: 3
+    name: A/THR
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/ATHRmode}
+        B1:
+          text: A/THR
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/ATHRbutton
+  - index: 4
+    name: AP1
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/AP1Engage}
+        B1:
+          text: AP1
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: toliss_airbus/ap1_push
+  - index: 7
+    name: AP2
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/AP2Engage}
+        B1:
+          text: AP2
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: toliss_airbus/ap2_push
+  - index: 5
+    name: APPR
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/APPRilluminated}
+        B1:
+          text: APPR
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/APPRbutton
+  - index: 6
+    name: LOC
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/LOCilluminated}
+        B1:
+          text: LOC
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/LOCbutton
+    options: auto-repeat=3/3
+

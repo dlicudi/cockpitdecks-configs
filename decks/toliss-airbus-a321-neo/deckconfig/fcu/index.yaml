@@ -1,0 +1,36 @@
+# CHANGELOG
+#
+# 1.0.0  03-APR-2023  Initial version
+#
+---
+aircraft: Toliss A321neo
+description: Transponder and other communication for Loupedeck Live
+version: 1.0.0
+#
+# BUTTONS
+#
+buttons:
+  #
+  # ENCODERS
+  #
+  #
+  # KEYS
+  #
+  - index: 2
+    name: FCU
+    type: page
+    page: fcu
+    text: FCU
+    text-font: DIN Bold
+    text-color: white
+    text-size: 24
+    text-position: cm
+  - index: 3
+    name: XPNDR
+    type: page
+    page: xpndr
+    text: XPNDR
+    text-font: DIN Bold
+    text-color: white
+    text-size: 24
+    text-position: cm
