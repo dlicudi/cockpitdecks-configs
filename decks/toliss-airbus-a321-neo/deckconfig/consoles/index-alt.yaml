@@ -1,0 +1,114 @@
+# Larger icon with images of portion of the cockpit dashboard
+#
+# CHANGELOG
+# 1.0.0  03-APR-2023  Moved MCDU for both side to middle row
+#
+---
+name: index-alt
+version: 1.0.0
+note:
+buttons:
+  # ### LINE 1 ###  0- 7 ######################################################
+  - index: 0
+    name: ovrhdfire
+    type: page
+    page: ovrhdfire
+    text: "FIRE"
+    text-position: cm
+  - index: 1
+    name: ovrhdhyd
+    type: page
+    page: ovrhdhyd
+    text: "HYD"
+    text-position: cm
+  - index: 2
+    name: ovrhdfuel
+    type: page
+    page: ovrhdfuel
+    text: "FUEL"
+    text-position: cm
+  - index: 3
+    name: ovrhdelec
+    type: page
+    page: ovrhdelec
+    text: "ELEC"
+    text-position: cm
+  - index: 4
+    name: ovrhdaircond
+    type: page
+    page: ovrhdaircond
+    text: "AIR\nCOND"
+    text-position: cm
+  - index: 5
+    name: ovrhdextlights
+    type: page
+    page: index
+    text: "EXT.\nLIGHTS"
+    text-position: cm
+  - index: 6
+    name: ovrhdcall
+    type: page
+    page: ovrhdcall
+    text: "CALL &\nINT.\nLIGHTS"
+    text-position: cm
+  # ### LINE 2 ###  8-15 ######################################################
+  - index: 8
+    name: adirs
+    type: page
+    page: adirs
+    text: "ADIRS"
+    text-position: cm
+  - index: 9
+    name: other
+    type: page
+    page: other
+    text: "OTHER"
+    text-position: cm
+  - index: 13
+    name: XPNDR
+    type: page
+    page: XPNDR
+    text: XPNDR
+    text-position: cm
+  - index: 14
+    name: radio
+    type: page
+    page: radio
+    text: RADIO
+    text-position: cm
+  # ### LINE 3 ### 16-23 ######################################################
+  - index: 22
+    name: AIRCRAFT
+    label: Aircraft
+    type: none
+    dataref-collections:
+      - name: aircraft_icao
+        datarefs:
+          - sim/aircraft/view/acf_ICAO[:4]
+    # This is the way to fetch a whole array of values from an array dataref
+    # array (size) is limited to MAX_COLLECTION_SIZE (=~20)
+    aircraft:
+      text-font: B612-Bold
+      text-size: 32
+    # MUST MATCH string in xplane.py
+    set-dataref: data:_aircraft_icao
+  # Popups in pos. 16 to 28 in includes popups
+
+  # ### LINE 4 ### 24-31 ######################################################
+  - index: 29
+    name: xplane
+    type: page
+    page: xplane
+    icon: XPLANE_DARK
+  - index: 30
+    name: ISCS
+    type: page
+    page: toliss
+    icon: TOLISS_BLUE
+  - index: 31
+    name: Index
+    type: page
+    page: index
+    icon: TOLISS-A21N
+default-text-size: 20
+includes: popups

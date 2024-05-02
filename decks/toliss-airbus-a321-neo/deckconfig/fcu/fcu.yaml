@@ -1,0 +1,295 @@
+# CHANGELOG
+#
+# 1.0.0  03-APR-2023  Initial version
+#
+---
+aircraft: Toliss A321neo
+description: Main FCU page for Loupedeck Live
+version: 1.0.0
+#
+# BUTTONS
+#
+buttons:
+  #
+  # KNOB
+  #
+  - index: e0
+    name: FCU Airspeed
+    type: encoder-push
+    commands:
+      - AirbusFBW/PushSPDSel
+      - sim/autopilot/airspeed_down
+      - sim/autopilot/airspeed_up
+    long-press: AirbusFBW/PullSPDSel
+  - index: e1
+    name: FCU Heading
+    type: encoder-push
+    commands:
+      - AirbusFBW/PushHDGSel
+      - sim/autopilot/heading_down
+      - sim/autopilot/heading_up
+    long-press: AirbusFBW/PullHDGSel
+  - index: e2
+    name: FCU Baro
+    type: encoder-onoff
+    commands:
+      - toliss_airbus/capt_baro_push
+      - toliss_airbus/capt_baro_pull
+      - sim/instruments/barometer_down
+      - sim/instruments/barometer_up
+    options: modulo
+  - index: e3
+    name: FCU Altitude
+    type: encoder-push
+    commands:
+      - AirbusFBW/PushAltitude
+      - sim/autopilot/altitude_down
+      - sim/autopilot/altitude_up
+    long-press: AirbusFBW/PullAltitude
+    # - AirbusFBW/ALT100_1000
+  - index: e4
+    name: FCU V Speed
+    type: encoder-value
+    dataref: sim/cockpit/autopilot/vertical_velocity
+    step: 100
+    stepxl: 1000
+    value: 0
+    value-min: -6000
+    value-max: 6000
+    set-dataref: sim/cockpit/autopilot/vertical_velocity
+    commands:
+      - AirbusFBW/PullVSSel
+      - AirbusFBW/PushVSSel
+  - index: e5
+    name: FCU Unused
+    type: none
+    options: nostate
+  #
+  # KEYS
+  #
+  - index: 0
+    type: push
+    name: SPDMACH
+    label: "SPD\n\n\n\nMACH"
+    label-position: cm
+    label-font: DIN Bold
+    label-size: 10
+    command: toliss_airbus/ias_mach_button_push
+    push-switch:
+      button-size: 100
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+    # set-dataref: sim/cockpit2/autopilot/airspeed_is_mach
+  - index: 1
+    name: MASTER CAUTION
+    type: push
+    command: sim/annunciator/clear_master_caution
+    annunciator:
+      text: "MASTER\nCAUT"
+      text-color: darkorange
+      text-font: DIN Condensed Black.otf
+      text-size: 72
+      dataref: AirbusFBW/MasterCaut
+    vibrate: RUMBLE5
+    # options: animation_speed=0.5
+  - index: 2
+    name: MASTER WARNING
+    type: push
+    command: sim/annunciator/clear_master_warning
+    annunciator-animate:
+      text: "MASTER\nWARN"
+      text-color: firebrick
+      text-font: DIN Condensed Black.otf
+      text-size: 72
+      dataref: AirbusFBW/MasterWarn
+      animation-speed: 2.0
+    vibrate: LONG
+  - index: 3
+    type: page
+    page: back
+    name: ALTSCALE
+    label: "1000\n\n\n\n100 (BACK)"
+    label-font: DIN Bold
+    label-size: 10
+    label-position: cm
+    command: toliss_airbus/metric_alt_button_push
+    push-switch:
+      button-size: 100
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+  - index: 4
+    type: push
+    name: HDGTRACK
+    label: "HDG TRK\n\n\n\nV/S FPA"
+    label-position: cm
+    label-font: DIN Bold
+    label-size: 10
+    command: toliss_airbus/hdgtrk_button_push
+    push-switch:
+      button-size: 100
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+  - index: 9
+    name: A/THR
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/ATHRmode}
+        B1:
+          text: A/THR
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/ATHRbutton
+  - index: 5
+    name: AP1
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/AP1Engage}
+        B1:
+          text: AP1
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: toliss_airbus/ap1_push
+  - index: 8
+    type: onoff
+    name: BAROMETRIC
+    label: "inHg\n\n\n\nhPa"
+    label-position: cm
+    label-font: DIN Bold
+    label-size: 10
+    push-switch:
+      button-size: 100
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+    set-dataref: AirbusFBW/BaroUnitCapt
+  - index: 7
+    name: LOC
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/LOCilluminated}
+        B1:
+          text: LOC
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/LOCbutton
+    options: auto-repeat=3/3
+  - index: 11
+    name: APPR
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/APPRilluminated}
+        B1:
+          text: APPR
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/APPRbutton
+  - index: 10
+    name: EXPED
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/EXPEDilluminated}
+        B1:
+          text: EXPED
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/EXPEDbutton
+  - index: 6
+    name: AP2
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/AP2Engage}
+        B1:
+          text: AP2
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: toliss_airbus/ap2_push
+  #
+  # SIDE KEYS
+  #
+  # Note: For type side, you MUST give either an icon at proper size or a icon-color.
+  - index: left
+    name: FCU-L
+    type: none
+    multi-datarefs:
+      - sim/cockpit2/autopilot/airspeed_dial_kts_mach
+      - sim/cockpit/autopilot/heading_mag
+      - sim/cockpit/autopilot/airspeed_is_mach
+      - AirbusFBW/HDGTRKmode
+      - AirbusFBW/SPDmanaged
+      - AirbusFBW/HDGmanaged
+      - AirbusFBW/SPDdashed
+      - AirbusFBW/HDGdashed
+      - AirbusFBW/BaroStdCapt
+      - AirbusFBW/BaroUnitCapt
+      - sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot
+    fcu:
+      mode: vertical-left
+      text-size: 36
+      text-font: B612-Bold
+      text-color: "gold"
+      value-size: 48
+      value-font: Segment7Standard
+      value-color: "white"
+  - index: right
+    name: FCU-R
+    type: none
+    multi-datarefs:
+      - sim/cockpit2/autopilot/altitude_dial_ft
+      - sim/cockpit/autopilot/vertical_velocity
+      - AirbusFBW/HDGTRKmode
+      - AirbusFBW/ALTmanaged
+      - AirbusFBW/VSdashed
+    fcu:
+      mode: vertical-right
+      text-size: 36
+      text-font: B612-Bold
+      text-color: "gold"
+      value-size: 48
+      value-font: Segment7Standard
+      value-color: "white"
+includes: views

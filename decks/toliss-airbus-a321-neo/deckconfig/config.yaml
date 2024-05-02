@@ -1,0 +1,109 @@
+# CHANGELOG
+#
+# 1.0.0  03-APR-2023  Initial version
+#
+---
+aircraft: Toliss A321neo
+description: Definition of decks for Toliss A321 + neo add-on (neo variant is XLR but all three variants use same cockpit)
+author: Pierre M. <pierre@devleaks.be> (https://github.com/devleaks/cockpitdecks)
+icao: A21N
+model: Airbus A321-253NY (CFM LEAP-1A33)
+notes: A321 XLR, MSN 11000, F-WXLR, ICAO24=395CBB, this is the one I use most...
+# NY = A321 XLR
+# ########################
+decks:
+  - name: XPLive
+    type: LoupedeckLive
+    layout: fcu
+    brightness: 100
+    light-off: 5
+    # disabled: true
+  - name: XPDeck
+    type: Stream Deck Original
+    layout: efis-ecam
+    brightness: 100
+    light-off: 5
+    # disabled: true
+  - name: XPDeckXL
+    layout: consoles
+    type: Stream Deck XL
+    brightness: 100
+    # disabled: true
+  - name: XPDeckPlus
+    type: Stream Deck +
+    layout: plus
+    brightness: 60
+    # disabled: true
+  - name: XPTouch
+    type: X-Touch Mini
+    layout: comm-radio
+    brightness: 80
+    # disabled: true
+#
+# These attributes are defined at "aircraft" level
+# (i.e. for the entire aircraft, all decks)
+#
+# debug: cockpitdecks.deck
+#
+# « S T Y L E »
+#
+# A I R B U S   S T Y L E  &  C O L O R S
+#
+# GLOBALS
+#
+default-label-font: B612-Bold
+default-label-size: 12
+default-icon-name: NONE.png
+#
+# THEME
+#
+# cockpit-theme: dark
+# cockpit-theme: barbie
+#
+# LIGHT / DAY
+#
+# cockpit-texture: TEXTURE.png
+cockpit-color: royalblue
+default-icon-color: royalblue
+#
+# DARK / NIGHT
+#
+# Color (16, 16, 32) is close to
+# average texture color TEXTURE_NIGHT.
+#
+dark-cockpit-color: [16, 16, 32]
+dark-default-icon-color: [16, 16, 32]
+dark-cockpit-texture: TEXTURE_NIGHT.png
+dark-default-annunciator-style: k
+dark-default-label-color: coral
+dark-default-light-off-intensity: 4
+dark-default-text-color: coral
+dark-default-text-position: cm
+dark-default-tick-color: coral
+dark-default-tick-label-color: coral
+dark-default-tick-underline-color: coral
+#
+# ANY THEME!
+#
+# You need to find and download that font:
+# barbie-default-label-font: Barbie.otf
+# barbie-cockpit-color: purple
+# barbie-default-icon-color: rebeccapurple
+# barbie-default-label-color: pink
+# barbie-default-light-off-intensity: 10
+# barbie-default-text-color: pink
+# barbie-default-text-position: cm
+# barbie-default-tick-color: pink
+# barbie-default-tick-label-color: pink
+# barbie-default-tick-underline-color: pink
+string-datarefs:
+  - AirbusFBW/FMA1w
+  - AirbusFBW/FMA1g
+  - AirbusFBW/FMA1b
+  - AirbusFBW/FMA2w
+  - AirbusFBW/FMA2b
+  - AirbusFBW/FMA2m
+  - AirbusFBW/FMA3w
+  - AirbusFBW/FMA3b
+  - AirbusFBW/FMA3a
+use-default-string-datarefs: True
