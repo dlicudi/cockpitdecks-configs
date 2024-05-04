@@ -6,6 +6,180 @@ name: switches
 buttons:
 
   - index: 0
+    name: GND PWR
+    label: GND PWR
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+    dataref: sim/cockpit/electrical/gpu_on
+    commands:
+      - sim/electrical/GPU_on
+      - sim/electrical/GPU_off
+
+  - index: 1
+    name: BAT 1
+    label: BAT 1
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+    dataref: sim/cockpit2/electrical/battery_on[0]
+    commands:
+      - sim/electrical/battery_1_on
+      - sim/electrical/battery_1_off
+
+  - index: 2
+    name: BAT 2
+    label: BAT 2
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+    options: large
+    dataref: sim/cockpit2/electrical/battery_on[1]
+    commands:
+      - sim/electrical/battery_2_on
+      - sim/electrical/battery_2_off
+
+  - index: 3
+    name: GEN
+    label: GEN
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+    options: large
+    dataref: sim/cockpit2/electrical/generator_on[0]
+    commands:
+      - sim/electrical/generator_1_on
+      - sim/electrical/generator_1_off
+
+  - index: 4
+    name: ALT
+    label: ALT
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+    options: large
+    dataref: sim/cockpit2/electrical/generator_on[1]
+    commands:
+      - sim/electrical/generator_2_on
+      - sim/electrical/generator_2_off
+
+  - index: 5
+    name: DC PWR
+    label: DC PWR
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+    options: large
+    dataref: sim/cockpit2/electrical/cross_tie
+    commands:
+      - sim/electrical/cross_tie_on
+      - sim/electrical/cross_tie_off
+
+  - index: 6
+    name: IGN
+    label: IGN
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+    options: large
+    dataref: sim/cockpit/engine/igniters_on[0]
+    commands:
+      - sim/igniters/igniter_contin_on_1
+      - sim/igniters/igniter_contin_off_1
+
+  - index: 7
+    name: FUEL PUMP
+    label: FUEL PUMP
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+    options: large
+    dataref: sim/cockpit/engine/fuel_pump_on[0]
+    commands:
+      - sim/fuel/fuel_pump_1_on
+      - sim/fuel/fuel_pump_1_off
+
+  - index: 8
     type: long-press
     vibrate: LONG
     label: "IGNITION"
@@ -25,175 +199,10 @@ buttons:
         text-color: White
     formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
 
-  - index: 1
-    type: push
-    command: sim/electrical/GPU_toggle
-    label: GND PWR
-    label-color: black
-    label-size: 10
-    label-position: ct
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit/electrical/gpu_on} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit/electrical/gpu_on} 1 eq
-
-
-  - index: 2
-    type: push
-    command: sim/electrical/battery_2_toggle
-    label: BAT 2
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit/electrical/battery_on[1]} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit/electrical/battery_on[1]} 1 eq
-
-  - index: 3
-    type: push
-    command: sim/electrical/battery_1_toggle
-    label: BAT 1
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit/electrical/battery_on[0]} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit/electrical/battery_on[0]} 1 eq
-
-  - index: 4
-    vibrate: SHORT
-    type: push
-    command: sim/electrical/generator_1_toggle    
-    label: GEN
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
-
-  - index: 5
-    vibrate: SHORT
-    type: push
-    command: sim/electrical/generator_2_toggle    
-    label: ALT
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit2/electrical/generator_on[1]} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
-
-
-  - index: 6
-    vibrate: SHORT
-    type: push
-    command: sim/electrical/cross_tie_toggle   
-    label: DC PWR
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit2/electrical/cross_tie} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/electrical/cross_tie} 1 eq
-
-
-  # - index: 6
-  #   name: Lights
-  #   type: page
-  #   page: lights
-  #   label: LIGHTS
-  #   label-size: 12
-  #   text: 📁
-  #   text-font: fontawesome.otf
-  #   text-size: 32
-  #   text-color: Gold
-
-
-  # - index: 7
-  #   name: Icing
-  #   type: page
-  #   page: icing
-  #   label: ICING
-  #   label-size: 12
-  #   text: 📁
-  #   text-font: fontawesome.otf
-  #   text-size: 32
-  #   text-color: Gold
-
-
-  - index: 8
-    vibrate: SHORT
-    type: push
-    command: laminar/sr22/fuel_sel_left_off    
-    label: FUEL OFF
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        bar: "OFF"
-        color: grey
-        formula: ${laminar/sr22/fuel_selector_pos} 0 eq not
-      B1:
-        text: "OFF"
-        color: red
-        framed: true
-        formula: ${laminar/sr22/fuel_selector_pos} 0 eq
-
   - index: 9
     vibrate: SHORT
     type: push
-    command: laminar/sr22/fuel_sel_left_select 
+    command: sim/fuel/fuel_tank_selector_lft_one 
     label: FUEL LEFT
     label-color: black
     label-size: 9
@@ -201,19 +210,19 @@ buttons:
       model: B
       size: medium
       B0:
-        bar: "OFF"
-        color: grey
-        formula: ${laminar/sr22/fuel_selector_pos} 1 eq not
+        text: "OFF"
+        color: red
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 0 eq
       B1:
         text: "SELECTED"
         color: deepskyblue
         framed: true
-        formula: ${laminar/sr22/fuel_selector_pos} 1 eq
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 1 eq
 
   - index: 10
     vibrate: SHORT
     type: push
-    command: laminar/sr22/fuel_sel_right_select 
+    command: sim/fuel/fuel_tank_selector_rgt_one
     label: FUEL RIGHT
     label-color: black
     label-size: 9
@@ -221,32 +230,25 @@ buttons:
       model: B
       size: medium
       B0:
-        bar: "OFF"
-        color: grey
-        formula: ${laminar/sr22/fuel_selector_pos} 2 eq not
+        text: "OFF"
+        color: red
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 6 eq
       B1:
         text: "SELECTED"
         color: deepskyblue
         framed: true
-        formula: ${laminar/sr22/fuel_selector_pos} 2 eq
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 3 eq
+
+
 
 
   - index: 11
-    vibrate: SHORT
-    type: push
-    command: laminar/sr22/fuel_sel_right_off    
-    label: FUEL OFF
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        bar: "OFF"
-        color: grey
-        formula: ${laminar/sr22/fuel_selector_pos} 3 eq not
-      B1:
-        text: "OFF"
-        color: red
-        framed: true
-        formula: ${laminar/sr22/fuel_selector_pos} 3 eq
+    name: More
+    type: page
+    page: switches2
+    label: MORE
+    label-size: 12
+    text: 📁
+    text-font: fontawesome.otf
+    text-size: 32
+    text-color: Gold
