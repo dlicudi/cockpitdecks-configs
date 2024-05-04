@@ -1,0 +1,139 @@
+description: Switch Panel
+includes: pager,encoders/encoders_fcu
+name: icing
+
+
+buttons:
+
+  - index: 0
+    type: push
+    command: sim/ice/pitot_heat0_tog
+    label: PITOT
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/switches/pitot_heat_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
+
+  - index: 1
+    type: onoff
+    label: ICE PROTECT
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${laminar/sr22/switch/ice_protect} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${laminar/sr22/switch/ice_protect} 1 eq
+    set-dataref: laminar/sr22/switch/ice_protect
+    initial-value: 0
+
+  - index: 2
+    type: onoff
+    label: PUMP BKUP
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/ice/tks_backup_pump} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/ice/tks_backup_pump} 1 eq
+    set-dataref: sim/cockpit2/ice/tks_backup_pump
+
+  - index: 3
+    type: onoff
+    label: NORM/HIGH
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "NORM"
+        color: darkorange
+        formula: ${laminar/sr22/switch/ice_norm_high} 0 eq
+      B1:
+        text: "HIGH"
+        color: deepskyblue
+        framed: true
+        formula: ${laminar/sr22/switch/ice_norm_high} 1 eq
+    set-dataref: laminar/sr22/switch/ice_norm_high
+
+
+  - index: 4
+    type: push
+    command: sim/ice/prop_heat_tog
+    label: PROP
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/switches/anti_ice_prop_heat} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/anti_ice_prop_heat} 1 eq
+
+  - index: 5
+    type: push
+    command: sim/ice/window_heat_tog
+    label: WSHLD
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/switches/anti_ice_window_heat} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/anti_ice_window_heat} 1 eq
+
+
+
+
+
+
+
+  - index: 11
+    name: Switches
+    type: page
+    page: switches
+    label: SWITCHES
+    label-size: 12
+    text: 📁
+    text-font: fontawesome.otf
+    text-size: 32
+    text-color: Gold
