@@ -1,147 +1,95 @@
 
 buttons:
 
+  - index: e0
+    name: FCU Airspeed
+    type: encoder-push
+    commands:
+      - AirbusFBW/PushSPDSel
+      - sim/autopilot/airspeed_down
+      - sim/autopilot/airspeed_up
+    long-press: AirbusFBW/PullSPDSel
+  - index: e1
+    name: FCU Heading
+    type: encoder-push
+    commands:
+      - AirbusFBW/PushHDGSel
+      - sim/autopilot/heading_down
+      - sim/autopilot/heading_up
+    long-press: AirbusFBW/PullHDGSel
+  - index: e2
+    name: FCU Baro
+    type: encoder-onoff
+    commands:
+      - toliss_airbus/capt_baro_push
+      - toliss_airbus/capt_baro_pull
+      - sim/instruments/barometer_down
+      - sim/instruments/barometer_up
+    options: modulo
+  - index: e3
+    name: FCU Altitude
+    type: encoder-push
+    commands:
+      - AirbusFBW/PushAltitude
+      - sim/autopilot/altitude_down
+      - sim/autopilot/altitude_up
+    long-press: AirbusFBW/PullAltitude
+    # - AirbusFBW/ALT100_1000
+  - index: e4
+    name: FCU V Speed
+    type: encoder-value
+    dataref: sim/cockpit/autopilot/vertical_velocity
+    step: 100
+    stepxl: 1000
+    value: 0
+    value-min: -6000
+    value-max: 6000
+    set-dataref: sim/cockpit/autopilot/vertical_velocity
+    commands:
+      - AirbusFBW/PullVSSel
+      - AirbusFBW/PushVSSel
+  - index: e5
+    name: FCU Unused
+    type: none
+    options: nostate
 
-# - index: e0
-#   name: FCU Airspeed
-#   type: encoder-value-extended
-#   dataref: sim/cockpit2/autopilot/airspeed_dial_kts_mach
-#   set-dataref: sim/cockpit2/autopilot/airspeed_dial_kts_mach
-#   step: 1
-#   stepxl: 10
-#   value: 1250
-#   value-min: 40
-#   value-max: 163
-#   initial-value: 100
-#   commands:
-#     - AirbusFBW/PullVSSel
-#     - AirbusFBW/PushVSSel
-#   long-press: sim/autopilot/servos_toggle
-
-- index: e0
-  name: throttle_encoder
-  type: encoder-push
-  commands:
-  - sim/engines/throttle_full # push
-  - sim/engines/throttle_down
-  - sim/engines/throttle_up
-
-- index: e1
-  name: FCU Heading
-  type: encoder-push
-  commands:
-    - sim/autopilot/heading_sync
-    - sim/autopilot/heading_down
-    - sim/autopilot/heading_up
-  long-press: sim/autopilot/servos_toggle
-
-- index: e2
-  name: FCU Baro
-  type: encoder-push
-  commands:
-    - sim/instruments/barometer_std
-    - sim/instruments/barometer_down
-    - sim/instruments/barometer_up
-  options: modulo
-
-- index: e3
-  name: alt_encoder
-  type: encoder-toggle
-  commands:
-  - sim/GPS/g1000n1_alt_outer_down
-  - sim/GPS/g1000n1_alt_outer_up
-  - sim/GPS/g1000n1_alt_inner_down
-  - sim/GPS/g1000n1_alt_inner_up
-  long-press: sim/autopilot/altitude_sync
-
-- index: e4
-  name: FCU V Speed
-  type: encoder-push
-  commands:
-    - sim/autopilot/vertical_speed_sync
-    - sim/autopilot/vertical_speed_down
-    - sim/autopilot/vertical_speed_up
-  long-press: AirbusFBW/PullSPDSel
-
-- index: e5
-  name: mixture_encoder
-  type: encoder-push
-  commands:
-  - sim/engines/mixture_max # push
-  - sim/engines/mixture_down
-  - sim/engines/mixture_up
-
-
-- index: left
-  name: left_screen
-  type: none
-  side:
-    icon-color: Black
-    labels:
-      - label: "THR"
-        label-size: 14
-        label-font: B612-Bold
-        label-color: Gold
-        formula: "${sim/flightmodel/engine/ENGN_thro[0]} 100 *"
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text-format: "{0:01.0f}"
-        text: "${formula}%"
-      - label: "HDG"
-        label-size: 14
-        label-font: B612-Bold
-        label-color: Gold
-        formula: "${sim/cockpit/autopilot/heading_mag}"
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text-format: "{0:00.0f}"
-        text: "${formula}"
-      - label: "QNH"
-        label-size: 14
-        label-font: B612-Bold
-        label-color: Gold
-        formula: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}"
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text-format: "{0:01.2f}"
-        text: "${formula}"
-
-- index: right
-  name: right_screen
-  type: none
-  side:
-    icon-color: Black
-    labels:
-      - label: "ALT"
-        label-size: 16
-        label-font: B612-Bold
-        label-color: Gold
-        formula: "${sim/cockpit2/autopilot/altitude_dial_ft}"
-        text-size: 16
-        text-font: Seven Segment.ttf
-        text-color: White
-        text-format: "{0:04.0f}"
-        text: "${formula}"
-      - label: "VS"
-        label-size: 14
-        label-font: B612-Bold
-        label-color: Gold
-        formula: "${sim/cockpit/autopilot/vertical_velocity} 100 /"
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text-format: "{0:+01.0f}"
-        text: "${formula}"
-      - label: "MIX"
-        label-size: 14
-        label-font: B612-Bold
-        label-color: Gold
-        formula: "${sim/flightmodel/engine/ENGN_mixt[0]} 100 *"
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text-format: "{0:01.0f}"
-        text: "${formula}%"
+  - index: left
+    name: FCU-L
+    type: none
+    multi-datarefs:
+      - sim/cockpit2/autopilot/airspeed_dial_kts_mach
+      - sim/cockpit/autopilot/heading_mag
+      - sim/cockpit/autopilot/airspeed_is_mach
+      - AirbusFBW/HDGTRKmode
+      - AirbusFBW/SPDmanaged
+      - AirbusFBW/HDGmanaged
+      - AirbusFBW/SPDdashed
+      - AirbusFBW/HDGdashed
+      - AirbusFBW/BaroStdCapt
+      - AirbusFBW/BaroUnitCapt
+      - sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot
+    fcu:
+      mode: vertical-left
+      text-size: 36
+      text-font: B612-Bold
+      text-color: "gold"
+      value-size: 48
+      value-font: Segment7Standard
+      value-color: "white"
+  - index: right
+    name: FCU-R
+    type: none
+    multi-datarefs:
+      - sim/cockpit2/autopilot/altitude_dial_ft
+      - sim/cockpit/autopilot/vertical_velocity
+      - AirbusFBW/HDGTRKmode
+      - AirbusFBW/ALTmanaged
+      - AirbusFBW/VSdashed
+    fcu:
+      mode: vertical-right
+      text-size: 36
+      text-font: B612-Bold
+      text-color: "gold"
+      value-size: 48
+      value-font: Segment7Standard
+      value-color: "white"

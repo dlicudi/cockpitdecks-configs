@@ -223,50 +223,30 @@ buttons:
           text-format: "{0:.0f}"
 
   - index: 9
-    name: CAUTION
-    type: none
-    label: CAUTION
-    label-size: 10
-    label-color: black
+    name: MASTER CAUTION
+    type: push
+    command: sim/annunciator/clear_master_caution
     annunciator:
-      size: medium
-      model: B
-      parts:
-        B0:
-          text: "OIL PRESS"
-          text-color: firebrick
-          text-font: DIN Condensed Black.otf
-          text-size: 50
-          formula: ${sim/cockpit/warnings/annunciators/oil_pressure}
-        B1:
-          text: "VOLTS"
-          text-color: firebrick
-          text-font: DIN Condensed Black.otf
-          text-size: 50
-          formula: ${sim/cockpit/warnings/annunciators/generator}
+      text: "MASTER\nCAUT"
+      text-color: darkorange
+      text-font: DIN Condensed Black.otf
+      text-size: 72
+      dataref: AirbusFBW/MasterCaut
+    vibrate: RUMBLE5
+    # options: animation_speed=0.5
 
   - index: 10
-    name: WARNING
-    type: none
-    label: WARNING
-    label-size: 10
-    label-color: black
-    annunciator:
-      size: medium
-      model: B
-      parts:
-        B0:
-          text: "L FUEL R"
-          text-color: darkorange
-          text-font: DIN Condensed Black.otf
-          text-size: 50
-          formula: ${sim/cockpit/warnings/annunciators/fuel_pressure}
-        B1:
-          text: "L VAC R"
-          text-color: darkorange
-          text-font: DIN Condensed Black.otf
-          text-size: 50
-          formula: ${sim/cockpit/warnings/annunciators/low_vacuum}
+    name: MASTER WARNING
+    type: push
+    command: sim/annunciator/clear_master_warning
+    annunciator-animate:
+      text: "MASTER\nWARN"
+      text-color: firebrick
+      text-font: DIN Condensed Black.otf
+      text-size: 72
+      dataref: AirbusFBW/MasterWarn
+      animation-speed: 2.0
+    vibrate: LONG
 
   - index: 11
     name: WAYPOINT
