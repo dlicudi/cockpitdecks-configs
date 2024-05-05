@@ -96,6 +96,7 @@ theme:
 
 # Plugins
 plugins:
+  - social
   - blog:
       authors_file: "{blog}/.authors.yml"
       authors: true      
