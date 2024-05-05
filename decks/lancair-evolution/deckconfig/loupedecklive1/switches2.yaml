@@ -226,3 +226,14 @@ buttons:
       - sim/ice/inlet_heat0_on
       - sim/ice/inlet_heat0_off
 
+  - index: 11
+    name: Switches
+    type: page
+    page: switches
+    # label: MORE
+    # label-size: 12
+    text: ←
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold
+    

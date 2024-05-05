@@ -202,7 +202,7 @@ buttons:
   - index: 9
     vibrate: SHORT
     type: push
-    command: sim/fuel/fuel_tank_selector_lft_one 
+    command: sim/fuel/fuel_selector_1
     label: FUEL LEFT
     label-color: black
     label-size: 9
@@ -222,7 +222,7 @@ buttons:
   - index: 10
     vibrate: SHORT
     type: push
-    command: sim/fuel/fuel_tank_selector_rgt_one
+    command: sim/fuel/fuel_selector_3
     label: FUEL RIGHT
     label-color: black
     label-size: 9
@@ -241,14 +241,13 @@ buttons:
 
 
 
-
   - index: 11
-    name: More
+    name: Switches2
     type: page
     page: switches2
-    label: MORE
-    label-size: 12
-    text: 📁
+    # label: MORE
+    # label-size: 12
+    text: →
     text-font: fontawesome.otf
-    text-size: 32
+    text-size: 48
     text-color: Gold
