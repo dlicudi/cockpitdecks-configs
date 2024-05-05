@@ -50,7 +50,7 @@ buttons:
           color: lime
           text-size: 100
           formula: "1"
-          text: "${sim/cockpit2/gauges/indicators/compass_heading_deg_mag}"
+          text: "${sim/cockpit2/gauges/indicators/heading_AHARS_deg_mag_pilot}"
           text-font: Seven Segment.ttf
           text-format: "{0:.0f}"
 
