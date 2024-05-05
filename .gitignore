@@ -5,3 +5,4 @@ resources
 examples/*
 .vscode/*
 site/*
+.cache/*
