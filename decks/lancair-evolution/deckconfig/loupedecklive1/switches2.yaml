@@ -226,6 +226,27 @@ buttons:
       - sim/ice/inlet_heat0_on
       - sim/ice/inlet_heat0_off
 
+  - index: 10
+    name: AUTOPILOT
+    label: AUTOPILOT
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+    options: round
+    dataref: sim/cockpit2/autopilot/autopilot_electric_master
+    commands:
+      - sim/autopilot/electric_master_on
+      - sim/autopilot/electric_master_off
+
   - index: 11
     name: Switches
     type: page
