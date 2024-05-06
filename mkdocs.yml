@@ -115,8 +115,8 @@ plugins:
 
 # Additional configuration
 extra:
-  # version:
-  #   provider: mike
+  version:
+    provider: mike
   status:
     new: Recently added
     deprecated: Deprecated
