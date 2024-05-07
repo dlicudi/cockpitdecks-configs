@@ -6,3 +6,4 @@ examples/*
 .vscode/*
 site/*
 .cache/*
+screendumps/*

@@ -9,7 +9,7 @@ decks:
     layout: loupedecklive1
     brightness: 70
 description: Decks for Lancair Evolution
-
+# print-page-dir: screendumps/lancair-evolution
 
 # cache-icon: True
 # dataref-roundings:
