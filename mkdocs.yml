@@ -23,7 +23,7 @@ site_name: Cockpitdecks Configs
 site_url: https://dlicudi.github.io/cockpitdecks-configs/
 site_author: Duane Licudi
 site_description: >-
-  A set of Aircrft cockpit configs for Cockpitdecks
+  A set of aircraft cockpit configs for Cockpitdecks
 
 # Repository
 repo_name: dlicudi/cockpitdecks-configs
