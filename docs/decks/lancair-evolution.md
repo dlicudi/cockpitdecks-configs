@@ -28,15 +28,11 @@ The third row consists of:
 - Information on the next waypoint in flight plan.
 
 ### SWITCHES
-![](../assets/images/lancair-evolution/switches.png){ :width="200" }
+![](../assets/images/lancair-evolution/switches.png){ :width="100" }
+![](../assets/images/lancair-evolution/switches2.png){ :width="100" }
 
 Primarily "Battery and Electrical Panel", Ignition, Fuel Pump and Fuel tank selector functions.
-
-### ICING
-![](../assets/images/lancair-evolution/icing.png){ :width="200" }
-
-### LIGHTS
-![](../assets/images/lancair-evolution/lights.png){ :width="200" }
+The second page covers lights and icing switches. 
 
 ### FCU
 ![](../assets/images/lancair-evolution/fcu.png){ :width="200" }
