@@ -123,7 +123,6 @@ buttons:
           formula: "${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn"
           text: "R ${formula} gal"
 
-
   - index: 5
     name: WIND
     label: WIND DATA
