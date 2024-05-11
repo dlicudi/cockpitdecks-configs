@@ -9,7 +9,7 @@ buttons:
   label: QUICK LOOK
   label-color: Gold
   label-size: 10
-  text: 0
+  text: "0"
   text-color: khaki
   text-size: 40
   text-font: DIN Condensed Light
@@ -24,7 +24,7 @@ buttons:
   label: QUICK LOOK
   label-color: Gold
   label-size: 10
-  text: 1
+  text: "1"
   text-color: khaki
   text-size: 40
   text-font: DIN Condensed Light
@@ -39,7 +39,7 @@ buttons:
   label: QUICK LOOK
   label-color: Gold
   label-size: 10
-  text: 2
+  text: "2"
   text-color: khaki
   text-size: 40
   text-font: DIN Condensed Light
@@ -54,7 +54,7 @@ buttons:
   label: QUICK LOOK
   label-color: Gold
   label-size: 10
-  text: 3
+  text: "3"
   text-color: khaki
   text-size: 40
   text-font: DIN Condensed Light
@@ -69,7 +69,7 @@ buttons:
   label: QUICK LOOK
   label-color: Gold
   label-size: 10
-  text: 4
+  text: "4"
   text-color: khaki
   text-size: 40
   text-font: DIN Condensed Light
@@ -84,7 +84,7 @@ buttons:
   label: QUICK LOOK
   label-color: Gold
   label-size: 10
-  text: 5
+  text: "5"
   text-color: khaki
   text-size: 40
   text-font: DIN Condensed Light
@@ -99,7 +99,7 @@ buttons:
   label: QUICK LOOK
   label-color: Gold
   label-size: 10
-  text: 6
+  text: "6"
   text-color: khaki
   text-size: 40
   text-font: DIN Condensed Light
@@ -114,7 +114,7 @@ buttons:
   label: QUICK LOOK
   label-color: Gold
   label-size: 10
-  text: 7
+  text: "7"
   text-color: khaki
   text-size: 40
   text-font: DIN Condensed Light

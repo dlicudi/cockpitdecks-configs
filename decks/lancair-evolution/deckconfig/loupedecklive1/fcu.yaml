@@ -76,14 +76,35 @@ buttons:
   - index: 6
     name: AP
     type: push
-    text: AP
-    text-color: white
-    text-size: 40
-    text-font: DIN Condensed Light
-    text-position: cm
     text-bg-color: black
+    multi-texts:
+      - text: AP
+        text-color: White
+        text-size: 40
+        text-font: DIN Condensed Light
+      - text: AP
+        text-color: White
+        text-size: 40
+        text-font: DIN Condensed Light
+      - text: AP
+        text-color: Lime
+        text-size: 40
+        text-font: DIN Condensed Light
+    formula: ${sim/cockpit/autopilot/autopilot_mode}  
     command: sim/autopilot/servos_toggle
-    vibrate: SHORT
+
+
+  # - index: 6
+  #   name: AP
+  #   type: push
+  #   text: AP
+  #   text-color: white
+  #   text-size: 40
+  #   text-font: DIN Condensed Light
+  #   text-position: cm
+  #   text-bg-color: black
+  #   command: sim/autopilot/servos_toggle
+  #   vibrate: SHORT
 
   - index: 7
     name: GPSS
