@@ -102,8 +102,6 @@ buttons:
           text-font: Seven Segment.ttf
           text-format: "{0:.0f}"
 
-
-
   - index: 4 # Fuel
     name: FUEL
     type: none
@@ -146,7 +144,7 @@ buttons:
         F2: # Tailwind RPN: [Wind Direction] 180 + [Aircraft Heading] - cos [Wind Speed] *
           color: yellow
           text-size: 28
-          formula: "${sisim/cockpit2/gauges/indicators/wind_heading_deg_mag} 180 + ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag} - cos ${sim/cockpit2/gauges/indicators/wind_speed_kts} *"
+          formula: "${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} 180 + ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag} - cos ${sim/cockpit2/gauges/indicators/wind_speed_kts} *"
           text-font: fontawesome.otf
           text: "↑ ${formula}"
           text-format: "{0:.0f}"
