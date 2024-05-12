@@ -16,14 +16,23 @@ buttons:
     command: sim/autopilot/track
 
   - index: 1
-    type: push
     name: NAV
-    text: NAV
-    text-color: white
-    text-size: 40
-    text-font: DIN Condensed Light
-    text-position: cm
+    type: push
     text-bg-color: black
+    multi-texts:
+      - text: NAV
+        text-color: White
+        text-size: 40
+        text-font: DIN Condensed Light
+      - text: NAV
+        text-color: White
+        text-size: 40
+        text-font: DIN Condensed Light
+      - text: NAV
+        text-color: Lime
+        text-size: 40
+        text-font: DIN Condensed Light
+    formula: ${sim/cockpit2/autopilot/nav_status}
     command: sim/autopilot/gpss
 
   - index: 2
@@ -50,16 +59,24 @@ buttons:
     vibrate: SHORT
 
   - index: 4
-    type: push
     name: SEL
-    text: SEL
-    text-color: white
-    text-size: 40
-    text-font: DIN Condensed Light
-    text-position: cm
+    type: push
     text-bg-color: black
+    multi-texts:
+      - text: SEL
+        text-color: White
+        text-size: 40
+        text-font: DIN Condensed Light
+      - text: SEL
+        text-color: White
+        text-size: 40
+        text-font: DIN Condensed Light
+      - text: SEL
+        text-color: Lime
+        text-size: 40
+        text-font: DIN Condensed Light
+    formula: ${sim/cockpit2/autopilot/vvi_status}
     command: sim/autopilot/alt_vs
-    vibrate: SHORT
 
   - index: 5
     name: VNAV
@@ -93,29 +110,22 @@ buttons:
     formula: ${sim/cockpit/autopilot/autopilot_mode}  
     command: sim/autopilot/servos_toggle
 
-
-  # - index: 6
-  #   name: AP
-  #   type: push
-  #   text: AP
-  #   text-color: white
-  #   text-size: 40
-  #   text-font: DIN Condensed Light
-  #   text-position: cm
-  #   text-bg-color: black
-  #   command: sim/autopilot/servos_toggle
-  #   vibrate: SHORT
-
   - index: 7
     name: GPSS
     type: push
-    text: GPSS
-    text-color: white
-    text-size: 40
-    text-font: DIN Condensed Light
-    text-position: cm
     text-bg-color: black
+    multi-texts:
+      - text: GPSS
+        text-color: White
+        text-size: 40
+        text-font: DIN Condensed Light
+      - text: GPSS
+        text-color: White
+        text-size: 40
+        text-font: DIN Condensed Light
+      - text: GPSS
+        text-color: Lime
+        text-size: 40
+        text-font: DIN Condensed Light
+    formula: ${sim/cockpit2/autopilot/gpss_status}
     command: sim/autopilot/gpss
-    vibrate: SHORT
-
-
