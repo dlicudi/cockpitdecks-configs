@@ -177,3 +177,45 @@ buttons:
         color: deepskyblue
         framed: true
         formula: ${sim/cockpit2/switches/landing_lights_switch[1]} 1 eq
+
+
+
+
+
+  - index: 10
+    name: ROOF LIGHT L
+    label: ROOF L
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+    dataref: laminar/b58/lighting/roof_L_on
+    set-dataref: laminar/b58/lighting/roof_L_on
+
+  - index: 11
+    name: ROOF LIGHT R
+    label: ROOF R
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+    dataref: laminar/b58/lighting/roof_R_on
+    set-dataref: laminar/b58/lighting/roof_R_on
