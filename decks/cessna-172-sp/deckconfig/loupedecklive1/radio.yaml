@@ -1,6 +1,18 @@
 name: radio
 includes: pager,encoders/encoders_radio
 
+# extra datarefs for audio panel (todo)
+
+# COM MIC 1 sim/audio_panel/transmit_audio_com1
+# COM MIC 2 sim/audio_panel/transmit_audio_com2
+# COM1 sim/audio_panel/monitor_audio_com1
+# COM1 sim/audio_panel/monitor_audio_com1
+# MKR MUTE sim/audio_panel/monitor_audio_mkr
+# DME sim/audio_panel/monitor_audio_dme
+# NAV1 sim/audio_panel/monitor_audio_nav1
+# NAV2 sim/audio_panel/select_audio_nav2
+# ADF1 sim/audio_panel/select_audio_adf1
+
 buttons:
 
 - index: 0
