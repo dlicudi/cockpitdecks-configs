@@ -1,3 +1,4 @@
+# G1000 v1.0.0
 name: g1000
 includes: pager,encoders/encoders_g1000
 
