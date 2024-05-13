@@ -169,52 +169,73 @@ buttons:
     label-size: 10
     type: push
     command: sim/flight_controls/landing_gear_toggle
-
     annunciator:
       size: medium
       model: D
       parts:
         D0:
           color: Lime
-          off-color: White
-          led: lgear
+          # off-color: White
+          led: dot
           formula: "${laminar/n844x/lights/nose_gear_down} 1 eq"
         D1:
           color: Lime
-          off-color: White
-          led: lgear
+          # off-color: White
+          led: dot
           formula: "${laminar/n844x/lights/left_gear_down} 1 eq"
         D2:
           color: Lime
-          off-color: White
-          led: lgear
+          # off-color: White
+          led: dot
           formula: "${laminar/n844x/lights/right_gear_down} 1 eq"
 
   - index: 7
     name: FLAPS
     label: FLAPS
-    label-color: Black
-    label-size: 10
-    type: none
-    annunciator:
-      size: medium
-      model: D
-      parts:
-        D0:
-          color: Lime
-          text-size: 60
-          formula: "${sim/cockpit2/controls/flap_ratio} 0 eq"
-          text: "UP"
-        D1:
-          color: White
-          text-size: 50
-          formula: "${sim/cockpit2/controls/flap_ratio} 0.5 eq"
-          text: "25° APP"
-        D2:
-          color: White
-          text-size: 50
-          formula: "${sim/cockpit2/controls/flap_ratio} 1 eq"
-          text: "50° LAND"
+    label-size: 9
+    label-color: black
+    type: updown
+    stops: 3
+    switch:
+      switch-style: large
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "UP"
+        - "25"
+        - "50"
+      tick-space: 24
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: black
+
+    # circular-switch:
+    #   switch-style: large
+    #   down: 30
+    #   button-size: 50
+    #   # tick-space: 36
+    #   # tick-length: 24
+    #   tick-label-size: 30
+    #   tick-label-font: DIN Bold
+    #   # tick-from: 45
+    #   # tick-to: 315
+    #   tick-color: white
+    #   # tick-width: 8
+    #   # tick-underline-width: 8
+    #   tick-labels:
+    #     - "UP"
+    #     - "25"
+    #     - "50"
+
+    options: 3way,invert
+    dataref: sim/cockpit2/controls/flap_ratio
+    formula: "${sim/cockpit2/controls/flap_ratio} 2 *"
+    commands:
+      - sim/flight_controls/flaps_down
+      - sim/flight_controls/flaps_up
+
 
   - index: 8
     name: FUEL_DURATION

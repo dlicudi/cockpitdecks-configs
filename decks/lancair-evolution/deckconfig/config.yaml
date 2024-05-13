@@ -1,5 +1,5 @@
 # Definition of decks Lancair Evolution
-# Version 1.2.1
+# Version 1.2.2
 aircraft: Lancair Evolution
 icao: EVOT
 model:  Lancair Evolution
@@ -7,7 +7,7 @@ decks:
   - name: XPLive
     type: LoupedeckLive
     layout: loupedecklive1
-    brightness: 70
+    brightness: 100
 description: Decks for Lancair Evolution
 print-page-dir: screendumps/lancair-evolution
 
