@@ -6,7 +6,7 @@ icao: DR40
 model:  Robin DR401
 decks:
   - name: XPLive
-    type: loupedecklive
+    type: LoupedeckLive
     layout: loupedecklive1
     brightness: 70
 description: Decks for Robin DR401
