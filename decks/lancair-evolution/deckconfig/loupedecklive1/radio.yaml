@@ -133,6 +133,19 @@ buttons:
         frame: True
 
 
+- index: 9
+  name: Audio Panel
+  type: page
+  page: audiopanel
+  label: Audio Panel
+  label-size: 9
+  label-color: black
+  text: →
+  text-font: fontawesome.otf
+  text-size: 48
+  text-color: Gold
+
+
 - index: 11
   name: TRANSPONDER_MODE
   # label: TRANSPONDER
