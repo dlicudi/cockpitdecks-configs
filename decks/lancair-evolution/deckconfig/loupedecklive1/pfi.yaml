@@ -210,25 +210,6 @@ buttons:
       tick-label-size: 40
       tick-label-font: DIN Bold
       tick-label-color: black
-
-    # circular-switch:
-    #   switch-style: large
-    #   down: 30
-    #   button-size: 50
-    #   # tick-space: 36
-    #   # tick-length: 24
-    #   tick-label-size: 30
-    #   tick-label-font: DIN Bold
-    #   # tick-from: 45
-    #   # tick-to: 315
-    #   tick-color: white
-    #   # tick-width: 8
-    #   # tick-underline-width: 8
-    #   tick-labels:
-    #     - "UP"
-    #     - "25"
-    #     - "50"
-
     options: 3way,invert
     dataref: sim/cockpit2/controls/flap_ratio
     formula: "${sim/cockpit2/controls/flap_ratio} 2 *"
