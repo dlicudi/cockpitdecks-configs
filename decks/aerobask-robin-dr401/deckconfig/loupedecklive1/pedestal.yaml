@@ -1,5 +1,5 @@
 name: pedestal
-includes: pager
+includes: pager,encoders/encoders_fcu
 
 buttons:
 

@@ -10,3 +10,4 @@ default-label-position: ct
 default-homepage-name: pfi
 default-vibrate: SHORT
 default-icon-color: (94, 111, 130)
+default-annunciator-style: k

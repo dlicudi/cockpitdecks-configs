@@ -1,0 +1,194 @@
+# Audio Panel v1.0.0
+name: audiopanel
+includes: pager,encoders/encoders_radio
+
+# extra datarefs for audio panel (todo)
+
+# COM MIC 1 sim/audio_panel/transmit_audio_com1
+# COM MIC 2 sim/audio_panel/transmit_audio_com2
+# COM1 sim/audio_panel/monitor_audio_com1
+# COM2 sim/audio_panel/monitor_audio_com2
+# MKR MUTE sim/audio_panel/monitor_audio_mkr
+# DME sim/audio_panel/monitor_audio_dme
+# NAV1 sim/audio_panel/monitor_audio_nav1
+# NAV2 sim/audio_panel/select_audio_nav2
+# ADF1 sim/audio_panel/select_audio_adf1
+
+buttons:
+
+- index: 0
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${laminar/n844x/audio/COM1MIC}"
+      B1:
+        text: "COM MIC 1"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/transmit_audio_com1
+
+- index: 1
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${laminar/n844x/audio/COM1}"
+      B1:
+        text: "COM 1"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/monitor_audio_com1
+
+- index: 2
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${laminar/n844x/audio/MKRMUTE}"
+      B1:
+        text: "MKR MUTE"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/monitor_audio_mkr
+
+- index: 7
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${laminar/n844x/audio/NAV1}"
+      B1:
+        text: "NAV 1"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/select_audio_nav1
+
+- index: 4
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${laminar/n844x/audio/COM2MIC}"
+      B1:
+        text: "COM MIC 2"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/transmit_audio_com2
+
+- index: 5
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${laminar/n844x/audio/COM2}"
+      B1:
+        text: "COM 2"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/monitor_audio_com2
+
+- index: 10
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${laminar/n844x/audio/ADF}"
+      B1:
+        text: "ADF 1"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/select_audio_adf1
+
+- index: 11
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${laminar/n844x/audio/NAV2}"
+      B1:
+        text: "NAV 2"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/select_audio_nav2
+
+- index: 6
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${laminar/n844x/audio/DME}"
+      B1:
+        text: "DME"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/monitor_audio_dme
+
+- index: 3
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${laminar/n844x/audio/HISENS}"
+      B1:
+        text: "HI SENS"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/annunciator/marker_beacon_sens_toggle
+
+
+
+
+
+
+

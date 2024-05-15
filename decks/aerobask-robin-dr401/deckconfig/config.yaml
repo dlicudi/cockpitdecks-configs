@@ -1,6 +1,5 @@
-# Definition of decks for # Robin DR401
-
-#
+# Aerobask Robin DR401
+# Version 1.0.0
 aircraft: Robin DR401
 icao: DR40
 model:  Robin DR401
@@ -10,6 +9,7 @@ decks:
     layout: loupedecklive1
     brightness: 70
 description: Decks for Robin DR401
+print-page-dir: screendumps/robin-dr401
 
 
 # cache-icon: True

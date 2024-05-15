@@ -1,0 +1,227 @@
+description: Switch Panel
+includes: pager,encoders/encoders_fcu
+name: switches
+
+buttons:
+  - index: 0
+    type: push
+    command: sim/electrical/battery_1_toggle
+    label: BATTERY
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/electrical/battery_on[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/battery_on[0]} 1 eq
+
+  - index: 1
+    type: push
+    command: aerobask/dr401/engine_master_to
+    label: MASTER ENGN
+    label-color: black
+    label-size: 8
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${aerobask/dr401/engine_master} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${aerobask/dr401/engine_master} 1 eq
+
+  - index: 2
+    type: push
+    command: sim/systems/avionics_toggle
+    label: AVIONICS
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/avionics_power_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
+
+  - index: 3
+    type: push
+    command: sim/electrical/generator_1_toggle
+    # type: onoff
+    # set-dataref: sim/cockpit/electrical/generator_on[0]
+    label: ALTERNATOR
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
+    # guard:
+    #   dataref: aerobask/dr401/cover_alternator
+    #   model: grid
+    #   color: red
+
+
+
+  - index: 4
+    type: push
+    label: LAND
+    label-color: black
+    label-size: 9
+    command: sim/lights/landing_lights_toggle    
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/electrical/landing_lights_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
+
+  - index: 5
+    type: push
+    command: sim/lights/taxi_lights_toggle
+    label: TAXI
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/electrical/taxi_light_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/taxi_light_on} 1 eq
+
+  - index: 6
+    type: push
+    command: sim/lights/strobe_lights_toggle
+    label: FLASH
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
+
+  - index: 7
+    type: push
+    command: sim/lights/nav_lights_toggle
+    label: NAV
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
+
+
+  - index: 8
+    name: FLAPS
+    label: FLAPS
+    label-size: 9
+    label-color: black
+    type: updown
+    stops: 3
+    switch:
+      switch-style: large
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "UP"
+        - "25"
+        - "50"
+      tick-space: 24
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: black
+    options: 3way,invert
+    dataref: sim/cockpit2/controls/flap_ratio
+    formula: "${sim/cockpit2/controls/flap_ratio} 2 *"
+    commands:
+      - sim/flight_controls/flaps_down
+      - sim/flight_controls/flaps_up
+
+
+
+  - index: 9
+    type: push
+    command: sim/ice/pitot_heat0_tog
+    label: PITOT HT
+    label-color: black
+    label-size: 8
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/switches/pitot_heat_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
+
+
+  - index: 11
+    name: Switches2
+    type: page
+    page: switches2
+    # label: MORE
+    # label-size: 12
+    text: →
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold
+

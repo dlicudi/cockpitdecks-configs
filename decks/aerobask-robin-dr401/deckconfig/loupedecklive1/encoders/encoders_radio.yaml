@@ -1,0 +1,140 @@
+
+buttons:
+
+- index: e0
+  name: com1_encoder
+  type: encoder-toggle
+  commands:
+  - sim/radios/stby_com1_coarse_down
+  - sim/radios/stby_com1_coarse_up
+  - sim/radios/stby_com1_fine_down
+  - sim/radios/stby_com1_fine_up
+  long-press: sim/radios/com1_standy_flip
+
+- index: e1
+  name: com2_encoder
+  type: encoder-toggle
+  commands:
+  - sim/radios/stby_com2_coarse_down
+  - sim/radios/stby_com2_coarse_up
+  - sim/radios/stby_com2_fine_down
+  - sim/radios/stby_com2_fine_up
+  long-press: sim/radios/com2_standy_flip
+
+- index: e2
+  name: adf_encoder
+  type: encoder-toggle
+  commands:
+  - sim/radios/stby_adf1_hundreds_thous_down
+  - sim/radios/stby_adf1_hundreds_thous_up
+  - sim/radios/stby_adf1_4dig_hundreds_down
+  - sim/radios/stby_adf1_4dig_hundreds_up
+  long-press: sim/radios/adf1_standy_flip
+
+- index: e3
+  name: nav1_encoder
+  type: encoder-toggle
+  commands:
+  - sim/radios/stby_nav1_coarse_down
+  - sim/radios/stby_nav1_coarse_up
+  - sim/radios/stby_nav1_fine_down
+  - sim/radios/stby_nav1_fine_up
+  long-press: sim/radios/nav1_standy_flip
+
+- index: e4
+  name: nav2_encoder
+  type: encoder-toggle
+  commands:
+  - sim/radios/stby_nav2_coarse_down
+  - sim/radios/stby_nav2_coarse_up
+  - sim/radios/stby_nav2_fine_down
+  - sim/radios/stby_nav2_fine_up
+  long-press: sim/radios/nav2_standy_flip
+
+- index: e5
+  name: transponder_encoder_right
+  type: encoder-toggle
+  commands:
+  - sim/transponder/transponder_12_down
+  - sim/transponder/transponder_12_up
+  - sim/transponder/transponder_34_down
+  - sim/transponder/transponder_34_up
+
+
+
+
+
+
+- index: left
+  name: left_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: "COM1"
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit2/radios/actuators/com1_standby_frequency_hz_833} 1000 /"
+        text-size: 14
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:.3f}"
+        text: "${formula}"
+      - label: "COM2"
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit2/radios/actuators/com2_standby_frequency_hz_833} 1000 /"
+        text-size: 14
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:.3f}"
+        text: "${formula}"
+      - label: "ADF"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit/radios/adf1_stdby_freq_hz}"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:04.0f}"
+        text: "${formula}"
+
+- index: right
+  name: right_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: "NAV1"
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit/radios/nav1_stdby_freq_hz} 100 /"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:.2f}"
+        text: "${formula}"
+      - label: "NAV2"
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit/radios/nav2_stdby_freq_hz} 100 /"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:.2f}"
+        text: "${formula}"
+      - label: "XPDR"
+        label-size: 16
+        label-font: B612-Bold
+        label-color: Grey
+        formula: "${sim/cockpit/radios/transponder_code}"
+        text-size: 16
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:00.0f}"
+        text: "${formula}"

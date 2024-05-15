@@ -1,0 +1,155 @@
+description: Switch Panel 2
+includes: pager,encoders/encoders_fcu
+name: switches2
+
+buttons:
+  - index: 0
+    type: onoff
+    set-dataref: sim/cockpit/engine/fuel_pump_on[0]
+    label: ELECTRIC PUMP
+    label-color: black
+    label-size: 8
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/engine/fuel_pump_on[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/engine/fuel_pump_on[0]} 1 eq
+
+  - index: 1
+    type: onoff
+    set-dataref: sim/cockpit/switches/anti_ice_engine_air[0]
+    label: ALTERNATE AIR
+    label-color: black
+    label-size: 8
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/switches/anti_ice_engine_air[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/anti_ice_engine_air[0]} 1 eq
+
+  - index: 6
+    type: push
+    command: sim/fuel/fuel_transfer_from_off
+    label: FUEL XFER
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        led: dot
+        color: Orange
+        formula: ${sim/cockpit/engine/fuel_tank_transfer_from} 0 eq
+      B1:
+        text: "OFF"
+        color: White
+        formula: "1"
+
+  - index: 7
+    type: push
+    command: sim/fuel/fuel_transfer_from_3
+    label: FUEL XFER
+    label-color: black
+    label-size: 10
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        led: dot
+        color: Orange
+        formula: ${sim/cockpit/engine/fuel_tank_transfer_from} 3 eq
+      B1:
+        text: "AUX TANK"
+        color: White
+        formula: "1"
+
+
+
+  - index: 4
+    type: long-press
+    vibrate: LONG
+    label: "IGNITION"
+    label-color: White
+    label-size: 9
+    command: sim/ignition/engage_starter_1
+    text-bg-color: Black
+    multi-texts:
+      - text: "" # OFF
+        text-color: White
+        text-font: fontawesome.otf
+        text-size: 30
+      - text: "" # BOTH
+        text-color: Green
+        text-font: fontawesome.otf
+        text-size: 50
+      - text: "" # START
+        text-color: Red
+        text-font: fontawesome.otf
+        text-size: 60
+    formula: ${aerobask/dr401/starter_key}
+
+
+  - index: 2
+    type: push
+    command: sim/fuel/fuel_selector_2
+    # command: sim/fuel/fuel_selector_2
+    label: FUEL
+    label-color: black
+    label-size: 10
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        led: dot
+        color: Orange
+        formula: ${sim/cockpit/engine/fuel_tank_selector} 2 eq
+      B1:
+        text: "ON"
+        color: White
+        formula: "1"
+
+  - index: 3
+    type: push
+    command: sim/fuel/fuel_selector_none
+    label: FUEL
+    label-color: black
+    label-size: 10
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        led: dot
+        color: Orange
+        formula: ${sim/cockpit/engine/fuel_tank_selector} 0 eq
+      B1:
+        text: "OFF"
+        color: White
+        formula: "1"
+
+
+
+  - index: 11
+    name: Switches
+    type: page
+    page: switches
+    # label: MORE
+    # label-size: 12
+    text: ←
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold
+    
