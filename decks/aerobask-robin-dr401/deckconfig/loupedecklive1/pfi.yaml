@@ -165,52 +165,95 @@ buttons:
           text-format: "{0:.0f}"
 
 
-  - index: 6 # Oil temp/press
-    name: OIL
+  - index: 6
+    name: FUEL_FLOW
     type: none
-    label: OIL
-    label-color: Black
-    label-size: 10
     annunciator:
       size: medium
       model: B
       parts:
         B0:
-          color: yellow
-          text-size: 32
-          formula: "${sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]}"
-          text: "TEMP ${formula} F"
-          text-format: "{0:.0f}"
+          color: green
+          text-size: 42
+          formula: "${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3600 * 0.8 / 3.78541 / 2 roundn"
+          text: "${formula}"
         B1:
-          color: yellow
-          text-size: 32
-          formula: "${sim/cockpit2/engine/indicators/oil_pressure_psi[0]}"
-          text: "PRESS ${formula} PSI"
-          text-format: "{0:.0f}"
+          text: FUEL FLOW
+          text-size: 36
+          text-font: DIN Bold
+          formula: "1"
 
 
-  - index: 7 # Vac/Amp
-    name: VACAMP
+
+  # - index: 6 # Oil temp/press
+  #   name: OIL
+  #   type: none
+  #   label: OIL
+  #   label-color: Black
+  #   label-size: 10
+  #   annunciator:
+  #     size: medium
+  #     model: B
+  #     parts:
+  #       B0:
+  #         color: yellow
+  #         text-size: 32
+  #         formula: "${sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]}"
+  #         text: "TEMP ${formula} F"
+  #         text-format: "{0:.0f}"
+  #       B1:
+  #         color: yellow
+  #         text-size: 32
+  #         formula: "${sim/cockpit2/engine/indicators/oil_pressure_psi[0]}"
+  #         text: "PRESS ${formula} PSI"
+  #         text-format: "{0:.0f}"
+
+
+  # - index: 7 # Vac/Amp
+  #   name: VACAMP
+  #   type: none
+  #   label: VAC/AMP
+  #   label-color: Black
+  #   label-size: 10
+  #   annunciator:
+  #     size: medium
+  #     model: B
+  #     parts:
+  #       B0:
+  #         color: yellow
+  #         text-size: 32
+  #         text: "VAC ${sim/cockpit/misc/vacuum}"
+  #         text-format: "{0:.2f}"
+  #         formula: "1"
+  #       B1:
+  #         color: yellow
+  #         text-size: 32
+  #         text: "AMP ${laminar/c172/electrical/battery_amps}"
+  #         text-format: "{0:.2f}"
+  #         formula: "1"
+
+  - index: 7
+    name: FUEL_DURATION
     type: none
-    label: VAC/AMP
-    label-color: Black
-    label-size: 10
-    annunciator:
-      size: medium
-      model: B
-      parts:
-        B0:
-          color: yellow
-          text-size: 32
-          text: "VAC ${sim/cockpit/misc/vacuum}"
-          text-format: "{0:.2f}"
-          formula: "1"
-        B1:
-          color: yellow
-          text-size: 32
-          text: "AMP ${laminar/c172/electrical/battery_amps}"
-          text-format: "{0:.2f}"
-          formula: "1"
+    label: FUEL DURATION
+    label-size: 8
+    label-position: ct
+    label-color: Lime
+    data-bg-color: Black
+    data:
+      icon: "fa:gas-pump"
+      icon-size: 60
+      icon-color: Gold
+      data: ${formula}
+      data-format: "{:02.0f}"
+      data-font: DIN Condensed Light
+      data-color: White
+      data-size: 70
+      data-unit: "hrs"
+      data-progress: 20
+      data-trend: 1
+      formula: "${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[1]} + ${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3 roundn 0.000001 + / 3600 / 1 roundn"
+      bottomline: Go Faster
 
 
   - index: 8 # prop rpm and hobbs (todo)

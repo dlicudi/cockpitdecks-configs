@@ -1,3 +1,4 @@
+# ENGINE EIS CONFIGURATION 2
 description: Engine
 includes: pager,encoders/encoders_fcu
 name: engine
@@ -15,94 +16,217 @@ name: engine
 # sim/cockpit2/fuel/fuel_quantity[0] / sim/cockpit2/fuel/fuel_quantity[1]
 
 
+
+# CHT sim/cockpit2/engine/indicators/CHT_deg_C
+# TIT/ITT sim/cockpit2/engine/indicators/ITT_deg_C
+
 buttons:
 
+
 - index: 0
-  name: TRQ
-  label: TRQ
-  label-color: Black
-  label-size: 10
+  name: MANIFOLD_PRESSURE
   type: none
   annunciator:
     size: medium
     model: B
     parts:
       B0:
-        color: Lime
-        text-size: 60
-        formula: "${sim/cockpit2/engine/indicators/torque_n_mtr[0]} 0.737562 *"
-        text: "${formula}"
-        text-format: "{0:.0f}"
-      B1:
-        color: White
+        color: green
         text-size: 42
+        formula: "${sim/cockpit2/engine/indicators/MPR_in_hg[0]} 1 roundn"
+        text: "${formula}"
+      B1:
+        text: "MAN IN HG"
+        text-size: 32
+        text-font: DIN Bold
         formula: "1"
-        text: "FT-LB"
 
 - index: 1
-  name: ITT
-  label: ITT
-  label-color: Black
-  label-size: 10
+  name: RPM
   type: none
   annunciator:
     size: medium
     model: B
     parts:
       B0:
-        color: Lime
-        text-size: 60
-        text: "${sim/cockpit2/engine/indicators/ITT_deg_C[0]}"
-        text-format: "{0:.0f}"
-        formula: "1"
-      B1:
-        color: White
+        color: green
         text-size: 42
-        text: "°C"
+        formula: "1"
+        # text: "${sim/cockpit2/engine/indicators/engine_speed_rpm[0]}"
+        text: "${sim/cockpit2/engine/indicators/prop_speed_rpm[0]}"
+        text-format: "{0:.0f}"
+      B1:
+        text: RPM
+        text-size: 42
+        text-font: DIN Bold
         formula: "1"
 
-- index: 2
-  name: NP
-  label: NP
+# - index: 0
+#   name: TRQ
+#   label: TRQ
+#   label-color: Black
+#   label-size: 10
+#   type: none
+#   annunciator:
+#     size: medium
+#     model: B
+#     parts:
+#       B0:
+#         color: Lime
+#         text-size: 60
+#         formula: "${sim/cockpit2/engine/indicators/torque_n_mtr[0]} 0.737562 *"
+#         text: "${formula}"
+#         text-format: "{0:.0f}"
+#       B1:
+#         color: White
+#         text-size: 42
+#         formula: "1"
+#         text: "FT-LB"
+
+# - index: 1
+#   name: ITT
+#   label: ITT
+#   label-color: Black
+#   label-size: 10
+#   type: none
+#   annunciator:
+#     size: medium
+#     model: B
+#     parts:
+#       B0:
+#         color: Lime
+#         text-size: 60
+#         text: "${sim/cockpit2/engine/indicators/ITT_deg_C[0]}"
+#         text-format: "{0:.0f}"
+#         formula: "1"
+#       B1:
+#         color: White
+#         text-size: 42
+#         text: "°C"
+#         formula: "1"
+
+- index: 2 # Fuel
+  name: FUEL
+  type: none
+  label: FUEL QTY
   label-color: Black
   label-size: 10
-  type: none
   annunciator:
     size: medium
     model: B
     parts:
       B0:
-        color: lime
-        text-size: 42
-        text: "${sim/cockpit2/engine/indicators/engine_speed_rpm[0]}"
-        text-format: "{0:.0f}"
-        formula: "1"
+        color: yellow
+        text-size: 32
+        formula: "${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn"
+        text: "L ${formula} gal"
       B1:
-        color: White
-        text-size: 42
-        text: "RPM"
-        formula: "1"
+        color: yellow
+        text-size: 32
+        formula: "${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn"
+        text: "R ${formula} gal"
+
+
+# - index: 3
+#   name: FUEL_FLOW
+#   type: none
+#   annunciator:
+#     size: medium
+#     model: B
+#     parts:
+#       B0:
+#         color: green
+#         text-size: 42
+#         formula: "${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3600 * 0.8 / 3.78541 / 2 roundn"
+#         text: "${formula}"
+#       B1:
+#         text: FUEL FLOW
+#         text-size: 36
+#         text-font: DIN Bold
+#         formula: "1"
+
+
+# - index: 2
+#   name: NP
+#   label: NP
+#   label-color: Black
+#   label-size: 10
+#   type: none
+#   annunciator:
+#     size: medium
+#     model: B
+#     parts:
+#       B0:
+#         color: lime
+#         text-size: 42
+#         text: "${sim/cockpit2/engine/indicators/engine_speed_rpm[0]}"
+#         text-format: "{0:.0f}"
+#         formula: "1"
+#       B1:
+#         color: White
+#         text-size: 42
+#         text: "RPM"
+#         formula: "1"
+
+# - index: 3
+#   name: NG
+#   label: NG
+#   label-color: Black
+#   label-size: 10
+#   type: none
+#   annunciator:
+#     size: medium
+#     model: B
+#     parts:
+#       B0:
+#         color: lime
+#         text-size: 60
+#         text: "${sim/cockpit2/engine/indicators/N1_percent[0]}"
+#         text-format: "{0:.0f}"
+#         formula: "1"
+#       B1:
+#         color: White
+#         text-size: 42
+#         text: "%"
+#         formula: "1"
+
 
 - index: 3
-  name: NG
-  label: NG
-  label-color: Black
-  label-size: 10
+  name: TIT
   type: none
   annunciator:
     size: medium
     model: B
     parts:
       B0:
-        color: lime
-        text-size: 60
-        text: "${sim/cockpit2/engine/indicators/N1_percent[0]}"
-        text-format: "{0:.0f}"
-        formula: "1"
-      B1:
-        color: White
+        color: green
         text-size: 42
-        text: "%"
+        formula: "1"
+        text: "${sim/cockpit2/engine/indicators/ITT_deg_C[0]}"
+        text-format: "{0:.0f} °C"
+      B1:
+        text: TIT
+        text-size: 42
+        text-font: DIN Bold
+        formula: "1"
+
+- index: 7
+  name: CHT
+  type: none
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: green
+        text-size: 42
+        formula: "1"
+        text: "${sim/cockpit2/engine/indicators/CHT_deg_C[0]}"
+        text-format: "{0:.0f} °C"
+      B1:
+        text: CHT
+        text-size: 42
+        text-font: DIN Bold
         formula: "1"
 
 - index: 4
@@ -142,13 +266,13 @@ buttons:
         color: Lime
         text-size: 42
         text: "${sim/cockpit2/electrical/bus_load_amps[0]}"
-        text-format: "{0:.0f}"
+        text-format: "{0:.1f}"
         formula: "1"
       B1:
         color: Lime
         text-size: 42
         text: "${sim/cockpit2/electrical/bus_load_amps[1]}"
-        text-format: "{0:.0f}"
+        text-format: "{0:.1f}"
         formula: "1"
 
 - index: 6
@@ -165,38 +289,14 @@ buttons:
         color: lime
         text-size: 42
         text: "${sim/cockpit2/electrical/bus_volts[0]}"
-        text-format: "{0:.0f}"
+        text-format: "{0:.1f}"
         formula: "1"
       B1:
         color: lime
         text-size: 42
         text: "${sim/cockpit2/electrical/bus_volts[1]}"
-        text-format: "{0:.0f}"
+        text-format: "{0:.1f}"
         formula: "1"
-
-- index: 7
-  name: FUEL QTY
-  label: FUEL QTY
-  label-color: Black
-  label-size: 10
-  type: none
-  annunciator:
-    size: medium
-    model: B
-    parts:
-      B0:
-        color: lime
-        text-size: 42
-        text-format: "{0:.0f}"
-        text: "${formula} gal"
-        formula: "${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn"
-      B1:
-        color: lime
-        text-size: 42
-        text-format: "{0:.0f}"
-        text: "${formula} gal"
-        formula: "${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn"
-
 
 - index: 8
   name: FUEL
@@ -211,7 +311,7 @@ buttons:
       B0:
         color: Lime
         text-size: 42
-        text-format: "{0:.0f}"
+        text-format: "{0:.1f}"
         text: "${formula} GPH"
         formula: "${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3600 * 0.8 / 3.78541 / 2 roundn"
       B1:
@@ -309,31 +409,6 @@ buttons:
         text-size: 36
         text: "ALT"
         formula: "1"
-
-- index: 11
-  name: FUEL_DURATION
-  type: none
-  label: FUEL DURATION
-  label-size: 8
-  label-position: ct
-  label-color: Lime
-  data-bg-color: Black
-  data:
-    icon: "fa:gas-pump"
-    icon-size: 60
-    icon-color: Gold
-    data: ${formula}
-    data-format: "{:02.0f}"
-    data-font: DIN Condensed Light
-    data-color: White
-    data-size: 70
-    data-unit: "hrs"
-    data-progress: 20
-    data-trend: 1
-    formula: "${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[1]} + ${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3 roundn 0.000001 + / 3600 / 1 roundn"
-    bottomline: Go Faster
-
-
 
 # - index: 4
 #   name: FUEL_FLOW
@@ -573,3 +648,27 @@ buttons:
 #         text-size: 42
 #         text-font: DIN Bold
 #         formula: "1"
+
+
+- index: 11
+  name: FUEL QTY
+  label: FUEL QTY
+  label-color: Black
+  label-size: 10
+  type: none
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        text-size: 42
+        text-format: "{0:.0f}"
+        text: "${formula} gal"
+        formula: "${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn"
+      B1:
+        color: lime
+        text-size: 42
+        text-format: "{0:.0f}"
+        text: "${formula} gal"
+        formula: "${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn"
