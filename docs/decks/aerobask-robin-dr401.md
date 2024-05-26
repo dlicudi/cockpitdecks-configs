@@ -4,6 +4,7 @@ icon: material/airplane
 
 # Aerobask Robin DR401
 
+v1.0.0
 
 ## Deck Functions
 

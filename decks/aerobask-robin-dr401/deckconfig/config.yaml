@@ -1,5 +1,5 @@
 # Aerobask Robin DR401
-# Version 1.1.0
+# Version 1.3.0
 aircraft: Robin DR401
 icao: DR40
 model:  Robin DR401
@@ -8,8 +8,27 @@ decks:
     type: LoupedeckLive
     layout: loupedecklive1
     brightness: 70
+  - name: StreamDeckXL
+    type: Stream Deck XL
+    layout: streamdeckxl1
+    # brightness: 70
+  # - name: VirtualDeck1
+  #   type: Virtual Deck#1
+  #   layout: virtualdeck1
+  #   address: 127.0.0.1
+  #   port: 7701
+  # - name: VirtualDeck2
+  #   type: Virtual Deck#2
+  #   layout: virtualdeck2
+  #   address: 127.0.0.1
+  #   port: 7702
+  # - name: Virtual Streamdeck XL 1
+  #   type: Virtual Streamdeck XL
+  #   layout: streamdeckxl1
+  #   address: 127.0.0.1
+  #   port: 7703
 description: Decks for Robin DR401
-print-page-dir: screendumps/robin-dr401
+# print-page-dir: screendumps/aerobask-robin-dr401
 
 
 # cache-icon: True

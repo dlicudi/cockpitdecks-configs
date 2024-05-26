@@ -52,18 +52,12 @@ buttons:
   long-press: sim/radios/nav2_standy_flip
 
 - index: e5
-  name: transponder_encoder_right
-  type: encoder-toggle
+  name: crs
+  type: encoder-push
   commands:
-  - sim/transponder/transponder_12_down
-  - sim/transponder/transponder_12_up
-  - sim/transponder/transponder_34_down
-  - sim/transponder/transponder_34_up
-
-
-
-
-
+  - sim/radios/obs_HSI_direct
+  - sim/radios/obs_HSI_down
+  - sim/radios/obs_HSI_up
 
 - index: left
   name: left_screen
@@ -128,12 +122,12 @@ buttons:
         text-color: White
         text-format: "{0:.2f}"
         text: "${formula}"
-      - label: "XPDR"
+      - label: "CRS"
         label-size: 16
         label-font: B612-Bold
-        label-color: Grey
-        formula: "${sim/cockpit/radios/transponder_code}"
-        text-size: 16
+        label-color: Gold
+        formula: "${sim/cockpit2/radios/actuators/hsi_obs_deg_mag_pilot}"
+        text-size: 18
         text-font: Seven Segment.ttf
         text-color: White
         text-format: "{0:00.0f}"

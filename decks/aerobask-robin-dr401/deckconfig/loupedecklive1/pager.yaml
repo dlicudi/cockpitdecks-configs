@@ -46,7 +46,7 @@ buttons:
   - index: b6
     name: P6
     type: page
-    page: pedestal
+    page: weather
     colored-led: red
 
   - index: b7

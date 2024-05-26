@@ -64,12 +64,12 @@ buttons:
   long-press: AirbusFBW/PullSPDSel
 
 - index: e5
-  name: mixture_encoder
+  name: crs
   type: encoder-push
   commands:
-  - sim/engines/mixture_max # push
-  - sim/engines/mixture_down
-  - sim/engines/mixture_up
+  - sim/radios/obs_HSI_direct
+  - sim/radios/obs_HSI_down
+  - sim/radios/obs_HSI_up
 
 
 - index: left
@@ -135,13 +135,14 @@ buttons:
         text-color: White
         text-format: "{0:+01.0f}"
         text: "${formula}"
-      - label: "MIX"
-        label-size: 14
+      - label: "CRS"
+        label-size: 16
         label-font: B612-Bold
         label-color: Gold
-        formula: "${sim/flightmodel/engine/ENGN_mixt[0]} 100 *"
+        formula: "${sim/cockpit2/radios/actuators/hsi_obs_deg_mag_pilot}"
         text-size: 18
         text-font: Seven Segment.ttf
         text-color: White
-        text-format: "{0:01.0f}"
-        text: "${formula}%"
+        text-format: "{0:00.0f}"
+        text: "${formula}"
+

@@ -21,13 +21,21 @@ buttons:
         text: "${formula}"
         text-format: "{0:.3f}"
       B1:
-        color: green
+        color: white
         text-size: 36
         formula: "${sim/cockpit2/radios/actuators/com1_standby_frequency_hz_833} 1000 /"
         text: "${formula}"
         text-format: "{0:.3f}"
         text-bg-color: (40, 40, 40)
         frame: True 
+
+- index: 1
+  type: none
+  icon: TEXTURE_FRAME.png
+
+- index: 2
+  type: none
+  icon: TEXTURE_FRAME.png
 
 - index: 4
   name: COM2
@@ -47,7 +55,7 @@ buttons:
         text: "${formula}"
         text-format: "{0:.3f}"
       B1:
-        color: green
+        color: white
         text-size: 36
         formula: "${sim/cockpit2/radios/actuators/com2_standby_frequency_hz_833} 1000 /"
         text: "${formula}"
@@ -55,6 +63,13 @@ buttons:
         text-bg-color: (40, 40, 40)
         frame: True 
 
+- index: 5
+  type: none
+  icon: TEXTURE_FRAME.png
+
+- index: 6
+  type: none
+  icon: TEXTURE_FRAME.png
 
 - index: 8
   name: ADF
@@ -74,13 +89,12 @@ buttons:
         text: "ADF ${formula}"
         text-format: "{0:04.0f}"
       B1:
-        color: red
+        color: white
         text-size: 36
         formula: "${sim/cockpit/radios/adf1_stdby_freq_hz}"
         text: "FRQ ${formula}"
         text-format: "{0:04.0f}"
         frame: True
-
 
 - index: 3
   name: NAV1
@@ -95,36 +109,17 @@ buttons:
     parts:
       B0:
         color: lime
-        text-size: 36
+        text-size: 40
         formula: "${sim/cockpit/radios/nav1_freq_hz} 100 /"
         text: "${formula}"
         text-format: "{0:.2f}"
       B1:
-        color: green
+        color: white
         text-size: 36
         formula: "${sim/cockpit/radios/nav1_stdby_freq_hz} 100 /"
         text: "${formula}"
         text-format: "{0:.2f}"
         frame: True
-
-- index: 10
-  name: IDENT
-  type: push
-  vibrate: LONG
-  annunciator:
-    size: full
-    model: B
-    parts:
-      B0:
-        color: yellow
-        led: bars
-        formula: ${sim/cockpit/radios/transponder_id}
-      B1:
-        text: IDENT
-        text-size: 60
-        text-font: DIN Bold
-        formula: "1"
-  command: sim/radios/transponder_ident
 
 - index: 7
   name: NAV2
@@ -139,18 +134,17 @@ buttons:
     parts:
       B0:
         color: lime
-        text-size: 36
+        text-size: 40
         formula: "${sim/cockpit/radios/nav2_freq_hz} 100 /"
         text: "${formula}"
         text-format: "{0:.2f}"
       B1:
-        color: green
+        color: white
         text-size: 36
         formula: "${sim/cockpit/radios/nav2_stdby_freq_hz} 100 /"
         text: "${formula}"
         text-format: "{0:.2f}"
         frame: True
-
 
 - index: 9
   name: Audio Panel
@@ -164,14 +158,13 @@ buttons:
   text-size: 48
   text-color: Gold
 
+- index: 10
+  type: none
+  icon: TEXTURE_FRAME.png
 
 - index: 11
-  name: TRANSPONDER_MODE
-  # label: TRANSPONDER
-  # label-color: black
-  # label-size: 8
   type: updown
-  stops: 5
+  stops: 3
   circular-switch:
     button-size: 50
     switch-style: medium
@@ -184,16 +177,10 @@ buttons:
     needle-length: 30
     tick-label-size: 28
     tick-labels:
-      - "OFF"
-      - "STBY"
-      - "ON"
-      - "ALT"
-      - "TEST"
+      - "LOC1"
+      - "LOC2"
+      - "GPS"
     up: 30
     left: 45
-  dataref: sim/cockpit/radios/transponder_mode
-  set-dataref: sim/cockpit/radios/transponder_mode
-
-
-
-
+  dataref: sim/cockpit/switches/HSI_selector
+  set-dataref: sim/cockpit/switches/HSI_selector

@@ -1,5 +1,5 @@
 description: Switch Panel
-includes: pager,encoders/encoders_fcu
+includes: pager,encoders/encoders_lights
 name: switches
 
 buttons:
@@ -213,6 +213,9 @@ buttons:
         framed: true
         formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
 
+  - index: 10
+    type: none
+    icon: TEXTURE_FRAME.png
 
   - index: 11
     name: Switches2

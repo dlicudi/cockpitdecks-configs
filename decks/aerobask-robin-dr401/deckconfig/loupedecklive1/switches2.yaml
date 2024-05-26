@@ -1,5 +1,5 @@
 description: Switch Panel 2
-includes: pager,encoders/encoders_fcu
+includes: pager,encoders/encoders_lights
 name: switches2
 
 buttons:
@@ -41,68 +41,6 @@ buttons:
         framed: true
         formula: ${sim/cockpit/switches/anti_ice_engine_air[0]} 1 eq
 
-  - index: 6
-    type: push
-    command: sim/fuel/fuel_transfer_from_off
-    label: FUEL XFER
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        led: dot
-        color: Orange
-        formula: ${sim/cockpit/engine/fuel_tank_transfer_from} 0 eq
-      B1:
-        text: "OFF"
-        color: White
-        formula: "1"
-
-  - index: 7
-    type: push
-    command: sim/fuel/fuel_transfer_from_3
-    label: FUEL XFER
-    label-color: black
-    label-size: 10
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        led: dot
-        color: Orange
-        formula: ${sim/cockpit/engine/fuel_tank_transfer_from} 3 eq
-      B1:
-        text: "AUX TANK"
-        color: White
-        formula: "1"
-
-
-
-  - index: 4
-    type: long-press
-    vibrate: LONG
-    label: "IGNITION"
-    label-color: White
-    label-size: 9
-    command: sim/ignition/engage_starter_1
-    text-bg-color: Black
-    multi-texts:
-      - text: "" # OFF
-        text-color: White
-        text-font: fontawesome.otf
-        text-size: 30
-      - text: "" # BOTH
-        text-color: Green
-        text-font: fontawesome.otf
-        text-size: 50
-      - text: "" # START
-        text-color: Red
-        text-font: fontawesome.otf
-        text-size: 60
-    formula: ${aerobask/dr401/starter_key}
-
-
   - index: 2
     type: push
     command: sim/fuel/fuel_selector_2
@@ -140,7 +78,111 @@ buttons:
         color: White
         formula: "1"
 
+  - index: 4
+    type: long-press
+    vibrate: LONG
+    label: "IGNITION"
+    label-color: White
+    label-size: 9
+    command: sim/ignition/engage_starter_1
+    text-bg-color: Black
+    multi-texts:
+      - text: "" # OFF
+        text-color: White
+        text-font: fontawesome.otf
+        text-size: 30
+      - text: "" # BOTH
+        text-color: Green
+        text-font: fontawesome.otf
+        text-size: 50
+      - text: "" # START
+        text-color: Red
+        text-font: fontawesome.otf
+        text-size: 60
+    formula: ${aerobask/dr401/starter_key}
 
+
+  - index: 5
+    type: none
+    icon: TEXTURE_FRAME.png
+
+  - index: 6
+    type: push
+    command: sim/fuel/fuel_transfer_from_off
+    label: FUEL XFER
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        led: dot
+        color: Orange
+        formula: ${sim/cockpit/engine/fuel_tank_transfer_from} 0 eq
+      B1:
+        text: "OFF"
+        color: White
+        formula: "1"
+
+  - index: 7
+    type: push
+    command: sim/fuel/fuel_transfer_from_3
+    label: FUEL XFER
+    label-color: black
+    label-size: 10
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        led: dot
+        color: Orange
+        formula: ${sim/cockpit/engine/fuel_tank_transfer_from} 3 eq
+      B1:
+        text: "AUX TANK"
+        color: White
+        formula: "1"
+
+  - index: 8
+    label: TEST
+    label-font: DIN Condensed Regular
+    type: long-press
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "OFF"
+        - "ON"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+    options: large,invert
+    dataref: sim/cockpit/warnings/annunciator_test_pressed
+    command: sim/annunciator/test_all_annunciators
+
+  - index: 9
+    label: FADEC TEST
+    label-font: DIN Condensed Regular
+    type: long-press
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "OFF"
+        - "ON"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+    options: large,invert
+    dataref: aerobask/dr401/testing_fadec
+    command: aerobask/dr401/fadec_test
+
+  - index: 10
+    type: none
+    icon: TEXTURE_FRAME.png
 
   - index: 11
     name: Switches
