@@ -1,5 +1,5 @@
 # Aerobask Robin DR401
-# Version 1.3.0
+# Version 1.3.1
 aircraft: Robin DR401
 icao: DR40
 model:  Robin DR401
@@ -11,7 +11,7 @@ decks:
   - name: StreamDeckXL
     type: Stream Deck XL
     layout: streamdeckxl1
-    # brightness: 70
+    brightness: 70
   # - name: VirtualDeck1
   #   type: Virtual Deck#1
   #   layout: virtualdeck1

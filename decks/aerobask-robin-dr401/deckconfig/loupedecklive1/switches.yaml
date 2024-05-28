@@ -214,8 +214,29 @@ buttons:
         formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
 
   - index: 10
-    type: none
-    icon: TEXTURE_FRAME.png
+    name: PARKING BRAKE
+    label: PARKING BRAKE
+    label-size: 8
+    label-color: black
+    type: onoff
+    stops: 2
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-space: 24
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: black
+    formula: "${sim/cockpit2/controls/parking_brake_ratio}"
+    commands:
+      - sim/flight_controls/brakes_toggle_regular
+      - sim/flight_controls/brakes_toggle_regular
 
   - index: 11
     name: Switches2
