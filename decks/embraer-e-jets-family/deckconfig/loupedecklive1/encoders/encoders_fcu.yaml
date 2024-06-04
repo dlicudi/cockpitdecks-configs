@@ -1,0 +1,152 @@
+
+buttons:
+
+
+# - index: e0
+#   name: FCU Airspeed
+#   type: encoder-value-extended
+#   dataref: sim/cockpit2/autopilot/airspeed_dial_kts_mach
+#   set-dataref: sim/cockpit2/autopilot/airspeed_dial_kts_mach
+#   step: 1
+#   stepxl: 10
+#   value: 1250
+#   value-min: 40
+#   value-max: 163
+#   initial-value: 100
+#   commands:
+#     - AirbusFBW/PullVSSel
+#     - AirbusFBW/PushVSSel
+#   long-press: sim/autopilot/servos_toggle
+
+- index: e0
+  name: speed_encoder
+  type: encoder-toggle
+  commands:
+  - XCrafts/ERJ/SPD_dn_1
+  - XCrafts/ERJ/SPD_up_1
+  - XCrafts/ERJ/SPD_dn_10
+  - XCrafts/ERJ/SPD_up_10
+  long-press: XCrafts/ERJ/MACH_KIAS_toggle
+
+- index: e1
+  name: FCU Heading
+  type: encoder-push
+  commands:
+    - sim/autopilot/heading_sync
+    - sim/autopilot/heading_down
+    - sim/autopilot/heading_up
+  long-press: sim/autopilot/servos_toggle
+
+- index: e2
+  name: FCU Baro
+  type: encoder-push
+  commands:
+    - sim/instruments/barometer_std
+    - sim/instruments/barometer_down
+    - sim/instruments/barometer_up
+  options: modulo
+
+- index: e3
+  name: alt_encoder
+  type: encoder-value-extended
+  dataref: XCrafts/ERJ/autopilot/altitude
+  step: 1000
+  stepxl: 100
+  value-min: 0
+  value-max: 41000
+  initial-value: 10000
+  set-dataref: XCrafts/ERJ/autopilot/altitude
+  long-press: XCrafts/ERJ/PFD/altitude_meters
+
+- index: e4
+  name: FCU V Speed
+  type: encoder-push
+  commands:
+    - sim/autopilot/vertical_speed_sync
+    - sim/autopilot/vertical_speed_down
+    - sim/autopilot/vertical_speed_up
+  long-press: AirbusFBW/PullSPDSel
+
+- index: e5
+  name: crs
+  type: encoder-push
+  commands:
+  - sim/radios/obs_HSI_direct
+  - sim/radios/obs_HSI_down
+  - sim/radios/obs_HSI_up
+
+
+- index: left
+  name: left_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: "SPD"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit/autopilot/airspeed}"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:01.2f}"
+        text: "${formula}"
+      - label: "HDG"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit/autopilot/heading_mag}"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:00.0f}"
+        text: "${formula}"
+      - label: "QNH"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:01.2f}"
+        text: "${formula}"
+
+- index: right
+  name: right_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: "ALT"
+        label-size: 16
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit2/autopilot/altitude_dial_ft}"
+        text-size: 16
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:04.0f}"
+        text: "${formula}"
+      - label: "VS"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit/autopilot/vertical_velocity} 100 /"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:+01.0f}"
+        text: "${formula}"
+      - label: "CRS"
+        label-size: 16
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit2/radios/actuators/hsi_obs_deg_mag_pilot}"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:00.0f}"
+        text: "${formula}"
+

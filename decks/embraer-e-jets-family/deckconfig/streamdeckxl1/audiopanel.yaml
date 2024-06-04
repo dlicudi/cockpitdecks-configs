@@ -1,0 +1,180 @@
+# Audio Panel v1.0.0
+name: audiopanel
+includes: includes/pagerfull
+
+# extra datarefs for audio panel (todo)
+
+# COM MIC 1 sim/audio_panel/transmit_audio_com1
+# COM MIC 2 sim/audio_panel/transmit_audio_com2
+# COM1 sim/audio_panel/monitor_audio_com1
+# COM2 sim/audio_panel/monitor_audio_com2
+# MKR MUTE sim/audio_panel/monitor_audio_mkr
+# DME sim/audio_panel/monitor_audio_dme
+# NAV1 sim/audio_panel/monitor_audio_nav1
+# NAV2 sim/audio_panel/select_audio_nav2
+# ADF1 sim/audio_panel/select_audio_adf1
+
+buttons:
+
+- index: 0
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${sim/cockpit/switches/audio_panel_out} 6 eq"
+      B1:
+        text: "COM MIC 1"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/transmit_audio_com1
+
+- index: 1
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${sim/cockpit2/radios/actuators/audio_selection_com1}"
+      B1:
+        text: "COM 1"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/monitor_audio_com1
+
+- index: 16
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${sim/cockpit2/radios/actuators/audio_marker_enabled}"
+      B1:
+        text: "MKR MUTE"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/monitor_audio_mkr
+
+- index: 4
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${sim/cockpit2/radios/actuators/audio_selection_nav1}"
+      B1:
+        text: "NAV 1"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/select_audio_nav1
+
+- index: 8
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${sim/cockpit/switches/audio_panel_out} 7 eq"
+      B1:
+        text: "COM MIC 2"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/transmit_audio_com2
+
+- index: 9
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${sim/cockpit2/radios/actuators/audio_selection_com2}"
+      B1:
+        text: "COM 2"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/monitor_audio_com2
+
+- index: 11
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${sim/cockpit2/radios/actuators/audio_selection_adf1}"
+      B1:
+        text: "ADF 1"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/select_audio_adf1
+
+- index: 12
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${sim/cockpit2/radios/actuators/audio_selection_nav2}"
+      B1:
+        text: "NAV 2"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/select_audio_nav2
+
+- index: 3
+  type: push
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${sim/cockpit2/radios/actuators/audio_dme_enabled}"
+      B1:
+        text: "DME"
+        text-size: 40
+        text-font: DIN Bold
+        formula: "1"
+  command: sim/audio_panel/monitor_audio_dme
+
+
+
+
+
+
+
+
+
+

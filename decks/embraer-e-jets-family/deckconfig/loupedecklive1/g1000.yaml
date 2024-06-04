@@ -1,0 +1,182 @@
+# G1000 v1.0.0
+name: g1000
+includes: pager,encoders/encoders_g1000
+
+buttons:
+
+  - index: 0
+    type: push
+    name: DIRECT
+    text: DIRECT
+    text-color: khaki
+    text-size: 24
+    text-font: DIN Condensed Light
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+    command: sim/GPS/g1000n3_direct
+
+  - index: 1
+    type: push
+    name: MENU
+    text: MENU
+    text-color: khaki
+    text-size: 24
+    text-font: DIN Condensed Light
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+    command: sim/GPS/g1000n3_menu
+
+  - index: 2
+    type: push
+    name: FPL
+    text: FPL
+    text-color: khaki
+    text-size: 24
+    text-font: DIN Condensed Light
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+    command: sim/GPS/g1000n3_fpl
+
+  - index: 3
+    type: push
+    name: PROC
+    text: PROC
+    text-color: khaki
+    text-size: 24
+    text-font: DIN Condensed Light
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+    command: sim/GPS/g1000n3_proc
+
+  - index: 4
+    type: push
+    name: CLR
+    text: CLR
+    text-color: khaki
+    text-size: 24
+    text-font: DIN Condensed Light
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+    command: sim/GPS/g1000n3_clr
+
+  - index: 5
+    type: push
+    name: ENT
+    text: ENT
+    text-color: khaki
+    text-size: 24
+    text-font: DIN Condensed Light
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+    command: sim/GPS/g1000n3_ent
+
+  - index: 6
+    type: push
+    name: HOME
+    text: HOME
+    text-color: khaki
+    text-size: 24
+    text-font: DIN Condensed Light
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+    command: sim/GPS/gcu479/home
+
+  - index: 7
+    type: push
+    name: COM FF
+    text: < COM >
+    text-color: khaki
+    text-size: 24
+    text-font: DIN Condensed Light
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+    command: sim/GPS/g1000n3_com_ff
+
+
+  - index: 8
+    type: push
+    command: sim/GPS/gcu478/com
+    label: COM
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        formula: "${sim/cockpit2/radios/actuators/com1_standby_frequency_hz_833} 1000 /"
+        text: "${formula}"
+        text-format: "{0:.3f}"
+        color: darkorange
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/g1000/gcu478_input_sel} 2 eq
+
+  - index: 9
+    type: push
+    command: sim/GPS/gcu478/nav
+    label: NAV
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        formula: "${sim/cockpit/radios/nav1_stdby_freq_hz} 100 /"
+        text: "${formula}"
+        text-format: "{0:.2f}"
+        color: darkorange
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/g1000/gcu478_input_sel} 3 eq
+
+
+  - index: 10
+    type: push
+    command: sim/GPS/gcu479/crs
+    longpush: sim/autopilot/hsi_toggle_nav
+    label: CRS
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: E
+      size: medium
+      E0:
+        text: "${sim/cockpit/radios/nav1_obs_degm}°"
+        text-format: "{:01.0f}"
+        color: darkorange
+        formula: "1"
+      E1:
+        text: "${sim/cockpit/radios/nav2_obs_degm}°"
+        text-format: "{:01.0f}"
+        color: darkorange
+        formula: "1"
+      E2:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/g1000/gcu478_input_sel} 4 eq
+
+
+  - index: 11
+    type: push
+    command: sim/GPS/gcu478/xpdr
+    label: XPDR
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "${sim/cockpit2/radios/actuators/transponder_code}"
+        text-format: "{:01.0f}"
+        color: darkorange
+        formula: "1"
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/g1000/gcu478_input_sel} 1 eq

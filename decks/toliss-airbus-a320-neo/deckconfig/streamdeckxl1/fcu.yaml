@@ -1,0 +1,230 @@
+description: FCU
+includes: pager
+name: fcu
+
+buttons:
+  - index: 0
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: "${AirbusFBW/FD1Engage}"
+        B1:
+          text: FD
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: toliss_airbus/fd1_push
+
+  - index: 1
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/ILSonCapt}
+        B1:
+          text: LS
+          text-size: 60
+          text-font: DIN Bold
+          # text-color: Turquoise
+          formula: "1"
+    command: toliss_airbus/dispcommands/CaptLSButtonPush
+
+  - index: 2
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: "${AirbusFBW/AP1Engage}"
+        B1:
+          text: AP1
+          text-size: 60
+          text-font: DIN Bold
+          # text-color: Turquoise
+          formula: "1"
+    command: toliss_airbus/ap1_push
+
+  - index: 3
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: "${AirbusFBW/AP2Engage}"
+        B1:
+          text: AP2
+          text-size: 60
+          text-font: DIN Bold
+          # text-color: Turquoise
+          formula: "1"
+    command: toliss_airbus/ap2_push
+
+  - index: 4
+    type: push
+    annunciator:
+      size: small
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: "${AirbusFBW/NDShowCSTRCapt}"
+        B1:
+          text: CSTR
+          text-size: 60
+          text-font: DIN Bold
+          # text-color: Turquoise
+          formula: "1"
+    command: toliss_airbus/dispcommands/CaptCstrPushButton
+
+  - index: 5
+    type: push
+    annunciator:
+      size: small
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: "${AirbusFBW/NDShowWPTCapt}"
+        B1:
+          text: WPT
+          text-size: 60
+          text-font: DIN Bold
+          # text-color: Turquoise
+          formula: "1"
+    command: toliss_airbus/dispcommands/CaptWptPushButton
+
+  - index: 6
+    type: push
+    annunciator:
+      size: small
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: "${AirbusFBW/NDShowVORDCapt}"
+        B1:
+          text: VOR,D
+          text-size: 60
+          text-font: DIN Bold
+          # text-color: Turquoise
+          formula: "1"
+    command: toliss_airbus/dispcommands/CaptVorDPushButton
+
+  - index: 7
+    type: push
+    annunciator:
+      size: small
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: "${AirbusFBW/NDShowNDBCapt}"
+        B1:
+          text: NDB
+          text-size: 60
+          text-font: DIN Bold
+          # text-color: Turquoise
+          formula: "1"
+    command: toliss_airbus/dispcommands/CaptNdbPushButton
+
+  - index: 8
+    type: push
+    annunciator:
+      size: small
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: "${AirbusFBW/NDShowARPTCapt}"
+        B1:
+          text: ARPT
+          text-size: 60
+          text-font: DIN Bold
+          # text-color: Turquoise
+          formula: "1"
+    command: toliss_airbus/dispcommands/CaptArptPushButton
+
+  - index: 9
+    type: updown
+    label: ND MODE
+    label-size: 9
+    label-color: black
+    stops: 5
+    dataref: AirbusFBW/NDmodeCapt
+    set-dataref: AirbusFBW/NDmodeCapt
+    initial-value: 0
+    circular-switch:
+      switch-style: large
+      down: 50
+      button-size: 42
+      button-fill-color: (30, 40, 50)
+      button-stroke-color: black
+      handle-fill-color: (60, 70, 80)
+      tick-from: 90
+      tick-to: 270
+      tick-color: white
+      tick-space: 36
+      tick-width: 8
+      tick-length: 24
+      tick-labels:
+        - "LS"
+        - "VOR"
+        - "NAV"
+        - "ARC"
+        - "PLAN"
+      tick-label-font: DIN Bold
+      tick-label-size: 30
+      needle-underline-width: 8
+
+  - index: 10
+    type: updown
+    label: ND RANGE
+    label-size: 9
+    label-color: black
+    stops: 6
+    dataref: AirbusFBW/NDrangeCapt
+    set-dataref: AirbusFBW/NDrangeCapt
+    initial-value: 0
+    circular-switch:
+      switch-style: large
+      down: 50
+      button-size: 42
+      button-fill-color: (30, 40, 50)
+      button-stroke-color: black
+      handle-fill-color: (60, 70, 80)
+      tick-from: 90
+      tick-to: 300
+      tick-color: white
+      tick-space: 36
+      tick-width: 8
+      tick-length: 24
+      tick-labels:
+        - "10"
+        - "20"
+        - "40"
+        - "80"
+        - "160"
+        - "320"
+      tick-label-font: DIN Bold
+      tick-label-size: 30
+      needle-underline-width: 8
