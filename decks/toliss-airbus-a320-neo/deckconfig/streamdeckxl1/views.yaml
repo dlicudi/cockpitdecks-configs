@@ -176,3 +176,22 @@ buttons:
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/show_physics_model
+
+
+- index: 12
+  type: onoff
+  initial-value: 1
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: lime
+        led: bars
+        formula: "${sim/operation/sound/sound_on}"
+      B1:
+        text: SOUND
+        text-size: 60
+        text-font: DIN Bold
+        formula: "1"
+  set-dataref: sim/operation/sound/sound_on
