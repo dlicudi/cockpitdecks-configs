@@ -200,7 +200,8 @@ buttons:
         text-format: "{0:.2f}"
 
 - index: 7
-  type: none
+  type: page
+  page: transponder
   size: medium
   label: MODE
   label-size: 9
