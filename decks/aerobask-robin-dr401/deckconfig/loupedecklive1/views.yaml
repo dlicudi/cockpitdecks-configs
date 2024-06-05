@@ -1,6 +1,6 @@
 # Views v.1.0.0
 name: views
-includes: pager,encoders/encoders_fcu
+includes: pager,encoders/encoders_sound
 
 buttons:
 
