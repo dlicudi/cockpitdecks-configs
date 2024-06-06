@@ -3,7 +3,7 @@ buttons:
 
   - index: 24
     type: page
-    page: home
+    page: index
     label: HOME
     label-color: Gold
     label-bg-color: Black

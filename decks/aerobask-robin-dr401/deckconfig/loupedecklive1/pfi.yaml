@@ -77,12 +77,18 @@ buttons:
         formula: "1"
         text-format: "{0:.2f}"
         text: "${sim/cockpit/misc/barometer_setting}\ninHg"
+      # D2:
+      #   color: white
+      #   text-size: 32
+      #   formula: "${sim/cockpit/misc/barometer_setting} 33.8639 *"
+      #   text-format: "{0:.0f}"
+      #   text: "${formula}\nhPa"
       D2:
         color: white
         text-size: 32
-        formula: "${sim/cockpit/misc/barometer_setting} 33.8639 *"
+        formula: "${sim/flightmodel/position/y_agl} 3.28084 *"
         text-format: "{0:.0f}"
-        text: "${formula}\nhPa"
+        text: "${formula}\nft AGL"
 
 - index: 3 # Heading
   name: VS

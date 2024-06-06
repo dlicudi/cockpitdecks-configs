@@ -1,4 +1,4 @@
-name: home
+name: index
 includes: pager,encoders/encoders_fcu
 
 buttons:
