@@ -1,0 +1,289 @@
+description: Switch Panel 2
+includes: pager,encoders/encoders_lights
+name: switches2
+
+buttons:
+
+
+
+
+  # - index: 2
+  #   type: push
+  #   command: sim/fuel/fuel_selector_2
+  #   # command: sim/fuel/fuel_selector_2
+  #   label: FUEL
+  #   label-color: black
+  #   label-size: 10
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     B0:
+  #       led: dot
+  #       color: Orange
+  #       formula: ${sim/cockpit/engine/fuel_tank_selector} 2 eq
+  #     B1:
+  #       text: "ON"
+  #       color: White
+  #       formula: "1"
+
+  # - index: 3
+  #   type: push
+  #   command: sim/fuel/fuel_selector_none
+  #   label: FUEL
+  #   label-color: black
+  #   label-size: 10
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     B0:
+  #       led: dot
+  #       color: Orange
+  #       formula: ${sim/cockpit/engine/fuel_tank_selector} 0 eq
+  #     B1:
+  #       text: "OFF"
+  #       color: White
+  #       formula: "1"
+
+  - index: 0
+    type: push
+    label: LAND
+    label-color: black
+    label-size: 9
+    command: sim/lights/landing_lights_toggle    
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/electrical/landing_lights_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
+
+  - index: 1
+    type: push
+    command: sim/lights/taxi_lights_toggle
+    label: TAXI
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/electrical/taxi_light_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/taxi_light_on} 1 eq
+
+  - index: 2
+    type: push
+    command: sim/lights/strobe_lights_toggle
+    label: FLASH
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
+
+  - index: 3
+    type: push
+    command: sim/lights/nav_lights_toggle
+    label: NAV
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
+
+
+  - index: 8
+    vibrate: SHORT
+    type: push
+    command: laminar/rv10/tank_sel_left
+    label: FUEL LEFT
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: red
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 0 eq
+      B1:
+        text: "SELECTED"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 1 eq
+
+  - index: 9
+    type: updown
+    stops: 4
+    label: FUEL
+    label-color: black
+    label-size: 9
+    commands:
+      - laminar/rv10/tank_sel_left
+      - laminar/rv10/tank_sel_right
+    dataref: laminar/rv10/switch/fuel_tank_pos
+    initial-value: 1
+    circular-switch:
+      switch-style: large
+      down: 50
+      button-size: 70
+      button-fill-color: (30, 40, 50)
+      button-stroke-color: black
+      handle-fill-color: (60, 70, 80)
+      tick-from: 90
+      tick-to: 270
+      tick-color: white
+      tick-space: 36
+      tick-width: 8
+      tick-length: 24
+      tick-labels:
+        - "OFF"
+        - "LEFT"
+        - "RIGHT"
+        - "OFF"
+      tick-label-font: DIN Bold
+      tick-label-size: 24
+      needle-underline-width: 8
+
+  - index: 10
+    vibrate: SHORT
+    type: push
+    command: laminar/rv10/tank_sel_right
+    label: FUEL RIGHT
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: red
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 6 eq
+      B1:
+        text: "SELECTED"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 3 eq
+
+  # - index: 5
+  #   type: none
+  #   icon: TEXTURE_FRAME.png
+
+  # - index: 6
+  #   type: push
+  #   command: sim/fuel/fuel_transfer_from_off
+  #   label: FUEL XFER
+  #   label-color: black
+  #   label-size: 9
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     B0:
+  #       led: dot
+  #       color: Orange
+  #       formula: ${sim/cockpit/engine/fuel_tank_transfer_from} 0 eq
+  #     B1:
+  #       text: "OFF"
+  #       color: White
+  #       formula: "1"
+
+  # - index: 7
+  #   type: push
+  #   command: sim/fuel/fuel_transfer_from_3
+  #   label: FUEL XFER
+  #   label-color: black
+  #   label-size: 10
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     B0:
+  #       led: dot
+  #       color: Orange
+  #       formula: ${sim/cockpit/engine/fuel_tank_transfer_from} 3 eq
+  #     B1:
+  #       text: "AUX TANK"
+  #       color: White
+  #       formula: "1"
+
+  # - index: 8
+  #   label: TEST
+  #   label-font: DIN Condensed Regular
+  #   type: long-press
+  #   switch:
+  #     switch-style: rect
+  #     button-fill-color: black
+  #     button-underline-width: 4
+  #     button-underline-color: coral
+  #     tick-labels:
+  #       - "OFF"
+  #       - "ON"
+  #     tick-label-size: 42
+  #     tick-label-font: DIN Bold
+  #     tick-underline: false
+  #   options: large,invert
+  #   dataref: sim/cockpit/warnings/annunciator_test_pressed
+  #   command: sim/annunciator/test_all_annunciators
+
+  # - index: 9
+  #   label: FADEC TEST
+  #   label-font: DIN Condensed Regular
+  #   type: long-press
+  #   switch:
+  #     switch-style: rect
+  #     button-fill-color: black
+  #     button-underline-width: 4
+  #     button-underline-color: coral
+  #     tick-labels:
+  #       - "OFF"
+  #       - "ON"
+  #     tick-label-size: 42
+  #     tick-label-font: DIN Bold
+  #     tick-underline: false
+  #   options: large,invert
+  #   dataref: aerobask/dr401/testing_fadec
+  #   command: aerobask/dr401/fadec_test
+
+  # - index: 10
+  #   type: none
+  #   icon: TEXTURE_FRAME.png
+
+  - index: 11
+    name: Switches
+    type: page
+    page: switches
+    # label: MORE
+    # label-size: 12
+    text: ←
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold
+    

@@ -1,0 +1,485 @@
+# Weather 1.0.0
+name: weather
+includes: includes/pagerfull
+
+buttons:
+
+- index: 0
+  name: WIND_DIR
+  label: WIND DIR
+  label-size: 10
+  label-color: Black
+  type: none
+  data:
+    top-line-color: darkorchid
+    top-line-width: 10
+    icon: "fa:wind"
+    icon-size: 60
+    icon-color: darkorchid
+    data: ${formula}
+    data-format: "{:4.0f}"
+    data-font: DIN Condensed Light
+    data-size: 80
+    data-color: white
+    data-trend: 0
+    data-unit: °
+    formula: ${sim/weather/region/wind_direction_degt[0]}
+    bottomline: "direction in °"
+    bottomline-size: 30
+    bottomline-color: red
+    mark: ${fa:arrow-right}
+    mark-size: 20
+    mark-font: fontawesome.otf
+    mark-color: red
+
+- index: 1
+  name: WIND_SPEED
+  label: WIND SPD
+  label-size: 10
+  label-color: Black
+  type: none
+  data:
+    top-line-color: darkorchid
+    top-line-width: 10
+    icon: "fa:wind"
+    icon-size: 60
+    icon-color: darkorchid
+    data: ${formula}
+    data-format: "{:4.0f}"
+    data-font: DIN Condensed Light
+    data-size: 80
+    data-color: white
+    data-trend: 0
+    data-unit: kts
+    formula: ${sim/weather/region/wind_speed_msc[0]}
+    bottomline: speed in kts
+    bottomline-size: 30
+    bottomline-color: red
+    mark: ${fa:arrow-right}
+    mark-size: 20
+    mark-font: fontawesome.otf
+    mark-color: red
+
+- index: 4
+  name: VISIBILITY
+  label: VISIBILITY
+  label-size: 10
+  label-color: Black
+  type: none
+  data:
+    top-line-color: deepskyblue
+    top-line-width: 10
+    icon: "fa:binoculars"
+    icon-size: 60
+    icon-color: deepskyblue
+    data-bg-color: black      
+    data: ${formula}
+    data-format: "{:00.0f}"
+    data-font: DIN Condensed Light
+    data-size: 60
+    data-color: white
+    data-unit: "miles"
+    data-trend: 0
+    formula: "${sim/weather/region/visibility_reported_sm}"
+    bottomline: miles
+    bottomline-size: 30
+    bottomline-color: red
+    mark: ${fa:arrow-right}
+    mark-size: 20
+    mark-font: fontawesome.otf
+    mark-color: red
+
+
+- index: 12
+  name: DEWPOINT
+  label: DEWPOINT
+  label-size: 10
+  label-color: Black
+  type: none
+  data:
+    top-line-color: ivory
+    top-line-width: 10
+    icon: "fa:droplet"
+    icon-size: 60
+    icon-color: ivory
+    data: ${formula}
+    data-format: "{:3.0f}"
+    data-font: DIN Condensed Light
+    data-size: 80
+    data-color: white
+    data-progress: 31
+    data-trend: 1
+    data-unit: "°C"
+    formula: ${sim/weather/region/dewpoint_deg_c[0]}
+    bottomline: "°C"
+    bottomline-size: 30
+    bottomline-color: red
+    mark: ${fa:arrow-right}
+    mark-size: 20
+    mark-font: fontawesome.otf
+    mark-color: red
+
+- index: 2
+  name: TEMPERATURE
+  label: TEMP
+  label-size: 10
+  label-color: Black
+  type: none
+  data:
+    top-line-color: gold
+    top-line-width: 10
+    icon: "fa:temperature-half"
+    icon-size: 60
+    icon-color: gold
+    data: ${formula}
+    data-format: "{:3.0f}"
+    data-font: DIN Condensed Light
+    data-size: 80
+    data-color: white
+    data-progress: 31
+    data-trend: 0
+    data-unit: "°C"
+    formula: ${sim/weather/region/temperatures_aloft_deg_c[0]}
+    bottomline: "°C"
+    bottomline-size: 30
+    bottomline-color: red
+    mark: ${fa:arrow-right}
+    mark-size: 20
+    mark-font: fontawesome.otf
+    mark-color: red
+
+- index: 11
+  name: TROPO_ALT
+  label: TROPO ALT
+  label-size: 10
+  label-color: Black
+  type: none
+  data:
+    top-line-color: gold
+    top-line-width: 10
+    icon: "fa:cloud-arrow-up"
+    icon-size: 60
+    icon-color: gold
+    data: ${formula}
+    data-format: "{:3.0f}"
+    data-font: DIN Condensed Light
+    data-size: 60
+    data-color: white
+    data-progress: 31
+    data-trend: 0
+    data-unit: "FT"
+    formula: ${sim/weather/region/tropo_alt_m}
+    bottomline: "FT"
+    bottomline-size: 30
+    bottomline-color: red
+    mark: ${fa:arrow-right}
+    mark-size: 20
+    mark-font: fontawesome.otf
+    mark-color: red
+
+- index: 10
+  name: TROPO_TEMP
+  label: TROPO TEMP
+  label-size: 10
+  label-color: Black
+  type: none
+  data:
+    top-line-color: gold
+    top-line-width: 10
+    icon: "fa:temperature-half"
+    icon-size: 60
+    icon-color: gold
+    data: ${formula}
+    data-format: "{:3.0f}"
+    data-font: DIN Condensed Light
+    data-size: 80
+    data-color: white
+    data-progress: 31
+    data-trend: 0
+    data-unit: "°C"
+    formula: ${sim/weather/region/tropo_temp_c}
+    bottomline: "°C"
+    bottomline-size: 30
+    bottomline-color: red
+    mark: ${fa:arrow-right}
+    mark-size: 20
+    mark-font: fontawesome.otf
+    mark-color: red
+
+
+- index: 8
+  name: PRESSURE2
+  label: QNH
+  label-size: 10
+  label-color: Black
+  type: none
+  data:
+    top-line-color: deepskyblue
+    top-line-width: 10
+    icon: "fa:gauge"
+    icon-size: 60
+    icon-color: deepskyblue
+    data: ${formula}
+    data-format: "{:04.0f}"
+    data-font: DIN Condensed Light
+    data-size: 60
+    data-color: white
+    data-trend: 0
+    data-unit: "inHG"
+    formula: "${sim/weather/region/qnh_pas} 0.02953 *"
+    bottomline: inHG
+    bottomline-size: 30
+    bottomline-color: red
+    mark: ${fa:arrow-right}
+    mark-size: 20
+    mark-font: fontawesome.otf
+    mark-color: red
+
+- index: 9
+  name: PRESSURE
+  label: QNH
+  label-size: 10
+  label-color: Black
+  type: none
+  data:
+    top-line-color: deepskyblue
+    top-line-width: 10
+    icon: "fa:gauge"
+    icon-size: 60
+    icon-color: deepskyblue
+    data: ${formula}
+    data-format: "{:04.0f}"
+    data-font: DIN Condensed Light
+    data-size: 60
+    data-color: white      
+    data-trend: 0
+    data-unit: "hPa"
+    formula: ${sim/weather/region/qnh_pas} 100 /
+    bottomline: hPa
+    bottomline-size: 30
+    bottomline-color: red
+    mark: ${fa:arrow-right}
+    mark-size: 20
+    mark-font: fontawesome.otf
+    mark-color: red
+
+- index: 6
+  type: none
+  multi-texts:
+    - text: "Cirrus"
+      text-color: White
+    - text: "Stratus"
+      text-color: White
+    - text: "Cumulus"
+      text-color: White
+    - text: "Cumulus-nimbus"
+      text-color: White
+  formula: "${sim/weather/region/cloud_type[2]} round"
+
+- index: 14
+  type: none
+  multi-texts:
+    - text: "Cirrus"
+      text-color: White
+    - text: "Stratus"
+      text-color: White
+    - text: "Cumulus"
+      text-color: White
+    - text: "Cumulus-nimbus"
+      text-color: White
+  formula: "${sim/weather/region/cloud_type[1]} round"
+
+- index: 22
+  type: none
+  multi-texts:
+    - text: "Cirrus"
+      text-color: White
+    - text: "Stratus"
+      text-color: White
+    - text: "Cumulus"
+      text-color: White
+    - text: "Cumulus-nimbus"
+      text-color: White
+  formula: "${sim/weather/region/cloud_type[0]} round"
+
+- index: 7
+  name: CLOUD1
+  label: Clouds
+  label-color: Black
+  label-size: 10
+  type: none
+  annunciator:
+    size: medium
+    model: F
+    parts:
+      F0:
+        color: White
+        text-size: 60
+        formula: "1"
+        text: ""
+        text-font: fontawesome.otf
+      F1:
+        color: White
+        text-size: 48
+        formula: "${sim/weather/region/cloud_coverage_percent[2]} 100 *"
+        text-format: "{0:.0f}%"
+        text: "${formula}"
+      F2:
+        color: Gold
+        text-size: 32
+        text: "${sim/weather/region/cloud_base_msl_m[2]}"
+        text-format: "{0:.0f}\nBase"
+        formula: "1"
+      F3:
+        color: Gold
+        text-size: 32
+        text: "${sim/weather/region/cloud_tops_msl_m[2]}"
+        text-format: "{0:.0f}\nTop"
+        formula: "1"
+
+- index: 15
+  name: CLOUD2
+  label: Clouds
+  label-color: Black
+  label-size: 10
+  type: none
+  annunciator:
+    size: medium
+    model: F
+    parts:
+      F0:
+        color: White
+        text-size: 60
+        formula: "1"
+        text: ""
+        text-font: fontawesome.otf
+      F1:
+        color: White
+        text-size: 48
+        formula: "${sim/weather/region/cloud_coverage_percent[1]} 100 *"
+        text-format: "{0:.0f}%"
+        text: "${formula}"
+      F2:
+        color: Gold
+        text-size: 32
+        text: "${sim/weather/region/cloud_base_msl_m[1]}"
+        text-format: "{0:.0f}\nBase"
+        formula: "1"
+      F3:
+        color: Gold
+        text-size: 32
+        text: "${sim/weather/region/cloud_tops_msl_m[1]}"
+        text-format: "{0:.0f}\nTop"
+        formula: "1"
+
+- index: 23
+  name: CLOUD3
+  label: Clouds
+  label-color: Black
+  label-size: 10
+  type: none
+  annunciator:
+    size: medium
+    model: F
+    parts:
+      F0:
+        color: White
+        text-size: 60
+        formula: "1"
+        text: ""
+        text-font: fontawesome.otf
+      F1:
+        color: White
+        text-size: 48
+        formula: "${sim/weather/region/cloud_coverage_percent[0]} 100 *"
+        text-format: "{0:.0f}%"
+        text: "${formula}"
+      F2:
+        color: Gold
+        text-size: 32
+        text: "${sim/weather/region/cloud_base_msl_m[0]}"
+        text-format: "{0:.0f}\nBase"
+        formula: "1"
+      F3:
+        color: Gold
+        text-size: 32
+        text: "${sim/weather/region/cloud_tops_msl_m[0]}"
+        text-format: "{0:.0f} ft\nTop"
+        formula: "1"
+
+
+
+  # - index: 7
+  #   name: TEMP2
+  #   label: TEMP
+  #   label-size: 10
+  #   label-color: Black
+  #   type: none
+  #   data:
+  #     top-line-color: ivory
+  #     top-line-width: 10
+  #     icon: "fa:temperature-half"
+  #     icon-size: 60
+  #     icon-color: gold
+  #     data: ${formula}
+  #     data-format: "{:3.0f}"
+  #     data-font: DIN Condensed Light
+  #     data-size: 80
+  #     data-color: white
+  #     data-progress: 31
+  #     formula: ${sim/weather/region/temperatures_aloft_deg_c[0]}
+  #     data-unit: "°C"
+  #     bottomline: "°C"
+  #     bottomline-size: 30
+  #     bottomline-color: red
+  #     mark: ${fa:arrow-right}
+  #     mark-size: 20
+  #     mark-font: fontawesome.otf
+  #     mark-color: red
+
+  # - index: 10
+  #   name: PRESSURE
+  #   type: none
+  #   data:
+  #     top-line-color: deepskyblue
+  #     top-line-width: 10
+  #     icon: "fa:gauge"
+  #     icon-size: 60
+  #     icon-color: deepskyblue
+  #     data: ${formula}
+  #     data-format: "{:04.0f}"
+  #     data-font: DIN Condensed Light
+  #     data-size: 80
+  #     data-color: white
+  #     formula: ${data:weather:pressure}
+  #     bottomline: hPa
+  #     bottomline-size: 30
+  #     bottomline-color: red
+  #     mark: ${fa:arrow-right}
+  #     mark-size: 20
+  #     mark-font: fontawesome.otf
+  #     mark-color: red
+
+
+
+- index: 5
+  type: none
+  decor:
+    type: line
+    code: K
+
+- index: 13
+  type: none
+  label: CLOUDS
+  label-position: cm
+  label-size: 10
+  label-color: White
+  decor:
+    type: segment
+    code: BS
+
+- index: 21
+  type: none
+  decor:
+    type: line
+    code: L

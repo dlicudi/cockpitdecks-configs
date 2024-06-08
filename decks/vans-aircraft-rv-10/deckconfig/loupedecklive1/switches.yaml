@@ -1,0 +1,245 @@
+description: Switch Panel
+includes: pager,encoders/encoders_lights
+name: switches
+
+buttons:
+  - index: 0
+    type: push
+    command: sim/electrical/battery_1_toggle
+    label: BATTERY
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/electrical/battery_on[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/battery_on[0]} 1 eq
+
+  - index: 1
+    type: push
+    command: sim/electrical/generator_1_toggle
+    # type: onoff
+    # set-dataref: sim/cockpit/electrical/generator_on[0]
+    label: ALTERNATOR
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
+
+  - index: 2
+    type: onoff
+    set-dataref: sim/cockpit2/autopilot/autopilot_electric_master
+    label: AUTOPILOT
+    label-color: black
+    label-size: 8
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/autopilot/autopilot_electric_master} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/autopilot/autopilot_electric_master} 1 eq
+
+  - index: 3
+    type: push
+    command: sim/systems/avionics_toggle
+    label: AVIONICS
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/avionics_power_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
+
+  - index: 3
+    type: onoff
+    set-dataref: sim/cockpit/electrical/avionics_on
+    label: AVIONICS
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/electrical/avionics_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/avionics_on} 1 eq
+
+  - index: 4
+    type: long-press
+    vibrate: LONG
+    label: "IGNITION"
+    label-color: White
+    label-size: 9
+    command: sim/ignition/engage_starter_1
+    text-bg-color: Black
+    multi-texts:
+      - text: "" # OFF
+        text-color: White
+        text-font: fontawesome.otf
+        text-size: 30
+      - text: "" # START
+        text-color: Red
+        text-font: fontawesome.otf
+        text-size: 60
+    formula: ${sim/cockpit2/engine/actuators/starter_hit}
+
+
+  - index: 6
+    type: onoff
+    set-dataref: sim/cockpit/engine/fuel_pump_on[0]
+    label: ELECTRIC PUMP
+    label-color: black
+    label-size: 8
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/engine/fuel_pump_on[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/engine/fuel_pump_on[0]} 1 eq
+
+  - index: 7
+    type: push
+    command: sim/ice/pitot_heat0_tog
+    label: PITOT HT
+    label-color: black
+    label-size: 8
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/switches/pitot_heat_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
+
+
+  - index: 8
+    name: FLAPS
+    label: FLAPS
+    label-size: 9
+    label-color: black
+    type: updown
+    stops: 3
+    switch:
+      switch-style: large
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "UP"
+        - "25"
+        - "50"
+      tick-space: 24
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: black
+    options: 3way,invert
+    dataref: sim/cockpit2/controls/flap_ratio
+    formula: "${sim/cockpit2/controls/flap_ratio} 2 *"
+    commands:
+      - sim/flight_controls/flaps_down
+      - sim/flight_controls/flaps_up
+
+
+  - index: 9
+    type: onoff
+    set-dataref: laminar/rv10/handles/alt_air_pull
+    label: ALTERNATE AIR
+    label-color: black
+    label-size: 8
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${laminar/rv10/handles/alt_air_pull} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${laminar/rv10/handles/alt_air_pull} 1 eq
+
+  - index: 10
+    name: PARKING BRAKE
+    label: PARKING BRAKE
+    label-size: 8
+    label-color: black
+    type: onoff
+    stops: 2
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-space: 24
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: black
+    formula: "${sim/cockpit2/controls/parking_brake_ratio}"
+    commands:
+      - sim/flight_controls/brakes_toggle_regular
+      - sim/flight_controls/brakes_toggle_regular
+
+  - index: 11
+    name: Switches2
+    type: page
+    page: switches2
+    # label: MORE
+    # label-size: 12
+    text: →
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold
+
