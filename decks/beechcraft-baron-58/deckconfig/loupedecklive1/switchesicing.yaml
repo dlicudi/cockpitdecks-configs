@@ -156,3 +156,15 @@ buttons:
       - text: "MAN"
         text-color: Orange
     formula: ${sim/cockpit/switches/anti_ice_surf_boot}
+
+
+  - index: 11
+    type: page
+    label: SWITCHES
+    label-color: Gold
+    label-size: 10
+    page: switches
+    text: →
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold

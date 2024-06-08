@@ -121,7 +121,7 @@ buttons:
         framed: true
         formula: ${laminar/b58/panel_light_toggle/switch_pos} 1 eq
 
-  - index: 6
+  - index: 10
     type: push
     command: sim/lights/taxi_lights_toggle
     label: TAXI
@@ -182,7 +182,7 @@ buttons:
 
 
 
-  - index: 10
+  - index: 6
     name: ROOF LIGHT L
     label: ROOF L
     label-font: DIN Condensed Regular
@@ -201,7 +201,7 @@ buttons:
     dataref: laminar/b58/lighting/roof_L_on
     set-dataref: laminar/b58/lighting/roof_L_on
 
-  - index: 11
+  - index: 7
     name: ROOF LIGHT R
     label: ROOF R
     label-font: DIN Condensed Regular
@@ -219,3 +219,16 @@ buttons:
       tick-underline: false
     dataref: laminar/b58/lighting/roof_R_on
     set-dataref: laminar/b58/lighting/roof_R_on
+
+
+
+  - index: 11
+    type: page
+    label: ICING
+    label-color: Gold
+    label-size: 10
+    page: icing
+    text: →
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold
