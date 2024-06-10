@@ -175,9 +175,13 @@ buttons:
           formula: "1"
     command: sim/autopilot/vertical_speed
 
+  # - index: 9
+  #   type: none
+  #   icon: TEXTURE_FRAME.png
+
   - index: 9
     type: none
-    icon: TEXTURE_FRAME.png
+    icon: INOP.png
 
   - index: 10
     name: FLC

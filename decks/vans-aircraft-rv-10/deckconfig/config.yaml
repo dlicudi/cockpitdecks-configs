@@ -1,11 +1,12 @@
-# Aerobask Robin DR401
-# Version 1.4.0
-aircraft: Robin DR401
-icao: DR40
-model:  Robin DR401
-description: Decks for Robin DR401
+# Van's Aircraft RV-10
+# Version 1.0.0
+aircraft: Van's Aircraft RV-10
+icao: RV10
+model:  Van's Aircraft RV-10
+description: Decks for RV-10
+# print-page-dir: screendumps/vans-aircraft-rv-10
 decks:
-  - name: XPLive
+  - name: LoupedeckLive1
     type: LoupedeckLive
     layout: loupedecklive1
     brightness: 70
@@ -25,4 +26,3 @@ decks:
   #   port: 7701
 
 
-# print-page-dir: screendumps/aerobask-robin-dr401

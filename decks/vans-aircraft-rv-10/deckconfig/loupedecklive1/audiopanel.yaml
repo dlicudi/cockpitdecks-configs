@@ -76,7 +76,7 @@ buttons:
       B0:
         color: lime
         led: bars
-        formula: "${laminar/n844x/audio/NAV1}"
+        formula: "${laminar/rv10/audio/NAV1}"
       B1:
         text: "NAV 1"
         text-size: 40
