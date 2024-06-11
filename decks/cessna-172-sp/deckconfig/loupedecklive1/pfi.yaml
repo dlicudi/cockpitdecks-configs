@@ -199,10 +199,9 @@ buttons:
           formula: "1"
 
 
-  - index: 8 # prop rpm and hobbs (todo)
-    name: RPM
+  - index: 8 # ENGINE RPM/MANIFOLD PRESSURE
     type: none
-    label: RPM
+    label: ENGINE
     label-color: Black
     label-size: 10
     annunciator:
@@ -212,15 +211,21 @@ buttons:
         B0:
           color: lime
           text-size: 42
-          text: "${sim/cockpit2/engine/indicators/prop_speed_rpm[0]}"
+          text: "${sim/cockpit2/engine/indicators/prop_speed_rpm[0]} RPM"
           text-format: "{0:.0f}"
           formula: "1"
         B1:
-          color: white
-          text-size: 30
-          text: "${sim/cockpit2/clock_timer/hobbs_time_hours}:${sim/cockpit2/clock_timer/hobbs_time_minutes}:${sim/cockpit2/clock_timer/hobbs_time_seconds}"
-          formula: "1"
+          color: lime
+          text-size: 42
+          text: "MP ${sim/cockpit2/engine/indicators/MPR_in_hg[0]} in"
           text-format: "{0:.0f}"
+          formula: "1"
+        # B1:
+        #   color: white
+        #   text-size: 30
+        #   text: "${sim/cockpit2/clock_timer/hobbs_time_hours}:${sim/cockpit2/clock_timer/hobbs_time_minutes}:${sim/cockpit2/clock_timer/hobbs_time_seconds}"
+        #   formula: "1"
+        #   text-format: "{0:.0f}"
 
   - index: 9
     name: CAUTION
