@@ -17,3 +17,9 @@ It may work on other Toliss Airbus aicrafts (A319, A320, A340) with minor adjust
 
 Author: Pierre M. <pierre@devleaks.be>
 Last updated 01-MAY-2024
+
+
+# Changelog
+ 
+## [1.0.0] - 2024-06-11
+- Added: New changelog
