@@ -1,10 +1,10 @@
 buttons:
 
-  # - index: b0
-  #   name: P0
-  #   type: page
-  #   page: extras
-  #   colored-led: pink
+  - index: b0
+    name: P0
+    type: page
+    page: index
+    colored-led: orange
 
   - index: b1
     name: P1
@@ -39,7 +39,7 @@ buttons:
   - index: b6
     name: P6
     type: page
-    page: pedestal
+    page: weather
     colored-led: red
 
   - index: b7
