@@ -81,24 +81,24 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
 
-  - index: 3
-    type: onoff
-    set-dataref: sim/cockpit/electrical/avionics_on
-    label: AVIONICS
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit/electrical/avionics_on} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit/electrical/avionics_on} 1 eq
+  # - index: 3
+  #   type: onoff
+  #   set-dataref: sim/cockpit/electrical/avionics_on
+  #   label: AVIONICS
+  #   label-color: black
+  #   label-size: 9
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     B0:
+  #       text: "OFF"
+  #       color: darkorange
+  #       formula: ${sim/cockpit/electrical/avionics_on} 0 eq
+  #     B1:
+  #       text: "ON"
+  #       color: deepskyblue
+  #       framed: true
+  #       formula: ${sim/cockpit/electrical/avionics_on} 1 eq
 
   - index: 4
     type: long-press
@@ -119,6 +119,9 @@ buttons:
         text-size: 60
     formula: ${sim/cockpit2/engine/actuators/starter_hit}
 
+  - index: 5
+    type: none
+    icon: INOP.png
 
   - index: 6
     type: onoff

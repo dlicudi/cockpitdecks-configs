@@ -1,4 +1,4 @@
-name: pfd
+name: pfi
 includes: includes/pagerfull,includes/annunciators
 
 buttons:

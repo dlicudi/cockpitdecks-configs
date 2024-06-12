@@ -15,8 +15,8 @@ buttons:
 
   - index: 25
     type: page
-    page: pfd
-    label: PFD
+    page: pfi
+    label: PFI
     label-color: Gold
     label-size: 10
     text: 

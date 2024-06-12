@@ -5,8 +5,8 @@ buttons:
 
   - index: 0
     type: page
-    page: pfd
-    label: PFD
+    page: pfi
+    label: PFI
     label-color: Gold
     label-bg-color: Black
     text: 
@@ -145,6 +145,19 @@ buttons:
     label: VIEWS
     label-color: Gold
     text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 12
+    type: page
+    page: trutrak_sorcerer
+    label: TS SORCERER
+    label-color: Gold
+    label-size: 9
+    text: 
     text-color: khaki
     text-size: 40
     text-font: fontawesome.otf

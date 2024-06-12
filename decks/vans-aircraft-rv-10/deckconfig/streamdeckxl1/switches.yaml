@@ -22,24 +22,6 @@ buttons:
         framed: true
         formula: ${sim/cockpit/electrical/battery_on[0]} 1 eq
 
-  - index: 1
-    type: push
-    command: aerobask/dr401/engine_master_to
-    label: MASTER ENGN
-    label-color: black
-    label-size: 8
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${aerobask/dr401/engine_master} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${aerobask/dr401/engine_master} 1 eq
 
   - index: 2
     type: push
