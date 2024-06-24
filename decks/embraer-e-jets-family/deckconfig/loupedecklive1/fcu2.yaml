@@ -1,34 +1,31 @@
 description: FCU
 includes: pager,encoders/encoders_fcu
-default-icon-color: (40, 40, 40)
-
-name: fcu
+default-icon-color: Black
+name: fcu2
 
 buttons:
 - index: 0
-  name: FD
   type: push
   annunciator:
-    size: medium
+    size: large
     model: B
     parts:
       B0:
         color: white
         led: led
-        formula: ${sim/cockpit/autopilot/autopilot_mode} 1 eq
+        formula: ${sim/cockpit2/autopilot/flight_director_mode}
       B1:
-        text: FD
-        text-size: 40
+        text: BANK
+        text-size: 60
         text-font: DIN Bold
         formula: "1"
         framed: True
-  command: XCrafts/ERJ/fdir_toggle
+  command: sim/autopilot/fdir_toggle
 
 - index: 1
-  name: AP
   type: push
   annunciator:
-    size: medium
+    size: large
     model: B
     parts:
       B0:
@@ -36,38 +33,35 @@ buttons:
         led: led
         formula: ${sim/cockpit2/autopilot/servos_on}
       B1:
-        text: AP
-        text-size: 40
+        text: FMS
+        text-size: 60
         text-font: DIN Bold
         formula: "1"
         framed: True
-  command: XCrafts/APYD_Toggle
-
+  command: sim/autopilot/servos_toggle
 
 - index: 2
-  name: HDG
   type: push
   annunciator:
-    size: medium
+    size: large
     model: B
     parts:
       B0:
         color: white
         led: led
-        formula: ${sim/cockpit2/autopilot/heading_mode}
+        formula: ${sim/cockpit2/autopilot/heading_status}
       B1:
-        text: HDG
-        text-size: 40
+        text: HSI
+        text-size: 60
         text-font: DIN Bold
         formula: "1"
         framed: True
   command: sim/autopilot/heading
 
 - index: 3
-  name: ALT
   type: push
   annunciator:
-    size: medium
+    size: large
     model: B
     parts:
       B0:
@@ -75,146 +69,107 @@ buttons:
         led: led
         formula: ${sim/cockpit2/autopilot/altitude_hold_status}
       B1:
-        text: ALT
-        text-size: 40
+        text: FPA
+        text-size: 60
         text-font: DIN Bold
         formula: "1"
         framed: True
   command: sim/autopilot/altitude_hold
 
 - index: 4
-  name: NAV
   type: push
   annunciator:
-    size: medium
+    size: large
     model: B
     parts:
       B0:
         color: white
         led: led
-        formula: ${XCrafts/ERJ/LNAV_armed}
+        formula: ${sim/cockpit2/autopilot/gpss_status} 2 eq
       B1:
-        text: NAV
-        text-size: 40
+        text: PREV
+        text-size: 60
         text-font: DIN Bold
         formula: "1"
         framed: True
-  command: XCrafts/ERJ/LNAV
+  command: sim/autopilot/gpss
 
 - index: 5
   type: push
   annunciator:
-    size: medium
+    size: large
     model: B
     parts:
       B0:
         color: white
         led: led
-        formula: ${sim/cockpit/switches/yaw_damper_on}
+        formula: ${sim/cockpit2/autopilot/vnav_armed}
       B1:
-        text: YD
-        text-size: 40
+        text: O
+        text-size: 60
         text-font: DIN Bold
         formula: "1"
         framed: True
-  command: sim/systems/yaw_damper_toggle
+  command: sim/autopilot/vnav
 
 - index: 6
-  name: APP
   type: push
   annunciator:
-    size: medium
+    size: large
     model: B
     parts:
       B0:
         color: white
         led: led
-        formula: ${sim/cockpit2/autopilot/approach_status} 2 eq
+        formula: ${sim/cockpit2/autopilot/approach_status}
       B1:
-        text: APP
-        text-size: 40
+        text: SRC
+        text-size: 60
         text-font: DIN Bold
         formula: "1"
         framed: True
-  command: XCrafts/ERJ/APPCH
+  command: sim/autopilot/approach
 
 - index: 7
   type: push
   annunciator:
-    size: medium
+    size: large
     model: B
     parts:
       B0:
         color: white
         led: led
-        formula: ${XCrafts/ERJ/VNAV_stat}
+        formula: ${sim/cockpit2/autopilot/approach_status}
       B1:
-        text: O
-        text-size: 40
+        text: V/L
+        text-size: 60
         text-font: DIN Bold
         formula: "1"
         framed: True
-  command: XCrafts/ERJ/VNAV
-
+  command: sim/autopilot/approach
 
 - index: 8
-  name: VS
   type: push
   annunciator:
-    size: medium
+    size: large
     model: B
     parts:
       B0:
         color: white
         led: led
-        formula: ${sim/cockpit2/autopilot/altitude_mode} 4 eq
+        formula: ${sim/cockpit2/autopilot/vnav_armed}
       B1:
-        text: VS
-        text-size: 40
+        text: O
+        text-size: 60
         text-font: DIN Bold
         formula: "1"
         framed: True
-  command: sim/autopilot/vertical_speed
+  command: sim/autopilot/vnav
 
-- index: 9
-  type: push
-  annunciator:
-    size: medium
-    model: B
-    parts:
-      B0:
-        color: white
-        led: led
-        formula: ${XCrafts/ERJ/autopilot/autothrottle_system_active}
-      B1:
-        text: A/T
-        text-size: 40
-        text-font: DIN Bold
-        formula: "1"
-        framed: True
-  command: XCrafts/ERJ/AutoThrottle
-
-- index: 10
-  type: push
-  annunciator:
-    size: medium
-    model: B
-    parts:
-      B0:
-        color: white
-        led: led
-        formula: ${sim/cockpit2/autopilot/altitude_mode} 4 eq
-      B1:
-        text: FLCH
-        text-size: 40
-        text-font: DIN Bold
-        formula: "1"
-        framed: True
-  command: sim/autopilot/vertical_speed
 
 - index: 11
   type: page
-  page: fcu2
+  page: fcu
   text: →
   text-color: khaki
   text-size: 40

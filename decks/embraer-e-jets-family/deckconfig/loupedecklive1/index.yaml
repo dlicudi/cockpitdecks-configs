@@ -19,7 +19,7 @@ buttons:
   - index: 1
     type: page
     page: switches
-    label: SWITCHES 1
+    label: SWITCHES
     label-color: Gold
     label-size: 10
     text: 
@@ -31,11 +31,11 @@ buttons:
 
   - index: 2
     type: page
-    page: switches2
-    label: SWITCHES 2
+    page: ground_services
+    label: GROUND SERVICES
     label-color: Gold
-    label-size: 10
-    text: 
+    label-size: 7
+    text: 
     text-color: khaki
     text-size: 40
     text-font: fontawesome.otf

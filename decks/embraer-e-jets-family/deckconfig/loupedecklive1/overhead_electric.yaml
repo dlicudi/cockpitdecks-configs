@@ -1,0 +1,232 @@
+name: overhead_electric
+description: Switch Panel
+includes: pager,encoders/encoders_lights
+default-icon-color: Black
+
+buttons:
+- index: 0
+  type: updown
+  label: IDG 1
+  label-position: cb
+  label-color: White
+  bgcolor: White
+  stops: 2
+  circular-switch:
+    button-size: 60
+    switch-style: large
+    tick-from: 120
+    tick-to: 180
+    tick-space: 40
+    tick-underline-width: 8
+    needle-color: white
+    needle-length: 30
+    tick-label-size: 28
+    options: invert
+    tick-labels:
+      - "OFF"
+      - "AUTO"
+  dataref: sim/cockpit/electrical/generator_on[0]
+  set-dataref: sim/cockpit/electrical/generator_on[0]
+
+- index: 1
+  type: updown
+  label: AC BUS TIES
+  label-color: White
+  label-position: cb
+  label-size: 8
+  stops: 3
+  circular-switch:
+    button-size: 60
+    switch-style: large
+    tick-from: 140
+    tick-to: 220
+    tick-space: 40
+    tick-underline-width: 8
+    needle-color: white
+    needle-length: 30
+    tick-label-size: 24
+    options: invert
+    tick-labels:
+      - "1\nOPEN"
+      - "AUTO"
+      - "2\nOPEN"
+  dataref: XCrafts/electrical/ac_bus_tie_switch
+  set-dataref: XCrafts/electrical/ac_bus_tie_switch
+
+- index: 2
+  type: updown
+  label: IDG 2
+  label-color: White
+  color: White
+  label-position: cb
+  stops: 2
+  circular-switch:
+    button-size: 60
+    switch-style: large
+    tick-from: 240
+    tick-to: 180
+    tick-space: 40
+    tick-underline-width: 8
+    needle-color: white
+    needle-length: 30
+    tick-label-size: 28
+    options: invert
+    tick-labels:
+      - "OFF"
+      - "AUTO"
+  dataref: sim/cockpit/electrical/generator_on[1]
+  set-dataref: sim/cockpit/electrical/generator_on[1]
+
+- index: 3
+  label: GPU
+  label-size: 7
+  label-color: White
+  type: onoff
+  annunciator:
+    size: large
+    model: B
+    parts:
+      B0:
+        text: "AVAIL"
+        text-size: 60
+        text-font: DIN Bold
+        text-color: white
+        formula: "${XCrafts/doors/GPU_OFF} ${sim/cockpit/electrical/gpu_on} -"
+      B1:
+        text: IN USE
+        text-size: 60
+        text-font: DIN Bold
+        text-color: white
+        formula: "${XCrafts/electric/GPU_sw}"
+  set-dataref: XCrafts/electric/GPU_sw
+
+- index: 4
+  label: APU GEN
+  label-size: 10
+  label-color: white
+  type: onoff
+  annunciator:
+    size: small
+    model: A
+    parts:
+      A0:
+        text-color: white
+        led: led
+        formula: "${sim/cockpit/electrical/generator_apu_on} 0 eq"
+  set-dataref: sim/cockpit2/electrical/APU_generator_on
+
+- index: 5
+  label: TRU 1
+  label-size: 8
+  label-color: White
+  type: onoff
+  stops: 2
+  switch:
+    switch-style: round
+    button-fill-color: White
+    button-underline-width: 4
+    button-underline-color: coral
+    tick-labels:
+      - "AUTO"
+      - "OFF"
+    tick-space: 10
+    tick-color: white
+    tick-label-size: 40
+    tick-label-font: DIN Bold
+    tick-label-color: White
+  formula: "${sim/cockpit/engine/inverter_on[0]}"
+  commands:
+    - sim/electrical/inverter_1_on
+    - sim/electrical/inverter_1_off
+
+- index: 6
+  label: TRU ESS
+  label-size: 8
+  label-color: White
+  type: updown
+  stops: 2
+  switch:
+    switch-style: round
+    button-fill-color: White
+    button-underline-width: 4
+    button-underline-color: coral
+    tick-labels:
+      - "AUTO"
+      - "OFF"
+    tick-space: 10
+    tick-color: white
+    tick-label-size: 40
+    tick-label-font: DIN Bold
+    tick-label-color: White
+  formula: "${XCrafts/electrical/TRU_ESS_switch}"
+  set-dataref: XCrafts/electrical/TRU_ESS_switch
+
+- index: 7
+  label: TRU 2
+  label-size: 8
+  label-color: White
+  type: onoff
+  stops: 2
+  switch:
+    switch-style: round
+    button-fill-color: White
+    button-underline-width: 4
+    button-underline-color: coral
+    tick-labels:
+      - "AUTO"
+      - "OFF"
+    tick-space: 10
+    tick-color: White
+    tick-label-size: 40
+    tick-label-font: DIN Bold
+    tick-label-color: White
+  formula: "${sim/cockpit/engine/inverter_on[1]}"
+  commands:
+    - sim/electrical/inverter_2_on
+    - sim/electrical/inverter_2_off
+
+- index: 8
+  type: updown
+  label: BATT 1
+  label-color: White
+  label-position: cb
+  stops: 2
+  circular-switch:
+    button-size: 60
+    switch-style: large
+    tick-from: 120
+    tick-to: 180
+    tick-space: 40
+    tick-underline-width: 8
+    needle-color: white
+    needle-length: 30
+    tick-label-size: 28
+    options: invert
+    tick-labels:
+      - "OFF"
+      - "ON"
+  dataref: sim/cockpit2/electrical/battery_on[0]
+  set-dataref: sim/cockpit2/electrical/battery_on[0]
+  
+- index: 9
+  type: updown
+  label: BATT 2
+  label-color: White
+  label-position: cb
+  stops: 2
+  circular-switch:
+    button-size: 60
+    switch-style: large
+    tick-from: 120
+    tick-to: 180
+    tick-space: 40
+    tick-underline-width: 8
+    needle-color: white
+    needle-length: 30
+    tick-label-size: 28
+    options: invert
+    tick-labels:
+      - "OFF"
+      - "ON"
+  dataref: sim/cockpit2/electrical/battery_on[1]
+  set-dataref: sim/cockpit2/electrical/battery_on[1]

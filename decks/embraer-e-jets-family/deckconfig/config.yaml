@@ -5,14 +5,20 @@ icao: E170
 model:  E170, E175, E190, E195
 description: Decks
 decks:
-  - name: XPLive
+  - name: XPLive1
     type: LoupedeckLive
     layout: loupedecklive1
     brightness: 70
-  - name: StreamDeckXL
-    type: Stream Deck XL
-    layout: streamdeckxl1
-    brightness: 70
+  # - name: XPLive2
+  #   type: Stream Deck XL
+  #   layout: streamdeckxl1
+  #   brightness: 70
+  - name: Vdeck1
+    type: Virtual LoupedeckLive
+    layout: loupedecklive1
+  # - name: Vdeck2
+  #   type: Virtual Streamdeck XL
+  #   layout: streamdeckxl1
 # print-page-dir: screendumps/embraer-e-jets-family
 
 # cache-icon: True

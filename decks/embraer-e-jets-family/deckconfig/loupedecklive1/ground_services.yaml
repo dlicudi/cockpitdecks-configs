@@ -1,0 +1,159 @@
+name: ground_services
+description: Ground Services
+includes: pager,encoders/encoders_lights
+default-icon-color: Black
+
+buttons:
+  - index: 0  
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${XCrafts/other/GPU} 0 eq
+        B1:
+          text: GPU
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: XCrafts/ERJ/OPS/GPU_toggle
+
+  - index: 1
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${XCrafts/doors/front_main}
+        B1:
+          text: Fwd Passenger
+          text-size: 24
+          text-font: DIN Bold
+          formula: "1"
+    command: XCrafts/ERJ/doors/front_main
+
+  - index: 2
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${XCrafts/doors/front_service}
+        B1:
+          text: Fwd Service
+          text-size: 30
+          text-font: DIN Bold
+          formula: "1"
+    command: XCrafts/ERJ/doors/front_service
+
+  - index: 3
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${XCrafts/doors/front_cargo}
+        B1:
+          text: Fwd Cargo
+          text-size: 30
+          text-font: DIN Bold
+          formula: "1"
+    command: XCrafts/ERJ/doors/front_cargo
+
+  - index: 4
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${XCrafts/other/ground_objects} 0 eq
+        B1:
+          text: Ground Objects
+          text-size: 30
+          text-font: DIN Bold
+          formula: "1"
+    command: XCrafts/ERJ/OPS/ground_equipment_toggle
+
+  - index: 5
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${XCrafts/doors/ENGINE_CVRS_ON} 0 eq
+        B1:
+          text: Engine Covers
+          text-size: 30
+          text-font: DIN Bold
+          formula: "1"
+    command: XCrafts/ERJ/OPS/engine_covers_toggle
+
+  - index: 6
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${XCrafts/doors/back_cargo}
+        B1:
+          text: Aft Cargo
+          text-size: 30
+          text-font: DIN Bold
+          formula: "1"
+    command: XCrafts/ERJ/doors/back_cargo
+
+  - index: 7
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${XCrafts/doors/back_main}
+        B1:
+          text: Aft Passenger
+          text-size: 30
+          text-font: DIN Bold
+          formula: "1"
+    command: XCrafts/ERJ/doors/back_main
+
+  - index: 8
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${XCrafts/doors/back_service}
+        B1:
+          text: Fwd Service
+          text-size: 30
+          text-font: DIN Bold
+          formula: "1"
+    command: XCrafts/ERJ/doors/back_service
+

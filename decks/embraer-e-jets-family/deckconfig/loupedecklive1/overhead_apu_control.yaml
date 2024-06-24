@@ -1,0 +1,66 @@
+name: overhead_apu_control
+description: Switch Panel
+includes: pager,encoders/encoders_lights
+default-icon-color: Black
+
+buttons:
+- index: 0
+  type: updown
+  label: MASTER
+  label-color: White
+  label-position: cb
+  label-size: 8
+  stops: 2
+  circular-switch:
+    button-size: 60
+    switch-style: large
+    tick-from: 180
+    tick-to: 310
+    tick-space: 40
+    tick-underline-width: 8
+    needle-color: white
+    needle-length: 30
+    tick-label-size: 24
+    options: invert
+    tick-labels:
+      - "OFF"
+      - "ON"
+      - "START"
+  dataref: XCrafts/ERJ/APU_switch
+  commands:
+    - XCrafts/APU_CCW
+    - XCrafts/APU_CW
+
+- index: 1
+  type: long-press
+  command: XCrafts/APU_CW
+  label: APU
+  label-size: 9
+  label-color: White
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        color: yellow
+        formula: "${XCrafts/ERJ/APU_flasher} 2 eq"
+        led: dot
+      B1:
+        color: lime
+        text-size: 60
+        formula: "1"
+        text: "${sim/cockpit2/electrical/APU_N1_percent}"
+        text-font: Seven Segment.ttf
+        text-format: "{0:.0f}%"
+
+- index: 3
+  type: push
+  label: EMER STOP
+  label-color: White
+  label-size: 10
+  text: ■
+  text-color: BrickRed
+  text-size: 60
+  text-font: fontawesome.otf
+  text-position: cm
+  command: sim/electrical/APU_fire_shutoff

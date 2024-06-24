@@ -1,0 +1,235 @@
+name: overhead_external_lights
+description: Switch Panel
+includes: pager,encoders/encoders_lights
+default-icon-color: Black
+
+buttons:
+- index: 0
+  label: NAV
+  label-size: 12
+  label-color: White
+  type: updown
+  stops: 2
+  switch:
+    switch-style: round
+    button-fill-color: White
+    button-underline-width: 4
+    button-underline-color: coral
+    options: invert
+    tick-labels:
+      - "ON"
+      - "OFF"
+    tick-space: 10
+    tick-color: white
+    tick-label-size: 40
+    tick-label-font: DIN Bold
+    tick-label-color: White
+  formula: "${sim/cockpit/electrical/nav_lights_on}"
+  set-dataref: sim/cockpit/electrical/nav_lights_on
+
+- index: 1
+  label: STROBE
+  label-size: 12
+  label-color: White
+  type: updown
+  stops: 2
+  switch:
+    switch-style: rect
+    button-fill-color: White
+    button-underline-width: 4
+    button-underline-color: coral
+    options: invert
+    tick-labels:
+      - "ON"
+      - "OFF"
+    tick-space: 10
+    tick-color: white
+    tick-label-size: 40
+    tick-label-font: DIN Bold
+    tick-label-color: White
+  formula: "${sim/cockpit/electrical/strobe_lights_on}"
+  set-dataref: sim/cockpit/electrical/strobe_lights_on
+
+- index: 2
+  label: RED BCN
+  label-size: 12
+  label-color: White
+  type: updown
+  stops: 2
+  switch:
+    switch-style: round
+    button-fill-color: White
+    button-underline-width: 4
+    button-underline-color: coral
+    options: invert
+    tick-labels:
+      - "ON"
+      - "OFF"
+    tick-space: 10
+    tick-color: white
+    tick-label-size: 40
+    tick-label-font: DIN Bold
+    tick-label-color: White
+  formula: "${sim/cockpit/electrical/beacon_lights_on}"
+  set-dataref: sim/cockpit/electrical/beacon_lights_on
+
+- index: 3
+  label: LOGO
+  label-size: 12
+  label-color: White
+  type: updown
+  stops: 2
+  switch:
+    switch-style: round
+    button-fill-color: White
+    button-underline-width: 4
+    button-underline-color: coral
+    options: invert
+    tick-labels:
+      - "ON"
+      - "OFF"
+    tick-space: 10
+    tick-color: white
+    tick-label-size: 40
+    tick-label-font: DIN Bold
+    tick-label-color: White
+  formula: "${XCrafts/light/logo_switch}"
+  set-dataref: XCrafts/light/logo_switch
+
+- index: 4
+  label: NOSE
+  label-size: 12
+  label-color: White
+  type: updown
+  stops: 2
+  switch:
+    switch-style: rect
+    button-fill-color: White
+    button-underline-width: 4
+    button-underline-color: coral
+    options: invert
+    tick-labels:
+      - "ON"
+      - "OFF"
+    tick-space: 10
+    tick-color: white
+    tick-label-size: 40
+    tick-label-font: DIN Bold
+    tick-label-color: White
+  formula: "${sim/cockpit2/switches/taxi_light_on}"
+  set-dataref: sim/cockpit2/switches/taxi_light_on
+
+- index: 5
+  label: SIDE
+  label-size: 12
+  label-color: White
+  type: updown
+  stops: 2
+  switch:
+    switch-style: rect
+    button-fill-color: White
+    button-underline-width: 4
+    button-underline-color: coral
+    options: invert
+    tick-labels:
+      - "ON"
+      - "OFF"
+    tick-space: 10
+    tick-color: white
+    tick-label-size: 40
+    tick-label-font: DIN Bold
+    tick-label-color: White
+  formula: "${sim/cockpit2/switches/generic_lights_switch[21]}"
+  set-dataref: sim/cockpit2/switches/generic_lights_switch[21]
+
+- index: 6
+  label: INSP
+  label-size: 12
+  label-color: White
+  type: updown
+  stops: 2
+  switch:
+    switch-style: round
+    button-fill-color: White
+    button-underline-width: 4
+    button-underline-color: coral
+    options: invert
+    tick-labels:
+      - "ON"
+      - "OFF"
+    tick-space: 10
+    tick-color: white
+    tick-label-size: 40
+    tick-label-font: DIN Bold
+    tick-label-color: White
+  formula: "${XCrafts/light/inspection_switch}"
+  set-dataref: XCrafts/light/inspection_switch
+
+- index: 8
+  label: LEFT
+  label-size: 12
+  label-color: White
+  type: updown
+  stops: 2
+  switch:
+    switch-style: 3dot
+    button-fill-color: White
+    button-underline-width: 4
+    button-underline-color: coral
+    options: invert
+    tick-labels:
+      - "ON"
+      - "OFF"
+    tick-space: 10
+    tick-color: white
+    tick-label-size: 40
+    tick-label-font: DIN Bold
+    tick-label-color: White
+  formula: "${sim/cockpit2/switches/landing_lights_switch[1]}"
+  set-dataref: sim/cockpit2/switches/landing_lights_switch[1]
+
+- index: 9
+  label: NOSE
+  label-size: 12
+  label-color: White
+  type: updown
+  stops: 2
+  switch:
+    switch-style: 3dot
+    button-fill-color: White
+    button-underline-width: 4
+    button-underline-color: coral
+    options: invert
+    tick-labels:
+      - "ON"
+      - "OFF"
+    tick-space: 10
+    tick-color: white
+    tick-label-size: 40
+    tick-label-font: DIN Bold
+    tick-label-color: White
+  formula: "${sim/cockpit2/switches/landing_lights_switch[0]}"
+  set-dataref: sim/cockpit2/switches/landing_lights_switch[0]
+  
+- index: 10
+  label: RIGHT
+  label-size: 12
+  label-color: White
+  type: updown
+  stops: 2
+  switch:
+    switch-style: 3dot
+    button-fill-color: White
+    button-underline-width: 4
+    button-underline-color: coral
+    options: invert
+    tick-labels:
+      - "ON"
+      - "OFF"
+    tick-space: 10
+    tick-color: white
+    tick-label-size: 40
+    tick-label-font: DIN Bold
+    tick-label-color: White
+  formula: "${sim/cockpit2/switches/landing_lights_switch[2]}"
+  set-dataref: sim/cockpit2/switches/landing_lights_switch[2]

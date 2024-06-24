@@ -188,13 +188,13 @@ buttons:
         B0:
           color: lime
           led: bars
-          formula: ${sim/cockpit2/autopilot/servos_on}
+          formula: ${XCrafts/ERJ/autopilot/autothrottle_system_active}
         B1:
           text: A/T
           text-size: 60
           text-font: DIN Bold
           formula: "1"
-    command: sim/autopilot/servos_toggle
+    command: XCrafts/ERJ/AutoThrottle
 
   - index: 11
     type: push

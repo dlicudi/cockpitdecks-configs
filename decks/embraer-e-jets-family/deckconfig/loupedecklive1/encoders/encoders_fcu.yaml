@@ -63,8 +63,8 @@ buttons:
   type: encoder-push
   commands:
     - sim/autopilot/vertical_speed_sync
-    - sim/autopilot/vertical_speed_down
-    - sim/autopilot/vertical_speed_up
+    - XCrafts/ERJ/VS_dn_100
+    - XCrafts/ERJ/VS_up_100
   long-press: AirbusFBW/PullSPDSel
 
 - index: e5

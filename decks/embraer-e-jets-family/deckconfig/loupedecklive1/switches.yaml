@@ -3,249 +3,183 @@ includes: pager,encoders/encoders_lights
 name: switches
 
 buttons:
-  - index: 0
-    type: push
-    command: sim/electrical/battery_1_toggle
-    label: BATTERY
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit/electrical/battery_on[0]} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit/electrical/battery_on[0]} 1 eq
 
-  - index: 1
-    type: push
-    command: aerobask/dr401/engine_master_to
-    label: MASTER ENGN
-    label-color: black
-    label-size: 8
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${aerobask/dr401/engine_master} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${aerobask/dr401/engine_master} 1 eq
+- index: 0
+  type: page
+  page: overhead_electric
+  label: ELECTRIC
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  # text: ⚡
+  text: 🔌
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
 
-  - index: 2
-    type: push
-    command: sim/systems/avionics_toggle
-    label: AVIONICS
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit2/switches/avionics_power_on} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
+- index: 1
+  type: page
+  page: overhead_cockpit_lights
+  label: COCKPIT LIGHTS
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: 💡
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
 
-  - index: 3
-    type: push
-    command: sim/electrical/generator_1_toggle
-    # type: onoff
-    # set-dataref: sim/cockpit/electrical/generator_on[0]
-    label: ALTERNATOR
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
-    # guard:
-    #   dataref: aerobask/dr401/cover_alternator
-    #   model: grid
-    #   color: red
+- index: 2
+  type: page
+  page: overhead_fuel
+  label: FUEL
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: ⛽
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
 
+- index: 3
+  type: page
+  page: overhead_passenger_signs
+  label: PASSENGER SIGNS
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: 👥
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
 
+- index: 4
+  type: page
+  page: overhead_fire_extinguisher
+  label: FIRE EXT.
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
 
-  - index: 4
-    type: push
-    label: LAND
-    label-color: black
-    label-size: 9
-    command: sim/lights/landing_lights_toggle    
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit/electrical/landing_lights_on} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
+- index: 5
+  type: page
+  page: overhead_apu_control
+  label: APU CONTROL
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
 
-  - index: 5
-    type: push
-    command: sim/lights/taxi_lights_toggle
-    label: TAXI
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit/electrical/taxi_light_on} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit/electrical/taxi_light_on} 1 eq
+- index: 6
+  type: page
+  page: overhead_external_lights
+  label: EXT. LIGHTS
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: 💡
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
 
-  - index: 6
-    type: push
-    command: sim/lights/strobe_lights_toggle
-    label: FLASH
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
+- index: 7
+  type: page
+  page: overhead_hydraulic
+  label: HYDRAULIC
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
 
-  - index: 7
-    type: push
-    command: sim/lights/nav_lights_toggle
-    label: NAV
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
+# - index: 8
+#   type: page
+#   page: overhead_pressurization
+#   label: PRESSURIZATION
+#   label-color: Gold
+#   label-bg-color: Black
+#   label-size: 8
+#   text: 🛫🧻
+#   text-color: khaki
+#   text-size: 40
+#   text-font: fontawesome.otf
+#   text-position: cm
+#   text-bg-color: (40, 40, 40)
 
+- index: 8
+  type: page
+  page: pedestal_powerplant
+  label: POWERPLANT
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: ⚡
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
 
-  - index: 8
-    name: FLAPS
-    label: FLAPS
-    label-size: 9
-    label-color: black
-    type: updown
-    stops: 3
-    switch:
-      switch-style: large
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "UP"
-        - "25"
-        - "50"
-      tick-space: 24
-      tick-color: white
-      tick-label-size: 40
-      tick-label-font: DIN Bold
-      tick-label-color: black
-    options: 3way,invert
-    dataref: sim/cockpit2/controls/flap_ratio
-    formula: "${sim/cockpit2/controls/flap_ratio} 2 *"
-    commands:
-      - sim/flight_controls/flaps_down
-      - sim/flight_controls/flaps_up
+- index: 9
+  type: page
+  page: overhead_ice_protection
+  label: ICE PROTECTION
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: ❄
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
 
+- index: 10
+  type: page
+  page: overhead_pneumatic
+  label: A/C/PNEUMATIC
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
 
-
-  - index: 9
-    type: push
-    command: sim/ice/pitot_heat0_tog
-    label: PITOT HT
-    label-color: black
-    label-size: 8
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit/switches/pitot_heat_on} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
-
-  - index: 10
-    name: PARKING BRAKE
-    label: PARKING BRAKE
-    label-size: 8
-    label-color: black
-    type: onoff
-    stops: 2
-    switch:
-      switch-style: rect
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-space: 24
-      tick-color: white
-      tick-label-size: 40
-      tick-label-font: DIN Bold
-      tick-label-color: black
-    formula: "${sim/cockpit2/controls/parking_brake_ratio}"
-    commands:
-      - sim/flight_controls/brakes_toggle_regular
-      - sim/flight_controls/brakes_toggle_regular
-
-  - index: 11
-    name: Switches2
-    type: page
-    page: switches2
-    # label: MORE
-    # label-size: 12
-    text: →
-    text-font: fontawesome.otf
-    text-size: 48
-    text-color: Gold
+- index: 11
+  type: page
+  page: switches2
+  text: →
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
 
