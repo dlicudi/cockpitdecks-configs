@@ -317,71 +317,102 @@ buttons:
   #         formula: ${sim/cockpit/warnings/annunciators/low_vacuum}
 
 
+
+# - index: 9
+#   type: push
+#   label: GLIDESLOPE
+#   label-color: Black
+#   label-size: 10
+#   command: sim/autopilot/approach
+#   annunciator:
+#     size: medium
+#     model: F
+#     parts:
+#       F0:
+#         color: lime
+#         formula: "${sim/cockpit2/autopilot/glideslope_status} 2 eq"
+#         led: dot
+#       F2:
+#         color: gold
+#         formula: "${sim/cockpit2/autopilot/glideslope_status} 1 eq"
+#         led: dot
+#       F1:
+#         color: firebrick
+#         text-size: 32
+#         text-font: fontawesome.otf
+#         text: "↓ ${formula}%" # GO DOWN!
+#         text-format: "{0:.0f}"
+#         formula: "${sim/cockpit/radios/nav1_vdef_dot} 100 * round"
+#       F3:
+#         color: firebrick
+#         text-size: 32
+#         text: "↑ ${formula}%" # GO UP!
+#         text-format: "{0:.0f}"
+#         text-font: fontawesome.otf
+#         formula: "${sim/cockpit/radios/nav1_vdef_dot} chs 100 * round"
+
+# - index: 10
+#   type: push
+#   label: LOCALIZER
+#   label-color: Black
+#   label-size: 10
+#   command: sim/autopilot/approach
+#   annunciator:
+#     size: medium
+#     model: F
+#     parts:
+#       F0:
+#         color: lime
+#         formula: "${sim/cockpit2/autopilot/nav_status} 2 eq"
+#         led: dot
+#       F2:
+#         color: gold
+#         formula: "${sim/cockpit2/autopilot/nav_status} 1 eq"
+#         led: dot
+#       F1:
+#         color: firebrick
+#         text-size: 32
+#         text-font: fontawesome.otf
+#         text: "→ ${formula}%" # GO RIGHT!
+#         text-format: "{0:.0f}"
+#         formula: "${sim/cockpit/radios/nav1_hdef_dot} 100 * round"
+#       F3:
+#         color: firebrick
+#         text-size: 32
+#         text: "← ${formula}%" # GO LEFT!
+#         text-format: "{0:.0f}"
+#         text-font: fontawesome.otf
+#         formula: "${sim/cockpit/radios/nav1_hdef_dot} chs 100 * round"
+
 - index: 9
   type: push
-  label: GLIDESLOPE
-  label-color: Black
-  label-size: 10
-  command: sim/autopilot/approach
+  command: sim/annunciator/clear_master_warning
   annunciator:
-    size: medium
-    model: F
+    size: full
+    model: A
     parts:
-      F0:
-        color: lime
-        formula: "${sim/cockpit2/autopilot/glideslope_status} 2 eq"
-        led: dot
-      F2:
-        color: gold
-        formula: "${sim/cockpit2/autopilot/glideslope_status} 1 eq"
-        led: dot
-      F1:
-        color: firebrick
-        text-size: 32
-        text-font: fontawesome.otf
-        text: "↓ ${formula}%" # GO DOWN!
-        text-format: "{0:.0f}"
-        formula: "${sim/cockpit/radios/nav1_vdef_dot} 100 * round"
-      F3:
-        color: firebrick
-        text-size: 32
-        text: "↑ ${formula}%" # GO UP!
-        text-format: "{0:.0f}"
-        text-font: fontawesome.otf
-        formula: "${sim/cockpit/radios/nav1_vdef_dot} chs 100 * round"
+      A0:
+        text: "WARN"
+        text-color: black
+        text-font: DIN Condensed Black.otf
+        text-size: 65
+        formula: ${sim/cockpit2/annunciators/master_warning}
+        invert-color: firebrick
 
 - index: 10
   type: push
-  label: LOCALIZER
-  label-color: Black
-  label-size: 10
-  command: sim/autopilot/approach
+  command: sim/annunciator/clear_master_caution
   annunciator:
-    size: medium
-    model: F
+    size: full
+    model: A
     parts:
-      F0:
-        color: lime
-        formula: "${sim/cockpit2/autopilot/nav_status} 2 eq"
-        led: dot
-      F2:
-        color: gold
-        formula: "${sim/cockpit2/autopilot/nav_status} 1 eq"
-        led: dot
-      F1:
-        color: firebrick
-        text-size: 32
-        text-font: fontawesome.otf
-        text: "→ ${formula}%" # GO RIGHT!
-        text-format: "{0:.0f}"
-        formula: "${sim/cockpit/radios/nav1_hdef_dot} 100 * round"
-      F3:
-        color: firebrick
-        text-size: 32
-        text: "← ${formula}%" # GO LEFT!
-        text-format: "{0:.0f}"
-        text-font: fontawesome.otf
-        formula: "${sim/cockpit/radios/nav1_hdef_dot} chs 100 * round"
+      A0:
+        text: "CAUT"
+        text-color: black
+        text-font: DIN Condensed Black.otf
+        text-size: 65
+        formula: ${sim/cockpit2/annunciators/master_caution}
+        invert-color: darkorange
 
 
   # - index: 10
