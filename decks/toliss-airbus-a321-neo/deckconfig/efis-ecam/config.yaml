@@ -6,9 +6,10 @@
 aircraft: Toliss A321neo
 description: Configuration parameters for Streamdeck 15 keys
 version: 1.0.0
-# 
+#
 default-annunciator-style: k
 #
 # Special modifications for dark/night
 dark-default-label-color: gold
 default-label-color: gold
+home-page-name: ECAM

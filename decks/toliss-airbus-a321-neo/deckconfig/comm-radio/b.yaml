@@ -53,20 +53,20 @@ buttons:
     type: reload
     led: true
     formula: 1
-#
+  #
   - index: slider
     name: SLIDER
     type: slider
-    set-dataref: DatarefPlaceholder
+    set-dataref: data:noop
     representation: false
-
-  - index: A
+  #
+  - index: a
     name: A
     type: page
     page: a
     led: true
     formula: 0
-  - index: B
+  - index: b
     name: B
     type: page
     page: b

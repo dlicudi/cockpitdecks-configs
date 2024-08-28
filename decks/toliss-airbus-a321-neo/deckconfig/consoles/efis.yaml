@@ -5,7 +5,7 @@ version: 1.0.0
 # ########################
 name: efis
 buttons:
-# ### LINE 1 ###  0 -  4 ######################################################
+  # ### LINE 1 ###  0 -  4 ######################################################
   - index: 31
     type: page
     page: back
@@ -100,7 +100,7 @@ buttons:
           formula: "1"
     command: toliss_airbus/dispcommands/CaptArptPushButton
     view: SRS/X-Camera/Select_View_ID_1
-# ### LINE 2 ###  5 -  9 ######################################################
+    # ### LINE 2 ###  5 -  9 ######################################################
   - index: 5
     type: push
     name: CHRONO
@@ -178,7 +178,7 @@ buttons:
       button-stroke-width: 0
       witness-size: 10
       witness-color: red
-# ### LINE 3 ### 10 - 14 ######################################################
+      # ### LINE 3 ### 10 - 14 ######################################################
   - index: 10
     name: ND MODE
     type: updown
@@ -256,7 +256,6 @@ buttons:
           framed: ON
     options: square
     command: toliss_airbus/dispcommands/TerrOnND1Toggle
-
   - index: 12
     name: ADFVOR1
     type: updown
@@ -264,9 +263,9 @@ buttons:
     switch:
       base-underline-width: 6
       tick-labels:
-        - "ADF1"
+        - ADF1
         - "OFF"
-        - "VOR1"
+        - VOR1
       tick-space: 0
       tick-label-size: 30
       tick-label-font: DIN Bold
@@ -280,13 +279,12 @@ buttons:
     switch:
       base-underline-width: 6
       tick-labels:
-        - "ADF2"
+        - ADF2
         - "OFF"
-        - "VOR2"
+        - VOR2
       tick-space: 0
       tick-label-size: 30
       tick-label-font: DIN Bold
     options: 3way,horizontal
     dataref: ckpt/fcu/adf2Left/anim
     set-dataref: ckpt/fcu/adf2Left/anim
-

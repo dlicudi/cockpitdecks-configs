@@ -19,20 +19,20 @@ buttons:
   - index: 0
     name: METAR
     type: none
-    label: "Weather"
+    label: Weather
     weather-metar:
-      weather-font: B612
+      weather-font: B612-Regular
   - index: 1
     name: PRESSURE
     type: none
     data:
       top-line-color: deepskyblue
       top-line-width: 10
-      icon: "fa:gauge"
+      icon: fa:gauge
       icon-size: 60
       icon-color: deepskyblue
       data: ${formula}
-      data-format: "{:04.0f}"
+      data-format: '{:04.0f}'
       data-font: DIN Condensed Light
       data-size: 80
       data-color: white
@@ -51,17 +51,17 @@ buttons:
     data:
       top-line-color: gold
       top-line-width: 10
-      icon: "fa:temperature-half"
+      icon: fa:temperature-half
       icon-size: 60
       icon-color: gold
       data: ${formula}
-      data-format: "{:3.0f}"
+      data-format: '{:3.0f}'
       data-font: DIN Condensed Light
       data-size: 80
       data-color: white
       #      data-unit: "°C"
       formula: ${data:weather:temperature}
-      bottomline: "°C"
+      bottomline: °C
       bottomline-size: 30
       bottomline-color: red
       mark: ${fa:arrow-right}
@@ -74,11 +74,11 @@ buttons:
     data:
       top-line-color: darkorchid
       top-line-width: 10
-      icon: "fa:wind"
+      icon: fa:wind
       icon-size: 60
       icon-color: darkorchid
       data: ${formula}
-      data-format: "{:4.1f}"
+      data-format: '{:4.1f}'
       data-font: DIN Condensed Light
       data-size: 80
       data-color: white
@@ -97,18 +97,18 @@ buttons:
     data:
       top-line-color: ivory
       top-line-width: 10
-      icon: "fa:droplet"
+      icon: fa:droplet
       icon-size: 60
       icon-color: ivory
       data: ${formula}
-      data-format: "{:3.0f}"
+      data-format: '{:3.0f}'
       data-font: DIN Condensed Light
       data-size: 80
       data-color: white
       #      data-unit: "°C"
       data-progress: 31
       formula: ${data:weather:dew_point}
-      bottomline: "°C"
+      bottomline: °C
       bottomline-size: 30
       bottomline-color: red
       mark: ${fa:arrow-right}
@@ -126,11 +126,11 @@ buttons:
       icon-size: 60
       icon-color: darkorange
       data: ${formula}
-      data-format: "{:03.1f}"
+      data-format: '{:03.1f}'
       data-font: DIN Condensed Light
       data-size: 80
       data-color: white
-      data-unit: "T"
+      data-unit: T
       data-progress: 31
       formula: ${sim/flightmodel/weight/m_fuel_total} 1000 /
       bottomline: FOB
@@ -141,12 +141,53 @@ buttons:
       mark-size: 20
       mark-color: lime
   # ### LINE 3 ### 16-23 ######################################################
-  # ### LINE 4 ### 24-31 ######################################################
+  - index: 16
+    type: none
+    chart:
+      rule-height: 0
+      charts:
+        - name: events
+          type: bar
+          keep: 20
+          update: 0.5
+          rate: true
+          color: orange
+          marker: square
+          value-max: 50
+          value-min: 0
+          dataref: data:Cockpitdecks/event_count_DatarefEvent
+  - index: 17
+    type: none
+    chart:
+      rule-height: 0
+      charts:
+        - name: packet
+          type: line
+          keep: 20
+          update: 1
+          rate: true
+          color: orange
+          marker: square
+          value-max: 400
+          value-min: 0
+          dataref: data:values_read # ### LINE 4 ### 24-31 ######################################################
+  - index: 30
+    name: RELOAD
+    type: reload
+    label: RELOAD
+    label-size: 14
+    label-position: cm
+    text:
+      text: ${fa:rotate-right}
+      text-font: fontawesome.otf
+      text-size: 80
+      text-position: cm
+      text-color: lime
   - index: 31
-    name: xplane
+    name: Index
     type: page
-    page: xplane
-    icon: XPLANE12
+    page: index-alt
+    icon: TOLISS-A21N
 # ### Buttons
 # ### A/B Pager
 # ### Encoders
