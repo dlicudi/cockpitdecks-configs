@@ -8,6 +8,19 @@ Cockpitdecks Configs provides a set of configurations for different aircraft for
 
 ---
 
+## Aircraft Configurations
+
+- [x] [Cessna 172 SP](decks/cessna-172-sp.md)
+- [x] [Cirrus SR22](decks/cirrus-sr22.md)
+- [x] [Beechcraft Baron 58](decks/beechcraft-baron-58.md)
+- [x] [Lancair Evolution](decks/lancair-evolution.md)
+- [x] [Toliss Airbus A321 NEO](decks/toliss-airbus-A321-neo.md)
+- [ ] [Toliss Airbus A320 NEO](decks/toliss-airbus-A320-neo.md)
+- [x] [Aerobask Robin DR401](decks/aerobask-robin-dr401.md)
+
+
+---
+
 !!! warning "Cockpitdecks build"
     Cockpitdecks is constantly evolving; check here which versions are compatible with these configs.
 

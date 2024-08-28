@@ -19,8 +19,9 @@ buttons:
   - index: 1
     type: page
     page: switches
-    label: SWITCHES
+    label: SWITCHES 1
     label-color: Gold
+    label-size: 10
     text: 
     text-color: khaki
     text-size: 40
@@ -30,10 +31,11 @@ buttons:
 
   - index: 2
     type: page
-    page: icing
-    label: ICING
+    page: switches2
+    label: SWITCHES 2
     label-color: Gold
-    text: ❄
+    label-size: 10
+    text: 
     text-color: khaki
     text-size: 40
     text-font: fontawesome.otf
@@ -42,10 +44,11 @@ buttons:
 
   - index: 3
     type: page
-    page: lights
-    label: LIGHTS
+    page: audiopanel
+    label: AUDIO
     label-color: Gold
-    text: 💡
+    label-size: 10
+    text: 
     text-color: khaki
     text-size: 40
     text-font: fontawesome.otf
@@ -66,8 +69,8 @@ buttons:
 
   - index: 5
     type: page
-    page: gcu478
-    label: GCU-478
+    page: g1000
+    label: G1000
     label-color: Gold
     text: 
     text-color: khaki

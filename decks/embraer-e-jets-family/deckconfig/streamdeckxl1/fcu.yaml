@@ -1,0 +1,390 @@
+description: FCU
+includes: includes/pagerfull
+name: fcu
+
+buttons:
+
+  - index: 0
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/servos_on}
+        B1:
+          text: HSI
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/servos_toggle
+    vibrate: SHORT
+
+  - index: 1
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/servos_on}
+        B1:
+          text: FMS
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/servos_toggle
+    vibrate: SHORT
+
+  - index: 2
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/flight_director_mode}
+        B1:
+          text: FD
+          text-size: 60
+          text-font: DIN Bold
+          text-color: Turquoise
+          formula: "1"
+    command: sim/autopilot/fdir_toggle
+    vibrate: SHORT
+
+  - index: 3
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/nav_status}
+        B1:
+          text: NAV
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/NAV
+
+  - index: 4
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/approach_status}
+        B1:
+          text: APP
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/approach
+
+  - index: 5
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/approach_status}
+        B1:
+          text: BANK
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/approach
+
+  - index: 6
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/heading_status}
+        B1:
+          text: HDG
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/heading
+    
+  - index: 7
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/servos_on}
+        B1:
+          text: AP
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/servos_toggle
+
+
+  - index: 8
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/servos_on}
+        B1:
+          text: YD
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/servos_toggle
+
+  - index: 9
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/servos_on}
+        B1:
+          text: SRC
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/servos_toggle
+
+  - index: 10
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${XCrafts/ERJ/autopilot/autothrottle_system_active}
+        B1:
+          text: A/T
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: XCrafts/ERJ/AutoThrottle
+
+  - index: 11
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/vnav_armed}
+        B1:
+          text: VNAV
+          text-size: 60
+          text-font: DIN Bold
+          text-color: Turquoise
+          formula: "1"
+    command: sim/autopilot/vnav
+
+  - index: 12
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/vnav_armed}
+        B1:
+          text: FLCH
+          text-size: 60
+          text-font: DIN Bold
+          text-color: Turquoise
+          formula: "1"
+    command: sim/autopilot/vnav
+
+  - index: 13
+    type: push
+    annunciator:
+      size: medium
+      model: D
+      parts:
+        D0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/altitude_hold_status}
+        D1:
+          text: ALT
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+        D2:
+          color: lime
+          text: "PIT"
+          formula: "${sim/cockpit2/autopilot/altitude_hold_status} 1 eq"
+
+    command: sim/autopilot/altitude_hold
+
+  - index: 14
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/backcourse_status}
+        B1:
+          text: FPA
+          text-size: 50
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/back_course
+
+  - index: 15
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/altitude_mode} 4 eq
+        B1:
+          text: VS
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/vertical_speed
+
+  - index: 16
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/altitude_mode} 4 eq
+        B1:
+          text: FD
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: sim/autopilot/vertical_speed
+
+  # - index: 10
+  #   name: FLC
+  #   type: push
+  #   annunciator:
+  #     size: medium
+  #     model: B
+  #     parts:
+  #       B0:
+  #         color: lime
+  #         led: bars
+  #         formula: ${sim/cockpit2/autopilot/altitude_mode} 5 eq
+  #       B1:
+  #         text: FLC
+  #         text-size: 60
+  #         text-font: DIN Bold
+  #         text-color: Turquoise
+  #         formula: "1"
+  #   command: sim/autopilot/level_change
+  #   vibrate: SHORT
+
+  # - index: 11
+  #   name: NAVGPS
+  #   type: push
+  #   label: NAVGPS
+  #   label-size: 10
+  #   label-color: black
+  #   command: sim/GPS/g430n1_cdi
+  #   annunciator:
+  #     size: medium
+  #     model: B
+  #     parts:
+  #       B0:
+  #         text: "NAV"
+  #         text-color: yellow
+  #         text-font: DIN Condensed Black.otf
+  #         text-size: 50
+  #         formula: ${sim/cockpit/switches/HSI_selector} 0 eq
+  #       B1:
+  #         text: "GPS"          
+  #         text-color: lime
+  #         text-font: DIN Condensed Black.otf
+  #         text-size: 50
+  #         formula: ${sim/cockpit/switches/HSI_selector} 2 eq
+
+  # - index: 11
+  #   type: updown
+  #   stops: 3
+  #   circular-switch:
+  #     button-size: 50
+  #     switch-style: medium
+  #     down: 30
+  #     tick-from: 200
+  #     tick-to: 340
+  #     tick-space: 40
+  #     tick-underline-width: 8
+  #     needle-color: white
+  #     needle-length: 30
+  #     tick-label-size: 28
+  #     tick-labels:
+  #       - "LOC1"
+  #       - "LOC2"
+  #       - "GPS"
+  #     up: 30
+  #     left: 45
+  #   dataref: sim/cockpit/switches/HSI_selector
+  #   set-dataref: sim/cockpit/switches/HSI_selector
+
+
+  # - index: 15
+  #   type: push
+  #   command: sim/autopilot/nose_up
+  #   text: "NOSE\nUP"
+  #   text-size: 26
+  #   text-bg-color: Black
+  #   text-font: DIN Condensed Black
+
+  # - index: 23
+  #   type: push
+  #   command: sim/autopilot/nose_down
+  #   text: "NOSE\nDOWN"
+  #   text-size: 26
+  #   text-bg-color: Black
+  #   text-font: DIN Condensed Black

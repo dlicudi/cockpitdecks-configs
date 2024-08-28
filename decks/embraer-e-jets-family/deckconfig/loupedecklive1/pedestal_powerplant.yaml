@@ -1,0 +1,211 @@
+name: pedestal_powerplant
+description: POWERPLANT
+includes: pager,encoders/encoders_lights
+default-icon-color: Black
+
+buttons:
+
+# - index: 0
+#   type: none
+#   label: ENGINE 1
+#   label-position: cl
+#   label-size: 10
+#   label-color: White
+#   decor:
+#     type: segment
+#     code: "1265"
+
+- index: 1
+  type: none
+  decor:
+    type: line
+    code: C
+
+- index: 2
+  type: none
+  decor:
+    type: line
+    code: A
+
+- index: 3
+  type: none
+  label: ENGINE 2
+  label-position: cl
+  label-size: 10
+  label-color: White
+  decor:
+    type: segment
+    code: "1265"
+
+- index: 5
+  type: none
+  decor:
+    type: line
+    code: F
+
+- index: 6
+  type: none
+  decor:
+    type: line
+    code: F
+
+- index: 0
+  type: none
+  label: ENGINE 1
+  label-size: 9
+  label-color: White
+  annunciator:
+    size: medium
+    model: F
+    parts:
+      F0:
+        color: white
+        text-size: 40
+        formula: "1"
+        text: "N1"
+      F2:
+        color: white
+        text-size: 40
+        formula: "1"
+        text: "N2"
+      F1:
+        color: lime
+        text-size: 40
+        formula: "${sim/cockpit2/engine/indicators/N2_percent[0]}"
+        text: "${formula}"
+        text-format: "{0:.0f}%"
+      F3:
+        color: lime
+        text-size: 40
+        formula: "${sim/cockpit2/engine/indicators/N1_percent[0]}"
+        text: "${formula}"
+        text-format: "{0:.0f}%"
+
+- index: 9
+  type: none
+  decor:
+    type: line
+    code: E
+
+- index: 10
+  type: none
+  decor:
+    type: line
+    code: D
+
+- index: 3
+  type: none
+  command: XCrafts/Starter_Eng_2_up_CW
+  label: ENGINE 2
+  label-size: 9
+  label-color: White
+  annunciator:
+    size: medium
+    model: F
+    parts:
+      F0:
+        color: white
+        text-size: 40
+        formula: "1"
+        text: "N1"
+      F2:
+        color: white
+        text-size: 40
+        formula: "1"
+        text: "N2"
+      F1:
+        color: lime
+        text-size: 40
+        formula: "${sim/cockpit2/engine/indicators/N2_percent[1]}"
+        text: "${formula}"
+        text-format: "{0:.0f}%"
+      F3:
+        color: lime
+        text-size: 40
+        formula: "${sim/cockpit2/engine/indicators/N1_percent[1]}"
+        text: "${formula}"
+        text-format: "{0:.0f}%"
+
+
+# STOP BUTTONS
+
+- index: 4
+  type: push
+  label: "STOP"
+  label-color: White
+  label-size: 9
+  command: XCrafts/Starter_Eng_1_down_CCW
+  text-bg-color: Black
+  multi-texts:
+    - text: "STOPPED"
+      text-size: 12
+      text-color: Green
+    - text: "PUSH\nTO STOP"
+      text-size: 12
+      text-color: Red
+    - text: "STARTING"
+      text-size: 12
+      text-color: Gold
+  formula: ${XCrafts/ERJ/engine1_starter_knob}
+
+- index: 7
+  type: push
+  label: "STOP"
+  label-color: White
+  label-size: 9
+  command: XCrafts/Starter_Eng_2_down_CCW
+  text-bg-color: Black
+  multi-texts:
+    - text: "STOPPED"
+      text-size: 12
+      text-color: Green
+    - text: "PUSH\nTO STOP"
+      text-size: 12
+      text-color: Red
+    - text: "STARTING"
+      text-size: 12
+      text-color: Gold
+  formula: ${XCrafts/ERJ/engine2_starter_knob}
+
+
+  # START BUTTONS
+
+- index: 8
+  type: long-press
+  vibrate: LONG
+  label: "START"
+  label-color: White
+  label-size: 9
+  command: XCrafts/Starter_Eng_1_up_CW
+  text-bg-color: Black
+  multi-texts:
+    - text: "PUSH\nTO RUN"
+      text-size: 12
+      text-color: Green
+    - text: "PUSH\nTO START"
+      text-size: 12
+      text-color: Green
+    - text: "STARTING"
+      text-size: 12
+      text-color: Gold
+  formula: ${XCrafts/ERJ/engine1_starter_knob}
+
+- index: 11
+  type: long-press
+  vibrate: LONG
+  label: "START"
+  label-color: White
+  label-size: 9
+  command: XCrafts/Starter_Eng_2_up_CW
+  text-bg-color: Black
+  multi-texts:
+    - text: "PUSH\nTO RUN"
+      text-size: 12
+      text-color: Green
+    - text: "PUSH\nTO START"
+      text-size: 12
+      text-color: Green
+    - text: "STARTING"
+      text-size: 12
+      text-color: Gold
+  formula: ${XCrafts/ERJ/engine2_starter_knob}

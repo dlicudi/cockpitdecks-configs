@@ -11,7 +11,7 @@ authors:
 
 # Cockpitdecks-Configs 1.0.0
 
-![](../assets/images/blog/pfi.png){ :width="200" }
+![](../../assets/images/blog/pfi.png){ :width="200" }
 
 
 Released 1.0.0 version with support for the following aircraft:

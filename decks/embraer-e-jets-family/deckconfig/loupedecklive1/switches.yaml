@@ -1,0 +1,185 @@
+description: Switch Panel
+includes: pager,encoders/encoders_lights
+name: switches
+
+buttons:
+
+- index: 0
+  type: page
+  page: overhead_electric
+  label: ELECTRIC
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  # text: ⚡
+  text: 🔌
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+
+- index: 1
+  type: page
+  page: overhead_cockpit_lights
+  label: COCKPIT LIGHTS
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: 💡
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+
+- index: 2
+  type: page
+  page: overhead_fuel
+  label: FUEL
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: ⛽
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+
+- index: 3
+  type: page
+  page: overhead_passenger_signs
+  label: PASSENGER SIGNS
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: 👥
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+
+- index: 4
+  type: page
+  page: overhead_fire_extinguisher
+  label: FIRE EXT.
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+
+- index: 5
+  type: page
+  page: overhead_apu_control
+  label: APU CONTROL
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+
+- index: 6
+  type: page
+  page: overhead_external_lights
+  label: EXT. LIGHTS
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: 💡
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+
+- index: 7
+  type: page
+  page: overhead_hydraulic
+  label: HYDRAULIC
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+
+# - index: 8
+#   type: page
+#   page: overhead_pressurization
+#   label: PRESSURIZATION
+#   label-color: Gold
+#   label-bg-color: Black
+#   label-size: 8
+#   text: 🛫🧻
+#   text-color: khaki
+#   text-size: 40
+#   text-font: fontawesome.otf
+#   text-position: cm
+#   text-bg-color: (40, 40, 40)
+
+- index: 8
+  type: page
+  page: pedestal_powerplant
+  label: POWERPLANT
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: ⚡
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+
+- index: 9
+  type: page
+  page: overhead_ice_protection
+  label: ICE PROTECTION
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: ❄
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+
+- index: 10
+  type: page
+  page: overhead_pneumatic
+  label: A/C/PNEUMATIC
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+
+- index: 11
+  type: page
+  page: switches2
+  text: →
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+

@@ -1,0 +1,192 @@
+# CHANGELOG
+#
+# 1.0.0  03-APR-2023  Initial version
+#
+---
+aircraft: Toliss A321neo
+description: Main FCU page for Loupedeck Live
+version: 1.0.0
+includes: includes/pager,includes/encoders_fcu
+
+buttons:
+  - index: 0
+    type: push
+    name: SPDMACH
+    label: "SPD\n\n\n\nMACH"
+    label-position: cm
+    label-font: DIN Bold
+    label-size: 10
+    command: toliss_airbus/ias_mach_button_push
+    push-switch:
+      button-size: 100
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+    # set-dataref: sim/cockpit2/autopilot/airspeed_is_mach
+  - index: 1
+    name: MASTER CAUTION
+    type: push
+    command: sim/annunciator/clear_master_caution
+    annunciator:
+      text: "MASTER\nCAUT"
+      text-color: darkorange
+      text-font: DIN Condensed Black.otf
+      text-size: 72
+      dataref: AirbusFBW/MasterCaut
+    vibrate: RUMBLE5
+    # options: animation_speed=0.5
+  - index: 2
+    name: MASTER WARNING
+    type: push
+    command: sim/annunciator/clear_master_warning
+    annunciator-animate:
+      text: "MASTER\nWARN"
+      text-color: firebrick
+      text-font: DIN Condensed Black.otf
+      text-size: 72
+      dataref: AirbusFBW/MasterWarn
+      animation-speed: 2.0
+    vibrate: LONG
+  - index: 3
+    type: onoff
+    set-dataref: AirbusFBW/ALT100_1000
+    name: ALTSCALE
+    label: "1000\n\n\n\n100"
+    label-font: DIN Bold
+    label-size: 10
+    label-position: cm
+    command: toliss_airbus/metric_alt_button_push
+    push-switch:
+      button-size: 100
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+  - index: 4
+    type: push
+    name: HDGTRACK
+    label: "HDG TRK\n\n\n\nV/S FPA"
+    label-position: cm
+    label-font: DIN Bold
+    label-size: 10
+    command: toliss_airbus/hdgtrk_button_push
+    push-switch:
+      button-size: 100
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+  - index: 9
+    name: A/THR
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/ATHRmode}
+        B1:
+          text: A/THR
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/ATHRbutton
+  - index: 5
+    name: AP1
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/AP1Engage}
+        B1:
+          text: AP1
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: toliss_airbus/ap1_push
+  - index: 8
+    type: onoff
+    name: BAROMETRIC
+    label: "inHg\n\n\n\nhPa"
+    label-position: cm
+    label-font: DIN Bold
+    label-size: 10
+    push-switch:
+      button-size: 100
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+    set-dataref: AirbusFBW/BaroUnitCapt
+  - index: 7
+    name: LOC
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/LOCilluminated}
+        B1:
+          text: LOC
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/LOCbutton
+    options: auto-repeat=3/3
+  - index: 11
+    name: APPR
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/APPRilluminated}
+        B1:
+          text: APPR
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/APPRbutton
+  - index: 10
+    name: EXPED
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/EXPEDilluminated}
+        B1:
+          text: EXPED
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/EXPEDbutton
+  - index: 6
+    name: AP2
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/AP2Engage}
+        B1:
+          text: AP2
+          text-size: 60
+          text-font: DIN Bold
+          formula: "1"
+    command: toliss_airbus/ap2_push

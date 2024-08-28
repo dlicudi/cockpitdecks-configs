@@ -1,0 +1,95 @@
+name: overhead_windshield_wiper
+description: Switch Panel
+includes: pager,encoders/encoders_lights
+default-icon-color: Black
+
+buttons:
+- index: 0
+  type: segment
+  code: NSKL
+
+- index: 1
+  type: segment
+  code: IJKL
+
+- index: 2
+  type: none
+  icon: INOP.png
+
+- index: 3
+  type: none
+  icon: INOP.png
+
+- index: 4
+  type: none
+  icon: INOP.png
+
+- index: 5
+  type: updown
+  label: WINDSHIELD WIPER 1
+  label-color: White
+  label-position: cb
+  label-size: 8
+  stops: 3
+  circular-switch:
+    button-size: 60
+    switch-style: large
+    tick-from: 180
+    tick-to: 310
+    tick-space: 40
+    tick-underline-width: 8
+    needle-color: white
+    needle-length: 30
+    tick-label-size: 24
+    options: invert
+    tick-labels:
+      - "OFF"
+      - "LOW"
+      - "HIGH"
+  dataref: sim/cockpit2/switches/wiper_speed_switch[0]
+  set-dataref: sim/cockpit2/switches/wiper_speed_switch[0]
+
+- index: 6
+  type: updown
+  label: WINDSHIELD WIPER 2
+  label-color: White
+  label-position: cb
+  label-size: 8
+  stops: 3
+  circular-switch:
+    button-size: 60
+    switch-style: large
+    tick-from: 180
+    tick-to: 310
+    tick-space: 40
+    tick-underline-width: 8
+    needle-color: white
+    needle-length: 30
+    tick-label-size: 24
+    options: invert
+    tick-labels:
+      - "OFF"
+      - "LOW"
+      - "HIGH"
+  dataref: sim/cockpit2/switches/wiper_speed_switch[1]
+  set-dataref: sim/cockpit2/switches/wiper_speed_switch[1]
+
+- index: 7
+  type: none
+  icon: INOP.png
+
+- index: 8
+  type: none
+  icon: INOP.png
+
+- index: 9
+  type: none
+  icon: INOP.png
+
+- index: 10
+  type: none
+  icon: INOP.png
+
+- index: 11
+  type: none
+  icon: INOP.png

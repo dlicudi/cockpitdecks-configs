@@ -1,0 +1,105 @@
+buttons:
+
+  - index: 24
+    type: page
+    page: index
+    label: HOME
+    label-color: Gold
+    label-bg-color: Black
+    text: ""
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 25
+    type: page
+    page: pfi
+    label: PFI
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: red
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 26
+    type: page
+    page: mfd
+    label: MFD
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: green
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 27
+    type: page
+    page: switches
+    label: SWITCHES
+    label-color: Gold
+    label-size: 10
+    text: "2"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 28
+    type: page
+    page: fcu
+    label: FCU
+    label-color: Gold
+    label-size: 10
+    text: "3"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 29
+    type: page
+    page: radio
+    label: RADIO
+    label-color: Gold
+    label-size: 10
+    text: "4"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 30
+    type: page
+    page: weather
+    label: WEATHER
+    label-color: Gold
+    text: 🌦
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 31
+    type: page
+    page: transponder
+    label: XPDR
+    label-color: Gold
+    label-size: 10
+    text: ""
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+

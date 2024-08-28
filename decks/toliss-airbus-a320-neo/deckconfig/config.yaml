@@ -1,0 +1,16 @@
+# Toliss A320neo
+# Version 1.0.0
+aircraft: Airbus A320neo
+icao: A320
+model:  Toliss Airbus A320neo
+decks:
+  - name: XPLive
+    type: LoupedeckLive
+    layout: loupedecklive1
+    brightness: 70
+  - name: StreamDeckXL
+    type: Stream Deck XL
+    layout: streamdeckxl1
+    brightness: 70
+description: Decks for Toliss Airbus A320neo
+# print-page-dir: screendumps/toliss-a220neo

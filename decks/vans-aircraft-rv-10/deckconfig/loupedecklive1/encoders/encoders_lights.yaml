@@ -1,0 +1,158 @@
+
+buttons:
+- index: e0
+  name: throttle_encoder
+  type: encoder-push
+  commands:
+  - sim/engines/throttle_max # push
+  - sim/engines/throttle_down
+  - sim/engines/throttle_up
+- index: e1
+  name: mixture_encoder
+  type: encoder-push
+  commands:
+  - sim/engines/mixture_max # push
+  - sim/engines/mixture_down
+  - sim/engines/mixture_up
+- index: e2
+  name: prop_encoder
+  type: encoder-push
+  commands:
+  - sim/engines/prop_up # push
+  - sim/engines/prop_down
+  - sim/engines/prop_up
+
+
+# - index: e0
+#   type: encoder-value-extended
+#   dataref: sim/cockpit2/switches/instrument_brightness_ratio[1]
+#   step: 0.01
+#   stepxl: 0.01
+#   value-min: 0
+#   value-max: 1
+#   initial-value: 0.75
+#   set-dataref: sim/cockpit2/switches/instrument_brightness_ratio[1]
+
+# - index: e1
+#   type: encoder-value-extended
+#   dataref: sim/cockpit2/switches/panel_brightness_ratio[0]
+#   step: 0.01
+#   stepxl: 0.01
+#   value-min: 0
+#   value-max: 1
+#   initial-value: 0.75
+#   set-dataref: sim/cockpit2/switches/panel_brightness_ratio[0]
+
+# - index: e2
+#   type: encoder-value-extended
+#   dataref: sim/cockpit2/switches/generic_lights_switch[0]
+#   step: 0.01
+#   stepxl: 0.01
+#   value-min: 0
+#   value-max: 1
+#   initial-value: 0.75
+#   set-dataref: sim/cockpit2/switches/generic_lights_switch[0]
+
+- index: e3
+  type: encoder-value-extended
+  dataref: sim/cockpit2/switches/instrument_brightness_ratio[1]
+  step: 0.1
+  stepxl: 0.1
+  value-min: 0
+  value-max: 1
+  initial-value: 0.75
+  set-dataref: sim/cockpit2/switches/instrument_brightness_ratio[1]
+
+- index: e4
+  type: encoder-value-extended
+  dataref: sim/cockpit2/switches/panel_brightness_ratio[0]
+  step: 0.1
+  stepxl: 0.1
+  value-min: 0
+  value-max: 1
+  initial-value: 0.75
+  set-dataref: sim/cockpit2/switches/panel_brightness_ratio[0]
+
+- index: e5
+  type: encoder-value-extended
+  dataref: sim/cockpit2/switches/generic_lights_switch[0]
+  step: 0.1
+  stepxl: 0.1
+  value-min: 0
+  value-max: 1
+  initial-value: 0.75
+  set-dataref: sim/cockpit2/switches/generic_lights_switch[0]
+
+- index: left
+  name: left_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: "THR"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit2/engine/actuators/throttle_ratio_all} 100 *"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:01.0f}"
+        text: "${formula}%"
+      - label: "MIX"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit2/engine/actuators/mixture_ratio_all} 100 *"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:01.0f}"
+        text: "${formula}%"
+      - label: "PROP"
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${sim/cockpit2/engine/actuators/prop_ratio_all} 100 *"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:01.0f}"
+        text: "${formula}%"
+
+- index: right
+  name: right_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: "Instr."
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${data:sim/cockpit2/switches/instrument_brightness_ratio[1]} 100 *"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:.0f}"
+        text: "${formula}%"
+      - label: "Panel"
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${data:sim/cockpit2/switches/panel_brightness_ratio[0]} 100 *"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:.0f}"
+        text: "${formula}%"
+      - label: "Ceiling"
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: "${data:sim/cockpit2/switches/generic_lights_switch[0]} 100 *"
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: "{0:.0f}"
+        text: "${formula}%"

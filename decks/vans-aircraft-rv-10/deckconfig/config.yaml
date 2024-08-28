@@ -1,0 +1,26 @@
+aircraft: Van's Aircraft RV-10
+icao: RV10
+model:  Van's Aircraft RV-10
+description: Decks for RV-10
+# print-page-dir: screendumps/vans-aircraft-rv-10
+decks:
+  - name: LoupedeckLive1
+    type: LoupedeckLive
+    layout: loupedecklive1
+    brightness: 70
+  - name: StreamDeckXL
+    type: Stream Deck XL
+    layout: streamdeckxl1
+    brightness: 70
+  # - name: Vdeck1
+  #   type: Virtual Streamdeck XL
+  #   layout: streamdeckxl1
+  #   decor:
+  #     background: streamdeck.xl.png
+  #     offset: [63, 130]
+  #     spacing: [19, 18]
+  #   disabled: false
+  #   address: 127.0.0.1
+  #   port: 7701
+
+

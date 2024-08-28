@@ -1,0 +1,179 @@
+description: FCU
+includes: pager,encoders/encoders_fcu
+default-icon-color: Black
+name: fcu2
+
+buttons:
+- index: 0
+  type: push
+  annunciator:
+    size: large
+    model: B
+    parts:
+      B0:
+        color: white
+        led: led
+        formula: ${sim/cockpit2/autopilot/flight_director_mode}
+      B1:
+        text: BANK
+        text-size: 60
+        text-font: DIN Bold
+        formula: "1"
+        framed: True
+  command: sim/autopilot/fdir_toggle
+
+- index: 1
+  type: push
+  annunciator:
+    size: large
+    model: B
+    parts:
+      B0:
+        color: white
+        led: led
+        formula: ${sim/cockpit2/autopilot/servos_on}
+      B1:
+        text: FMS
+        text-size: 60
+        text-font: DIN Bold
+        formula: "1"
+        framed: True
+  command: sim/autopilot/servos_toggle
+
+- index: 2
+  type: push
+  annunciator:
+    size: large
+    model: B
+    parts:
+      B0:
+        color: white
+        led: led
+        formula: ${sim/cockpit2/autopilot/heading_status}
+      B1:
+        text: HSI
+        text-size: 60
+        text-font: DIN Bold
+        formula: "1"
+        framed: True
+  command: sim/autopilot/heading
+
+- index: 3
+  type: push
+  annunciator:
+    size: large
+    model: B
+    parts:
+      B0:
+        color: white
+        led: led
+        formula: ${sim/cockpit2/autopilot/altitude_hold_status}
+      B1:
+        text: FPA
+        text-size: 60
+        text-font: DIN Bold
+        formula: "1"
+        framed: True
+  command: sim/autopilot/altitude_hold
+
+- index: 4
+  type: push
+  annunciator:
+    size: large
+    model: B
+    parts:
+      B0:
+        color: white
+        led: led
+        formula: ${sim/cockpit2/autopilot/gpss_status} 2 eq
+      B1:
+        text: PREV
+        text-size: 60
+        text-font: DIN Bold
+        formula: "1"
+        framed: True
+  command: sim/autopilot/gpss
+
+- index: 5
+  type: push
+  annunciator:
+    size: large
+    model: B
+    parts:
+      B0:
+        color: white
+        led: led
+        formula: ${sim/cockpit2/autopilot/vnav_armed}
+      B1:
+        text: O
+        text-size: 60
+        text-font: DIN Bold
+        formula: "1"
+        framed: True
+  command: sim/autopilot/vnav
+
+- index: 6
+  type: push
+  annunciator:
+    size: large
+    model: B
+    parts:
+      B0:
+        color: white
+        led: led
+        formula: ${sim/cockpit2/autopilot/approach_status}
+      B1:
+        text: SRC
+        text-size: 60
+        text-font: DIN Bold
+        formula: "1"
+        framed: True
+  command: sim/autopilot/approach
+
+- index: 7
+  type: push
+  annunciator:
+    size: large
+    model: B
+    parts:
+      B0:
+        color: white
+        led: led
+        formula: ${sim/cockpit2/autopilot/approach_status}
+      B1:
+        text: V/L
+        text-size: 60
+        text-font: DIN Bold
+        formula: "1"
+        framed: True
+  command: sim/autopilot/approach
+
+- index: 8
+  type: push
+  annunciator:
+    size: large
+    model: B
+    parts:
+      B0:
+        color: white
+        led: led
+        formula: ${sim/cockpit2/autopilot/vnav_armed}
+      B1:
+        text: O
+        text-size: 60
+        text-font: DIN Bold
+        formula: "1"
+        framed: True
+  command: sim/autopilot/vnav
+
+
+- index: 11
+  type: page
+  page: fcu
+  text: →
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+

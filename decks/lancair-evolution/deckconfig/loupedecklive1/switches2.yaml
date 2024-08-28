@@ -1,0 +1,260 @@
+description: Switch Panel
+includes: pager,encoders/encoders_fcu
+name: switches2
+
+
+buttons:
+
+  - index: 0
+    name: DOOR SEALS
+    label: DOOR SEALS
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+      # tick-label-color: Black
+    options: round
+    dataref: laminar/n844x/rocker/door_seals
+    commands:
+      - laminar/n844x/door_seals_on
+      - laminar/n844x/door_seals_off
+
+  - index: 1
+    name: NAV LTS
+    label: NAV LTS
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+      # tick-label-color: Black
+    options: round
+    dataref: sim/cockpit/electrical/nav_lights_on
+    commands:
+      - sim/lights/nav_lights_on
+      - sim/lights/nav_lights_off
+
+
+  - index: 2
+    name: STRB LTS
+    label: STRB LTS
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+      # tick-label-color: Black
+    options: round
+    dataref: sim/cockpit/electrical/strobe_lights_on
+    commands:
+      - sim/lights/strobe_lights_on
+      - sim/lights/strobe_lights_off
+
+  - index: 3
+    name: LAND LTS
+    label: LAND LTS
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+      # tick-label-color: Black
+    options: round
+    dataref: sim/cockpit/electrical/landing_lights_on
+    commands:
+      - sim/lights/landing_01_light_on
+      - sim/lights/landing_01_light_off
+
+  - index: 4
+    name: BLEED AIR
+    label: BLEED AIR
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+      # tick-label-color: Black
+    options: round
+    dataref: sim/cockpit2/bleedair/actuators/engine_bleed_sov[0]
+    commands:
+      - sim/bleed_air/engine_1_on
+      - sim/bleed_air/engine_1_off
+
+  - index: 5
+    name: CBN DUMP
+    label: CBN DUMP
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+      # tick-label-color: Black
+    options: round
+    dataref: sim/cockpit2/pressurization/actuators/dump_all_on
+    commands:
+      - sim/pressurization/dump_on
+      - sim/pressurization/dump_off
+
+  - index: 6
+    name: PART SEP ON
+    label: PART SEP ON
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+      # tick-label-color: Black
+    options: round
+    dataref: sim/cockpit/switches/anti_ice_engine_air[0]
+    commands:
+      - sim/altair/alternate_air_on_1
+      - sim/altair/alternate_air_off_1
+
+
+  - index: 7
+    name: PITOT HEAT
+    label: PITOT HEAT
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+      # tick-label-color: Black
+    options: round
+    dataref: sim/cockpit/switches/pitot_heat_on
+    commands:
+      - sim/ice/pitot_heat0_on
+      - sim/ice/pitot_heat0_off
+
+  - index: 8
+    name: PROP HEAT
+    label: PROP HEAT
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+      # tick-label-color: Black
+    options: round
+    dataref: sim/cockpit/switches/anti_ice_prop_heat
+    commands:
+      - sim/ice/prop_heat0_on
+      - sim/ice/prop_heat0_off
+
+  - index: 9
+    name: INLET HEAT
+    label: INLET HEAT
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+    options: round
+    dataref: sim/cockpit/switches/anti_ice_inlet_heat
+    commands:
+      - sim/ice/inlet_heat0_on
+      - sim/ice/inlet_heat0_off
+
+  - index: 10
+    name: AUTOPILOT
+    label: AUTOPILOT
+    label-font: DIN Condensed Regular
+    type: onoff
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
+    options: round
+    dataref: sim/cockpit2/autopilot/autopilot_electric_master
+    commands:
+      - sim/autopilot/electric_master_on
+      - sim/autopilot/electric_master_off
+
+  - index: 11
+    name: Switches
+    type: page
+    page: switches
+    # label: MORE
+    # label-size: 12
+    text: ←
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold
+    

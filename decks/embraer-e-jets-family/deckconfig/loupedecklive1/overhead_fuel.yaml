@@ -1,0 +1,129 @@
+name: overhead_fuel
+description: Switch Panel
+includes: pager,encoders/encoders_lights
+default-icon-color: Black
+
+buttons:
+
+- index: 0
+  type: push
+  command: sim/fuel/fuel_selector_3    
+  label: XFEED
+  label-color: white
+  label-size: 9
+  annunciator:
+    model: B
+    size: medium
+    B0:
+      led: bars
+      color: white
+      formula: ${sim/cockpit/engine/fuel_tank_selector} 3 eq
+    B1:
+      text: "LOW 1"
+      color: white
+      formula: "1"
+
+- index: 1
+  type: push
+  command: sim/fuel/left_fuel_selector_up
+  label: FUEL XFEED
+  label-color: white
+  label-size: 9
+  annunciator:
+    model: B
+    size: medium
+    B0:
+      led: bars
+      color: white
+      formula: ${sim/cockpit/engine/fuel_tank_selector} 4 eq
+    B1:
+      text: "OFF"
+      color: white
+      formula: "1"
+
+- index: 2
+  type: push
+  command: sim/fuel/fuel_selector_1
+  label: FUEL XFEED
+  label-color: white
+  label-size: 9
+  annunciator:
+    model: B
+    size: medium
+    B0:
+      led: bars
+      color: white
+      formula: ${sim/cockpit/engine/fuel_tank_selector} 1 eq
+    B1:
+      text: "LOW 2"
+      color: white
+      formula: "1"
+
+- index: 4
+  type: updown
+  label: DC PUMP
+  label-color: White
+  label-position: cb
+  stops: 2
+  circular-switch:
+    button-size: 60
+    switch-style: large
+    tick-from: 120
+    tick-to: 180
+    tick-space: 40
+    tick-underline-width: 8
+    needle-color: white
+    needle-length: 30
+    tick-label-size: 28
+    options: invert
+    tick-labels:
+      - "OFF"
+      - "AUTO"
+  formula: "${XCrafts/fuel_DC_pump_switch}"
+  set-dataref: XCrafts/fuel_DC_pump_switch
+
+- index: 6
+  type: updown
+  label: AC PUMP 1
+  label-color: White
+  label-position: cb
+  stops: 2
+  circular-switch:
+    button-size: 60
+    switch-style: large
+    tick-from: 120
+    tick-to: 180
+    tick-space: 40
+    tick-underline-width: 8
+    needle-color: white
+    needle-length: 30
+    tick-label-size: 28
+    options: invert
+    tick-labels:
+      - "OFF"
+      - "AUTO"
+  formula: "${sim/cockpit2/engine/actuators/fuel_pump_on[0]}"
+  set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
+
+- index: 7
+  type: updown
+  label: AC PUMP 2
+  label-color: White
+  label-position: cb
+  stops: 2
+  circular-switch:
+    button-size: 60
+    switch-style: large
+    tick-from: 120
+    tick-to: 180
+    tick-space: 40
+    tick-underline-width: 8
+    needle-color: white
+    needle-length: 30
+    tick-label-size: 28
+    options: invert
+    tick-labels:
+      - "OFF"
+      - "AUTO"
+  formula: "${sim/cockpit2/engine/actuators/fuel_pump_on[1]}"
+  set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[1]

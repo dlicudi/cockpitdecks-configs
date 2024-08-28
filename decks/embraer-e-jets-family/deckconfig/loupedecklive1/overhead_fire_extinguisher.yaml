@@ -1,0 +1,77 @@
+name: overhead_fire_extinguisher
+description: Switch Panel
+includes: pager,encoders/encoders_lights
+default-icon-color: Black
+
+buttons:
+- index: 0
+  label: FIRE 1
+  label-size: 12
+  label-color: White
+  type: updown
+  stops: 2
+  switch:
+    switch-style: 3dot
+    button-fill-color: White
+    button-underline-width: 4
+    button-underline-color: coral
+    options: invert
+    tick-labels:
+      - "ON"
+      - "OFF"
+    tick-space: 10
+    tick-color: white
+    tick-label-size: 40
+    tick-label-font: DIN Bold
+    tick-label-color: White
+  formula: "${sim/cockpit2/engine/actuators/fire_extinguisher_on[0]}"
+  set-dataref: sim/cockpit2/engine/actuators/fire_extinguisher_on[0]
+
+- index: 1
+  label: FIRE 2
+  label-size: 12
+  label-color: White
+  type: updown
+  stops: 2
+  switch:
+    switch-style: 3dot
+    button-fill-color: White
+    button-underline-width: 4
+    button-underline-color: coral
+    options: invert
+    tick-labels:
+      - "ON"
+      - "OFF"
+    tick-space: 10
+    tick-color: white
+    tick-label-size: 40
+    tick-label-font: DIN Bold
+    tick-label-color: White
+  formula: "${sim/cockpit2/engine/actuators/fire_extinguisher_on[1]}"
+  set-dataref: sim/cockpit2/engine/actuators/fire_extinguisher_on[1]
+
+- index: 3
+  label: TEST
+  label-size: 12
+  label-color: White
+  type: updown
+  stops: 2
+  switch:
+    switch-style: rect
+    button-fill-color: White
+    button-underline-width: 4
+    button-underline-color: coral
+    options: invert
+    tick-labels:
+      - "ON"
+      - "OFF"
+    tick-space: 10
+    tick-color: white
+    tick-label-size: 40
+    tick-label-font: DIN Bold
+    tick-label-color: White
+  formula: "${XCrafts/ERJ/fire_test_on}"
+  set-dataref: XCrafts/ERJ/fire_test_on
+
+
+  

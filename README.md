@@ -6,11 +6,22 @@ A collection of aircraft configs for [cockpitdecks](https://github.com/devleaks/
 Documentation: [Cockpitdecks Configs Docs](http://dlicudi.github.io/cockpitdecks-configs/)
 
 ## Aircraft
-- [x] Cessna 172 SP (Laminar Research)
-- [x] Cirrus SR22 (Laminar Research)
-- [x] Beechcraft Baron 58 (Laminar Research)
-- [ ] Robin DR401 (Aerobask)
-- [ ] Lancair Evolution (Laminar Research)
+
+Aircraft configs completed, planned or in progress.
+
+### Laminar Research
+- [x] LR Cessna 172 SP (Laminar Research)
+- [x] LR Cirrus SR22 (Laminar Research) 
+- [x] LR Beechcraft Baron 58 (Laminar Research)
+- [x] LR Lancair Evolution (Laminar Research)
+
+### Toliss
+- [x] Toliss Airbus A321 Neo (devleaks)
+- [ ] Toliss Airbus A320 Neo
+
+### Aerobask
+- [ ] LR Robin DR401 (Aerobask)
+
 
 ## Examples
 

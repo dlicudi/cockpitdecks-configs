@@ -1,14 +1,14 @@
-# Definition of decks for Beechcraft Baron 58
-#
 aircraft: Beechcraft Baron 58
+description: Decks for Beechcraft Baron 58
+author: Duane Licudi <dlicudi@gmail.com> (https://github.com/dlicudi/)
 icao: BE58
 model:  Beechcraft Baron 58
+notes: TODO
 decks:
   - name: XPLive
     type: LoupedeckLive
     layout: loupedecklive1
     brightness: 70
-description: Decks for Beechcraft Baron 58
 
 # cache-icon: True
 # dataref-roundings:

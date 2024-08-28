@@ -1,0 +1,43 @@
+description: Switch Panel
+includes: pager,encoders/encoders_lights
+name: switches2
+
+buttons:
+
+- index: 0
+  type: page
+  page: overhead_pressurization
+  label: PRESSURIZATION
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: 🛫🧻
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+
+- index: 1
+  type: page
+  page: overhead_windshield_wiper
+  label: WINDSHIELD WIPER
+  label-color: Gold
+  label-bg-color: Black
+  label-size: 8
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+
+- index: 11
+  type: page
+  page: switches
+  text: →
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)

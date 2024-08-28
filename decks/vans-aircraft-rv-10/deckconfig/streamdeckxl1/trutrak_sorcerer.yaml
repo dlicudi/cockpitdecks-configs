@@ -1,0 +1,310 @@
+description: TruTrak Sorcerer
+includes: includes/pagerfull
+name: trutrak_sorcerer
+
+buttons:
+
+- index: 0
+  type: none
+  annunciator:
+    size: full
+    model: E
+    parts:
+      E0:
+        color: lime
+        text-size: 60
+        formula: "1"
+        text: "TRK"
+      E1:
+        led: dot
+        color: lime
+        formula: "${laminar/rv10/autopilot_knob_mode} 0 eq"
+      E2:
+        color: lime
+        text-size: 80
+        formula: "1"
+        text: "${sim/cockpit/autopilot/heading_mag}"
+        text-format: "{0:03.0f}"
+
+- index: 1
+  type: none
+  annunciator:
+    size: full
+    model: E
+    parts:
+      E0:
+        color: lime
+        text-size: 60
+        formula: "1"
+        text: "ALT"
+      E1:
+        led: dot
+        color: lime
+        formula: "${laminar/rv10/autopilot_knob_mode} 1 eq"
+      E2:
+        color: lime
+        text-size: 60
+        formula: "1"
+        text: "${sim/cockpit/autopilot/altitude}"
+        text-format: "{0:.0f}"
+
+- index: 2
+  type: none
+  icon: INOP.png
+
+- index: 3
+  type: push
+  command: laminar/rv10/ap_knob_right
+  options: auto-repeat=1/0.05
+  multi-texts:
+    - text: "TRK\nUP"
+      text-color: white
+      text-size: 50
+      text-font: DIN Condensed Light
+      text-position: cm
+      text-bg-color: black
+    - text: "ALT\nUP"
+      text-color: white
+      text-size: 50
+      text-font: DIN Condensed Light
+      text-position: cm
+      text-bg-color: black
+  formula: ${laminar/rv10/autopilot_knob_mode}
+
+
+
+- index: 4
+  type: push
+  text: TRK
+  text-color: white
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: black
+  command: sim/autopilot/track
+
+- index: 5
+  type: push
+  text-bg-color: black
+  multi-texts:
+    - text: NAV
+      text-color: White
+      text-size: 40
+      text-font: DIN Condensed Light
+    - text: NAV
+      text-color: White
+      text-size: 40
+      text-font: DIN Condensed Light
+    - text: NAV
+      text-color: Lime
+      text-size: 40
+      text-font: DIN Condensed Light
+  formula: ${sim/cockpit2/autopilot/nav_status}
+  command: sim/autopilot/gpss
+
+- index: 6
+  type: push
+  text: REV
+  text-color: white
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: black
+  command: sim/autopilot/back_course
+
+- index: 7
+  type: push
+  text: DN
+  text-color: white
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: black
+  command: sim/autopilot/nose_down
+  options: auto-repeat=1/0.05
+
+- index: 8
+  type: none
+  annunciator:
+    size: full
+    model: B
+    parts:
+      B0:
+        color: lime
+        text-size: 60
+        formula: "${sim/cockpit2/autopilot/st55_gpss}"
+        text: "+"
+      E2:
+        color: lime
+        text-size: 60
+        formula: "${sim/cockpit2/autopilot/st55_gpss}"
+        text: "GPSS"
+
+- index: 9
+  type: none
+  annunciator:
+    size: full
+    model: E
+    parts:
+      E0:
+        color: lime
+        text-size: 60
+        formula: "1"
+        text: "SVS"
+      E1:
+        led: dot
+        color: lime
+        formula: "${sim/cockpit/autopilot/vertical_velocity} abs"
+      E2:
+        color: lime
+        text-size: 60
+        formula: "1"
+        text: "${sim/cockpit/autopilot/vertical_velocity}"
+        text-format: "{0:.0f}"
+
+- index: 10
+  type: none
+  icon: INOP.png
+
+- index: 11
+  type: none
+  icon: INOP.png
+
+- index: 12
+  type: push
+  text: ALT
+  text-color: white
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: black
+  command: sim/autopilot/altitude_hold
+  vibrate: SHORT
+
+- index: 13
+  type: push
+  text-bg-color: black
+  multi-texts:
+    - text: SEL
+      text-color: White
+      text-size: 40
+      text-font: DIN Condensed Light
+    - text: SEL
+      text-color: White
+      text-size: 40
+      text-font: DIN Condensed Light
+    - text: SEL
+      text-color: Lime
+      text-size: 40
+      text-font: DIN Condensed Light
+  formula: ${sim/cockpit2/autopilot/vvi_status}
+  command: sim/autopilot/alt_vs
+
+- index: 14
+  type: push
+  text: VNAV
+  text-color: white
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: black
+  command: sim/autopilot/vnav
+  vibrate: SHORT
+
+- index: 15
+  type: none
+  icon: INOP.png
+
+- index: 16
+  type: none
+  icon: INOP.png
+
+- index: 17
+  type: none
+  icon: INOP.png
+
+- index: 18
+  type: none
+  icon: INOP.png
+
+- index: 19
+  type: push
+  command: laminar/rv10/ap_knob_left
+  options: auto-repeat=1/0.05
+  multi-texts:
+    - text: "TRK\nDN"
+      text-color: white
+      text-size: 50
+      text-font: DIN Condensed Light
+      text-position: cm
+      text-bg-color: black
+    - text: "ALT\nDN"
+      text-color: white
+      text-size: 50
+      text-font: DIN Condensed Light
+      text-position: cm
+      text-bg-color: black
+  formula: ${laminar/rv10/autopilot_knob_mode}
+
+- index: 20
+  type: push
+  text-bg-color: black
+  multi-texts:
+    - text: AP
+      text-color: White
+      text-size: 40
+      text-font: DIN Condensed Light
+    - text: AP
+      text-color: White
+      text-size: 40
+      text-font: DIN Condensed Light
+    - text: AP
+      text-color: Lime
+      text-size: 40
+      text-font: DIN Condensed Light
+  formula: ${sim/cockpit/autopilot/autopilot_mode}  
+  command: sim/autopilot/servos_toggle
+
+- index: 21
+  name: GPSS
+  type: push
+  text-bg-color: black
+  multi-texts:
+    - text: GPSS
+      text-color: White
+      text-size: 40
+      text-font: DIN Condensed Light
+    - text: GPSS
+      text-color: White
+      text-size: 40
+      text-font: DIN Condensed Light
+    - text: GPSS
+      text-color: Lime
+      text-size: 40
+      text-font: DIN Condensed Light
+  formula: ${sim/cockpit2/autopilot/gpss_status}
+  command: sim/autopilot/gpss
+
+- index: 22
+  type: push
+  text: EXT
+  text-color: white
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: black
+  command: sim/autopilot/heading
+
+- index: 23
+  type: push
+  text: UP
+  text-color: white
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: black
+  command: sim/autopilot/nose_up
+  options: auto-repeat=1/0.05
+
+
+

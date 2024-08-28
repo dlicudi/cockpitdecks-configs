@@ -1,0 +1,202 @@
+name: overhead_pneumatic
+description: Switch Panel
+includes: pager,encoders/encoders_lights
+default-icon-color: Black
+
+buttons:
+- index: 0
+  type: updown
+  label: CKPT
+  label-color: White
+  label-size: 10
+  label-position: cb
+  stops: 11
+  initial-value: 18
+  circular-switch:
+    button-size: 60
+    switch-style: large
+    tick-from: 45
+    tick-to: 310
+    tick-space: 40
+    tick-underline-width: 8
+    needle-color: white
+    needle-length: 30
+    tick-label-size: 24
+    options: invert
+    tick-labels:
+      - "18"
+      - "19"
+      - "20"
+      - "21"
+      - "22"
+      - "23"
+      - "24"
+      - "25"
+      - "26"
+      - "27"
+      - "28"
+  dataref: XCrafts/temp_cockpit_switch
+  set-dataref: XCrafts/temp_cockpit_switch
+
+- index: 1
+  label: RECIRC
+  label-size: 10
+  label-color: white
+  type: onoff
+  annunciator:
+    size: small
+    model: A
+    parts:
+      A0:
+        text-color: white
+        led: led
+        formula: "${XCrafts/bleedair/recirc_switch} 0 eq"
+  set-dataref: XCrafts/bleedair/recirc_switch
+
+- index: 2
+  type: updown
+  label: PAX CABIN
+  label-color: White
+  label-size: 10
+  label-position: cb
+  stops: 11
+  initial-value: 18
+  circular-switch:
+    button-size: 60
+    switch-style: large
+    tick-from: 45
+    tick-to: 310
+    tick-space: 40
+    tick-underline-width: 8
+    needle-color: white
+    needle-length: 30
+    tick-label-size: 24
+    options: invert
+    tick-labels:
+      - "18"
+      - "19"
+      - "20"
+      - "21"
+      - "22"
+      - "23"
+      - "24"
+      - "25"
+      - "26"
+      - "27"
+      - "28"
+  dataref: XCrafts/temp_cabin_switch
+  set-dataref: XCrafts/temp_cabin_switch
+
+- index: 3
+  type: none
+  icon: INOP.png
+
+- index: 4
+  label: PACK 1
+  label-size: 10
+  label-color: white
+  type: onoff
+  annunciator:
+    size: small
+    model: A
+    parts:
+      A0:
+        text-color: white
+        led: led
+        formula: "${sim/cockpit2/bleedair/actuators/pack_left} 0 eq"
+  commands:
+    - sim/bleed_air/pack_left_toggle
+    - sim/bleed_air/pack_left_toggle
+
+- index: 5
+  label: XBLEED
+  label-size: 10
+  label-color: white
+  type: onoff
+  annunciator:
+    size: small
+    model: A
+    parts:
+      A0:
+        text-color: white
+        led: led
+        formula: "${sim/cockpit/warnings/annunciators/bleed_air_off[1]}"
+  commands:
+    - sim/bleed_air/isolation_right_toggle
+    - sim/bleed_air/isolation_right_toggle
+
+- index: 6
+  label: PACK 2
+  label-size: 10
+  label-color: white
+  type: onoff
+  annunciator:
+    size: small
+    model: A
+    parts:
+      A0:
+        text-color: white
+        led: led
+        formula: "${sim/cockpit2/bleedair/actuators/pack_right} 0 eq"
+  commands:
+    - sim/bleed_air/pack_right_toggle
+    - sim/bleed_air/pack_right_toggle
+
+- index: 7
+  type: none
+  icon: INOP.png
+
+- index: 8
+  label: BLEED 1
+  label-size: 10
+  label-color: white
+  type: onoff
+  annunciator:
+    size: small
+    model: A
+    parts:
+      A0:
+        text-color: white
+        led: led
+        formula: "${sim/cockpit2/bleedair/actuators/engine_bleed_sov[0]} 0 eq"
+  commands:
+    - sim/bleed_air/engine_1_toggle
+    - sim/bleed_air/engine_1_toggle
+
+- index: 9
+  label: BLEED APU
+  label-size: 10
+  label-color: white
+  type: onoff
+  annunciator:
+    size: small
+    model: A
+    parts:
+      A0:
+        text-color: white
+        led: led
+        formula: "${sim/cockpit2/bleedair/actuators/apu_bleed}"
+  commands:
+    - sim/bleed_air/apu_toggle
+    - sim/bleed_air/apu_toggle
+
+- index: 10
+  label: BLEED 2
+  label-size: 10
+  label-color: white
+  type: onoff
+  annunciator:
+    size: small
+    model: A
+    parts:
+      A0:
+        text-color: white
+        led: led
+        formula: "${sim/cockpit2/bleedair/actuators/engine_bleed_sov[1]} 0 eq"
+  commands:
+    - sim/bleed_air/engine_2_toggle
+    - sim/bleed_air/engine_2_toggle
+
+- index: 11
+  type: none
+  icon: INOP.png

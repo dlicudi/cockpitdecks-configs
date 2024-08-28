@@ -1,0 +1,178 @@
+# Views v.1.0.0
+name: views
+includes: includes/pager,includes/encoders_fcu
+
+buttons:
+
+- index: 0
+  type: push
+  name: QUICKLOOK0
+  label: QUICK LOOK
+  label-color: Gold
+  label-size: 10
+  text: "0"
+  text-color: khaki
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/quick_look_0
+  long-press: sim/view/quick_look_0_mem
+
+- index: 1
+  type: push
+  name: QUICKLOOK1
+  label: QUICK LOOK
+  label-color: Gold
+  label-size: 10
+  text: "1"
+  text-color: khaki
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/quick_look_1
+  long-press: sim/view/quick_look_1_mem
+
+- index: 2
+  type: push
+  name: QUICKLOOK2
+  label: QUICK LOOK
+  label-color: Gold
+  label-size: 10
+  text: "2"
+  text-color: khaki
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/quick_look_2
+  long-press: sim/view/quick_look_2_mem
+
+- index: 3
+  type: push
+  name: QUICKLOOK3
+  label: QUICK LOOK
+  label-color: Gold
+  label-size: 10
+  text: "3"
+  text-color: khaki
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/quick_look_3
+  long-press: sim/view/quick_look_3_mem
+
+- index: 4
+  type: push
+  name: QUICKLOOK4
+  label: QUICK LOOK
+  label-color: Gold
+  label-size: 10
+  text: "4"
+  text-color: khaki
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/quick_look_4
+  long-press: sim/view/quick_look_4_mem
+
+- index: 5
+  type: push
+  name: QUICKLOOK5
+  label: QUICK LOOK
+  label-color: Gold
+  label-size: 10
+  text: "5"
+  text-color: khaki
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/quick_look_5
+  long-press: sim/view/quick_look_5_mem
+
+- index: 6
+  type: push
+  name: QUICKLOOK6
+  label: QUICK LOOK
+  label-color: Gold
+  label-size: 10
+  text: "6"
+  text-color: khaki
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/quick_look_6
+  long-press: sim/view/quick_look_6_mem
+
+- index: 7
+  type: push
+  name: QUICKLOOK7
+  label: QUICK LOOK
+  label-color: Gold
+  label-size: 10
+  text: "7"
+  text-color: khaki
+  text-size: 40
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/quick_look_7
+  long-press: sim/view/quick_look_7_mem
+
+
+- index: 8
+  type: push
+  name: COCKPIT
+  label: VIEW
+  label-color: Gold
+  text: 3D COCKPIT
+  text-color: khaki
+  text-size: 20
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/3d_cockpit
+
+- index: 9
+  type: push
+  name: CHASE
+  label: VIEW
+  label-color: Gold
+  text: CHASE
+  text-color: khaki
+  text-size: 20
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/chase
+
+- index: 10
+  type: push
+  name: FORWARD
+  label: VIEW
+  label-color: Gold
+  text: FORWARD
+  text-color: khaki
+  text-size: 20
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/forward
+
+- index: 11
+  type: push
+  name: PHYSICS
+  label: VIEW
+  label-color: Gold
+  text: PHYSICS
+  text-color: khaki
+  text-size: 20
+  text-font: DIN Condensed Light
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/view/show_physics_model

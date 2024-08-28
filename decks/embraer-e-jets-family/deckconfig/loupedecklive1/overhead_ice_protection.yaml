@@ -1,0 +1,91 @@
+name: overhead_ice_protection
+description: Switch Panel
+includes: pager,encoders/encoders_lights
+default-icon-color: Black
+
+buttons:
+- index: 0
+  type: push
+  command: sim/ice/window_heat_tog
+  label: WINDSHIELD HEATING
+  label-color: white
+  label-size: 8
+  annunciator:
+    model: B
+    size: medium
+    B0:
+      led: bars
+      color: white
+      formula: ${sim/cockpit2/ice/ice_window_heat_on} 1 eq not
+    B1:
+      text: "1"
+      formula: "1"
+
+- index: 1
+  type: push
+  command: sim/ice/window_heat_tog
+  label: WINDSHIELD HEATING
+  label-color: white
+  label-size: 8
+  annunciator:
+    model: B
+    size: medium
+    B0:
+      led: bars
+      color: white
+      formula: ${sim/cockpit2/ice/ice_window_heat_on} 1 eq not
+    B1:
+      text: "2"
+      formula: "1"
+
+
+- index: 4
+  type: onoff
+  label: ICE PROTECTION
+  label-color: white
+  label-size: 9
+  set-dataref: sim/cockpit2/ice/cowling_thermal_anti_ice_per_engine[0]
+  annunciator:
+    model: B
+    size: medium
+    B0:
+      led: bars
+      color: white
+      formula: ${sim/cockpit2/ice/cowling_thermal_anti_ice_per_engine[0]} 1 eq not
+    B1:
+      text: "ENG 1"
+      formula: "1"
+
+- index: 5
+  type: onoff
+  label: ICE PROTECTION
+  label-color: white
+  label-size: 9
+  set-dataref: sim/cockpit2/ice/ice_surface_hot_bleed_air_on
+  annunciator:
+    model: B
+    size: medium
+    B0:
+      led: bars
+      color: white
+      formula: ${sim/cockpit2/ice/ice_surface_hot_bleed_air_on} 1 eq not
+    B1:
+      text: "WING"
+      formula: "1"
+
+- index: 6
+  type: onoff
+  set-dataref: sim/cockpit2/ice/cowling_thermal_anti_ice_per_engine[1]
+  label: ICE PROTECTION
+  label-color: white
+  label-size: 9
+  annunciator:
+    model: B
+    size: medium
+    B0:
+      led: bars
+      color: white
+      formula: ${sim/cockpit2/ice/cowling_thermal_anti_ice_per_engine[1]} 1 eq not
+    B1:
+      text: "ENG 2"
+      formula: "1"

@@ -5,3 +5,6 @@ resources
 examples/*
 .vscode/*
 site/*
+.cache/*
+screendumps/*
+.env/
