@@ -54,7 +54,7 @@ buttons:
     decor:
       type: segment
       code: IJKL
-  #    text: "ENG 1\nL TK PUMPS"
+      #    text: "ENG 1\nL TK PUMPS"
   - index: 10
     type: onoff
     label: ACT
@@ -65,7 +65,7 @@ buttons:
         text: FAULT
         color: darkorange
       B1:
-        text: "FWD"
+        text: FWD
         color: deepskyblue
         framed: true
         dataref: AirbusFBW/FuelOHPArray[9]
@@ -80,7 +80,7 @@ buttons:
         color: lime
         dataref: AirbusFBW/FuelOHPArray[7]
       B1:
-        text: "ON"
+        text: ON
         color: white
         framed: true
         dataref: AirbusFBW/FuelOHPArray[7]
@@ -98,15 +98,17 @@ buttons:
     decor:
       type: segment
       code: GNSIJ
-  #    text: "ENG 2\nR TK PUMPS"
+      #    text: "ENG 2\nR TK PUMPS"
   - index: 7
     name: up
     type: page
     page: ovrhdhyd
-    text: ${fa:arrow-up}
-    text-font: fontawesome.otf
-    text-size: 60
-  # ### LINE 2 ###  8-15 ######################################################
+    label: HYD
+    label-size: 10
+    text:
+      text: ${fa:arrow-up}
+      text-font: fontawesome.otf
+      text-size: 60
   - index: 14
     type: none
     label: R TK
@@ -135,7 +137,7 @@ buttons:
         color: darkorange
         dataref: AirbusFBW/FuelTVSDArray[0]
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/FuelOHPArray[0]} not
@@ -152,7 +154,7 @@ buttons:
         text: FAULT
         color: darkorange
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/FuelOHPArray[1]} not
@@ -169,7 +171,7 @@ buttons:
         text: FAULT
         color: darkorange
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/FuelOHPArray[2]} not
@@ -186,7 +188,7 @@ buttons:
         text: FAULT
         color: darkorange
       B1:
-        text: "MAN"
+        text: MAN
         color: white
         framed: true
         formula: ${AirbusFBW/FuelOHPArray[6]} not
@@ -203,7 +205,7 @@ buttons:
         text: FAULT
         color: darkorange
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/FuelOHPArray[3]} not
@@ -220,7 +222,7 @@ buttons:
         text: FAULT
         color: darkorange
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/FuelOHPArray[4]} not
@@ -237,21 +239,23 @@ buttons:
         text: FAULT
         color: darkorange
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/FuelOHPArray[5]} not
     set-dataref: AirbusFBW/FuelOHPArray[5]
     initial-value: 0
-  # ### LINE 3 ### 16-23 ######################################################
+    # ### LINE 3 ### 16-23 ######################################################
   - index: 30
     name: down
     type: page
     page: ovrhdelec
-    text: ${fa:arrow-down}
-    text-font: fontawesome.otf
-    text-size: 60
-  # ### LINE 4 ### 24-31 ######################################################
+    label: ELEC
+    label-size: 10
+    text:
+      text: ${fa:arrow-down}
+      text-font: fontawesome.otf
+      text-size: 60
   - index: 31
     name: Index
     type: page

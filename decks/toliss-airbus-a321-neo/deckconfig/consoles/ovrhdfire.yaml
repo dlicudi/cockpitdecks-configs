@@ -3,20 +3,22 @@ buttons:
   # ### LINE 1 ###  0- 7 ######################################################
   - index: 1
     type: none
-    text: ENG 1
-    text-size: 30
-    text-font: DIN Bold
+    text:
+      text: ENG 1
+      text-font: DIN Bold
+      text-size: 30
   - index: 3
     type: none
-    text: APU
-    text-size: 30
-    text-font: DIN Bold
+    text:
+      text: APU
+      text-font: DIN Bold
+      text-size: 30
   - index: 5
     type: none
-    text: ENG 2
-    text-size: 30
-    text-font: DIN Bold
-  # ### LINE 2 ###  8-15 ######################################################
+    text:
+      text: ENG 2
+      text-font: DIN Bold
+      text-size: 30
   - index: 8
     type: none
     name: ENG1AGENT1
@@ -77,7 +79,7 @@ buttons:
       B1:
         text: DISCH
         framed: true
-  # ### LINE 3 ### 16-23 ######################################################
+        # ### LINE 3 ### 16-23 ######################################################
   - index: 17
     type: none
     name: ENG1FIRE
@@ -121,13 +123,17 @@ buttons:
     name: down
     type: page
     page: ovrhdhyd
-    text: ${fa:arrow-down}
-    text-font: fontawesome.otf
-    text-size: 60
-  # ### LINE 4 ### 24-31 ######################################################
+    label: HYD
+    label-size: 10
+    text:
+      text: ${fa:arrow-down}
+      text-font: fontawesome.otf
+      text-size: 60
   - index: 25
     type: long-press
-    label: "ENG 1\nTEST"
+    label: |-
+      ENG 1
+      TEST
     command: AirbusFBW/FireTestENG1
     push-switch:
       button-size: 120
@@ -136,7 +142,9 @@ buttons:
       witness-size: 0
   - index: 27
     type: long-press
-    label: "APU\nTEST"
+    label: |-
+      APU
+      TEST
     push-switch:
       button-size: 120
       button-fill-color: black
@@ -146,7 +154,9 @@ buttons:
     formula: 1
   - index: 29
     type: long-press
-    label: "ENG 2\nTEST"
+    label: |-
+      ENG 2
+      TEST
     command: AirbusFBW/FireTestENG2
     push-switch:
       button-size: 120

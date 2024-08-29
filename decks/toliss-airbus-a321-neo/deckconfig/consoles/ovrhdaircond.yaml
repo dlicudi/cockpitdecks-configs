@@ -40,9 +40,9 @@ buttons:
       tick-width: 8
       tick-underline-width: 8
       tick-labels:
-        - "LO"
-        - "NORM"
-        - "HI"
+        - LO
+        - NORM
+        - HI
   - index: 2
     name: ACCOCKPIT
     label: COCKPIT
@@ -68,13 +68,13 @@ buttons:
       tick-width: 8
       tick-underline-width: 8
       tick-labels:
-        - "COLD"
+        - COLD
         - ""
         - ""
         - ""
         - ""
         - ""
-        - "HOT"
+        - HOT
   - index: 3
     name: ACFWDCABIN
     label: FWD CABIN
@@ -100,13 +100,13 @@ buttons:
       tick-width: 8
       tick-underline-width: 8
       tick-labels:
-        - "COLD"
+        - COLD
         - ""
         - ""
         - ""
         - ""
         - ""
-        - "HOT"
+        - HOT
   - index: 4
     name: ACAFTCABIN
     type: updown
@@ -132,13 +132,13 @@ buttons:
       tick-width: 8
       tick-underline-width: 8
       tick-labels:
-        - "COLD"
+        - COLD
         - ""
         - ""
         - ""
         - ""
         - ""
-        - "HOT"
+        - HOT
   - index: 6
     name: HOTAIR
     type: onoff
@@ -148,12 +148,12 @@ buttons:
       model: B
       parts:
         B0:
-          text: "FAULT"
+          text: FAULT
           color: darkorange
           font: DIN Condensed Bold
           text-size: 60
         B1:
-          text: "OFF"
+          text: OFF
           color: white
           framed: true
           size: 60
@@ -162,11 +162,13 @@ buttons:
   - index: 7
     name: up
     type: page
+    label: ELEC
+    label-size: 10
     page: ovrhdelec
-    text: ${fa:arrow-up}
-    text-font: fontawesome.otf
-    text-size: 60
-  # ### LINE 2 ###  8-15 ######################################################
+    text:
+      text: ${fa:arrow-up}
+      text-font: fontawesome.otf
+      text-size: 60
   - index: 9
     decor:
       type: segment
@@ -227,13 +229,13 @@ buttons:
       model: B
       parts:
         B0:
-          text: "FAULT"
+          text: FAULT
           color: darkorange
           font: DIN Condensed Bold
           text-size: 40
           formula: ${AirbusFBW/Pack1SwitchIllum} ${AirbusFBW/Pack1FCVInd} - abs
         B1:
-          text: "OFF"
+          text: OFF
           color: white
           framed: true
           size: 60
@@ -248,12 +250,12 @@ buttons:
       model: B
       parts:
         B0:
-          text: "FAULT"
+          text: FAULT
           color: darkorange
           size: 40
           formula: 0
         B1:
-          text: "OFF"
+          text: OFF
           color: white
           framed: true
           size: 60
@@ -267,7 +269,7 @@ buttons:
       model: B
       parts:
         B1:
-          text: "ON"
+          text: ON
           color: white
           framed: true
           size: 60
@@ -287,7 +289,7 @@ buttons:
       model: B
       parts:
         B1:
-          text: "ON"
+          text: ON
           color: deepskyblue
           framed: true
           size: 60
@@ -319,9 +321,9 @@ buttons:
       tick-width: 8
       tick-underline-width: 8
       tick-labels:
-        - "SHUT"
-        - "AUTO"
-        - "OPEN"
+        - SHUT
+        - AUTO
+        - OPEN
   - index: 29
     name: ENG2BLEED
     type: onoff
@@ -331,12 +333,12 @@ buttons:
       model: B
       parts:
         B0:
-          text: "FAULT"
+          text: FAULT
           color: darkorange
           size: 40
           formula: 0
         B1:
-          text: "OFF"
+          text: OFF
           color: white
           framed: true
           size: 60
@@ -351,39 +353,29 @@ buttons:
       model: B
       parts:
         B0:
-          text: "FAULT"
+          text: FAULT
           color: darkorange
           font: DIN Condensed Bold
           text-size: 40
           formula: ${AirbusFBW/Pack2SwitchIllum} ${AirbusFBW/Pack2FCVInd} - abs
         B1:
-          text: "OFF"
+          text: OFF
           color: white
           framed: true
           size: 60
           formula: ${AirbusFBW/Pack2SwitchIllum} not
     set-dataref: AirbusFBW/Pack2Switch
-  # ### LINE 3 ### 16-23 ######################################################
+    # ### LINE 3 ### 16-23 ######################################################
   - index: 23
     name: down
     type: page
+    label: EXT.LIGHTS
+    label-size: 10
     page: index
-    text: ${fa:arrow-down}
-    text-font: fontawesome.otf
-    text-size: 60
-  # ### LINE 4 ### 24-31 ######################################################
-  # - index: 30
-  #   name: RELOAD
-  #   type: reload
-  #   label: RELOAD
-  #   label-size: 14
-  #   label-position: cm
-  #   text: ${fa:rotate-right}
-  #   text-font: fontawesome.otf
-  #   text-color: lime
-  #   text-size: 80
-  #   text-position: cm
-  #   text-bg-color: (94, 111, 130)
+    text:
+      text: ${fa:arrow-down}
+      text-font: fontawesome.otf
+      text-size: 60
   - index: 31
     name: Index
     type: page

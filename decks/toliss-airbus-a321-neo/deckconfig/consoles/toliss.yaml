@@ -1,8 +1,3 @@
-# CHANGELOG
-#
-# 1.0.0  03-APR-2023  Initial version
-#
----
 aircraft: Toliss A321neo
 description: Toliss aircraft specific actions, not available in real aircraft...
 version: 1.0.0
@@ -17,18 +12,19 @@ buttons:
     name: ISCS
     type: push
     multi-icons:
-      - ISCSBLUE
-      - ISCSBLUE
+      - ISCS_DARK
+      - ISCS_DARK
     command: toliss_airbus/iscs_open
     initial-value: 0
-  - index: 1
-    name: Close All Doors
-    label: Close All Doors
-    type: push
-    command: toliss_airbus/door_commands/all_to_mode_close
-    text: ${fa:door-closed}
-    text-font: fontawesome.otf
-    text-size: 48
+  - index: 10
+    name: Doors
+    label: DOORS
+    type: page
+    page: doors
+    text:
+      text: ${fa:door-closed}
+      text-font: fontawesome.otf
+      text-size: 48
   - index: 2
     name: POWER
     label: EXT.POWER
@@ -36,12 +32,12 @@ buttons:
     annunciator:
       model: B
       B0:
-        text: "AVAIL"
+        text: AVAIL
         color: lime
         formula: ${AirbusFBW/EnableExternalPower} not
       B1:
-        text: "ON"
-        framed: True
+        text: ON
+        framed: true
         color: deepskyblue
         dataref: AirbusFBW/EnableExternalPower
     set-dataref: AirbusFBW/EnableExternalPower
@@ -52,12 +48,12 @@ buttons:
     annunciator:
       model: B
       B0:
-        text: "AVAIL"
+        text: AVAIL
         color: lime
         formula: ${AirbusFBW/GroundHPAir} not
       B1:
-        text: "ON"
-        framed: True
+        text: ON
+        framed: true
         color: deepskyblue
         dataref: AirbusFBW/GroundHPAir
     set-dataref: AirbusFBW/GroundHPAir
@@ -68,12 +64,12 @@ buttons:
     annunciator:
       model: B
       B0:
-        text: "AVAIL"
+        text: AVAIL
         color: lime
         formula: ${AirbusFBW/GroundLPAir} not
       B1:
-        text: "ON"
-        framed: True
+        text: ON
+        framed: true
         color: deepskyblue
         dataref: AirbusFBW/GroundLPAir
     set-dataref: AirbusFBW/GroundLPAir
@@ -85,29 +81,78 @@ buttons:
     annunciator:
       model: B
       B0:
-        text: "AVAIL"
+        text: AVAIL
         color: lime
         formula: ${AirbusFBW/Chocks} not
       B1:
-        text: "ON"
-        framed: True
+        text: ON
+        framed: true
         color: yellow
         dataref: AirbusFBW/Chocks
     set-dataref: AirbusFBW/Chocks
-  - index: 10
+  - index: 8
+    name: AviTab
+    label: AviTab
+    type: push
+    annunciator:
+      model: B
+      size: large
+      B0:
+        formula: ${state:activation_count} 2 % 1 - abs
+        text: AVAIL
+        text-color: lime
+      B1:
+        formula: ${state:activation_count} 2 %
+        text: ON
+        text-color: deepskyblue
+        framed: true
+    command: AviTab/toggle_tablet
+  - index: 0
     name: Next Livery
     label: Next Livery
     type: push
     command: sim/operation/next_livery
-    text: ${fa:plane-departure}
-    text-font: fontawesome.otf
-    text-size: 48
-  - index: 11
+    text:
+      text: ${fa:plane-departure}
+      text-font: fontawesome.otf
+      text-size: 48
+  - index: 1
     name: Previous Livery
-    label: Previous Livery
+    label: Prev Livery
     type: push
     command: sim/operation/prev_livery
-    text: ${fa:plane-arrival}
-    text-font: fontawesome.otf
-    text-size: 48
+    text:
+      text: ${fa:plane-arrival}
+      text-font: fontawesome.otf
+      text-size: 48
+  - index: 7
+    name: METAR_LOCAL
+    type: none
+    label: Weather
+    weather-metar:
+      # no station, weather at aircraft location
+      weather-font: B612-Regular
+      weather-size: 24
+  - index: 14
+    name: METAR_DEP
+    type: none
+    label: FMC DEP
+    string-dataref: toliss_airbus/flightplan/departure_icao
+    weather-metar:
+      weather-font: B612-Regular
+      weather-size: 24
+  - index: 15
+    name: METAR_ARR
+    type: none
+    label: FMC DEST
+    string-dataref: toliss_airbus/flightplan/destination_icao
+    weather-metar:
+      weather-font: B612-Regular
+      weather-size: 24
 includes: popups
+# 0=closed, 1=auto, 2=open
+# AirbusFBW/CargoDoorModeArray[3]
+# AirbusFBW/CargoDoorArray
+
+# AirbusFBW/PaxDoorModeArray[8]
+# AirbusFBW/PaxDoorArray

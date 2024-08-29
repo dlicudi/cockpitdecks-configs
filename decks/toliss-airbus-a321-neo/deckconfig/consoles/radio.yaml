@@ -5,10 +5,11 @@ buttons:
     page: piedestal
     label: PIEDESTAL
     text-bgcolor: (94, 111, 130)
-    text: ${fa:arrow-right}
-    text-font: fontawesome.otf
-    text-size: 60
-    text-position: cm
+    text:
+      text: ${fa:arrow-right}
+      text-font: fontawesome.otf
+      text-size: 60
+      text-position: cm
   - index: 31
     name: Index
     type: page

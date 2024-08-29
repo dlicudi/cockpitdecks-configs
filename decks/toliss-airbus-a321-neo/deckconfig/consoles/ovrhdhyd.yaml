@@ -3,27 +3,32 @@ buttons:
   # ### LINE 1 ###  0- 7 ######################################################
   - index: 0
     type: none
-    text: GREEN
-    text-color: "#00ff00"
-    text-size: 24
+    text:
+      text: GREEN
+      text-size: 24
+      text-color: '#00ff00'
   - index: 2
     type: none
-    text: BLUE
-    text-color: "#0000ff"
-    text-size: 24
+    text:
+      text: BLUE
+      text-size: 24
+      text-color: '#0000ff'
   - index: 4
     type: none
-    text: YELLOW
-    text-color: "#ffff00"
-    text-size: 24
+    text:
+      text: YELLOW
+      text-size: 24
+      text-color: '#ffff00'
   - index: 7
     name: up
     type: page
     page: ovrhdfire
-    text: ${fa:arrow-up}
-    text-font: fontawesome.otf
-    text-size: 60
-  # ### LINE 2 ###  8-15 ######################################################
+    label: FIRE
+    label-size: 10
+    text:
+      text: ${fa:arrow-up}
+      text-font: fontawesome.otf
+      text-size: 60
   - index: 8
     type: none
     decor:
@@ -89,7 +94,7 @@ buttons:
         text: FAULT
         color: darkorange
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/HydOHPArray[0]} not
@@ -101,7 +106,7 @@ buttons:
       model: A
       size: large
       A0:
-        text: "ON"
+        text: ON
         color: red
         framed: true
     guard:
@@ -118,7 +123,7 @@ buttons:
         text: FAULT
         color: darkorange
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/HydOHPArray[2]} not
@@ -137,7 +142,7 @@ buttons:
         text: FAULT
         color: darkorange
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/HydOHPArray[4]} not
@@ -152,7 +157,7 @@ buttons:
         text: FAULT
         color: darkorange
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/HydOHPArray[1]} not
@@ -168,7 +173,7 @@ buttons:
         color: darkorange
         formula: ${AirbusFBW/HydYElecMode} 2 eq
       B1:
-        text: "ON"
+        text: ON
         color: white
         framed: true
         dataref: AirbusFBW/fmod/sys/hydpumps[0]
@@ -177,18 +182,22 @@ buttons:
     name: left
     type: page
     page: adirs
-    text: ${fa:arrow-left}
-    text-font: fontawesome.otf
-    text-size: 60
-  # ### LINE 3 ### 16-23 ######################################################
+    label: ADIRS
+    label-size: 10
+    text:
+      text: ${fa:arrow-left}
+      text-font: fontawesome.otf
+      text-size: 60
   - index: 23
     name: down
     type: page
     page: ovrhdfuel
-    text: ${fa:arrow-down}
-    text-font: fontawesome.otf
-    text-size: 60
-  # ### LINE 4 ### 24-31 ######################################################
+    label: FUEL
+    label-size: 10
+    text:
+      text: ${fa:arrow-down}
+      text-font: fontawesome.otf
+      text-size: 60
   - index: 31
     name: Index
     type: page

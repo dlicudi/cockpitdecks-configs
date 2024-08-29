@@ -6,13 +6,13 @@
 aircraft: Toliss A321neo
 description: ECAM display selector for Toliss A321neo for Streamdeck 15 keys
 version: 2.0.0
-name: ECAM
 # ########################
 # BUTTTONS
 #
+name: ECAM
 buttons:
   - index: 0
-    name: END
+    name: ENG
     type: push
     annunciator:
       size: medium
@@ -28,7 +28,8 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: AirbusFBW/ECP/SelectEnginePage
-    view: SRS/X-Camera/Select_View_ID_3
+    view: AirbusFBW/PopUpSD
+    view-if: ${AirbusFBW/PopUpStateArray[7]} not
   - index: 1
     name: BLEED
     type: push
@@ -46,7 +47,8 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: AirbusFBW/ECP/SelectBleedPage
-    view: SRS/X-Camera/Select_View_ID_3
+    view: AirbusFBW/PopUpSD
+    view-if: ${AirbusFBW/PopUpStateArray[7]} not
   - index: 2
     name: PRESS
     type: push
@@ -64,7 +66,8 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: AirbusFBW/ECP/SelectPressPage
-    view: SRS/X-Camera/Select_View_ID_3
+    view: AirbusFBW/PopUpSD
+    view-if: ${AirbusFBW/PopUpStateArray[7]} not
   - index: 3
     name: ELEC
     type: push
@@ -82,7 +85,8 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: AirbusFBW/ECP/SelectElecACPage
-    view: SRS/X-Camera/Select_View_ID_3
+    view: AirbusFBW/PopUpSD
+    view-if: ${AirbusFBW/PopUpStateArray[7]} not
   - index: 4
     name: HYD
     type: push
@@ -100,7 +104,8 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: AirbusFBW/ECP/SelectHydraulicPage
-    view: SRS/X-Camera/Select_View_ID_3
+    view: AirbusFBW/PopUpSD
+    view-if: ${AirbusFBW/PopUpStateArray[7]} not
   - index: 5
     name: FUEL
     type: push
@@ -118,7 +123,8 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: AirbusFBW/ECP/SelectFuelPage
-    view: SRS/X-Camera/Select_View_ID_3
+    view: AirbusFBW/PopUpSD
+    view-if: ${AirbusFBW/PopUpStateArray[7]} not
   - index: 6
     name: APU
     type: push
@@ -136,7 +142,8 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: AirbusFBW/ECP/SelectAPUPage
-    view: SRS/X-Camera/Select_View_ID_3
+    view: AirbusFBW/PopUpSD
+    view-if: ${AirbusFBW/PopUpStateArray[7]} not
   - index: 7
     name: COND
     type: push
@@ -154,7 +161,8 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: AirbusFBW/ECP/SelectConditioningPage
-    view: SRS/X-Camera/Select_View_ID_3
+    view: AirbusFBW/PopUpSD
+    view-if: ${AirbusFBW/PopUpStateArray[7]} not
   - index: 8
     name: DOOR
     type: push
@@ -172,7 +180,8 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: AirbusFBW/ECP/SelectDoorOxyPage
-    view: SRS/X-Camera/Select_View_ID_3
+    view: AirbusFBW/PopUpSD
+    view-if: ${AirbusFBW/PopUpStateArray[7]} not
   - index: 9
     name: WHEEL
     type: push
@@ -190,7 +199,8 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: AirbusFBW/ECP/SelectWheelPage
-    view: SRS/X-Camera/Select_View_ID_3
+    view: AirbusFBW/PopUpSD
+    view-if: ${AirbusFBW/PopUpStateArray[7]} not
   - index: 10
     name: F/CTL
     type: push
@@ -208,7 +218,8 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: AirbusFBW/ECP/SelectFlightControlPage
-    view: SRS/X-Camera/Select_View_ID_3
+    view: AirbusFBW/PopUpSD
+    view-if: ${AirbusFBW/PopUpStateArray[7]} not
   - index: 11
     name: CLR
     type: push
@@ -226,6 +237,8 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: AirbusFBW/ECP/CaptainClear
+    view: AirbusFBW/PopUpSD
+    view-if: ${AirbusFBW/PopUpStateArray[7]} not
   - index: 12
     name: STS
     type: push
@@ -243,7 +256,8 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: AirbusFBW/ECP/SelectStatusPage
-    view: SRS/X-Camera/Select_View_ID_3
+    view: AirbusFBW/PopUpSD
+    view-if: ${AirbusFBW/PopUpStateArray[7]} not
   - index: 13
     name: ALL
     type: push
@@ -255,6 +269,8 @@ buttons:
       formula: "1"
     command: AirbusFBW/ECAMAll
     options: nostate
+    view: AirbusFBW/PopUpSD
+    view-if: ${AirbusFBW/PopUpStateArray[7]} not
   - index: 14
     name: EFIS
     type: page

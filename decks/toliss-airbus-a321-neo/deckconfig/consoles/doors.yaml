@@ -1,0 +1,246 @@
+buttons:
+  - index: 6
+    name: ISCS
+    type: push
+    multi-icons:
+      - ISCS_DARK
+      - ISCS_DARK
+    command: toliss_airbus/iscs_open
+    initial-value: 0
+  - index: 7
+    type: page
+    text: BACK
+    text-position: cm
+    page: back
+  - index: 10
+    name: Close All Doors
+    label: Close All Doors
+    type: push
+    command: toliss_airbus/door_commands/all_to_mode_close
+    text:
+      text: ${fa:door-closed}
+      text-font: fontawesome.otf
+      text-size: 48
+  # Note: MODE: 0=CLOSED, 1=AUTO, 2=OPEN
+  # PAX DOORS
+  - index: 0
+    name: PAX 1L
+    label: PAX 1L
+    type: onoff
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/PaxDoorArray[0]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/PaxDoorArray[0]
+    set-dataref: AirbusFBW/PaxDoorModeArray[0]
+    formula: ${AirbusFBW/PaxDoorArray[0]} not 2 *
+  - index: 1
+    name: PAX 1R
+    label: PAX 1R
+    type: onoff
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/PaxDoorArray[1]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        formula: ${AirbusFBW/PaxDoorArray[1]}
+    set-dataref: AirbusFBW/PaxDoorModeArray[1]
+    formula: ${AirbusFBW/PaxDoorArray[0]} not 2 *
+  - index: 8
+    name: PAX 2L
+    label: PAX 2L
+    type: onoff
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/PaxDoorArray[2]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/PaxDoorArray[2]
+    set-dataref: AirbusFBW/PaxDoorModeArray[2]
+    formula: ${AirbusFBW/PaxDoorArray[2]} not 2 *
+  - index: 9
+    name: PAX 2R
+    label: PAX 2R
+    type: onoff
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/PaxDoorArray[3]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/PaxDoorArray[3]
+    set-dataref: AirbusFBW/PaxDoorModeArray[3]
+    formula: ${AirbusFBW/PaxDoorArray[3]} not 2 *
+  - index: 16
+    label: PAX 3L
+    type: onoff
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/PaxDoorArray[4]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/PaxDoorArray[4]
+    set-dataref: AirbusFBW/PaxDoorModeArray[4]
+    formula: ${AirbusFBW/PaxDoorArray[4]} not 2 *
+  - index: 17
+    label: PAX 3R
+    type: onoff
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/PaxDoorArray[5]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/PaxDoorArray[5]
+    set-dataref: AirbusFBW/PaxDoorModeArray[5]
+    formula: ${AirbusFBW/PaxDoorArray[5]} not 2 *
+  - index: 24
+    label: PAX 4L
+    type: onoff
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/PaxDoorArray[6]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/PaxDoorArray[6]
+    set-dataref: AirbusFBW/PaxDoorModeArray[6]
+    formula: ${AirbusFBW/PaxDoorArray[6]} not 2 *
+  - index: 25
+    label: PAX 4R
+    type: onoff
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/PaxDoorArray[7]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/PaxDoorArray[7]
+    set-dataref: AirbusFBW/PaxDoorModeArray[7]
+    formula: ${AirbusFBW/PaxDoorArray[7]} not 2 *
+  # CARGO DOORS
+  - index: 2
+    label: CARGO FWD
+    type: onoff
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/CargoDoorArray[0]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/CargoDoorArray[0]
+    set-dataref: AirbusFBW/CargoDoorModeArray[0]
+    formula: ${AirbusFBW/CargoDoorArray[0]} not 2 *
+  - index: 18
+    label: CARGO AFT
+    type: onoff
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/CargoDoorArray[1]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/CargoDoorArray[1]
+    set-dataref: AirbusFBW/CargoDoorModeArray[1]
+    formula: ${AirbusFBW/CargoDoorArray[1]} not 2 *
+  - index: 26
+    label: CARGO BULK
+    type: onoff
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/CargoDoorArray[2]} not
+      B1:
+        text: OPEN
+        framed: true
+        text-size: 40
+        color: deepskyblue
+        dataref: AirbusFBW/CargoDoorArray[2]
+    set-dataref: AirbusFBW/CargoDoorModeArray[2]
+    formula: ${AirbusFBW/CargoDoorArray[2]} not 2 *
+  - index: 30
+    name: RELOAD
+    type: reload
+    label: RELOAD
+    label-size: 14
+    label-position: cm
+    text:
+      text: ${fa:rotate-right}
+      text-font: fontawesome.otf
+      text-size: 80
+      text-position: cm
+      text-color: lime
+      text-bg-color: (94, 111, 130)
+  - index: 31
+    name: Index
+    type: page
+    page: index-alt
+    icon: TOLISS-A21N

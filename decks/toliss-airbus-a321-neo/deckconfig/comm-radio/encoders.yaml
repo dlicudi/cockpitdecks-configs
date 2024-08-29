@@ -52,36 +52,4 @@ buttons:
     set-dataref: data:_enc0
     formula: ${data:_enc0}
     encoder-leds: 3
-  - index: 2
-    name: BUTTON ON
-    type: push
-    led: single
-    options: counter
-    dataref-rpn: 1
-  - index: 6
-    name: INSPECT
-    led: single
-    type: inspect
-    dataref-rpn: 1
-  - index: 10
-    name: BUTTON BLINK
-    type: push
-    dataref-rpn: 1
-    options: blink
-    led: single
-  - index: 15
-    name: RELOAD
-    type: reload
-    led: single
-  #
-  - index: A
-    name: Page A
-    type: none
-    led: single
-    dataref-rpn: 1
-  - index: B
-    name: Page B
-    type: page
-    page: B
-    led: single
-    dataref-rpn: 0
+#

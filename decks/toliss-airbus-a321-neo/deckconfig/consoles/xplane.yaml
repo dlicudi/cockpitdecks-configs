@@ -1,15 +1,10 @@
-# CHANGELOG
-#
-# 1.0.0  03-APR-2023  Initial version
-#
----
 aircraft: Toliss A321neo
 description: X-Plane specific actions, not linked to aircraft
 version: 1.0.0
 # ########################
 name: xplane
 buttons:
-# ### LINE 1 ###  0- 7 ######################################################
+  # ### LINE 1 ###  0- 7 ######################################################
   - index: 0
     name: X-Plane Map
     label: Map
@@ -23,11 +18,32 @@ buttons:
         text-color: lime
       B1:
         formula: ${state:activation_count} 2 %
-        text: "ON"
+        text: ON
         text-color: deepskyblue
         framed: true
     command: sim/map/show_current
   - index: 1
+    name: AVS Map
+    label: AVS
+    type: push
+    annunciator:
+      model: B
+      size: large
+      B0:
+        formula: ${state:activation_count} 2 % 1 - abs
+        text: AVAIL
+        text-color: lime
+      B1:
+        formula: ${state:activation_count} 2 %
+        text: ON
+        text-color: deepskyblue
+        framed: true
+    command: flightfactor/avs/toggle
+    # - index: 4
+    #   name: Ground Services
+    #   type: page
+    #   label: Ground Services
+  - index: 2
     name: Airport Map
     label: Airport
     type: push
@@ -41,48 +57,16 @@ buttons:
         text-color: lime
       B1:
         formula: ${state:activation_count} 2 %
-        text: "ON"
+        text: ON
         text-color: deepskyblue
         framed: true
-  - index: 2
-    name: AVS Map
-    label: AVS
-    type: push
-    annunciator:
-      model: B
-      size: large
-      B0:
-        formula: ${state:activation_count} 2 % 1 - abs
-        text: AVAIL
-        text-color: lime
-      B1:
-        formula: ${state:activation_count} 2 %
-        text: "ON"
-        text-color: deepskyblue
-        framed: true
-    command: flightfactor/avs/toggle
   - index: 3
-    name: AviTab
-    label: AviTab
-    type: push
-    annunciator:
-      model: B
-      size: large
-      B0:
-        formula: ${state:activation_count} 2 % 1 - abs
-        text: AVAIL
-        text-color: lime
-      B1:
-        formula: ${state:activation_count} 2 %
-        text: "ON"
-        text-color: deepskyblue
-        framed: true
-    command: AviTab/toggle_tablet
-  # - index: 4
-  #   name: Ground Services
-  #   type: page
-  #   label: Ground Services
-  - index: 5
+    type: page
+    page: aptnav
+    label: "APT\nNAV"
+    label-position: cm
+    icon: APT_NAV
+  - index: 4
     name: LiveTraffic
     label: Live/T
     type: push
@@ -95,80 +79,128 @@ buttons:
         text-color: lime
       B1:
         formula: ${state:activation_count} 2 %
-        text: "ON"
+        text: ON
         text-color: deepskyblue
         framed: true
     command: LiveTraffic/Info_Staus_Wnd/Open
+  - index: 6
+    name: FTGCLEAR
+    type: push
+    command: XPPython3/followthegreens/send_clearance_ok
+    text:
+      text: |-
+        Clearance
+        Received
+      text-font: B612-Bold
+      text-size: 16
+      text-color: lime
+  - index: 14
+    name: FTGOK
+    type: push
+    command: XPPython3/followthegreens/send_ok
+    text:
+      text: OK
+      text-font: B612-Bold
+      text-size: 32
+      text-color: lime
+  - index: 15
+    name: FTGCANCEL
+    type: push
+    command: XPPython3/followthegreens/send_cancel
+    text:
+      text: Cancel
+      text-font: B612-Bold
+      text-size: 24
+      text-color: red
   - index: 7
     name: FollowTheGreensAnimation
     type: onoff
-    ftg: True
+    ftg: true
     animation:
       speed: 0.2
     commands:
       - XPPython3/followthegreens/main_windown_toggle
       - XPPython3/followthegreens/main_windown_toggle
     dataref: XPPython3/followthegreens/is_running
-#   formula: ${state:activation_count} 2 %
+    #   formula: ${state:activation_count} 2 %
     initial-value: 0
-#     name: FollowTheGreens
-#     label: F.GREENS
-#     type: onoff
-#     icon-off: F.GREENS_OFF
-#     icon-animate:
-#       - F.GREENS_ON_1
-#       - F.GREENS_ON_2
-#       - F.GREENS_ON_3
-#     animation:
-#       speed: 0.2
-#     animation-speed: 0.2
-# #     command: XPPython3/followthegreens/main_windown_toggle
-#     commands:
-#       - XPPython3/followthegreens/main_windown_toggle
-#       - XPPython3/followthegreens/main_windown_toggle
-#     formula: ${state:activation_count} 2 %
-#     initial-value: 0
-# ### LINE 2 ###  8-15 ######################################################
-  # - index: 8
-  #   type: push
-  #   name: SAMGroundVehicle
-  #   label: SAM/GV
-  #   annunciator:
-  #     model: B
-  #     size: large
-  #     B0:
-  #       formula: ${state:activation_count} 2 % 1 - abs
-  #       text: AVAIL
-  #       text-color: lime
-  #     B1:
-  #       formula: ${state:activation_count} 2 %
-  #       text: "ON"
-  #       text-color: deepskyblue
-  #       framed: true
-  #   command: sam/main_window
-  #   initial-value: 0
-  # - index: 9
-  #   type: push
-  #   name: GroundHandlingDeluxe
-  #   label: GHDLX
-  #   annunciator:
-  #     model: B
-  #     size: large
-  #     B0:
-  #       formula: ${state:activation_count} 2 % 1 - abs
-  #       text: AVAIL
-  #       text-color: lime
-  #     B1:
-  #       formula: ${state:activation_count} 2 %
-  #       text: "ON"
-  #       text-color: deepskyblue
-  #       framed: true
-  #   command: jd/ghd/show_widget
-  #   initial-value: 0
-  - index: 10
+    #     name: FollowTheGreens
+    #     label: F.GREENS
+    #     type: onoff
+    #     icon-off: F.GREENS_OFF
+    #     icon-animate:
+    #       - F.GREENS_ON_1
+    #       - F.GREENS_ON_2
+    #       - F.GREENS_ON_3
+    #     animation:
+    #       speed: 0.2
+    #     animation-speed: 0.2
+    # #     command: XPPython3/followthegreens/main_windown_toggle
+    #     commands:
+    #       - XPPython3/followthegreens/main_windown_toggle
+    #       - XPPython3/followthegreens/main_windown_toggle
+    #     formula: ${state:activation_count} 2 %
+    #     initial-value: 0
+    # ### LINE 2 ###  8-15 ######################################################
+    # - index: 8
+    #   type: push
+    #   name: SAMGroundVehicle
+    #   label: SAM/GV
+    #   annunciator:
+    #     model: B
+    #     size: large
+    #     B0:
+    #       formula: ${state:activation_count} 2 % 1 - abs
+    #       text: AVAIL
+    #       text-color: lime
+    #     B1:
+    #       formula: ${state:activation_count} 2 %
+    #       text: "ON"
+    #       text-color: deepskyblue
+    #       framed: true
+    #   command: sam/main_window
+    #   initial-value: 0
+    # - index: 9
+    #   type: push
+    #   name: GroundHandlingDeluxe
+    #   label: GHDLX
+    #   annunciator:
+    #     model: B
+    #     size: large
+    #     B0:
+    #       formula: ${state:activation_count} 2 % 1 - abs
+    #       text: AVAIL
+    #       text-color: lime
+    #     B1:
+    #       formula: ${state:activation_count} 2 %
+    #       text: "ON"
+    #       text-color: deepskyblue
+    #       framed: true
+    #   command: jd/ghd/show_widget
+    #   initial-value: 0
+  - index: 8
+    type: push
+    name: AutoDGS
+    label: DGS
+    annunciator:
+      model: B
+      size: large
+      B0:
+        formula: ${AutoDGS/state}
+        text: AVAIL
+        text-color: lime
+      B1:
+        formula: ${AutoDGS/state} 1 -
+        text: ON
+        text-color: deepskyblue
+        framed: true
+        # DISABLED=0, INACTIVE, ACTIVE, ENGAGED, TRACK, GOOD, BAD, PARKED, DONE
+    command: AutoDGS/toggle_ui
+    initial-value: 0
+  - index: 9
     type: push
     name: SimpleGroundEquipmentAndServices
-    label: SGSE
+    label: SGES
     annunciator:
       model: B
       size: large
@@ -178,12 +210,12 @@ buttons:
         text-color: lime
       B1:
         formula: ${state:activation_count} 2 %
-        text: "ON"
+        text: ON
         text-color: deepskyblue
         framed: true
     command: Simple_Ground_Equipment_and_Services/Window/Toggle
     initial-value: 0
-  - index: 11
+  - index: 12
     type: push
     name: XChatter
     label: X-Chat
@@ -196,14 +228,12 @@ buttons:
         text-color: lime
       B1:
         formula: ${state:activation_count} 2 %
-        text: "ON"
+        text: ON
         text-color: deepskyblue
-
         framed: true
     command: X-Chatter/Window/Toggle
     initial-value: 0
-
-# ### LINE 3 ### 16-23 ######################################################
+    # ### LINE 3 ### 16-23 ######################################################
   - index: 16
     name: NEXT_LIVERY
     type: push
@@ -216,14 +246,152 @@ buttons:
     command: sim/operation/prev_livery
     label: Previous Livery
     icon: LIVERY_DOWN
-# ### LINE 4 ### 24-31 ######################################################
-  # - index: 26
-  #   name: XPLANEDATA2
-  #   type: push
-  #   icon: XPLANE_OUTPUT
-  #   label: "COCKPIT\nDATA"
-  #   command: sim/operation/toggle_data_output_cockpit
-  #   options: framed-icon
+  - index: 18
+    # label: "Weather"
+    # label-size: 8
+    type: none
+    label: WEATHER SOURCE
+    label-size: 8
+    multi-texts:
+      - text: Preset
+        text-color: white
+        text-size: 14
+        text-font: D-DIN-Bold
+        text-position: cm
+      - text: Real Weather
+        text-size: 14
+        text-color: white
+        text-font: D-DIN-Bold
+        text-position: cm
+      - text: Control Pad
+        text-color: deepskyblue
+        text-size: 14
+        text-font: D-DIN-Bold
+        text-position: cm
+      - text: Plugin
+        text-color: red
+        text-size: 14
+        text-font: D-DIN-Bold
+        text-position: cm
+    dataref: sim/weather/region/weather_source
+  - index: 19
+    # label: "Weather"
+    # label-size: 8
+    label: FORECAST
+    label-size: 8
+    type: none
+    multi-texts:
+      - text: |-
+          Rapidly
+          Improving
+        text-color: lime
+        text-size: 14
+        text-font: D-DIN-Bold
+        text-position: cm
+      - text: Improving
+        text-size: 14
+        text-color: green
+        text-font: D-DIN-Bold
+        text-position: cm
+      - text: |-
+          Gradually
+          Improving
+        text-color: green
+        text-size: 14
+        text-font: D-DIN-Bold
+        text-position: cm
+      - text: No change
+        text-color: green
+        text-size: 14
+        text-font: D-DIN-Bold
+        text-position: cm
+      - text: |-
+          Gradually
+          Deteriorating
+        text-color: firebrick
+        text-size: 14
+        text-font: D-DIN-Bold
+        text-position: cm
+      - text: Deteriorating
+        text-color: firebrick
+        text-size: 14
+        text-font: D-DIN-Bold
+        text-position: cm
+      - text: |-
+          Rapidly
+          Deteriorating
+        text-color: red
+        text-size: 14
+        text-font: D-DIN-Bold
+        text-position: cm
+      - text: Real Weather
+        text-color: deepskyblue
+        text-size: 14
+        text-font: D-DIN-Bold
+        text-position: cm
+    dataref: sim/weather/region/change_mode
+    # Also: sim/weather/region/variability_pct [0, 1]
+    # sim/weather/region/change_mode: 0=Rapidly Improving, 1=Improving, 2=Gradually Improving, 3=Static, 4=Gradually Deteriorating, 5=Deteriorating, 6=Rapidly Deteriorating, 7=Using Real Weather
+    # sim/weather/region/weather_source: 0=Preset, 1=Real Weather, 2=Controlpad, 3=Plugin
+    # sim/weather/region/weather_preset: 0=Clear, 1=VFR Few, 2=VFR Scattered, 3=VFR Broken, 4=VFR Marginal, 5=IFR Non-precision, 6=IFR Precision, 7=Convective, 8=Large-cell Storms
+    # sim/weather/region/update_immediately (boolean)
+    # Commands:
+    # sim/operation/regen_weather
+    # sim/operation/toggle_weather_map
+    # ### LINE 4 ### 24-31 ######################################################
+    # - index: 26
+    #   name: XPLANEDATA2
+    #   type: push
+    #   icon: XPLANE_OUTPUT
+    #   label: "COCKPIT\nDATA"
+    #   command: sim/operation/toggle_data_output_cockpit
+    #   options: framed-icon
+  - index: 23
+    # label: "Connection Status"
+    # label-size: 8
+    type: none
+    multi-texts:
+      - text: |+
+          NOT
+          CONNECTED
+
+        text-color: red
+        text-size: 14
+        text-font: D-DIN-Bold
+        text-position: cb
+      - text: |+
+          CONNECTING...
+
+        text-size: 14
+        text-color: orange
+        text-font: D-DIN-Bold
+        text-position: cb
+      - text: |+
+          CONNECTING...
+
+        text-size: 14
+        text-color: orange
+        text-font: D-DIN-Bold
+        text-position: cb
+      - text: |+
+          CONNECTING...
+
+        text-size: 14
+        text-color: orange
+        text-font: D-DIN-Bold
+        text-position: cb
+      - text: |+
+          CONNECTED
+
+        text-color: lime
+        text-size: 14
+        text-font: D-DIN-Bold
+        text-position: cb
+    text-bg-texture: xplane-empty.png
+    formula: ${data:_connection_status}
+    # ### LINE 4 ### 24-31 ######################################################
+    text:
+      text: ${data:xtmslider}
   - index: 24
     name: STOP_COCKPITDECKS
     type: stop
@@ -235,6 +403,12 @@ buttons:
     icon: DASHBOARD
   - index: 26
     name: Cockpitdecks
+    label: |-
+      COCKPITDECKS
+      INTERNALS
+    label-position: cm
+    label-color: lime
+    label-font: D-DIN-Bold.otf
     type: page
     page: cockpitdecks
     icon: COCKPITDECKS
@@ -244,32 +418,50 @@ buttons:
     icon: XPLANE_OUTPUT
     command: sim/operation/toggle_data_output_cockpit
     formula: ${state:activation_count} 2 %
-    label: "XPLANE\nCOCKPIT\nDATA"
-    label-color: black
+    label: |-
+      XPLANE
+      COCKPIT
+      DATA
+    label-color: lime
+    label-font: D-DIN-Bold.otf
     label-position: cm
   - index: 28
     name: XP PYTHON
     type: push
-    icon: XP-PYTHON
     command: XPPython3/reloadScripts
+    # icon: XP-PYTHON
     label: XPPython3
+    text:
+      text: ${fa:rotate-right}
+      text-font: fontawesome.otf
+      text-size: 80
+      text-position: cm
+      text-color: lime
+      text-bg-texture: XP-PYTHON.png
   - index: 29
     name: DATAREFTOOL
     type: push
     label: DataRefTool
-    icon: DATAREFTOOL
     command: leecbaker/datareftool/new_search_window
+    text:
+      text: ${fa:circle-plus}
+      text-font: fontawesome.otf
+      text-size: 32
+      text-position: rt
+      text-color: lime
+      text-bg-texture: DATAREFTOOL.png
   - index: 30
     name: RELOAD
     type: reload
     label: RELOAD
     label-size: 14
     label-position: cm
-    text: ${fa:rotate-right}
-    text-font: fontawesome.otf
-    text-color: lime
-    text-size: 80
-    text-position: cm
+    text:
+      text: ${fa:rotate-right}
+      text-font: fontawesome.otf
+      text-size: 80
+      text-position: cm
+      text-color: lime
   - index: 31
     name: Index
     type: page

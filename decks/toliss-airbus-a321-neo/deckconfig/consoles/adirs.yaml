@@ -1,4 +1,3 @@
----
 aircraft: Toliss A321neo
 description: ADIRS Start/stop
 version: 1.0.0
@@ -21,9 +20,11 @@ buttons:
     type: push
     icon: P_TOLISS_ISCS_OFF
     command: AirbusFBW/ADIRU_fast_align
-    label: "ADIR\nF/ALIGN"
+    label: |-
+      ADIR
+      F/ALIGN
     label-position: cb
-  # ### LINE 2 ###  8-15 ######################################################
+    # ### LINE 2 ###  8-15 ######################################################
   - index: 8
     name: ADIRS1_INDICATOR
     type: none
@@ -79,10 +80,12 @@ buttons:
     name: left
     type: page
     page: ovrhdhyd
-    text: ${fa:arrow-right}
-    text-font: fontawesome.otf
-    text-size: 60
-  # ### LINE 3 ### 16-23 ######################################################
+    label: HYD
+    label-size: 10
+    text:
+      text: ${fa:arrow-right}
+      text-font: fontawesome.otf
+      text-size: 60
   - index: 16
     # name must be unique on page
     name: ADIRS1
@@ -111,9 +114,9 @@ buttons:
       tick-width: 8
       tick-length: 24
       tick-labels:
-        - "OFF"
-        - "NAV"
-        - "ATT"
+        - OFF
+        - NAV
+        - ATT
       tick-label-font: DIN Bold
       tick-label-size: 30
       needle-underline-width: 8
@@ -145,9 +148,9 @@ buttons:
       tick-width: 8
       tick-length: 24
       tick-labels:
-        - "OFF"
-        - "NAV"
-        - "ATT"
+        - OFF
+        - NAV
+        - ATT
       tick-label-font: DIN Bold
       tick-label-size: 30
       needle-underline-width: 8
@@ -179,13 +182,13 @@ buttons:
       tick-width: 8
       tick-length: 24
       tick-labels:
-        - "OFF"
-        - "NAV"
-        - "ATT"
+        - OFF
+        - NAV
+        - ATT
       tick-label-font: DIN Bold
       tick-label-size: 30
       needle-underline-width: 8
-  # ### LINE 4 ### 24-31 ######################################################
+      # ### LINE 4 ### 24-31 ######################################################
   - index: 24
     name: ADIRS1_OFF
     type: onoff
@@ -199,12 +202,12 @@ buttons:
         size: 60
         formula: "0"
       B1:
-        text: "OFF"
+        text: OFF
         color: peachpuff
         size: 80
         font: DIN Condensed Bold
         formula: ${AirbusFBW/ADRLights[0]} not
-        framed: True
+        framed: true
     set-dataref: AirbusFBW/ADIRUSwitchArray[0]
   - index: 25
     name: ADIRS3_OFF
@@ -219,12 +222,12 @@ buttons:
         size: 60
         formula: "0"
       B1:
-        text: "OFF"
+        text: OFF
         color: peachpuff
         size: 80
         font: DIN Condensed Bold
         formula: ${AirbusFBW/ADRLights[2]} not
-        framed: True
+        framed: true
     set-dataref: AirbusFBW/ADIRUSwitchArray[2]
   - index: 26
     name: ADIRS2_OFF
@@ -239,12 +242,12 @@ buttons:
         size: 60
         formula: "0"
       B1:
-        text: "OFF"
+        text: OFF
         color: peachpuff
         size: 80
         font: DIN Condensed Bold
         formula: ${AirbusFBW/ADRLights[1]} not
-        framed: True
+        framed: true
     set-dataref: AirbusFBW/ADIRUSwitchArray[1]
   - index: 31
     name: Index

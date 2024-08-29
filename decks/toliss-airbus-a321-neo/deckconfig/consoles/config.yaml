@@ -11,4 +11,4 @@ version: 1.0.0
 default-label-size: 12
 default-label-font: DIN Medium.ttf
 default-annunciator-style: v
-# default-homepage-name: xplane
+# home-page-name: xplane

@@ -9,7 +9,7 @@ buttons:
       model: B
       size: large
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
   - index: 1
@@ -83,19 +83,20 @@ buttons:
         text: FAULT
         color: darkorange
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/GalleyPBLight} not
   - index: 2
     name: BAT_VOLT_1
     type: none
-    text: ${AirbusFBW/BatVolts[0]}
-    text-format: "{:2.1f}"
-    text-color: white
-    text-size: 56
-    text-font: Seven Segment.ttf
-    text-bg-color: (40, 40, 40)
+    text-format: '{:2.1f}'
+    text:
+      text: ${AirbusFBW/BatVolts[0]}
+      text-font: Seven Segment.ttf
+      text-size: 56
+      text-color: white
+      text-bg-color: (40, 40, 40)
   - index: 3
     name: BAT_1
     label: BAT 1
@@ -107,7 +108,7 @@ buttons:
         text: FAULT
         color: darkorange
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/BatOHPArray[0]} not
@@ -123,7 +124,7 @@ buttons:
         text: FAULT
         color: darkorange
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/BatOHPArray[1]} not
@@ -131,20 +132,13 @@ buttons:
   - index: 5
     name: BAT_VOLT_2
     type: none
-    text: ${AirbusFBW/BatVolts[1]}
-    text-format: "{:2.1f}"
-    text-color: white
-    text-size: 56
-    text-font: Seven Segment.ttf
-    text-bg-color: (40, 40, 40)
-    # type: none
-    # name: BAT_VOLT_2
-    # label: ${AirbusFBW/BatVolts[1]}
-    # label-format: "{:2.1f}"
-    # label-color: white
-    # label-size: 56
-    # label-font: Seven Segment.ttf
-    # icon-color: (40, 40, 40)
+    text-format: '{:2.1f}'
+    text:
+      text: ${AirbusFBW/BatVolts[1]}
+      text-font: Seven Segment.ttf
+      text-size: 56
+      text-color: white
+      text-bg-color: (40, 40, 40)
   - index: 6
     name: AC ESS FEED
     label: AC ESS FEED
@@ -156,17 +150,19 @@ buttons:
         text: FAULT
         color: darkorange
       B1:
-        text: "ALTN"
+        text: ALTN
         color: white
         framed: true
   - index: 15
     name: up
     type: page
     page: ovrhdfuel
-    text: ${fa:arrow-up}
-    text-font: fontawesome.otf
-    text-size: 60
-  # ### LINE 2 ###  8-15 ######################################################
+    label: FUEL
+    label-size: 10
+    text:
+      text: ${fa:arrow-up}
+      text-font: fontawesome.otf
+      text-size: 60
   - index: 24
     name: IDG 1
     label: IDG 1
@@ -193,7 +189,7 @@ buttons:
         color: darkorange
         formula: ${AirbusFBW/EngGenOHPArray[0]} 3 eq
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/EngGenOHPArray[0]} 2 eq
@@ -208,7 +204,7 @@ buttons:
         text: FAULT
         color: darkorange
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/APUGenOHPArray[0]} not
@@ -220,7 +216,7 @@ buttons:
       model: B
       size: large
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/BusCrossTie} not
@@ -236,7 +232,7 @@ buttons:
           color: lime
           formula: ${AirbusFBW/ExtPowOHPArray[0]} 2 eq
         B1:
-          text: "ON"
+          text: ON
           color: deepskyblue
           framed: true
           size: 60
@@ -255,7 +251,7 @@ buttons:
         color: darkorange
         formula: ${AirbusFBW/EngGenOHPArray[1]} 3 eq
       B1:
-        text: "OFF"
+        text: OFF
         color: white
         framed: true
         formula: ${AirbusFBW/EngGenOHPArray[1]} 2 eq
@@ -273,15 +269,17 @@ buttons:
       dataref: AirbusFBW/OHPGuardsAllATA[6]
       model: grid
       color: (255,0,0,100)
-  # ### LINE 3 ### 16-23 ######################################################
+      # ### LINE 3 ### 16-23 ######################################################
   - index: 23
     name: down
     type: page
     page: ovrhdaircond
-    text: ${fa:arrow-down}
-    text-font: fontawesome.otf
-    text-size: 60
-  # ### LINE 4 ### 24-31 ######################################################
+    label: AIR COND
+    label-size: 10
+    text:
+      text: ${fa:arrow-down}
+      text-font: fontawesome.otf
+      text-size: 60
   - index: 31
     name: Index
     type: page
