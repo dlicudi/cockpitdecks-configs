@@ -1,0 +1,292 @@
+---
+aircraft: Toliss A321neo
+description: EFIS control for Srteamdeck+ (encoders and a few buttons)
+version: 1.0.0
+last-updated: 03-APR-2024
+#
+# CHANGELOG
+#
+# 1.0.0  03-APR-2023  Initial version
+#
+# PAGE
+#
+buttons:
+  - index: e1
+    name: ND MODE ENCODER
+    type: encoder-onoff
+    commands:
+      - none
+      - none
+      - sim/instruments/EFIS_mode_dn
+      - sim/instruments/EFIS_mode_up
+    options: modulo
+  - index: e2
+    name: ND RANGE ENCODER
+    type: encoder-onoff
+    commands:
+      - none
+      - none
+      - sim/instruments/map_zoom_in
+      - sim/instruments/map_zoom_out
+    options: modulo
+  - index: e3
+    name: FCU Baro
+    type: encoder-onoff
+    commands:
+      - toliss_airbus/capt_baro_push
+      - toliss_airbus/capt_baro_pull
+      - sim/instruments/barometer_down
+      - sim/instruments/barometer_up
+    options: modulo
+  ## Buttons
+  - index: 0
+    type: push
+    command: AirbusFBW/CaptChronoButton
+    label: CHRONO
+    label-size: 10
+    sound: sonar-ping.wav
+    push-switch:
+      button-size: 120
+      button-fill-color: black
+      button-stroke-width: 0
+      button-underline-color: coral
+      witness-size: 0
+      down: 36
+  - index: 1
+    name: ND MODE
+    type: updown
+    stops: 5
+    initial-value: 2
+    circular-switch:
+      button-size: 50
+      switch-style: medium
+      down: 30
+      tick-from: 90
+      tick-to: 270
+      tick-space: 40
+      tick-underline-width: 8
+      # tick-color: white
+      # tick-underline-color: white
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      tick-labels:
+        - LS
+        - VOR
+        - NAV
+        - ARC
+        - PLAN
+    commands:
+      - sim/instruments/EFIS_mode_up
+      - sim/instruments/EFIS_mode_dn
+    dataref: AirbusFBW/NDmodeCapt
+  - index: 2
+    name: ND RANGE
+    type: updown
+    stops: 6
+    initial-value: 2
+    circular-switch:
+      button-size: 50
+      switch-style: medium
+      down: 30
+      tick-from: 90
+      tick-to: 315
+      tick-space: 40
+      tick-underline-width: 8
+      # tick-color: white
+      # tick-underline-color: white
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      tick-labels:
+        - "10"
+        - "20"
+        - "40"
+        - "80"
+        - "160"
+        - "320"
+    commands:
+      - sim/instruments/map_zoom_out
+      - sim/instruments/map_zoom_in
+    dataref: AirbusFBW/NDrangeCapt
+  - index: 3
+    name: INORMB
+    type: updown
+    stops: 2
+    circular-switch:
+      button-size: 100
+      switch-style: none
+      down: 30
+      tick-from: 140
+      tick-to: 220
+      tick-space: 10
+      tick-underline-width: 8
+      # tick-color: white
+      # tick-underline-color: white
+      needle-color: white
+      needle-length: 50
+      tick-label-size: 36
+      tick-label-font: D-DIN-Bold.otf
+      tick-labels:
+        - inHg
+        - hPa
+    set-dataref: AirbusFBW/BaroUnitCapt
+    dataref: AirbusFBW/BaroUnitCapt
+  - index: 4
+    name: SIDE STICK PRIORITY
+    label: SIDE STICK PRIORITY
+    label-size: 7
+    label-color: white
+    type: reload
+    annunciator:
+      size: large
+      model: B
+      parts:
+        B0:
+          # text: ${fa:arrow-right-long}
+          # text-color: darkorange
+          text: ${fa:arrow-left-long}
+          text-color: lime
+          text-font: fontawesome.otf
+          text-size: 64
+          # formula: "1"
+        B1:
+          text: CAPT
+          color: lime
+          text-size: 64
+          text-font: DIN Bold
+          framed: True
+          # formula: "1"
+  - index: 5
+    name: FD 1
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/FD1Engage}
+        B1:
+          text: FD
+          color: white
+          text-size: 64
+          text-font: DIN Bold
+          formula: "1"
+    command: toliss_airbus/fd1_push
+  - index: 6
+    name: LS 1
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${AirbusFBW/ILSonCapt}
+        B1:
+          text: LS
+          color: white
+          text-size: 64
+          text-font: DIN Bold
+          formula: "1"
+    command: toliss_airbus/dispcommands/CaptLSButtonPush
+    view: SRS/X-Camera/Select_View_ID_1
+  - index: 7
+    type: onoff
+    # label: "PRESS Std"
+    # label-font: Segment7Standard.otf
+    # label-size: 10
+    # dataref: AirbusFBW/BaroUnitCapt
+    # set-dataref: AirbusFBW/BaroUnitCapt
+    commands:
+      - toliss_airbus/capt_baro_push
+      - toliss_airbus/capt_baro_pull
+    # text: ${formula}
+    # text-format: "{:4.0f}"
+    # text-size: 60
+    # text-font: Seven Segment.ttf
+    # formula: ${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot} 33.86389 * round
+    formula: ${AirbusFBW/BaroUnitCapt} ${AirbusFBW/BaroStdCapt} 2 * +
+    multi-texts:
+      - text: ${formula}
+        text-format: '{:4.2f}'
+        text-color: khaki
+        text-size: 48
+        text-font: Segment7Standard.otf
+        text-bg-color: (40, 40, 40)
+        formula: ${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}
+        # Pressure in inHg
+      - text: ${formula}
+        text-format: '{:4.0f}'
+        text-color: khaki
+        text-size: 48
+        text-font: Segment7Standard.otf
+        text-bg-color: (40, 40, 40)
+        formula: ${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot} 33.86389 * round
+        # Pressure in mBar or hPascal
+      - text: Std
+        text-color: khaki
+        text-size: 48
+        text-font: Segment7Standard.otf
+        text-bg-color: (40, 40, 40)
+        # Std
+      - text: Std
+        text-color: khaki
+        text-size: 48
+        text-font: Segment7Standard.otf
+        text-bg-color: (40, 40, 40)
+        # Std
+    # text: ${fa:rotate-left}
+    # text-font: fontawesome.otf
+    # text-color: lime
+    # text-size: 70
+    # text-position: cm
+  - index: touchscreen
+    name: FMA_DISPLAY
+    type: page
+    page: fcu
+    string-datarefs:
+      - AirbusFBW/FMA1w
+      - AirbusFBW/FMA1g
+      - AirbusFBW/FMA1b
+      - AirbusFBW/FMA2w
+      - AirbusFBW/FMA2b
+      - AirbusFBW/FMA2m
+      - AirbusFBW/FMA3w
+      - AirbusFBW/FMA3b
+      - AirbusFBW/FMA3a
+    multi-datarefs:
+      - AirbusFBW/FMAAPFDboxing
+      - AirbusFBW/FMAAPLeftArmedBox
+      - AirbusFBW/FMAAPLeftModeBox
+      - AirbusFBW/FMAAPRightArmedBox
+      - AirbusFBW/FMAAPRightModeBox
+      - AirbusFBW/FMAATHRModeBox
+      - AirbusFBW/FMAATHRboxing
+      - AirbusFBW/FMATHRWarning
+    fma:
+      label-mode: 0
+      text-size: 60
+      text-font: B612-Bold
+  # - index: 3
+  #   name: RELOAD
+  #   type: reload
+  #   text:
+  #     text: ${fa:rotate-right}
+  #     text-font: fontawesome.otf
+  #     text-size: 60
+  #     text-position: cm
+  #     text-color: lime
+  # - index: 4
+  #   name: DATAREF
+  #   type: inspect
+  #   icon: COCKPITDECKS
+  #   label: |-
+  #     BUTTON
+  #     DATAREFS
+  #   label-color: red
+  #   label-position: cm
+  #   what: dataref

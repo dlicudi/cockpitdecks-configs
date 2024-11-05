@@ -1,0 +1,296 @@
+---
+aircraft: ToLiss A339
+description: EFIS display selector + some FCU commands for Streamdeck 15 keys
+version: 1.0.0
+last-updated: 31-OCT-2024
+#
+# CHANGELOG
+#
+# 31-OCT-2024: 1.0.0: Initial release (adapted from ToLiss A321)
+#
+# This complement the minicockpit with part of the EFIS control.
+#
+# PAGE
+#
+name: ECAM
+buttons:
+  - index: 0
+    name: ENG
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: greenyellow
+          led: led
+          dataref: AirbusFBW/OHPLightsATA31[30]
+        B1:
+          text: ENG
+          text-size: 48
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/ECP/SelectEnginePage
+    view:
+      - command: AirbusFBW/PopUpSD
+        condition: ${AirbusFBW/PopUpStateArray[7]} not
+  - index: 1
+    name: BLEED
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: greenyellow
+          led: led
+          dataref: AirbusFBW/OHPLightsATA31[31]
+        B1:
+          text: BLEED
+          text-size: 48
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/ECP/SelectBleedPage
+    view:
+      - command: AirbusFBW/PopUpSD
+        condition: ${AirbusFBW/PopUpStateArray[7]} not
+  - index: 2
+    name: PRESS
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: greenyellow
+          led: led
+          dataref: AirbusFBW/OHPLightsATA31[32]
+        B1:
+          text: PRESS
+          text-size: 48
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/ECP/SelectPressPage
+    view:
+      - command: AirbusFBW/PopUpSD
+        condition: ${AirbusFBW/PopUpStateArray[7]} not
+  - index: 3
+    name: ELEC
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: greenyellow
+          led: led
+          dataref: AirbusFBW/OHPLightsATA31[33]
+        B1:
+          text: ELEC
+          text-size: 48
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/ECP/SelectElecACPage
+    view:
+      - command: AirbusFBW/PopUpSD
+        condition: ${AirbusFBW/PopUpStateArray[7]} not
+  - index: 4
+    name: HYD
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: greenyellow
+          led: led
+          dataref: AirbusFBW/OHPLightsATA31[34]
+        B1:
+          text: HYD
+          text-size: 48
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/ECP/SelectHydraulicPage
+    view:
+      - command: AirbusFBW/PopUpSD
+        condition: ${AirbusFBW/PopUpStateArray[7]} not
+  - index: 5
+    name: FUEL
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: greenyellow
+          led: led
+          dataref: AirbusFBW/OHPLightsATA31[35]
+        B1:
+          text: FUEL
+          text-size: 48
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/ECP/SelectFuelPage
+    view:
+      - command: AirbusFBW/PopUpSD
+        condition: ${AirbusFBW/PopUpStateArray[7]} not
+  - index: 6
+    name: APU
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: greenyellow
+          led: led
+          dataref: AirbusFBW/OHPLightsATA31[36]
+        B1:
+          text: APU
+          text-size: 48
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/ECP/SelectAPUPage
+    view:
+      - command: AirbusFBW/PopUpSD
+        condition: ${AirbusFBW/PopUpStateArray[7]} not
+  - index: 7
+    name: COND
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: greenyellow
+          led: led
+          dataref: AirbusFBW/OHPLightsATA31[37]
+        B1:
+          text: COND
+          text-size: 48
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/ECP/SelectConditioningPage
+    view:
+      - command: AirbusFBW/PopUpSD
+        condition: ${AirbusFBW/PopUpStateArray[7]} not
+  - index: 8
+    name: DOOR
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: greenyellow
+          led: led
+          dataref: AirbusFBW/OHPLightsATA31[38]
+        B1:
+          text: DOOR
+          text-size: 48
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/ECP/SelectDoorOxyPage
+    view:
+      - command: AirbusFBW/PopUpSD
+        condition: ${AirbusFBW/PopUpStateArray[7]} not
+  - index: 9
+    name: WHEEL
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: greenyellow
+          led: led
+          dataref: AirbusFBW/OHPLightsATA31[39]
+        B1:
+          text: WHEEL
+          text-size: 48
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/ECP/SelectWheelPage
+    view:
+      - command: AirbusFBW/PopUpSD
+        condition: ${AirbusFBW/PopUpStateArray[7]} not
+  - index: 10
+    name: F/CTL
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: greenyellow
+          led: led
+          dataref: AirbusFBW/OHPLightsATA31[40]
+        B1:
+          text: F/CTL
+          text-size: 48
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/ECP/SelectFlightControlPage
+    view:
+      - command: AirbusFBW/PopUpSD
+        condition: ${AirbusFBW/PopUpStateArray[7]} not
+  - index: 11
+    name: CLR
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: greenyellow
+          led: led
+          dataref: AirbusFBW/OHPLightsATA31[41]
+        B1:
+          text: CLR
+          text-size: 48
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/ECP/CaptainClear
+    view:
+      - command: AirbusFBW/PopUpSD
+        condition: ${AirbusFBW/PopUpStateArray[7]} not
+  - index: 12
+    name: STS
+    type: push
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: greenyellow
+          led: led
+          dataref: AirbusFBW/OHPLightsATA31[41]
+        B1:
+          text: STS
+          text-size: 48
+          text-font: DIN Bold
+          formula: "1"
+    command: AirbusFBW/ECP/SelectStatusPage
+    view:
+      - command: AirbusFBW/PopUpSD
+        condition: ${AirbusFBW/PopUpStateArray[7]} not
+  - index: 13
+    name: ALL
+    type: push
+    annunciator:
+      size: medium
+      text: ALL
+      text-size: 48
+      text-font: DIN Bold
+      formula: "1"
+    command: AirbusFBW/ECAMAll
+    options: nostate
+    view:
+      - command: AirbusFBW/PopUpSD
+        condition: ${AirbusFBW/PopUpStateArray[7]} not
+  - index: 14
+    name: EFIS
+    type: page
+    page: efis
+    icon: A339
+default-text-color: gold

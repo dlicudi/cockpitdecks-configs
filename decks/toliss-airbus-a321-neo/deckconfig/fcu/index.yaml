@@ -1,8 +1,14 @@
+---
 aircraft: Toliss A321neo
 description: Transponder and other communication for Loupedeck Live
 version: 1.0.0
+last-updated: 03-APR-2024
 #
-# BUTTONS
+# CHANGELOG
+#
+# 1.0.0  03-APR-2023  Initial version
+#
+# PAGE
 #
 buttons:
   #
@@ -254,48 +260,48 @@ buttons:
   - index: b0
     name: ATC0
     type: push
-    colored-led: (255, 128, 0)
+    colored-led: [255, 128, 0]
     command: AirbusFBW/ATCCodeKey0
     formula: 1
   - index: b1
     name: ATC1
     type: push
-    colored-led: (255, 128, 0)
+    colored-led: [255, 128, 0]
     command: AirbusFBW/ATCCodeKey1
     formula: 1
   - index: b2
     name: ATC2
     type: push
-    colored-led: (255, 128, 0)
+    colored-led: [255, 128, 0]
     command: AirbusFBW/ATCCodeKey2
     formula: 1
   - index: b3
     name: ATC3
     type: push
-    colored-led: (255, 128, 0)
+    colored-led: [255, 128, 0]
     command: AirbusFBW/ATCCodeKey3
     formula: 1
   - index: b4
     name: ATC4
     type: push
-    colored-led: (255, 128, 0)
+    colored-led: [255, 128, 0]
     command: AirbusFBW/ATCCodeKey4
     formula: 1
   - index: b5
     name: ATC5
     type: push
-    colored-led: (255, 128, 0)
+    colored-led: [255, 128, 0]
     command: AirbusFBW/ATCCodeKey5
     formula: 1
   - index: b6
     name: ATC6
     type: push
-    colored-led: (255, 128, 0)
+    colored-led: [255, 128, 0]
     command: AirbusFBW/ATCCodeKey6
     formula: 1
   - index: b7
     name: ATC7
     type: push
-    colored-led: (255, 128, 0)
+    colored-led: [255, 128, 0]
     command: AirbusFBW/ATCCodeKey7
     formula: 1
