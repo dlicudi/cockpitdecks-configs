@@ -25,13 +25,13 @@ decks:
     light-off: 5
     # disabled: true
   - name: XPDeckXL
-    layout: consoles
+    layout: panels
     type: Stream Deck XL
     brightness: 100
     # disabled: true
   - name: XPDeckPlus
     type: Stream Deck +
-    layout: plus
+    layout: efis
     brightness: 60
     # disabled: true
   - name: XPTouch

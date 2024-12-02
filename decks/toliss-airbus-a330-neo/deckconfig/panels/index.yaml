@@ -1,0 +1,475 @@
+---
+aircraft: ToLiss A339
+description: Bottom part of overhead panel, external lights
+version: 1.0.0
+last-updated: 31-OCT-2024
+#
+# CHANGELOG
+#
+# 31-OCT-2024: 1.0.0: Initial release (adapted from ToLiss A321)
+#
+# PAGE
+#
+name: index
+buttons:
+  # ### LINE 1 ###  0- 7 ######################################################
+  - index: 0
+    name: ICE WING
+    type: push
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAIL
+        color: darkorange
+        dataref: AirbusFBW/OHPLightsATA30[1]
+      B1:
+        text: ON
+        color: deepskyblue
+        framed: true
+        dataref: AirbusFBW/OHPLightsATA30[0]
+    label: WING
+    command: toliss_airbus/antiicecommands/WingToggle
+  - index: 1
+    name: ANTI ICE
+    type: none
+    label: ANTI ICE
+    text:
+      text: ""
+  - index: 2
+    name: ICE ENG1
+    type: push
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAIL
+        color: darkorange
+        dataref: AirbusFBW/OHPLightsATA30[3]
+      B1:
+        text: ON
+        color: deepskyblue
+        framed: true
+        dataref: AirbusFBW/OHPLightsATA30[2]
+    label: ENG1
+    command: toliss_airbus/antiicecommands/ENG1Toggle
+  - index: 3
+    name: ICE ENG2
+    type: push
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAIL
+        color: darkorange
+        dataref: AirbusFBW/OHPLightsATA30[5]
+      B1:
+        text: ON
+        color: deepskyblue
+        framed: true
+        dataref: AirbusFBW/OHPLightsATA30[4]
+    label: ENG2
+    command: toliss_airbus/antiicecommands/ENG2Toggle
+  - index: 5
+    name: PROBE/WINDOW HEAT
+    type: onoff
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAIL
+        color: darkorange
+        dataref: AirbusFBW/OHPLightsATA30[11]
+      B1:
+        text: ON
+        color: deepskyblue
+        framed: true
+        dataref: AirbusFBW/OHPLightsATA30[10]
+    label: |-
+      PROBE/WINDOW
+      HEAT
+    set-dataref: AirbusFBW/ProbeHeatSwitch
+  - index: 6
+    name: METAR
+    type: none
+    label: Weather
+    weather-metar:
+      # station: OTHH
+      weather-font: B612-Regular
+      weather-color: coral
+      weather-size: 24
+  - index: 7
+    name: up
+    type: page
+    page: ovrhdaircond
+    label: AIR COND
+    label-size: 10
+    text:
+      text: ${fa:arrow-up}
+      text-color: coral
+      text-font: fontawesome.otf
+      text-size: 60
+  - index: 14
+    name: AIRCRAFT
+    label: Aircraft
+    type: push
+    string-datarefs:
+      - sim/aircraft/view/acf_ICAO
+      - sim/aircraft/view/acf_tailnum
+      - sim/aircraft/view/acf_relative_path
+      - AirbusFBW/MCDU1cont2y
+    text:
+      text: |-
+        ${sim/aircraft/view/acf_ICAO}
+        ${sim/aircraft/view/acf_tailnum}
+      text-font: B612-Bold
+      text-size: 18
+      text-color: coral
+    command:
+      - command: AirbusFBW/MCDU1Menu
+      - command: AirbusFBW/MCDU1LSK6L
+        delay: 1
+      - command: AirbusFBW/MCDU1LSK6R
+        delay: 1
+      - command: AirbusFBW/MCDU1LSK1R
+        delay: 1
+      - command: AirbusFBW/MCDU1KeyO
+        delay: 1
+      - command: AirbusFBW/MCDU1KeyO
+        delay: 0.4
+      - command: AirbusFBW/MCDU1KeyPM
+        delay: 0.4
+      - command: AirbusFBW/MCDU1KeyP
+        delay: 0.4
+      - command: AirbusFBW/MCDU1KeyM
+        delay: 0.4
+      - command: AirbusFBW/MCDU1KeyA
+        delay: 0.4
+      - command: AirbusFBW/MCDU1LSK2L
+        delay: 1
+        condition: OO-PMA ${sim/aircraft/view/acf_tailnum} eq not
+      - command: AirbusFBW/MCDU1Menu
+        delay: 2
+      - command: AirbusFBW/MCDU1LSK1L
+        delay: 1
+  - index: 15
+    name: right
+    type: page
+    page: intlights
+    label: INT.LIGHTS
+    label-size: 10
+    text:
+      text: ${fa:arrow-right}
+      text-color: coral
+      text-font: fontawesome.otf
+      text-size: 60
+  - index: 16
+    name: STROBE
+    label: STROBE
+    type: updown
+    commands:
+      - toliss_airbus/lightcommands/StrobeLightUp
+      - toliss_airbus/lightcommands/StrobeLightDown
+    stops: 3
+    switch:
+      switch-style: rect
+      switch-width: 18
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - AUTO
+        - "OFF"
+      tick-space: 10
+      tick-label-size: 30
+      tick-label-font: DIN Bold
+    options: 3way,hexa
+    # ATA 33
+    dataref: AirbusFBW/OHPLightSwitches[7]
+  - index: 17
+    name: BEACON
+    label: BEACON
+    type: onoff
+    commands:
+      - toliss_airbus/lightcommands/BeaconOn
+      - toliss_airbus/lightcommands/BeaconOff
+    switch:
+      switch-style: rect
+      switch-width: 20
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - ON
+        - OFF
+      tick-space: 10
+      tick-label-size: 30
+      tick-label-font: DIN Bold
+    options: hexa
+    dataref: AirbusFBW/OHPLightSwitches[0]
+  - index: 18
+    name: WING_LIGHTS
+    label: WING
+    type: push
+    command: toliss_airbus/lightcommands/WingLightToggle
+    switch:
+      switch-width: 20
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - ON
+        - OFF
+      tick-space: 10
+      tick-label-size: 30
+      tick-label-font: DIN Bold
+    options: hexa
+    dataref: AirbusFBW/OHPLightSwitches[1]
+  - index: 19
+    name: NAVLOGO
+    label: NAV & LOGO
+    type: updown
+    commands:
+      - toliss_airbus/lightcommands/NavLightUp
+      - toliss_airbus/lightcommands/NavLightDown
+    stops: 3
+    switch:
+      switch-style: rect
+      switch-width: 20
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "2"
+        - "1"
+        - "OFF"
+      tick-space: 10
+      tick-label-size: 30
+      tick-label-font: DIN Bold
+    options: 3way,hexa
+    dataref: AirbusFBW/OHPLightSwitches[2]
+  - index: 21
+    name: APUMASTER
+    type: push
+    annunciator:
+      size: large
+      model: B
+      parts:
+        B1:
+          text: "ON/R"
+          color: deepskyblue
+          framed: true
+          size: 60
+          formula: ${AirbusFBW/APUMaster}
+    command: toliss_airbus/apucommands/MasterToggle
+    label: MASTER SW
+  - index: 22
+    # label: "Connection Status"
+    # label-size: 8
+    type: none
+    multi-texts:
+      - text: |+
+          NO PLUGIN
+
+
+        text-color: red
+        text-size: 14
+        text-font: D-DIN-Bold
+        text-position: cb
+      - text: |+
+          PLUGING OK
+
+        text-size: 14
+        text-color: lime
+        text-font: D-DIN-Bold
+        text-position: cb
+    text-bg-texture: cockpitdecks-empty.png
+    dataref: XPPython3/cockpitdeckshelper/is_running
+  - index: 23
+    # label: "Connection Status"
+    # label-size: 8
+    type: none
+    multi-texts:
+      - text: |+
+          NOT
+          CONNECTED
+
+        text-color: red
+        text-size: 14
+        text-font: D-DIN-Bold
+        text-position: cb
+      - text: |+
+          CONNECTING...
+
+        text-size: 14
+        text-color: orange
+        text-font: D-DIN-Bold
+        text-position: cb
+      - text: |+
+          CONNECTING...
+
+        text-size: 14
+        text-color: orange
+        text-font: D-DIN-Bold
+        text-position: cb
+      - text: |+
+          CONNECTING...
+
+        text-size: 14
+        text-color: orange
+        text-font: D-DIN-Bold
+        text-position: cb
+      - text: |+
+          CONNECTED
+
+        text-color: lime
+        text-size: 14
+        text-font: D-DIN-Bold
+        text-position: cb
+    text-bg-texture: xplane-empty.png
+    formula: ${data:_connection_status}
+  - index: 24
+    name: RWY_LIGHTS
+    type: onoff
+    commands:
+      - toliss_airbus/lightcommands/TurnoffLightOn
+      - toliss_airbus/lightcommands/TurnoffLightOff
+    label: RWY TURN OFF
+    switch:
+      switch-width: 20
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-space: 10
+      tick-label-size: 30
+      tick-label-font: DIN Bold
+    options: hexa
+    dataref: AirbusFBW/OHPLightSwitches[6]
+  - index: 26
+    name: LANDING LIGHTS
+    label: LAND
+    type: updown
+    commands:
+      - toliss_airbus/lightcommands/LLandLightUp
+      - toliss_airbus/lightcommands/LLandLightDown
+    stops: 2
+    switch:
+      switch-style: 3dot
+      switch-width: 18
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-space: 10
+      tick-label-size: 30
+      tick-label-font: DIN Bold
+    options: hexa
+    dataref: AirbusFBW/OHPLightSwitches[4]
+  - index: 27
+    name: NOSE_LIGHTS
+    label: NOSE
+    type: updown
+    commands:
+      - toliss_airbus/lightcommands/NoseLightUp
+      - toliss_airbus/lightcommands/NoseLightDown
+    stops: 3
+    switch:
+      switch-width: 20
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - T.O
+        - TAXI
+        - "OFF"
+      tick-space: 10
+      tick-label-size: 30
+      tick-label-font: DIN Bold
+    options: 3way,hexa
+    dataref: AirbusFBW/OHPLightSwitches[3]
+  - index: 29
+    name: APUSTART
+    type: push
+    annunciator:
+      size: large
+      model: B
+      parts:
+        B0:
+          text: AVAIL
+          color: lime
+          formula: ${AirbusFBW/APUAvail}
+        B1:
+          text: ON
+          color: deepskyblue
+          framed: true
+          size: 60
+          formula: ${AirbusFBW/APUStarter}
+    command: toliss_airbus/apucommands/StarterToggle
+    label: START
+  - index: 30
+    name: RELOAD
+    type: reload
+    label: RELOAD
+    label-size: 14
+    label-position: cm
+    text:
+      text: ${fa:rotate-right}
+      text-font: fontawesome.otf
+      text-size: 80
+      text-position: cm
+      text-color: lime
+      text-bg-color: (94, 111, 130)
+  - index: 12
+    name: RELOAD_ONE
+    type: reload
+    deck: XPDeckXL
+    label: RELOAD THIS ONE
+    label-size: 14
+    label-position: cm
+    text:
+      text: ${fa:rotate-right}
+      text-font: fontawesome.otf
+      text-size: 80
+      text-position: cm
+      text-color: lime
+      text-bg-color: (94, 111, 130)
+  - index: 31
+    name: Index
+    type: page
+    page: index-alt
+    icon: A339
+# AirbusFBW/OHPLightSwitches
+# Strobe: 7 0,1,2
+# Beacon: 0 0,1
+# Wing: 1 0,1
+# NavLogo: 2 0,1
+# RunwayTurnOff: 6: 0,1
+# LandLeft: 4 0,1,2
+# LandRight: 5 0,1,2
+# Nose: 3 0,1,2
+# Seat Belt: 11 0,1
+# Non Smoking: 12 0,1,2
+# STBY COMPASS: 9 0,1
+# Dome: 8, 0,1,2
+# Emergency Exit: 10 0,1,2
+#
+# cockpit/oh/annLight/anim: 0,1,2 (2=test)
+#
+# AirbusFBW/OPHLightsATA30
+#
+#
+# Probe/Window heat: AirbusFBW/ProbeHeatSwitch
+# AirbusFBW/ENG1AISwitch
+# AirbusFBW/ENG1AILight
+# and eng2 also
+#
+# All guards:
+# AirbusFBW/OHPGuardsAllATA
+#
+#

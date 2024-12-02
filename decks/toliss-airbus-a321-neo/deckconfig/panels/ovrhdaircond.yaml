@@ -1,0 +1,393 @@
+---
+aircraft: Toliss A321neo
+description: Overhead AIR COND Panel with annunciator buttons
+version: 1.0.0
+last-updated: 03-APR-2024
+note: Streamdeck 32 keys
+#
+# CHANGELOG
+#
+# 1.0.0  03-APR-2024  Creation
+#
+# PAGE
+#
+buttons:
+  # ### LINE 1 ###  0- 7 ######################################################
+  # THIS IS FOR A321 not A321neo
+  # - index: 0
+  #   name: ECONFLOW
+  #   type: push
+  #   multi-icons:
+  #     - NONE_NONE
+  #     - NONE_ON_BLUE_FR
+  #   label: ECON FLOW
+  #   label-position: ct
+  #   command: toliss_airbus/aircondcommands/EconFlowToggle
+  #   dataref: AirbusFBW/AirCondSwitchAnims[13]
+  - index: 0
+    name: PACKFLOW
+    type: updown
+    stops: 3
+    label: PACK FLOW
+    dataref: AirbusFBW/AirCondSwitchAnims[13]
+    commands:
+      - toliss_airbus/aircondcommands/EconFlowToggle
+      - toliss_airbus/aircondcommands/EconFlowToggle
+    initial-value: 0
+    circular-switch:
+      switch-style: large
+      down: 60
+      button-size: 48
+      tick-space: 36
+      tick-length: 24
+      tick-label-size: 30
+      tick-label-font: DIN Bold
+      tick-from: 120
+      tick-to: 240
+      tick-color: white
+      tick-width: 8
+      tick-underline-width: 8
+      tick-labels:
+        - LO
+        - NORM
+        - HI
+  - index: 2
+    name: ACCOCKPIT
+    label: COCKPIT
+    type: updown
+    stops: 7
+    initial-value: 3
+    commands:
+      - none
+      - none
+    formula: ${AirbusFBW/AirCondSwitchAnims[12]} 16 - 2 /
+    dataref: AirbusFBW/AirCondSwitchAnims[12]
+    circular-switch:
+      switch-style: large
+      down: 30
+      button-size: 70
+      tick-space: 36
+      tick-length: 24
+      tick-label-size: 30
+      tick-label-font: DIN Bold
+      tick-from: 45
+      tick-to: 315
+      tick-color: white
+      tick-width: 8
+      tick-underline-width: 8
+      tick-labels:
+        - COLD
+        - ""
+        - ""
+        - ""
+        - ""
+        - ""
+        - HOT
+  - index: 3
+    name: ACFWDCABIN
+    label: FWD CABIN
+    type: updown
+    stops: 7
+    initial-value: 3
+    commands:
+      - none
+      - none
+    dataref: AirbusFBW/AirCondSwitchAnims[11]
+    formula: ${AirbusFBW/AirCondSwitchAnims[11]} 16 - 2 /
+    circular-switch:
+      switch-style: large
+      down: 30
+      button-size: 70
+      tick-space: 36
+      tick-length: 24
+      tick-label-size: 30
+      tick-label-font: DIN Bold
+      tick-from: 45
+      tick-to: 315
+      tick-color: white
+      tick-width: 8
+      tick-underline-width: 8
+      tick-labels:
+        - COLD
+        - ""
+        - ""
+        - ""
+        - ""
+        - ""
+        - HOT
+  - index: 4
+    name: ACAFTCABIN
+    type: updown
+    stops: 7
+    label: AFT CABIN
+    initial-value: 3
+    commands:
+      - none
+      - none
+    dataref: AirbusFBW/AftCabinTemp
+    formula: ${AirbusFBW/AftCabinTemp} 16 - 2 /
+    circular-switch:
+      switch-style: large
+      down: 30
+      button-size: 70
+      tick-space: 36
+      tick-length: 24
+      tick-label-size: 30
+      tick-label-font: DIN Bold
+      tick-from: 45
+      tick-to: 315
+      tick-color: white
+      tick-width: 8
+      tick-underline-width: 8
+      tick-labels:
+        - COLD
+        - ""
+        - ""
+        - ""
+        - ""
+        - ""
+        - HOT
+  - index: 6
+    name: HOTAIR
+    type: onoff
+    label: HOT AIR
+    annunciator:
+      size: large
+      model: B
+      parts:
+        B0:
+          text: FAULT
+          color: darkorange
+          font: DIN Condensed Bold
+          text-size: 60
+        B1:
+          text: OFF
+          color: white
+          framed: true
+          size: 60
+          formula: ${AirbusFBW/HotAirSwitch} not
+    set-dataref: AirbusFBW/HotAirSwitch
+  - index: 7
+    name: up
+    type: page
+    label: ELEC
+    label-size: 10
+    page: ovrhdelec
+    text:
+      text: ${fa:arrow-up}
+      text-font: fontawesome.otf
+      text-size: 60
+  - index: 9
+    decor:
+      type: segment
+      code: NSKL
+      width: 24
+  - index: 10
+    decor:
+      type: segment
+      code: BGIJKLNS
+      width: 24
+  - index: 11
+    decor:
+      type: segment
+      code: BGIJKL
+      width: 24
+  - index: 12
+    decor:
+      type: segment
+      code: BGIJKL
+      width: 24
+  - index: 13
+    decor:
+      type: segment
+      code: IJNS
+      width: 24
+  - index: 18
+    decor:
+      type: segment
+      code: BGI0123LNS
+  - index: 19
+    decor:
+      type: segment
+      code: IJKLNS
+  - index: 20
+    decor:
+      type: segment
+      code: IJKL
+  - index: 17
+    label: PACK 1
+    label-position: cm
+    decor:
+      type: segment
+      code: BGKLNS
+      width: 10/24
+  - index: 21
+    label: PACK 2
+    label-position: cm
+    decor:
+      type: segment
+      code: BGIJNS
+      width: 10/24
+  - index: 16
+    name: BLEEDPACK1
+    type: onoff
+    label: PACK 1
+    annunciator:
+      size: large
+      model: B
+      parts:
+        B0:
+          text: FAULT
+          color: darkorange
+          font: DIN Condensed Bold
+          text-size: 40
+          formula: ${AirbusFBW/Pack1SwitchIllum} ${AirbusFBW/Pack1FCVInd} - abs
+        B1:
+          text: OFF
+          color: white
+          framed: true
+          size: 60
+          formula: ${AirbusFBW/Pack1SwitchIllum} not
+    set-dataref: AirbusFBW/Pack1Switch
+  - index: 25
+    name: ENG1BLEED
+    type: onoff
+    label: ENG 1 BLEED
+    annunciator:
+      size: large
+      model: B
+      parts:
+        B0:
+          text: FAULT
+          color: darkorange
+          size: 40
+          formula: 0
+        B1:
+          text: OFF
+          color: white
+          framed: true
+          size: 60
+          formula: ${AirbusFBW/ENG1BleedSwitch} not
+    set-dataref: AirbusFBW/ENG1BleedSwitch
+  - index: 26
+    name: RAMAIR
+    type: onoff
+    annunciator:
+      size: large
+      model: B
+      parts:
+        B1:
+          text: ON
+          color: white
+          framed: true
+          size: 60
+          formula: ${AirbusFBW/RamAirSwitch}
+    label: RAM AIR
+    set-dataref: AirbusFBW/RamAirSwitch
+    guard:
+      model: grid
+      color: (40,40,40)
+      dataref: ckpt/ramair/cover
+      # 0=closed, 1=opened
+  - index: 27
+    name: APUBLEED
+    type: push
+    annunciator:
+      size: large
+      model: B
+      parts:
+        B1:
+          text: ON
+          color: deepskyblue
+          framed: true
+          size: 60
+          formula: ${AirbusFBW/APUBleedInd}
+    command: toliss_airbus/apucommands/BleedToggle
+    label: APU BLEED
+  - index: 28
+    name: XBLEED
+    type: updown
+    stops: 3
+    label: X BLEED
+    commands:
+      - none
+      - none
+    dataref: AirbusFBW/XBleedSwitch
+    set-dataref: AirbusFBW/XBleedSwitch
+    initial-value: 1
+    circular-switch:
+      switch-style: large
+      down: 60
+      button-size: 48
+      tick-space: 36
+      tick-length: 24
+      tick-label-size: 30
+      tick-label-font: DIN Bold
+      tick-from: 120
+      tick-to: 240
+      tick-color: white
+      tick-width: 8
+      tick-underline-width: 8
+      tick-labels:
+        - SHUT
+        - AUTO
+        - OPEN
+  - index: 29
+    name: ENG2BLEED
+    type: onoff
+    label: ENG 2 BLEED
+    annunciator:
+      size: large
+      model: B
+      parts:
+        B0:
+          text: FAULT
+          color: darkorange
+          size: 40
+          formula: 0
+        B1:
+          text: OFF
+          color: white
+          framed: true
+          size: 60
+          formula: ${AirbusFBW/ENG2BleedSwitch} not
+    set-dataref: AirbusFBW/ENG2BleedSwitch
+  - index: 22
+    name: BLEEDPACK2
+    type: onoff
+    label: PACK 2
+    annunciator:
+      size: large
+      model: B
+      parts:
+        B0:
+          text: FAULT
+          color: darkorange
+          font: DIN Condensed Bold
+          text-size: 40
+          formula: ${AirbusFBW/Pack2SwitchIllum} ${AirbusFBW/Pack2FCVInd} - abs
+        B1:
+          text: OFF
+          color: white
+          framed: true
+          size: 60
+          formula: ${AirbusFBW/Pack2SwitchIllum} not
+    set-dataref: AirbusFBW/Pack2Switch
+    # ### LINE 3 ### 16-23 ######################################################
+  - index: 23
+    name: down
+    type: page
+    label: EXT.LIGHTS
+    label-size: 10
+    page: index
+    text:
+      text: ${fa:arrow-down}
+      text-font: fontawesome.otf
+      text-size: 60
+  - index: 31
+    name: Index
+    type: page
+    page: index
+    icon: TOLISS-A21N
+default-label-size: 12
+default-label-font: DIN Medium.ttf

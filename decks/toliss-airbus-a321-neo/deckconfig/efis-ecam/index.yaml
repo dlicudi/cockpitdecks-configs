@@ -1,13 +1,15 @@
-# CHANGELOG
-#
-# 2.0.0  03-APR-2023  Latest version
-#
 ---
 aircraft: Toliss A321neo
 description: ECAM display selector for Toliss A321neo for Streamdeck 15 keys
 version: 2.0.0
-# ########################
-# BUTTTONS
+last-updated: 12-JUN-2024
+#
+# CHANGELOG
+#
+# 2.0.0  12-JUN-2024
+# 1.0.0  03-APR-2023  Initial version
+#
+# PAGE
 #
 name: ECAM
 buttons:

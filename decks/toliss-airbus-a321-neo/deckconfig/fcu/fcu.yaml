@@ -1,13 +1,14 @@
-# CHANGELOG
-#
-# 1.0.0  03-APR-2023  Initial version
-#
 ---
 aircraft: Toliss A321neo
 description: Main FCU page for Loupedeck Live
 version: 1.0.0
+last-updated: 03-APR-2024
 #
-# BUTTONS
+# CHANGELOG
+#
+# 1.0.0  03-APR-2023  Initial version
+#
+# PAGE
 #
 buttons:
   #
@@ -35,8 +36,8 @@ buttons:
     commands:
       - toliss_airbus/capt_baro_push
       - toliss_airbus/capt_baro_pull
-      - sim/instruments/barometer_down
       - sim/instruments/barometer_up
+      - sim/instruments/barometer_down
     options: modulo
   - index: e3
     name: FCU Altitude

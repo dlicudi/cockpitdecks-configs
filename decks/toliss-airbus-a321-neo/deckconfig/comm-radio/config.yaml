@@ -1,10 +1,14 @@
-# CHANGELOG
-#
-# 1.0.0  03-APR-2023  Initial version
-#
 ---
 aircraft: Toliss A321neo
-description: Configuration parameters for X-Touch mini
-version: 1.0.0
-# ########################
-homepage-name: a
+description: Encoders and push buttons on "Page A" of X-Touch mini
+version: 2.0.0
+last-updated: 24-OCT-2024
+#
+# CHANGELOG
+#
+# 2.0.0  24-OCT-2023  Focus on internal lights
+# 1.0.0  03-APR-2023  Initial version
+#
+# LAYOUT
+#
+home-page-name: intlights

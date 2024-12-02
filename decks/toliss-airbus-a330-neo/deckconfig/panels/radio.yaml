@@ -1,0 +1,32 @@
+---
+aircraft: ToLiss A339
+description: Radio panel
+version: 1.0.0
+last-updated: 31-OCT-2024
+#
+# CHANGELOG
+#
+# 31-OCT-2024: 1.0.0: Initial release (adapted from ToLiss A321)
+#
+# PAGE
+#
+# Basic. Needs more stuff
+#
+buttons:
+  - index: 15
+    name: XPNDR
+    type: page
+    page: piedestal
+    label: PIEDESTAL
+    text-bgcolor: (94, 111, 130)
+    text:
+      text: ${fa:arrow-right}
+      text-color: coral
+      text-font: fontawesome.otf
+      text-size: 60
+      text-position: cm
+  - index: 31
+    name: Index
+    type: page
+    page: index-alt
+    icon: A339

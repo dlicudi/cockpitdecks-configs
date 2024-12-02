@@ -1,12 +1,15 @@
-# CHANGELOG
-#
-# 1.0.0  03-APR-2023  Initial version
-#
 ---
 aircraft: Toliss A321neo
 description: Include with all views for Loupedeck Live
 version: 1.0.0
-# ########################
+last-updated: 03-APR-2024
+#
+# CHANGELOG
+#
+# 1.0.0  03-APR-2023  Initial version
+#
+# PAGE
+#
 buttons:
   - index: b0
     name: View Circle Dot
@@ -41,6 +44,7 @@ buttons:
     # formula: ${sim/flightmodel/weight/m_fuel_total} 31517.875 / 360 * round
     label: FCU
     command: SRS/X-Camera/Select_View_ID_2
+    formula: 1
   - index: b3
     name: View 3
     type: push
