@@ -1,16 +1,18 @@
-# CHANGELOG
-#
-# 3.0.0  03-APR-2023  Latest version
-#
 ---
 aircraft: Toliss A321neo
-version: 3.0.0
 description: EFIS display selector + some FCU commands for Streamdeck 15 keys
-# ########################
-# BUTTONS
+version: 3.0.0
+last-updated: 12-JUN-2024
+#
+# CHANGELOG
+#
+# 3.0.0  
+# 1.0.0  03-APR-2023  Initial version
+#
+# PAGE
 #
 buttons:
-# ### LINE 1 ###  0 -  4 ######################################################
+  # ### LINE 1 ###  0 -  4 ######################################################
   - index: 0
     name: CSTR
     type: push
@@ -106,7 +108,7 @@ buttons:
           formula: "1"
     command: toliss_airbus/dispcommands/CaptArptPushButton
     view: SRS/X-Camera/Select_View_ID_1
-# ### LINE 2 ###  5 -  9 ######################################################
+    # ### LINE 2 ###  5 -  9 ######################################################
   - index: 5
     type: push
     name: CHRONO
@@ -187,7 +189,7 @@ buttons:
       model: B
       parts:
         B1:
-          text: "ON"
+          text: ON
           text-color: lime
           text-size: 70
           text-font: DIN Bold
@@ -200,20 +202,14 @@ buttons:
     seal-width: 4
     command: toliss_airbus/dispcommands/TerrOnND1Toggle
   - index: 9
-    name: SPD/MACH
-    type: push
-    label: SPD/MACH
-    label-size: 10
-    command: sim/autopilot/knots_mach_toggle
-    dataref: sim/cockpit/autopilot/airspeed_is_mach
-    initial-value: 0
-    push-switch:
-      button-size: 120
-      button-fill-color: black
-      button-stroke-width: 0
-      witness-size: 10
-      witness-color: red
-# ### LINE 3 ### 10 - 14 ######################################################
+    name: RELOAD
+    type: reload
+    text:
+      text: ${fa:rotate-right}
+      text-font: fontawesome.otf
+      text-size: 60
+      text-position: cm
+      text-color: lime
   - index: 10
     name: FD 1
     type: push
@@ -255,10 +251,11 @@ buttons:
     stops: 3
     switch:
       base-underline-width: 6
+      switch-width: 22
       tick-labels:
-        - "ADF1"
-        - "OFF"
-        - "VOR1"
+        - ADF1
+        - OFF
+        - VOR1
       tick-label-size: 30
       tick-label-font: DIN Bold
     options: 3way,horizontal
@@ -270,10 +267,11 @@ buttons:
     stops: 3
     switch:
       base-underline-width: 6
+      switch-width: 22
       tick-labels:
-        - "ADF2"
-        - "OFF"
-        - "VOR2"
+        - ADF2
+        - OFF
+        - VOR2
       tick-label-size: 30
       tick-label-font: DIN Bold
     options: 3way,horizontal

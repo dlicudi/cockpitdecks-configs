@@ -1,0 +1,29 @@
+---
+aircraft: Toliss A321neo
+description: RAdio control
+version: 1.0.0
+last-updated: 03-APR-2024
+#
+# CHANGELOG
+#
+# 1.0.0  03-APR-2024  Creation
+#
+# PAGE
+#
+buttons:
+  - index: 15
+    name: XPNDR
+    type: page
+    page: piedestal
+    label: PIEDESTAL
+    text-bgcolor: (94, 111, 130)
+    text:
+      text: ${fa:arrow-right}
+      text-font: fontawesome.otf
+      text-size: 60
+      text-position: cm
+  - index: 31
+    name: Index
+    type: page
+    page: index-alt
+    icon: TOLISS-A21N

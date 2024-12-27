@@ -1,0 +1,122 @@
+---
+aircraft: ToLiss A339
+description: Cockpitdecks specific actions, not linked to aircraft
+version: 1.0.0
+last-updated: 31-OCT-2024
+#
+# CHANGELOG
+#
+# 31-OCT-2024: 1.0.0: Initial release (adapted from ToLiss A321)
+#
+# PAGE
+#
+buttons:
+  # ### LINE 1 ###  0- 7 ######################################################
+  - index: 1
+    name: STATUS
+    type: inspect
+    icon: COCKPITDECKS
+    label: STATUS
+    label-color: red
+    label-position: cm
+    what: status
+  - index: 2
+    name: DESCRIBE
+    type: inspect
+    icon: COCKPITDECKS
+    label: DESCRIBE
+    label-color: red
+    label-position: cm
+    what: desc
+  - index: 3
+    name: INSPECT
+    type: inspect
+    icon: COCKPITDECKS
+    label: INSPECT
+    label-color: red
+    label-position: cm
+    what: status
+  - index: 4
+    name: DATAREF
+    type: inspect
+    icon: COCKPITDECKS
+    label: |-
+      BUTTON
+      DATAREFS
+    label-color: red
+    label-position: cm
+    what: dataref
+  - index: 5
+    name: DREFVALUES
+    type: inspect
+    icon: COCKPITDECKS
+    label: DREFVALUES
+    label-color: red
+    label-position: cm
+    what: datarefs
+  - index: 6
+    name: THREADS
+    type: inspect
+    icon: COCKPITDECKS
+    label: THREADS
+    label-color: red
+    label-position: cm
+    what: threads
+    # ### LINE 2 ###  8-15 ######################################################
+
+    # ### LINE 3 ### 16-23 ######################################################
+
+    # ### LINE 4 ### 24-31 ######################################################
+    # - index: 26
+    #   name: XPLANEDATA2
+    #   type: push
+    #   icon: XPLANE_OUTPUT
+    #   label: "COCKPIT\nDATA"
+    #   command: sim/operation/toggle_data_output_cockpit
+    #   options: framed-icon
+  - index: 24
+    name: STOP_COCKPITDECKS
+    type: stop
+    icon: PANIC
+  - index: 28
+    name: ANNUNCIATOR LIGHTS
+    label: ANN LT
+    type: dimmer
+    stops: 3
+    dimmer:
+      - 100
+      - 80
+      - 30
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - TEST
+        - BRT
+        - DIM
+      tick-space: 10
+      tick-label-size: 30
+      tick-label-font: DIN Bold
+    options: 3way,invert,hexa
+    dataref: AirbusFBW/AnnunMode
+    set-dataref: AirbusFBW/AnnunMode
+  - index: 30
+    name: RELOAD
+    type: reload
+    label: RELOAD
+    label-size: 14
+    label-position: cm
+    text:
+      text: ${fa:rotate-right}
+      text-font: fontawesome.otf
+      text-size: 80
+      text-position: cm
+      text-color: lime
+      text-bg-color: (94, 111, 130)
+  - index: 31
+    name: Index
+    type: page
+    page: index
+    icon: A339

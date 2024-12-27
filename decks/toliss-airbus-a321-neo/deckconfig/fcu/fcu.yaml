@@ -1,13 +1,14 @@
-# CHANGELOG
-#
-# 1.0.0  03-APR-2023  Initial version
-#
 ---
 aircraft: Toliss A321neo
 description: Main FCU page for Loupedeck Live
 version: 1.0.0
+last-updated: 03-APR-2024
 #
-# BUTTONS
+# CHANGELOG
+#
+# 1.0.0  03-APR-2023  Initial version
+#
+# PAGE
 #
 buttons:
   #
@@ -35,8 +36,8 @@ buttons:
     commands:
       - toliss_airbus/capt_baro_push
       - toliss_airbus/capt_baro_pull
-      - sim/instruments/barometer_down
       - sim/instruments/barometer_up
+      - sim/instruments/barometer_down
     options: modulo
   - index: e3
     name: FCU Altitude
@@ -70,7 +71,12 @@ buttons:
   - index: 0
     type: push
     name: SPDMACH
-    label: "SPD\n\n\n\nMACH"
+    label: |-
+      SPD
+
+
+
+      MACH
     label-position: cm
     label-font: DIN Bold
     label-size: 10
@@ -80,13 +86,15 @@ buttons:
       button-fill-color: black
       button-stroke-width: 0
       witness-size: 0
-    # set-dataref: sim/cockpit2/autopilot/airspeed_is_mach
+      # set-dataref: sim/cockpit2/autopilot/airspeed_is_mach
   - index: 1
     name: MASTER CAUTION
     type: push
     command: sim/annunciator/clear_master_caution
     annunciator:
-      text: "MASTER\nCAUT"
+      text: |-
+        MASTER
+        CAUT
       text-color: darkorange
       text-font: DIN Condensed Black.otf
       text-size: 72
@@ -98,7 +106,9 @@ buttons:
     type: push
     command: sim/annunciator/clear_master_warning
     annunciator-animate:
-      text: "MASTER\nWARN"
+      text: |-
+        MASTER
+        WARN
       text-color: firebrick
       text-font: DIN Condensed Black.otf
       text-size: 72
@@ -106,10 +116,14 @@ buttons:
       animation-speed: 2.0
     vibrate: LONG
   - index: 3
-    type: page
-    page: back
+    type: push
     name: ALTSCALE
-    label: "1000\n\n\n\n100 (BACK)"
+    label: |-
+      1000
+
+
+
+      100
     label-font: DIN Bold
     label-size: 10
     label-position: cm
@@ -122,7 +136,12 @@ buttons:
   - index: 4
     type: push
     name: HDGTRACK
-    label: "HDG TRK\n\n\n\nV/S FPA"
+    label: |-
+      HDG TRK
+
+
+
+      V/S FPA
     label-position: cm
     label-font: DIN Bold
     label-size: 10
@@ -132,7 +151,7 @@ buttons:
       button-fill-color: black
       button-stroke-width: 0
       witness-size: 0
-  - index: 9
+  - index: 5
     name: A/THR
     type: push
     annunciator:
@@ -149,7 +168,7 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: AirbusFBW/ATHRbutton
-  - index: 5
+  - index: 6
     name: AP1
     type: push
     annunciator:
@@ -169,7 +188,12 @@ buttons:
   - index: 8
     type: onoff
     name: BAROMETRIC
-    label: "inHg\n\n\n\nhPa"
+    label: |-
+      inHg
+
+
+
+      hPa
     label-position: cm
     label-font: DIN Bold
     label-size: 10
@@ -179,7 +203,7 @@ buttons:
       button-stroke-width: 0
       witness-size: 0
     set-dataref: AirbusFBW/BaroUnitCapt
-  - index: 7
+  - index: 9
     name: LOC
     type: push
     annunciator:
@@ -197,7 +221,7 @@ buttons:
           formula: "1"
     command: AirbusFBW/LOCbutton
     options: auto-repeat=3/3
-  - index: 11
+  - index: 10
     name: APPR
     type: push
     annunciator:
@@ -214,7 +238,7 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: AirbusFBW/APPRbutton
-  - index: 10
+  - index: 11
     name: EXPED
     type: push
     annunciator:
@@ -231,7 +255,7 @@ buttons:
           text-font: DIN Bold
           formula: "1"
     command: AirbusFBW/EXPEDbutton
-  - index: 6
+  - index: 7
     name: AP2
     type: push
     annunciator:
@@ -271,13 +295,14 @@ buttons:
       mode: vertical-left
       text-size: 36
       text-font: B612-Bold
-      text-color: "gold"
+      text-color: gold
       value-size: 48
       value-font: Segment7Standard
-      value-color: "white"
+      value-color: white
   - index: right
     name: FCU-R
-    type: none
+    type: page
+    page: index
     multi-datarefs:
       - sim/cockpit2/autopilot/altitude_dial_ft
       - sim/cockpit/autopilot/vertical_velocity
@@ -288,8 +313,8 @@ buttons:
       mode: vertical-right
       text-size: 36
       text-font: B612-Bold
-      text-color: "gold"
+      text-color: gold
       value-size: 48
       value-font: Segment7Standard
-      value-color: "white"
+      value-color: white
 includes: views

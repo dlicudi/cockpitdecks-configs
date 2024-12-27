@@ -1,0 +1,17 @@
+---
+aircraft: ToLiss A339
+description: Configuration parameters for Streamdeck 32 keys
+version: 1.0.1
+last-updated: 31-OCT-2024
+#
+# CHANGELOG
+#
+# 1.0.1: 31-OCT-2024: Initial release (adapted from ToLiss A321)
+# 1.0.0  03-APR-2023  Initial version
+#
+# LAYOUT
+#
+default-label-size: 12
+default-label-font: DIN Medium.ttf
+default-annunciator-style: v
+# home-page-name: xplane

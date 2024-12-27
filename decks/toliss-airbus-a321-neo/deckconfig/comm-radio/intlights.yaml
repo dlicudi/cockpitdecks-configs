@@ -1,0 +1,239 @@
+---
+aircraft: Toliss A321neo
+description: Internal lights (all of them, panel lighting, etc.)
+version: 1.0.0
+last-updated: 24-OCT-2024
+#
+# CHANGELOG
+#
+# 1.0.0  24-OCT-2024  Initial version
+#
+# PAGE
+#
+buttons:
+  - index: e0
+    name: PFDND Left Brightness
+    type: encoder-value
+    step: 0.1
+    # Toliss use to set avg brightness to 0.8
+    value: 0.8
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbusFBW/DUBrightness[0]
+    encoder-leds: 0
+  - index: 0
+    name: RELOAD
+    type: reload
+    led: single
+    formula: 1
+
+  - index: e1
+    name: PFDND Right Brightness
+    type: encoder-value
+    step: 0.1
+    # Toliss use to set avg brightness to 0.8
+    value: 0.8
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbusFBW/DUBrightness[1]
+    encoder-leds: 0
+  - index: 1
+    name: EFB Brightness Up
+    type: push
+    command: AirbusFBW/EFBBrightnessUp
+    led: single
+    formula: 1
+  - index: 9
+    name: EFB Brightness Down
+    type: push
+    command: AirbusFBW/EFBBrightnessDown
+    led: single
+    formula: 1
+
+  - index: e2
+    name: ECAM Top Brightness
+    type: encoder-value
+    step: 0.1
+    # Toliss use to set avg brightness to 0.8
+    value: 0.8
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbusFBW/DUBrightness[4]
+    encoder-leds: 0
+  - index: 2
+    name: CPDLC Brightness Up
+    type: push
+    command: AirbusFBW/CPDLC1/BrightnessUp
+    led: single
+    formula: 1
+  - index: 10
+    name: CPDLC Brightness Down
+    type: push
+    command: AirbusFBW/CPDLC1/BrightnessDown
+    led: single
+    formula: 1
+  # - index: 2
+  #   name: MCDU Brightness Up
+  #   type: push
+  #   command: AirbusFBW/ISIBrightnessUp
+  #   led: single
+  #   formula: 1
+  # - index: 10
+  #   name: MCDU Brightness Down
+  #   type: push
+  #   command: AirbusFBW/ISIBrightnessDown
+  #   led: single
+  #   formula: 1
+  - index: e3
+    name: ECAM Bottom Brightness
+    type: encoder-value
+    step: 0.1
+    # Toliss use to set avg brightness to 0.8
+    value: 0.8
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbusFBW/DUBrightness[5]
+    encoder-leds: 0  
+  - index: 3
+    name: MDCU Brightness Up
+    type: push
+    command: AirbusFBW/MCDU1KeyBright
+    led: single
+    formula: 1
+  - index: 11
+    name: MDCU Brightness Down
+    type: push
+    command: AirbusFBW/MCDU1KeyDim
+    led: single
+    formula: 1
+
+  - index: e4
+    name: ISI Brightness
+    type: encoder
+    value-min: 0
+    value-max: 6
+    commands:
+      - AirbusFBW/ISIBrightnessDown
+      - AirbusFBW/ISIBrightnessUp
+    encoder-leds: 0
+
+  - index: e5
+    name: Overhead Panel Brightness
+    type: encoder-value
+    step: 0.1
+    # Toliss use to set avg brightness to 0.8
+    value: 0.8
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbusFBW/PanelFloodBrightnessLevel
+    encoder-leds: 0
+
+  - index: e6
+    name: Pedestal Flood Light
+    type: encoder-value
+    step: 0.1
+    # Toliss use to set avg brightness to 0.8
+    value: 0.8
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbusFBW/PedestalFloodBrightnessLevel
+    encoder-leds: 0
+
+  - index: e7
+    name: FCU Back Light
+    type: encoder-value
+    step: 0.1
+    # Toliss use to set avg brightness to 0.8
+    value: 0.8
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbusFBW/SupplLightLevelRehostats[0]
+    encoder-leds: 0  
+  - index: 7
+    name: Dome Flood Light
+    type: updown
+    stops: 3
+    commands:
+      - toliss_airbus/lightcommands/DomeLightUp
+      - toliss_airbus/lightcommands/DomeLightDown
+    # we have to set the dataref because there is a slight delay between executing the command
+    # and reading the new value of the dataref after execution of the command
+    set-dataref: ckpt/oh/domeLight/anim
+    dataref: ckpt/oh/domeLight/anim
+    led: single
+  - index: 15
+    name: Annunciation Brightness
+    type: updown
+    stops: 3
+    set-dataref: AirbusFBW/AnnunMode
+    dataref: AirbusFBW/AnnunMode
+    led: single
+  # - index: 15
+  #   name: Dome Flood Light Down
+  #   type: push
+  #   command: toliss_airbus/lightcommands/DomeLightDown
+  #   led: single
+  #   formula: 1
+
+  - index: slider
+    name: TESTESTESTEST
+    type: slider
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbusFBW/PanelBrightnessLevel
+    representation: false
+
+# Brightness related datarefs:
+#
+# AirbusFBW/EFBBrightnessUp
+# AirbusFBW/EFBBrightnessDown
+
+# AirbusFBW/CPDLC1/BrightnessUp
+# AirbusFBW/CPDLC1/BrightnessDown
+
+# AirbusFBW/ISIBrightnessUp
+# AirbusFBW/ISIBrightnessDown
+
+# AirbusFBW/DUBrightness
+# 0: LEFT (PFD)
+# 1: RIGHT (ND)
+# 2: RIGHT (ND/FO)
+# 3: LEFT (PDF/FO)
+# 4: ENGINE
+# 5: ECAM
+# 6: MCDU
+# 7: MDCU /FO
+
+# AirbusFBW/AnnunMode (0, 1, 2)
+# AirbusFBW/PanelBrightnessLevel ("keys")
+# AirbusFBW/PanelFloodBrightnessLevel
+# AirbusFBW/PedestalFloodBrightnessLevel
+# AirbusFBW/OHPBrightnessLevel ("keys")
+
+# AirbusFBW/SupplLightLevelRehostats[0]: FCU lighting
+
+# toliss_airbus/lightcommands/DomeLightDown
+# toliss_airbus/lightcommands/DomeLightUp
+
+# Encoders
+# 0: PDF
+# 1; ND
+# 2: ECAM top
+# 3: ECAM bottom
+# 4: ISI
+# 5: Panel Flood Light
+# 6: Pedestal Flood Light
+# 7: FCU Brightness
+# Slider: Pedestal Brightness
+#
+# Up/Down
+# 0:
+# 1: EFB
+# 2: CPDLC
+# 3: MCDU
+# 4:
+# 5:
+# 6:
+# 7: Flood Main (off/dim/brt), 15: Annunciator brightness (dim/brt/test)
+
+

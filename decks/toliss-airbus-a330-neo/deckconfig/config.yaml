@@ -1,0 +1,174 @@
+# CHANGELOG
+#
+# 1.0.0  21-OCT-2024  Initial version
+#
+---
+aircraft: ToLiss A330neo
+description: Definition of decks for ToLiss A330neo
+icao: A339
+model: Airbus A330-900 with Trent 7000-72 engines, version 251t (Airbus A330-941N)
+favourite livery: Air Belgium OO-ABG, MSN 1861 (OO-ABF also available)
+#
+# ########################
+decks:
+  #
+  # PHYSICAL DECKS
+  #
+  - name: XPLive
+    type: LoupedeckLive
+    layout: fcu
+    brightness: 100
+    light-off: 5
+  - name: XPDeck
+    type: Stream Deck Original
+    layout: efis-ecam
+    brightness: 100
+    light-off: 5
+  - name: XPDeckXL
+    layout: panels
+    type: Stream Deck XL
+    brightness: 100
+  - name: XPDeckPlus
+    type: Stream Deck +
+    layout: efis
+    brightness: 60
+    disabled: false
+  - name: XPTouch
+    type: X-Touch Mini
+    layout: comm-radio
+    brightness: 80
+    disabled: false
+  #
+  # VIRTUAL DECKS
+  #
+  - name: Virtual Streamdeck MK.2
+    type: Virtual Streamdeck MK.2
+    layout: efis-ecam
+  - name: Virtual Streamdeck XL
+    type: Virtual Streamdeck XL
+    layout: panels
+  - name: Virtual Streamdeck Mini
+    type: Virtual Streamdeck Mini
+    # We have layout for mini...
+    layout: vmini
+    disabled: false
+  - name: Virtual Streamdeck Plus
+    type: Virtual Streamdeck +
+    layout: efis
+    disabled: false
+  - name: Virtual Streamdeck Neo
+    type: Virtual Stream Deck Neo
+    layout: vneo
+    disabled: false
+  - name: Virtual LoupedeckLive
+    type: Virtual LoupedeckLive
+    layout: fcu
+    disabled: false
+  - name: Virtual X-Touch Mini
+    type: Virtual X-Touch Mini
+    layout: comm-radio
+    brightness: 80
+    disabled: false
+#
+# These attributes are defined at "aircraft" level
+# (i.e. for the entire aircraft, all decks)
+#
+# debug: cockpitdecks.page
+# #######################################################################################
+#
+# « S T Y L E »
+#
+# A I R B U S   S T Y L E  &  C O L O R S
+#
+# GLOBALS
+#
+# Named colors is a poerful mechanism that allows for styling
+# and are an additional indirection to specify colors.
+#
+# named-colors:
+#   TEST: lightgrey
+#
+# ...
+#
+# label-color: TEST
+#
+named-colors:
+  AIRBUS_BACKLIGHT: darkorange
+#
+#
+default-label-font: B612-Bold
+default-label-size: 12
+default-label-color: darkorange
+default-icon-name: NONE.png
+#
+# THEME
+#
+# cockpit-theme: dark
+# cockpit-theme: barbie
+#
+#
+# LIGHT / DAY
+#
+cockpit-texture: A339maintexture.png
+cockpit-color: azure
+default-icon-color: azure
+#
+default-tick-color: coral
+default-tick-label-color: orange
+default-tick-underline-color: coral
+default-button-underline-color: coral
+default-text-color: orange
+#
+#
+# DARK / NIGHT
+#
+# Color (16, 16, 32) is close to
+# average texture color TEXTURE_NIGHT.
+#
+dark-cockpit-color: [16, 16, 32]
+dark-default-icon-color: [16, 16, 32]
+dark-cockpit-texture: A339maintexture-dark.png
+dark-default-annunciator-style: k
+dark-default-label-color: coral
+dark-default-light-off-intensity: 4
+dark-default-text-color: coral
+dark-default-text-position: cm
+dark-default-tick-color: coral
+dark-default-tick-label-color: coral
+dark-default-tick-underline-color: coral
+#
+#
+# Barbie Theme (experimental)
+#
+# barbie-default-label-font: Barbie.otf
+# barbie-cockpit-color: purple
+# barbie-default-icon-color: rebeccapurple
+# barbie-default-label-color: pink
+# barbie-default-light-off-intensity: 10
+# barbie-default-text-color: pink
+# barbie-default-text-position: cm
+# barbie-default-tick-color: pink
+# barbie-default-tick-label-color: pink
+# barbie-default-tick-underline-color: pink
+#
+# #######################################################################################
+#
+# Global Application Settings (at user's request)
+#
+#
+# Global preferences for web decks
+#
+virtual-deck-defaults:
+  highlight: "#ffffff10"
+  flash: "#0f80ffb0"
+  flash_duration: 100
+# #############################
+# DATAREF SETTINGS
+#
+dataref-roundings:
+    sim/cockpit/autopilot/heading: 1
+#
+dataref-fetch-frequencies:
+    sim/cockpit/autopilot/heading: 10
+#
+dataref-fetch-frequency: 3

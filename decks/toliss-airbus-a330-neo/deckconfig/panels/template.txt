@@ -1,0 +1,29 @@
+---
+aircraft: ToLiss A339
+description: All popups on pos. 16 to 28
+version: 1.0.0
+last-updated: 31-OCT-2024
+#
+# CHANGELOG
+#
+# 31-OCT-2024: 1.0.0: Initial release (adapted from ToLiss A321)
+#
+# PAGE
+#
+name: page-name
+buttons:
+# ### LINE 1 ###  0- 7 ######################################################
+  - index: 0
+    name: name
+    label: text
+    type: type
+    icon: NONE
+# ### LINE 2 ###  8-15 ######################################################
+# ### LINE 3 ### 16-23 ######################################################
+# ### LINE 4 ### 24-31 ######################################################
+# ### Buttons
+# ### A/B Pager
+# ### Encoders
+# ### Sliders
+# ### Side buttons
+# ### Colored LED

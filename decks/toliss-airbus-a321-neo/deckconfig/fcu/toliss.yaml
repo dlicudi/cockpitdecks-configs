@@ -1,0 +1,178 @@
+---
+aircraft: Toliss A321neo
+description: Transponder and other communication for Loupedeck Live
+version: 1.0.0
+last-updated: 03-APR-2024
+#
+# CHANGELOG
+#
+# 1.0.0  03-APR-2023  Initial version
+#
+# PAGE
+#
+buttons:
+  #
+  # ENCODERS
+  #
+  #
+  # KEYS
+  #
+  - index: left
+    type: page
+    page: index
+    label: XPNDR
+    text:
+      text: ${fa:backward}
+      text-font: fontawesome.otf
+      text-size: 30
+      text-position: cm
+      text-color: white
+  - index: right
+    type: push
+    command: sim/operation/pause_toggle
+    label: PAUSE
+    label-size: 12
+    label-color: red
+    text:
+      text: ${fa:pause}
+      text-font: fontawesome.otf
+      text-size: 30
+      text-position: cm
+      text-color: red
+  - index: 0
+    name: POWER
+    label: EXT.POWER
+    type: onoff
+    annunciator:
+      model: B
+      B0:
+        text: AVAIL
+        color: lime
+        formula: ${AirbusFBW/EnableExternalPower} not
+      B1:
+        text: ON
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/EnableExternalPower
+    set-dataref: AirbusFBW/EnableExternalPower
+  - index: 1
+    name: HP
+    label: HP AIR
+    type: onoff
+    annunciator:
+      model: B
+      B0:
+        text: AVAIL
+        color: lime
+        formula: ${AirbusFBW/GroundHPAir} not
+      B1:
+        text: ON
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/GroundHPAir
+    set-dataref: AirbusFBW/GroundHPAir
+  - index: 2
+    name: LP
+    label: LP AIR
+    type: onoff
+    annunciator:
+      model: B
+      B0:
+        text: AVAIL
+        color: lime
+        formula: ${AirbusFBW/GroundLPAir} not
+      B1:
+        text: ON
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/GroundLPAir
+    set-dataref: AirbusFBW/GroundLPAir
+  - index: 3
+    name: CHOCKS
+    label: CHOCKS
+    label-color: yellow
+    type: onoff
+    annunciator:
+      model: B
+      B0:
+        text: AVAIL
+        color: lime
+        formula: ${AirbusFBW/Chocks} not
+      B1:
+        text: ON
+        framed: true
+        color: yellow
+        dataref: AirbusFBW/Chocks
+    set-dataref: AirbusFBW/Chocks
+  - index: 7
+    name: ISCS
+    type: push
+    multi-icons:
+      - ISCS_DARK
+      - ISCS_DARK
+    command: toliss_airbus/iscs_open
+    initial-value: 0
+    #
+    # Popups
+    #
+  - index: 4
+    name: Popup FD1
+    type: push
+    command: AirbusFBW/PopUpPFD1
+    dataref: AirbusFBW/PopUpStateArray[2]
+    icon: FD
+  - index: 5
+    name: Popup ND1
+    type: push
+    command: AirbusFBW/PopUpND1
+    dataref: AirbusFBW/PopUpStateArray[4]
+    icon: ND
+  - index: 6
+    name: Popup ISI
+    label: ISI
+    type: push
+    command: AirbusFBW/PopUpISI
+    dataref: AirbusFBW/PopUpStateArray[8]
+    icon: ISI
+    frame:
+      frame: FRAME.png
+      frame-size:
+        - 400
+        - 400
+      content-size:
+        - 222
+        - 222
+      content-offset:
+        - 90
+        - 125
+  - index: 8
+    name: Popup EWD
+    type: push
+    command: AirbusFBW/PopUpEWD
+    dataref: AirbusFBW/PopUpStateArray[6]
+    icon: ECAM
+  - index: 9
+    name: Popup SD
+    type: push
+    command: AirbusFBW/PopUpSD
+    dataref: AirbusFBW/PopUpStateArray[7]
+    icon: ECAM_DOOR
+  - index: 10
+    name: Popup MCDU
+    type: push
+    label: CAPT
+    label-color: lime
+    label-position: cm
+    command: AirbusFBW/UndockMCDU1
+    dataref: AirbusFBW/PopUpStateArray[0]
+    icon: MCDU
+  - index: 11
+    name: Popup MCDU COPILOT
+    type: push
+    label: FO
+    label-color: lime
+    label-position: cm
+    command: AirbusFBW/UndockMCDU2
+    dataref: AirbusFBW/PopUpStateArray[1]
+    icon: MCDU
+includes: views

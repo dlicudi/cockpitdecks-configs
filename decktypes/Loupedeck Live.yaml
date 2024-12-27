@@ -1,40 +1,56 @@
 # This is the description of a deck's capabilities for a Loupedeck LoupedeckLive device
 #
 ---
-type: LoupedeckLive
+name: LoupedeckLive
 driver: loupedeck
 buttons:
   - name: 0
+    repeat:
+      - 4
+      - 3
     action: push
     feedback: image
-    image: [90, 90, 0, 0]
-    repeat: 12
-  - name: left
-    action: swipe
-    feedback: image
-    image: [60, 270, 0, 0]
-  - name: right
-    action: swipe
-    feedback: image
-    image: [60, 270, 420, 0]
-  # Commented out, means center "image" is not accessible as a whole
-  # only through its 12 constituing button...
-  # (otherwise warning is reported on clean/draw)
-  #
-  # - name: center
-  #   action: swipe
-  #   feedback: image
-  #   image: [360, 270, 60, 0]
+    dimension:
+      - 90
+      - 90
   - name: 0
     prefix: e
-    action: [encoder, push]
-    feedback: none
-    repeat: 6
+    repeat:
+      - 1
+      - 3
+    action:
+      - encoder
+      - push
+  - name: 3
+    prefix: e
+    repeat:
+      - 1
+      - 3
+    action:
+      - encoder
+      - push
   - name: 0
     prefix: b
+    repeat:
+      - 8
+      - 1
     action: push
     feedback: colored-led
-    repeat: 8
+  - name: left
+    action:
+      - push
+      - swipe
+    feedback: image
+    dimension:
+      - 60
+      - 270
+  - name: right
+    action:
+      - push
+      - swipe
+    feedback: image
+    dimension:
+      - 60
+      - 270
   - name: buzzer
-    action: none
     feedback: vibrate
