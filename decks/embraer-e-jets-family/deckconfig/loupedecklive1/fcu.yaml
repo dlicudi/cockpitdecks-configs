@@ -23,6 +23,7 @@ buttons:
         formula: "1"
         framed: True
   command: XCrafts/ERJ/fdir_toggle
+  vibrate: SHORT
 
 - index: 1
   name: AP
@@ -42,6 +43,7 @@ buttons:
         formula: "1"
         framed: True
   command: XCrafts/APYD_Toggle
+  vibrate: SHORT
 
 
 - index: 2
@@ -62,6 +64,7 @@ buttons:
         formula: "1"
         framed: True
   command: sim/autopilot/heading
+  vibrate: SHORT
 
 - index: 3
   name: ALT
@@ -81,6 +84,7 @@ buttons:
         formula: "1"
         framed: True
   command: sim/autopilot/altitude_hold
+  vibrate: SHORT
 
 - index: 4
   name: NAV
@@ -92,14 +96,15 @@ buttons:
       B0:
         color: white
         led: led
-        formula: ${XCrafts/ERJ/LNAV_armed}
+        formula: ${sim/cockpit2/autopilot/nav_status} 2 eq
       B1:
         text: NAV
         text-size: 40
         text-font: DIN Bold
         formula: "1"
         framed: True
-  command: XCrafts/ERJ/LNAV
+  command: sim/autopilot/NAV
+  vibrate: SHORT
 
 - index: 5
   type: push
@@ -118,6 +123,7 @@ buttons:
         formula: "1"
         framed: True
   command: sim/systems/yaw_damper_toggle
+  vibrate: SHORT
 
 - index: 6
   name: APP
@@ -137,6 +143,7 @@ buttons:
         formula: "1"
         framed: True
   command: XCrafts/ERJ/APPCH
+  vibrate: SHORT
 
 - index: 7
   type: push
@@ -155,6 +162,7 @@ buttons:
         formula: "1"
         framed: True
   command: XCrafts/ERJ/VNAV
+  vibrate: SHORT
 
 
 - index: 8
@@ -175,6 +183,7 @@ buttons:
         formula: "1"
         framed: True
   command: sim/autopilot/vertical_speed
+  vibrate: SHORT
 
 - index: 9
   type: push
@@ -193,6 +202,7 @@ buttons:
         formula: "1"
         framed: True
   command: XCrafts/ERJ/AutoThrottle
+  vibrate: SHORT
 
 - index: 10
   type: push
@@ -211,6 +221,7 @@ buttons:
         formula: "1"
         framed: True
   command: sim/autopilot/vertical_speed
+  vibrate: SHORT
 
 - index: 11
   type: page
@@ -221,4 +232,5 @@ buttons:
   text-font: fontawesome.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
+  vibrate: SHORT
 

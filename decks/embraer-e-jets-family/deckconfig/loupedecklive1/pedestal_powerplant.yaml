@@ -30,7 +30,7 @@ buttons:
 - index: 3
   type: none
   label: ENGINE 2
-  label-position: cl
+  # label-position: cl
   label-size: 10
   label-color: White
   decor:
@@ -209,3 +209,4 @@ buttons:
       text-size: 12
       text-color: Gold
   formula: ${XCrafts/ERJ/engine2_starter_knob}
+

@@ -2,6 +2,7 @@ name: overhead_apu_control
 description: Switch Panel
 includes: pager,encoders/encoders_lights
 default-icon-color: Black
+default-vibrate: SHORT
 
 buttons:
 - index: 0
@@ -10,7 +11,7 @@ buttons:
   label-color: White
   label-position: cb
   label-size: 8
-  stops: 2
+  stops: 3
   circular-switch:
     button-size: 60
     switch-style: large
@@ -31,10 +32,11 @@ buttons:
     - XCrafts/APU_CCW
     - XCrafts/APU_CW
 
+
 - index: 1
   type: long-press
   command: XCrafts/APU_CW
-  label: APU
+  label: START APU
   label-size: 9
   label-color: White
   annunciator:
@@ -64,3 +66,4 @@ buttons:
   text-font: fontawesome.otf
   text-position: cm
   command: sim/electrical/APU_fire_shutoff
+  

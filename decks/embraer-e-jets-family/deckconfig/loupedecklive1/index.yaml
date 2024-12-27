@@ -1,5 +1,6 @@
 name: index
 includes: pager,encoders/encoders_fcu
+default-vibrate: SHORT
 
 buttons:
 
@@ -15,6 +16,7 @@ buttons:
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
+    vibrate: SHORT
 
   - index: 1
     type: page
@@ -28,6 +30,7 @@ buttons:
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
+    vibrate: SHORT
 
   - index: 2
     type: page
@@ -41,6 +44,7 @@ buttons:
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
+    vibrate: SHORT
 
   - index: 3
     type: page
@@ -54,6 +58,7 @@ buttons:
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
+    vibrate: SHORT
 
   - index: 4
     type: page
@@ -66,6 +71,7 @@ buttons:
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
+    vibrate: SHORT
 
   - index: 5
     type: page
@@ -78,6 +84,7 @@ buttons:
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 30, 40)
+    vibrate: SHORT
 
   - index: 6
     type: page
@@ -90,6 +97,7 @@ buttons:
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
+    vibrate: SHORT
 
   - index: 7
     type: page
@@ -102,6 +110,7 @@ buttons:
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
+    vibrate: SHORT
 
   - index: 8
     type: page
@@ -114,6 +123,7 @@ buttons:
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
+    vibrate: SHORT
 
   - index: 9
     type: page
@@ -126,6 +136,7 @@ buttons:
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
+    vibrate: SHORT
 
   - index: 10
     type: page
@@ -138,6 +149,7 @@ buttons:
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
+    vibrate: SHORT
 
   - index: 11
     type: page
@@ -150,3 +162,4 @@ buttons:
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
+    vibrate: SHORT

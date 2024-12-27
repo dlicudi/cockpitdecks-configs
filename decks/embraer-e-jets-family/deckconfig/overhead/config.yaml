@@ -1,11 +1,10 @@
-default-text-bg-color: (40, 40, 40)
-default-label-color: blue
-# default-label-font: DIN Medium.ttf
+default-label-color: black
+default-label-font: DIN Medium.ttf
 default-label-size: 13
 default-text-size: 24
 default-label-position: ct
 default-homepage-name: pfi
 default-vibrate: SHORT
-default-icon-color: (94, 111, 130)
+cockpit-color: (74, 79, 84)
 default-annunciator-style: k
-home-page: pfi
+home-page: index

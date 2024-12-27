@@ -3,6 +3,11 @@
 aircraft: Robin DR401
 icao: DR40
 model:  Robin DR401
+
+default-label-font: B612-Bold
+default-label-size: 12
+default-icon-name: NONE.png
+
 decks:
   - name: XPLive
     type: LoupedeckLive

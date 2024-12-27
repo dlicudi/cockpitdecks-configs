@@ -1,22 +1,8 @@
 
+default-icon-color: Black
+default-cockpit-color: Black
+
 buttons:
-
-
-# - index: e0
-#   name: FCU Airspeed
-#   type: encoder-value-extended
-#   dataref: sim/cockpit2/autopilot/airspeed_dial_kts_mach
-#   set-dataref: sim/cockpit2/autopilot/airspeed_dial_kts_mach
-#   step: 1
-#   stepxl: 10
-#   value: 1250
-#   value-min: 40
-#   value-max: 163
-#   initial-value: 100
-#   commands:
-#     - AirbusFBW/PullVSSel
-#     - AirbusFBW/PushVSSel
-#   long-press: sim/autopilot/servos_toggle
 
 - index: e0
   name: throttle_encoder
@@ -77,6 +63,7 @@ buttons:
   type: none
   side:
     icon-color: Black
+    label-color: Black
     labels:
       - label: "THR"
         label-size: 14

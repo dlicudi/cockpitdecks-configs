@@ -1,6 +1,8 @@
 name: pfi
 includes: pager,encoders/encoders_fcu
-
+cockpit-color: SlateGray
+string-datarefs:
+  - sim/cockpit2/gauges/indicators/airspeed_kts_pilot
 
 # PRIMARY/SECONDARY INSTRUMENTS
 # Airspeed Indicator: 1 DONE
@@ -17,6 +19,34 @@ includes: pager,encoders/encoders_fcu
 # ADF: 1
 
 buttons:
+
+# self.tape = self._config[self.REPRESENTATION_NAME]
+# self.vertical = self.option_value("vertical", False)
+# self.value_min = self.tape.get("minimum", 0)
+# self.value_max = self.tape.get("maximum", 100)
+# self.value_step = self.tape.get("step", 1)
+# self.scale = self.tape.get("scale", 1)
+# self.tick_lengths = self.tape.get("tick-lengths", [(10, 1), (20, 2), (30, 4)])
+# self.rule_color = self.tape.get("rule-color", RULE_COLOR)
+# self.rule_position = self.tape.get("rule-position", "center")  # center is valid for both horiz and vert
+# self.label_frequency = self.tape.get("label-frequency", 5)
+
+
+# - index: 0
+#   name: SPD
+#   type: none
+#   label: SPD
+#   label-size: 9
+#   label-color: white
+#   dataref: "${sim/cockpit2/gauges/indicators/airspeed_kts_pilot}"
+#   tape:
+#     tick-color: lime
+#     tick-font: D-DIN-Bold
+#     tick-size: 60
+#     rule-color: white
+#     minimum: 0
+#     maximum: 500
+#     rule-position: bottom
 
 - index: 0 # Speed
   name: SPD
@@ -35,6 +65,22 @@ buttons:
         text: "${sim/cockpit2/gauges/indicators/airspeed_kts_pilot}"
         text-font: Seven Segment.ttf
         text-format: "{0:.0f}"
+
+# - index: 1
+#   type: none
+#   label: HDG
+#   label-size: 9
+#   label-color: white
+#   dataref: sim/cockpit/autopilot/heading_mag
+#   tape:
+#     tick-color: lime
+#     tick-font: D-DIN-Bold
+#     tick-size: 60
+#     rule-color: white
+#     minimum: 0
+#     maximum: 360
+#     rule-position: bottom
+
 
 - index: 1 # Heading
   name: HDG

@@ -72,6 +72,3 @@ buttons:
     tick-label-color: White
   formula: "${XCrafts/ERJ/fire_test_on}"
   set-dataref: XCrafts/ERJ/fire_test_on
-
-
-  

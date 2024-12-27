@@ -8,11 +8,14 @@ decks:
     type: LoupedeckLive
     layout: loupedecklive1
     brightness: 70
-  - name: StreamDeckXL
-    type: Stream Deck XL
-    layout: streamdeckxl1
-    brightness: 70
+  # - name: StreamDeckXL
+  #   type: Stream Deck XL
+  #   layout: streamdeckxl1
+  #   brightness: 70
   # - name: Vdeck1
+  #   type: Virtual LoupedeckLive
+  #   layout: loupedecklive1
+  # # - name: Vdeck1
   #   type: Virtual Streamdeck XL
   #   layout: streamdeckxl1
   #   decor:

@@ -5,6 +5,8 @@ name: fcu
 buttons:
   - index: 0
     name: AP
+    text-bg-color: (40, 40, 40)
+    # cockpit-color: (40, 40, 40)
     type: push
     annunciator:
       size: medium
