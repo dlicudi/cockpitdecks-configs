@@ -12,45 +12,53 @@ buttons:
     type: page
     page: index
     colored-led: orange
+    formula: 1
 
   - index: b1
     name: P1
     type: page
     page: pfi
     colored-led: green
+    formula: 1
 
   - index: b2
     name: P2
     type: page
     page: switches
     colored-led: blue
+    formula: 1
 
   - index: b3
     name: P3
     type: page
     page: fcu
     colored-led: red
+    formula: 1
 
   - index: b4
     name: P4
     type: page
     page: radio
     colored-led: yellow
+    formula: 1
 
   - index: b5
     name: P5
     type: page
     page: engine
     colored-led: green
+    formula: 1
 
   - index: b6
     name: P6
     type: page
     page: weather
     colored-led: red
+    formula: 1
 
   - index: b7
     name: P7
     type: page
     page: transponder
     colored-led: orange
+    formula: 1
