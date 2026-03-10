@@ -84,7 +84,7 @@ buttons:
         label-color: Gold
         formula: "${sim/flightmodel/engine/ENGN_thro[0]} 100 *"
         text-size: 18
-        text-font: Segment7Standard.otf
+        text-font: D-DIN.otf
         text-color: White
         text-format: "{0:01.0f}"
         text: "${formula}%"
@@ -141,7 +141,7 @@ buttons:
         label-color: Gold
         formula: "${sim/flightmodel/engine/ENGN_mixt[0]} 100 *"
         text-size: 18
-        text-font: Segment7Standard.otf
+        text-font: D-DIN.otf
         text-color: White
         text-format: "{0:01.0f}"
         text: "${formula}%"

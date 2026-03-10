@@ -25,6 +25,7 @@ buttons:
     label-size: 9
     label-color: black
     annunciator:
+      annunciator-style: v
       size: medium
       model: A
       parts:
@@ -43,6 +44,7 @@ buttons:
     label-size: 9
     label-color: black
     annunciator:
+      annunciator-style: v
       size: medium
       model: A
       parts:
@@ -61,6 +63,7 @@ buttons:
     label-size: 9
     label-color: black
     annunciator:
+      annunciator-style: v
       size: medium
       model: D
       parts:
@@ -76,11 +79,11 @@ buttons:
           text-size: 32
           formula: "1"
           text-format: "{0:.2f}"
-          text: "${sim/cockpit/misc/barometer_setting}\ninHg"
+          text: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}\ninHg"
         D2:
           color: white
           text-size: 32
-          formula: "${sim/cockpit/misc/barometer_setting} 33.8639 *"
+          formula: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot} 33.8639 *"
           text-format: "{0:.0f}"
           text: "${formula}\nhPa"
 
@@ -91,6 +94,7 @@ buttons:
     label-size: 9
     label-color: black
     annunciator:
+      annunciator-style: v
       size: medium
       model: A
       parts:
@@ -111,6 +115,7 @@ buttons:
     label-color: Black
     label-size: 10
     annunciator:
+      annunciator-style: v
       size: medium
       model: B
       parts:
@@ -133,6 +138,7 @@ buttons:
     label-size: 10
     type: none
     annunciator:
+      annunciator-style: v
       size: medium
       model: B
       parts:
@@ -158,6 +164,7 @@ buttons:
     label-color: Black
     label-size: 10
     annunciator:
+      annunciator-style: v
       size: medium
       model: B
       parts:
@@ -182,6 +189,7 @@ buttons:
     label-color: Black
     label-size: 10
     annunciator:
+      annunciator-style: v
       size: medium
       model: B
       parts:
@@ -206,6 +214,7 @@ buttons:
     label-color: Black
     label-size: 10
     annunciator:
+      annunciator-style: v
       size: medium
       model: B
       parts:
@@ -220,7 +229,6 @@ buttons:
           text-size: 30
           text: "${sim/cockpit2/clock_timer/hobbs_time_hours}:${sim/cockpit2/clock_timer/hobbs_time_minutes}:${sim/cockpit2/clock_timer/hobbs_time_seconds}"
           formula: "1"
-          text-format: "{0:.0f}"
 
   - index: 9
     name: CAUTION
@@ -229,18 +237,21 @@ buttons:
     label-size: 10
     label-color: black
     annunciator:
+      annunciator-style: v
       size: medium
       model: B
       parts:
         B0:
           text: "OIL PRESS"
           text-color: firebrick
+          off-color: "#3a1111"
           text-font: D-DINCondensed-Bold.otf
           text-size: 50
           formula: ${sim/cockpit/warnings/annunciators/oil_pressure}
         B1:
           text: "VOLTS"
           text-color: firebrick
+          off-color: "#3a1111"
           text-font: D-DINCondensed-Bold.otf
           text-size: 50
           formula: ${sim/cockpit/warnings/annunciators/generator}
@@ -252,18 +263,21 @@ buttons:
     label-size: 10
     label-color: black
     annunciator:
+      annunciator-style: v
       size: medium
       model: B
       parts:
         B0:
           text: "L FUEL R"
           text-color: darkorange
+          off-color: "#4a2b08"
           text-font: D-DINCondensed-Bold.otf
           text-size: 50
           formula: ${sim/cockpit/warnings/annunciators/fuel_pressure}
         B1:
           text: "L VAC R"
           text-color: darkorange
+          off-color: "#4a2b08"
           text-font: D-DINCondensed-Bold.otf
           text-size: 50
           formula: ${sim/cockpit/warnings/annunciators/low_vacuum}
@@ -275,6 +289,7 @@ buttons:
     label-size: 8
     label-color: black
     annunciator:
+      annunciator-style: v
       size: medium
       model: D
       parts:
