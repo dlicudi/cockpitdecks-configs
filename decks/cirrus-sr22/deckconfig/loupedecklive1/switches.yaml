@@ -6,11 +6,8 @@ name: switches
 buttons:
 
   - index: 0
-    type: short-or-long-press
-    commands:
-      - sim/ignition/engage_starter_1
-      - sim/ignition/engage_starter_1
-    long-time: 3
+    type: begin-end-command
+    command: sim/starters/engage_starter_1
     vibrate: RUMBLE5
     label: "IGNITION"
     label-color: Lime
@@ -36,6 +33,7 @@ buttons:
     label-size: 10
     label-position: ct
     annunciator:
+      annunciator-style: v
       model: B
       size: medium
       B0:
@@ -56,6 +54,7 @@ buttons:
     label-color: black
     label-size: 9
     annunciator:
+      annunciator-style: v
       model: B
       size: medium
       B0:
@@ -75,6 +74,7 @@ buttons:
     label-color: black
     label-size: 9
     annunciator:
+      annunciator-style: v
       model: B
       size: medium
       B0:
@@ -95,6 +95,7 @@ buttons:
     label-color: black
     label-size: 9
     annunciator:
+      annunciator-style: v
       model: B
       size: medium
       B0:
@@ -115,6 +116,7 @@ buttons:
     label-color: black
     label-size: 9
     annunciator:
+      annunciator-style: v
       model: B
       size: medium
       B0:
@@ -160,6 +162,7 @@ buttons:
     label-color: black
     label-size: 9
     annunciator:
+      annunciator-style: v
       model: B
       size: medium
       B0:
@@ -180,6 +183,7 @@ buttons:
     label-color: black
     label-size: 9
     annunciator:
+      annunciator-style: v
       model: B
       size: medium
       B0:
@@ -200,6 +204,7 @@ buttons:
     label-color: black
     label-size: 9
     annunciator:
+      annunciator-style: v
       model: B
       size: medium
       B0:
@@ -221,6 +226,7 @@ buttons:
     label-color: black
     label-size: 9
     annunciator:
+      annunciator-style: v
       model: B
       size: medium
       B0:

@@ -69,7 +69,7 @@ buttons:
       parts:
         D0:
           color: lime
-          text-size: 80
+          text-size: 72
           formula: "1"
           text: "${sim/cockpit2/gauges/indicators/altitude_ft_pilot}"
           text-font: Segment7Standard.otf
@@ -237,21 +237,21 @@ buttons:
     label-size: 10
     label-color: black
     annunciator:
-      annunciator-style: v
+      annunciator-style: k
       size: medium
       model: B
       parts:
         B0:
           text: "OIL PRESS"
           text-color: firebrick
-          off-color: "#3a1111"
+          off-color: "#3f1414"
           text-font: D-DINCondensed-Bold.otf
           text-size: 50
           formula: ${sim/cockpit/warnings/annunciators/oil_pressure}
         B1:
           text: "VOLTS"
           text-color: firebrick
-          off-color: "#3a1111"
+          off-color: "#3f1414"
           text-font: D-DINCondensed-Bold.otf
           text-size: 50
           formula: ${sim/cockpit/warnings/annunciators/generator}
@@ -263,21 +263,19 @@ buttons:
     label-size: 10
     label-color: black
     annunciator:
-      annunciator-style: v
+      annunciator-style: k
       size: medium
       model: B
       parts:
         B0:
           text: "L FUEL R"
           text-color: darkorange
-          off-color: "#4a2b08"
           text-font: D-DINCondensed-Bold.otf
           text-size: 50
           formula: ${sim/cockpit/warnings/annunciators/fuel_pressure}
         B1:
           text: "L VAC R"
           text-color: darkorange
-          off-color: "#4a2b08"
           text-font: D-DINCondensed-Bold.otf
           text-size: 50
           formula: ${sim/cockpit/warnings/annunciators/low_vacuum}
