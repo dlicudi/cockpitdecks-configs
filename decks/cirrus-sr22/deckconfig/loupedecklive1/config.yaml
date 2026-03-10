@@ -1,10 +1,10 @@
 # This is at layout level
 # default-text-bg-color: (40, 40, 40)
 default-label-color: blue
-default-label-font: DIN Medium.ttf
+default-label-font: D-DIN.otf
 default-label-size: 13
 default-text-size: 24
 default-label-position: ct
-default-homepage-name: pfi
+home-page-name: index
 default-vibrate: SHORT
 default-icon-color: (94, 111, 130)

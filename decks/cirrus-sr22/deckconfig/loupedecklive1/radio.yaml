@@ -15,7 +15,7 @@ buttons:
   text: ${formula}
   text-format: "{:01.0f}"
   text-size: 50
-  text-font: Seven Segment.ttf
+  text-font: Segment7Standard.otf
   text-color: Lime
   text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 1000 / floor
@@ -32,7 +32,7 @@ buttons:
   text: ${formula}
   text-format: "{:01.0f}"
   text-size: 50
-  text-font: Seven Segment.ttf
+  text-font: Segment7Standard.otf
   text-color: Lime
   text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 100 / floor 10 %
@@ -49,7 +49,7 @@ buttons:
   text: ${formula}
   text-format: "{:01.0f}"
   text-size: 50
-  text-font: Seven Segment.ttf
+  text-font: Segment7Standard.otf
   text-color: Lime
   text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 10 / floor 10 %
@@ -66,7 +66,7 @@ buttons:
   text: ${formula}
   text-format: "{:01.0f}"
   text-size: 50
-  text-font: Seven Segment.ttf  
+  text-font: Segment7Standard.otf
   text-color: Lime
   text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 10 %
@@ -118,7 +118,7 @@ buttons:
       B1:
         text: IDENT
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/radios/transponder_ident
   
@@ -230,6 +230,5 @@ buttons:
   - sim/transponder/transponder_12_up
   - sim/transponder/transponder_34_down
   - sim/transponder/transponder_34_up
-
 
 

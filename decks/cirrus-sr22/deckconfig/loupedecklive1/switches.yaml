@@ -6,11 +6,14 @@ name: switches
 buttons:
 
   - index: 0
-    type: long-press
-    vibrate: LONG
+    type: short-or-long-press
+    commands:
+      - sim/ignition/engage_starter_1
+      - sim/ignition/engage_starter_1
+    long-time: 3
+    vibrate: RUMBLE5
     label: "IGNITION"
     label-color: Lime
-    command: sim/ignition/engage_starter_1
     text-bg-color: Black
     multi-texts:
       - text: "OFF"
@@ -38,12 +41,12 @@ buttons:
       B0:
         text: "OFF"
         color: darkorange
-        formula: ${sim/cockpit2/switches/avionics_power_on} 0 eq
+        formula: ${sim/cockpit/electrical/avionics_on} 0 eq
       B1:
         text: "ON"
         color: deepskyblue
         framed: true
-        formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
+        formula: ${sim/cockpit/electrical/avionics_on} 1 eq
 
 
   - index: 2
@@ -58,12 +61,12 @@ buttons:
       B0:
         text: "OFF"
         color: darkorange
-        formula: ${sim/cockpit/electrical/battery_on[1]} 0 eq
+        formula: ${sim/cockpit2/electrical/battery_on[1]} 0 eq
       B1:
         text: "ON"
         color: deepskyblue
         framed: true
-        formula: ${sim/cockpit/electrical/battery_on[1]} 1 eq
+        formula: ${sim/cockpit2/electrical/battery_on[1]} 1 eq
 
   - index: 3
     type: push
@@ -77,12 +80,12 @@ buttons:
       B0:
         text: "OFF"
         color: darkorange
-        formula: ${sim/cockpit/electrical/battery_on[0]} 0 eq
+        formula: ${sim/cockpit2/electrical/battery_on[0]} 0 eq
       B1:
         text: "ON"
         color: deepskyblue
         framed: true
-        formula: ${sim/cockpit/electrical/battery_on[0]} 1 eq
+        formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
 
   - index: 4
     vibrate: SHORT
@@ -131,7 +134,7 @@ buttons:
     page: lights
     label: LIGHTS
     label-size: 12
-    text: 📁
+    text: 
     text-font: fontawesome.otf
     text-size: 32
     text-color: Gold
@@ -143,7 +146,7 @@ buttons:
     page: icing
     label: ICING
     label-size: 12
-    text: 📁
+    text: 
     text-font: fontawesome.otf
     text-size: 32
     text-color: Gold
@@ -160,7 +163,7 @@ buttons:
       model: B
       size: medium
       B0:
-        bar: "OFF"
+        led: bar
         color: grey
         formula: ${laminar/sr22/fuel_selector_pos} 0 eq not
       B1:
@@ -180,7 +183,7 @@ buttons:
       model: B
       size: medium
       B0:
-        bar: "OFF"
+        led: bar
         color: grey
         formula: ${laminar/sr22/fuel_selector_pos} 1 eq not
       B1:
@@ -200,7 +203,7 @@ buttons:
       model: B
       size: medium
       B0:
-        bar: "OFF"
+        led: bar
         color: grey
         formula: ${laminar/sr22/fuel_selector_pos} 2 eq not
       B1:
@@ -221,7 +224,7 @@ buttons:
       model: B
       size: medium
       B0:
-        bar: "OFF"
+        led: bar
         color: grey
         formula: ${laminar/sr22/fuel_selector_pos} 3 eq not
       B1:

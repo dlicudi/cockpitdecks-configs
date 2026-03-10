@@ -1,4 +1,4 @@
-name: home
+name: index
 includes: pager,encoders/encoders_fcu
 
 buttons:
@@ -33,7 +33,7 @@ buttons:
     page: icing
     label: ICING
     label-color: Gold
-    text: ❄
+    text: 
     text-color: khaki
     text-size: 40
     text-font: fontawesome.otf
@@ -45,7 +45,7 @@ buttons:
     page: lights
     label: LIGHTS
     label-color: Gold
-    text: 💡
+    text: 
     text-color: khaki
     text-size: 40
     text-font: fontawesome.otf
@@ -93,7 +93,7 @@ buttons:
     page: engine
     label: ENGINE
     label-color: Gold
-    text: ⛽
+    text: 
     text-color: khaki
     text-size: 24
     text-font: fontawesome.otf
@@ -129,7 +129,7 @@ buttons:
     page: weather
     label: WEATHER
     label-color: Gold
-    text: 🌦
+    text: 
     text-color: khaki
     text-size: 40
     text-font: fontawesome.otf

@@ -17,7 +17,7 @@ buttons:
         B1:
           text: AP
           text-size: 60
-          text-font: DIN Bold
+          text-font: D-DIN-Bold.otf
           formula: "1"
     command: sim/autopilot/servos_toggle
     vibrate: SHORT
@@ -36,7 +36,7 @@ buttons:
         B1:
           text: FD
           text-size: 60
-          text-font: DIN Bold
+          text-font: D-DIN-Bold.otf
           text-color: Turquoise
           formula: "1"
     command: sim/autopilot/fdir_toggle
@@ -57,7 +57,7 @@ buttons:
         B1:
           text: HDG
           text-size: 60
-          text-font: DIN Bold
+          text-font: D-DIN-Bold.otf
           formula: "1"
     command: sim/autopilot/heading
     vibrate: SHORT
@@ -76,7 +76,7 @@ buttons:
         B1:
           text: ALT
           text-size: 60
-          text-font: DIN Bold
+          text-font: D-DIN-Bold.otf
           formula: "1"
     command: sim/autopilot/altitude_hold
     vibrate: SHORT
@@ -96,7 +96,7 @@ buttons:
         B1:
           text: NAV
           text-size: 60
-          text-font: DIN Bold
+          text-font: D-DIN-Bold.otf
           formula: "1"
     command: sim/autopilot/gpss
 
@@ -115,7 +115,7 @@ buttons:
         B1:
           text: VNAV
           text-size: 60
-          text-font: DIN Bold
+          text-font: D-DIN-Bold.otf
           text-color: Turquoise
           formula: "1"
     command: sim/autopilot/vnav
@@ -135,7 +135,7 @@ buttons:
         B1:
           text: APR
           text-size: 60
-          text-font: DIN Bold
+          text-font: D-DIN-Bold.otf
           formula: "1"
     command: sim/autopilot/approach
 
@@ -153,7 +153,7 @@ buttons:
         B1:
           text: REV/BC
           text-size: 50
-          text-font: DIN Bold
+          text-font: D-DIN-Bold.otf
           formula: "1"
     command: sim/autopilot/back_course
 
@@ -171,7 +171,7 @@ buttons:
         B1:
           text: VS
           text-size: 60
-          text-font: DIN Bold
+          text-font: D-DIN-Bold.otf
           formula: "1"
     command: sim/autopilot/vertical_speed
 
@@ -189,7 +189,7 @@ buttons:
         B1:
           text: FLC
           text-size: 60
-          text-font: DIN Bold
+          text-font: D-DIN-Bold.otf
           text-color: Turquoise
           formula: "1"
     command: sim/autopilot/level_change
@@ -209,13 +209,13 @@ buttons:
         B0:
           text: "GPS"
           text-color: yellow
-          text-font: DIN Condensed Black.otf
+          text-font: D-DINCondensed-Bold.otf
           text-size: 50
           formula: ${sim/cockpit/switches/HSI_selector} 2 eq
         B1:
           text: "GPS2"          
           text-color: lime
-          text-font: DIN Condensed Black.otf
+          text-font: D-DINCondensed-Bold.otf
           text-size: 50
           formula: ${sim/cockpit/switches/HSI_selector} 3 eq
 
@@ -233,12 +233,12 @@ buttons:
         B0:
           text: "VOR1"
           text-color: yellow
-          text-font: DIN Condensed Black.otf
+          text-font: D-DINCondensed-Bold.otf
           text-size: 50
           formula: ${sim/cockpit/switches/HSI_selector} 0 eq
         B1:
           text: "VOR2"          
           text-color: lime
-          text-font: DIN Condensed Black.otf
+          text-font: D-DINCondensed-Bold.otf
           text-size: 50
           formula: ${sim/cockpit/switches/HSI_selector} 1 eq

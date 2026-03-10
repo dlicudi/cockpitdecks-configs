@@ -9,7 +9,7 @@ buttons:
     text: DIRECT
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
     command: sim/GPS/gcu478/direct
@@ -20,7 +20,7 @@ buttons:
     text: MENU
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
     command: sim/GPS/gcu478/menu
@@ -31,7 +31,7 @@ buttons:
     text: FPL
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
     command: sim/GPS/gcu478/fpl
@@ -42,7 +42,7 @@ buttons:
     text: PROC
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
     command: sim/GPS/gcu478/proc
@@ -53,7 +53,7 @@ buttons:
     text: CLR
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
     command: sim/GPS/gcu478/clr
@@ -64,7 +64,7 @@ buttons:
     text: ENT
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
     command: sim/GPS/gcu478/ent
@@ -75,7 +75,7 @@ buttons:
     text: HOME
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
     command: sim/GPS/gcu479/home
@@ -86,7 +86,7 @@ buttons:
     text: <->
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
     command: sim/GPS/gcu478/ff
