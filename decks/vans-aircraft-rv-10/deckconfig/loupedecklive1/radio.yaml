@@ -31,11 +31,11 @@ buttons:
 
 - index: 1
   type: none
-  icon: TEXTURE_FRAME.png
+  icon: INOP.png
 
 - index: 2
   type: none
-  icon: TEXTURE_FRAME.png
+  icon: INOP.png
 
 - index: 4
   name: COM2
@@ -65,11 +65,11 @@ buttons:
 
 - index: 5
   type: none
-  icon: TEXTURE_FRAME.png
+  icon: INOP.png
 
 - index: 6
   type: none
-  icon: TEXTURE_FRAME.png
+  icon: INOP.png
 
 - index: 8
   name: ADF
@@ -160,7 +160,7 @@ buttons:
 
 - index: 10
   type: none
-  icon: TEXTURE_FRAME.png
+  icon: INOP.png
 
 - index: 11
   type: updown

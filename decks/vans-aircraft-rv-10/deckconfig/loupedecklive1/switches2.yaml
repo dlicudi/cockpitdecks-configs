@@ -46,6 +46,7 @@ buttons:
 
   - index: 0
     type: push
+    vibrate: SHORT
     label: LAND
     label-color: black
     label-size: 9
@@ -65,6 +66,7 @@ buttons:
 
   - index: 1
     type: push
+    vibrate: SHORT
     command: sim/lights/taxi_lights_toggle
     label: TAXI
     label-color: black
@@ -84,6 +86,7 @@ buttons:
 
   - index: 2
     type: push
+    vibrate: SHORT
     command: sim/lights/strobe_lights_toggle
     label: FLASH
     label-color: black
@@ -103,6 +106,7 @@ buttons:
 
   - index: 3
     type: push
+    vibrate: SHORT
     command: sim/lights/nav_lights_toggle
     label: NAV
     label-color: black
@@ -143,6 +147,7 @@ buttons:
 
   - index: 9
     type: updown
+    vibrate: SHORT
     stops: 4
     label: FUEL
     label-color: black
