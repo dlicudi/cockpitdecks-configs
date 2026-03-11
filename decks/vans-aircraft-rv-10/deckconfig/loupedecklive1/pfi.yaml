@@ -265,6 +265,7 @@ buttons:
 
 - index: 8 # prop rpm and hobbs (todo)
   name: RPM
+  render-cooldown-ms: 1000
   type: none
   label: RPM
   label-color: Black
@@ -282,7 +283,7 @@ buttons:
       B1:
         color: white
         text-size: 30
-        text: "${sim/cockpit2/clock_timer/hobbs_time_hours}:${sim/cockpit2/clock_timer/hobbs_time_minutes}:${sim/cockpit2/clock_timer/hobbs_time_seconds}"
+        text: "${sim/cockpit2/clock_timer/hobbs_time_hours}:${sim/cockpit2/clock_timer/hobbs_time_minutes}"
         formula: "1"
         text-format: "{0:.0f}"
 
