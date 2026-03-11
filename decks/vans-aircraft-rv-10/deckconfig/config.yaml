@@ -32,6 +32,20 @@ dataref-roundings:
     sim/flightmodel/engine/ENGN_FF_[0]: 2
     sim/flightmodel/engine/ENGN_mixt[0]: 2
     sim/flightmodel/engine/ENGN_thro[0]: 2
+dataref-fetch-frequencies:
+    sim/cockpit/radios/nav1_hdef_dot: 2
+    sim/cockpit/radios/nav1_vdef_dot: 2
+    sim/cockpit2/engine/indicators/prop_speed_rpm[0]: 2
+    sim/cockpit2/gauges/indicators/airspeed_kts_pilot: 3
+    sim/cockpit2/gauges/indicators/altitude_ft_pilot: 3
+    sim/cockpit2/gauges/indicators/compass_heading_deg_mag: 2
+    sim/cockpit2/gauges/indicators/vvi_fpm_pilot: 3
+    sim/cockpit2/gauges/indicators/wind_heading_deg_mag: 2
+    sim/cockpit2/gauges/indicators/wind_speed_kts: 2
+    sim/cockpit2/radios/indicators/gps_bearing_deg_mag: 2
+    sim/cockpit2/radios/indicators/gps_dme_distance_nm: 2
+    sim/cockpit2/radios/indicators/gps_dme_time_min: 1
+    sim/flightmodel/engine/ENGN_thro[0]: 2
 # print-page-dir: screendumps/vans-aircraft-rv-10
 decks:
   - name: LoupedeckLive1
@@ -55,4 +69,3 @@ decks:
   #   disabled: false
   #   address: 127.0.0.1
   #   port: 7701
-
