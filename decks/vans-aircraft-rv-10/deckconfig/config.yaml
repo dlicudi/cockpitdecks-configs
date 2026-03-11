@@ -2,6 +2,10 @@ aircraft: Van's Aircraft RV-10
 icao: RV10
 model:  Van's Aircraft RV-10
 description: Decks for RV-10
+virtual-deck-defaults:
+    highlight: "#ffffff00"
+    flash: "#0f80ffb0"
+    flash_duration: 100
 # Keep websocket churn aligned with what the deck actually displays.
 dataref-roundings:
     sim/cockpit/autopilot/heading_mag: 0
@@ -56,6 +60,11 @@ decks:
     type: LoupedeckLive
     layout: loupedecklive1
     brightness: 70
+    disabled: true
+  - name: Virtual LoupedeckLive
+    type: Virtual LoupedeckLive
+    layout: loupedecklive1
+    disabled: false
   # - name: StreamDeckXL
   #   type: Stream Deck XL
   #   layout: streamdeckxl1
