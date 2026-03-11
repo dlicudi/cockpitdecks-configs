@@ -108,15 +108,14 @@ buttons:
     name: ENGINE START
     type: begin-end-command
     vibrate: LONG
-    label: IGNITION
-    label-color: White
-    label-size: 8
     command: sim/starters/engage_starter_1
-    text: "ENGINE\nSTART"
-    text-color: Red
-    text-size: 22
-    text-position: cm
-    text-bg-color: Black
+    multi-icons:
+      - ENGINE_START.svg
+      - ENGINE_START.svg
+      - ENGINE_START.svg
+      - ENGINE_START.svg
+      - ENGINE_START_PRESSED.svg
+    formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
 
   - index: 5
     type: none
