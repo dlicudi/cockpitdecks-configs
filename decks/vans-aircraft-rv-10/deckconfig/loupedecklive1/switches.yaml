@@ -233,10 +233,10 @@ buttons:
       tick-label-size: 40
       tick-label-font: DIN Bold
       tick-label-color: black
-    formula: "${sim/cockpit2/controls/parking_brake_ratio}"
+    formula: "${sim/cockpit2/controls/park_brake_valve}"
     commands:
-      - sim/flight_controls/brakes_toggle_regular
-      - sim/flight_controls/brakes_toggle_regular
+      - sim/flight_controls/park_brake_valve_toggle
+      - sim/flight_controls/park_brake_valve_toggle
 
   - index: 11
     name: Switches2
