@@ -60,11 +60,10 @@ decks:
     type: LoupedeckLive
     layout: loupedecklive1
     brightness: 70
-    disabled: true
-  - name: Virtual LoupedeckLive
-    type: Virtual LoupedeckLive
-    layout: loupedecklive1
-    disabled: false
+  # - name: Virtual LoupedeckLive
+  #   type: Virtual LoupedeckLive
+  #   layout: loupedecklive1
+  #   disabled: true
   # - name: StreamDeckXL
   #   type: Stream Deck XL
   #   layout: streamdeckxl1
