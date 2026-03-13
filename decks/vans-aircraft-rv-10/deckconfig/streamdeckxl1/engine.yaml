@@ -299,7 +299,7 @@ buttons:
         formula: "1"
 
 - index: 8
-  name: FUEL
+  name: FUEL FLOW
   label: FUEL
   label-color: Black
   label-size: 10
@@ -335,7 +335,7 @@ buttons:
         color: Lime
         text-size: 36
         text-format: "{0:.1f}"
-        formula: "${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[0]} + 0.264172 * 2 roundn"
+        formula: "${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[1]} + 0.264172 * 2 roundn"
         text: "${formula} g"
       F1:
         color: Lime
@@ -672,3 +672,79 @@ buttons:
         text-format: "{0:.0f}"
         text: "${formula} gal"
         formula: "${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn"
+
+- index: 28
+  name: BATTERY_STATUS
+  type: none
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        text: "BAT"
+        text-size: 34
+        color: white
+        formula: "1"
+      B1:
+        text: "ON"
+        text-size: 34
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
+
+- index: 29
+  name: ALTERNATOR_STATUS
+  type: none
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        text: "ALT"
+        text-size: 34
+        color: white
+        formula: "1"
+      B1:
+        text: "ON"
+        text-size: 34
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
+
+- index: 30
+  name: FUEL_PUMP_STATUS
+  type: none
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        text: "PUMP"
+        text-size: 30
+        color: white
+        formula: "1"
+      B1:
+        text: "ON"
+        text-size: 34
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/engine/fuel_pump_on[0]} 1 eq
+
+- index: 31
+  name: PARK_BRAKE_STATUS
+  type: none
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        text: "PARK"
+        text-size: 30
+        color: white
+        formula: "1"
+      B1:
+        text: "ON"
+        text-size: 34
+        color: darkorange
+        framed: true
+        formula: ${sim/cockpit2/controls/park_brake_valve}

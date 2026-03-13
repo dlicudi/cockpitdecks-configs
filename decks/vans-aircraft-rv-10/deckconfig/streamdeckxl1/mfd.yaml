@@ -170,7 +170,7 @@ buttons:
         formula: "1"
 
 - index: 8
-  name: FUEL
+  name: FUEL FLOW
   label: FUEL
   label-color: Black
   label-size: 10
@@ -206,7 +206,7 @@ buttons:
         color: Lime
         text-size: 36
         text-format: "{0:.1f}"
-        formula: "${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[0]} + 0.264172 * 2 roundn"
+        formula: "${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[1]} + 0.264172 * 2 roundn"
         text: "${formula} g"
       F1:
         color: Lime
@@ -418,3 +418,79 @@ buttons:
         text-color: Purple
         text-size: 60
         formula: "1"
+
+- index: 28
+  name: AVIONICS_STATUS
+  type: none
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        text: "AVION"
+        text-size: 28
+        color: white
+        formula: "1"
+      B1:
+        text: "ON"
+        text-size: 34
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
+
+- index: 29
+  name: AP_MASTER_STATUS
+  type: none
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        text: "A/P"
+        text-size: 34
+        color: white
+        formula: "1"
+      B1:
+        text: "ON"
+        text-size: 34
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/autopilot/autopilot_electric_master} 1 eq
+
+- index: 30
+  name: PITOT_STATUS
+  type: none
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        text: "PITOT"
+        text-size: 28
+        color: white
+        formula: "1"
+      B1:
+        text: "ON"
+        text-size: 34
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
+
+- index: 31
+  name: ALT_AIR_STATUS
+  type: none
+  annunciator:
+    size: medium
+    model: B
+    parts:
+      B0:
+        text: "ALT AIR"
+        text-size: 24
+        color: white
+        formula: "1"
+      B1:
+        text: "ON"
+        text-size: 34
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/anti_ice_engine_air[0]} 1 eq

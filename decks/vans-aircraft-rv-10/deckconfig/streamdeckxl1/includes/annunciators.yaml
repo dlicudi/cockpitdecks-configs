@@ -10,7 +10,7 @@ buttons:
         A0:
           text: "ENGINE\nCAUTION"
           text-color: black
-          text-font: DIN Condensed Black.otf
+          text-font: D-DINCondensed.otf
           text-size: 65
           formula: ${sim/cockpit2/annunciators/oil_pressure_low[0]}
           invert-color: darkorange
@@ -24,7 +24,7 @@ buttons:
         A0:
           text: "ALT"
           text-color: Black
-          text-font: DIN Condensed Black.otf
+          text-font: D-DINCondensed.otf
           text-size: 76
           formula: ${sim/cockpit2/annunciators/generator_off[0]}
           invert-color: firebrick
@@ -38,7 +38,7 @@ buttons:
         A0:
           text: "FUEL\nLEVEL\nLOW"
           text-color: Black
-          text-font: DIN Condensed Black.otf
+          text-font: D-DINCondensed.otf
           text-size: 65
           formula: ${sim/cockpit/warnings/annunciators/fuel_quantity}
           invert-color: firebrick
@@ -50,11 +50,11 @@ buttons:
       model: A
       parts:
         A0:
-          text: "FADEC\nA"
+          text: "PARK\nBRK"
           text-color: Black
-          text-font: DIN Condensed Black.otf
+          text-font: D-DINCondensed.otf
           text-size: 65
-          formula: ${aerobask/dr401/annun_fadecA}
+          formula: ${sim/cockpit2/controls/park_brake_valve}
           invert-color: firebrick
 
   - index: 4
@@ -64,11 +64,11 @@ buttons:
       model: A
       parts:
         A0:
-          text: "FADEC\nB"
+          text: "FUEL\nPUMP"
           text-color: Black
-          text-font: DIN Condensed Black.otf
+          text-font: D-DINCondensed.otf
           text-size: 65
-          formula: ${aerobask/dr401/annun_fadecA}
+          formula: ${sim/cockpit/engine/fuel_pump_on[0]}
           invert-color: firebrick
 
   - index: 5
@@ -80,9 +80,9 @@ buttons:
         A0:
           text: "FLAPS\nDOWN"
           text-color: Black
-          text-font: DIN Condensed Black.otf
+          text-font: D-DINCondensed.otf
           text-size: 65
-          formula: ${aerobask/dr401/annun_flaps}
+          formula: ${sim/cockpit2/controls/flap_ratio}
           invert-color: darkorange
 
   - index: 6
@@ -94,9 +94,9 @@ buttons:
         A0:
           text: "PITOT\nHEATING"
           text-color: Black
-          text-font: DIN Condensed Black.otf
+          text-font: D-DINCondensed.otf
           text-size: 65
-          formula: ${aerobask/dr401/annun_pitot}
+          formula: ${sim/cockpit/switches/pitot_heat_on}
           invert-color: lime
 
   - index: 7
@@ -106,9 +106,9 @@ buttons:
       model: A
       parts:
         A0:
-          text: "COOLANT\nLEVEL"
+          text: "OIL\nTEMP"
           text-color: Black
-          text-font: DIN Condensed Black.otf
+          text-font: D-DINCondensed.otf
           text-size: 65
           formula: ${sim/cockpit2/annunciators/oil_temperature_high[0]}
           invert-color: firebrick

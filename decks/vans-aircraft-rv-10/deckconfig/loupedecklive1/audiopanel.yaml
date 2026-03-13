@@ -25,7 +25,7 @@ buttons:
       B0:
         color: lime
         led: bars
-        formula: "${laminar/n844x/audio/COM1MIC}"
+        formula: "${sim/cockpit/switches/audio_panel_out} 6 eq"
       B1:
         text: "COM MIC 1"
         text-size: 40
@@ -42,7 +42,7 @@ buttons:
       B0:
         color: lime
         led: bars
-        formula: "${laminar/n844x/audio/COM1}"
+        formula: "${sim/cockpit2/radios/actuators/audio_selection_com1}"
       B1:
         text: "COM 1"
         text-size: 40
@@ -59,7 +59,7 @@ buttons:
       B0:
         color: lime
         led: bars
-        formula: "${laminar/n844x/audio/MKRMUTE}"
+        formula: "${sim/cockpit2/radios/actuators/audio_marker_enabled}"
       B1:
         text: "MKR MUTE"
         text-size: 40
@@ -76,7 +76,7 @@ buttons:
       B0:
         color: lime
         led: bars
-        formula: "${laminar/rv10/audio/NAV1}"
+        formula: "${sim/cockpit2/radios/actuators/audio_selection_nav1}"
       B1:
         text: "NAV 1"
         text-size: 40
@@ -93,7 +93,7 @@ buttons:
       B0:
         color: lime
         led: bars
-        formula: "${laminar/n844x/audio/COM2MIC}"
+        formula: "${sim/cockpit/switches/audio_panel_out} 7 eq"
       B1:
         text: "COM MIC 2"
         text-size: 40
@@ -110,7 +110,7 @@ buttons:
       B0:
         color: lime
         led: bars
-        formula: "${laminar/n844x/audio/COM2}"
+        formula: "${sim/cockpit2/radios/actuators/audio_selection_com2}"
       B1:
         text: "COM 2"
         text-size: 40
@@ -127,7 +127,7 @@ buttons:
       B0:
         color: lime
         led: bars
-        formula: "${laminar/n844x/audio/ADF}"
+        formula: "${sim/cockpit2/radios/actuators/audio_selection_adf1}"
       B1:
         text: "ADF 1"
         text-size: 40
@@ -144,7 +144,7 @@ buttons:
       B0:
         color: lime
         led: bars
-        formula: "${laminar/n844x/audio/NAV2}"
+        formula: "${sim/cockpit2/radios/actuators/audio_selection_nav2}"
       B1:
         text: "NAV 2"
         text-size: 40
@@ -161,7 +161,7 @@ buttons:
       B0:
         color: lime
         led: bars
-        formula: "${laminar/n844x/audio/DME}"
+        formula: "${sim/cockpit2/radios/actuators/audio_dme_enabled}"
       B1:
         text: "DME"
         text-size: 40
@@ -178,14 +178,13 @@ buttons:
       B0:
         color: lime
         led: bars
-        formula: "${laminar/n844x/audio/HISENS}"
+        formula: "0"
       B1:
         text: "HI SENS"
         text-size: 40
         text-font: DIN Bold
         formula: "1"
   command: sim/annunciator/marker_beacon_sens_toggle
-
 
 
 

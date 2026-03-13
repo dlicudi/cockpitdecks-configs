@@ -2,16 +2,76 @@ aircraft: Van's Aircraft RV-10
 icao: RV10
 model:  Van's Aircraft RV-10
 description: Decks for RV-10
+virtual-deck-defaults:
+    highlight: "#ffffff00"
+    flash: "#0f80ffb0"
+    flash_duration: 100
+# Keep websocket churn aligned with what the deck actually displays.
+dataref-roundings:
+    sim/cockpit/autopilot/heading_mag: 0
+    sim/cockpit/autopilot/vertical_velocity: 0
+    sim/cockpit/misc/barometer_setting: 2
+    sim/cockpit2/autopilot/altitude_dial_ft: 0
+    sim/cockpit2/clock_timer/hobbs_time_hours: 0
+    sim/cockpit2/clock_timer/hobbs_time_minutes: 0
+    sim/cockpit2/clock_timer/hobbs_time_seconds: 0
+    sim/cockpit2/engine/indicators/EGT_deg_cel[0]: 0
+    sim/cockpit2/engine/indicators/oil_pressure_psi[0]: 0
+    sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]: 0
+    sim/cockpit2/engine/indicators/prop_speed_rpm[0]: 0
+    sim/cockpit2/fuel/fuel_quantity[*]: 1
+    sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot: 2
+    sim/cockpit2/gauges/indicators/airspeed_kts_pilot: 0
+    sim/cockpit2/gauges/indicators/altitude_ft_pilot: 0
+    sim/cockpit2/gauges/indicators/compass_heading_deg_mag: 0
+    sim/cockpit2/gauges/indicators/vvi_fpm_pilot: 0
+    sim/cockpit2/gauges/indicators/wind_heading_deg_mag: 0
+    sim/cockpit2/gauges/indicators/wind_speed_kts: 0
+    sim/cockpit2/radios/actuators/hsi_obs_deg_mag_pilot: 0
+    sim/cockpit2/radios/actuators/transponder_code: 0
+    sim/cockpit2/radios/indicators/gps_bearing_deg_mag: 0
+    sim/cockpit2/radios/indicators/gps_dme_distance_nm: 1
+    sim/cockpit2/radios/indicators/gps_dme_time_min: 0
+    sim/cockpit/radios/nav1_hdef_dot: 2
+    sim/cockpit/radios/nav1_vdef_dot: 2
+    sim/flightmodel/engine/ENGN_FF_[0]: 2
+    sim/flightmodel/engine/ENGN_mixt[0]: 2
+    sim/flightmodel/engine/ENGN_thro[0]: 2
+    sim/flightmodel/position/y_agl: 0
+dataref-fetch-frequencies:
+    sim/cockpit/autopilot/heading_mag: 4
+    sim/cockpit/autopilot/vertical_velocity: 4
+    sim/cockpit/radios/nav1_hdef_dot: 2
+    sim/cockpit/radios/nav1_vdef_dot: 2
+    sim/cockpit2/autopilot/altitude_dial_ft: 4
+    sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot: 4
+    sim/cockpit2/engine/indicators/prop_speed_rpm[0]: 2
+    sim/cockpit2/gauges/indicators/airspeed_kts_pilot: 3
+    sim/cockpit2/gauges/indicators/altitude_ft_pilot: 3
+    sim/cockpit2/gauges/indicators/compass_heading_deg_mag: 1
+    sim/cockpit2/gauges/indicators/vvi_fpm_pilot: 3
+    sim/cockpit2/gauges/indicators/wind_heading_deg_mag: 1
+    sim/cockpit2/gauges/indicators/wind_speed_kts: 1
+    sim/cockpit2/radios/actuators/hsi_obs_deg_mag_pilot: 4
+    sim/cockpit2/radios/indicators/gps_bearing_deg_mag: 2
+    sim/cockpit2/radios/indicators/gps_dme_distance_nm: 2
+    sim/cockpit2/radios/indicators/gps_dme_time_min: 1
+    sim/flightmodel/engine/ENGN_thro[0]: 4
+    sim/flightmodel/position/y_agl: 1
 # print-page-dir: screendumps/vans-aircraft-rv-10
 decks:
   - name: LoupedeckLive1
     type: LoupedeckLive
     layout: loupedecklive1
     brightness: 70
-  # - name: StreamDeckXL
-  #   type: Stream Deck XL
-  #   layout: streamdeckxl1
-  #   brightness: 70
+  - name: StreamDeckXL
+    type: Stream Deck XL
+    layout: streamdeckxl1
+    brightness: 70
+  # - name: Virtual LoupedeckLive
+  #   type: Virtual LoupedeckLive
+  #   layout: loupedecklive1
+  #   disabled: true
   # - name: Vdeck1
   #   type: Virtual LoupedeckLive
   #   layout: loupedecklive1
@@ -25,5 +85,3 @@ decks:
   #   disabled: false
   #   address: 127.0.0.1
   #   port: 7701
-
-

@@ -183,7 +183,7 @@ buttons:
       icon-color: Gold
       data: ${formula}
       data-format: "{:02.0f}"
-      data-font: DIN Condensed Light
+      data-font: D-DINCondensed.otf
       data-color: White
       data-size: 70
       data-unit: "hrs"
@@ -234,7 +234,7 @@ buttons:
       icon-color: white
       data: ${formula}
       data-format: "{:3.0f}"
-      data-font: DIN Condensed Light
+      data-font: D-DINCondensed.otf
       data-size: 70
       data-color: white
       data-progress: 33.14
@@ -263,7 +263,7 @@ buttons:
       icon-color: white
       data: ${formula}
       data-format: "{:3.0f}"
-      data-font: DIN Condensed Light
+      data-font: D-DINCondensed.otf
       data-size: 70
       data-color: white
       data-progress: 14.91
@@ -320,7 +320,7 @@ buttons:
       icon-color: Gold
       data: ${formula}
       data-format: "{:0.0f}"
-      data-font: DIN Condensed Light
+      data-font: D-DINCondensed.otf
       data-size: 100
       data-color: white
       data-progress: 100
@@ -496,6 +496,5 @@ buttons:
   #         text-size: 26
   #         formula: ${sim/cockpit2/annunciators/oil_temperature_high[0]}
   #         invert-color: firebrick
-
 
 

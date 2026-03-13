@@ -1,22 +1,4 @@
-
 buttons:
-
-
-# - index: e0
-#   name: FCU Airspeed
-#   type: encoder-value-extended
-#   dataref: sim/cockpit2/autopilot/airspeed_dial_kts_mach
-#   set-dataref: sim/cockpit2/autopilot/airspeed_dial_kts_mach
-#   step: 1
-#   stepxl: 10
-#   value: 1250
-#   value-min: 40
-#   value-max: 163
-#   initial-value: 100
-#   commands:
-#     - AirbusFBW/PullVSSel
-#     - AirbusFBW/PushVSSel
-#   long-press: sim/autopilot/servos_toggle
 
 - index: e0
   name: throttle_encoder
@@ -27,13 +9,12 @@ buttons:
   - sim/engines/throttle_up
 
 - index: e1
-  name: FCU Heading
+  name: mixture_encoder
   type: encoder-push
   commands:
-    - sim/autopilot/heading_sync
-    - sim/autopilot/heading_down
-    - sim/autopilot/heading_up
-  long-press: sim/autopilot/servos_toggle
+  - sim/engines/mixture_max # push
+  - sim/engines/mixture_down
+  - sim/engines/mixture_up
 
 - index: e2
   name: FCU Baro
@@ -71,10 +52,9 @@ buttons:
   - sim/radios/obs_HSI_down
   - sim/radios/obs_HSI_up
 
-
 - index: left
   name: left_screen
-  render-cooldown-ms: 100
+  render-cooldown-ms: 333
   type: none
   side:
     icon-color: Black
@@ -91,59 +71,49 @@ buttons:
         text: "${formula}%"
       - label: "HDG"
         label-size: 14
-        # label-font: B612-Bold
         label-color: Gold
         formula: "${sim/cockpit/autopilot/heading_mag}"
         text-size: 18
-        # text-font: Seven Segment.ttf
         text-color: White
         text-format: "{0:00.0f}"
         text: "${formula}"
       - label: "QNH"
         label-size: 14
-        # label-font: B612-Bold
         label-color: Gold
         formula: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}"
         text-size: 18
-        # text-font: Seven Segment.ttf
         text-color: White
         text-format: "{0:01.2f}"
         text: "${formula}"
 
 - index: right
   name: right_screen
-  render-cooldown-ms: 100
+  render-cooldown-ms: 333
   type: none
   side:
     icon-color: Black
     labels:
       - label: "ALT"
         label-size: 16
-        # label-font: B612-Bold
         label-color: Gold
         formula: "${sim/cockpit2/autopilot/altitude_dial_ft}"
         text-size: 16
-        # text-font: Seven Segment.ttf
         text-color: White
         text-format: "{0:04.0f}"
         text: "${formula}"
       - label: "VS"
         label-size: 14
-        # label-font: B612-Bold
         label-color: Gold
         formula: "${sim/cockpit/autopilot/vertical_velocity} 100 /"
         text-size: 18
-        # text-font: Seven Segment.ttf
         text-color: White
         text-format: "{0:+01.0f}"
         text: "${formula}"
       - label: "CRS"
         label-size: 16
-        # label-font: B612-Bold
         label-color: Gold
         formula: "${sim/cockpit2/radios/actuators/hsi_obs_deg_mag_pilot}"
         text-size: 18
-        # text-font: Seven Segment.ttf
         text-color: White
         text-format: "{0:00.0f}"
         text: "${formula}"

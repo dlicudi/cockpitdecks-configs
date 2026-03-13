@@ -5,13 +5,13 @@ buttons:
 
   - index: 0
     type: page
-    page: pfi
-    label: PFI
+    page: engine
+    label: ENGINE
     label-color: Gold
     label-bg-color: Black
-    text: 
+    text: ⛽
     text-color: khaki
-    text-size: 40
+    text-size: 24
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -31,11 +31,11 @@ buttons:
 
   - index: 2
     type: page
-    page: switches
-    label: SWITCHES
+    page: pfi
+    label: STATUS
     label-color: Gold
     label-size: 10
-    text: 
+    text: 
     text-color: khaki
     text-size: 40
     text-font: fontawesome.otf
@@ -57,66 +57,6 @@ buttons:
 
   - index: 4
     type: page
-    page: fcu
-    label: FCU
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 5
-    type: page
-    page: g1000
-    label: G1000
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 30, 40)
-
-  - index: 6
-    type: page
-    page: radio
-    label: RADIO
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 7
-    type: page
-    page: engine
-    label: ENGINE
-    label-color: Gold
-    text: ⛽
-    text-color: khaki
-    text-size: 24
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 8
-    type: page
-    page: pedestal
-    label: PEDESTAL
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 9
-    type: page
     page: transponder
     label: XPDR
     label-color: Gold
@@ -127,7 +67,20 @@ buttons:
     text-position: cm
     text-bg-color: (40, 40, 40)
 
-  - index: 10
+  - index: 5
+    type: page
+    page: switches
+    label: SWITCHES
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 6
     type: page
     page: weather
     label: WEATHER
@@ -139,7 +92,7 @@ buttons:
     text-position: cm
     text-bg-color: (40, 40, 40)
 
-  - index: 11
+  - index: 7
     type: page
     page: views
     label: VIEWS
@@ -151,13 +104,61 @@ buttons:
     text-position: cm
     text-bg-color: (40, 40, 40)
 
-  - index: 12
+  - index: 8
+    type: page
+    page: g1000
+    label: G1000
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 30, 40)
+
+  - index: 9
     type: page
     page: trutrak_sorcerer
     label: TS SORCERER
     label-color: Gold
     label-size: 9
     text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 10
+    type: page
+    page: radio
+    label: RADIO
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 11
+    type: page
+    page: fcu
+    label: FCU
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 12
+    type: page
+    page: pedestal
+    label: PEDESTAL
+    label-color: Gold
+    text: 
     text-color: khaki
     text-size: 40
     text-font: fontawesome.otf
