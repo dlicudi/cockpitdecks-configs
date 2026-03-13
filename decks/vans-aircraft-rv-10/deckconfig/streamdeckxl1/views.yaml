@@ -13,7 +13,7 @@ buttons:
   text: "0"
   text-color: khaki
   text-size: 40
-  text-font: DIN Condensed Light
+  text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_0
@@ -28,7 +28,7 @@ buttons:
   text: "1"
   text-color: khaki
   text-size: 40
-  text-font: DIN Condensed Light
+  text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_1
@@ -43,7 +43,7 @@ buttons:
   text: "2"
   text-color: khaki
   text-size: 40
-  text-font: DIN Condensed Light
+  text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_2
@@ -58,7 +58,7 @@ buttons:
   text: "3"
   text-color: khaki
   text-size: 40
-  text-font: DIN Condensed Light
+  text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_3
@@ -73,7 +73,7 @@ buttons:
   text: "4"
   text-color: khaki
   text-size: 40
-  text-font: DIN Condensed Light
+  text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_4
@@ -88,7 +88,7 @@ buttons:
   text: "5"
   text-color: khaki
   text-size: 40
-  text-font: DIN Condensed Light
+  text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_5
@@ -103,7 +103,7 @@ buttons:
   text: "6"
   text-color: khaki
   text-size: 40
-  text-font: DIN Condensed Light
+  text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_6
@@ -118,7 +118,7 @@ buttons:
   text: "7"
   text-color: khaki
   text-size: 40
-  text-font: DIN Condensed Light
+  text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_7
@@ -133,7 +133,7 @@ buttons:
   text: 3D COCKPIT
   text-color: khaki
   text-size: 20
-  text-font: DIN Condensed Light
+  text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/3d_cockpit
@@ -146,7 +146,7 @@ buttons:
   text: CHASE
   text-color: khaki
   text-size: 20
-  text-font: DIN Condensed Light
+  text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/chase
@@ -159,7 +159,7 @@ buttons:
   text: FORWARD
   text-color: khaki
   text-size: 20
-  text-font: DIN Condensed Light
+  text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/forward
@@ -172,7 +172,7 @@ buttons:
   text: PHYSICS
   text-color: khaki
   text-size: 20
-  text-font: DIN Condensed Light
+  text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
   command: sim/view/show_physics_model

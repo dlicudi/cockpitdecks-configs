@@ -114,7 +114,7 @@ buttons:
       - ENGINE_START.svg
       - ENGINE_START.svg
       - ENGINE_START.svg
-      - ENGINE_START_PRESSED.svg
+      - ENGINE_START_PRESSED.png
     formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
 
   - index: 5

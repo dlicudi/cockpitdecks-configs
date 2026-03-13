@@ -253,7 +253,7 @@ buttons:
     text: "NOSE\nUP"
     text-size: 26
     text-bg-color: Black
-    text-font: DIN Condensed Black
+    text-font: D-DINCondensed.otf
 
   - index: 23
     type: push
@@ -261,4 +261,4 @@ buttons:
     text: "NOSE\nDOWN"
     text-size: 26
     text-bg-color: Black
-    text-font: DIN Condensed Black
+    text-font: D-DINCondensed.otf

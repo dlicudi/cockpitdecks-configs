@@ -85,7 +85,7 @@ buttons:
 
 - index: left
   name: left_screen
-  render-cooldown-ms: 1000
+  render-cooldown-ms: 333
   type: none
   side:
     icon-color: Black
@@ -123,7 +123,7 @@ buttons:
 
 - index: right
   name: right_screen
-  render-cooldown-ms: 1000
+  render-cooldown-ms: 333
   type: none
   side:
     icon-color: Black

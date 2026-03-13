@@ -18,7 +18,7 @@ buttons:
     icon-color: darkorchid
     data: ${formula}
     data-format: "{:4.0f}"
-    data-font: DIN Condensed Light
+    data-font: D-DINCondensed.otf
     data-size: 80
     data-color: white
     data-trend: 0
@@ -46,7 +46,7 @@ buttons:
     icon-color: darkorchid
     data: ${formula}
     data-format: "{:4.0f}"
-    data-font: DIN Condensed Light
+    data-font: D-DINCondensed.otf
     data-size: 80
     data-color: white
     data-trend: 0
@@ -75,7 +75,7 @@ buttons:
     data-bg-color: black      
     data: ${formula}
     data-format: "{:00.0f}"
-    data-font: DIN Condensed Light
+    data-font: D-DINCondensed.otf
     data-size: 60
     data-color: white
     data-unit: "miles"
@@ -104,7 +104,7 @@ buttons:
     icon-color: ivory
     data: ${formula}
     data-format: "{:3.0f}"
-    data-font: DIN Condensed Light
+    data-font: D-DINCondensed.otf
     data-size: 80
     data-color: white
     data-progress: 31
@@ -133,7 +133,7 @@ buttons:
     icon-color: gold
     data: ${formula}
     data-format: "{:3.0f}"
-    data-font: DIN Condensed Light
+    data-font: D-DINCondensed.otf
     data-size: 80
     data-color: white
     data-progress: 31
@@ -162,7 +162,7 @@ buttons:
     icon-color: gold
     data: ${formula}
     data-format: "{:3.0f}"
-    data-font: DIN Condensed Light
+    data-font: D-DINCondensed.otf
     data-size: 60
     data-color: white
     data-progress: 31
@@ -191,7 +191,7 @@ buttons:
     icon-color: gold
     data: ${formula}
     data-format: "{:3.0f}"
-    data-font: DIN Condensed Light
+    data-font: D-DINCondensed.otf
     data-size: 80
     data-color: white
     data-progress: 31
@@ -221,7 +221,7 @@ buttons:
     icon-color: deepskyblue
     data: ${formula}
     data-format: "{:04.0f}"
-    data-font: DIN Condensed Light
+    data-font: D-DINCondensed.otf
     data-size: 60
     data-color: white
     data-trend: 0
@@ -249,7 +249,7 @@ buttons:
     icon-color: deepskyblue
     data: ${formula}
     data-format: "{:04.0f}"
-    data-font: DIN Condensed Light
+    data-font: D-DINCondensed.otf
     data-size: 60
     data-color: white      
     data-trend: 0

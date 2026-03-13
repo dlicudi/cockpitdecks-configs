@@ -39,8 +39,12 @@ dataref-roundings:
     sim/flightmodel/engine/ENGN_thro[0]: 2
     sim/flightmodel/position/y_agl: 0
 dataref-fetch-frequencies:
+    sim/cockpit/autopilot/heading_mag: 4
+    sim/cockpit/autopilot/vertical_velocity: 4
     sim/cockpit/radios/nav1_hdef_dot: 2
     sim/cockpit/radios/nav1_vdef_dot: 2
+    sim/cockpit2/autopilot/altitude_dial_ft: 4
+    sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot: 4
     sim/cockpit2/engine/indicators/prop_speed_rpm[0]: 2
     sim/cockpit2/gauges/indicators/airspeed_kts_pilot: 3
     sim/cockpit2/gauges/indicators/altitude_ft_pilot: 3
@@ -48,11 +52,11 @@ dataref-fetch-frequencies:
     sim/cockpit2/gauges/indicators/vvi_fpm_pilot: 3
     sim/cockpit2/gauges/indicators/wind_heading_deg_mag: 1
     sim/cockpit2/gauges/indicators/wind_speed_kts: 1
-    sim/cockpit2/radios/actuators/hsi_obs_deg_mag_pilot: 1
+    sim/cockpit2/radios/actuators/hsi_obs_deg_mag_pilot: 4
     sim/cockpit2/radios/indicators/gps_bearing_deg_mag: 2
     sim/cockpit2/radios/indicators/gps_dme_distance_nm: 2
     sim/cockpit2/radios/indicators/gps_dme_time_min: 1
-    sim/flightmodel/engine/ENGN_thro[0]: 2
+    sim/flightmodel/engine/ENGN_thro[0]: 4
     sim/flightmodel/position/y_agl: 1
 # print-page-dir: screendumps/vans-aircraft-rv-10
 decks:
@@ -60,14 +64,14 @@ decks:
     type: LoupedeckLive
     layout: loupedecklive1
     brightness: 70
+  - name: StreamDeckXL
+    type: Stream Deck XL
+    layout: streamdeckxl1
+    brightness: 70
   # - name: Virtual LoupedeckLive
   #   type: Virtual LoupedeckLive
   #   layout: loupedecklive1
   #   disabled: true
-  # - name: StreamDeckXL
-  #   type: Stream Deck XL
-  #   layout: streamdeckxl1
-  #   brightness: 70
   # - name: Vdeck1
   #   type: Virtual LoupedeckLive
   #   layout: loupedecklive1
