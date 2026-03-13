@@ -30,6 +30,39 @@ repo_name: dlicudi/cockpitdecks-configs
 repo_url: https://github.com/dlicudi/cockpitdecks-configs
 edit_uri: blob/main/docs/
 
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Requirements: getting-started/requirements.md
+      - Development: getting-started/development.md
+  - Aircraft:
+      - Overview: decks/index.md
+      - Cessna 172 SP: decks/cessna-172-sp.md
+      - Cirrus SR22: decks/cirrus-sr22.md
+      - Beechcraft Baron 58: decks/beechcraft-baron-58.md
+      - Lancair Evolution: decks/lancair-evolution.md
+      - ToLiss Airbus A321 NEO: decks/toliss-airbus-A321-neo.md
+      - ToLiss Airbus A320 NEO: decks/toliss-airbus-A320-neo.md
+      - Aerobask Robin DR401: decks/aerobask-robin-dr401.md
+  - Modules:
+      - Overview: modules/modules.md
+      - Audio Panel: modules/audio-panel.md
+      - Engine: modules/engine.md
+      - G1000: modules/g1000.md
+      - Radio: modules/radio.md
+      - Views: modules/views.md
+      - Weather: modules/weather.md
+  - Examples:
+      - Annunciators: examples/annunciators.md
+      - Encoder Toggle: examples/encoder-toggle.md
+      - Encoder Value: examples/encoder-value.md
+      - Side Icon: examples/side-icon.md
+  - Experimental:
+      - Encoder Toggle: experimental/encoder-toggle.md
+      - Encoder Value: experimental/encoder-value.md
+      - Side Icon: experimental/side-icon.md
+
 # Copyright
 copyright: Copyright &copy; 2023 - 2024 Duane Licudi
 
@@ -97,12 +130,6 @@ theme:
 # Plugins
 plugins:
   - social
-  - blog:
-      authors_file: "{blog}/.authors.yml"
-      authors: true      
-      archive_toc: true
-      blog_toc: true      
-      enabled: true
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   # - minify:

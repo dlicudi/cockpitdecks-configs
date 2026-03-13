@@ -1,27 +1,32 @@
-# Development Guide
+# Development
 
+This page covers a minimal local setup for working on `cockpitdecks-configs` in Visual Studio Code.
 
-## Visual Studio Code setup
+## VS Code YAML support
 
+Use the MkDocs schema for `mkdocs.yml` and allow the custom YAML tags used by Material for MkDocs.
 
-``` json title="settings.json"
+```json title="settings.json"
 {
-    "yaml.schemas": {
-      "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
-    },
-    "yaml.customTags": [ 
-      "!ENV scalar",
-      "!ENV sequence",
-      "!relative scalar",
-      "tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg",
-      "tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji",
-      "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format"
-    ]
-  }
+  "yaml.schemas": {
+    "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
+  },
+  "yaml.customTags": [
+    "!ENV scalar",
+    "!ENV sequence",
+    "!relative scalar",
+    "tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg",
+    "tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji",
+    "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format"
+  ]
+}
 ```
 
+## VS Code launch examples
 
-``` json title="launch.json"
+These launch configurations are useful when testing specific aircraft configs locally.
+
+```json title="launch.json"
 {
   "version": "0.2.0",
   "configurations": [
@@ -71,6 +76,4 @@
     }
   ]
 }
-
-
 ```

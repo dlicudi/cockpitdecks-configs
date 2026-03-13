@@ -1,80 +1,94 @@
 # Installation
 
 ## Python
-https://www.python.org/
+[python.org](https://www.python.org/)
 
-1. Download Python https://www.python.org/downloads/
-2. Install
+1. Download Python 3.10 or newer from https://www.python.org/downloads/
+2. Install it and confirm `python3` is available in your shell
 
 
 ## XPPython
 
-https://xppython3.readthedocs.io/en/latest/index.html
+[XPPython3 documentation](https://xppython3.readthedocs.io/en/latest/index.html)
 
 1. Download XPPython3 zipfile
-2.  Extract the xp3xxx.zip into your `X-Plane/Resources/plugins`
-3.  Follow steps f§or MAC quarantine https://xppython3.readthedocs.io/en/latest/usage/mac_quarantine.html
-4.  Start X-Plane
+2. Extract the xp3xxx zip into `X-Plane/Resources/plugins`
+3. On macOS, follow the quarantine steps: https://xppython3.readthedocs.io/en/latest/usage/mac_quarantine.html
+4. Start X-Plane once to confirm the plugin loads
+
+### X-Plane plugin
+
+Cockpitdecks also requires the main X-Plane plugin `PI_cockpitdecks.py` to be present and enabled in:
+
+```text
+X-Plane/Resources/plugins/PythonPlugins/
+```
+
+This is the active Cockpitdecks X-Plane integration. Older helper plugin references are obsolete for the normal installation flow.
 
 
 ## Cockpitdecks
-You can also follow installation instructions specific to cockpitdecks here: https://devleaks.github.io/cockpitdecks-docs/Installation/
+You can also refer to the upstream documentation here: https://devleaks.github.io/cockpitdecks-docs/Installation/
 
-### Python packages
+### Create a virtual environment
 
-Required packages:
-
-```
-pip install ruamel.yaml pillow
-```
-
-Weather/Metar button representation:
-
-```
-pip install avwx-engine scipy suntime timezonefinder
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
 ```
 
-Streamdeck devices:
+### Install cockpitdecks
 
-```
-pip install streamdeck
-```
+For a typical X-Plane and Loupedeck setup:
 
-Loupedeck devices:
-
-```
-pip install git+https://github.com/devleaks/python-loupedeck-live.git
+```sh
+pip install 'cockpitdecks[xplane,loupedeck] @ git+https://github.com/dlicudi/cockpitdecks.git'
 ```
 
-Touch Mini devices:
+If you want an editable local checkout instead:
 
-```
-pip install git+https://github.com/devleaks/python-berhinger-xtouchmini.git
-```
-
-### Download cockpitdecks
-
-!!! warning experimental build
-    *Supports some experimental features such as custom sides buttons, encoders with toggle for step changes and improved EncoderValue class.*
-
-=== "Original"
-    ```
-    git checkout https://github.com/devleaks/cockpitdecks.git
-    ```
-
-=== "Experimental"
-    ```
-    git checkout https://github.com/dlicudi/cockpitdecks.git
-    ```
-
-### Cockpitdecks Helper Plugin
-
-```
-cp PI_cockpitdecks_helper.py ~/X-Plane\ 12/Resources/plugins/PythonPlugins/
+```sh
+git clone https://github.com/dlicudi/cockpitdecks.git
+cd cockpitdecks
+pip install -e '.[xplane,loupedeck]'
 ```
 
-### Cockpitdecks Configs
+Common extras:
 
+- `xplane`: X-Plane simulator support
+- `loupedeck`: Loupedeck Live / Live S / CT support
+- `streamdeck`: Elgato Stream Deck support
+- `xtouchmini`: Behringer X-Touch Mini support
+- `weather`: weather icon support
+- `toliss`: ToLiss aircraft extensions
+
+### Install cockpitdecks-configs
+
+`cockpitdecks-configs` is a data/config repository, not a Python package.
+
+```sh
+git clone https://github.com/dlicudi/cockpitdecks-configs.git
 ```
-git checkout https://github.com/dlicudi/cockpitdecks-configs.git
+
+### Link an aircraft deckconfig
+
+Link the aircraft you want to use into the matching X-Plane aircraft folder:
+
+```sh
+ln -s ~/GitHub/cockpitdecks-configs/decks/cirrus-sr22/deckconfig ~/X-Plane\ 12/Aircraft/Laminar\ Research/Cirrus\ SR22
 ```
+
+Repeat that pattern for other aircraft by changing the source and destination paths.
+
+### Start Cockpitdecks
+
+Once X-Plane and XPPython3 are installed, start Cockpitdecks from your virtual environment:
+
+```sh
+cockpitdecks-cli
+```
+
+If you are working from a local editable checkout of `cockpitdecks`, run the same command from that environment after `pip install -e`.
+
+For local development tips and VS Code launch examples, see [Development](development.md).

@@ -63,7 +63,7 @@ Battery and Electrical Panel(1) G1000 Control Panel(2) Autopilot Controls(3) Aud
 
 5.  :man_raising_hand: Flap Panel:
     - [x] FLAP LEVER
-    - [ ] SUPPLIMENTAL OXYGEN
+    - [ ] SUPPLEMENTAL OXYGEN
 
 6.  :man_raising_hand: Throttle Quadrant:
     - [x] THROTTLE
@@ -163,7 +163,7 @@ Airspeed Indicator(1) Heading(2) Altimeter(3) Vertical Speed(4) Fuel Quantity(5)
     *Displays oil temperature and pressure.*
 
 7.  Vacuum/Pressure and Battery Ammeter
-    *Displays vaccuum pressure (necessary for operating of air driven instruments) and displays battery current (positive indicates charging, negative depleting).*
+    *Displays vacuum pressure (necessary for operating air-driven instruments) and battery current (positive indicates charging, negative indicates discharge).*
 
 8.  Propeller Speed
     *The propeller speed in RPM. Engine RPM is also the same given that it is direct drive.*
@@ -197,8 +197,8 @@ FUEL OFF(9) FUEL LEFT(10) FUEL OFF(11)
 { .annotate }
 
 
-1.  Ignition: *Starter motor long press push button.*
-    PythonPlugin required for long press button `<X-Plane Path>/Resources/Plugins/PythonPlugins/PI_cockpitdecks_helper.py)`
+1.  Ignition: *Starter motor long-press push button.*
+    Requires the active Cockpitdecks X-Plane integration to be installed and enabled.
 2.  AVIONICS: *On/off button to power BUS1/BUS2.*
 3.  BAT 2: *On/off button for battery 2 (provides power when engine is not running).*
 4.  BAT 1: *On/off button for battery 1 (provides power when engine is not running).*

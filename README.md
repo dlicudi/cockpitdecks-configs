@@ -1,9 +1,7 @@
 # cockpitdecks-configs
 A collection of aircraft configs for [cockpitdecks](https://github.com/devleaks/cockpitdecks).
 
-~~Important: New config currently requires this experimental build of [cockpitdecks](https://github.com/dlicudi/cockpitdecks).~~
-
-Documentation: [Cockpitdecks Configs Docs](http://dlicudi.github.io/cockpitdecks-configs/)
+Documentation: [Cockpitdecks Configs Docs](https://dlicudi.github.io/cockpitdecks-configs/)
 
 ## Aircraft
 
@@ -20,7 +18,21 @@ Aircraft configs completed, planned or in progress.
 - [ ] Toliss Airbus A320 Neo
 
 ### Aerobask
-- [ ] LR Robin DR401 (Aerobask)
+- [x] LR Robin DR401 (Aerobask)
+
+## Installation
+
+Install `cockpitdecks` as a Python package, then clone this repository as config data:
+
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install 'cockpitdecks[xplane,loupedeck] @ git+https://github.com/dlicudi/cockpitdecks.git'
+git clone https://github.com/dlicudi/cockpitdecks-configs.git
+```
+
+`cockpitdecks-configs` is not a Python package, so it should be cloned, not installed with `pip`.
 
 
 ## Examples
@@ -35,14 +47,8 @@ Aircraft configs completed, planned or in progress.
 ![GCU-478](./docs/assets/images/cirrus-sr22/gcu478.png)
 
 
-## Notes on long press buttons and helper plugin
+## Notes on long press buttons
 
 > [!IMPORTANT]
-> The helper plugin must be copied to PythonScripts e.g.
-> `cp ~/Documents/GitHub/cockpitdecks/PI_cockpitdecks_helper.py ~/X-Plane\ 12/Resources/plugins/PythonPlugins/`
->
 > You must have either the deckconfig in the Aircraft's folder or a symlink (on MAC an alias will not work) e.g.
 > `ln -s ~/Documents/GitHub/cockpitdecks-configs/decks/cessna-172-sp/deckconfig ~/X-Plane\ 12/Aircraft/Laminar\ Research/Cessna\ 172\ SP`
-
-## Issues
-- ~~Possible issues with helper plugin not working for multiple long press buttons~~

@@ -122,10 +122,10 @@ Switches (Battery, alternator, lights etc)
 ![](../assets/images/cessna-172-sp/switches.png)
 
 !!! warning
-    PythonPlugin required for long press button (<X-Plane Path>/Resources/Plugins/PythonPlugins/PI_cockpitdecks_helper.py)
+    Long-press behaviour depends on the active Cockpitdecks X-Plane integration being installed and enabled.
 
 
-- **Starter motor:** Long press push button functionality is facilitated by a Python plugin.
+- **Starter motor:** Long-press push button.
 - **Alternator:** Controls power supply to systems and battery charging when the engine is running.
 - **Battery:** Controls power supply when the engine is not running.
 - **Fuel Pump:** Controls electric fuel pump for priming engine and as a backup for mechanical pump failure.
@@ -215,5 +215,4 @@ Transponder (Change transponder mode and id)
 - **IDENT:** Transmits radio beacon for a short period of time.
 - **RADIO BEACON:** Displays an R if the transponder is broadcasting. This will display intermittently or constantly for a short period of time if IDENT is pushed.
 - **MODE:** Displays the current mode of the transponder.
-
 
