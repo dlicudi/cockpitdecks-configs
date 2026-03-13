@@ -61,7 +61,6 @@ buttons:
     - sim/autopilot/vertical_speed_sync
     - sim/autopilot/vertical_speed_down
     - sim/autopilot/vertical_speed_up
-  long-press: AirbusFBW/PullSPDSel
 
 - index: e5
   name: mixture_encoder
@@ -74,6 +73,7 @@ buttons:
 
 - index: left
   name: left_screen
+  render-cooldown-ms: 100
   type: none
   side:
     icon-color: Black
@@ -111,6 +111,7 @@ buttons:
 
 - index: right
   name: right_screen
+  render-cooldown-ms: 100
   type: none
   side:
     icon-color: Black

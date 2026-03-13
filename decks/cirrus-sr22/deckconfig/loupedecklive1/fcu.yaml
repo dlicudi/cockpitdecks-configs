@@ -7,6 +7,8 @@ buttons:
     name: AP
     type: push
     annunciator:
+      annunciator-style: v
+      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -17,7 +19,7 @@ buttons:
         B1:
           text: AP
           text-size: 60
-          text-font: D-DIN-Bold.otf
+          text-font: D-DINCondensed-Bold.otf
           formula: "1"
     command: sim/autopilot/servos_toggle
     vibrate: SHORT
@@ -26,6 +28,8 @@ buttons:
     name: FD
     type: push
     annunciator:
+      annunciator-style: v
+      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -36,7 +40,7 @@ buttons:
         B1:
           text: FD
           text-size: 60
-          text-font: D-DIN-Bold.otf
+          text-font: D-DINCondensed-Bold.otf
           text-color: Turquoise
           formula: "1"
     command: sim/autopilot/fdir_toggle
@@ -47,6 +51,8 @@ buttons:
     name: HDG
     type: push
     annunciator:
+      annunciator-style: v
+      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -57,7 +63,7 @@ buttons:
         B1:
           text: HDG
           text-size: 60
-          text-font: D-DIN-Bold.otf
+          text-font: D-DINCondensed-Bold.otf
           formula: "1"
     command: sim/autopilot/heading
     vibrate: SHORT
@@ -66,6 +72,8 @@ buttons:
     name: ALT
     type: push
     annunciator:
+      annunciator-style: v
+      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -76,7 +84,7 @@ buttons:
         B1:
           text: ALT
           text-size: 60
-          text-font: D-DIN-Bold.otf
+          text-font: D-DINCondensed-Bold.otf
           formula: "1"
     command: sim/autopilot/altitude_hold
     vibrate: SHORT
@@ -86,6 +94,8 @@ buttons:
     name: NAV
     type: push
     annunciator:
+      annunciator-style: v
+      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -96,7 +106,7 @@ buttons:
         B1:
           text: NAV
           text-size: 60
-          text-font: D-DIN-Bold.otf
+          text-font: D-DINCondensed-Bold.otf
           formula: "1"
     command: sim/autopilot/gpss
 
@@ -105,6 +115,8 @@ buttons:
     name: VNAV
     type: push
     annunciator:
+      annunciator-style: v
+      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -115,7 +127,7 @@ buttons:
         B1:
           text: VNAV
           text-size: 60
-          text-font: D-DIN-Bold.otf
+          text-font: D-DINCondensed-Bold.otf
           text-color: Turquoise
           formula: "1"
     command: sim/autopilot/vnav
@@ -125,6 +137,8 @@ buttons:
     name: APR
     type: push
     annunciator:
+      annunciator-style: v
+      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -135,7 +149,7 @@ buttons:
         B1:
           text: APR
           text-size: 60
-          text-font: D-DIN-Bold.otf
+          text-font: D-DINCondensed-Bold.otf
           formula: "1"
     command: sim/autopilot/approach
 
@@ -143,6 +157,8 @@ buttons:
     name: REV
     type: push
     annunciator:
+      annunciator-style: v
+      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -153,7 +169,7 @@ buttons:
         B1:
           text: REV/BC
           text-size: 50
-          text-font: D-DIN-Bold.otf
+          text-font: D-DINCondensed-Bold.otf
           formula: "1"
     command: sim/autopilot/back_course
 
@@ -161,6 +177,8 @@ buttons:
     name: VS
     type: push
     annunciator:
+      annunciator-style: v
+      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -171,7 +189,7 @@ buttons:
         B1:
           text: VS
           text-size: 60
-          text-font: D-DIN-Bold.otf
+          text-font: D-DINCondensed-Bold.otf
           formula: "1"
     command: sim/autopilot/vertical_speed
 
@@ -179,6 +197,8 @@ buttons:
     name: FLC
     type: push
     annunciator:
+      annunciator-style: v
+      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -189,7 +209,7 @@ buttons:
         B1:
           text: FLC
           text-size: 60
-          text-font: D-DIN-Bold.otf
+          text-font: D-DINCondensed-Bold.otf
           text-color: Turquoise
           formula: "1"
     command: sim/autopilot/level_change
@@ -203,6 +223,8 @@ buttons:
     label-color: black
     command: sim/autopilot/hsi_toggle_gps
     annunciator:
+      annunciator-style: v
+      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -227,6 +249,8 @@ buttons:
     label-color: black
     command: sim/autopilot/hsi_toggle_nav
     annunciator:
+      annunciator-style: v
+      light-off-intensity: 8
       size: medium
       model: B
       parts:
