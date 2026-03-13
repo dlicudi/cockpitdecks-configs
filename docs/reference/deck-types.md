@@ -66,4 +66,4 @@ Current driver families include:
 - `loupedeck`
 - `xtouchmini`
 
-For the original detailed notes, see [decktypes/README.md](../../decktypes/README.md) in the repository.
+For the original detailed notes, see [decktypes/README.md](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decktypes/README.md) in the repository.
