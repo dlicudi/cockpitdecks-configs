@@ -1,5 +1,8 @@
 ---
 icon: material/airplane
+tags:
+  - GA
+  - Loupedeck
 ---
 
 # Beechcraft Baron 58

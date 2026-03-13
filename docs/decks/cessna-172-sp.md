@@ -1,5 +1,9 @@
 ---
 icon: material/airplane
+tags:
+  - GA
+  - Loupedeck
+  - G1000
 ---
 
 # Cessna 172 SP
@@ -215,4 +219,3 @@ Transponder (Change transponder mode and id)
 - **IDENT:** Transmits radio beacon for a short period of time.
 - **RADIO BEACON:** Displays an R if the transponder is broadcasting. This will display intermittently or constantly for a short period of time if IDENT is pushed.
 - **MODE:** Displays the current mode of the transponder.
-

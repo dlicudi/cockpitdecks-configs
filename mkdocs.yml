@@ -39,29 +39,37 @@ nav:
   - Aircraft:
       - Overview: decks/index.md
       - Cessna 172 SP: decks/cessna-172-sp.md
-      - Cirrus SR22: decks/cirrus-sr22.md
+      - Cirrus SR22:
+          - Overview: decks/cirrus-sr22.md
+          - Home: decks/cirrus-sr22/home.md
+          - PFI: decks/cirrus-sr22/pfi.md
+          - Switches: decks/cirrus-sr22/switches.md
+          - FCU: decks/cirrus-sr22/fcu.md
+          - Engine: decks/cirrus-sr22/engine.md
+          - Pedestal: decks/cirrus-sr22/pedestal.md
+          - Radio: decks/cirrus-sr22/radio.md
+          - Transponder: decks/cirrus-sr22/transponder.md
+          - GCU478: decks/cirrus-sr22/gcu478.md
+          - Views: decks/cirrus-sr22/views.md
+          - Weather: decks/cirrus-sr22/weather.md
       - Beechcraft Baron 58: decks/beechcraft-baron-58.md
       - Lancair Evolution: decks/lancair-evolution.md
       - ToLiss Airbus A321 NEO: decks/toliss-airbus-A321-neo.md
       - ToLiss Airbus A320 NEO: decks/toliss-airbus-A320-neo.md
       - Aerobask Robin DR401: decks/aerobask-robin-dr401.md
-  - Modules:
-      - Overview: modules/modules.md
-      - Audio Panel: modules/audio-panel.md
-      - Engine: modules/engine.md
-      - G1000: modules/g1000.md
-      - Radio: modules/radio.md
-      - Views: modules/views.md
-      - Weather: modules/weather.md
-  - Examples:
-      - Annunciators: examples/annunciators.md
-      - Encoder Toggle: examples/encoder-toggle.md
-      - Encoder Value: examples/encoder-value.md
-      - Side Icon: examples/side-icon.md
-  - Experimental:
-      - Encoder Toggle: experimental/encoder-toggle.md
-      - Encoder Value: experimental/encoder-value.md
-      - Side Icon: experimental/side-icon.md
+  - Reference:
+      - Overview: reference/index.md
+      - Compatibility: reference/compatibility.md
+      - Deck Types: reference/deck-types.md
+      - Modules:
+          - Overview: modules/modules.md
+          - Audio Panel: modules/audio-panel.md
+          - Engine: modules/engine.md
+          - G1000: modules/g1000.md
+          - Radio: modules/radio.md
+          - Views: modules/views.md
+          - Weather: modules/weather.md
+      - Tags: reference/tags.md
 
 # Copyright
 copyright: Copyright &copy; 2023 - 2024 Duane Licudi
@@ -78,7 +86,7 @@ theme:
     - content.code.annotate
     - content.code.copy
     # - content.code.select
-    # - content.footnote.tooltips
+    - content.footnote.tooltips
     # - content.tabs.link
     - content.tooltips
     # - header.autohide
@@ -86,7 +94,8 @@ theme:
     - navigation.footer
     - navigation.indexes
     - navigation.instant
-    # - navigation.instant.prefetch
+    - navigation.path
+    - navigation.instant.prefetch
     # - navigation.instant.progress
     # - navigation.prune
     - navigation.sections
@@ -125,11 +134,28 @@ theme:
   icon:
     logo: logo
     annotation: material/plus-circle-outline
+    tag:
+      default: material/tag-outline
+      ga: material/airplane
+      airliner: material/airplane-takeoff
+      loupedeck: material/dialpad
+      g1000: material/navigation-variant-outline
+      toliss: material/airplane-marker
 
 
 # Plugins
 plugins:
   - social
+  - optimize:
+      enabled: !ENV [CI, false]
+  - tags:
+      tags_allowed:
+        - GA
+        - Airliner
+        - Loupedeck
+        - G1000
+        - ToLiss
+        - Work in Progress
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   # - minify:
@@ -153,6 +179,12 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/dlicudi
+  tags:
+    GA: ga
+    Airliner: airliner
+    Loupedeck: loupedeck
+    G1000: g1000
+    ToLiss: toliss
     # - icon: fontawesome/brands/docker
     #   link: https://hub.docker.com/r/squidfunk/mkdocs-material/
     # - icon: fontawesome/brands/python
@@ -195,6 +227,15 @@ markdown_extensions:
       repo: mkdocs-material
   - pymdownx.mark
   - pymdownx.smartsymbols
+  - material.extensions.preview:
+      configurations:
+        - sources:
+            include:
+              - decks/cirrus-sr22.md
+              - decks/cirrus-sr22/*
+          targets:
+            include:
+              - decks/cirrus-sr22/*
   - pymdownx.snippets:
       auto_append:
         - includes/mkdocs.md

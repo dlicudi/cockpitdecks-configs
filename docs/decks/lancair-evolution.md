@@ -1,5 +1,9 @@
 ---
 icon: material/airplane
+tags:
+  - GA
+  - Loupedeck
+  - G1000
 ---
 
 # Lancair Evolution

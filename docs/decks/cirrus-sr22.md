@@ -1,367 +1,63 @@
 ---
 icon: material/airplane
+tags:
+  - GA
+  - Loupedeck
+  - G1000
 ---
 
 # Cirrus SR22
 
-![](../assets/images/cirrus-sr22/cirrus-sr22.png){ :width="200" }
-
-
-## Functions
-
-Battery and Electrical Panel(1) G1000 Control Panel(2) Autopilot Controls(3) Audio Panel(4) Flap Panel(5) Throttle Quadrant(6) Backup Instrumentation(7) Parking Brake and Alternate Air Selector(8) PFD Controls & Features(9) MFD Controls & Features(10).
-{ .annotate }
-
-1.  :man_raising_hand: Battery and Electrical Panel:
-    - [x] Ignition
-    - [x] Electrics (BAT 1, BAT 2, ALT 1, ALT 2)
-    - [x] AVIONICS
-    - [x] Lights (NAV, STROBE, LAND, ICE)
-    - [x] Ice Protection (PITOT HEAT, ICE PROTECT, PUMP BKUP, WIND SHLD)
-    - [ ] Instrument Lighting
-
-2.  :man_raising_hand: G1000 Control Panel:
-    - [x] Direct To (a waypoint)
-    - [x] MENU key
-    - [x] PROC key
-    - [x] FMS rotary
-    - [x] COM/NAV/CRS/XPDR rotary combo
-        - [x] NAV button
-        - [x] COM button
-        - [x] XPDR button
-        - [x] CRS button
-    - [ ] IDENT button
-    - [ ] Frequency toggle button
-    - [ ] Keypad
-    - [x] Range rotary
-    - [x] FPL button
-    - [x] CLR button
-    - [x] ENT button
-    - [x] Home button
-
-3.  :man_raising_hand: Autopilot Controls:
-    - [x] Rotary
-        - [x] HDG Rotary
-        - [x] DN/UP VS Rotary
-        - [x] ALT SEL Rotary
-    - [x] APR
-    - [x] AP
-    - [x] LVL
-    - [x] FLC
-    - [x] VNV
-    - [x] ALT
-    - [x] VS
-    - [x] FD
-    - [x] NAV
-    - [x] HDG
-
-4.  :man_raising_hand: Audio Panel:
-    - [ ] COM1/COM2
-    - [ ] MIC1/MIC2
-    - [ ] NAV1/NAV2
-    - [ ] MKR MUTE
-
-5.  :man_raising_hand: Flap Panel:
-    - [x] FLAP LEVER
-    - [ ] SUPPLEMENTAL OXYGEN
-
-6.  :man_raising_hand: Throttle Quadrant:
-    - [x] THROTTLE
-    - [x] MIXTURE
-    - [ ] FUEL (TANK) SELECTOR
-
-7.  :man_raising_hand: Backup Instrumentation:
-    Not Implemented
-
-8.  :man_raising_hand: Parking Brake and Alternate Air selector:
-    - [ ] PARKING BRAKE
-    - [ ] ALTERNATE AIR SOURCE
-
-9.  :man_raising_hand: PFD Controls & Features:
-    - [ ] NAV Audio Squelch
-    - [ ] Active & Stand-by NAV1 and NAV2 Frequencies
-    - [ ] Attitude Indicator
-    - [x] Next Waypoint
-    - [ ] Active & Stand-by COM1 and COM Frequencies
-    - [ ] COM Frequency Toggle
-    - [ ] COM Audio Squelch
-    - [ ] COM Rotary
-    - [ ] CRS/BARO Rotary
-    - [x] Altimeter
-    - [ ] Joystick
-    - [ ] Flight Plan Key Group
-    - [ ] FMS Rotary
-    - [ ] Horizontal Situation Indicator (HSI)
-    - [ ] Soft Keys
-    - [x] ALT Rotary
-    - [ ] Autopilot Key Group
-    - [ ] HDG Rotary
-    - [x] Airspeed Indicator
-    - [ ] NAV Rotary
-    - [ ] NAV Frequency Toggle
-
-10.  :man_raising_hand: MFD Controls & Features:
-    - [ ] NAV Audio Squelch
-    - [ ] Active & Stand-by NAV1 and NAV2 Frequencies
-    - [ ] Navigation Map
-    - [ ] Data Fields
-    - [ ] COM Frequency Toggle
-    - [ ] COM Audio Squelch
-    - [ ] COM Rotary
-    - [ ] CRS/BARO Control
-    - [ ] Joystick
-    - [ ] Flight Plan Key Group
-    - [ ] FMS Rotary
-    - [ ] Soft Keys
-    - [ ] ALT Rotary
-    - [ ] Autopilot Key Group
-    - [ ] HDG Rotary
-    - [ ] NAV Rotary
-    - [ ] NAV Frequency Toggle
-    - [ ] Engine Indication System (EIS)
+![](../assets/images/cirrus-sr22/cirrus-sr22.png)
 
+!!! abstract "SR22 Profile"
+    G1000-oriented deck layout for X-Plane 12 and Loupedeck Live.
 
-## Home
-Provides links to pages (up to 12).
+    This layout is built around practical SR22 flying workflows: PFI, FCU, engine, radios,
+    transponder, pedestal, weather, views, and aircraft systems.
 
-![](../assets/images/cirrus-sr22/home.png)
+    `GA` `Loupedeck Live` `G1000` `X-Plane 12`
 
-!!! note
-    The numbered buttons (1 to 7) also provide links to pages but this is limited to 7.
+    Best for a G1000-style SR22 workflow with fast page switching and side-screen support.
 
+## Page Map
 
-## PFI
-Primary Flight Instruments.
+[Home](cirrus-sr22/home.md#sr22-home-preview){ .cdx-pill .cdx-pill--good data-preview }
+[PFI](cirrus-sr22/pfi.md#sr22-pfi-preview){ .cdx-pill .cdx-pill--strong data-preview }
+[Switches](cirrus-sr22/switches.md#sr22-switches-preview){ .cdx-pill .cdx-pill--strong data-preview }
+[FCU](cirrus-sr22/fcu.md#sr22-fcu-preview){ .cdx-pill .cdx-pill--strong data-preview }
+[Engine](cirrus-sr22/engine.md#sr22-engine-preview){ .cdx-pill .cdx-pill--good data-preview }
+[Pedestal](cirrus-sr22/pedestal.md#sr22-pedestal-preview){ .cdx-pill .cdx-pill--good data-preview }
+[Radio](cirrus-sr22/radio.md#sr22-radio-preview){ .cdx-pill .cdx-pill--good data-preview }
+[Transponder](cirrus-sr22/transponder.md#sr22-transponder-preview){ .cdx-pill .cdx-pill--strong data-preview }
+[GCU478](cirrus-sr22/gcu478.md#sr22-gcu478-preview){ .cdx-pill .cdx-pill--good data-preview }
+[Views](cirrus-sr22/views.md#sr22-views-preview){ .cdx-pill .cdx-pill--good data-preview }
+[Weather](cirrus-sr22/weather.md#sr22-weather-preview){ .cdx-pill .cdx-pill--good data-preview }
 
-![](../assets/images/cirrus-sr22/pfi.png)
+`Strong:` PFI, Switches, FCU, Transponder. `Good:` Home, Engine, Pedestal, Radio, GCU478, Views, Weather.
 
+## In Practice
 
-Airspeed Indicator(1) Heading(2) Altimeter(3) Vertical Speed(4) Fuel Quantity(5) EGT and Fuel Flow(6) 
-{ .annotate }
+### Strongest Workflows
 
-1.  Airspeed Indicator 
-    *Displays speed in knots.*
+- `PFI` is the best quick-reference page while flying: primary scan items, cautions, warnings, and waypoint data are all together.
+- `FCU` is the most complete control page: autopilot modes, HSI source selection, and useful side-screen feedback.
+- `Switches` and `Transponder` are the strongest systems pages, with direct state indication instead of guesswork.
 
-2.  Heading
-    *Displays magnetic bearing.*
+### What Is Covered Well
 
-3.  Altimeter
-    *Displays altitude and barometer setting.*
+- Core electrical and engine workflows are in place: ignition, batteries, alternators, avionics, fuel selector, throttle, mixture, oil, CHT, and fuel monitoring.
+- The G1000 control path is usable from the deck: direct-to, menu, procedure, FPL, CLR, ENT, range, cursor, COM, NAV, CRS, and XPDR selection.
+- Radio workflow is practical rather than exhaustive: COM1, NAV1, ADF, and squawk edits are all available without leaving the deck.
 
-4.  Vertical Speed
-    *Displays vertical speed.*
+### Where It Is Still Thin
 
-5.  Fuel Quantity
-    *Displays fuel remaining in left and right tank.*
+- Some secondary MFD-oriented navigation and data-field workflows are still incomplete.
+- Audio panel coverage is limited and not yet a complete COM/NAV/MIC/MKR replacement.
+- Backup-instrument workflow is not a current focus of the layout.
 
-6.  EGT and Fuel Flow
+## Recommended Flow
 
-    *Displays exhaust gas temperature and fuel flow.*
-    *Fuel is in kg and is converted to gallons using `RPN 0.264172 *`*
-
-6.  Oil
-    *Displays oil temperature and pressure.*
-
-7.  Vacuum/Pressure and Battery Ammeter
-    *Displays vacuum pressure (necessary for operating air-driven instruments) and battery current (positive indicates charging, negative indicates discharge).*
-
-8.  Propeller Speed
-    *The propeller speed in RPM. Engine RPM is also the same given that it is direct drive.*
-
-9.  Caution Annunciators
-    *Displays oil pressure and voltage caution annunciators.*
-
-10. Warning Annunciators
-    *Displays fuel pressure and vacuum pressure warning annunciators.*
-
-11. NAVGPS mode
-    *Display for navigation mode and also a push button to toggle between NAV (VLOC) and GPS.*
-
-12. Next Waypoint
-    *If there is a flight plan being followed this button will display data related to the next waypoint e.g. nautical miles left, desired track (bearing) and ETA in minutes.*
-
-
-
-## Switches
-Main switches and access to light and ice related functions.
-
-![](../assets/images/cirrus-sr22/switches.png)
-
-IGNITION(1) AVIONICS(2) BAT 2(3) BAT 1(4)
-{ .annotate }
-
-ALT 1(5) ALT 2(6) LIGHTS(7) ICING(8)
-{ .annotate }
-
-FUEL OFF(9) FUEL LEFT(10) FUEL OFF(11)
-{ .annotate }
-
-
-1.  Ignition: *Starter motor long-press push button.*
-    Requires the active Cockpitdecks X-Plane integration to be installed and enabled.
-2.  AVIONICS: *On/off button to power BUS1/BUS2.*
-3.  BAT 2: *On/off button for battery 2 (provides power when engine is not running).*
-4.  BAT 1: *On/off button for battery 1 (provides power when engine is not running).*
-5.  ALT 1: *On/off button for alternator (when engine is running provides power to systems and charges battery 1).*
-6.  ALT 2: *On/off button for alternator (when engine is running provides power to systems and charges battery 2).*
-7.  LIGHTS: *Takes you to Lights page.*
-8.  ICING: *Takes you to Icing page.*
-9.  FUEL OFF: Sets fuel selector to left off position.
-10. FUEL LEFT: Sets fuel selector to left position.
-11. FUEL RIGHT: Sets fuel selector to right position.
-12.  FUEL OFF: Sets fuel selector to right off position.
-
-
-### Lights
-
-NAV(1) STROBE(2) LAND(3) ICE(4)
-{ .annotate }
-
-1.  Navigation lights
-    *On/off button for navigation lights (wings/tail).*
-2.  Strobe Lights
-    *On/off button for strobe lights (wing).*
-3.  Landing lights
-    *On/off button for landing light.*
-4.  Ice lights
-    *On/off button for ice light (Illuminates the leading edges of the wings).*
-
-
-### Icing
-
-PITOT(1) ICE PROTECT(2) PUMP BKUP(3) NORM/HIGH(4)
-{ .annotate }
-
-PROP(5) WSHLD(6)
-{ .annotate }
-
-1.  Pitot Heat
-    *Activates the pitot tube heating element.*
-2.  Ice Protect
-    *Set to ON to inject de-icing fluid along the wing, horizontal stabilizer, and propeller blades.*
-3.  PUMP BKUP
-    *Activates backup de-icing fluid pump.*
-4.  NORM/HIGH
-    Use NORM when icing conditions are encountered and prior to icing occurring.
-    Use MAX when ice buildup has occurred.
-    MAX switch does not toggle – it must be held in position for the duration of the process.  
-5.  PROP
-    *On/off button for prop heating element.*
-6.  WSHLD
-    *On/off button for windshield de-icing.*
-
-
-## FCU
-Autopilot related functions.
-
-![](../assets/images/cirrus-sr22/fcu.png)
-
-AP(1) FD(2) HDG(3) ALT(4)
-{ .annotate }
-
-NAV(5) VNAV(6) APR(7) REV/BC(8)
-{ .annotate }
-
-VS(9) FLC(10) HSI GPS(11) HSI NAV(12)
-{ .annotate }
-
-1.  AP
-2.  FD provides visual cues for manual flight control based on autopilot logic without actually controlling the aircraft.
-3.  HDG
-4.  ALT
-5.  NAV
-6.  VNAV manages aircraft's vertical path according to a predefined route or waypoint altitudes.
-7.  APR
-8.  REV/BC
-9.  VS
-10. FLC Maintains a set airspeed while climbing or descending to a selected altitude.
-11. HSI GPS Toggles between GPS 1 and GPS 2 navigation modes.
-12. HSI NAV Toggles between VOR 1 and VOR 2 navigation modes.
-
-
-## Engine
-Displays engine related data.
-
-![](../assets/images/cirrus-sr22/engine.png)
-
-!!! note
-    Fuel flow uses the following formula for GPH:
-    ```fuel_flow_kg_sec 3600 * 0.8 / 3.78541 / 2 roundn```
-
-    Fuel estimate uses the following formula:
-    ```fuel_flow_kg_sec[0]} 3 roundn 0.000001 + / 3600 / 1 roundn```
-
-
-## Pedestal
-![](../assets/images/cirrus-sr22/pedestal.png)
-
-THROTTLE(1) TOGGLE BRAKES(2) FLAPS UP(3)
-{ .annotate }
-
-MIXTURE(4) FLAPS RATIO(5)
-{ .annotate }
-
-FLAPS DOWN(6)
-{ .annotate }
-
-1.  THROTTLE Displays throttle as a percentage.
-2.  TOGGLE BRAKES Displays state of the parking brake. Push will toggle parking brake on/off.
-3.  FLAPS UP Extends flaps one notch.
-4.  MIXTURE Displays fuel mixture as a percentage.
-5.  FLAPS RATIO Displays flaps state as a number between 0 and 1 (0 fully retracted, 1 fully extended).
-6.  FLAPS DOWN Detracts flaps one notch.
-
-
-## Radio
-
-![](../assets/images/cirrus-sr22/radio.png)
-
-SQUAWK DIGIT 1(1) SQUAWK DIGIT 2(2) SQUAWK DIGIT 3(3) SQUAWK DIGIT 4(4)
-{ .annotate }
-
-Transponder Mode(5) Ident(6) COM 1(7)
-{ .annotate }
-
-ADF FREQ(8) VLOC 1(9)
-{ .annotate }
-
-1.  SQUAWK DIGIT 1
-2.  SQUAWK DIGIT 2
-3.  SQUAWK DIGIT 3
-4.  SQUAWK DIGIT 4
-5.  Transponder Mode
-6.  IDENT
-7.  COM 1 Displays COM1 frequency and COM1 standby frequency. Pressing button will swap frequencies.
-8.  ADF FREQ Displays ADF frequency and ADF standby frequency. Pressing button will swap frequencies.
-9.  VLOC 1 Displays NAV1 frequency and NAV1 standby frequency. Pressing button will swap frequencies.
-
-
-!!! note
-    Transponder functions will be deprecated after moving to a new page.## Switch Panel
-
-![](../assets/images/cirrus-sr22/switches.png)
-
-
-
-## Transponder
-![](../assets/images/cirrus-sr22/transponder.png)
-
-
-### SQUAWK CODE BUTTONS
-The top four buttons display the squawk code. They also serve as push buttons to increment the transponder digits.
-
-### Transponder Mode Buttons
-1. ON
-2. OFF
-3. STBY
-4. ALT
-5. TEST
-
-### IDENT
-Transmits radio beacon for a short period of time.
-
-### RADIO BEACON
-Displays an R if the transponder is broadcasting. This will display intermittently or constantly for short period of time if IDENT is pushed. 
-
-### MODE
-Displays current mode of the transponder.
+1. Start on `Home` to jump into the page you need fastest.
+2. Use `PFI` and `FCU` as the main in-flight pair.
+3. Drop into `Engine`, `Radio`, `Transponder`, or `Pedestal` only when you need a focused system workflow.

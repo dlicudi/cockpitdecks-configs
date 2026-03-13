@@ -5,7 +5,7 @@
 - [ ] [XPPython]
 - [ ] [Loupedeck] Live
 - [ ] Cockpitdecks
-- [ ] Cockpitdecks Helper Plugin
+- [ ] Cockpitdecks X-Plane plugin (`PI_cockpitdecks.py`)
 
 
 [X-Plane]: https://www.x-plane.com

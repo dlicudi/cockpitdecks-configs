@@ -1,5 +1,9 @@
 ---
 icon: material/airplane
+tags:
+  - Airliner
+  - Loupedeck
+  - ToLiss
 ---
 
 # Toliss Airbus A321 NEO
