@@ -39,7 +39,7 @@ Stream Deck XL layout for Lancair Evolution.
       <p>Page config and preview.</p>
     </div>
   </a>
-  <a class="cdx-card" href="index/#lancair-evolution-streamdeckxl1-index-preview">
+  <a class="cdx-card" href="home/#lancair-evolution-streamdeckxl1-index-preview">
     <img src="../../../assets/images/lancair-evolution/generated/streamdeckxl1/index.page.png" alt="Home page preview" />
     <div class="cdx-card__body">
       <h3>Home</h3>

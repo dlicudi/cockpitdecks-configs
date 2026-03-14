@@ -20,7 +20,7 @@ SR22_SCRIPT = ROOT / "scripts" / "generate_sr22_docs.py"
 RENDER_PREVIEW_SCRIPT = ROOT / "scripts" / "render_deck_preview.py"
 REPO_BLOB_BASE = "https://github.com/dlicudi/cockpitdecks-configs/blob/main"
 CUSTOM_LAYOUT_DOC_SLUGS = {"cirrus-sr22"}
-GENERATED_PREVIEW_SLUGS = {"lancair-evolution"}
+GENERATED_PREVIEW_SLUGS = {"lancair-evolution", "vans-aircraft-rv-10"}
 
 PAGE_NAME_OVERRIDES = {
     "audiopanel": "Audio Panel",
@@ -171,6 +171,10 @@ def page_title(page_path: Path) -> str:
     return title if title != page_path.stem else titleize_slug(title.replace("_", "-"))
 
 
+def page_doc_stem(page_path: Path) -> str:
+    return "home" if page_path.stem == "index" else page_path.stem
+
+
 def page_image_path(slug: str, page_path: Path) -> Path | None:
     image_dir = IMAGE_ROOT / slug
     for suffix in (".png", ".jpg", ".jpeg", ".webp"):
@@ -258,7 +262,8 @@ def build_page_doc(slug: str, layout_name: str, layout_title: str, page_path: Pa
     page = load_yaml(page_path)
     page_name = page_path.stem
     title = page_title(page_path)
-    image_ref = rel_image_path(image_path, DOCS_DECKS_DIR / slug / layout_name / f"{page_name}.md")
+    doc_stem = page_doc_stem(page_path)
+    image_ref = rel_image_path(image_path, DOCS_DECKS_DIR / slug / layout_name / f"{doc_stem}.md")
     includes = [part.strip() for part in str(page.get("includes", "")).split(",") if part.strip()]
 
     lines = [
@@ -319,7 +324,8 @@ def generate_layout_docs(slug: str, config: dict[str, Any], deckconfig_dir: Path
         page_docs: list[dict[str, str]] = []
         for page_path in layout["pages"]:
             page_name = page_path.stem
-            page_doc_path = layout_doc_dir / f"{page_name}.md"
+            doc_stem = page_doc_stem(page_path)
+            page_doc_path = layout_doc_dir / f"{doc_stem}.md"
             page_doc_path.write_text(
                 build_page_doc(slug, layout["layout"], str(layout["title"]), page_path, page_images[page_path]),
                 encoding="utf-8",
@@ -327,7 +333,7 @@ def generate_layout_docs(slug: str, config: dict[str, Any], deckconfig_dir: Path
             page_docs.append(
                 {
                     "title": page_title(page_path),
-                    "href": f'{page_name}/#{page_anchor_id(slug, layout["layout"], page_name)}',
+                    "href": f'{doc_stem}/#{page_anchor_id(slug, layout["layout"], page_name)}',
                     "image": built_page_asset_path(page_images[page_path], layout_doc_dir / "index.md"),
                 }
             )

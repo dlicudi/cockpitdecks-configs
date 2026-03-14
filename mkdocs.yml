@@ -80,6 +80,7 @@ nav:
               - Engine: decks/lancair-evolution/streamdeckxl1/engine.md
               - FCU: decks/lancair-evolution/streamdeckxl1/fcu.md
               - G1000: decks/lancair-evolution/streamdeckxl1/g1000.md
+              - Home: decks/lancair-evolution/streamdeckxl1/home.md
               - PFI: decks/lancair-evolution/streamdeckxl1/pfi.md
               - Radio: decks/lancair-evolution/streamdeckxl1/radio.md
               - Switches: decks/lancair-evolution/streamdeckxl1/switches.md
@@ -89,7 +90,38 @@ nav:
       - ToLiss Airbus A320 NEO: decks/toliss-airbus-A320-neo.md
       - ToLiss Airbus A321 NEO: decks/toliss-airbus-A321-neo.md
       - ToLiss Airbus A330 NEO: decks/toliss-airbus-a330-neo.md
-      - Van's Aircraft RV-10: decks/vans-aircraft-rv-10.md
+      - Van's Aircraft RV-10:
+          - Overview: decks/vans-aircraft-rv-10.md
+          - Loupedeck Live:
+              - Overview: decks/vans-aircraft-rv-10/loupedecklive1/index.md
+              - Audio Panel: decks/vans-aircraft-rv-10/loupedecklive1/audiopanel.md
+              - Engine: decks/vans-aircraft-rv-10/loupedecklive1/engine.md
+              - FCU: decks/vans-aircraft-rv-10/loupedecklive1/fcu.md
+              - G1000: decks/vans-aircraft-rv-10/loupedecklive1/g1000.md
+              - Home: decks/vans-aircraft-rv-10/loupedecklive1/home.md
+              - Pedestal: decks/vans-aircraft-rv-10/loupedecklive1/pedestal.md
+              - PFI: decks/vans-aircraft-rv-10/loupedecklive1/pfi.md
+              - Radio: decks/vans-aircraft-rv-10/loupedecklive1/radio.md
+              - Switches: decks/vans-aircraft-rv-10/loupedecklive1/switches.md
+              - Switches 2: decks/vans-aircraft-rv-10/loupedecklive1/switches2.md
+              - Transponder: decks/vans-aircraft-rv-10/loupedecklive1/transponder.md
+              - Views: decks/vans-aircraft-rv-10/loupedecklive1/views.md
+              - Weather: decks/vans-aircraft-rv-10/loupedecklive1/weather.md
+          - Stream Deck XL:
+              - Overview: decks/vans-aircraft-rv-10/streamdeckxl1/index.md
+              - Audio Panel: decks/vans-aircraft-rv-10/streamdeckxl1/audiopanel.md
+              - Engine: decks/vans-aircraft-rv-10/streamdeckxl1/engine.md
+              - FCU: decks/vans-aircraft-rv-10/streamdeckxl1/fcu.md
+              - G1000: decks/vans-aircraft-rv-10/streamdeckxl1/g1000.md
+              - Home: decks/vans-aircraft-rv-10/streamdeckxl1/home.md
+              - MFD: decks/vans-aircraft-rv-10/streamdeckxl1/mfd.md
+              - PFI: decks/vans-aircraft-rv-10/streamdeckxl1/pfi.md
+              - Radio: decks/vans-aircraft-rv-10/streamdeckxl1/radio.md
+              - Switches: decks/vans-aircraft-rv-10/streamdeckxl1/switches.md
+              - Transponder: decks/vans-aircraft-rv-10/streamdeckxl1/transponder.md
+              - TruTrak Sorcerer: decks/vans-aircraft-rv-10/streamdeckxl1/trutrak_sorcerer.md
+              - Views: decks/vans-aircraft-rv-10/streamdeckxl1/views.md
+              - Weather: decks/vans-aircraft-rv-10/streamdeckxl1/weather.md
   - Reference:
       - Overview: reference/index.md
       - Compatibility: reference/compatibility.md
