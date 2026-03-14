@@ -76,6 +76,10 @@ def doc_filename(slug: str) -> str:
     return DOC_PATH_OVERRIDES.get(slug, f"{slug}.md")
 
 
+def aircraft_index_doc_path(slug: str) -> Path:
+    return DOCS_DECKS_DIR / slug / "index.md"
+
+
 def rel_image_path(path: Path, doc_path: Path) -> str:
     return os.path.relpath(path, doc_path.parent).replace("\\", "/")
 
@@ -135,21 +139,74 @@ def normalize_docs_metadata(meta: dict[str, Any] | None) -> dict[str, Any]:
     return meta
 
 
-def resolve_repo_path(value: str | Path | None) -> Path | None:
+def resolve_repo_path(value: str | Path | None, base_dir: Path | None = None) -> Path | None:
     if value is None:
         return None
     candidate = Path(str(value))
     if candidate.is_absolute():
         return candidate
+    if base_dir is not None:
+        base_candidate = base_dir / candidate
+        if base_candidate.exists():
+            return base_candidate
     return ROOT / candidate
 
 
-def layout_docs_metadata(docs_meta: dict[str, Any], layout_name: str) -> dict[str, Any]:
-    layouts = docs_meta.get("layouts")
-    if not isinstance(layouts, dict):
+def layout_config(layout_dir: Path) -> dict[str, Any]:
+    config_path = layout_dir / "config.yaml"
+    if not config_path.exists():
         return {}
-    meta = layouts.get(layout_name)
-    return meta if isinstance(meta, dict) else {}
+    return load_yaml(config_path)
+
+
+def layout_docs_metadata(layout_dir: Path) -> dict[str, Any]:
+    config = layout_config(layout_dir)
+    docs_meta = config.get("_docs") or config.get("docs")
+    return docs_meta if isinstance(docs_meta, dict) else {}
+
+
+def home_page_name(layout_dir: Path) -> str | None:
+    config = layout_config(layout_dir)
+    candidates = (
+        config.get("home-page"),
+        config.get("default-homepage-name"),
+        config.get("home-page-name"),
+    )
+    for candidate in candidates:
+        text = str(candidate or "").strip()
+        if text:
+            return text
+    return "index"
+
+
+def docs_entry_page_name(layout_dir: Path, page_map: dict[str, Path]) -> str | None:
+    for candidate in ("index", "home"):
+        if candidate in page_map:
+            return candidate
+    configured = str(home_page_name(layout_dir) or "").strip()
+    return configured if configured in page_map else None
+
+
+def referenced_pages(path: Path) -> list[str]:
+    if not path.exists():
+        return []
+    data = load_yaml(path)
+    buttons = data.get("buttons")
+    if not isinstance(buttons, list):
+        return []
+    pages: list[str] = []
+    seen: set[str] = set()
+    for button in buttons:
+        if not isinstance(button, dict):
+            continue
+        if str(button.get("type") or "").strip() != "page":
+            continue
+        page_name = str(button.get("page") or "").strip()
+        if not page_name or page_name in seen:
+            continue
+        pages.append(page_name)
+        seen.add(page_name)
+    return pages
 
 
 def ordered_page_files(layout_dir: Path, layout_meta: dict[str, Any]) -> list[Path]:
@@ -161,24 +218,38 @@ def ordered_page_files(layout_dir: Path, layout_meta: dict[str, Any]) -> list[Pa
     if not page_map:
         return []
 
-    ordered_names = layout_meta.get("pages")
-    if isinstance(ordered_names, list):
-        ordered: list[Path] = []
-        seen: set[str] = set()
-        for entry in ordered_names:
-            name = str(entry).strip()
-            if not name or name in seen or name not in page_map:
-                continue
-            ordered.append(page_map[name])
-            seen.add(name)
-        return ordered
-
     excluded = {
         str(entry).strip()
         for entry in layout_meta.get("exclude_pages", [])
         if str(entry).strip()
     }
-    return [path for name, path in page_map.items() if name not in excluded]
+    ordered_names: list[str] = []
+    seen: set[str] = set()
+
+    def add_name(name: str) -> None:
+        if not name or name in seen or name not in page_map or name in excluded:
+            return
+        ordered_names.append(name)
+        seen.add(name)
+
+    entry_page = docs_entry_page_name(layout_dir, page_map)
+    pager_path = layout_dir / "pager.yaml"
+
+    if not pager_path.exists():
+        add_name(str(entry_page or "").strip())
+
+    for name in referenced_pages(pager_path):
+        add_name(name)
+
+    home_page = str(entry_page or "").strip()
+    if home_page and home_page in page_map:
+        for name in referenced_pages(page_map[home_page]):
+            add_name(name)
+
+    for name in sorted(page_map):
+        add_name(name)
+
+    return [page_map[name] for name in ordered_names]
 
 
 def aircraft_title(slug: str, config: dict[str, Any], docs_meta: dict[str, Any]) -> str:
@@ -223,7 +294,7 @@ def layout_entries(config: dict[str, Any], deckconfig_dir: Path, docs_meta: dict
             if not layout_name:
                 continue
             layout_dir = deckconfig_dir / layout_name
-            layout_meta = layout_docs_metadata(docs_meta, layout_name)
+            layout_meta = layout_docs_metadata(layout_dir)
             page_files = ordered_page_files(layout_dir, layout_meta) if layout_dir.exists() else []
             deck_type = str(entry.get("type") or "").strip()
             decktype_path = decktypes.get(deck_type)
@@ -290,7 +361,7 @@ def render_layout_page_images(slug: str, layout: dict[str, Any]) -> dict[Path, P
             "--output-dir",
             str(temp_image_dir),
         ]
-        fixture = resolve_repo_path(layout["docs"].get("fixture"))
+        fixture = resolve_repo_path(layout["docs"].get("fixture"), base_dir=layout["dir"])
         if fixture is not None:
             render_args.extend(["--fixture", str(fixture)])
         for page_path in layout["pages"]:
@@ -354,7 +425,6 @@ def build_layout_page(aircraft_title: str, title: str, layout: dict[str, Any], p
                     f'    <img src="{page["image"]}" alt="{page["title"]} page preview" />',
                     '    <div class="cdx-card__body">',
                     f'      <h3>{page["title"]}</h3>',
-                    "      <p>Page config and preview.</p>",
                     "    </div>",
                     "  </a>",
                 ]
@@ -796,7 +866,11 @@ def main() -> int:
         docs_meta = load_yaml(deckconfig_dir / "_docs.yaml") if (deckconfig_dir / "_docs.yaml").exists() else {}
         generate_layout_docs(slug, config, deckconfig_dir, docs_meta)
         doc_path = DOCS_DECKS_DIR / doc_filename(slug)
-        doc_path.write_text(build_overview(slug, config, docs_meta, doc_path), encoding="utf-8")
+        overview = build_overview(slug, config, docs_meta, doc_path)
+        doc_path.write_text(overview, encoding="utf-8")
+        index_doc_path = aircraft_index_doc_path(slug)
+        index_doc_path.parent.mkdir(parents=True, exist_ok=True)
+        index_doc_path.write_text(build_overview(slug, config, docs_meta, index_doc_path), encoding="utf-8")
         layouts = layout_entries(config, deckconfig_dir, docs_meta)
 
         aircraft_meta = normalize_docs_metadata(docs_meta.get("aircraft"))
@@ -813,7 +887,7 @@ def main() -> int:
             image_ref = "../assets/images/Loupedeck_live.png"
         aircraft_entries.append(
             {
-                "href": doc_filename(slug).replace(".md", "/"),
+                "href": f"{slug}/",
                 "image": image_ref,
                 "title": title,
                 "summary": summary,

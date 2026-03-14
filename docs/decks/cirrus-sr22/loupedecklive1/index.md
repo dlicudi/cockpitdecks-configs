@@ -27,6 +27,10 @@ Loupedeck Live layout for Cirrus SR22.
     <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/fcu.page.png" alt="FCU page preview" />
     <span>FCU</span>
   </a>
+  <a class="cdx-deck__key" href="radio/#cirrus-sr22-loupedecklive1-radio-preview" data-preview>
+    <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/radio.page.png" alt="Radio page preview" />
+    <span>Radio</span>
+  </a>
   <a class="cdx-deck__key" href="engine/#cirrus-sr22-loupedecklive1-engine-preview" data-preview>
     <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/engine.page.png" alt="Engine page preview" />
     <span>Engine</span>
@@ -34,10 +38,6 @@ Loupedeck Live layout for Cirrus SR22.
   <a class="cdx-deck__key" href="pedestal/#cirrus-sr22-loupedecklive1-pedestal-preview" data-preview>
     <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/pedestal.page.png" alt="Pedestal page preview" />
     <span>Pedestal</span>
-  </a>
-  <a class="cdx-deck__key" href="radio/#cirrus-sr22-loupedecklive1-radio-preview" data-preview>
-    <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/radio.page.png" alt="Radio page preview" />
-    <span>Radio</span>
   </a>
   <a class="cdx-deck__key" href="transponder/#cirrus-sr22-loupedecklive1-transponder-preview" data-preview>
     <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/transponder.page.png" alt="Transponder page preview" />
@@ -47,12 +47,12 @@ Loupedeck Live layout for Cirrus SR22.
     <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/gcu478.page.png" alt="GCU478 page preview" />
     <span>GCU478</span>
   </a>
-  <a class="cdx-deck__key" href="views/#cirrus-sr22-loupedecklive1-views-preview" data-preview>
-    <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/views.page.png" alt="Views page preview" />
-    <span>Views</span>
-  </a>
   <a class="cdx-deck__key" href="weather/#cirrus-sr22-loupedecklive1-weather-preview" data-preview>
     <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/weather.page.png" alt="Weather page preview" />
     <span>Weather</span>
+  </a>
+  <a class="cdx-deck__key" href="views/#cirrus-sr22-loupedecklive1-views-preview" data-preview>
+    <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/views.page.png" alt="Views page preview" />
+    <span>Views</span>
   </a>
 </div>

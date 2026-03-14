@@ -11,151 +11,130 @@ Virtual Streamdeck XL layout for Airbus A330-900 with Trent 7000-72 engines, ver
 ## Pages
 
 <div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="adirs/#toliss-airbus-a330-neo-panels-adirs-preview">
-    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/adirs.page.png" alt="ADIRS Start/stop page preview" />
-    <div class="cdx-card__body">
-      <h3>ADIRS Start/stop</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="aptnav/#toliss-airbus-a330-neo-panels-aptnav-preview">
-    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/aptnav.page.png" alt="Airport Navigator page preview" />
-    <div class="cdx-card__body">
-      <h3>Airport Navigator</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="cockpitdecks/#toliss-airbus-a330-neo-panels-cockpitdecks-preview">
-    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/cockpitdecks.page.png" alt="Cockpitdecks specific actions, not linked to aircraft page preview" />
-    <div class="cdx-card__body">
-      <h3>Cockpitdecks specific actions, not linked to aircraft</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="dashboard/#toliss-airbus-a330-neo-panels-dashboard-preview">
-    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/dashboard.page.png" alt="Cockpitdecks Special Dashboard of A21N page preview" />
-    <div class="cdx-card__body">
-      <h3>Cockpitdecks Special Dashboard of A21N</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="doors/#toliss-airbus-a330-neo-panels-doors-preview">
-    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/doors.page.png" alt="Door operations page preview" />
-    <div class="cdx-card__body">
-      <h3>Door operations</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="ecam/#toliss-airbus-a330-neo-panels-ecam-preview">
-    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/ecam.page.png" alt="ECAM display selector page preview" />
-    <div class="cdx-card__body">
-      <h3>ECAM display selector</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="efis/#toliss-airbus-a330-neo-panels-efis-preview">
-    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/efis.page.png" alt="EFIS display selector + some FCU commands page preview" />
-    <div class="cdx-card__body">
-      <h3>EFIS display selector + some FCU commands</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="index-alt/#toliss-airbus-a330-neo-panels-index-alt-preview">
-    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/index-alt.page.png" alt="Alternate index page page preview" />
-    <div class="cdx-card__body">
-      <h3>Alternate index page</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
   <a class="cdx-card" href="home/#toliss-airbus-a330-neo-panels-index-preview">
     <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/index.page.png" alt="Home page preview" />
     <div class="cdx-card__body">
       <h3>Home</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="intlights/#toliss-airbus-a330-neo-panels-intlights-preview">
-    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/intlights.page.png" alt="Internal lights page preview" />
-    <div class="cdx-card__body">
-      <h3>Internal lights</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="ovrhdaircond/#toliss-airbus-a330-neo-panels-ovrhdaircond-preview">
     <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdaircond.page.png" alt="Overhead AIR COND Panel (ATA 21) page preview" />
     <div class="cdx-card__body">
       <h3>Overhead AIR COND Panel (ATA 21)</h3>
-      <p>Page config and preview.</p>
+    </div>
+  </a>
+  <a class="cdx-card" href="intlights/#toliss-airbus-a330-neo-panels-intlights-preview">
+    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/intlights.page.png" alt="Internal lights page preview" />
+    <div class="cdx-card__body">
+      <h3>Internal lights</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="index-alt/#toliss-airbus-a330-neo-panels-index-alt-preview">
+    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/index-alt.page.png" alt="Alternate index page page preview" />
+    <div class="cdx-card__body">
+      <h3>Alternate index page</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="adirs/#toliss-airbus-a330-neo-panels-adirs-preview">
+    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/adirs.page.png" alt="ADIRS Start/stop page preview" />
+    <div class="cdx-card__body">
+      <h3>ADIRS Start/stop</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="aptnav/#toliss-airbus-a330-neo-panels-aptnav-preview">
+    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/aptnav.page.png" alt="Airport Navigator page preview" />
+    <div class="cdx-card__body">
+      <h3>Airport Navigator</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="cockpitdecks/#toliss-airbus-a330-neo-panels-cockpitdecks-preview">
+    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/cockpitdecks.page.png" alt="Cockpitdecks specific actions, not linked to aircraft page preview" />
+    <div class="cdx-card__body">
+      <h3>Cockpitdecks specific actions, not linked to aircraft</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="dashboard/#toliss-airbus-a330-neo-panels-dashboard-preview">
+    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/dashboard.page.png" alt="Cockpitdecks Special Dashboard of A21N page preview" />
+    <div class="cdx-card__body">
+      <h3>Cockpitdecks Special Dashboard of A21N</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="doors/#toliss-airbus-a330-neo-panels-doors-preview">
+    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/doors.page.png" alt="Door operations page preview" />
+    <div class="cdx-card__body">
+      <h3>Door operations</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="ecam/#toliss-airbus-a330-neo-panels-ecam-preview">
+    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/ecam.page.png" alt="ECAM display selector page preview" />
+    <div class="cdx-card__body">
+      <h3>ECAM display selector</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="efis/#toliss-airbus-a330-neo-panels-efis-preview">
+    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/efis.page.png" alt="EFIS display selector + some FCU commands page preview" />
+    <div class="cdx-card__body">
+      <h3>EFIS display selector + some FCU commands</h3>
     </div>
   </a>
   <a class="cdx-card" href="ovrhdelec/#toliss-airbus-a330-neo-panels-ovrhdelec-preview">
     <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdelec.page.png" alt="Electric panel (ATA 24) page preview" />
     <div class="cdx-card__body">
       <h3>Electric panel (ATA 24)</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="ovrhdfire/#toliss-airbus-a330-neo-panels-ovrhdfire-preview">
     <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdfire.page.png" alt="Fire panels (ATA 26) page preview" />
     <div class="cdx-card__body">
       <h3>Fire panels (ATA 26)</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="ovrhdfuel/#toliss-airbus-a330-neo-panels-ovrhdfuel-preview">
     <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdfuel.page.png" alt="Fuel panel (ATA 28) page preview" />
     <div class="cdx-card__body">
       <h3>Fuel panel (ATA 28)</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="ovrhdhyd/#toliss-airbus-a330-neo-panels-ovrhdhyd-preview">
     <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdhyd.page.png" alt="Hydraulics (ATA 29) page preview" />
     <div class="cdx-card__body">
       <h3>Hydraulics (ATA 29)</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="piedestal/#toliss-airbus-a330-neo-panels-piedestal-preview">
     <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/piedestal.page.png" alt="Pedestal page preview" />
     <div class="cdx-card__body">
       <h3>Pedestal</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="popups/#toliss-airbus-a330-neo-panels-popups-preview">
     <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/popups.page.png" alt="All popups on pos. 16 to 28 page preview" />
     <div class="cdx-card__body">
       <h3>All popups on pos. 16 to 28</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="radio/#toliss-airbus-a330-neo-panels-radio-preview">
     <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/radio.page.png" alt="Radio panel page preview" />
     <div class="cdx-card__body">
       <h3>Radio panel</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="toliss/#toliss-airbus-a330-neo-panels-toliss-preview">
     <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/toliss.page.png" alt="ToLiss aircraft specific actions, not available in real aircraft... page preview" />
     <div class="cdx-card__body">
       <h3>ToLiss aircraft specific actions, not available in real aircraft...</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="xplane/#toliss-airbus-a330-neo-panels-xplane-preview">
     <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/xplane.page.png" alt="X-Plane specific actions, not linked to aircraft page preview" />
     <div class="cdx-card__body">
       <h3>X-Plane specific actions, not linked to aircraft</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="xpndr/#toliss-airbus-a330-neo-panels-xpndr-preview">
     <img src="../../../assets/images/toliss-airbus-a330-neo/generated/panels/xpndr.page.png" alt="Transponder panel page preview" />
     <div class="cdx-card__body">
       <h3>Transponder panel</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
 </div>

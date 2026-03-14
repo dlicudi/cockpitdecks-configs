@@ -47,14 +47,14 @@ Browse the available config-driven deck docs.
       <p>Decks for Lancair Evolution</p>
     </div>
   </a>
-  <a class="cdx-card" href="toliss-airbus-A320-neo/">
+  <a class="cdx-card" href="toliss-airbus-a320-neo/">
     <img src="../assets/images/Loupedeck_live.png" alt="Toliss Airbus A320neo" />
     <div class="cdx-card__body">
       <h3>Toliss Airbus A320neo</h3>
       <p>Decks for Toliss Airbus A320neo</p>
     </div>
   </a>
-  <a class="cdx-card" href="toliss-airbus-A321-neo/">
+  <a class="cdx-card" href="toliss-airbus-a321-neo/">
     <img src="../assets/images/Loupedeck_live.png" alt="Airbus A321-253NY (CFM LEAP-1A33)" />
     <div class="cdx-card__body">
       <h3>Airbus A321-253NY (CFM LEAP-1A33)</h3>

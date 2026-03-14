@@ -11,95 +11,82 @@ Loupedeck Live layout for Van's Aircraft RV-10.
 ## Pages
 
 <div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="audiopanel/#vans-aircraft-rv-10-loupedecklive1-audiopanel-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/audiopanel.page.png" alt="Audio Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Audio Panel</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="engine/#vans-aircraft-rv-10-loupedecklive1-engine-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/engine.page.png" alt="Engine page preview" />
-    <div class="cdx-card__body">
-      <h3>Engine</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="fcu/#vans-aircraft-rv-10-loupedecklive1-fcu-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/fcu.page.png" alt="FCU page preview" />
-    <div class="cdx-card__body">
-      <h3>FCU</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="g1000/#vans-aircraft-rv-10-loupedecklive1-g1000-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/g1000.page.png" alt="G1000 page preview" />
-    <div class="cdx-card__body">
-      <h3>G1000</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
   <a class="cdx-card" href="home/#vans-aircraft-rv-10-loupedecklive1-index-preview">
     <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/index.page.png" alt="Home page preview" />
     <div class="cdx-card__body">
       <h3>Home</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="pedestal/#vans-aircraft-rv-10-loupedecklive1-pedestal-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/pedestal.page.png" alt="Pedestal page preview" />
-    <div class="cdx-card__body">
-      <h3>Pedestal</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="pfi/#vans-aircraft-rv-10-loupedecklive1-pfi-preview">
     <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/pfi.page.png" alt="PFI page preview" />
     <div class="cdx-card__body">
       <h3>PFI</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="radio/#vans-aircraft-rv-10-loupedecklive1-radio-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/radio.page.png" alt="Radio page preview" />
-    <div class="cdx-card__body">
-      <h3>Radio</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="switches/#vans-aircraft-rv-10-loupedecklive1-switches-preview">
     <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/switches.page.png" alt="Switches page preview" />
     <div class="cdx-card__body">
       <h3>Switches</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
-  <a class="cdx-card" href="switches2/#vans-aircraft-rv-10-loupedecklive1-switches2-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/switches2.page.png" alt="Switches 2 page preview" />
+  <a class="cdx-card" href="fcu/#vans-aircraft-rv-10-loupedecklive1-fcu-preview">
+    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/fcu.page.png" alt="FCU page preview" />
     <div class="cdx-card__body">
-      <h3>Switches 2</h3>
-      <p>Page config and preview.</p>
+      <h3>FCU</h3>
     </div>
   </a>
-  <a class="cdx-card" href="transponder/#vans-aircraft-rv-10-loupedecklive1-transponder-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/transponder.page.png" alt="Transponder page preview" />
+  <a class="cdx-card" href="radio/#vans-aircraft-rv-10-loupedecklive1-radio-preview">
+    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/radio.page.png" alt="Radio page preview" />
     <div class="cdx-card__body">
-      <h3>Transponder</h3>
-      <p>Page config and preview.</p>
+      <h3>Radio</h3>
     </div>
   </a>
-  <a class="cdx-card" href="views/#vans-aircraft-rv-10-loupedecklive1-views-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/views.page.png" alt="Views page preview" />
+  <a class="cdx-card" href="engine/#vans-aircraft-rv-10-loupedecklive1-engine-preview">
+    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/engine.page.png" alt="Engine page preview" />
     <div class="cdx-card__body">
-      <h3>Views</h3>
-      <p>Page config and preview.</p>
+      <h3>Engine</h3>
     </div>
   </a>
   <a class="cdx-card" href="weather/#vans-aircraft-rv-10-loupedecklive1-weather-preview">
     <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/weather.page.png" alt="Weather page preview" />
     <div class="cdx-card__body">
       <h3>Weather</h3>
-      <p>Page config and preview.</p>
+    </div>
+  </a>
+  <a class="cdx-card" href="transponder/#vans-aircraft-rv-10-loupedecklive1-transponder-preview">
+    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/transponder.page.png" alt="Transponder page preview" />
+    <div class="cdx-card__body">
+      <h3>Transponder</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="switches2/#vans-aircraft-rv-10-loupedecklive1-switches2-preview">
+    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/switches2.page.png" alt="Switches 2 page preview" />
+    <div class="cdx-card__body">
+      <h3>Switches 2</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="audiopanel/#vans-aircraft-rv-10-loupedecklive1-audiopanel-preview">
+    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/audiopanel.page.png" alt="Audio Panel page preview" />
+    <div class="cdx-card__body">
+      <h3>Audio Panel</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="g1000/#vans-aircraft-rv-10-loupedecklive1-g1000-preview">
+    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/g1000.page.png" alt="G1000 page preview" />
+    <div class="cdx-card__body">
+      <h3>G1000</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="pedestal/#vans-aircraft-rv-10-loupedecklive1-pedestal-preview">
+    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/pedestal.page.png" alt="Pedestal page preview" />
+    <div class="cdx-card__body">
+      <h3>Pedestal</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="views/#vans-aircraft-rv-10-loupedecklive1-views-preview">
+    <img src="../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/views.page.png" alt="Views page preview" />
+    <div class="cdx-card__body">
+      <h3>Views</h3>
     </div>
   </a>
 </div>

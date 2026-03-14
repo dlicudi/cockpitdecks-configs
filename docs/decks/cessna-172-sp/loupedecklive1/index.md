@@ -11,74 +11,64 @@ Loupedeck Live layout for Cessna 172 SP.
 ## Pages
 
 <div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="engine/#cessna-172-sp-loupedecklive1-engine-preview">
-    <img src="../../../assets/images/cessna-172-sp/generated/loupedecklive1/engine.page.png" alt="Engine page preview" />
-    <div class="cdx-card__body">
-      <h3>Engine</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="fcu/#cessna-172-sp-loupedecklive1-fcu-preview">
-    <img src="../../../assets/images/cessna-172-sp/generated/loupedecklive1/fcu.page.png" alt="FCU page preview" />
-    <div class="cdx-card__body">
-      <h3>FCU</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="g1000/#cessna-172-sp-loupedecklive1-g1000-preview">
-    <img src="../../../assets/images/cessna-172-sp/generated/loupedecklive1/g1000.page.png" alt="G1000 page preview" />
-    <div class="cdx-card__body">
-      <h3>G1000</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
   <a class="cdx-card" href="home/#cessna-172-sp-loupedecklive1-index-preview">
     <img src="../../../assets/images/cessna-172-sp/generated/loupedecklive1/index.page.png" alt="Home page preview" />
     <div class="cdx-card__body">
       <h3>Home</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="pedestal/#cessna-172-sp-loupedecklive1-pedestal-preview">
-    <img src="../../../assets/images/cessna-172-sp/generated/loupedecklive1/pedestal.page.png" alt="Pedestal page preview" />
-    <div class="cdx-card__body">
-      <h3>Pedestal</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="pfi/#cessna-172-sp-loupedecklive1-pfi-preview">
     <img src="../../../assets/images/cessna-172-sp/generated/loupedecklive1/pfi.page.png" alt="PFI page preview" />
     <div class="cdx-card__body">
       <h3>PFI</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="radio/#cessna-172-sp-loupedecklive1-radio-preview">
-    <img src="../../../assets/images/cessna-172-sp/generated/loupedecklive1/radio.page.png" alt="Radio page preview" />
-    <div class="cdx-card__body">
-      <h3>Radio</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="switches/#cessna-172-sp-loupedecklive1-switches-preview">
     <img src="../../../assets/images/cessna-172-sp/generated/loupedecklive1/switches.page.png" alt="Switches page preview" />
     <div class="cdx-card__body">
       <h3>Switches</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
-  <a class="cdx-card" href="transponder/#cessna-172-sp-loupedecklive1-transponder-preview">
-    <img src="../../../assets/images/cessna-172-sp/generated/loupedecklive1/transponder.page.png" alt="Transponder page preview" />
+  <a class="cdx-card" href="fcu/#cessna-172-sp-loupedecklive1-fcu-preview">
+    <img src="../../../assets/images/cessna-172-sp/generated/loupedecklive1/fcu.page.png" alt="FCU page preview" />
     <div class="cdx-card__body">
-      <h3>Transponder</h3>
-      <p>Page config and preview.</p>
+      <h3>FCU</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="radio/#cessna-172-sp-loupedecklive1-radio-preview">
+    <img src="../../../assets/images/cessna-172-sp/generated/loupedecklive1/radio.page.png" alt="Radio page preview" />
+    <div class="cdx-card__body">
+      <h3>Radio</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="engine/#cessna-172-sp-loupedecklive1-engine-preview">
+    <img src="../../../assets/images/cessna-172-sp/generated/loupedecklive1/engine.page.png" alt="Engine page preview" />
+    <div class="cdx-card__body">
+      <h3>Engine</h3>
     </div>
   </a>
   <a class="cdx-card" href="weather/#cessna-172-sp-loupedecklive1-weather-preview">
     <img src="../../../assets/images/cessna-172-sp/generated/loupedecklive1/weather.page.png" alt="Weather page preview" />
     <div class="cdx-card__body">
       <h3>Weather</h3>
-      <p>Page config and preview.</p>
+    </div>
+  </a>
+  <a class="cdx-card" href="transponder/#cessna-172-sp-loupedecklive1-transponder-preview">
+    <img src="../../../assets/images/cessna-172-sp/generated/loupedecklive1/transponder.page.png" alt="Transponder page preview" />
+    <div class="cdx-card__body">
+      <h3>Transponder</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="g1000/#cessna-172-sp-loupedecklive1-g1000-preview">
+    <img src="../../../assets/images/cessna-172-sp/generated/loupedecklive1/g1000.page.png" alt="G1000 page preview" />
+    <div class="cdx-card__body">
+      <h3>G1000</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="pedestal/#cessna-172-sp-loupedecklive1-pedestal-preview">
+    <img src="../../../assets/images/cessna-172-sp/generated/loupedecklive1/pedestal.page.png" alt="Pedestal page preview" />
+    <div class="cdx-card__body">
+      <h3>Pedestal</h3>
     </div>
   </a>
 </div>

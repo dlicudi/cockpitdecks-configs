@@ -11,102 +11,88 @@ Stream Deck XL layout for E170, E175, E190, E195.
 ## Pages
 
 <div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="audiopanel/#embraer-e-jets-family-streamdeckxl1-audiopanel-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/audiopanel.page.png" alt="Audio Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Audio Panel</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="engine/#embraer-e-jets-family-streamdeckxl1-engine-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/engine.page.png" alt="Engine page preview" />
-    <div class="cdx-card__body">
-      <h3>Engine</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="fcu/#embraer-e-jets-family-streamdeckxl1-fcu-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/fcu.page.png" alt="FCU page preview" />
-    <div class="cdx-card__body">
-      <h3>FCU</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="g1000/#embraer-e-jets-family-streamdeckxl1-g1000-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/g1000.page.png" alt="G1000 page preview" />
-    <div class="cdx-card__body">
-      <h3>G1000</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
   <a class="cdx-card" href="home/#embraer-e-jets-family-streamdeckxl1-index-preview">
     <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/index.page.png" alt="Home page preview" />
     <div class="cdx-card__body">
       <h3>Home</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="mfd/#embraer-e-jets-family-streamdeckxl1-mfd-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/mfd.page.png" alt="Mfd page preview" />
-    <div class="cdx-card__body">
-      <h3>Mfd</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="pfi/#embraer-e-jets-family-streamdeckxl1-pfi-preview">
     <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/pfi.page.png" alt="PFI page preview" />
     <div class="cdx-card__body">
       <h3>PFI</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
-  <a class="cdx-card" href="radio/#embraer-e-jets-family-streamdeckxl1-radio-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/radio.page.png" alt="Radio page preview" />
+  <a class="cdx-card" href="mfd/#embraer-e-jets-family-streamdeckxl1-mfd-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/mfd.page.png" alt="Mfd page preview" />
     <div class="cdx-card__body">
-      <h3>Radio</h3>
-      <p>Page config and preview.</p>
+      <h3>Mfd</h3>
     </div>
   </a>
   <a class="cdx-card" href="switches/#embraer-e-jets-family-streamdeckxl1-switches-preview">
     <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches.page.png" alt="Switches page preview" />
     <div class="cdx-card__body">
       <h3>Switches</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
-  <a class="cdx-card" href="switches2/#embraer-e-jets-family-streamdeckxl1-switches2-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches2.page.png" alt="Switches 2 page preview" />
+  <a class="cdx-card" href="audiopanel/#embraer-e-jets-family-streamdeckxl1-audiopanel-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/audiopanel.page.png" alt="Audio Panel page preview" />
     <div class="cdx-card__body">
-      <h3>Switches 2</h3>
-      <p>Page config and preview.</p>
+      <h3>Audio Panel</h3>
     </div>
   </a>
-  <a class="cdx-card" href="switches3/#embraer-e-jets-family-streamdeckxl1-switches3-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches3.page.png" alt="Switches3 page preview" />
+  <a class="cdx-card" href="fcu/#embraer-e-jets-family-streamdeckxl1-fcu-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/fcu.page.png" alt="FCU page preview" />
     <div class="cdx-card__body">
-      <h3>Switches3</h3>
-      <p>Page config and preview.</p>
+      <h3>FCU</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="g1000/#embraer-e-jets-family-streamdeckxl1-g1000-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/g1000.page.png" alt="G1000 page preview" />
+    <div class="cdx-card__body">
+      <h3>G1000</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="radio/#embraer-e-jets-family-streamdeckxl1-radio-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/radio.page.png" alt="Radio page preview" />
+    <div class="cdx-card__body">
+      <h3>Radio</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="engine/#embraer-e-jets-family-streamdeckxl1-engine-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/engine.page.png" alt="Engine page preview" />
+    <div class="cdx-card__body">
+      <h3>Engine</h3>
     </div>
   </a>
   <a class="cdx-card" href="transponder/#embraer-e-jets-family-streamdeckxl1-transponder-preview">
     <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/transponder.page.png" alt="Transponder page preview" />
     <div class="cdx-card__body">
       <h3>Transponder</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="views/#embraer-e-jets-family-streamdeckxl1-views-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/views.page.png" alt="Views page preview" />
-    <div class="cdx-card__body">
-      <h3>Views</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="weather/#embraer-e-jets-family-streamdeckxl1-weather-preview">
     <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/weather.page.png" alt="Weather page preview" />
     <div class="cdx-card__body">
       <h3>Weather</h3>
-      <p>Page config and preview.</p>
+    </div>
+  </a>
+  <a class="cdx-card" href="views/#embraer-e-jets-family-streamdeckxl1-views-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/views.page.png" alt="Views page preview" />
+    <div class="cdx-card__body">
+      <h3>Views</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="switches2/#embraer-e-jets-family-streamdeckxl1-switches2-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches2.page.png" alt="Switches 2 page preview" />
+    <div class="cdx-card__body">
+      <h3>Switches 2</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="switches3/#embraer-e-jets-family-streamdeckxl1-switches3-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches3.page.png" alt="Switches3 page preview" />
+    <div class="cdx-card__body">
+      <h3>Switches3</h3>
     </div>
   </a>
 </div>

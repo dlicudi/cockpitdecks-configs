@@ -11,200 +11,172 @@ Loupedeck Live layout for E170, E175, E190, E195.
 ## Pages
 
 <div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="audiopanel/#embraer-e-jets-family-loupedecklive1-audiopanel-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/audiopanel.page.png" alt="Audio Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Audio Panel</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="engine/#embraer-e-jets-family-loupedecklive1-engine-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/engine.page.png" alt="Engine page preview" />
-    <div class="cdx-card__body">
-      <h3>Engine</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="fcu/#embraer-e-jets-family-loupedecklive1-fcu-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/fcu.page.png" alt="FCU page preview" />
-    <div class="cdx-card__body">
-      <h3>FCU</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="fcu2/#embraer-e-jets-family-loupedecklive1-fcu2-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/fcu2.page.png" alt="FCU page preview" />
-    <div class="cdx-card__body">
-      <h3>FCU</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="g1000/#embraer-e-jets-family-loupedecklive1-g1000-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/g1000.page.png" alt="G1000 page preview" />
-    <div class="cdx-card__body">
-      <h3>G1000</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="ground_services/#embraer-e-jets-family-loupedecklive1-ground_services-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/ground_services.page.png" alt="Ground Services page preview" />
-    <div class="cdx-card__body">
-      <h3>Ground Services</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
   <a class="cdx-card" href="home/#embraer-e-jets-family-loupedecklive1-index-preview">
     <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/index.page.png" alt="Home page preview" />
     <div class="cdx-card__body">
       <h3>Home</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="overhead_apu_control/#embraer-e-jets-family-loupedecklive1-overhead_apu_control-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_apu_control.page.png" alt="Switch Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Switch Panel</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="overhead_cockpit_lights/#embraer-e-jets-family-loupedecklive1-overhead_cockpit_lights-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_cockpit_lights.page.png" alt="Switch Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Switch Panel</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="overhead_electric/#embraer-e-jets-family-loupedecklive1-overhead_electric-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_electric.page.png" alt="Switch Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Switch Panel</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="overhead_external_lights/#embraer-e-jets-family-loupedecklive1-overhead_external_lights-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_external_lights.page.png" alt="Switch Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Switch Panel</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="overhead_fire_extinguisher/#embraer-e-jets-family-loupedecklive1-overhead_fire_extinguisher-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_fire_extinguisher.page.png" alt="Switch Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Switch Panel</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="overhead_fuel/#embraer-e-jets-family-loupedecklive1-overhead_fuel-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_fuel.page.png" alt="Switch Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Switch Panel</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="overhead_hydraulic/#embraer-e-jets-family-loupedecklive1-overhead_hydraulic-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_hydraulic.page.png" alt="Switch Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Switch Panel</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="overhead_ice_protection/#embraer-e-jets-family-loupedecklive1-overhead_ice_protection-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_ice_protection.page.png" alt="Switch Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Switch Panel</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="overhead_passenger_signs/#embraer-e-jets-family-loupedecklive1-overhead_passenger_signs-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_passenger_signs.page.png" alt="Switch Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Switch Panel</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="overhead_pneumatic/#embraer-e-jets-family-loupedecklive1-overhead_pneumatic-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_pneumatic.page.png" alt="Switch Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Switch Panel</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="overhead_pressurization/#embraer-e-jets-family-loupedecklive1-overhead_pressurization-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_pressurization.page.png" alt="Switch Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Switch Panel</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="overhead_windshield_wiper/#embraer-e-jets-family-loupedecklive1-overhead_windshield_wiper-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_windshield_wiper.page.png" alt="Switch Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Switch Panel</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="pedestal/#embraer-e-jets-family-loupedecklive1-pedestal-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pedestal.page.png" alt="Pedestal page preview" />
-    <div class="cdx-card__body">
-      <h3>Pedestal</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="pedestal_powerplant/#embraer-e-jets-family-loupedecklive1-pedestal_powerplant-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pedestal_powerplant.page.png" alt="POWERPLANT page preview" />
-    <div class="cdx-card__body">
-      <h3>POWERPLANT</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="pfi/#embraer-e-jets-family-loupedecklive1-pfi-preview">
     <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pfi.page.png" alt="PFI page preview" />
     <div class="cdx-card__body">
       <h3>PFI</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="radio/#embraer-e-jets-family-loupedecklive1-radio-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/radio.page.png" alt="Radio page preview" />
-    <div class="cdx-card__body">
-      <h3>Radio</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="switches/#embraer-e-jets-family-loupedecklive1-switches-preview">
     <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/switches.page.png" alt="Switches page preview" />
     <div class="cdx-card__body">
       <h3>Switches</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
-  <a class="cdx-card" href="switches2/#embraer-e-jets-family-loupedecklive1-switches2-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/switches2.page.png" alt="Switches 2 page preview" />
+  <a class="cdx-card" href="fcu/#embraer-e-jets-family-loupedecklive1-fcu-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/fcu.page.png" alt="FCU page preview" />
     <div class="cdx-card__body">
-      <h3>Switches 2</h3>
-      <p>Page config and preview.</p>
+      <h3>FCU</h3>
     </div>
   </a>
-  <a class="cdx-card" href="transponder/#embraer-e-jets-family-loupedecklive1-transponder-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/transponder.page.png" alt="Transponder page preview" />
+  <a class="cdx-card" href="radio/#embraer-e-jets-family-loupedecklive1-radio-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/radio.page.png" alt="Radio page preview" />
     <div class="cdx-card__body">
-      <h3>Transponder</h3>
-      <p>Page config and preview.</p>
+      <h3>Radio</h3>
     </div>
   </a>
-  <a class="cdx-card" href="views/#embraer-e-jets-family-loupedecklive1-views-preview">
-    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/views.page.png" alt="Views page preview" />
+  <a class="cdx-card" href="engine/#embraer-e-jets-family-loupedecklive1-engine-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/engine.page.png" alt="Engine page preview" />
     <div class="cdx-card__body">
-      <h3>Views</h3>
-      <p>Page config and preview.</p>
+      <h3>Engine</h3>
     </div>
   </a>
   <a class="cdx-card" href="weather/#embraer-e-jets-family-loupedecklive1-weather-preview">
     <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/weather.page.png" alt="Weather page preview" />
     <div class="cdx-card__body">
       <h3>Weather</h3>
-      <p>Page config and preview.</p>
+    </div>
+  </a>
+  <a class="cdx-card" href="transponder/#embraer-e-jets-family-loupedecklive1-transponder-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/transponder.page.png" alt="Transponder page preview" />
+    <div class="cdx-card__body">
+      <h3>Transponder</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="ground_services/#embraer-e-jets-family-loupedecklive1-ground_services-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/ground_services.page.png" alt="Ground Services page preview" />
+    <div class="cdx-card__body">
+      <h3>Ground Services</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="audiopanel/#embraer-e-jets-family-loupedecklive1-audiopanel-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/audiopanel.page.png" alt="Audio Panel page preview" />
+    <div class="cdx-card__body">
+      <h3>Audio Panel</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="g1000/#embraer-e-jets-family-loupedecklive1-g1000-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/g1000.page.png" alt="G1000 page preview" />
+    <div class="cdx-card__body">
+      <h3>G1000</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="pedestal/#embraer-e-jets-family-loupedecklive1-pedestal-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pedestal.page.png" alt="Pedestal page preview" />
+    <div class="cdx-card__body">
+      <h3>Pedestal</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="views/#embraer-e-jets-family-loupedecklive1-views-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/views.page.png" alt="Views page preview" />
+    <div class="cdx-card__body">
+      <h3>Views</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="fcu2/#embraer-e-jets-family-loupedecklive1-fcu2-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/fcu2.page.png" alt="FCU page preview" />
+    <div class="cdx-card__body">
+      <h3>FCU</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="overhead_apu_control/#embraer-e-jets-family-loupedecklive1-overhead_apu_control-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_apu_control.page.png" alt="Switch Panel page preview" />
+    <div class="cdx-card__body">
+      <h3>Switch Panel</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="overhead_cockpit_lights/#embraer-e-jets-family-loupedecklive1-overhead_cockpit_lights-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_cockpit_lights.page.png" alt="Switch Panel page preview" />
+    <div class="cdx-card__body">
+      <h3>Switch Panel</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="overhead_electric/#embraer-e-jets-family-loupedecklive1-overhead_electric-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_electric.page.png" alt="Switch Panel page preview" />
+    <div class="cdx-card__body">
+      <h3>Switch Panel</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="overhead_external_lights/#embraer-e-jets-family-loupedecklive1-overhead_external_lights-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_external_lights.page.png" alt="Switch Panel page preview" />
+    <div class="cdx-card__body">
+      <h3>Switch Panel</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="overhead_fire_extinguisher/#embraer-e-jets-family-loupedecklive1-overhead_fire_extinguisher-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_fire_extinguisher.page.png" alt="Switch Panel page preview" />
+    <div class="cdx-card__body">
+      <h3>Switch Panel</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="overhead_fuel/#embraer-e-jets-family-loupedecklive1-overhead_fuel-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_fuel.page.png" alt="Switch Panel page preview" />
+    <div class="cdx-card__body">
+      <h3>Switch Panel</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="overhead_hydraulic/#embraer-e-jets-family-loupedecklive1-overhead_hydraulic-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_hydraulic.page.png" alt="Switch Panel page preview" />
+    <div class="cdx-card__body">
+      <h3>Switch Panel</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="overhead_ice_protection/#embraer-e-jets-family-loupedecklive1-overhead_ice_protection-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_ice_protection.page.png" alt="Switch Panel page preview" />
+    <div class="cdx-card__body">
+      <h3>Switch Panel</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="overhead_passenger_signs/#embraer-e-jets-family-loupedecklive1-overhead_passenger_signs-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_passenger_signs.page.png" alt="Switch Panel page preview" />
+    <div class="cdx-card__body">
+      <h3>Switch Panel</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="overhead_pneumatic/#embraer-e-jets-family-loupedecklive1-overhead_pneumatic-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_pneumatic.page.png" alt="Switch Panel page preview" />
+    <div class="cdx-card__body">
+      <h3>Switch Panel</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="overhead_pressurization/#embraer-e-jets-family-loupedecklive1-overhead_pressurization-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_pressurization.page.png" alt="Switch Panel page preview" />
+    <div class="cdx-card__body">
+      <h3>Switch Panel</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="overhead_windshield_wiper/#embraer-e-jets-family-loupedecklive1-overhead_windshield_wiper-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_windshield_wiper.page.png" alt="Switch Panel page preview" />
+    <div class="cdx-card__body">
+      <h3>Switch Panel</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="pedestal_powerplant/#embraer-e-jets-family-loupedecklive1-pedestal_powerplant-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pedestal_powerplant.page.png" alt="POWERPLANT page preview" />
+    <div class="cdx-card__body">
+      <h3>POWERPLANT</h3>
+    </div>
+  </a>
+  <a class="cdx-card" href="switches2/#embraer-e-jets-family-loupedecklive1-switches2-preview">
+    <img src="../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/switches2.page.png" alt="Switches 2 page preview" />
+    <div class="cdx-card__body">
+      <h3>Switches 2</h3>
     </div>
   </a>
 </div>

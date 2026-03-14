@@ -11,46 +11,40 @@ Loupedeck Live layout for Airbus A321-253NY (CFM LEAP-1A33).
 ## Pages
 
 <div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="fcu/#toliss-airbus-a321-neo-fcu-fcu-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/fcu/fcu.page.png" alt="FCU page preview" />
-    <div class="cdx-card__body">
-      <h3>FCU</h3>
-      <p>Page config and preview.</p>
-    </div>
-  </a>
   <a class="cdx-card" href="home/#toliss-airbus-a321-neo-fcu-index-preview">
     <img src="../../../assets/images/toliss-airbus-a321-neo/generated/fcu/index.page.png" alt="Home page preview" />
     <div class="cdx-card__body">
       <h3>Home</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
-  <a class="cdx-card" href="popups/#toliss-airbus-a321-neo-fcu-popups-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/fcu/popups.page.png" alt="Include with all display popups for Loupedeck Live page preview" />
+  <a class="cdx-card" href="fcu/#toliss-airbus-a321-neo-fcu-fcu-preview">
+    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/fcu/fcu.page.png" alt="FCU page preview" />
     <div class="cdx-card__body">
-      <h3>Include with all display popups for Loupedeck Live</h3>
-      <p>Page config and preview.</p>
+      <h3>FCU</h3>
     </div>
   </a>
   <a class="cdx-card" href="toliss/#toliss-airbus-a321-neo-fcu-toliss-preview">
     <img src="../../../assets/images/toliss-airbus-a321-neo/generated/fcu/toliss.page.png" alt="Transponder and other communication for Loupedeck Live page preview" />
     <div class="cdx-card__body">
       <h3>Transponder and other communication for Loupedeck Live</h3>
-      <p>Page config and preview.</p>
+    </div>
+  </a>
+  <a class="cdx-card" href="popups/#toliss-airbus-a321-neo-fcu-popups-preview">
+    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/fcu/popups.page.png" alt="Include with all display popups for Loupedeck Live page preview" />
+    <div class="cdx-card__body">
+      <h3>Include with all display popups for Loupedeck Live</h3>
     </div>
   </a>
   <a class="cdx-card" href="views/#toliss-airbus-a321-neo-fcu-views-preview">
     <img src="../../../assets/images/toliss-airbus-a321-neo/generated/fcu/views.page.png" alt="Include with all views for Loupedeck Live page preview" />
     <div class="cdx-card__body">
       <h3>Include with all views for Loupedeck Live</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
   <a class="cdx-card" href="xpndr/#toliss-airbus-a321-neo-fcu-xpndr-preview">
     <img src="../../../assets/images/toliss-airbus-a321-neo/generated/fcu/xpndr.page.png" alt="Transponder and other communication for Loupedeck Live page preview" />
     <div class="cdx-card__body">
       <h3>Transponder and other communication for Loupedeck Live</h3>
-      <p>Page config and preview.</p>
     </div>
   </a>
 </div>

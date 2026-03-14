@@ -15,20 +15,3 @@ aircraft:
 tracking:
   state: stable
   runtime_tested: true
-layouts:
-  loupedecklive1:
-    preview: generated
-    fixture: scripts/fixtures/cirrus-sr22-cruise.yaml
-    style: deck-map
-    pages:
-      - index
-      - pfi
-      - switches
-      - fcu
-      - engine
-      - pedestal
-      - radio
-      - transponder
-      - gcu478
-      - views
-      - weather

@@ -1,7 +1,2 @@
 tracking:
   state: active
-layouts:
-  loupedecklive1:
-    preview: generated
-  streamdeckxl1:
-    preview: generated
