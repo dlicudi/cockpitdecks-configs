@@ -40,7 +40,7 @@ def build_markdown(renderer: PreviewRenderer, page_name: str, image_path: str, l
         "",
         "## Source",
         "",
-        f'[:material-github: Page config]({repo_blob_url(page_path)})',
+        f'[:material-github: `{page_path.parent.name}/{page_path.name}`]({repo_blob_url(page_path)})',
     ]
 
     if includes:

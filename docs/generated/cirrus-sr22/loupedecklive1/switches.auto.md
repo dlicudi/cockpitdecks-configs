@@ -4,6 +4,6 @@
 
 ## Source
 
-[:material-github: Page config](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/switches.yaml)
+[:material-github: `loupedecklive1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/switches.yaml)
 
 Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)

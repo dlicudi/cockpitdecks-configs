@@ -12,6 +12,6 @@ title: Loupedeck Live PFI
 
 ## Source
 
-[:material-github: Page config](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pfi.yaml)
+[:material-github: `loupedecklive1/pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pfi.yaml)
 
 Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)

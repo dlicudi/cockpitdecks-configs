@@ -276,7 +276,7 @@ def build_page_doc(slug: str, layout_name: str, layout_title: str, page_path: Pa
         "",
         "## Source",
         "",
-        f'[:material-github: Page config]({repo_blob_url(page_path)})',
+        f'[:material-github: `{page_path.parent.name}/{page_path.name}`]({repo_blob_url(page_path)})',
     ]
 
     if includes:
