@@ -38,6 +38,7 @@ nav:
       - Development: getting-started/development.md
   - Decks:
       - Overview: decks/index.md
+      - Status: decks/status.md
       - Aerobask Robin DR401:
           - Overview: decks/aerobask-robin-dr401.md
           - Loupedeck Live:

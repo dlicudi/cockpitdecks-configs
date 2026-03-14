@@ -1,3 +1,9 @@
+tracking:
+  state: active
+  runtime_tested: true
+  hardware_verified: true
+  planned:
+    - "Stream Deck XL: complete page parity with the Loupedeck Live layout."
 layouts:
   loupedecklive1:
     preview: generated

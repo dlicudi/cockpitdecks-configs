@@ -1,3 +1,5 @@
+tracking:
+  state: active
 layouts:
   loupedecklive1:
     preview: generated

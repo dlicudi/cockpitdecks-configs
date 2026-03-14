@@ -12,6 +12,9 @@ aircraft:
     - X-Plane 12
   hero_image: ../../assets/images/cirrus-sr22/cirrus-sr22.png
   hero_alt: Cirrus SR22 deck overview
+tracking:
+  state: stable
+  runtime_tested: true
 layouts:
   loupedecklive1:
     preview: generated

@@ -308,6 +308,16 @@
   word-break: normal;
 }
 
+.cdx-truncate {
+  display: inline-block;
+  max-width: 18rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+  white-space: nowrap;
+  word-break: normal;
+}
+
 @media screen and (max-width: 76.2344em) {
   .cdx-hero,
   .cdx-grid--three,

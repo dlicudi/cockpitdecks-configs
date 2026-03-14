@@ -7,7 +7,9 @@ import subprocess
 from pathlib import Path
 from typing import Any
 import os
+import re
 import tempfile
+from html import escape
 
 import yaml
 
@@ -19,6 +21,7 @@ IMAGE_ROOT = ROOT / "docs" / "assets" / "images"
 DECKTYPES_DIR = ROOT / "decktypes"
 RENDER_PREVIEW_SCRIPT = ROOT / "scripts" / "render_deck_preview.py"
 REPO_BLOB_BASE = "https://github.com/dlicudi/cockpitdecks-configs/blob/main"
+MKDOCS_CONFIG = ROOT / "mkdocs.yml"
 
 PAGE_NAME_OVERRIDES = {
     "audiopanel": "Audio Panel",
@@ -518,6 +521,239 @@ def build_overview(slug: str, config: dict[str, Any], docs_meta: dict[str, Any],
     return "\n".join(lines).rstrip() + "\n"
 
 
+def normalize_tracking_metadata(meta: dict[str, Any] | None) -> dict[str, Any]:
+    if not isinstance(meta, dict):
+        return {
+            "state": "",
+            "runtime_tested": None,
+            "hardware_verified": None,
+            "last_reviewed": "",
+            "owner": "",
+            "notes": "",
+            "issues": [],
+            "planned": [],
+        }
+
+    issues: list[dict[str, str]] = []
+    raw_issues = meta.get("issues")
+    if isinstance(raw_issues, list):
+        for raw_issue in raw_issues:
+            if not isinstance(raw_issue, dict):
+                continue
+            summary = str(raw_issue.get("summary") or "").strip()
+            if not summary:
+                continue
+            issues.append(
+                {
+                    "summary": summary,
+                    "severity": str(raw_issue.get("severity") or "minor").strip() or "minor",
+                    "type": str(raw_issue.get("type") or "general").strip() or "general",
+                    "status": str(raw_issue.get("status") or "open").strip() or "open",
+                }
+            )
+
+    planned: list[str] = []
+    raw_planned = meta.get("planned")
+    if isinstance(raw_planned, list):
+        for item in raw_planned:
+            text = str(item).strip()
+            if text:
+                planned.append(text)
+
+    return {
+        "state": str(meta.get("state") or "").strip(),
+        "runtime_tested": meta.get("runtime_tested") if isinstance(meta.get("runtime_tested"), bool) else None,
+        "hardware_verified": meta.get("hardware_verified") if isinstance(meta.get("hardware_verified"), bool) else None,
+        "last_reviewed": str(meta.get("last_reviewed") or "").strip(),
+        "owner": str(meta.get("owner") or "").strip(),
+        "notes": str(meta.get("notes") or "").strip(),
+        "issues": issues,
+        "planned": planned,
+    }
+
+
+def open_issues(tracking: dict[str, Any]) -> list[dict[str, str]]:
+    return [issue for issue in tracking.get("issues", []) if issue.get("status") != "done"]
+
+
+def planned_items(tracking: dict[str, Any]) -> list[str]:
+    return tracking.get("planned", [])
+
+
+def layout_doc_path(slug: str, layout_name: str) -> Path:
+    return DOCS_DECKS_DIR / slug / layout_name / "index.md"
+
+
+def layout_preview_dir(slug: str, layout_name: str) -> Path:
+    return IMAGE_ROOT / slug / "generated" / layout_name
+
+
+def layout_preview_count(slug: str, layout_name: str) -> int:
+    preview_dir = layout_preview_dir(slug, layout_name)
+    if not preview_dir.exists():
+        return 0
+    return len(list(preview_dir.glob("*.page.png")))
+
+
+def nav_doc_paths() -> set[str]:
+    if not MKDOCS_CONFIG.exists():
+        return set()
+    text = MKDOCS_CONFIG.read_text(encoding="utf-8")
+    return set(re.findall(r"([A-Za-z0-9_./+-]+\.md)", text))
+
+
+def layout_auto_findings(slug: str, layout: dict[str, Any]) -> list[dict[str, str]]:
+    findings: list[dict[str, str]] = []
+    docs_generated = layout_doc_path(slug, layout["layout"]).exists()
+    preview_count = layout_preview_count(slug, layout["layout"])
+    preview_mode = str(layout["docs"].get("preview") or "").strip().lower()
+    decktype_path = layout.get("decktype_path")
+
+    if not docs_generated:
+        if preview_mode in {"none", "off", "static"}:
+            findings.append(
+                {
+                    "severity": "minor",
+                    "type": "docs",
+                    "summary": "Layout docs are not generated because preview generation is disabled in metadata.",
+                }
+            )
+        elif decktype_path is None:
+            findings.append(
+                {
+                    "severity": "major",
+                    "type": "metadata",
+                    "summary": f"No decktype mapping found for `{layout['type']}`.",
+                }
+            )
+        elif not has_supported_preview_geometry(decktype_path):
+            findings.append(
+                {
+                    "severity": "major",
+                    "type": "preview",
+                    "summary": f"Preview renderer does not yet support `{layout['type']}`.",
+                }
+            )
+        else:
+            findings.append(
+                {
+                    "severity": "major",
+                    "type": "docs",
+                    "summary": "Layout docs were not generated.",
+                }
+            )
+
+    if docs_generated and preview_count == 0:
+        findings.append(
+            {
+                "severity": "major",
+                "type": "preview",
+                "summary": "Generated layout docs exist but preview assets are missing.",
+            }
+        )
+
+    return findings
+
+
+def build_status_page(aircraft_records: list[dict[str, Any]]) -> str:
+    def status_aircraft_label(slug: str, title: str) -> str:
+        compact = titleize_slug(slug)
+        return compact if len(title) > 30 else title
+
+    nav_paths = nav_doc_paths()
+    auto_finding_rows: list[dict[str, str]] = []
+    aircraft_rows: list[dict[str, str]] = []
+
+    for record in aircraft_records:
+        slug = record["slug"]
+        title = record["title"]
+        status_title = status_aircraft_label(slug, title)
+        aircraft_tracking = normalize_tracking_metadata(record["docs_meta"].get("tracking"))
+        layouts = record["layouts"]
+        docs_generated_count = 0
+        preview_generated_count = 0
+        manual_issue_count = 0
+        auto_finding_count = 0
+        planned_count = 0
+
+        manual_issues = open_issues(aircraft_tracking)
+        planned = planned_items(aircraft_tracking)
+        manual_issue_count += len(manual_issues)
+        planned_count += len(planned)
+
+        for layout in layouts:
+            docs_generated = layout_doc_path(slug, layout["layout"]).exists()
+            nav_exposed = f"decks/{slug}/{layout['layout']}/index.md" in nav_paths
+            preview_count = layout_preview_count(slug, layout["layout"])
+            auto_findings = layout_auto_findings(slug, layout)
+
+            docs_generated_count += 1 if docs_generated else 0
+            preview_generated_count += 1 if preview_count else 0
+            auto_finding_count += len(auto_findings)
+
+            for finding in auto_findings:
+                auto_finding_rows.append(
+                    {
+                        "aircraft": status_title,
+                        "aircraft_full": title,
+                        "layout": layout["title"],
+                        **finding,
+                    }
+                )
+
+        aircraft_rows.append(
+            {
+                "aircraft": status_title,
+                "aircraft_full": title,
+                "state": aircraft_tracking.get("state") or "unknown",
+                "runtime_tested": "yes" if aircraft_tracking.get("runtime_tested") is True else ("no" if aircraft_tracking.get("runtime_tested") is False else "unknown"),
+                "hardware_verified": "yes" if aircraft_tracking.get("hardware_verified") is True else ("no" if aircraft_tracking.get("hardware_verified") is False else "unknown"),
+                "manual_issues": str(manual_issue_count),
+                "planned": str(planned_count),
+                "auto_findings": str(auto_finding_count),
+            }
+        )
+
+    lines = [
+        "---",
+        "title: Deck Status",
+        "---",
+        "",
+        "<!-- generated by scripts/generate_deck_docs.py; do not edit directly -->",
+        "",
+        "# Deck Status",
+        "",
+        "Track declared deck state, known issues, planned work, and derived generation gaps from `deckconfig/_docs.yaml`.",
+        "",
+        "Metadata keys:",
+        "- `tracking` for aircraft-level state",
+        "- useful manual fields are `state`, `runtime_tested`, `hardware_verified`, `issues`, and `planned`",
+        "",
+        "## Summary",
+        "",
+        f"- Aircraft: {len(aircraft_rows)}",
+        f"- Layouts: {sum(len(record['layouts']) for record in aircraft_records)}",
+        "",
+        "## Aircraft Matrix",
+        "",
+        "| Aircraft | State | Runtime Tested | Hardware Verified | Known Issues | Planned | Auto Findings |",
+        "| --- | --- | --- | --- | ---: | ---: | ---: |",
+    ]
+
+    def truncate(text: str, full_text: str | None = None) -> str:
+        display = escape(text, quote=False)
+        title = escape(full_text or text, quote=True)
+        return f'<span class="cdx-truncate" title="{title}">{display}</span>'
+
+    for row in aircraft_rows:
+        lines.append(
+            f"| {truncate(row['aircraft'], row['aircraft_full'])} | `{row['state']}` | `{row['runtime_tested']}` | `{row['hardware_verified']}` | {row['manual_issues']} | {row['planned']} | {row['auto_findings']} |"
+        )
+
+    lines.append("")
+    return "\n".join(lines)
+
+
 def build_index(aircraft_entries: list[dict[str, str]]) -> str:
     lines = [
         "<!-- generated by scripts/generate_deck_docs.py; do not edit directly -->",
@@ -548,6 +784,7 @@ def main() -> int:
     DOCS_DECKS_DIR.mkdir(parents=True, exist_ok=True)
 
     aircraft_entries: list[dict[str, str]] = []
+    aircraft_records: list[dict[str, Any]] = []
     for aircraft_dir in sorted(path for path in DECKS_DIR.iterdir() if path.is_dir()):
         deckconfig_dir = aircraft_dir / "deckconfig"
         config_path = deckconfig_dir / "config.yaml"
@@ -560,6 +797,7 @@ def main() -> int:
         generate_layout_docs(slug, config, deckconfig_dir, docs_meta)
         doc_path = DOCS_DECKS_DIR / doc_filename(slug)
         doc_path.write_text(build_overview(slug, config, docs_meta, doc_path), encoding="utf-8")
+        layouts = layout_entries(config, deckconfig_dir, docs_meta)
 
         aircraft_meta = normalize_docs_metadata(docs_meta.get("aircraft"))
         title = aircraft_title(slug, config, docs_meta)
@@ -581,8 +819,18 @@ def main() -> int:
                 "summary": summary,
             }
         )
+        aircraft_records.append(
+            {
+                "slug": slug,
+                "title": title,
+                "config": config,
+                "docs_meta": docs_meta,
+                "layouts": layouts,
+            }
+        )
 
     (DOCS_DECKS_DIR / "index.md").write_text(build_index(aircraft_entries), encoding="utf-8")
+    (DOCS_DECKS_DIR / "status.md").write_text(build_status_page(aircraft_records), encoding="utf-8")
     return 0
 
 
