@@ -57,7 +57,23 @@ nav:
               - Views: decks/cirrus-sr22/loupedecklive1/views.md
               - Weather: decks/cirrus-sr22/loupedecklive1/weather.md
       - Embraer E-Jets Family: decks/embraer-e-jets-family.md
-      - Lancair Evolution: decks/lancair-evolution.md
+      - Lancair Evolution:
+          - Overview: decks/lancair-evolution.md
+          - Loupedeck Live:
+              - Overview: decks/lancair-evolution/loupedecklive1/index.md
+              - Audio Panel: decks/lancair-evolution/loupedecklive1/audiopanel.md
+              - Engine: decks/lancair-evolution/loupedecklive1/engine.md
+              - FCU: decks/lancair-evolution/loupedecklive1/fcu.md
+              - G1000: decks/lancair-evolution/loupedecklive1/g1000.md
+              - Home: decks/lancair-evolution/loupedecklive1/home.md
+              - Pedestal: decks/lancair-evolution/loupedecklive1/pedestal.md
+              - PFI: decks/lancair-evolution/loupedecklive1/pfi.md
+              - Radio: decks/lancair-evolution/loupedecklive1/radio.md
+              - Switches: decks/lancair-evolution/loupedecklive1/switches.md
+              - Switches 2: decks/lancair-evolution/loupedecklive1/switches2.md
+              - Transponder: decks/lancair-evolution/loupedecklive1/transponder.md
+              - Views: decks/lancair-evolution/loupedecklive1/views.md
+              - Weather: decks/lancair-evolution/loupedecklive1/weather.md
       - ToLiss Airbus A320 NEO: decks/toliss-airbus-A320-neo.md
       - ToLiss Airbus A321 NEO: decks/toliss-airbus-A321-neo.md
       - ToLiss Airbus A330 NEO: decks/toliss-airbus-a330-neo.md
