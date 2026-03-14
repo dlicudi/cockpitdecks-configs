@@ -59,26 +59,26 @@ buttons:
     labels:
       - label: "RNG"
         label-size: 14
-        label-font: B612-Bold
+        label-font: D-DIN-Bold.otf
         label-color: Gold
         text-size: 18
-        text-font: Seven Segment.ttf
+        text-font: Segment7Standard.otf
         text-color: White
         text: "+/-"
       - label: "PAN"
         label-size: 14
-        label-font: B612-Bold
+        label-font: D-DIN-Bold.otf
         label-color: Gold
         text-size: 18
-        text-font: Seven Segment.ttf
+        text-font: Segment7Standard.otf
         text-color: White
         text: "L/R"
       - label: "PAN"
         label-size: 14
-        label-font: B612-Bold
+        label-font: D-DIN-Bold.otf
         label-color: Gold
         text-size: 18
-        text-font: Seven Segment.ttf
+        text-font: Segment7Standard.otf
         text-color: White
         text: "U/D"
 
@@ -90,25 +90,25 @@ buttons:
     labels:
       - label: "FMS"
         label-size: 14
-        label-font: B612-Bold
+        label-font: D-DIN-Bold.otf
         label-color: Gold
         text-size: 18
-        text-font: Seven Segment.ttf
+        text-font: Segment7Standard.otf
         text-color: White
         text: "Outer"
       - label: "FMS"
         label-size: 14
-        label-font: B612-Bold
+        label-font: D-DIN-Bold.otf
         label-color: Gold
         text-size: 18
-        text-font: Seven Segment.ttf
+        text-font: Segment7Standard.otf
         text-color: White
         text: "Inner"
       - label: "GCU478"
         label-size: 14
-        label-font: B612-Bold
+        label-font: D-DIN-Bold.otf
         label-color: Gold
         text-size: 18
-        text-font: Seven Segment.ttf
+        text-font: Segment7Standard.otf
         text-color: White
         text: "COMBO"

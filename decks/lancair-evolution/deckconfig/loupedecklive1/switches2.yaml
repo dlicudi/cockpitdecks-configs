@@ -8,7 +8,7 @@ buttons:
   - index: 0
     name: DOOR SEALS
     label: DOOR SEALS
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       button-fill-color: black
@@ -18,7 +18,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
       # tick-label-color: Black
     options: round
@@ -30,7 +30,7 @@ buttons:
   - index: 1
     name: NAV LTS
     label: NAV LTS
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       button-fill-color: black
@@ -40,7 +40,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
       # tick-label-color: Black
     options: round
@@ -53,7 +53,7 @@ buttons:
   - index: 2
     name: STRB LTS
     label: STRB LTS
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       button-fill-color: black
@@ -63,7 +63,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
       # tick-label-color: Black
     options: round
@@ -75,7 +75,7 @@ buttons:
   - index: 3
     name: LAND LTS
     label: LAND LTS
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       button-fill-color: black
@@ -85,7 +85,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
       # tick-label-color: Black
     options: round
@@ -97,7 +97,7 @@ buttons:
   - index: 4
     name: BLEED AIR
     label: BLEED AIR
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       button-fill-color: black
@@ -107,7 +107,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
       # tick-label-color: Black
     options: round
@@ -119,7 +119,7 @@ buttons:
   - index: 5
     name: CBN DUMP
     label: CBN DUMP
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       button-fill-color: black
@@ -129,7 +129,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
       # tick-label-color: Black
     options: round
@@ -141,7 +141,7 @@ buttons:
   - index: 6
     name: PART SEP ON
     label: PART SEP ON
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       button-fill-color: black
@@ -151,7 +151,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
       # tick-label-color: Black
     options: round
@@ -164,7 +164,7 @@ buttons:
   - index: 7
     name: PITOT HEAT
     label: PITOT HEAT
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       button-fill-color: black
@@ -174,7 +174,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
       # tick-label-color: Black
     options: round
@@ -186,7 +186,7 @@ buttons:
   - index: 8
     name: PROP HEAT
     label: PROP HEAT
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       button-fill-color: black
@@ -196,7 +196,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
       # tick-label-color: Black
     options: round
@@ -208,7 +208,7 @@ buttons:
   - index: 9
     name: INLET HEAT
     label: INLET HEAT
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       button-fill-color: black
@@ -218,7 +218,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
     options: round
     dataref: sim/cockpit/switches/anti_ice_inlet_heat
@@ -229,7 +229,7 @@ buttons:
   - index: 10
     name: AUTOPILOT
     label: AUTOPILOT
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       button-fill-color: black
@@ -239,7 +239,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
     options: round
     dataref: sim/cockpit2/autopilot/autopilot_electric_master

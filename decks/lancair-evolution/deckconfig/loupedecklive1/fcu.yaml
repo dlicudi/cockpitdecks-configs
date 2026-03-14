@@ -10,7 +10,7 @@ buttons:
     text: TRK
     text-color: white
     text-size: 40
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: black
     command: sim/autopilot/track
@@ -23,15 +23,15 @@ buttons:
       - text: NAV
         text-color: White
         text-size: 40
-        text-font: DIN Condensed Light
+        text-font: D-DINCondensed.otf
       - text: NAV
         text-color: White
         text-size: 40
-        text-font: DIN Condensed Light
+        text-font: D-DINCondensed.otf
       - text: NAV
         text-color: Lime
         text-size: 40
-        text-font: DIN Condensed Light
+        text-font: D-DINCondensed.otf
     formula: ${sim/cockpit2/autopilot/nav_status}
     command: sim/autopilot/gpss
 
@@ -41,7 +41,7 @@ buttons:
     text: REV
     text-color: white
     text-size: 40
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: black
     command: sim/autopilot/back_course
@@ -52,7 +52,7 @@ buttons:
     text: ALT
     text-color: white
     text-size: 40
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: black
     command: sim/autopilot/altitude_hold
@@ -66,15 +66,15 @@ buttons:
       - text: SEL
         text-color: White
         text-size: 40
-        text-font: DIN Condensed Light
+        text-font: D-DINCondensed.otf
       - text: SEL
         text-color: White
         text-size: 40
-        text-font: DIN Condensed Light
+        text-font: D-DINCondensed.otf
       - text: SEL
         text-color: Lime
         text-size: 40
-        text-font: DIN Condensed Light
+        text-font: D-DINCondensed.otf
     formula: ${sim/cockpit2/autopilot/vvi_status}
     command: sim/autopilot/alt_vs
 
@@ -84,7 +84,7 @@ buttons:
     text: VNAV
     text-color: white
     text-size: 40
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: black
     command: sim/autopilot/vnav
@@ -98,15 +98,15 @@ buttons:
       - text: AP
         text-color: White
         text-size: 40
-        text-font: DIN Condensed Light
+        text-font: D-DINCondensed.otf
       - text: AP
         text-color: White
         text-size: 40
-        text-font: DIN Condensed Light
+        text-font: D-DINCondensed.otf
       - text: AP
         text-color: Lime
         text-size: 40
-        text-font: DIN Condensed Light
+        text-font: D-DINCondensed.otf
     formula: ${sim/cockpit/autopilot/autopilot_mode}  
     command: sim/autopilot/servos_toggle
 
@@ -118,14 +118,14 @@ buttons:
       - text: GPSS
         text-color: White
         text-size: 40
-        text-font: DIN Condensed Light
+        text-font: D-DINCondensed.otf
       - text: GPSS
         text-color: White
         text-size: 40
-        text-font: DIN Condensed Light
+        text-font: D-DINCondensed.otf
       - text: GPSS
         text-color: Lime
         text-size: 40
-        text-font: DIN Condensed Light
+        text-font: D-DINCondensed.otf
     formula: ${sim/cockpit2/autopilot/gpss_status}
     command: sim/autopilot/gpss

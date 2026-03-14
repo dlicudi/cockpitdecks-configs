@@ -29,7 +29,7 @@ buttons:
       B1:
         text: "COM MIC 1"
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/audio_panel/transmit_audio_com1
 
@@ -46,7 +46,7 @@ buttons:
       B1:
         text: "COM 1"
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/audio_panel/monitor_audio_com1
 
@@ -63,7 +63,7 @@ buttons:
       B1:
         text: "MKR MUTE"
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/audio_panel/monitor_audio_mkr
 
@@ -80,7 +80,7 @@ buttons:
       B1:
         text: "NAV 1"
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/audio_panel/select_audio_nav1
 
@@ -97,7 +97,7 @@ buttons:
       B1:
         text: "COM MIC 2"
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/audio_panel/transmit_audio_com2
 
@@ -114,7 +114,7 @@ buttons:
       B1:
         text: "COM 2"
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/audio_panel/monitor_audio_com2
 
@@ -131,7 +131,7 @@ buttons:
       B1:
         text: "ADF 1"
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/audio_panel/select_audio_adf1
 
@@ -148,7 +148,7 @@ buttons:
       B1:
         text: "NAV 2"
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/audio_panel/select_audio_nav2
 
@@ -165,7 +165,7 @@ buttons:
       B1:
         text: "DME"
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/audio_panel/monitor_audio_dme
 
@@ -182,7 +182,7 @@ buttons:
       B1:
         text: "HI SENS"
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/annunciator/marker_beacon_sens_toggle
 

@@ -8,7 +8,7 @@ buttons:
   - index: 0
     name: GND PWR
     label: GND PWR
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       switch-style: rect
@@ -19,7 +19,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
     dataref: sim/cockpit/electrical/gpu_on
     commands:
@@ -29,7 +29,7 @@ buttons:
   - index: 1
     name: BAT 1
     label: BAT 1
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       switch-style: rect
@@ -40,7 +40,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
     dataref: sim/cockpit2/electrical/battery_on[0]
     commands:
@@ -50,7 +50,7 @@ buttons:
   - index: 2
     name: BAT 2
     label: BAT 2
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       switch-style: rect
@@ -61,7 +61,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
     options: large
     dataref: sim/cockpit2/electrical/battery_on[1]
@@ -72,7 +72,7 @@ buttons:
   - index: 3
     name: GEN
     label: GEN
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       switch-style: rect
@@ -83,7 +83,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
     options: large
     dataref: sim/cockpit2/electrical/generator_on[0]
@@ -94,7 +94,7 @@ buttons:
   - index: 4
     name: ALT
     label: ALT
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       switch-style: rect
@@ -105,7 +105,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
     options: large
     dataref: sim/cockpit2/electrical/generator_on[1]
@@ -116,7 +116,7 @@ buttons:
   - index: 5
     name: DC PWR
     label: DC PWR
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       switch-style: rect
@@ -127,7 +127,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
     options: large
     dataref: sim/cockpit2/electrical/cross_tie
@@ -138,7 +138,7 @@ buttons:
   - index: 6
     name: IGN
     label: IGN
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       switch-style: rect
@@ -149,7 +149,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
     options: large
     dataref: sim/cockpit/engine/igniters_on[0]
@@ -160,7 +160,7 @@ buttons:
   - index: 7
     name: FUEL PUMP
     label: FUEL PUMP
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     type: onoff
     switch:
       switch-style: rect
@@ -171,7 +171,7 @@ buttons:
         - "ON"
         - "OFF"
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
     options: large
     dataref: sim/cockpit/engine/fuel_pump_on[0]

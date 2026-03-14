@@ -14,7 +14,7 @@ buttons:
   text: ${formula}
   text-format: "{:01.0f}"
   text-size: 50
-  text-font: Seven Segment.ttf
+  text-font: Segment7Standard.otf
   text-color: Lime
   text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 1000 / floor
@@ -31,7 +31,7 @@ buttons:
   text: ${formula}
   text-format: "{:01.0f}"
   text-size: 50
-  text-font: Seven Segment.ttf
+  text-font: Segment7Standard.otf
   text-color: Lime
   text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 100 / floor 10 %
@@ -48,7 +48,7 @@ buttons:
   text: ${formula}
   text-format: "{:01.0f}"
   text-size: 50
-  text-font: Seven Segment.ttf
+  text-font: Segment7Standard.otf
   text-color: Lime
   text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 10 / floor 10 %
@@ -65,7 +65,7 @@ buttons:
   text: ${formula}
   text-format: "{:01.0f}"
   text-size: 50
-  text-font: Seven Segment.ttf  
+  text-font: Segment7Standard.otf  
   text-color: Lime
   text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 10 %
@@ -85,7 +85,7 @@ buttons:
       B1:
         text: ON
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/transponder/transponder_on
   vibrate: SHORT
@@ -104,7 +104,7 @@ buttons:
       B1:
         text: OFF
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/transponder/transponder_off
   vibrate: SHORT
@@ -123,7 +123,7 @@ buttons:
       B1:
         text: STBY
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/transponder/transponder_standby
   vibrate: SHORT
@@ -142,7 +142,7 @@ buttons:
       B1:
         text: ALT
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/transponder/transponder_alt
   vibrate: SHORT
@@ -162,7 +162,7 @@ buttons:
       B1:
         text: IDENT
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/radios/transponder_ident
 
@@ -181,7 +181,7 @@ buttons:
       B1:
         text: TEST
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/transponder/transponder_test
   vibrate: SHORT
@@ -217,19 +217,19 @@ buttons:
   multi-texts:
       - text: "OFF"
         text-color: Orange
-        text-font: Seven Segment.ttf
+        text-font: Segment7Standard.otf
       - text: "STBY"
         text-color: Orange
-        text-font: Seven Segment.ttf
+        text-font: Segment7Standard.otf
       - text: "ON"
         text-color: Orange
-        text-font: Seven Segment.ttf
+        text-font: Segment7Standard.otf
       - text: "ALT"
         text-color: Orange
-        text-font: Seven Segment.ttf        
+        text-font: Segment7Standard.otf        
       - text: "TEST"
         text-color: Orange
-        text-font: Seven Segment.ttf
+        text-font: Segment7Standard.otf
         text-position: tr
   formula: ${sim/cockpit2/radios/actuators/transponder_mode}
 

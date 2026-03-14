@@ -66,31 +66,31 @@ buttons:
     labels:
       - label: "RNG"
         label-size: 14
-        label-font: B612-Bold
+        label-font: D-DIN-Bold.otf
         label-color: Gold
         formula: "${sim/flightmodel/engine/ENGN_thro[0]} 100 *"
         text-size: 18
-        text-font: Seven Segment.ttf
+        text-font: Segment7Standard.otf
         text-color: White
         text-format: "{0:01.0f}"
         text: "${formula}%"
       - label: "FMS"
         label-size: 14
-        label-font: B612-Bold
+        label-font: D-DIN-Bold.otf
         label-color: Gold
         formula: "${sim/cockpit/autopilot/heading_mag}"
         text-size: 18
-        text-font: Seven Segment.ttf
+        text-font: Segment7Standard.otf
         text-color: White
         text-format: "{0:00.0f}"
         text: "${formula}"
       - label: "QNH"
         label-size: 14
-        label-font: B612-Bold
+        label-font: D-DIN-Bold.otf
         label-color: Gold
         formula: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}"
         text-size: 18
-        text-font: Seven Segment.ttf
+        text-font: Segment7Standard.otf
         text-color: White
         text-format: "{0:01.2f}"
         text: "${formula}"
@@ -103,31 +103,31 @@ buttons:
     labels:
       - label: "ALT"
         label-size: 16
-        label-font: B612-Bold
+        label-font: D-DIN-Bold.otf
         label-color: Grey
         formula: "${sim/cockpit2/autopilot/altitude_dial_ft}"
         text-size: 16
-        text-font: Seven Segment.ttf
+        text-font: Segment7Standard.otf
         text-color: White
         text-format: "{0:04.0f}"
         text: "${formula}"
       - label: "VS"
         label-size: 14
-        label-font: B612-Bold
+        label-font: D-DIN-Bold.otf
         label-color: Gold
         formula: "${sim/cockpit/autopilot/vertical_velocity} 100 /"
         text-size: 18
-        text-font: Seven Segment.ttf
+        text-font: Segment7Standard.otf
         text-color: White
         text-format: "{0:+01.0f}"
         text: "${formula}"
       - label: "MIX"
         label-size: 14
-        label-font: B612-Bold
+        label-font: D-DIN-Bold.otf
         label-color: Gold
         formula: "${sim/flightmodel/engine/ENGN_mixt[0]} 100 *"
         text-size: 18
-        text-font: Seven Segment.ttf
+        text-font: Segment7Standard.otf
         text-color: White
         text-format: "{0:01.0f}"
         text: "${formula}%"
