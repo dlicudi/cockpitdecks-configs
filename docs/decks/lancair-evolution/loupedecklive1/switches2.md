@@ -8,7 +8,7 @@ title: Loupedeck Live Switches 2
 
 <div id="lancair-evolution-loupedecklive1-switches2-preview"></div>
 
-![Switches 2 preview](../../../assets/images/lancair-evolution/generated/switches2.page.png)
+![Switches 2 preview](../../../assets/images/lancair-evolution/generated/loupedecklive1/switches2.page.png)
 
 ## Source
 

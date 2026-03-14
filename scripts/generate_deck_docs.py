@@ -184,7 +184,7 @@ def render_layout_page_images(slug: str, layout: dict[str, Any]) -> dict[Path, P
     if slug not in GENERATED_PREVIEW_SLUGS or not RENDER_PREVIEW_SCRIPT.exists():
         return {}
 
-    output_dir = IMAGE_ROOT / slug / "generated"
+    output_dir = IMAGE_ROOT / slug / "generated" / layout["layout"]
     output_dir.mkdir(parents=True, exist_ok=True)
 
     with tempfile.TemporaryDirectory(prefix=f"{slug}-{layout['layout']}-") as temp_dir:

@@ -74,6 +74,18 @@ nav:
               - Transponder: decks/lancair-evolution/loupedecklive1/transponder.md
               - Views: decks/lancair-evolution/loupedecklive1/views.md
               - Weather: decks/lancair-evolution/loupedecklive1/weather.md
+          - Stream Deck XL:
+              - Overview: decks/lancair-evolution/streamdeckxl1/index.md
+              - Audio Panel: decks/lancair-evolution/streamdeckxl1/audiopanel.md
+              - Engine: decks/lancair-evolution/streamdeckxl1/engine.md
+              - FCU: decks/lancair-evolution/streamdeckxl1/fcu.md
+              - G1000: decks/lancair-evolution/streamdeckxl1/g1000.md
+              - PFI: decks/lancair-evolution/streamdeckxl1/pfi.md
+              - Radio: decks/lancair-evolution/streamdeckxl1/radio.md
+              - Switches: decks/lancair-evolution/streamdeckxl1/switches.md
+              - Transponder: decks/lancair-evolution/streamdeckxl1/transponder.md
+              - Views: decks/lancair-evolution/streamdeckxl1/views.md
+              - Weather: decks/lancair-evolution/streamdeckxl1/weather.md
       - ToLiss Airbus A320 NEO: decks/toliss-airbus-A320-neo.md
       - ToLiss Airbus A321 NEO: decks/toliss-airbus-A321-neo.md
       - ToLiss Airbus A330 NEO: decks/toliss-airbus-a330-neo.md

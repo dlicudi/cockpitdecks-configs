@@ -8,7 +8,7 @@ title: Loupedeck Live FCU
 
 <div id="lancair-evolution-loupedecklive1-fcu-preview"></div>
 
-![FCU preview](../../../assets/images/lancair-evolution/generated/fcu.page.png)
+![FCU preview](../../../assets/images/lancair-evolution/generated/loupedecklive1/fcu.page.png)
 
 ## Source
 

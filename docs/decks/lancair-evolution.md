@@ -25,4 +25,10 @@ icon: material/airplane
       <p>`LoupedeckLive` layout with 13 pages.</p>
     </div>
   </a>
+  <a class="cdx-card" href="streamdeckxl1/">
+    <div class="cdx-card__body">
+      <h3>Stream Deck XL</h3>
+      <p>`Stream Deck XL` layout with 11 pages.</p>
+    </div>
+  </a>
 </div>

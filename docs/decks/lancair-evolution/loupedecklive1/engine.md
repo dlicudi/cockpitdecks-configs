@@ -8,7 +8,7 @@ title: Loupedeck Live Engine
 
 <div id="lancair-evolution-loupedecklive1-engine-preview"></div>
 
-![Engine preview](../../../assets/images/lancair-evolution/generated/engine.page.png)
+![Engine preview](../../../assets/images/lancair-evolution/generated/loupedecklive1/engine.page.png)
 
 ## Source
 

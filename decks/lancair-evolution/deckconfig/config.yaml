@@ -6,6 +6,10 @@ decks:
     type: LoupedeckLive
     layout: loupedecklive1
     brightness: 100
+  - name: StreamDeckXL
+    type: Stream Deck XL
+    layout: streamdeckxl1
+    brightness: 100
 description: Decks for Lancair Evolution
 print-page-dir: screendumps/lancair-evolution
 

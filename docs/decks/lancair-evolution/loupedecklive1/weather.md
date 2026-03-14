@@ -8,7 +8,7 @@ title: Loupedeck Live Weather
 
 <div id="lancair-evolution-loupedecklive1-weather-preview"></div>
 
-![Weather preview](../../../assets/images/lancair-evolution/generated/weather.page.png)
+![Weather preview](../../../assets/images/lancair-evolution/generated/loupedecklive1/weather.page.png)
 
 ## Source
 

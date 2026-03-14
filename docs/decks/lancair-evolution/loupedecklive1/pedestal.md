@@ -8,7 +8,7 @@ title: Loupedeck Live Pedestal
 
 <div id="lancair-evolution-loupedecklive1-pedestal-preview"></div>
 
-![Pedestal preview](../../../assets/images/lancair-evolution/generated/pedestal.page.png)
+![Pedestal preview](../../../assets/images/lancair-evolution/generated/loupedecklive1/pedestal.page.png)
 
 ## Source
 

@@ -8,7 +8,7 @@ title: Loupedeck Live Views
 
 <div id="lancair-evolution-loupedecklive1-views-preview"></div>
 
-![Views preview](../../../assets/images/lancair-evolution/generated/views.page.png)
+![Views preview](../../../assets/images/lancair-evolution/generated/loupedecklive1/views.page.png)
 
 ## Source
 
