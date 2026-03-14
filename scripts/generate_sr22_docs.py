@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import subprocess
 from pathlib import Path
+import tempfile
 from typing import Any
 
 import yaml
@@ -160,19 +161,28 @@ def main() -> int:
     deck_config = load_yaml(DECK_CONFIG)
     layout_name_title = layout_title(deck_config, LAYOUT_NAME)
 
-    render_args = [
-        "python3",
-        "scripts/render_deck_preview.py",
-        "--layout-dir",
-        str(LAYOUT_DIR),
-        "--fixture",
-        str(FIXTURE),
-        "--output-dir",
-        str(IMAGE_DIR),
-    ]
-    for page in IMAGE_PAGES:
-        render_args.extend(["--page", page])
-    run(render_args)
+    with tempfile.TemporaryDirectory(prefix="sr22-previews-") as temp_dir:
+        temp_image_dir = Path(temp_dir)
+        render_args = [
+            "python3",
+            "scripts/render_deck_preview.py",
+            "--layout-dir",
+            str(LAYOUT_DIR),
+            "--fixture",
+            str(FIXTURE),
+            "--output-dir",
+            str(temp_image_dir),
+        ]
+        for page in IMAGE_PAGES:
+            render_args.extend(["--page", page])
+        run(render_args)
+
+        expected_images: set[str] = set()
+        for page in IMAGE_PAGES:
+            source = temp_image_dir / f"{page}.png"
+            target = IMAGE_DIR / f"{page}.page.png"
+            expected_images.add(target.name)
+            target.write_bytes(source.read_bytes())
 
     page_name_map = {
         "index": "home",
@@ -188,16 +198,9 @@ def main() -> int:
         "weather": "weather",
     }
 
-    for page in IMAGE_PAGES:
-        source = IMAGE_DIR / f"{page}.png"
-        target = IMAGE_DIR / f"{page}.page.png"
-        target.write_bytes(source.read_bytes())
-        source.unlink()
-
-    for stale in IMAGE_DIR.glob("*.png"):
-        if stale.name.endswith(".page.png"):
-            continue
-        stale.unlink()
+    for stale in IMAGE_DIR.glob("*.page.png"):
+        if stale.name not in expected_images:
+            stale.unlink()
 
     for page in DOC_PAGES:
         output_name = page_name_map[page]
