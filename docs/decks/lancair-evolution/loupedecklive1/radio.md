@@ -8,7 +8,7 @@ title: Loupedeck Live Radio
 
 <div id="lancair-evolution-loupedecklive1-radio-preview"></div>
 
-![Radio preview](../../../assets/images/lancair-evolution/radio.png)
+![Radio preview](../../../assets/images/lancair-evolution/generated/radio.page.png)
 
 ## Source
 

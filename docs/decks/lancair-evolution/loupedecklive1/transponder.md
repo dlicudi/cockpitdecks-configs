@@ -8,7 +8,7 @@ title: Loupedeck Live Transponder
 
 <div id="lancair-evolution-loupedecklive1-transponder-preview"></div>
 
-![Transponder preview](../../../assets/images/lancair-evolution/transponder.png)
+![Transponder preview](../../../assets/images/lancair-evolution/generated/transponder.page.png)
 
 ## Source
 

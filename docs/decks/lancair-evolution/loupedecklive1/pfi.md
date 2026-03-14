@@ -8,7 +8,7 @@ title: Loupedeck Live PFI
 
 <div id="lancair-evolution-loupedecklive1-pfi-preview"></div>
 
-![PFI preview](../../../assets/images/lancair-evolution/pfi.png)
+![PFI preview](../../../assets/images/lancair-evolution/generated/pfi.page.png)
 
 ## Source
 

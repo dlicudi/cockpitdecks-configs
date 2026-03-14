@@ -7,6 +7,7 @@ import subprocess
 from pathlib import Path
 from typing import Any
 import os
+import tempfile
 
 import yaml
 
@@ -16,8 +17,10 @@ DECKS_DIR = ROOT / "decks"
 DOCS_DECKS_DIR = ROOT / "docs" / "decks"
 IMAGE_ROOT = ROOT / "docs" / "assets" / "images"
 SR22_SCRIPT = ROOT / "scripts" / "generate_sr22_docs.py"
+RENDER_PREVIEW_SCRIPT = ROOT / "scripts" / "render_deck_preview.py"
 REPO_BLOB_BASE = "https://github.com/dlicudi/cockpitdecks-configs/blob/main"
 CUSTOM_LAYOUT_DOC_SLUGS = {"cirrus-sr22"}
+GENERATED_PREVIEW_SLUGS = {"lancair-evolution"}
 
 PAGE_NAME_OVERRIDES = {
     "audiopanel": "Audio Panel",
@@ -177,6 +180,43 @@ def page_image_path(slug: str, page_path: Path) -> Path | None:
     return None
 
 
+def render_layout_page_images(slug: str, layout: dict[str, Any]) -> dict[Path, Path]:
+    if slug not in GENERATED_PREVIEW_SLUGS or not RENDER_PREVIEW_SCRIPT.exists():
+        return {}
+
+    output_dir = IMAGE_ROOT / slug / "generated"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    with tempfile.TemporaryDirectory(prefix=f"{slug}-{layout['layout']}-") as temp_dir:
+        temp_image_dir = Path(temp_dir)
+        render_args = [
+            "python3",
+            str(RENDER_PREVIEW_SCRIPT),
+            "--layout-dir",
+            str(layout["dir"]),
+            "--output-dir",
+            str(temp_image_dir),
+        ]
+        for page_path in layout["pages"]:
+            render_args.extend(["--page", page_path.stem])
+        run(render_args)
+
+        expected_images: dict[Path, Path] = {}
+        expected_names: set[str] = set()
+        for page_path in layout["pages"]:
+            source = temp_image_dir / f"{page_path.stem}.png"
+            target = output_dir / f"{page_path.stem}.page.png"
+            target.write_bytes(source.read_bytes())
+            expected_images[page_path] = target
+            expected_names.add(target.name)
+
+    for stale in output_dir.glob("*.page.png"):
+        if stale.name not in expected_names:
+            stale.unlink()
+
+    return expected_images
+
+
 def page_anchor_id(slug: str, layout_name: str, page_name: str) -> str:
     return f"{slug}-{layout_name}-{page_name}-preview"
 
@@ -261,13 +301,15 @@ def generate_layout_docs(slug: str, config: dict[str, Any], deckconfig_dir: Path
         if not layout["pages"]:
             continue
 
-        page_images: dict[Path, Path] = {}
-        for page_path in layout["pages"]:
-            image_path = page_image_path(slug, page_path)
-            if image_path is None:
-                page_images = {}
-                break
-            page_images[page_path] = image_path
+        page_images = render_layout_page_images(slug, layout)
+        if not page_images:
+            page_images = {}
+            for page_path in layout["pages"]:
+                image_path = page_image_path(slug, page_path)
+                if image_path is None:
+                    page_images = {}
+                    break
+                page_images[page_path] = image_path
         if not page_images:
             continue
 

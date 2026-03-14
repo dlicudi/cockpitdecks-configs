@@ -20,6 +20,8 @@ FONT_DIRS = [
     ROOT.parent / "cockpitdecks" / "cockpitdecks" / "resources" / "fonts",
     ROOT.parent / "archive" / "cockpitdecks.old" / "cockpitdecks" / "resources" / "fonts",
 ]
+COCKPITDECKS_RESOURCES_CONFIG = ROOT.parent / "cockpitdecks" / "cockpitdecks" / "resources" / "config.yaml"
+DEFAULT_COCKPIT_COLOR = "cornflowerblue"
 
 TOKEN_RE = re.compile(r"\$\{[^}]+\}|[^\s]+")
 PLACEHOLDER_RE = re.compile(r"\$\{([^}]+)\}")
@@ -210,6 +212,8 @@ class PreviewRenderer:
         self.fixture = self._load_yaml(fixture_path) if fixture_path else {}
         self.evaluator = FormulaEvaluator(self.fixture.get("datarefs", {}))
         self.layout_defaults = self._load_yaml(layout_dir / "config.yaml")
+        self.deck_defaults = self._load_yaml(layout_dir.parent / "config.yaml")
+        self.resources_defaults = self._load_yaml(COCKPITDECKS_RESOURCES_CONFIG)
         self.layout = self._load_layout()
 
     def render_page(self, page_name: str, output_path: Path) -> None:
@@ -254,8 +258,8 @@ class PreviewRenderer:
         image = Image.new("RGBA", (canvas_w, canvas_h), (0, 0, 0, 0))
 
         groups = self._group_buttons(page["buttons"])
-        left_screen = self._render_side_screen(groups.get("left"))
-        right_screen = self._render_side_screen(groups.get("right"))
+        left_screen = self._render_side_screen(groups.get("left"), page)
+        right_screen = self._render_side_screen(groups.get("right"), page)
         image.alpha_composite(left_screen, (left_x, max(0, (canvas_h - screen_h) // 2)))
         image.alpha_composite(right_screen, (right_x, max(0, (canvas_h - screen_h) // 2)))
 
@@ -264,7 +268,7 @@ class PreviewRenderer:
             x = main_x + col * (key_w + grid_gap)
             y = main_y + row * (key_h + grid_gap)
             button = groups["grid"].get(index)
-            tile = self._render_button(button, page["name"]) if button else self._render_empty_button()
+            tile = self._render_button(button, page["name"]) if button else self._render_empty_button(page)
             image.alpha_composite(tile, (x, y))
         return image
 
@@ -311,13 +315,22 @@ class PreviewRenderer:
             draw.rectangle((2, 2, width - 3, height - 3), outline=(255, 188, 64), width=3)
         return image
 
-    def _render_empty_button(self) -> Image.Image:
+    def _render_empty_button(self, page: dict[str, Any]) -> Image.Image:
         width, height = self.layout.key_size
         image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
         draw = ImageDraw.Draw(image)
-        draw.rectangle((0, 0, width - 1, height - 1), fill=(12, 12, 12), outline=(90, 95, 100), width=2)
+        fill = self._page_background_color(page)
+        draw.rectangle((0, 0, width - 1, height - 1), fill=fill, outline=(90, 95, 100), width=2)
         draw.rectangle((6, 6, width - 7, height - 7), outline=(36, 40, 44))
         return image
+
+    def _page_background_color(self, page: dict[str, Any]) -> tuple[int, int, int]:
+        for key in ("cockpit-color", "default-cockpit-color"):
+            for source in (page, self.layout_defaults, self.deck_defaults, self.resources_defaults):
+                value = source.get(key)
+                if value is not None:
+                    return self._color(value)
+        return self._color(DEFAULT_COCKPIT_COLOR)
 
     def _button_text_value(self, button: dict[str, Any], context: dict[str, Any]) -> Any:
         multi_texts = button.get("multi-texts")
@@ -328,11 +341,12 @@ class PreviewRenderer:
             return multi_texts[0].get("text", "")
         return button.get("text", "")
 
-    def _render_side_screen(self, button: dict[str, Any] | None) -> Image.Image:
+    def _render_side_screen(self, button: dict[str, Any] | None, page: dict[str, Any]) -> Image.Image:
         width, height = self.layout.screen_size
-        image = Image.new("RGBA", (width, height), (12, 12, 12, 255))
+        fill = self._page_background_color(page)
+        image = Image.new("RGBA", (width, height), (*fill, 255))
         draw = ImageDraw.Draw(image)
-        draw.rectangle((0, 0, width - 1, height - 1), fill=(8, 10, 12), outline=(110, 116, 121), width=2)
+        draw.rectangle((0, 0, width - 1, height - 1), fill=fill, outline=(110, 116, 121), width=2)
         if not button or "side" not in button:
             return image
         labels = button["side"].get("labels", [])

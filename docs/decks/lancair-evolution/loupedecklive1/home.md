@@ -8,7 +8,7 @@ title: Loupedeck Live Home
 
 <div id="lancair-evolution-loupedecklive1-home-preview"></div>
 
-![Home preview](../../../assets/images/lancair-evolution/home.png)
+![Home preview](../../../assets/images/lancair-evolution/generated/home.page.png)
 
 ## Source
 

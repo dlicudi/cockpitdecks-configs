@@ -8,7 +8,7 @@ title: Loupedeck Live Audio Panel
 
 <div id="lancair-evolution-loupedecklive1-audiopanel-preview"></div>
 
-![Audio Panel preview](../../../assets/images/lancair-evolution/audiopanel.png)
+![Audio Panel preview](../../../assets/images/lancair-evolution/generated/audiopanel.page.png)
 
 ## Source
 
