@@ -6,12 +6,10 @@ title: Virtual Streamdeck XL Alternate index page
 
 # Alternate index page
 
-<div id="toliss-airbus-a330-neo-panels-index-alt-preview"></div>
-
 ![Alternate index page preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/index-alt.page.png)
 
 ## Source
 
-[:material-github: `panels/index-alt.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/index-alt.yaml)
+- [:material-github: `panels/index-alt.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/index-alt.yaml)
 
-Includes: [:material-source-branch: `popups.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/popups.yaml)
+- Includes: [:material-source-branch: `popups.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/popups.yaml)

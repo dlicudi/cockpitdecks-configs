@@ -6,12 +6,10 @@ title: Loupedeck Live Pedestal
 
 # Pedestal
 
-<div id="vans-aircraft-rv-10-loupedecklive1-pedestal-preview"></div>
-
 ![Pedestal preview](../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/pedestal.page.png)
 
 ## Source
 
-[:material-github: `loupedecklive1/pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/pedestal.yaml)
+- [:material-github: `loupedecklive1/pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/pedestal.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/encoders/encoders_pedestal.yaml)
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/encoders/encoders_pedestal.yaml)

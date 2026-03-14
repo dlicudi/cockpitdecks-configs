@@ -10,11 +10,6 @@ Virtual Streamdeck Mini layout for Airbus A330-900 with Trent 7000-72 engines, v
 
 ## Pages
 
-<div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="home/#toliss-airbus-a330-neo-vmini-index-preview">
-    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/vmini/index.page.png" alt="Home page preview" />
-    <div class="cdx-card__body">
-      <h3>Home</h3>
-    </div>
-  </a>
-</div>
+| Page | Preview |
+| --- | --- |
+| [Home](home.md) | ![Home preview](../../../assets/images/toliss-airbus-a330-neo/generated/vmini/index.page.png) |

@@ -6,12 +6,10 @@ title: Stream Deck XL Mfd
 
 # Mfd
 
-<div id="vans-aircraft-rv-10-streamdeckxl1-mfd-preview"></div>
-
 ![Mfd preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/mfd.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/mfd.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/mfd.yaml)
+- [:material-github: `streamdeckxl1/mfd.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/mfd.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/includes/pagerfull.yaml)

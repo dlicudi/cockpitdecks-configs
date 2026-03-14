@@ -6,12 +6,10 @@ title: Loupedeck Live Weather
 
 # Weather
 
-<div id="toliss-airbus-a320-neo-loupedecklive1-weather-preview"></div>
-
 ![Weather preview](../../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/weather.page.png)
 
 ## Source
 
-[:material-github: `loupedecklive1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/weather.yaml)
+- [:material-github: `loupedecklive1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/weather.yaml)
 
-Includes: [:material-source-branch: `includes/pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/pager.yaml) · [:material-source-branch: `includes/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/encoders_fcu.yaml)
+- Includes: [:material-source-branch: `includes/pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/pager.yaml) · [:material-source-branch: `includes/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/encoders_fcu.yaml)

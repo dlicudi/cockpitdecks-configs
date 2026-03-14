@@ -6,10 +6,8 @@ title: Virtual Loupedeck Live Include with all display popups for Loupedeck Live
 
 # Include with all display popups for Loupedeck Live
 
-<div id="toliss-airbus-a330-neo-fcu-popups-preview"></div>
-
 ![Include with all display popups for Loupedeck Live preview](../../../assets/images/toliss-airbus-a330-neo/generated/fcu/popups.page.png)
 
 ## Source
 
-[:material-github: `fcu/popups.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/popups.yaml)
+- [:material-github: `fcu/popups.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/popups.yaml)

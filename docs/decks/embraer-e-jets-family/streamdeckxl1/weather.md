@@ -6,12 +6,10 @@ title: Stream Deck XL Weather
 
 # Weather
 
-<div id="embraer-e-jets-family-streamdeckxl1-weather-preview"></div>
-
 ![Weather preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/weather.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/weather.yaml)
+- [:material-github: `streamdeckxl1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/weather.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)

@@ -6,10 +6,8 @@ title: Stream Deck XL Cabin and cargo door management
 
 # Cabin and cargo door management
 
-<div id="toliss-airbus-a321-neo-panels-doors-preview"></div>
-
 ![Cabin and cargo door management preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/doors.page.png)
 
 ## Source
 
-[:material-github: `panels/doors.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/doors.yaml)
+- [:material-github: `panels/doors.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/doors.yaml)

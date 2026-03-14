@@ -6,10 +6,8 @@ title: Stream Deck XL Piedestal (partial, project, prototype, uncompleted)
 
 # Piedestal (partial, project, prototype, uncompleted)
 
-<div id="toliss-airbus-a321-neo-panels-piedestal-preview"></div>
-
 ![Piedestal (partial, project, prototype, uncompleted) preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/piedestal.page.png)
 
 ## Source
 
-[:material-github: `panels/piedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/piedestal.yaml)
+- [:material-github: `panels/piedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/piedestal.yaml)

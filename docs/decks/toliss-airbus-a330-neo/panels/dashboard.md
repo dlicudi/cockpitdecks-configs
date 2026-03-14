@@ -6,10 +6,8 @@ title: Virtual Streamdeck XL Cockpitdecks Special Dashboard of A21N
 
 # Cockpitdecks Special Dashboard of A21N
 
-<div id="toliss-airbus-a330-neo-panels-dashboard-preview"></div>
-
 ![Cockpitdecks Special Dashboard of A21N preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/dashboard.page.png)
 
 ## Source
 
-[:material-github: `panels/dashboard.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/dashboard.yaml)
+- [:material-github: `panels/dashboard.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/dashboard.yaml)

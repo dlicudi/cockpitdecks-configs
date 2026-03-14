@@ -6,10 +6,8 @@ title: Virtual Streamdeck XL Fire panels (ATA 26)
 
 # Fire panels (ATA 26)
 
-<div id="toliss-airbus-a330-neo-panels-ovrhdfire-preview"></div>
-
 ![Fire panels (ATA 26) preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdfire.page.png)
 
 ## Source
 
-[:material-github: `panels/ovrhdfire.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdfire.yaml)
+- [:material-github: `panels/ovrhdfire.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdfire.yaml)

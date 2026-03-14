@@ -10,83 +10,18 @@ Stream Deck XL layout for Van's Aircraft RV-10.
 
 ## Pages
 
-<div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="home/#vans-aircraft-rv-10-streamdeckxl1-index-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/index.page.png" alt="Home page preview" />
-    <div class="cdx-card__body">
-      <h3>Home</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="engine/#vans-aircraft-rv-10-streamdeckxl1-engine-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/engine.page.png" alt="Engine page preview" />
-    <div class="cdx-card__body">
-      <h3>Engine</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="mfd/#vans-aircraft-rv-10-streamdeckxl1-mfd-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/mfd.page.png" alt="Mfd page preview" />
-    <div class="cdx-card__body">
-      <h3>Mfd</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="pfi/#vans-aircraft-rv-10-streamdeckxl1-pfi-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/pfi.page.png" alt="PFI page preview" />
-    <div class="cdx-card__body">
-      <h3>PFI</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="audiopanel/#vans-aircraft-rv-10-streamdeckxl1-audiopanel-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/audiopanel.page.png" alt="Audio Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Audio Panel</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="transponder/#vans-aircraft-rv-10-streamdeckxl1-transponder-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/transponder.page.png" alt="Transponder page preview" />
-    <div class="cdx-card__body">
-      <h3>Transponder</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="switches/#vans-aircraft-rv-10-streamdeckxl1-switches-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/switches.page.png" alt="Switches page preview" />
-    <div class="cdx-card__body">
-      <h3>Switches</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="weather/#vans-aircraft-rv-10-streamdeckxl1-weather-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/weather.page.png" alt="Weather page preview" />
-    <div class="cdx-card__body">
-      <h3>Weather</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="views/#vans-aircraft-rv-10-streamdeckxl1-views-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/views.page.png" alt="Views page preview" />
-    <div class="cdx-card__body">
-      <h3>Views</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="g1000/#vans-aircraft-rv-10-streamdeckxl1-g1000-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/g1000.page.png" alt="G1000 page preview" />
-    <div class="cdx-card__body">
-      <h3>G1000</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="trutrak_sorcerer/#vans-aircraft-rv-10-streamdeckxl1-trutrak_sorcerer-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/trutrak_sorcerer.page.png" alt="TruTrak Sorcerer page preview" />
-    <div class="cdx-card__body">
-      <h3>TruTrak Sorcerer</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="radio/#vans-aircraft-rv-10-streamdeckxl1-radio-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/radio.page.png" alt="Radio page preview" />
-    <div class="cdx-card__body">
-      <h3>Radio</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="fcu/#vans-aircraft-rv-10-streamdeckxl1-fcu-preview">
-    <img src="../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/fcu.page.png" alt="FCU page preview" />
-    <div class="cdx-card__body">
-      <h3>FCU</h3>
-    </div>
-  </a>
-</div>
+| Page | Preview |
+| --- | --- |
+| [Home](home.md) | ![Home preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/index.page.png) |
+| [Engine](engine.md) | ![Engine preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/engine.page.png) |
+| [Mfd](mfd.md) | ![Mfd preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/mfd.page.png) |
+| [PFI](pfi.md) | ![PFI preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/pfi.page.png) |
+| [Audio Panel](audiopanel.md) | ![Audio Panel preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/audiopanel.page.png) |
+| [Transponder](transponder.md) | ![Transponder preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/transponder.page.png) |
+| [Switches](switches.md) | ![Switches preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/switches.page.png) |
+| [Weather](weather.md) | ![Weather preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/weather.page.png) |
+| [Views](views.md) | ![Views preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/views.page.png) |
+| [G1000](g1000.md) | ![G1000 preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/g1000.page.png) |
+| [TruTrak Sorcerer](trutrak_sorcerer.md) | ![TruTrak Sorcerer preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/trutrak_sorcerer.page.png) |
+| [Radio](radio.md) | ![Radio preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/radio.page.png) |
+| [FCU](fcu.md) | ![FCU preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/fcu.page.png) |

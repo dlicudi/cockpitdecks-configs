@@ -6,12 +6,10 @@ title: Stream Deck XL FCU
 
 # FCU
 
-<div id="lancair-evolution-streamdeckxl1-fcu-preview"></div>
-
 ![FCU preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/fcu.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/fcu.yaml)
+- [:material-github: `streamdeckxl1/fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/fcu.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)

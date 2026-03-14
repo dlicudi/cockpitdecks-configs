@@ -6,10 +6,8 @@ title: Virtual Streamdeck XL Electric panel (ATA 24)
 
 # Electric panel (ATA 24)
 
-<div id="toliss-airbus-a330-neo-panels-ovrhdelec-preview"></div>
-
 ![Electric panel (ATA 24) preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdelec.page.png)
 
 ## Source
 
-[:material-github: `panels/ovrhdelec.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdelec.yaml)
+- [:material-github: `panels/ovrhdelec.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdelec.yaml)

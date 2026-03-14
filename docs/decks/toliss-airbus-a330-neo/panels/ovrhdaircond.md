@@ -6,10 +6,8 @@ title: Virtual Streamdeck XL Overhead AIR COND Panel (ATA 21)
 
 # Overhead AIR COND Panel (ATA 21)
 
-<div id="toliss-airbus-a330-neo-panels-ovrhdaircond-preview"></div>
-
 ![Overhead AIR COND Panel (ATA 21) preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdaircond.page.png)
 
 ## Source
 
-[:material-github: `panels/ovrhdaircond.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdaircond.yaml)
+- [:material-github: `panels/ovrhdaircond.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdaircond.yaml)

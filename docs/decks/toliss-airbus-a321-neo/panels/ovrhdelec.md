@@ -6,10 +6,8 @@ title: Stream Deck XL Overhead ELEC Panel
 
 # Overhead ELEC Panel
 
-<div id="toliss-airbus-a321-neo-panels-ovrhdelec-preview"></div>
-
 ![Overhead ELEC Panel preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdelec.page.png)
 
 ## Source
 
-[:material-github: `panels/ovrhdelec.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdelec.yaml)
+- [:material-github: `panels/ovrhdelec.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdelec.yaml)

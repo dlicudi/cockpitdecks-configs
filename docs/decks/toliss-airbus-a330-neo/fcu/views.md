@@ -6,10 +6,8 @@ title: Virtual Loupedeck Live Include with all views for Loupedeck Live
 
 # Include with all views for Loupedeck Live
 
-<div id="toliss-airbus-a330-neo-fcu-views-preview"></div>
-
 ![Include with all views for Loupedeck Live preview](../../../assets/images/toliss-airbus-a330-neo/generated/fcu/views.page.png)
 
 ## Source
 
-[:material-github: `fcu/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/views.yaml)
+- [:material-github: `fcu/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/views.yaml)

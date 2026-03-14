@@ -10,71 +10,16 @@ Stream Deck XL layout for Lancair Evolution.
 
 ## Pages
 
-<div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="home/#lancair-evolution-streamdeckxl1-index-preview">
-    <img src="../../../assets/images/lancair-evolution/generated/streamdeckxl1/index.page.png" alt="Home page preview" />
-    <div class="cdx-card__body">
-      <h3>Home</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="engine/#lancair-evolution-streamdeckxl1-engine-preview">
-    <img src="../../../assets/images/lancair-evolution/generated/streamdeckxl1/engine.page.png" alt="Engine page preview" />
-    <div class="cdx-card__body">
-      <h3>Engine</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="pfi/#lancair-evolution-streamdeckxl1-pfi-preview">
-    <img src="../../../assets/images/lancair-evolution/generated/streamdeckxl1/pfi.page.png" alt="PFI page preview" />
-    <div class="cdx-card__body">
-      <h3>PFI</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="g1000/#lancair-evolution-streamdeckxl1-g1000-preview">
-    <img src="../../../assets/images/lancair-evolution/generated/streamdeckxl1/g1000.page.png" alt="G1000 page preview" />
-    <div class="cdx-card__body">
-      <h3>G1000</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="audiopanel/#lancair-evolution-streamdeckxl1-audiopanel-preview">
-    <img src="../../../assets/images/lancair-evolution/generated/streamdeckxl1/audiopanel.page.png" alt="Audio Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Audio Panel</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="transponder/#lancair-evolution-streamdeckxl1-transponder-preview">
-    <img src="../../../assets/images/lancair-evolution/generated/streamdeckxl1/transponder.page.png" alt="Transponder page preview" />
-    <div class="cdx-card__body">
-      <h3>Transponder</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="switches/#lancair-evolution-streamdeckxl1-switches-preview">
-    <img src="../../../assets/images/lancair-evolution/generated/streamdeckxl1/switches.page.png" alt="Switches page preview" />
-    <div class="cdx-card__body">
-      <h3>Switches</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="weather/#lancair-evolution-streamdeckxl1-weather-preview">
-    <img src="../../../assets/images/lancair-evolution/generated/streamdeckxl1/weather.page.png" alt="Weather page preview" />
-    <div class="cdx-card__body">
-      <h3>Weather</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="views/#lancair-evolution-streamdeckxl1-views-preview">
-    <img src="../../../assets/images/lancair-evolution/generated/streamdeckxl1/views.page.png" alt="Views page preview" />
-    <div class="cdx-card__body">
-      <h3>Views</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="radio/#lancair-evolution-streamdeckxl1-radio-preview">
-    <img src="../../../assets/images/lancair-evolution/generated/streamdeckxl1/radio.page.png" alt="Radio page preview" />
-    <div class="cdx-card__body">
-      <h3>Radio</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="fcu/#lancair-evolution-streamdeckxl1-fcu-preview">
-    <img src="../../../assets/images/lancair-evolution/generated/streamdeckxl1/fcu.page.png" alt="FCU page preview" />
-    <div class="cdx-card__body">
-      <h3>FCU</h3>
-    </div>
-  </a>
-</div>
+| Page | Preview |
+| --- | --- |
+| [Home](home.md) | ![Home preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/index.page.png) |
+| [Engine](engine.md) | ![Engine preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/engine.page.png) |
+| [PFI](pfi.md) | ![PFI preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/pfi.page.png) |
+| [G1000](g1000.md) | ![G1000 preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/g1000.page.png) |
+| [Audio Panel](audiopanel.md) | ![Audio Panel preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/audiopanel.page.png) |
+| [Transponder](transponder.md) | ![Transponder preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/transponder.page.png) |
+| [Switches](switches.md) | ![Switches preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/switches.page.png) |
+| [Weather](weather.md) | ![Weather preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/weather.page.png) |
+| [Views](views.md) | ![Views preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/views.page.png) |
+| [Radio](radio.md) | ![Radio preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/radio.page.png) |
+| [FCU](fcu.md) | ![FCU preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/fcu.page.png) |

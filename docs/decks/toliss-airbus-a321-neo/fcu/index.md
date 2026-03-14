@@ -10,41 +10,11 @@ Loupedeck Live layout for Airbus A321-253NY (CFM LEAP-1A33).
 
 ## Pages
 
-<div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="home/#toliss-airbus-a321-neo-fcu-index-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/fcu/index.page.png" alt="Home page preview" />
-    <div class="cdx-card__body">
-      <h3>Home</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="fcu/#toliss-airbus-a321-neo-fcu-fcu-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/fcu/fcu.page.png" alt="FCU page preview" />
-    <div class="cdx-card__body">
-      <h3>FCU</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="toliss/#toliss-airbus-a321-neo-fcu-toliss-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/fcu/toliss.page.png" alt="Transponder and other communication for Loupedeck Live page preview" />
-    <div class="cdx-card__body">
-      <h3>Transponder and other communication for Loupedeck Live</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="popups/#toliss-airbus-a321-neo-fcu-popups-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/fcu/popups.page.png" alt="Include with all display popups for Loupedeck Live page preview" />
-    <div class="cdx-card__body">
-      <h3>Include with all display popups for Loupedeck Live</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="views/#toliss-airbus-a321-neo-fcu-views-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/fcu/views.page.png" alt="Include with all views for Loupedeck Live page preview" />
-    <div class="cdx-card__body">
-      <h3>Include with all views for Loupedeck Live</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="xpndr/#toliss-airbus-a321-neo-fcu-xpndr-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/fcu/xpndr.page.png" alt="Transponder and other communication for Loupedeck Live page preview" />
-    <div class="cdx-card__body">
-      <h3>Transponder and other communication for Loupedeck Live</h3>
-    </div>
-  </a>
-</div>
+| Page | Preview |
+| --- | --- |
+| [Home](home.md) | ![Home preview](../../../assets/images/toliss-airbus-a321-neo/generated/fcu/index.page.png) |
+| [FCU](fcu.md) | ![FCU preview](../../../assets/images/toliss-airbus-a321-neo/generated/fcu/fcu.page.png) |
+| [Transponder and other communication for Loupedeck Live](toliss.md) | ![Transponder and other communication for Loupedeck Live preview](../../../assets/images/toliss-airbus-a321-neo/generated/fcu/toliss.page.png) |
+| [Include with all display popups for Loupedeck Live](popups.md) | ![Include with all display popups for Loupedeck Live preview](../../../assets/images/toliss-airbus-a321-neo/generated/fcu/popups.page.png) |
+| [Include with all views for Loupedeck Live](views.md) | ![Include with all views for Loupedeck Live preview](../../../assets/images/toliss-airbus-a321-neo/generated/fcu/views.page.png) |
+| [Transponder and other communication for Loupedeck Live](xpndr.md) | ![Transponder and other communication for Loupedeck Live preview](../../../assets/images/toliss-airbus-a321-neo/generated/fcu/xpndr.page.png) |

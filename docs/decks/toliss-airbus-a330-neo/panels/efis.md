@@ -6,10 +6,8 @@ title: Virtual Streamdeck XL EFIS display selector + some FCU commands
 
 # EFIS display selector + some FCU commands
 
-<div id="toliss-airbus-a330-neo-panels-efis-preview"></div>
-
 ![EFIS display selector + some FCU commands preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/efis.page.png)
 
 ## Source
 
-[:material-github: `panels/efis.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/efis.yaml)
+- [:material-github: `panels/efis.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/efis.yaml)

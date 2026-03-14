@@ -6,12 +6,10 @@ title: Loupedeck Live Views
 
 # Views
 
-<div id="embraer-e-jets-family-loupedecklive1-views-preview"></div>
-
 ![Views preview](../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/views.page.png)
 
 ## Source
 
-[:material-github: `loupedecklive1/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/views.yaml)
+- [:material-github: `loupedecklive1/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/views.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)

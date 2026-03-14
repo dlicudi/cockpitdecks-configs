@@ -6,12 +6,10 @@ title: Virtual Streamdeck XL ToLiss aircraft specific actions, not available in 
 
 # ToLiss aircraft specific actions, not available in real aircraft...
 
-<div id="toliss-airbus-a330-neo-panels-toliss-preview"></div>
-
 ![ToLiss aircraft specific actions, not available in real aircraft... preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/toliss.page.png)
 
 ## Source
 
-[:material-github: `panels/toliss.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/toliss.yaml)
+- [:material-github: `panels/toliss.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/toliss.yaml)
 
-Includes: [:material-source-branch: `popups.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/popups.yaml)
+- Includes: [:material-source-branch: `popups.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/popups.yaml)

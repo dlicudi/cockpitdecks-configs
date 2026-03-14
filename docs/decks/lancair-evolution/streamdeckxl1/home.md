@@ -6,12 +6,10 @@ title: Stream Deck XL Home
 
 # Home
 
-<div id="lancair-evolution-streamdeckxl1-index-preview"></div>
-
 ![Home preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/index.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/index.yaml)
+- [:material-github: `streamdeckxl1/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/index.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)

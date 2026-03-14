@@ -6,10 +6,8 @@ title: Stream Deck XL Internal lights
 
 # Internal lights
 
-<div id="toliss-airbus-a321-neo-panels-intlights-preview"></div>
-
 ![Internal lights preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/intlights.page.png)
 
 ## Source
 
-[:material-github: `panels/intlights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/intlights.yaml)
+- [:material-github: `panels/intlights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/intlights.yaml)

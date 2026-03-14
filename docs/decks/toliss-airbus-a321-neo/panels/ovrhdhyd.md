@@ -6,10 +6,8 @@ title: Stream Deck XL Overhead Hydraulics Panel
 
 # Overhead Hydraulics Panel
 
-<div id="toliss-airbus-a321-neo-panels-ovrhdhyd-preview"></div>
-
 ![Overhead Hydraulics Panel preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdhyd.page.png)
 
 ## Source
 
-[:material-github: `panels/ovrhdhyd.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdhyd.yaml)
+- [:material-github: `panels/ovrhdhyd.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdhyd.yaml)

@@ -6,10 +6,8 @@ title: Virtual Streamdeck XL X-Plane specific actions, not linked to aircraft
 
 # X-Plane specific actions, not linked to aircraft
 
-<div id="toliss-airbus-a330-neo-panels-xplane-preview"></div>
-
 ![X-Plane specific actions, not linked to aircraft preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/xplane.page.png)
 
 ## Source
 
-[:material-github: `panels/xplane.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/xplane.yaml)
+- [:material-github: `panels/xplane.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/xplane.yaml)

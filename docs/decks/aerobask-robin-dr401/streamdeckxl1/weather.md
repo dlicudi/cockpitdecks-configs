@@ -6,12 +6,10 @@ title: Stream Deck XL Weather
 
 # Weather
 
-<div id="aerobask-robin-dr401-streamdeckxl1-weather-preview"></div>
-
 ![Weather preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/weather.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/streamdeckxl1/weather.yaml)
+- [:material-github: `streamdeckxl1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/streamdeckxl1/weather.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/streamdeckxl1/includes/pagerfull.yaml)

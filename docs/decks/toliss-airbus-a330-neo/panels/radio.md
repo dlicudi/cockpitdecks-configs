@@ -6,10 +6,8 @@ title: Virtual Streamdeck XL Radio panel
 
 # Radio panel
 
-<div id="toliss-airbus-a330-neo-panels-radio-preview"></div>
-
 ![Radio panel preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/radio.page.png)
 
 ## Source
 
-[:material-github: `panels/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/radio.yaml)
+- [:material-github: `panels/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/radio.yaml)

@@ -21,13 +21,13 @@ Metadata keys:
 
 | Aircraft | State | Runtime Tested | Hardware Verified | Known Issues | Planned | Auto Findings |
 | --- | --- | --- | --- | ---: | ---: | ---: |
-| <span class="cdx-truncate" title="Robin DR401">Robin DR401</span> | `unknown` | `unknown` | `unknown` | 0 | 0 | 0 |
-| <span class="cdx-truncate" title="Beechcraft Baron 58">Beechcraft Baron 58</span> | `unknown` | `unknown` | `unknown` | 0 | 0 | 0 |
-| <span class="cdx-truncate" title="Cessna 172 SP">Cessna 172 SP</span> | `unknown` | `unknown` | `unknown` | 0 | 0 | 0 |
-| <span class="cdx-truncate" title="Cirrus SR22">Cirrus SR22</span> | `stable` | `yes` | `unknown` | 0 | 0 | 0 |
-| <span class="cdx-truncate" title="E170, E175, E190, E195">E170, E175, E190, E195</span> | `unknown` | `unknown` | `unknown` | 0 | 0 | 1 |
-| <span class="cdx-truncate" title="Lancair Evolution">Lancair Evolution</span> | `active` | `yes` | `yes` | 0 | 1 | 0 |
-| <span class="cdx-truncate" title="Toliss Airbus A320neo">Toliss Airbus A320neo</span> | `unknown` | `unknown` | `unknown` | 0 | 0 | 0 |
-| <span class="cdx-truncate" title="Airbus A321-253NY (CFM LEAP-1A33)">Toliss Airbus A321 Neo</span> | `unknown` | `unknown` | `unknown` | 0 | 0 | 2 |
-| <span class="cdx-truncate" title="Airbus A330-900 with Trent 7000-72 engines, version 251t (Airbus A330-941N)">Toliss Airbus A330 Neo</span> | `unknown` | `unknown` | `unknown` | 0 | 0 | 5 |
-| <span class="cdx-truncate" title="Van&#x27;s Aircraft RV-10">Van's Aircraft RV-10</span> | `active` | `unknown` | `unknown` | 0 | 0 | 0 |
+| Robin DR401 | `unknown` | `unknown` | `unknown` | 0 | 0 | 0 |
+| Beechcraft Baron 58 | `unknown` | `unknown` | `unknown` | 0 | 0 | 0 |
+| Cessna 172 SP | `unknown` | `unknown` | `unknown` | 0 | 0 | 0 |
+| Cirrus SR22 | `stable` | `yes` | `unknown` | 0 | 0 | 0 |
+| E170, E175, E190, E195 | `unknown` | `unknown` | `unknown` | 0 | 0 | 1 |
+| Lancair Evolution | `active` | `yes` | `yes` | 0 | 1 | 0 |
+| Toliss Airbus A320neo | `unknown` | `unknown` | `unknown` | 0 | 0 | 0 |
+| Toliss Airbus A321 Neo | `unknown` | `unknown` | `unknown` | 0 | 0 | 2 |
+| Toliss Airbus A330 Neo | `unknown` | `unknown` | `unknown` | 0 | 0 | 5 |
+| Van's Aircraft RV-10 | `active` | `unknown` | `unknown` | 0 | 0 | 0 |

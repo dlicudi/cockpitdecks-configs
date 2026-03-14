@@ -9,7 +9,6 @@ from typing import Any
 import os
 import re
 import tempfile
-from html import escape
 
 import yaml
 
@@ -85,10 +84,11 @@ def rel_image_path(path: Path, doc_path: Path) -> str:
 
 
 def built_page_asset_path(path: Path, doc_path: Path) -> str:
-    rel_to_docs = path.relative_to(ROOT / "docs")
-    rel_doc = doc_path.relative_to(ROOT / "docs")
-    depth = len(rel_doc.parent.parts) + (0 if rel_doc.name == "index.md" else 1)
-    return "../" * depth + str(rel_to_docs).replace("\\", "/")
+    return os.path.relpath(path, doc_path.parent).replace("\\", "/")
+
+
+def rel_doc_link(target: Path, doc_path: Path) -> str:
+    return os.path.relpath(target, doc_path.parent).replace("\\", "/")
 
 
 def repo_blob_url(path: Path) -> str:
@@ -384,12 +384,7 @@ def render_layout_page_images(slug: str, layout: dict[str, Any]) -> dict[Path, P
     return expected_images
 
 
-def page_anchor_id(slug: str, layout_name: str, page_name: str) -> str:
-    return f"{slug}-{layout_name}-{page_name}-preview"
-
-
 def build_layout_page(aircraft_title: str, title: str, layout: dict[str, Any], page_docs: list[dict[str, str]]) -> str:
-    style = str(layout["docs"].get("style") or "cards").strip().lower()
     lines = [
         "---",
         "icon: material/dialpad",
@@ -401,35 +396,14 @@ def build_layout_page(aircraft_title: str, title: str, layout: dict[str, Any], p
         "",
         f"{title} layout for {aircraft_title}.",
         "",
-        "## Pages" if style != "deck-map" else "## Deck Map",
+        "## Pages",
         "",
+        "| Page | Preview |",
+        "| --- | --- |",
     ]
-    if style == "deck-map":
-        lines.append('<div class="cdx-deck">')
-        for page in page_docs:
-            lines.extend(
-                [
-                    f'  <a class="cdx-deck__key" href="{page["href"]}" data-preview>',
-                    f'    <img src="{page["image"]}" alt="{page["title"]} page preview" />',
-                    f'    <span>{page["title"]}</span>',
-                    "  </a>",
-                ]
-            )
-        lines.extend(["</div>", ""])
-    else:
-        lines.append('<div class="cdx-grid cdx-grid--cards">')
-        for page in page_docs:
-            lines.extend(
-                [
-                    f'  <a class="cdx-card" href="{page["href"]}">',
-                    f'    <img src="{page["image"]}" alt="{page["title"]} page preview" />',
-                    '    <div class="cdx-card__body">',
-                    f'      <h3>{page["title"]}</h3>',
-                    "    </div>",
-                    "  </a>",
-                ]
-            )
-        lines.extend(["</div>", ""])
+    for page in page_docs:
+        lines.append(f'| [{page["title"]}]({page["href"]}) | ![{page["title"]} preview]({page["image"]}) |')
+    lines.append("")
     return "\n".join(lines)
 
 
@@ -450,13 +424,11 @@ def build_page_doc(slug: str, layout_name: str, layout_title: str, page_path: Pa
         "",
         f"# {title}",
         "",
-        f'<div id="{page_anchor_id(slug, layout_name, page_name)}"></div>',
-        "",
         f"![{title} preview]({image_ref})",
         "",
         "## Source",
         "",
-        f'[:material-github: `{page_path.parent.name}/{page_path.name}`]({repo_blob_url(page_path)})',
+        f'- [:material-github: `{page_path.parent.name}/{page_path.name}`]({repo_blob_url(page_path)})',
     ]
 
     if includes:
@@ -467,7 +439,7 @@ def build_page_doc(slug: str, layout_name: str, layout_title: str, page_path: Pa
                 include_links.append(f'[:material-source-branch: `{include}.yaml`]({repo_blob_url(include_path)})')
             else:
                 include_links.append(f"`{include}.yaml`")
-        lines.extend(["", "Includes: " + " · ".join(include_links)])
+        lines.extend(["", "- Includes: " + " · ".join(include_links)])
 
     lines.append("")
     return "\n".join(lines)
@@ -506,7 +478,7 @@ def generate_layout_docs(slug: str, config: dict[str, Any], deckconfig_dir: Path
             page_docs.append(
                 {
                     "title": page_title(page_path),
-                    "href": f'{doc_stem}/#{page_anchor_id(slug, layout["layout"], page_name)}',
+                    "href": f"{doc_stem}.md",
                     "image": built_page_asset_path(page_images[page_path], layout_doc_dir / "index.md"),
                 }
             )
@@ -545,45 +517,30 @@ def build_overview(slug: str, config: dict[str, Any], docs_meta: dict[str, Any],
         "",
         f"# {title}",
         "",
-        '<div class="cdx-hero cdx-hero--compact">',
-        '  <div class="cdx-hero__copy">',
     ]
     if eyebrow:
-        lines.append(f'    <p class="cdx-eyebrow">{eyebrow}</p>')
+        lines.extend([f"*{eyebrow}*", ""])
     lines.extend(
         [
-            f"    <h1>{title}</h1>",
-            '    <p class="cdx-lead">',
-            f"      {summary}",
-            "    </p>",
+            summary,
+            "",
         ]
     )
     if tags:
-        tag_html = " ".join(f"<code>{tag}</code>" for tag in tags)
-        lines.append(f"    <p>{tag_html}</p>")
-    lines.extend(["  </div>", '  <div class="cdx-hero__visual">'])
+        lines.extend([f"Tags: {' · '.join(f'`{tag}`' for tag in tags)}", ""])
     if hero_src:
-        lines.append(f'    <img src="{hero_src}" alt="{hero_alt}" />')
-    lines.extend(["  </div>", "</div>", "", "## Layouts", ""])
+        lines.extend([f"![{hero_alt}]({hero_src})", ""])
+    lines.extend(["## Layouts", ""])
 
     if layouts:
-        lines.append('<div class="cdx-grid cdx-grid--cards">')
+        lines.extend(["| Layout | Summary |", "| --- | --- |"])
         for layout in layouts:
             layout_doc = ROOT / "docs" / "decks" / slug / layout["layout"] / "index.md"
-            href = f"{layout['layout']}/" if layout_doc.exists() else "#"
+            href = rel_doc_link(layout_doc, doc_path) if layout_doc.exists() else "#"
             page_count = len(layout["pages"])
             summary = f"`{layout['type']}` layout with {page_count} page{'s' if page_count != 1 else ''}."
-            lines.extend(
-                [
-                    f'  <a class="cdx-card" href="{href}">',
-                    '    <div class="cdx-card__body">',
-                    f'      <h3>{layout["title"]}</h3>',
-                    f'      <p>{summary}</p>',
-                    "    </div>",
-                    "  </a>",
-                ]
-            )
-        lines.append("</div>")
+            label = f"[{layout['title']}]({href})" if href != "#" else layout["title"]
+            lines.append(f"| {label} | {summary} |")
     else:
         lines.append("- No layout metadata found.")
         lines.append("")
@@ -810,14 +767,9 @@ def build_status_page(aircraft_records: list[dict[str, Any]]) -> str:
         "| --- | --- | --- | --- | ---: | ---: | ---: |",
     ]
 
-    def truncate(text: str, full_text: str | None = None) -> str:
-        display = escape(text, quote=False)
-        title = escape(full_text or text, quote=True)
-        return f'<span class="cdx-truncate" title="{title}">{display}</span>'
-
     for row in aircraft_rows:
         lines.append(
-            f"| {truncate(row['aircraft'], row['aircraft_full'])} | `{row['state']}` | `{row['runtime_tested']}` | `{row['hardware_verified']}` | {row['manual_issues']} | {row['planned']} | {row['auto_findings']} |"
+            f"| {row['aircraft']} | `{row['state']}` | `{row['runtime_tested']}` | `{row['hardware_verified']}` | {row['manual_issues']} | {row['planned']} | {row['auto_findings']} |"
         )
 
     lines.append("")
@@ -832,21 +784,12 @@ def build_index(aircraft_entries: list[dict[str, str]]) -> str:
         "",
         "Browse the available config-driven deck docs.",
         "",
-        '<div class="cdx-grid cdx-grid--cards">',
+        "| Aircraft | Summary |",
+        "| --- | --- |",
     ]
     for entry in aircraft_entries:
-        lines.extend(
-            [
-                f'  <a class="cdx-card" href="{entry["href"]}">',
-                f'    <img src="{entry["image"]}" alt="{entry["title"]}" />',
-                '    <div class="cdx-card__body">',
-                f'      <h3>{entry["title"]}</h3>',
-                f'      <p>{entry["summary"]}</p>',
-                "    </div>",
-                "  </a>",
-            ]
-        )
-    lines.extend(["</div>", ""])
+        lines.append(f'| [{entry["title"]}]({entry["href"]}) | {entry["summary"]} |')
+    lines.append("")
     return "\n".join(lines)
 
 
@@ -887,7 +830,7 @@ def main() -> int:
             image_ref = "../assets/images/Loupedeck_live.png"
         aircraft_entries.append(
             {
-                "href": f"{slug}/",
+                "href": f"{slug}/index.md",
                 "image": image_ref,
                 "title": title,
                 "summary": summary,

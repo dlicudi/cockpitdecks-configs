@@ -6,12 +6,10 @@ title: Loupedeck Live Engine
 
 # Engine
 
-<div id="aerobask-robin-dr401-loupedecklive1-engine-preview"></div>
-
 ![Engine preview](../../../assets/images/aerobask-robin-dr401/generated/loupedecklive1/engine.page.png)
 
 ## Source
 
-[:material-github: `loupedecklive1/engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/engine.yaml)
+- [:material-github: `loupedecklive1/engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/engine.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)

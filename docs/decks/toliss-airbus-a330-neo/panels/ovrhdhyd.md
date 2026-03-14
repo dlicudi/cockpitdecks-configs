@@ -6,10 +6,8 @@ title: Virtual Streamdeck XL Hydraulics (ATA 29)
 
 # Hydraulics (ATA 29)
 
-<div id="toliss-airbus-a330-neo-panels-ovrhdhyd-preview"></div>
-
 ![Hydraulics (ATA 29) preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdhyd.page.png)
 
 ## Source
 
-[:material-github: `panels/ovrhdhyd.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdhyd.yaml)
+- [:material-github: `panels/ovrhdhyd.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdhyd.yaml)

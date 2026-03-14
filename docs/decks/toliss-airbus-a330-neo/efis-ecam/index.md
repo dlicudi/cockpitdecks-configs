@@ -10,17 +10,7 @@ Virtual Streamdeck MK.2 layout for Airbus A330-900 with Trent 7000-72 engines, v
 
 ## Pages
 
-<div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="home/#toliss-airbus-a330-neo-efis-ecam-index-preview">
-    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/index.page.png" alt="Home page preview" />
-    <div class="cdx-card__body">
-      <h3>Home</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="efis/#toliss-airbus-a330-neo-efis-ecam-efis-preview">
-    <img src="../../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/efis.page.png" alt="EFIS display selector + some FCU commands for Streamdeck 15 keys page preview" />
-    <div class="cdx-card__body">
-      <h3>EFIS display selector + some FCU commands for Streamdeck 15 keys</h3>
-    </div>
-  </a>
-</div>
+| Page | Preview |
+| --- | --- |
+| [Home](home.md) | ![Home preview](../../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/index.page.png) |
+| [EFIS display selector + some FCU commands for Streamdeck 15 keys](efis.md) | ![EFIS display selector + some FCU commands for Streamdeck 15 keys preview](../../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/efis.page.png) |

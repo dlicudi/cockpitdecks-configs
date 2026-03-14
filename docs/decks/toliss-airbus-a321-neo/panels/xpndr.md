@@ -6,10 +6,8 @@ title: Stream Deck XL Transponder and related controls
 
 # Transponder and related controls
 
-<div id="toliss-airbus-a321-neo-panels-xpndr-preview"></div>
-
 ![Transponder and related controls preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/xpndr.page.png)
 
 ## Source
 
-[:material-github: `panels/xpndr.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/xpndr.yaml)
+- [:material-github: `panels/xpndr.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/xpndr.yaml)

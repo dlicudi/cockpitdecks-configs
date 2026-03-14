@@ -6,12 +6,10 @@ title: Stream Deck XL Engine
 
 # Engine
 
-<div id="vans-aircraft-rv-10-streamdeckxl1-engine-preview"></div>
-
 ![Engine preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/engine.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/engine.yaml)
+- [:material-github: `streamdeckxl1/engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/engine.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/includes/pagerfull.yaml)

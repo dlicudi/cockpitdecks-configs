@@ -4,75 +4,15 @@
 
 Browse the available config-driven deck docs.
 
-<div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="aerobask-robin-dr401/">
-    <img src="../assets/images/aerobask-robin-dr401/audiopanel.png" alt="Robin DR401" />
-    <div class="cdx-card__body">
-      <h3>Robin DR401</h3>
-      <p>Decks for Robin DR401</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="beechcraft-baron-58/">
-    <img src="../assets/images/beechcraft-baron-58/beechcraft-baron-58.png" alt="Beechcraft Baron 58" />
-    <div class="cdx-card__body">
-      <h3>Beechcraft Baron 58</h3>
-      <p>Decks for Beechcraft Baron 58</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="cessna-172-sp/">
-    <img src="../assets/images/cessna-172-sp/cessna-172-sp.png" alt="Cessna 172 SP" />
-    <div class="cdx-card__body">
-      <h3>Cessna 172 SP</h3>
-      <p>Decks for Cessna 172 SP</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="cirrus-sr22/">
-    <img src="../assets/images/cirrus-sr22/cirrus-sr22.png" alt="Cirrus SR22" />
-    <div class="cdx-card__body">
-      <h3>Cirrus SR22</h3>
-      <p>G1000-oriented layout for the Loupedeck Live, tuned for fast in-flight page switching and practical SR22 workflows.</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="embraer-e-jets-family/">
-    <img src="../assets/images/Loupedeck_live.png" alt="E170, E175, E190, E195" />
-    <div class="cdx-card__body">
-      <h3>E170, E175, E190, E195</h3>
-      <p>Decks</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="lancair-evolution/">
-    <img src="../assets/images/lancair-evolution/lancair-evolution-banner.jpg" alt="Lancair Evolution" />
-    <div class="cdx-card__body">
-      <h3>Lancair Evolution</h3>
-      <p>Decks for Lancair Evolution</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="toliss-airbus-a320-neo/">
-    <img src="../assets/images/Loupedeck_live.png" alt="Toliss Airbus A320neo" />
-    <div class="cdx-card__body">
-      <h3>Toliss Airbus A320neo</h3>
-      <p>Decks for Toliss Airbus A320neo</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="toliss-airbus-a321-neo/">
-    <img src="../assets/images/Loupedeck_live.png" alt="Airbus A321-253NY (CFM LEAP-1A33)" />
-    <div class="cdx-card__body">
-      <h3>Airbus A321-253NY (CFM LEAP-1A33)</h3>
-      <p>Definition of decks for Toliss A321 + neo add-on (neo variant is XLR but all three variants use same cockpit)</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="toliss-airbus-a330-neo/">
-    <img src="../assets/images/Loupedeck_live.png" alt="Airbus A330-900 with Trent 7000-72 engines, version 251t (Airbus A330-941N)" />
-    <div class="cdx-card__body">
-      <h3>Airbus A330-900 with Trent 7000-72 engines, version 251t (Airbus A330-941N)</h3>
-      <p>Definition of decks for ToLiss A330neo</p>
-    </div>
-  </a>
-  <a class="cdx-card" href="vans-aircraft-rv-10/">
-    <img src="../assets/images/Loupedeck_live.png" alt="Van's Aircraft RV-10" />
-    <div class="cdx-card__body">
-      <h3>Van's Aircraft RV-10</h3>
-      <p>Decks for RV-10</p>
-    </div>
-  </a>
-</div>
+| Aircraft | Summary |
+| --- | --- |
+| [Robin DR401](aerobask-robin-dr401/index.md) | Decks for Robin DR401 |
+| [Beechcraft Baron 58](beechcraft-baron-58/index.md) | Decks for Beechcraft Baron 58 |
+| [Cessna 172 SP](cessna-172-sp/index.md) | Decks for Cessna 172 SP |
+| [Cirrus SR22](cirrus-sr22/index.md) | G1000-oriented layout for the Loupedeck Live, tuned for fast in-flight page switching and practical SR22 workflows. |
+| [E170, E175, E190, E195](embraer-e-jets-family/index.md) | Decks |
+| [Lancair Evolution](lancair-evolution/index.md) | Decks for Lancair Evolution |
+| [Toliss Airbus A320neo](toliss-airbus-a320-neo/index.md) | Decks for Toliss Airbus A320neo |
+| [Airbus A321-253NY (CFM LEAP-1A33)](toliss-airbus-a321-neo/index.md) | Definition of decks for Toliss A321 + neo add-on (neo variant is XLR but all three variants use same cockpit) |
+| [Airbus A330-900 with Trent 7000-72 engines, version 251t (Airbus A330-941N)](toliss-airbus-a330-neo/index.md) | Definition of decks for ToLiss A330neo |
+| [Van's Aircraft RV-10](vans-aircraft-rv-10/index.md) | Decks for RV-10 |

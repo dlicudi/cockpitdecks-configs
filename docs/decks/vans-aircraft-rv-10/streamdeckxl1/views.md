@@ -6,12 +6,10 @@ title: Stream Deck XL Views
 
 # Views
 
-<div id="vans-aircraft-rv-10-streamdeckxl1-views-preview"></div>
-
 ![Views preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/views.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/views.yaml)
+- [:material-github: `streamdeckxl1/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/views.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/includes/pagerfull.yaml)

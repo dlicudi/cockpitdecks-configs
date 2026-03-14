@@ -8,51 +8,18 @@ icon: material/dialpad
 
 Loupedeck Live layout for Cirrus SR22.
 
-## Deck Map
+## Pages
 
-<div class="cdx-deck">
-  <a class="cdx-deck__key" href="home/#cirrus-sr22-loupedecklive1-index-preview" data-preview>
-    <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/index.page.png" alt="Home page preview" />
-    <span>Home</span>
-  </a>
-  <a class="cdx-deck__key" href="pfi/#cirrus-sr22-loupedecklive1-pfi-preview" data-preview>
-    <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/pfi.page.png" alt="PFI page preview" />
-    <span>PFI</span>
-  </a>
-  <a class="cdx-deck__key" href="switches/#cirrus-sr22-loupedecklive1-switches-preview" data-preview>
-    <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/switches.page.png" alt="Switches page preview" />
-    <span>Switches</span>
-  </a>
-  <a class="cdx-deck__key" href="fcu/#cirrus-sr22-loupedecklive1-fcu-preview" data-preview>
-    <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/fcu.page.png" alt="FCU page preview" />
-    <span>FCU</span>
-  </a>
-  <a class="cdx-deck__key" href="radio/#cirrus-sr22-loupedecklive1-radio-preview" data-preview>
-    <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/radio.page.png" alt="Radio page preview" />
-    <span>Radio</span>
-  </a>
-  <a class="cdx-deck__key" href="engine/#cirrus-sr22-loupedecklive1-engine-preview" data-preview>
-    <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/engine.page.png" alt="Engine page preview" />
-    <span>Engine</span>
-  </a>
-  <a class="cdx-deck__key" href="pedestal/#cirrus-sr22-loupedecklive1-pedestal-preview" data-preview>
-    <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/pedestal.page.png" alt="Pedestal page preview" />
-    <span>Pedestal</span>
-  </a>
-  <a class="cdx-deck__key" href="transponder/#cirrus-sr22-loupedecklive1-transponder-preview" data-preview>
-    <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/transponder.page.png" alt="Transponder page preview" />
-    <span>Transponder</span>
-  </a>
-  <a class="cdx-deck__key" href="gcu478/#cirrus-sr22-loupedecklive1-gcu478-preview" data-preview>
-    <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/gcu478.page.png" alt="GCU478 page preview" />
-    <span>GCU478</span>
-  </a>
-  <a class="cdx-deck__key" href="weather/#cirrus-sr22-loupedecklive1-weather-preview" data-preview>
-    <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/weather.page.png" alt="Weather page preview" />
-    <span>Weather</span>
-  </a>
-  <a class="cdx-deck__key" href="views/#cirrus-sr22-loupedecklive1-views-preview" data-preview>
-    <img src="../../../assets/images/cirrus-sr22/generated/loupedecklive1/views.page.png" alt="Views page preview" />
-    <span>Views</span>
-  </a>
-</div>
+| Page | Preview |
+| --- | --- |
+| [Home](home.md) | ![Home preview](../../../assets/images/cirrus-sr22/generated/loupedecklive1/index.page.png) |
+| [PFI](pfi.md) | ![PFI preview](../../../assets/images/cirrus-sr22/generated/loupedecklive1/pfi.page.png) |
+| [Switches](switches.md) | ![Switches preview](../../../assets/images/cirrus-sr22/generated/loupedecklive1/switches.page.png) |
+| [FCU](fcu.md) | ![FCU preview](../../../assets/images/cirrus-sr22/generated/loupedecklive1/fcu.page.png) |
+| [Radio](radio.md) | ![Radio preview](../../../assets/images/cirrus-sr22/generated/loupedecklive1/radio.page.png) |
+| [Engine](engine.md) | ![Engine preview](../../../assets/images/cirrus-sr22/generated/loupedecklive1/engine.page.png) |
+| [Pedestal](pedestal.md) | ![Pedestal preview](../../../assets/images/cirrus-sr22/generated/loupedecklive1/pedestal.page.png) |
+| [Transponder](transponder.md) | ![Transponder preview](../../../assets/images/cirrus-sr22/generated/loupedecklive1/transponder.page.png) |
+| [GCU478](gcu478.md) | ![GCU478 preview](../../../assets/images/cirrus-sr22/generated/loupedecklive1/gcu478.page.png) |
+| [Weather](weather.md) | ![Weather preview](../../../assets/images/cirrus-sr22/generated/loupedecklive1/weather.page.png) |
+| [Views](views.md) | ![Views preview](../../../assets/images/cirrus-sr22/generated/loupedecklive1/views.page.png) |

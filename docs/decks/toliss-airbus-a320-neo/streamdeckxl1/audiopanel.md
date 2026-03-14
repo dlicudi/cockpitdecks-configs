@@ -6,12 +6,10 @@ title: Stream Deck XL Audio Panel
 
 # Audio Panel
 
-<div id="toliss-airbus-a320-neo-streamdeckxl1-audiopanel-preview"></div>
-
 ![Audio Panel preview](../../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/audiopanel.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/audiopanel.yaml)
+- [:material-github: `streamdeckxl1/audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/audiopanel.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_radio.yaml`
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_radio.yaml`

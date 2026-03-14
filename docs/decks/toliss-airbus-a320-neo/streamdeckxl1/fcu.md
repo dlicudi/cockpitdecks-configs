@@ -6,12 +6,10 @@ title: Stream Deck XL FCU
 
 # FCU
 
-<div id="toliss-airbus-a320-neo-streamdeckxl1-fcu-preview"></div>
-
 ![FCU preview](../../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/fcu.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/fcu.yaml)
+- [:material-github: `streamdeckxl1/fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/fcu.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml)
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml)

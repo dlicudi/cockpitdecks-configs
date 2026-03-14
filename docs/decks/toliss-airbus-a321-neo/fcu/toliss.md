@@ -6,12 +6,10 @@ title: Loupedeck Live Transponder and other communication for Loupedeck Live
 
 # Transponder and other communication for Loupedeck Live
 
-<div id="toliss-airbus-a321-neo-fcu-toliss-preview"></div>
-
 ![Transponder and other communication for Loupedeck Live preview](../../../assets/images/toliss-airbus-a321-neo/generated/fcu/toliss.page.png)
 
 ## Source
 
-[:material-github: `fcu/toliss.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/toliss.yaml)
+- [:material-github: `fcu/toliss.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/toliss.yaml)
 
-Includes: [:material-source-branch: `views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/views.yaml)
+- Includes: [:material-source-branch: `views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/views.yaml)

@@ -6,10 +6,8 @@ title: Stream Deck XL Home
 
 # Home
 
-<div id="toliss-airbus-a321-neo-panels-index-preview"></div>
-
 ![Home preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/index.page.png)
 
 ## Source
 
-[:material-github: `panels/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/index.yaml)
+- [:material-github: `panels/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/index.yaml)

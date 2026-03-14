@@ -6,12 +6,10 @@ title: Stream Deck XL Engine
 
 # Engine
 
-<div id="lancair-evolution-streamdeckxl1-engine-preview"></div>
-
 ![Engine preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/engine.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/engine.yaml)
+- [:material-github: `streamdeckxl1/engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/engine.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)

@@ -6,12 +6,10 @@ title: Stream Deck XL Audio Panel
 
 # Audio Panel
 
-<div id="vans-aircraft-rv-10-streamdeckxl1-audiopanel-preview"></div>
-
 ![Audio Panel preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/audiopanel.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/audiopanel.yaml)
+- [:material-github: `streamdeckxl1/audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/audiopanel.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/includes/pagerfull.yaml)

@@ -6,10 +6,8 @@ title: Loupedeck Live Home
 
 # Home
 
-<div id="toliss-airbus-a321-neo-fcu-index-preview"></div>
-
 ![Home preview](../../../assets/images/toliss-airbus-a321-neo/generated/fcu/index.page.png)
 
 ## Source
 
-[:material-github: `fcu/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/index.yaml)
+- [:material-github: `fcu/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/index.yaml)

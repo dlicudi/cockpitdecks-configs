@@ -6,10 +6,8 @@ title: Virtual Streamdeck XL Pedestal
 
 # Pedestal
 
-<div id="toliss-airbus-a330-neo-panels-piedestal-preview"></div>
-
 ![Pedestal preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/piedestal.page.png)
 
 ## Source
 
-[:material-github: `panels/piedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/piedestal.yaml)
+- [:material-github: `panels/piedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/piedestal.yaml)

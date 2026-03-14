@@ -6,12 +6,10 @@ title: Loupedeck Live FCU
 
 # FCU
 
-<div id="toliss-airbus-a321-neo-fcu-fcu-preview"></div>
-
 ![FCU preview](../../../assets/images/toliss-airbus-a321-neo/generated/fcu/fcu.page.png)
 
 ## Source
 
-[:material-github: `fcu/fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/fcu.yaml)
+- [:material-github: `fcu/fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/fcu.yaml)
 
-Includes: [:material-source-branch: `views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/views.yaml)
+- Includes: [:material-source-branch: `views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/views.yaml)

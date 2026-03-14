@@ -10,131 +10,26 @@ Stream Deck XL layout for Airbus A321-253NY (CFM LEAP-1A33).
 
 ## Pages
 
-<div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="home/#toliss-airbus-a321-neo-panels-index-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/index.page.png" alt="Home page preview" />
-    <div class="cdx-card__body">
-      <h3>Home</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="ovrhdaircond/#toliss-airbus-a321-neo-panels-ovrhdaircond-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdaircond.page.png" alt="Overhead AIR COND Panel with annunciator buttons page preview" />
-    <div class="cdx-card__body">
-      <h3>Overhead AIR COND Panel with annunciator buttons</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="intlights/#toliss-airbus-a321-neo-panels-intlights-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/intlights.page.png" alt="Internal lights page preview" />
-    <div class="cdx-card__body">
-      <h3>Internal lights</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="index-alt/#toliss-airbus-a321-neo-panels-index-alt-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/index-alt.page.png" alt="ALternate index page page preview" />
-    <div class="cdx-card__body">
-      <h3>ALternate index page</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="adirs/#toliss-airbus-a321-neo-panels-adirs-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/adirs.page.png" alt="ADIRS Start/stop page preview" />
-    <div class="cdx-card__body">
-      <h3>ADIRS Start/stop</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="aptnav/#toliss-airbus-a321-neo-panels-aptnav-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/aptnav.page.png" alt="Airport-navigator dashboard page preview" />
-    <div class="cdx-card__body">
-      <h3>Airport-navigator dashboard</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="cockpitdecks/#toliss-airbus-a321-neo-panels-cockpitdecks-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/cockpitdecks.page.png" alt="Cockpitdecks specific actions, not linked to aircraft page preview" />
-    <div class="cdx-card__body">
-      <h3>Cockpitdecks specific actions, not linked to aircraft</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="dashboard/#toliss-airbus-a321-neo-panels-dashboard-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/dashboard.page.png" alt="Cockpitdecks Special Dashboard of A21N page preview" />
-    <div class="cdx-card__body">
-      <h3>Cockpitdecks Special Dashboard of A21N</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="doors/#toliss-airbus-a321-neo-panels-doors-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/doors.page.png" alt="Cabin and cargo door management page preview" />
-    <div class="cdx-card__body">
-      <h3>Cabin and cargo door management</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="ecam/#toliss-airbus-a321-neo-panels-ecam-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/ecam.page.png" alt="ECAM display selector page preview" />
-    <div class="cdx-card__body">
-      <h3>ECAM display selector</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="efis/#toliss-airbus-a321-neo-panels-efis-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/efis.page.png" alt="EFIS display selector + some FCU commands page preview" />
-    <div class="cdx-card__body">
-      <h3>EFIS display selector + some FCU commands</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="ovrhdelec/#toliss-airbus-a321-neo-panels-ovrhdelec-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdelec.page.png" alt="Overhead ELEC Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Overhead ELEC Panel</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="ovrhdfire/#toliss-airbus-a321-neo-panels-ovrhdfire-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdfire.page.png" alt="Overhead FIRE Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Overhead FIRE Panel</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="ovrhdfuel/#toliss-airbus-a321-neo-panels-ovrhdfuel-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdfuel.page.png" alt="Overhead Fuel Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Overhead Fuel Panel</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="ovrhdhyd/#toliss-airbus-a321-neo-panels-ovrhdhyd-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdhyd.page.png" alt="Overhead Hydraulics Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Overhead Hydraulics Panel</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="piedestal/#toliss-airbus-a321-neo-panels-piedestal-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/piedestal.page.png" alt="Piedestal (partial, project, prototype, uncompleted) page preview" />
-    <div class="cdx-card__body">
-      <h3>Piedestal (partial, project, prototype, uncompleted)</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="popups/#toliss-airbus-a321-neo-panels-popups-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/popups.page.png" alt="All popups on pos. 16 to 28 page preview" />
-    <div class="cdx-card__body">
-      <h3>All popups on pos. 16 to 28</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="radio/#toliss-airbus-a321-neo-panels-radio-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/radio.page.png" alt="RAdio control page preview" />
-    <div class="cdx-card__body">
-      <h3>RAdio control</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="toliss/#toliss-airbus-a321-neo-panels-toliss-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/toliss.page.png" alt="Toliss aircraft specific actions, not available in real aircraft... page preview" />
-    <div class="cdx-card__body">
-      <h3>Toliss aircraft specific actions, not available in real aircraft...</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="xplane/#toliss-airbus-a321-neo-panels-xplane-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/xplane.page.png" alt="X-Plane specific actions, not linked to aircraft page preview" />
-    <div class="cdx-card__body">
-      <h3>X-Plane specific actions, not linked to aircraft</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="xpndr/#toliss-airbus-a321-neo-panels-xpndr-preview">
-    <img src="../../../assets/images/toliss-airbus-a321-neo/generated/panels/xpndr.page.png" alt="Transponder and related controls page preview" />
-    <div class="cdx-card__body">
-      <h3>Transponder and related controls</h3>
-    </div>
-  </a>
-</div>
+| Page | Preview |
+| --- | --- |
+| [Home](home.md) | ![Home preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/index.page.png) |
+| [Overhead AIR COND Panel with annunciator buttons](ovrhdaircond.md) | ![Overhead AIR COND Panel with annunciator buttons preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdaircond.page.png) |
+| [Internal lights](intlights.md) | ![Internal lights preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/intlights.page.png) |
+| [ALternate index page](index-alt.md) | ![ALternate index page preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/index-alt.page.png) |
+| [ADIRS Start/stop](adirs.md) | ![ADIRS Start/stop preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/adirs.page.png) |
+| [Airport-navigator dashboard](aptnav.md) | ![Airport-navigator dashboard preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/aptnav.page.png) |
+| [Cockpitdecks specific actions, not linked to aircraft](cockpitdecks.md) | ![Cockpitdecks specific actions, not linked to aircraft preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/cockpitdecks.page.png) |
+| [Cockpitdecks Special Dashboard of A21N](dashboard.md) | ![Cockpitdecks Special Dashboard of A21N preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/dashboard.page.png) |
+| [Cabin and cargo door management](doors.md) | ![Cabin and cargo door management preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/doors.page.png) |
+| [ECAM display selector](ecam.md) | ![ECAM display selector preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/ecam.page.png) |
+| [EFIS display selector + some FCU commands](efis.md) | ![EFIS display selector + some FCU commands preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/efis.page.png) |
+| [Overhead ELEC Panel](ovrhdelec.md) | ![Overhead ELEC Panel preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdelec.page.png) |
+| [Overhead FIRE Panel](ovrhdfire.md) | ![Overhead FIRE Panel preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdfire.page.png) |
+| [Overhead Fuel Panel](ovrhdfuel.md) | ![Overhead Fuel Panel preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdfuel.page.png) |
+| [Overhead Hydraulics Panel](ovrhdhyd.md) | ![Overhead Hydraulics Panel preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdhyd.page.png) |
+| [Piedestal (partial, project, prototype, uncompleted)](piedestal.md) | ![Piedestal (partial, project, prototype, uncompleted) preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/piedestal.page.png) |
+| [All popups on pos. 16 to 28](popups.md) | ![All popups on pos. 16 to 28 preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/popups.page.png) |
+| [RAdio control](radio.md) | ![RAdio control preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/radio.page.png) |
+| [Toliss aircraft specific actions, not available in real aircraft...](toliss.md) | ![Toliss aircraft specific actions, not available in real aircraft... preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/toliss.page.png) |
+| [X-Plane specific actions, not linked to aircraft](xplane.md) | ![X-Plane specific actions, not linked to aircraft preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/xplane.page.png) |
+| [Transponder and related controls](xpndr.md) | ![Transponder and related controls preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/xpndr.page.png) |

@@ -6,10 +6,8 @@ title: Virtual Streamdeck Mini Home
 
 # Home
 
-<div id="toliss-airbus-a330-neo-vmini-index-preview"></div>
-
 ![Home preview](../../../assets/images/toliss-airbus-a330-neo/generated/vmini/index.page.png)
 
 ## Source
 
-[:material-github: `vmini/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/vmini/index.yaml)
+- [:material-github: `vmini/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/vmini/index.yaml)

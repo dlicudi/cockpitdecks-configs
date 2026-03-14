@@ -6,12 +6,10 @@ title: Loupedeck Live Weather
 
 # Weather
 
-<div id="cirrus-sr22-loupedecklive1-weather-preview"></div>
-
 ![Weather preview](../../../assets/images/cirrus-sr22/generated/loupedecklive1/weather.page.png)
 
 ## Source
 
-[:material-github: `loupedecklive1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/weather.yaml)
+- [:material-github: `loupedecklive1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/weather.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)

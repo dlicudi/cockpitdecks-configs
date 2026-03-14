@@ -6,12 +6,10 @@ title: Stream Deck XL Pfd
 
 # Pfd
 
-<div id="aerobask-robin-dr401-streamdeckxl1-pfd-preview"></div>
-
 ![Pfd preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/pfd.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/pfd.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/streamdeckxl1/pfd.yaml)
+- [:material-github: `streamdeckxl1/pfd.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/streamdeckxl1/pfd.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/streamdeckxl1/includes/pagerfull.yaml) · [:material-source-branch: `includes/annunciators.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/streamdeckxl1/includes/annunciators.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/streamdeckxl1/includes/pagerfull.yaml) · [:material-source-branch: `includes/annunciators.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/streamdeckxl1/includes/annunciators.yaml)

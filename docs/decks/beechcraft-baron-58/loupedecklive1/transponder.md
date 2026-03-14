@@ -6,12 +6,10 @@ title: Loupedeck Live Transponder
 
 # Transponder
 
-<div id="beechcraft-baron-58-loupedecklive1-transponder-preview"></div>
-
 ![Transponder preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/transponder.page.png)
 
 ## Source
 
-[:material-github: `loupedecklive1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/transponder.yaml)
+- [:material-github: `loupedecklive1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/transponder.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)

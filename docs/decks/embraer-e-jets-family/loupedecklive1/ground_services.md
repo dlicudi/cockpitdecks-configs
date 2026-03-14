@@ -6,12 +6,10 @@ title: Loupedeck Live Ground Services
 
 # Ground Services
 
-<div id="embraer-e-jets-family-loupedecklive1-ground_services-preview"></div>
-
 ![Ground Services preview](../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/ground_services.page.png)
 
 ## Source
 
-[:material-github: `loupedecklive1/ground_services.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/ground_services.yaml)
+- [:material-github: `loupedecklive1/ground_services.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/ground_services.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)

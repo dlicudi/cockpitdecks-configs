@@ -6,12 +6,10 @@ title: Stream Deck XL Home
 
 # Home
 
-<div id="toliss-airbus-a320-neo-streamdeckxl1-home-preview"></div>
-
 ![Home preview](../../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/home.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/home.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/home.yaml)
+- [:material-github: `streamdeckxl1/home.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/home.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`

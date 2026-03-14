@@ -6,12 +6,10 @@ title: Loupedeck Live Switches
 
 # Switches
 
-<div id="embraer-e-jets-family-loupedecklive1-switches-preview"></div>
-
 ![Switches preview](../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/switches.page.png)
 
 ## Source
 
-[:material-github: `loupedecklive1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/switches.yaml)
+- [:material-github: `loupedecklive1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/switches.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)

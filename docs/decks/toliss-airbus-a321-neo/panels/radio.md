@@ -6,10 +6,8 @@ title: Stream Deck XL RAdio control
 
 # RAdio control
 
-<div id="toliss-airbus-a321-neo-panels-radio-preview"></div>
-
 ![RAdio control preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/radio.page.png)
 
 ## Source
 
-[:material-github: `panels/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/radio.yaml)
+- [:material-github: `panels/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/radio.yaml)

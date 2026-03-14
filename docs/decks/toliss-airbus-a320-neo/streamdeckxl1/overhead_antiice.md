@@ -6,12 +6,10 @@ title: Stream Deck XL ANTI ICE
 
 # ANTI ICE
 
-<div id="toliss-airbus-a320-neo-streamdeckxl1-overhead_antiice-preview"></div>
-
 ![ANTI ICE preview](../../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/overhead_antiice.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/overhead_antiice.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/overhead_antiice.yaml)
+- [:material-github: `streamdeckxl1/overhead_antiice.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/overhead_antiice.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`

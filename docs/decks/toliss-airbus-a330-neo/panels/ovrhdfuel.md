@@ -6,10 +6,8 @@ title: Virtual Streamdeck XL Fuel panel (ATA 28)
 
 # Fuel panel (ATA 28)
 
-<div id="toliss-airbus-a330-neo-panels-ovrhdfuel-preview"></div>
-
 ![Fuel panel (ATA 28) preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdfuel.page.png)
 
 ## Source
 
-[:material-github: `panels/ovrhdfuel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdfuel.yaml)
+- [:material-github: `panels/ovrhdfuel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdfuel.yaml)

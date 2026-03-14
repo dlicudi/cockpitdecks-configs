@@ -6,12 +6,10 @@ title: Loupedeck Live Radio
 
 # Radio
 
-<div id="beechcraft-baron-58-loupedecklive1-radio-preview"></div>
-
 ![Radio preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/radio.page.png)
 
 ## Source
 
-[:material-github: `loupedecklive1/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/radio.yaml)
+- [:material-github: `loupedecklive1/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/radio.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_radio.yaml)
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_radio.yaml)

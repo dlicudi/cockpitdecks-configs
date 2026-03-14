@@ -10,47 +10,12 @@ Loupedeck Live layout for Toliss Airbus A320neo.
 
 ## Pages
 
-<div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="home/#toliss-airbus-a320-neo-loupedecklive1-index-preview">
-    <img src="../../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/index.page.png" alt="Home page preview" />
-    <div class="cdx-card__body">
-      <h3>Home</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="pfi/#toliss-airbus-a320-neo-loupedecklive1-pfi-preview">
-    <img src="../../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/pfi.page.png" alt="PFI page preview" />
-    <div class="cdx-card__body">
-      <h3>PFI</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="fcu/#toliss-airbus-a320-neo-loupedecklive1-fcu-preview">
-    <img src="../../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/fcu.page.png" alt="FCU page preview" />
-    <div class="cdx-card__body">
-      <h3>FCU</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="radio/#toliss-airbus-a320-neo-loupedecklive1-radio-preview">
-    <img src="../../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/radio.page.png" alt="Radio page preview" />
-    <div class="cdx-card__body">
-      <h3>Radio</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="transponder/#toliss-airbus-a320-neo-loupedecklive1-transponder-preview">
-    <img src="../../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/transponder.page.png" alt="Transponder page preview" />
-    <div class="cdx-card__body">
-      <h3>Transponder</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="weather/#toliss-airbus-a320-neo-loupedecklive1-weather-preview">
-    <img src="../../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/weather.page.png" alt="Weather page preview" />
-    <div class="cdx-card__body">
-      <h3>Weather</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="views/#toliss-airbus-a320-neo-loupedecklive1-views-preview">
-    <img src="../../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/views.page.png" alt="Views page preview" />
-    <div class="cdx-card__body">
-      <h3>Views</h3>
-    </div>
-  </a>
-</div>
+| Page | Preview |
+| --- | --- |
+| [Home](home.md) | ![Home preview](../../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/index.page.png) |
+| [PFI](pfi.md) | ![PFI preview](../../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/pfi.page.png) |
+| [FCU](fcu.md) | ![FCU preview](../../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/fcu.page.png) |
+| [Radio](radio.md) | ![Radio preview](../../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/radio.page.png) |
+| [Transponder](transponder.md) | ![Transponder preview](../../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/transponder.page.png) |
+| [Weather](weather.md) | ![Weather preview](../../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/weather.page.png) |
+| [Views](views.md) | ![Views preview](../../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/views.page.png) |

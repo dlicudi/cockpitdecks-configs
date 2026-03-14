@@ -6,12 +6,10 @@ title: Stream Deck XL Transponder
 
 # Transponder
 
-<div id="embraer-e-jets-family-streamdeckxl1-transponder-preview"></div>
-
 ![Transponder preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/transponder.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/transponder.yaml)
+- [:material-github: `streamdeckxl1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/transponder.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)

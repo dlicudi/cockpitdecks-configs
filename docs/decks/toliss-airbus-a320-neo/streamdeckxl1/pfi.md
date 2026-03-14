@@ -6,12 +6,10 @@ title: Stream Deck XL PFI
 
 # PFI
 
-<div id="toliss-airbus-a320-neo-streamdeckxl1-pfi-preview"></div>
-
 ![PFI preview](../../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/pfi.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pfi.yaml)
+- [:material-github: `streamdeckxl1/pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pfi.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`

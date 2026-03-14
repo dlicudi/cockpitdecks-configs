@@ -6,10 +6,8 @@ title: Stream Deck XL Cockpitdecks specific actions, not linked to aircraft
 
 # Cockpitdecks specific actions, not linked to aircraft
 
-<div id="toliss-airbus-a321-neo-panels-cockpitdecks-preview"></div>
-
 ![Cockpitdecks specific actions, not linked to aircraft preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/cockpitdecks.page.png)
 
 ## Source
 
-[:material-github: `panels/cockpitdecks.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/cockpitdecks.yaml)
+- [:material-github: `panels/cockpitdecks.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/cockpitdecks.yaml)

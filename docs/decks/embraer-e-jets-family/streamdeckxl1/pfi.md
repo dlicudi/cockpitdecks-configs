@@ -6,12 +6,10 @@ title: Stream Deck XL PFI
 
 # PFI
 
-<div id="embraer-e-jets-family-streamdeckxl1-pfi-preview"></div>
-
 ![PFI preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/pfi.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/pfi.yaml)
+- [:material-github: `streamdeckxl1/pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/pfi.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml) · [:material-source-branch: `includes/annunciators.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/annunciators.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml) · [:material-source-branch: `includes/annunciators.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/annunciators.yaml)

@@ -6,12 +6,10 @@ title: Loupedeck Live Audio Panel
 
 # Audio Panel
 
-<div id="aerobask-robin-dr401-loupedecklive1-audiopanel-preview"></div>
-
 ![Audio Panel preview](../../../assets/images/aerobask-robin-dr401/generated/loupedecklive1/audiopanel.page.png)
 
 ## Source
 
-[:material-github: `loupedecklive1/audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/audiopanel.yaml)
+- [:material-github: `loupedecklive1/audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/audiopanel.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/encoders/encoders_radio.yaml)
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/encoders/encoders_radio.yaml)

@@ -6,12 +6,10 @@ title: Stream Deck XL PFI
 
 # PFI
 
-<div id="lancair-evolution-streamdeckxl1-pfi-preview"></div>
-
 ![PFI preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/pfi.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/pfi.yaml)
+- [:material-github: `streamdeckxl1/pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/pfi.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml) · [:material-source-branch: `includes/annunciators.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/annunciators.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml) · [:material-source-branch: `includes/annunciators.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/annunciators.yaml)

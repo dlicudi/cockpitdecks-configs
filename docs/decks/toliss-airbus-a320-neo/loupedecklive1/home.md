@@ -6,12 +6,10 @@ title: Loupedeck Live Home
 
 # Home
 
-<div id="toliss-airbus-a320-neo-loupedecklive1-index-preview"></div>
-
 ![Home preview](../../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/index.page.png)
 
 ## Source
 
-[:material-github: `loupedecklive1/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/index.yaml)
+- [:material-github: `loupedecklive1/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/index.yaml)
 
-Includes: [:material-source-branch: `includes/pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/pager.yaml) · [:material-source-branch: `includes/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/encoders_fcu.yaml)
+- Includes: [:material-source-branch: `includes/pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/pager.yaml) · [:material-source-branch: `includes/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/encoders_fcu.yaml)

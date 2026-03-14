@@ -6,10 +6,8 @@ title: Loupedeck Live Transponder and other communication for Loupedeck Live
 
 # Transponder and other communication for Loupedeck Live
 
-<div id="toliss-airbus-a321-neo-fcu-xpndr-preview"></div>
-
 ![Transponder and other communication for Loupedeck Live preview](../../../assets/images/toliss-airbus-a321-neo/generated/fcu/xpndr.page.png)
 
 ## Source
 
-[:material-github: `fcu/xpndr.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/xpndr.yaml)
+- [:material-github: `fcu/xpndr.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/xpndr.yaml)

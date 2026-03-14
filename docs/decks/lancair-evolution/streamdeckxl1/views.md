@@ -6,12 +6,10 @@ title: Stream Deck XL Views
 
 # Views
 
-<div id="lancair-evolution-streamdeckxl1-views-preview"></div>
-
 ![Views preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/views.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/views.yaml)
+- [:material-github: `streamdeckxl1/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/views.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)

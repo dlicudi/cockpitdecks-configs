@@ -6,10 +6,8 @@ title: Stream Deck Original Home
 
 # Home
 
-<div id="toliss-airbus-a321-neo-efis-ecam-index-preview"></div>
-
 ![Home preview](../../../assets/images/toliss-airbus-a321-neo/generated/efis-ecam/index.page.png)
 
 ## Source
 
-[:material-github: `efis-ecam/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/efis-ecam/index.yaml)
+- [:material-github: `efis-ecam/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/efis-ecam/index.yaml)

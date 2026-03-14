@@ -6,10 +6,8 @@ title: Virtual Streamdeck MK.2 EFIS display selector + some FCU commands for Str
 
 # EFIS display selector + some FCU commands for Streamdeck 15 keys
 
-<div id="toliss-airbus-a330-neo-efis-ecam-efis-preview"></div>
-
 ![EFIS display selector + some FCU commands for Streamdeck 15 keys preview](../../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/efis.page.png)
 
 ## Source
 
-[:material-github: `efis-ecam/efis.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/efis-ecam/efis.yaml)
+- [:material-github: `efis-ecam/efis.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/efis-ecam/efis.yaml)

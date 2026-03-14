@@ -10,83 +10,18 @@ Loupedeck Live layout for Beechcraft Baron 58.
 
 ## Pages
 
-<div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="home/#beechcraft-baron-58-loupedecklive1-index-preview">
-    <img src="../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/index.page.png" alt="Home page preview" />
-    <div class="cdx-card__body">
-      <h3>Home</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="pfi/#beechcraft-baron-58-loupedecklive1-pfi-preview">
-    <img src="../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/pfi.page.png" alt="PFI page preview" />
-    <div class="cdx-card__body">
-      <h3>PFI</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="switches/#beechcraft-baron-58-loupedecklive1-switches-preview">
-    <img src="../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switches.page.png" alt="Switches page preview" />
-    <div class="cdx-card__body">
-      <h3>Switches</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="fcu/#beechcraft-baron-58-loupedecklive1-fcu-preview">
-    <img src="../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/fcu.page.png" alt="FCU page preview" />
-    <div class="cdx-card__body">
-      <h3>FCU</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="radio/#beechcraft-baron-58-loupedecklive1-radio-preview">
-    <img src="../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/radio.page.png" alt="Radio page preview" />
-    <div class="cdx-card__body">
-      <h3>Radio</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="engine/#beechcraft-baron-58-loupedecklive1-engine-preview">
-    <img src="../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/engine.page.png" alt="Engine page preview" />
-    <div class="cdx-card__body">
-      <h3>Engine</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="pedestal/#beechcraft-baron-58-loupedecklive1-pedestal-preview">
-    <img src="../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/pedestal.page.png" alt="Pedestal page preview" />
-    <div class="cdx-card__body">
-      <h3>Pedestal</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="transponder/#beechcraft-baron-58-loupedecklive1-transponder-preview">
-    <img src="../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/transponder.page.png" alt="Transponder page preview" />
-    <div class="cdx-card__body">
-      <h3>Transponder</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="g530/#beechcraft-baron-58-loupedecklive1-g530-preview">
-    <img src="../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/g530.page.png" alt="G530 page preview" />
-    <div class="cdx-card__body">
-      <h3>G530</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="weather/#beechcraft-baron-58-loupedecklive1-weather-preview">
-    <img src="../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/weather.page.png" alt="Weather page preview" />
-    <div class="cdx-card__body">
-      <h3>Weather</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="views/#beechcraft-baron-58-loupedecklive1-views-preview">
-    <img src="../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/views.page.png" alt="Views page preview" />
-    <div class="cdx-card__body">
-      <h3>Views</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="switchesicing/#beechcraft-baron-58-loupedecklive1-switchesicing-preview">
-    <img src="../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switchesicing.page.png" alt="Switch Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Switch Panel</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="switcheslights/#beechcraft-baron-58-loupedecklive1-switcheslights-preview">
-    <img src="../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switcheslights.page.png" alt="Switch Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Switch Panel</h3>
-    </div>
-  </a>
-</div>
+| Page | Preview |
+| --- | --- |
+| [Home](home.md) | ![Home preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/index.page.png) |
+| [PFI](pfi.md) | ![PFI preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/pfi.page.png) |
+| [Switches](switches.md) | ![Switches preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switches.page.png) |
+| [FCU](fcu.md) | ![FCU preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/fcu.page.png) |
+| [Radio](radio.md) | ![Radio preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/radio.page.png) |
+| [Engine](engine.md) | ![Engine preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/engine.page.png) |
+| [Pedestal](pedestal.md) | ![Pedestal preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/pedestal.page.png) |
+| [Transponder](transponder.md) | ![Transponder preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/transponder.page.png) |
+| [G530](g530.md) | ![G530 preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/g530.page.png) |
+| [Weather](weather.md) | ![Weather preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/weather.page.png) |
+| [Views](views.md) | ![Views preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/views.page.png) |
+| [Switch Panel](switchesicing.md) | ![Switch Panel preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switchesicing.page.png) |
+| [Switch Panel](switcheslights.md) | ![Switch Panel preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switcheslights.page.png) |

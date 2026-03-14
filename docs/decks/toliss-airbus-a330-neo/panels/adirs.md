@@ -6,10 +6,8 @@ title: Virtual Streamdeck XL ADIRS Start/stop
 
 # ADIRS Start/stop
 
-<div id="toliss-airbus-a330-neo-panels-adirs-preview"></div>
-
 ![ADIRS Start/stop preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/adirs.page.png)
 
 ## Source
 
-[:material-github: `panels/adirs.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/adirs.yaml)
+- [:material-github: `panels/adirs.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/adirs.yaml)

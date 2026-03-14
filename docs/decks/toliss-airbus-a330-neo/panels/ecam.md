@@ -6,10 +6,8 @@ title: Virtual Streamdeck XL ECAM display selector
 
 # ECAM display selector
 
-<div id="toliss-airbus-a330-neo-panels-ecam-preview"></div>
-
 ![ECAM display selector preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ecam.page.png)
 
 ## Source
 
-[:material-github: `panels/ecam.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ecam.yaml)
+- [:material-github: `panels/ecam.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ecam.yaml)

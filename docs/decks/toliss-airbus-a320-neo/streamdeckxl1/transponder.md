@@ -6,12 +6,10 @@ title: Stream Deck XL Transponder
 
 # Transponder
 
-<div id="toliss-airbus-a320-neo-streamdeckxl1-transponder-preview"></div>
-
 ![Transponder preview](../../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/transponder.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/transponder.yaml)
+- [:material-github: `streamdeckxl1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/transponder.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`

@@ -6,12 +6,10 @@ title: Stream Deck XL Radio
 
 # Radio
 
-<div id="toliss-airbus-a320-neo-streamdeckxl1-radio-preview"></div>
-
 ![Radio preview](../../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/radio.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/radio.yaml)
+- [:material-github: `streamdeckxl1/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/radio.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_radio.yaml`
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_radio.yaml`

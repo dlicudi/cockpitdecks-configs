@@ -10,77 +10,17 @@ Stream Deck XL layout for Robin DR401.
 
 ## Pages
 
-<div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="home/#aerobask-robin-dr401-streamdeckxl1-index-preview">
-    <img src="../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/index.page.png" alt="Home page preview" />
-    <div class="cdx-card__body">
-      <h3>Home</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="pfd/#aerobask-robin-dr401-streamdeckxl1-pfd-preview">
-    <img src="../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/pfd.page.png" alt="Pfd page preview" />
-    <div class="cdx-card__body">
-      <h3>Pfd</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="mfd/#aerobask-robin-dr401-streamdeckxl1-mfd-preview">
-    <img src="../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/mfd.page.png" alt="Mfd page preview" />
-    <div class="cdx-card__body">
-      <h3>Mfd</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="switches/#aerobask-robin-dr401-streamdeckxl1-switches-preview">
-    <img src="../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/switches.page.png" alt="Switches page preview" />
-    <div class="cdx-card__body">
-      <h3>Switches</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="audiopanel/#aerobask-robin-dr401-streamdeckxl1-audiopanel-preview">
-    <img src="../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/audiopanel.page.png" alt="Audio Panel page preview" />
-    <div class="cdx-card__body">
-      <h3>Audio Panel</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="fcu/#aerobask-robin-dr401-streamdeckxl1-fcu-preview">
-    <img src="../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/fcu.page.png" alt="FCU page preview" />
-    <div class="cdx-card__body">
-      <h3>FCU</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="g1000/#aerobask-robin-dr401-streamdeckxl1-g1000-preview">
-    <img src="../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/g1000.page.png" alt="G1000 page preview" />
-    <div class="cdx-card__body">
-      <h3>G1000</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="radio/#aerobask-robin-dr401-streamdeckxl1-radio-preview">
-    <img src="../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/radio.page.png" alt="Radio page preview" />
-    <div class="cdx-card__body">
-      <h3>Radio</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="engine/#aerobask-robin-dr401-streamdeckxl1-engine-preview">
-    <img src="../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/engine.page.png" alt="Engine page preview" />
-    <div class="cdx-card__body">
-      <h3>Engine</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="transponder/#aerobask-robin-dr401-streamdeckxl1-transponder-preview">
-    <img src="../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/transponder.page.png" alt="Transponder page preview" />
-    <div class="cdx-card__body">
-      <h3>Transponder</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="weather/#aerobask-robin-dr401-streamdeckxl1-weather-preview">
-    <img src="../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/weather.page.png" alt="Weather page preview" />
-    <div class="cdx-card__body">
-      <h3>Weather</h3>
-    </div>
-  </a>
-  <a class="cdx-card" href="views/#aerobask-robin-dr401-streamdeckxl1-views-preview">
-    <img src="../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/views.page.png" alt="Views page preview" />
-    <div class="cdx-card__body">
-      <h3>Views</h3>
-    </div>
-  </a>
-</div>
+| Page | Preview |
+| --- | --- |
+| [Home](home.md) | ![Home preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/index.page.png) |
+| [Pfd](pfd.md) | ![Pfd preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/pfd.page.png) |
+| [Mfd](mfd.md) | ![Mfd preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/mfd.page.png) |
+| [Switches](switches.md) | ![Switches preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/switches.page.png) |
+| [Audio Panel](audiopanel.md) | ![Audio Panel preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/audiopanel.page.png) |
+| [FCU](fcu.md) | ![FCU preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/fcu.page.png) |
+| [G1000](g1000.md) | ![G1000 preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/g1000.page.png) |
+| [Radio](radio.md) | ![Radio preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/radio.page.png) |
+| [Engine](engine.md) | ![Engine preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/engine.page.png) |
+| [Transponder](transponder.md) | ![Transponder preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/transponder.page.png) |
+| [Weather](weather.md) | ![Weather preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/weather.page.png) |
+| [Views](views.md) | ![Views preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/views.page.png) |

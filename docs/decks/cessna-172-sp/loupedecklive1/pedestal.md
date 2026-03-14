@@ -6,12 +6,10 @@ title: Loupedeck Live Pedestal
 
 # Pedestal
 
-<div id="cessna-172-sp-loupedecklive1-pedestal-preview"></div>
-
 ![Pedestal preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/pedestal.page.png)
 
 ## Source
 
-[:material-github: `loupedecklive1/pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pedestal.yaml)
+- [:material-github: `loupedecklive1/pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pedestal.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)

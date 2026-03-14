@@ -6,10 +6,8 @@ title: Stream Deck XL All popups on pos. 16 to 28
 
 # All popups on pos. 16 to 28
 
-<div id="toliss-airbus-a321-neo-panels-popups-preview"></div>
-
 ![All popups on pos. 16 to 28 preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/popups.page.png)
 
 ## Source
 
-[:material-github: `panels/popups.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/popups.yaml)
+- [:material-github: `panels/popups.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/popups.yaml)

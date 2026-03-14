@@ -6,12 +6,10 @@ title: Loupedeck Live Switches
 
 # Switches
 
-<div id="aerobask-robin-dr401-loupedecklive1-switches-preview"></div>
-
 ![Switches preview](../../../assets/images/aerobask-robin-dr401/generated/loupedecklive1/switches.page.png)
 
 ## Source
 
-[:material-github: `loupedecklive1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/switches.yaml)
+- [:material-github: `loupedecklive1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/switches.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)

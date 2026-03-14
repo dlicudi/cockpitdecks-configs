@@ -6,12 +6,10 @@ title: Stream Deck XL Pedestal
 
 # Pedestal
 
-<div id="toliss-airbus-a320-neo-streamdeckxl1-pedestal-preview"></div>
-
 ![Pedestal preview](../../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/pedestal.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pedestal.yaml)
+- [:material-github: `streamdeckxl1/pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pedestal.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`

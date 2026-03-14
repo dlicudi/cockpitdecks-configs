@@ -6,10 +6,8 @@ title: Stream Deck XL Airport-navigator dashboard
 
 # Airport-navigator dashboard
 
-<div id="toliss-airbus-a321-neo-panels-aptnav-preview"></div>
-
 ![Airport-navigator dashboard preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/aptnav.page.png)
 
 ## Source
 
-[:material-github: `panels/aptnav.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/aptnav.yaml)
+- [:material-github: `panels/aptnav.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/aptnav.yaml)

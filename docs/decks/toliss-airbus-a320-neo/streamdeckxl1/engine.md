@@ -6,12 +6,10 @@ title: Stream Deck XL Engine
 
 # Engine
 
-<div id="toliss-airbus-a320-neo-streamdeckxl1-engine-preview"></div>
-
 ![Engine preview](../../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/engine.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/engine.yaml)
+- [:material-github: `streamdeckxl1/engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/engine.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`

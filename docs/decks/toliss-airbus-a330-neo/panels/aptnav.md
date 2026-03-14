@@ -6,10 +6,8 @@ title: Virtual Streamdeck XL Airport Navigator
 
 # Airport Navigator
 
-<div id="toliss-airbus-a330-neo-panels-aptnav-preview"></div>
-
 ![Airport Navigator preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/aptnav.page.png)
 
 ## Source
 
-[:material-github: `panels/aptnav.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/aptnav.yaml)
+- [:material-github: `panels/aptnav.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/aptnav.yaml)

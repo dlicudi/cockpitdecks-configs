@@ -6,10 +6,8 @@ title: Virtual Streamdeck MK.2 Home
 
 # Home
 
-<div id="toliss-airbus-a330-neo-efis-ecam-index-preview"></div>
-
 ![Home preview](../../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/index.page.png)
 
 ## Source
 
-[:material-github: `efis-ecam/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/efis-ecam/index.yaml)
+- [:material-github: `efis-ecam/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/efis-ecam/index.yaml)

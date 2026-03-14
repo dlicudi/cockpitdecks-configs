@@ -6,10 +6,8 @@ title: Virtual Streamdeck XL Transponder panel
 
 # Transponder panel
 
-<div id="toliss-airbus-a330-neo-panels-xpndr-preview"></div>
-
 ![Transponder panel preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/xpndr.page.png)
 
 ## Source
 
-[:material-github: `panels/xpndr.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/xpndr.yaml)
+- [:material-github: `panels/xpndr.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/xpndr.yaml)

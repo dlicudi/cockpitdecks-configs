@@ -6,12 +6,10 @@ title: Stream Deck XL Switches
 
 # Switches
 
-<div id="lancair-evolution-streamdeckxl1-switches-preview"></div>
-
 ![Switches preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/switches.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/switches.yaml)
+- [:material-github: `streamdeckxl1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/switches.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)

@@ -6,12 +6,10 @@ title: Loupedeck Live Transponder
 
 # Transponder
 
-<div id="vans-aircraft-rv-10-loupedecklive1-transponder-preview"></div>
-
 ![Transponder preview](../../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/transponder.page.png)
 
 ## Source
 
-[:material-github: `loupedecklive1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/transponder.yaml)
+- [:material-github: `loupedecklive1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/transponder.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)

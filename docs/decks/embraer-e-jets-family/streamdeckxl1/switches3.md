@@ -6,12 +6,10 @@ title: Stream Deck XL Switches3
 
 # Switches3
 
-<div id="embraer-e-jets-family-streamdeckxl1-switches3-preview"></div>
-
 ![Switches3 preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches3.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/switches3.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/switches3.yaml)
+- [:material-github: `streamdeckxl1/switches3.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/switches3.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)

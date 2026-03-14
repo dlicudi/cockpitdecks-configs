@@ -6,12 +6,10 @@ title: Stream Deck XL Weather
 
 # Weather
 
-<div id="lancair-evolution-streamdeckxl1-weather-preview"></div>
-
 ![Weather preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/weather.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/weather.yaml)
+- [:material-github: `streamdeckxl1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/weather.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)

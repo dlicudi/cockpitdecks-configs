@@ -6,12 +6,10 @@ title: Stream Deck XL Weather
 
 # Weather
 
-<div id="toliss-airbus-a320-neo-streamdeckxl1-weather-preview"></div>
-
 ![Weather preview](../../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/weather.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/weather.yaml)
+- [:material-github: `streamdeckxl1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/weather.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`

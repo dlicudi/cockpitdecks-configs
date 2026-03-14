@@ -6,12 +6,10 @@ title: Stream Deck XL Views
 
 # Views
 
-<div id="toliss-airbus-a320-neo-streamdeckxl1-views-preview"></div>
-
 ![Views preview](../../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/views.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/views.yaml)
+- [:material-github: `streamdeckxl1/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/views.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`

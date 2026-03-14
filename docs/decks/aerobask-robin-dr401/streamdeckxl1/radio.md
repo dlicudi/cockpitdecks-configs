@@ -6,12 +6,10 @@ title: Stream Deck XL Radio
 
 # Radio
 
-<div id="aerobask-robin-dr401-streamdeckxl1-radio-preview"></div>
-
 ![Radio preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/radio.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/streamdeckxl1/radio.yaml)
+- [:material-github: `streamdeckxl1/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/streamdeckxl1/radio.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/aerobask-robin-dr401/deckconfig/streamdeckxl1/includes/pagerfull.yaml)

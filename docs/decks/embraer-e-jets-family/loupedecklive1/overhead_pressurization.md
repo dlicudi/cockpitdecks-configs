@@ -6,12 +6,10 @@ title: Loupedeck Live Switch Panel
 
 # Switch Panel
 
-<div id="embraer-e-jets-family-loupedecklive1-overhead_pressurization-preview"></div>
-
 ![Switch Panel preview](../../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_pressurization.page.png)
 
 ## Source
 
-[:material-github: `loupedecklive1/overhead_pressurization.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_pressurization.yaml)
+- [:material-github: `loupedecklive1/overhead_pressurization.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_pressurization.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)

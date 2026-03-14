@@ -6,10 +6,8 @@ title: Stream Deck XL Overhead FIRE Panel
 
 # Overhead FIRE Panel
 
-<div id="toliss-airbus-a321-neo-panels-ovrhdfire-preview"></div>
-
 ![Overhead FIRE Panel preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdfire.page.png)
 
 ## Source
 
-[:material-github: `panels/ovrhdfire.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdfire.yaml)
+- [:material-github: `panels/ovrhdfire.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdfire.yaml)

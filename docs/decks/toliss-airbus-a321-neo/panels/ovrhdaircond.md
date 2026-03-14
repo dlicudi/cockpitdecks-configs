@@ -6,10 +6,8 @@ title: Stream Deck XL Overhead AIR COND Panel with annunciator buttons
 
 # Overhead AIR COND Panel with annunciator buttons
 
-<div id="toliss-airbus-a321-neo-panels-ovrhdaircond-preview"></div>
-
 ![Overhead AIR COND Panel with annunciator buttons preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdaircond.page.png)
 
 ## Source
 
-[:material-github: `panels/ovrhdaircond.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdaircond.yaml)
+- [:material-github: `panels/ovrhdaircond.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdaircond.yaml)

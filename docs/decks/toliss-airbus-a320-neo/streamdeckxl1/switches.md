@@ -6,12 +6,10 @@ title: Stream Deck XL Switches
 
 # Switches
 
-<div id="toliss-airbus-a320-neo-streamdeckxl1-switches-preview"></div>
-
 ![Switches preview](../../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/switches.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/switches.yaml)
+- [:material-github: `streamdeckxl1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/switches.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+- Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`

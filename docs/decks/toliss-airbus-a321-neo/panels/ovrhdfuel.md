@@ -6,10 +6,8 @@ title: Stream Deck XL Overhead Fuel Panel
 
 # Overhead Fuel Panel
 
-<div id="toliss-airbus-a321-neo-panels-ovrhdfuel-preview"></div>
-
 ![Overhead Fuel Panel preview](../../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdfuel.page.png)
 
 ## Source
 
-[:material-github: `panels/ovrhdfuel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdfuel.yaml)
+- [:material-github: `panels/ovrhdfuel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdfuel.yaml)

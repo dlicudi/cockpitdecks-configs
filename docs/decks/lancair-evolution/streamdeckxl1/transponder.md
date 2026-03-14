@@ -6,12 +6,10 @@ title: Stream Deck XL Transponder
 
 # Transponder
 
-<div id="lancair-evolution-streamdeckxl1-transponder-preview"></div>
-
 ![Transponder preview](../../../assets/images/lancair-evolution/generated/streamdeckxl1/transponder.page.png)
 
 ## Source
 
-[:material-github: `streamdeckxl1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/transponder.yaml)
+- [:material-github: `streamdeckxl1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/transponder.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+- Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
