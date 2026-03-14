@@ -268,11 +268,11 @@ class PreviewRenderer:
             x = main_x + col * (key_w + grid_gap)
             y = main_y + row * (key_h + grid_gap)
             button = groups["grid"].get(index)
-            tile = self._render_button(button, page["name"]) if button else self._render_empty_button(page)
+            tile = self._render_button(button, page) if button else self._render_empty_button(page)
             image.alpha_composite(tile, (x, y))
         return image
 
-    def _render_button(self, button: dict[str, Any], current_page: str) -> Image.Image:
+    def _render_button(self, button: dict[str, Any], page: dict[str, Any]) -> Image.Image:
         width, height = self.layout.key_size
         image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
         draw = ImageDraw.Draw(image)
@@ -283,7 +283,7 @@ class PreviewRenderer:
 
         annunciator = button.get("annunciator")
         if annunciator:
-            self._render_annunciator(image, annunciator)
+            self._render_annunciator(image, annunciator, button, page)
         else:
             context = self._formula_context(button)
             text_value = self._button_text_value(button, context)
@@ -311,7 +311,7 @@ class PreviewRenderer:
                 anchor="ma",
             )
 
-        if button.get("type") == "page" and button.get("page") == current_page:
+        if button.get("type") == "page" and button.get("page") == page.get("name"):
             draw.rectangle((2, 2, width - 3, height - 3), outline=(255, 188, 64), width=3)
         return image
 
@@ -363,11 +363,12 @@ class PreviewRenderer:
             draw.text((width // 2, y + 8), rendered, font=value_font, fill=self._color(label.get("text-color", "white")), anchor="ma")
         return image
 
-    def _render_annunciator(self, image: Image.Image, annunciator: dict[str, Any]) -> None:
+    def _render_annunciator(self, image: Image.Image, annunciator: dict[str, Any], button: dict[str, Any], page: dict[str, Any]) -> None:
         draw = ImageDraw.Draw(image)
         model = annunciator.get("model", "A")
         part_rects = self._annunciator_rects(model, image.size)
         parts = self._annunciator_parts(annunciator)
+        off_intensity = self._annunciator_light_off_intensity(button, annunciator, page)
         for part_name, rect in part_rects:
             part = parts.get(part_name)
             if not part:
@@ -378,10 +379,10 @@ class PreviewRenderer:
             draw.rectangle(rect, fill=panel_fill)
             led_style = str(part.get("led", "")).lower()
             if led_style in {"bar", "bars"}:
-                led_color = color if active else self._dim(color, annunciator.get("light-off-intensity", 12))
+                led_color = color if active else self._dim(color, off_intensity or 10)
                 draw.rectangle((rect[0] + 8, rect[1] + 6, rect[2] - 8, rect[1] + 14), fill=led_color)
             elif led_style == "dot":
-                led_color = color if active else self._dim(color, annunciator.get("light-off-intensity", 12))
+                led_color = color if active else self._dim(color, off_intensity or 10)
                 cx = (rect[0] + rect[2]) // 2
                 cy = (rect[1] + rect[3]) // 2
                 r = max(8, min(rect[2] - rect[0], rect[3] - rect[1]) // 5)
@@ -393,8 +394,18 @@ class PreviewRenderer:
                 text,
                 (max(12, rect[2] - rect[0] - 12), max(12, rect[3] - rect[1] - 12)),
             )
-            text_color = self._part_text_color(part, active, annunciator.get("light-off-intensity"))
+            text_color = self._part_text_color(part, active, off_intensity)
             self._draw_text_box(draw, rect, text, font, text_color, anchor="mm")
+
+    def _annunciator_light_off_intensity(self, button: dict[str, Any], annunciator: dict[str, Any], page: dict[str, Any]) -> int | None:
+        if "light-off-intensity" in annunciator:
+            return annunciator.get("light-off-intensity")
+        if "light-off-intensity" in button:
+            return button.get("light-off-intensity")
+        for source in (page, self.layout_defaults, self.deck_defaults, self.resources_defaults):
+            if isinstance(source, dict) and "default-light-off-intensity" in source:
+                return source.get("default-light-off-intensity")
+        return 10
 
     def _part_text(self, part: dict[str, Any]) -> str:
         context = self._formula_context(part)
