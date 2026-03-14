@@ -38,9 +38,68 @@ nav:
       - Development: getting-started/development.md
   - Decks:
       - Overview: decks/index.md
-      - Aerobask Robin DR401: decks/aerobask-robin-dr401.md
-      - Beechcraft Baron 58: decks/beechcraft-baron-58.md
-      - Cessna 172 SP: decks/cessna-172-sp.md
+      - Aerobask Robin DR401:
+          - Overview: decks/aerobask-robin-dr401.md
+          - Loupedeck Live:
+              - Overview: decks/aerobask-robin-dr401/loupedecklive1/index.md
+              - Audio Panel: decks/aerobask-robin-dr401/loupedecklive1/audiopanel.md
+              - Engine: decks/aerobask-robin-dr401/loupedecklive1/engine.md
+              - FCU: decks/aerobask-robin-dr401/loupedecklive1/fcu.md
+              - G1000: decks/aerobask-robin-dr401/loupedecklive1/g1000.md
+              - Home: decks/aerobask-robin-dr401/loupedecklive1/home.md
+              - Pedestal: decks/aerobask-robin-dr401/loupedecklive1/pedestal.md
+              - PFI: decks/aerobask-robin-dr401/loupedecklive1/pfi.md
+              - Radio: decks/aerobask-robin-dr401/loupedecklive1/radio.md
+              - Switches: decks/aerobask-robin-dr401/loupedecklive1/switches.md
+              - Switches 2: decks/aerobask-robin-dr401/loupedecklive1/switches2.md
+              - Transponder: decks/aerobask-robin-dr401/loupedecklive1/transponder.md
+              - Views: decks/aerobask-robin-dr401/loupedecklive1/views.md
+              - Weather: decks/aerobask-robin-dr401/loupedecklive1/weather.md
+          - Stream Deck XL:
+              - Overview: decks/aerobask-robin-dr401/streamdeckxl1/index.md
+              - Audio Panel: decks/aerobask-robin-dr401/streamdeckxl1/audiopanel.md
+              - Engine: decks/aerobask-robin-dr401/streamdeckxl1/engine.md
+              - FCU: decks/aerobask-robin-dr401/streamdeckxl1/fcu.md
+              - G1000: decks/aerobask-robin-dr401/streamdeckxl1/g1000.md
+              - Home: decks/aerobask-robin-dr401/streamdeckxl1/home.md
+              - MFD: decks/aerobask-robin-dr401/streamdeckxl1/mfd.md
+              - PFD: decks/aerobask-robin-dr401/streamdeckxl1/pfd.md
+              - Radio: decks/aerobask-robin-dr401/streamdeckxl1/radio.md
+              - Switches: decks/aerobask-robin-dr401/streamdeckxl1/switches.md
+              - Transponder: decks/aerobask-robin-dr401/streamdeckxl1/transponder.md
+              - Views: decks/aerobask-robin-dr401/streamdeckxl1/views.md
+              - Weather: decks/aerobask-robin-dr401/streamdeckxl1/weather.md
+      - Beechcraft Baron 58:
+          - Overview: decks/beechcraft-baron-58.md
+          - Loupedeck Live:
+              - Overview: decks/beechcraft-baron-58/loupedecklive1/index.md
+              - Engine: decks/beechcraft-baron-58/loupedecklive1/engine.md
+              - FCU: decks/beechcraft-baron-58/loupedecklive1/fcu.md
+              - G530: decks/beechcraft-baron-58/loupedecklive1/g530.md
+              - Home: decks/beechcraft-baron-58/loupedecklive1/home.md
+              - Pedestal: decks/beechcraft-baron-58/loupedecklive1/pedestal.md
+              - PFI: decks/beechcraft-baron-58/loupedecklive1/pfi.md
+              - Radio: decks/beechcraft-baron-58/loupedecklive1/radio.md
+              - Switches: decks/beechcraft-baron-58/loupedecklive1/switches.md
+              - Switches Icing: decks/beechcraft-baron-58/loupedecklive1/switchesicing.md
+              - Switches Lights: decks/beechcraft-baron-58/loupedecklive1/switcheslights.md
+              - Transponder: decks/beechcraft-baron-58/loupedecklive1/transponder.md
+              - Views: decks/beechcraft-baron-58/loupedecklive1/views.md
+              - Weather: decks/beechcraft-baron-58/loupedecklive1/weather.md
+      - Cessna 172 SP:
+          - Overview: decks/cessna-172-sp.md
+          - Loupedeck Live:
+              - Overview: decks/cessna-172-sp/loupedecklive1/index.md
+              - Engine: decks/cessna-172-sp/loupedecklive1/engine.md
+              - FCU: decks/cessna-172-sp/loupedecklive1/fcu.md
+              - G1000: decks/cessna-172-sp/loupedecklive1/g1000.md
+              - Home: decks/cessna-172-sp/loupedecklive1/home.md
+              - Pedestal: decks/cessna-172-sp/loupedecklive1/pedestal.md
+              - PFI: decks/cessna-172-sp/loupedecklive1/pfi.md
+              - Radio: decks/cessna-172-sp/loupedecklive1/radio.md
+              - Switches: decks/cessna-172-sp/loupedecklive1/switches.md
+              - Transponder: decks/cessna-172-sp/loupedecklive1/transponder.md
+              - Weather: decks/cessna-172-sp/loupedecklive1/weather.md
       - Cirrus SR22:
           - Overview: decks/cirrus-sr22.md
           - Loupedeck Live:
@@ -56,7 +115,54 @@ nav:
               - GCU478: decks/cirrus-sr22/loupedecklive1/gcu478.md
               - Views: decks/cirrus-sr22/loupedecklive1/views.md
               - Weather: decks/cirrus-sr22/loupedecklive1/weather.md
-      - Embraer E-Jets Family: decks/embraer-e-jets-family.md
+      - Embraer E-Jets Family:
+          - Overview: decks/embraer-e-jets-family.md
+          - Loupedeck Live:
+              - Overview: decks/embraer-e-jets-family/loupedecklive1/index.md
+              - Audio Panel: decks/embraer-e-jets-family/loupedecklive1/audiopanel.md
+              - Engine: decks/embraer-e-jets-family/loupedecklive1/engine.md
+              - FCU: decks/embraer-e-jets-family/loupedecklive1/fcu.md
+              - FCU 2: decks/embraer-e-jets-family/loupedecklive1/fcu2.md
+              - G1000: decks/embraer-e-jets-family/loupedecklive1/g1000.md
+              - Ground Services: decks/embraer-e-jets-family/loupedecklive1/ground_services.md
+              - Home: decks/embraer-e-jets-family/loupedecklive1/home.md
+              - Overhead APU Control: decks/embraer-e-jets-family/loupedecklive1/overhead_apu_control.md
+              - Overhead Cockpit Lights: decks/embraer-e-jets-family/loupedecklive1/overhead_cockpit_lights.md
+              - Overhead Electric: decks/embraer-e-jets-family/loupedecklive1/overhead_electric.md
+              - Overhead External Lights: decks/embraer-e-jets-family/loupedecklive1/overhead_external_lights.md
+              - Overhead Fire Extinguisher: decks/embraer-e-jets-family/loupedecklive1/overhead_fire_extinguisher.md
+              - Overhead Fuel: decks/embraer-e-jets-family/loupedecklive1/overhead_fuel.md
+              - Overhead Hydraulic: decks/embraer-e-jets-family/loupedecklive1/overhead_hydraulic.md
+              - Overhead Ice Protection: decks/embraer-e-jets-family/loupedecklive1/overhead_ice_protection.md
+              - Overhead Passenger Signs: decks/embraer-e-jets-family/loupedecklive1/overhead_passenger_signs.md
+              - Overhead Pneumatic: decks/embraer-e-jets-family/loupedecklive1/overhead_pneumatic.md
+              - Overhead Pressurization: decks/embraer-e-jets-family/loupedecklive1/overhead_pressurization.md
+              - Overhead Windshield Wiper: decks/embraer-e-jets-family/loupedecklive1/overhead_windshield_wiper.md
+              - Pedestal: decks/embraer-e-jets-family/loupedecklive1/pedestal.md
+              - POWERPLANT: decks/embraer-e-jets-family/loupedecklive1/pedestal_powerplant.md
+              - PFI: decks/embraer-e-jets-family/loupedecklive1/pfi.md
+              - Radio: decks/embraer-e-jets-family/loupedecklive1/radio.md
+              - Switches: decks/embraer-e-jets-family/loupedecklive1/switches.md
+              - Switches 2: decks/embraer-e-jets-family/loupedecklive1/switches2.md
+              - Transponder: decks/embraer-e-jets-family/loupedecklive1/transponder.md
+              - Views: decks/embraer-e-jets-family/loupedecklive1/views.md
+              - Weather: decks/embraer-e-jets-family/loupedecklive1/weather.md
+          - Stream Deck XL:
+              - Overview: decks/embraer-e-jets-family/streamdeckxl1/index.md
+              - Audio Panel: decks/embraer-e-jets-family/streamdeckxl1/audiopanel.md
+              - Engine: decks/embraer-e-jets-family/streamdeckxl1/engine.md
+              - FCU: decks/embraer-e-jets-family/streamdeckxl1/fcu.md
+              - G1000: decks/embraer-e-jets-family/streamdeckxl1/g1000.md
+              - Home: decks/embraer-e-jets-family/streamdeckxl1/home.md
+              - MFD: decks/embraer-e-jets-family/streamdeckxl1/mfd.md
+              - PFI: decks/embraer-e-jets-family/streamdeckxl1/pfi.md
+              - Radio: decks/embraer-e-jets-family/streamdeckxl1/radio.md
+              - Switches: decks/embraer-e-jets-family/streamdeckxl1/switches.md
+              - Switches 2: decks/embraer-e-jets-family/streamdeckxl1/switches2.md
+              - Switches 3: decks/embraer-e-jets-family/streamdeckxl1/switches3.md
+              - Transponder: decks/embraer-e-jets-family/streamdeckxl1/transponder.md
+              - Views: decks/embraer-e-jets-family/streamdeckxl1/views.md
+              - Weather: decks/embraer-e-jets-family/streamdeckxl1/weather.md
       - Lancair Evolution:
           - Overview: decks/lancair-evolution.md
           - Loupedeck Live:
@@ -87,9 +193,109 @@ nav:
               - Transponder: decks/lancair-evolution/streamdeckxl1/transponder.md
               - Views: decks/lancair-evolution/streamdeckxl1/views.md
               - Weather: decks/lancair-evolution/streamdeckxl1/weather.md
-      - ToLiss Airbus A320 NEO: decks/toliss-airbus-A320-neo.md
-      - ToLiss Airbus A321 NEO: decks/toliss-airbus-A321-neo.md
-      - ToLiss Airbus A330 NEO: decks/toliss-airbus-a330-neo.md
+      - ToLiss Airbus A320 NEO:
+          - Overview: decks/toliss-airbus-A320-neo.md
+          - Loupedeck Live:
+              - Overview: decks/toliss-airbus-a320-neo/loupedecklive1/index.md
+              - FCU: decks/toliss-airbus-a320-neo/loupedecklive1/fcu.md
+              - Home: decks/toliss-airbus-a320-neo/loupedecklive1/home.md
+              - PFI: decks/toliss-airbus-a320-neo/loupedecklive1/pfi.md
+              - Radio: decks/toliss-airbus-a320-neo/loupedecklive1/radio.md
+              - Transponder: decks/toliss-airbus-a320-neo/loupedecklive1/transponder.md
+              - Views: decks/toliss-airbus-a320-neo/loupedecklive1/views.md
+              - Weather: decks/toliss-airbus-a320-neo/loupedecklive1/weather.md
+          - Stream Deck XL:
+              - Overview: decks/toliss-airbus-a320-neo/streamdeckxl1/index.md
+              - Audio Panel: decks/toliss-airbus-a320-neo/streamdeckxl1/audiopanel.md
+              - Engine: decks/toliss-airbus-a320-neo/streamdeckxl1/engine.md
+              - FCU: decks/toliss-airbus-a320-neo/streamdeckxl1/fcu.md
+              - G1000: decks/toliss-airbus-a320-neo/streamdeckxl1/g1000.md
+              - Home: decks/toliss-airbus-a320-neo/streamdeckxl1/home.md
+              - Overhead Anti-Ice: decks/toliss-airbus-a320-neo/streamdeckxl1/overhead_antiice.md
+              - Pedestal: decks/toliss-airbus-a320-neo/streamdeckxl1/pedestal.md
+              - PFI: decks/toliss-airbus-a320-neo/streamdeckxl1/pfi.md
+              - Radio: decks/toliss-airbus-a320-neo/streamdeckxl1/radio.md
+              - Switches: decks/toliss-airbus-a320-neo/streamdeckxl1/switches.md
+              - Switches 2: decks/toliss-airbus-a320-neo/streamdeckxl1/switches2.md
+              - Transponder: decks/toliss-airbus-a320-neo/streamdeckxl1/transponder.md
+              - Views: decks/toliss-airbus-a320-neo/streamdeckxl1/views.md
+              - Weather: decks/toliss-airbus-a320-neo/streamdeckxl1/weather.md
+      - ToLiss Airbus A321 NEO:
+          - Overview: decks/toliss-airbus-A321-neo.md
+          - Loupedeck Live:
+              - Overview: decks/toliss-airbus-a321-neo/fcu/index.md
+              - FCU: decks/toliss-airbus-a321-neo/fcu/fcu.md
+              - Home: decks/toliss-airbus-a321-neo/fcu/home.md
+              - Popups: decks/toliss-airbus-a321-neo/fcu/popups.md
+              - ToLiss: decks/toliss-airbus-a321-neo/fcu/toliss.md
+              - Views: decks/toliss-airbus-a321-neo/fcu/views.md
+              - XPNDR: decks/toliss-airbus-a321-neo/fcu/xpndr.md
+          - Stream Deck Original:
+              - Overview: decks/toliss-airbus-a321-neo/efis-ecam/index.md
+              - EFIS: decks/toliss-airbus-a321-neo/efis-ecam/efis.md
+              - Home: decks/toliss-airbus-a321-neo/efis-ecam/home.md
+          - Stream Deck XL:
+              - Overview: decks/toliss-airbus-a321-neo/panels/index.md
+              - ADIRS Start/Stop: decks/toliss-airbus-a321-neo/panels/adirs.md
+              - Airport Navigator: decks/toliss-airbus-a321-neo/panels/aptnav.md
+              - Cockpitdecks: decks/toliss-airbus-a321-neo/panels/cockpitdecks.md
+              - Dashboard: decks/toliss-airbus-a321-neo/panels/dashboard.md
+              - Doors: decks/toliss-airbus-a321-neo/panels/doors.md
+              - ECAM: decks/toliss-airbus-a321-neo/panels/ecam.md
+              - EFIS: decks/toliss-airbus-a321-neo/panels/efis.md
+              - Home: decks/toliss-airbus-a321-neo/panels/home.md
+              - Index Alt: decks/toliss-airbus-a321-neo/panels/index-alt.md
+              - Int Lights: decks/toliss-airbus-a321-neo/panels/intlights.md
+              - Overhead AIR COND: decks/toliss-airbus-a321-neo/panels/ovrhdaircond.md
+              - Overhead Electric: decks/toliss-airbus-a321-neo/panels/ovrhdelec.md
+              - Overhead Fire: decks/toliss-airbus-a321-neo/panels/ovrhdfire.md
+              - Overhead Fuel: decks/toliss-airbus-a321-neo/panels/ovrhdfuel.md
+              - Overhead Hydraulic: decks/toliss-airbus-a321-neo/panels/ovrhdhyd.md
+              - Piedestal: decks/toliss-airbus-a321-neo/panels/piedestal.md
+              - Popups: decks/toliss-airbus-a321-neo/panels/popups.md
+              - Radio: decks/toliss-airbus-a321-neo/panels/radio.md
+              - ToLiss: decks/toliss-airbus-a321-neo/panels/toliss.md
+              - X-Plane: decks/toliss-airbus-a321-neo/panels/xplane.md
+              - XPNDR: decks/toliss-airbus-a321-neo/panels/xpndr.md
+      - ToLiss Airbus A330 NEO:
+          - Overview: decks/toliss-airbus-a330-neo.md
+          - Loupedeck Live:
+              - Overview: decks/toliss-airbus-a330-neo/fcu/index.md
+              - FCU: decks/toliss-airbus-a330-neo/fcu/fcu.md
+              - Home: decks/toliss-airbus-a330-neo/fcu/home.md
+              - Popups: decks/toliss-airbus-a330-neo/fcu/popups.md
+              - ToLiss: decks/toliss-airbus-a330-neo/fcu/toliss.md
+              - Views: decks/toliss-airbus-a330-neo/fcu/views.md
+          - Stream Deck Original:
+              - Overview: decks/toliss-airbus-a330-neo/efis-ecam/index.md
+              - EFIS: decks/toliss-airbus-a330-neo/efis-ecam/efis.md
+              - Home: decks/toliss-airbus-a330-neo/efis-ecam/home.md
+          - Stream Deck XL:
+              - Overview: decks/toliss-airbus-a330-neo/panels/index.md
+              - ADIRS Start/Stop: decks/toliss-airbus-a330-neo/panels/adirs.md
+              - Airport Navigator: decks/toliss-airbus-a330-neo/panels/aptnav.md
+              - Cockpitdecks: decks/toliss-airbus-a330-neo/panels/cockpitdecks.md
+              - Dashboard: decks/toliss-airbus-a330-neo/panels/dashboard.md
+              - Doors: decks/toliss-airbus-a330-neo/panels/doors.md
+              - ECAM: decks/toliss-airbus-a330-neo/panels/ecam.md
+              - EFIS: decks/toliss-airbus-a330-neo/panels/efis.md
+              - Home: decks/toliss-airbus-a330-neo/panels/home.md
+              - Index Alt: decks/toliss-airbus-a330-neo/panels/index-alt.md
+              - Int Lights: decks/toliss-airbus-a330-neo/panels/intlights.md
+              - Overhead AIR COND: decks/toliss-airbus-a330-neo/panels/ovrhdaircond.md
+              - Overhead Electric: decks/toliss-airbus-a330-neo/panels/ovrhdelec.md
+              - Overhead Fire: decks/toliss-airbus-a330-neo/panels/ovrhdfire.md
+              - Overhead Fuel: decks/toliss-airbus-a330-neo/panels/ovrhdfuel.md
+              - Overhead Hydraulic: decks/toliss-airbus-a330-neo/panels/ovrhdhyd.md
+              - Piedestal: decks/toliss-airbus-a330-neo/panels/piedestal.md
+              - Popups: decks/toliss-airbus-a330-neo/panels/popups.md
+              - Radio: decks/toliss-airbus-a330-neo/panels/radio.md
+              - ToLiss: decks/toliss-airbus-a330-neo/panels/toliss.md
+              - X-Plane: decks/toliss-airbus-a330-neo/panels/xplane.md
+              - XPNDR: decks/toliss-airbus-a330-neo/panels/xpndr.md
+          - Virtual Streamdeck Mini:
+              - Overview: decks/toliss-airbus-a330-neo/vmini/index.md
+              - Home: decks/toliss-airbus-a330-neo/vmini/home.md
       - Van's Aircraft RV-10:
           - Overview: decks/vans-aircraft-rv-10.md
           - Loupedeck Live:

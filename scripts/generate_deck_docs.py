@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DECKS_DIR = ROOT / "decks"
 DOCS_DECKS_DIR = ROOT / "docs" / "decks"
 IMAGE_ROOT = ROOT / "docs" / "assets" / "images"
+DECKTYPES_DIR = ROOT / "decktypes"
 RENDER_PREVIEW_SCRIPT = ROOT / "scripts" / "render_deck_preview.py"
 REPO_BLOB_BASE = "https://github.com/dlicudi/cockpitdecks-configs/blob/main"
 
@@ -182,7 +183,33 @@ def aircraft_title(slug: str, config: dict[str, Any], docs_meta: dict[str, Any])
     return str(aircraft_meta.get("title") or config.get("model") or config.get("aircraft") or titleize_slug(slug))
 
 
+def decktype_catalog() -> dict[str, Path]:
+    catalog: dict[str, Path] = {}
+    for path in sorted(DECKTYPES_DIR.glob("*.yaml")):
+        data = load_yaml(path)
+        name = str(data.get("name") or data.get("type") or "").strip()
+        if name:
+            catalog[name] = path
+    return catalog
+
+
+def has_supported_preview_geometry(decktype_path: Path) -> bool:
+    decktype = load_yaml(decktype_path)
+    buttons = decktype.get("buttons", [])
+    if not isinstance(buttons, list):
+        return False
+    image_buttons = [button for button in buttons if isinstance(button, dict) and button.get("feedback") == "image"]
+    grid_button = next((button for button in image_buttons if button.get("name") == 0 and button.get("repeat")), None)
+    if grid_button is None:
+        return False
+    unsupported = [
+        button for button in image_buttons if button.get("name") not in {0, "left", "right"}
+    ]
+    return not unsupported
+
+
 def layout_entries(config: dict[str, Any], deckconfig_dir: Path, docs_meta: dict[str, Any]) -> list[dict[str, Any]]:
+    decktypes = decktype_catalog()
     entries = config.get("decks", [])
     layouts: list[dict[str, Any]] = []
     if isinstance(entries, list):
@@ -196,10 +223,12 @@ def layout_entries(config: dict[str, Any], deckconfig_dir: Path, docs_meta: dict
             layout_meta = layout_docs_metadata(docs_meta, layout_name)
             page_files = ordered_page_files(layout_dir, layout_meta) if layout_dir.exists() else []
             deck_type = str(entry.get("type") or "").strip()
+            decktype_path = decktypes.get(deck_type)
             layouts.append(
                 {
                     "name": str(entry.get("name") or layout_name),
                     "type": deck_type,
+                    "decktype_path": decktype_path,
                     "layout": layout_name,
                     "dir": layout_dir,
                     "pages": page_files,
@@ -237,7 +266,10 @@ def render_layout_page_images(slug: str, layout: dict[str, Any]) -> dict[Path, P
         return {}
 
     preview_mode = str(layout["docs"].get("preview") or "").strip().lower()
-    if preview_mode != "generated":
+    decktype_path = layout.get("decktype_path")
+    if preview_mode in {"none", "off", "static"}:
+        return {}
+    if decktype_path is None or not has_supported_preview_geometry(decktype_path):
         return {}
 
     output_dir = IMAGE_ROOT / slug / "generated" / layout["layout"]
@@ -250,6 +282,8 @@ def render_layout_page_images(slug: str, layout: dict[str, Any]) -> dict[Path, P
             str(RENDER_PREVIEW_SCRIPT),
             "--layout-dir",
             str(layout["dir"]),
+            "--decktype",
+            str(decktype_path),
             "--output-dir",
             str(temp_image_dir),
         ]

@@ -90,7 +90,8 @@ DEFAULT_DATA = {
 @dataclass
 class Layout:
     key_size: tuple[int, int]
-    screen_size: tuple[int, int]
+    grid_repeat: tuple[int, int]
+    screen_size: tuple[int, int] | None
 
 
 class FormulaEvaluator:
@@ -225,8 +226,10 @@ class PreviewRenderer:
     def _load_layout(self) -> Layout:
         decktype = self._load_yaml(self.decktype_path)
         key_button = next(button for button in decktype["buttons"] if button["name"] == 0 and button.get("feedback") == "image")
-        screen_button = next(button for button in decktype["buttons"] if button["name"] == "left")
-        return Layout(key_size=tuple(key_button["dimension"]), screen_size=tuple(screen_button["dimension"]))
+        repeat = tuple(key_button.get("repeat", (1, 1)))
+        screen_button = next((button for button in decktype["buttons"] if button["name"] == "left" and button.get("feedback") == "image"), None)
+        screen_size = tuple(screen_button["dimension"]) if screen_button else None
+        return Layout(key_size=tuple(key_button["dimension"]), grid_repeat=repeat, screen_size=screen_size)
 
     def _load_page(self, page_name: str) -> dict[str, Any]:
         page_path = self.layout_dir / f"{page_name}.yaml"
@@ -243,28 +246,32 @@ class PreviewRenderer:
 
     def _render_composite(self, page: dict[str, Any]) -> Image.Image:
         key_w, key_h = self.layout.key_size
-        screen_w, screen_h = self.layout.screen_size
+        cols, rows = self.layout.grid_repeat
         grid_gap = 14
         outer_gap = 18
-        grid_w = key_w * 4 + grid_gap * 3
-        grid_h = key_h * 3 + grid_gap * 2
-        main_x = screen_w + outer_gap
+        grid_w = key_w * cols + grid_gap * max(cols - 1, 0)
+        grid_h = key_h * rows + grid_gap * max(rows - 1, 0)
+        screen_w = screen_h = 0
+        if self.layout.screen_size:
+            screen_w, screen_h = self.layout.screen_size
+        main_x = screen_w + outer_gap if self.layout.screen_size else 0
         main_y = 0
         left_x = 0
-        right_x = main_x + grid_w + outer_gap
-        canvas_w = right_x + screen_w
-        canvas_h = max(grid_h, screen_h)
+        right_x = main_x + grid_w + outer_gap if self.layout.screen_size else grid_w
+        canvas_w = right_x + screen_w if self.layout.screen_size else grid_w
+        canvas_h = max(grid_h, screen_h) if self.layout.screen_size else grid_h
 
         image = Image.new("RGBA", (canvas_w, canvas_h), (0, 0, 0, 0))
 
         groups = self._group_buttons(page["buttons"])
-        left_screen = self._render_side_screen(groups.get("left"), page)
-        right_screen = self._render_side_screen(groups.get("right"), page)
-        image.alpha_composite(left_screen, (left_x, max(0, (canvas_h - screen_h) // 2)))
-        image.alpha_composite(right_screen, (right_x, max(0, (canvas_h - screen_h) // 2)))
+        if self.layout.screen_size:
+            left_screen = self._render_side_screen(groups.get("left"), page)
+            right_screen = self._render_side_screen(groups.get("right"), page)
+            image.alpha_composite(left_screen, (left_x, max(0, (canvas_h - screen_h) // 2)))
+            image.alpha_composite(right_screen, (right_x, max(0, (canvas_h - screen_h) // 2)))
 
-        for index in range(12):
-            row, col = divmod(index, 4)
+        for index in range(cols * rows):
+            row, col = divmod(index, cols)
             x = main_x + col * (key_w + grid_gap)
             y = main_y + row * (key_h + grid_gap)
             button = groups["grid"].get(index)

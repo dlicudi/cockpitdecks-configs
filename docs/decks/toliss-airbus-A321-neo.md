@@ -19,19 +19,19 @@ icon: material/airplane
 ## Layouts
 
 <div class="cdx-grid cdx-grid--cards">
-  <a class="cdx-card" href="#">
+  <a class="cdx-card" href="fcu/">
     <div class="cdx-card__body">
       <h3>Loupedeck Live</h3>
       <p>`LoupedeckLive` layout with 6 pages.</p>
     </div>
   </a>
-  <a class="cdx-card" href="#">
+  <a class="cdx-card" href="efis-ecam/">
     <div class="cdx-card__body">
       <h3>Stream Deck Original</h3>
       <p>`Stream Deck Original` layout with 2 pages.</p>
     </div>
   </a>
-  <a class="cdx-card" href="#">
+  <a class="cdx-card" href="panels/">
     <div class="cdx-card__body">
       <h3>Stream Deck XL</h3>
       <p>`Stream Deck XL` layout with 21 pages.</p>
