@@ -131,6 +131,34 @@
   padding: 1.1rem 1.15rem;
 }
 
+.cdx-ref h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1rem;
+}
+
+.cdx-ref p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.cdx-ref p + p {
+  margin-top: 0.8rem;
+}
+
+.cdx-ref strong {
+  display: inline-block;
+  margin-bottom: 0.15rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+}
+
+.cdx-ref__empty {
+  color: var(--md-default-fg-color--light);
+}
+
 .cdx-card {
   overflow: hidden;
   color: inherit;
@@ -221,12 +249,75 @@
   border-color: rgba(15, 118, 110, 0.32);
 }
 
+.cdx-deck {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+  padding: 1rem;
+  margin: 1rem 0 2rem;
+  border: 1px solid var(--cdx-border);
+  border-radius: 1.4rem;
+  background:
+    radial-gradient(circle at top right, var(--cdx-accent-soft), transparent 32%),
+    radial-gradient(circle at bottom left, rgba(245, 158, 11, 0.1), transparent 26%),
+    var(--cdx-surface);
+  box-shadow: var(--cdx-shadow);
+}
+
+.cdx-deck__key {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0.55rem;
+  border: 1px solid var(--cdx-border);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.46);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+[data-md-color-scheme="slate"] .cdx-deck__key {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.cdx-deck__key:hover {
+  transform: translateY(-2px);
+  border-color: rgba(15, 118, 110, 0.35);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+}
+
+.cdx-deck__key img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+}
+
+.cdx-deck__key span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  white-space: nowrap;
+  word-break: normal;
+}
+
 @media screen and (max-width: 76.2344em) {
   .cdx-hero,
   .cdx-grid--three,
   .cdx-grid--cards,
   .cdx-grid--gallery {
     grid-template-columns: 1fr;
+  }
+
+  .cdx-deck {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .cdx-card img {

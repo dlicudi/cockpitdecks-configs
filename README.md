@@ -46,6 +46,16 @@ git clone https://github.com/dlicudi/cockpitdecks-configs.git
 ### Garmin GCU-478
 ![GCU-478](./docs/assets/images/cirrus-sr22/gcu478.png)
 
+## Preview Generation
+
+Deck docs, preview images, and generated SR22 markdown can be regenerated in one step:
+
+```sh
+python3 scripts/generate_deck_docs.py
+```
+
+This produces page-only preview images and generated doc fragments from config plus sample datarefs, without requiring X-Plane to be running.
+
 
 ## Notes on long press buttons
 

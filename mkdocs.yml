@@ -36,27 +36,32 @@ nav:
       - Installation: getting-started/installation.md
       - Requirements: getting-started/requirements.md
       - Development: getting-started/development.md
-  - Aircraft:
+  - Decks:
       - Overview: decks/index.md
+      - Aerobask Robin DR401: decks/aerobask-robin-dr401.md
+      - Beechcraft Baron 58: decks/beechcraft-baron-58.md
       - Cessna 172 SP: decks/cessna-172-sp.md
       - Cirrus SR22:
           - Overview: decks/cirrus-sr22.md
-          - Home: decks/cirrus-sr22/home.md
-          - PFI: decks/cirrus-sr22/pfi.md
-          - Switches: decks/cirrus-sr22/switches.md
-          - FCU: decks/cirrus-sr22/fcu.md
-          - Engine: decks/cirrus-sr22/engine.md
-          - Pedestal: decks/cirrus-sr22/pedestal.md
-          - Radio: decks/cirrus-sr22/radio.md
-          - Transponder: decks/cirrus-sr22/transponder.md
-          - GCU478: decks/cirrus-sr22/gcu478.md
-          - Views: decks/cirrus-sr22/views.md
-          - Weather: decks/cirrus-sr22/weather.md
-      - Beechcraft Baron 58: decks/beechcraft-baron-58.md
+          - Loupedeck Live:
+              - Overview: decks/cirrus-sr22/loupedecklive1/index.md
+              - Home: decks/cirrus-sr22/loupedecklive1/home.md
+              - PFI: decks/cirrus-sr22/loupedecklive1/pfi.md
+              - Switches: decks/cirrus-sr22/loupedecklive1/switches.md
+              - FCU: decks/cirrus-sr22/loupedecklive1/fcu.md
+              - Engine: decks/cirrus-sr22/loupedecklive1/engine.md
+              - Pedestal: decks/cirrus-sr22/loupedecklive1/pedestal.md
+              - Radio: decks/cirrus-sr22/loupedecklive1/radio.md
+              - Transponder: decks/cirrus-sr22/loupedecklive1/transponder.md
+              - GCU478: decks/cirrus-sr22/loupedecklive1/gcu478.md
+              - Views: decks/cirrus-sr22/loupedecklive1/views.md
+              - Weather: decks/cirrus-sr22/loupedecklive1/weather.md
+      - Embraer E-Jets Family: decks/embraer-e-jets-family.md
       - Lancair Evolution: decks/lancair-evolution.md
-      - ToLiss Airbus A321 NEO: decks/toliss-airbus-A321-neo.md
       - ToLiss Airbus A320 NEO: decks/toliss-airbus-A320-neo.md
-      - Aerobask Robin DR401: decks/aerobask-robin-dr401.md
+      - ToLiss Airbus A321 NEO: decks/toliss-airbus-A321-neo.md
+      - ToLiss Airbus A330 NEO: decks/toliss-airbus-a330-neo.md
+      - Van's Aircraft RV-10: decks/vans-aircraft-rv-10.md
   - Reference:
       - Overview: reference/index.md
       - Compatibility: reference/compatibility.md
@@ -70,6 +75,11 @@ nav:
           - Views: modules/views.md
           - Weather: modules/weather.md
       - Tags: reference/tags.md
+
+not_in_nav: |
+  examples/*
+  experimental/*
+  generated/*
 
 # Copyright
 copyright: Copyright &copy; 2023 - 2024 Duane Licudi
@@ -232,13 +242,14 @@ markdown_extensions:
         - sources:
             include:
               - decks/cirrus-sr22.md
-              - decks/cirrus-sr22/*
+              - decks/cirrus-sr22/**
           targets:
             include:
-              - decks/cirrus-sr22/*
+              - decks/cirrus-sr22/**
   - pymdownx.snippets:
-      auto_append:
-        - includes/mkdocs.md
+      base_path:
+        - .
+      check_paths: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
