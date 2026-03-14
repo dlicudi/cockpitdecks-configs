@@ -8,21 +8,58 @@ icon: material/dialpad
 
 Stream Deck XL layout for E170, E175, E190, E195.
 
-## Pages
+## [Home](home.md)
 
-| Page | Preview |
-| --- | --- |
-| [Home](home.md) | ![Home preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/index.page.png) |
-| [PFI](pfi.md) | ![PFI preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/pfi.page.png) |
-| [Mfd](mfd.md) | ![Mfd preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/mfd.page.png) |
-| [Switches](switches.md) | ![Switches preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches.page.png) |
-| [Audio Panel](audiopanel.md) | ![Audio Panel preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/audiopanel.page.png) |
-| [FCU](fcu.md) | ![FCU preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/fcu.page.png) |
-| [G1000](g1000.md) | ![G1000 preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/g1000.page.png) |
-| [Radio](radio.md) | ![Radio preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/radio.page.png) |
-| [Engine](engine.md) | ![Engine preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/engine.page.png) |
-| [Transponder](transponder.md) | ![Transponder preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/transponder.page.png) |
-| [Weather](weather.md) | ![Weather preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/weather.page.png) |
-| [Views](views.md) | ![Views preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/views.page.png) |
-| [Switches 2](switches2.md) | ![Switches 2 preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches2.page.png) |
-| [Switches3](switches3.md) | ![Switches3 preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches3.page.png) |
+![Home preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/index.page.png)
+
+## [PFI](pfi.md)
+
+![PFI preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/pfi.page.png)
+
+## [Mfd](mfd.md)
+
+![Mfd preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/mfd.page.png)
+
+## [Switches](switches.md)
+
+![Switches preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches.page.png)
+
+## [Audio Panel](audiopanel.md)
+
+![Audio Panel preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/audiopanel.page.png)
+
+## [FCU](fcu.md)
+
+![FCU preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/fcu.page.png)
+
+## [G1000](g1000.md)
+
+![G1000 preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/g1000.page.png)
+
+## [Radio](radio.md)
+
+![Radio preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/radio.page.png)
+
+## [Engine](engine.md)
+
+![Engine preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/engine.page.png)
+
+## [Transponder](transponder.md)
+
+![Transponder preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/transponder.page.png)
+
+## [Weather](weather.md)
+
+![Weather preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/weather.page.png)
+
+## [Views](views.md)
+
+![Views preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/views.page.png)
+
+## [Switches 2](switches2.md)
+
+![Switches 2 preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches2.page.png)
+
+## [Switches3](switches3.md)
+
+![Switches3 preview](../../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches3.page.png)

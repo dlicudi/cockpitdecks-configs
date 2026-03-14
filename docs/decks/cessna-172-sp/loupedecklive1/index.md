@@ -8,17 +8,42 @@ icon: material/dialpad
 
 Loupedeck Live layout for Cessna 172 SP.
 
-## Pages
+## [Home](home.md)
 
-| Page | Preview |
-| --- | --- |
-| [Home](home.md) | ![Home preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/index.page.png) |
-| [PFI](pfi.md) | ![PFI preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/pfi.page.png) |
-| [Switches](switches.md) | ![Switches preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/switches.page.png) |
-| [FCU](fcu.md) | ![FCU preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/fcu.page.png) |
-| [Radio](radio.md) | ![Radio preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/radio.page.png) |
-| [Engine](engine.md) | ![Engine preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/engine.page.png) |
-| [Weather](weather.md) | ![Weather preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/weather.page.png) |
-| [Transponder](transponder.md) | ![Transponder preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/transponder.page.png) |
-| [G1000](g1000.md) | ![G1000 preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/g1000.page.png) |
-| [Pedestal](pedestal.md) | ![Pedestal preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/pedestal.page.png) |
+![Home preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/index.page.png)
+
+## [PFI](pfi.md)
+
+![PFI preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/pfi.page.png)
+
+## [Switches](switches.md)
+
+![Switches preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/switches.page.png)
+
+## [FCU](fcu.md)
+
+![FCU preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/fcu.page.png)
+
+## [Radio](radio.md)
+
+![Radio preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/radio.page.png)
+
+## [Engine](engine.md)
+
+![Engine preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/engine.page.png)
+
+## [Weather](weather.md)
+
+![Weather preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/weather.page.png)
+
+## [Transponder](transponder.md)
+
+![Transponder preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/transponder.page.png)
+
+## [G1000](g1000.md)
+
+![G1000 preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/g1000.page.png)
+
+## [Pedestal](pedestal.md)
+
+![Pedestal preview](../../../assets/images/cessna-172-sp/generated/loupedecklive1/pedestal.page.png)

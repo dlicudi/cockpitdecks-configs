@@ -8,19 +8,50 @@ icon: material/dialpad
 
 Stream Deck XL layout for Robin DR401.
 
-## Pages
+## [Home](home.md)
 
-| Page | Preview |
-| --- | --- |
-| [Home](home.md) | ![Home preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/index.page.png) |
-| [Pfd](pfd.md) | ![Pfd preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/pfd.page.png) |
-| [Mfd](mfd.md) | ![Mfd preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/mfd.page.png) |
-| [Switches](switches.md) | ![Switches preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/switches.page.png) |
-| [Audio Panel](audiopanel.md) | ![Audio Panel preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/audiopanel.page.png) |
-| [FCU](fcu.md) | ![FCU preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/fcu.page.png) |
-| [G1000](g1000.md) | ![G1000 preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/g1000.page.png) |
-| [Radio](radio.md) | ![Radio preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/radio.page.png) |
-| [Engine](engine.md) | ![Engine preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/engine.page.png) |
-| [Transponder](transponder.md) | ![Transponder preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/transponder.page.png) |
-| [Weather](weather.md) | ![Weather preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/weather.page.png) |
-| [Views](views.md) | ![Views preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/views.page.png) |
+![Home preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/index.page.png)
+
+## [Pfd](pfd.md)
+
+![Pfd preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/pfd.page.png)
+
+## [Mfd](mfd.md)
+
+![Mfd preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/mfd.page.png)
+
+## [Switches](switches.md)
+
+![Switches preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/switches.page.png)
+
+## [Audio Panel](audiopanel.md)
+
+![Audio Panel preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/audiopanel.page.png)
+
+## [FCU](fcu.md)
+
+![FCU preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/fcu.page.png)
+
+## [G1000](g1000.md)
+
+![G1000 preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/g1000.page.png)
+
+## [Radio](radio.md)
+
+![Radio preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/radio.page.png)
+
+## [Engine](engine.md)
+
+![Engine preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/engine.page.png)
+
+## [Transponder](transponder.md)
+
+![Transponder preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/transponder.page.png)
+
+## [Weather](weather.md)
+
+![Weather preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/weather.page.png)
+
+## [Views](views.md)
+
+![Views preview](../../../assets/images/aerobask-robin-dr401/generated/streamdeckxl1/views.page.png)

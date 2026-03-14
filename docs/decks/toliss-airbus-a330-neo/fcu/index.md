@@ -8,12 +8,22 @@ icon: material/dialpad
 
 Virtual Loupedeck Live layout for Airbus A330-900 with Trent 7000-72 engines, version 251t (Airbus A330-941N).
 
-## Pages
+## [Home](home.md)
 
-| Page | Preview |
-| --- | --- |
-| [Home](home.md) | ![Home preview](../../../assets/images/toliss-airbus-a330-neo/generated/fcu/index.page.png) |
-| [FCU](fcu.md) | ![FCU preview](../../../assets/images/toliss-airbus-a330-neo/generated/fcu/fcu.page.png) |
-| [Transponder and other communication for Loupedeck Live](toliss.md) | ![Transponder and other communication for Loupedeck Live preview](../../../assets/images/toliss-airbus-a330-neo/generated/fcu/toliss.page.png) |
-| [Include with all display popups for Loupedeck Live](popups.md) | ![Include with all display popups for Loupedeck Live preview](../../../assets/images/toliss-airbus-a330-neo/generated/fcu/popups.page.png) |
-| [Include with all views for Loupedeck Live](views.md) | ![Include with all views for Loupedeck Live preview](../../../assets/images/toliss-airbus-a330-neo/generated/fcu/views.page.png) |
+![Home preview](../../../assets/images/toliss-airbus-a330-neo/generated/fcu/index.page.png)
+
+## [FCU](fcu.md)
+
+![FCU preview](../../../assets/images/toliss-airbus-a330-neo/generated/fcu/fcu.page.png)
+
+## [Transponder and other communication for Loupedeck Live](toliss.md)
+
+![Transponder and other communication for Loupedeck Live preview](../../../assets/images/toliss-airbus-a330-neo/generated/fcu/toliss.page.png)
+
+## [Include with all display popups for Loupedeck Live](popups.md)
+
+![Include with all display popups for Loupedeck Live preview](../../../assets/images/toliss-airbus-a330-neo/generated/fcu/popups.page.png)
+
+## [Include with all views for Loupedeck Live](views.md)
+
+![Include with all views for Loupedeck Live preview](../../../assets/images/toliss-airbus-a330-neo/generated/fcu/views.page.png)

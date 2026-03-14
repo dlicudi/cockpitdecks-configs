@@ -8,20 +8,54 @@ icon: material/dialpad
 
 Loupedeck Live layout for Beechcraft Baron 58.
 
-## Pages
+## [Home](home.md)
 
-| Page | Preview |
-| --- | --- |
-| [Home](home.md) | ![Home preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/index.page.png) |
-| [PFI](pfi.md) | ![PFI preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/pfi.page.png) |
-| [Switches](switches.md) | ![Switches preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switches.page.png) |
-| [FCU](fcu.md) | ![FCU preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/fcu.page.png) |
-| [Radio](radio.md) | ![Radio preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/radio.page.png) |
-| [Engine](engine.md) | ![Engine preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/engine.page.png) |
-| [Pedestal](pedestal.md) | ![Pedestal preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/pedestal.page.png) |
-| [Transponder](transponder.md) | ![Transponder preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/transponder.page.png) |
-| [G530](g530.md) | ![G530 preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/g530.page.png) |
-| [Weather](weather.md) | ![Weather preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/weather.page.png) |
-| [Views](views.md) | ![Views preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/views.page.png) |
-| [Switch Panel](switchesicing.md) | ![Switch Panel preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switchesicing.page.png) |
-| [Switch Panel](switcheslights.md) | ![Switch Panel preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switcheslights.page.png) |
+![Home preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/index.page.png)
+
+## [PFI](pfi.md)
+
+![PFI preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/pfi.page.png)
+
+## [Switches](switches.md)
+
+![Switches preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switches.page.png)
+
+## [FCU](fcu.md)
+
+![FCU preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/fcu.page.png)
+
+## [Radio](radio.md)
+
+![Radio preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/radio.page.png)
+
+## [Engine](engine.md)
+
+![Engine preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/engine.page.png)
+
+## [Pedestal](pedestal.md)
+
+![Pedestal preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/pedestal.page.png)
+
+## [Transponder](transponder.md)
+
+![Transponder preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/transponder.page.png)
+
+## [G530](g530.md)
+
+![G530 preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/g530.page.png)
+
+## [Weather](weather.md)
+
+![Weather preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/weather.page.png)
+
+## [Views](views.md)
+
+![Views preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/views.page.png)
+
+## [Switch Panel](switchesicing.md)
+
+![Switch Panel preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switchesicing.page.png)
+
+## [Switch Panel](switcheslights.md)
+
+![Switch Panel preview](../../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switcheslights.page.png)

@@ -396,14 +396,16 @@ def build_layout_page(aircraft_title: str, title: str, layout: dict[str, Any], p
         "",
         f"{title} layout for {aircraft_title}.",
         "",
-        "## Pages",
-        "",
-        "| Page | Preview |",
-        "| --- | --- |",
     ]
     for page in page_docs:
-        lines.append(f'| [{page["title"]}]({page["href"]}) | ![{page["title"]} preview]({page["image"]}) |')
-    lines.append("")
+        lines.extend(
+            [
+                f'## [{page["title"]}]({page["href"]})',
+                "",
+                f'![{page["title"]} preview]({page["image"]})',
+                "",
+            ]
+        )
     return "\n".join(lines)
 
 

@@ -8,20 +8,54 @@ icon: material/dialpad
 
 Stream Deck XL layout for Van's Aircraft RV-10.
 
-## Pages
+## [Home](home.md)
 
-| Page | Preview |
-| --- | --- |
-| [Home](home.md) | ![Home preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/index.page.png) |
-| [Engine](engine.md) | ![Engine preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/engine.page.png) |
-| [Mfd](mfd.md) | ![Mfd preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/mfd.page.png) |
-| [PFI](pfi.md) | ![PFI preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/pfi.page.png) |
-| [Audio Panel](audiopanel.md) | ![Audio Panel preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/audiopanel.page.png) |
-| [Transponder](transponder.md) | ![Transponder preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/transponder.page.png) |
-| [Switches](switches.md) | ![Switches preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/switches.page.png) |
-| [Weather](weather.md) | ![Weather preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/weather.page.png) |
-| [Views](views.md) | ![Views preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/views.page.png) |
-| [G1000](g1000.md) | ![G1000 preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/g1000.page.png) |
-| [TruTrak Sorcerer](trutrak_sorcerer.md) | ![TruTrak Sorcerer preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/trutrak_sorcerer.page.png) |
-| [Radio](radio.md) | ![Radio preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/radio.page.png) |
-| [FCU](fcu.md) | ![FCU preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/fcu.page.png) |
+![Home preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/index.page.png)
+
+## [Engine](engine.md)
+
+![Engine preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/engine.page.png)
+
+## [Mfd](mfd.md)
+
+![Mfd preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/mfd.page.png)
+
+## [PFI](pfi.md)
+
+![PFI preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/pfi.page.png)
+
+## [Audio Panel](audiopanel.md)
+
+![Audio Panel preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/audiopanel.page.png)
+
+## [Transponder](transponder.md)
+
+![Transponder preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/transponder.page.png)
+
+## [Switches](switches.md)
+
+![Switches preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/switches.page.png)
+
+## [Weather](weather.md)
+
+![Weather preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/weather.page.png)
+
+## [Views](views.md)
+
+![Views preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/views.page.png)
+
+## [G1000](g1000.md)
+
+![G1000 preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/g1000.page.png)
+
+## [TruTrak Sorcerer](trutrak_sorcerer.md)
+
+![TruTrak Sorcerer preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/trutrak_sorcerer.page.png)
+
+## [Radio](radio.md)
+
+![Radio preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/radio.page.png)
+
+## [FCU](fcu.md)
+
+![FCU preview](../../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/fcu.page.png)

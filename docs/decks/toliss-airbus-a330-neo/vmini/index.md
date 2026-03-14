@@ -8,8 +8,6 @@ icon: material/dialpad
 
 Virtual Streamdeck Mini layout for Airbus A330-900 with Trent 7000-72 engines, version 251t (Airbus A330-941N).
 
-## Pages
+## [Home](home.md)
 
-| Page | Preview |
-| --- | --- |
-| [Home](home.md) | ![Home preview](../../../assets/images/toliss-airbus-a330-neo/generated/vmini/index.page.png) |
+![Home preview](../../../assets/images/toliss-airbus-a330-neo/generated/vmini/index.page.png)

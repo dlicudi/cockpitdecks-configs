@@ -8,9 +8,10 @@ icon: material/dialpad
 
 Stream Deck Original layout for Airbus A321-253NY (CFM LEAP-1A33).
 
-## Pages
+## [Home](home.md)
 
-| Page | Preview |
-| --- | --- |
-| [Home](home.md) | ![Home preview](../../../assets/images/toliss-airbus-a321-neo/generated/efis-ecam/index.page.png) |
-| [EFIS display selector + some FCU commands for Streamdeck 15 keys](efis.md) | ![EFIS display selector + some FCU commands for Streamdeck 15 keys preview](../../../assets/images/toliss-airbus-a321-neo/generated/efis-ecam/efis.page.png) |
+![Home preview](../../../assets/images/toliss-airbus-a321-neo/generated/efis-ecam/index.page.png)
+
+## [EFIS display selector + some FCU commands for Streamdeck 15 keys](efis.md)
+
+![EFIS display selector + some FCU commands for Streamdeck 15 keys preview](../../../assets/images/toliss-airbus-a321-neo/generated/efis-ecam/efis.page.png)

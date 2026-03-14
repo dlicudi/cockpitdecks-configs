@@ -8,9 +8,10 @@ icon: material/dialpad
 
 Virtual Streamdeck MK.2 layout for Airbus A330-900 with Trent 7000-72 engines, version 251t (Airbus A330-941N).
 
-## Pages
+## [Home](home.md)
 
-| Page | Preview |
-| --- | --- |
-| [Home](home.md) | ![Home preview](../../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/index.page.png) |
-| [EFIS display selector + some FCU commands for Streamdeck 15 keys](efis.md) | ![EFIS display selector + some FCU commands for Streamdeck 15 keys preview](../../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/efis.page.png) |
+![Home preview](../../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/index.page.png)
+
+## [EFIS display selector + some FCU commands for Streamdeck 15 keys](efis.md)
+
+![EFIS display selector + some FCU commands for Streamdeck 15 keys preview](../../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/efis.page.png)

@@ -8,28 +8,86 @@ icon: material/dialpad
 
 Virtual Streamdeck XL layout for Airbus A330-900 with Trent 7000-72 engines, version 251t (Airbus A330-941N).
 
-## Pages
+## [Home](home.md)
 
-| Page | Preview |
-| --- | --- |
-| [Home](home.md) | ![Home preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/index.page.png) |
-| [Overhead AIR COND Panel (ATA 21)](ovrhdaircond.md) | ![Overhead AIR COND Panel (ATA 21) preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdaircond.page.png) |
-| [Internal lights](intlights.md) | ![Internal lights preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/intlights.page.png) |
-| [Alternate index page](index-alt.md) | ![Alternate index page preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/index-alt.page.png) |
-| [ADIRS Start/stop](adirs.md) | ![ADIRS Start/stop preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/adirs.page.png) |
-| [Airport Navigator](aptnav.md) | ![Airport Navigator preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/aptnav.page.png) |
-| [Cockpitdecks specific actions, not linked to aircraft](cockpitdecks.md) | ![Cockpitdecks specific actions, not linked to aircraft preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/cockpitdecks.page.png) |
-| [Cockpitdecks Special Dashboard of A21N](dashboard.md) | ![Cockpitdecks Special Dashboard of A21N preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/dashboard.page.png) |
-| [Door operations](doors.md) | ![Door operations preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/doors.page.png) |
-| [ECAM display selector](ecam.md) | ![ECAM display selector preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ecam.page.png) |
-| [EFIS display selector + some FCU commands](efis.md) | ![EFIS display selector + some FCU commands preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/efis.page.png) |
-| [Electric panel (ATA 24)](ovrhdelec.md) | ![Electric panel (ATA 24) preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdelec.page.png) |
-| [Fire panels (ATA 26)](ovrhdfire.md) | ![Fire panels (ATA 26) preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdfire.page.png) |
-| [Fuel panel (ATA 28)](ovrhdfuel.md) | ![Fuel panel (ATA 28) preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdfuel.page.png) |
-| [Hydraulics (ATA 29)](ovrhdhyd.md) | ![Hydraulics (ATA 29) preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdhyd.page.png) |
-| [Pedestal](piedestal.md) | ![Pedestal preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/piedestal.page.png) |
-| [All popups on pos. 16 to 28](popups.md) | ![All popups on pos. 16 to 28 preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/popups.page.png) |
-| [Radio panel](radio.md) | ![Radio panel preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/radio.page.png) |
-| [ToLiss aircraft specific actions, not available in real aircraft...](toliss.md) | ![ToLiss aircraft specific actions, not available in real aircraft... preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/toliss.page.png) |
-| [X-Plane specific actions, not linked to aircraft](xplane.md) | ![X-Plane specific actions, not linked to aircraft preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/xplane.page.png) |
-| [Transponder panel](xpndr.md) | ![Transponder panel preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/xpndr.page.png) |
+![Home preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/index.page.png)
+
+## [Overhead AIR COND Panel (ATA 21)](ovrhdaircond.md)
+
+![Overhead AIR COND Panel (ATA 21) preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdaircond.page.png)
+
+## [Internal lights](intlights.md)
+
+![Internal lights preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/intlights.page.png)
+
+## [Alternate index page](index-alt.md)
+
+![Alternate index page preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/index-alt.page.png)
+
+## [ADIRS Start/stop](adirs.md)
+
+![ADIRS Start/stop preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/adirs.page.png)
+
+## [Airport Navigator](aptnav.md)
+
+![Airport Navigator preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/aptnav.page.png)
+
+## [Cockpitdecks specific actions, not linked to aircraft](cockpitdecks.md)
+
+![Cockpitdecks specific actions, not linked to aircraft preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/cockpitdecks.page.png)
+
+## [Cockpitdecks Special Dashboard of A21N](dashboard.md)
+
+![Cockpitdecks Special Dashboard of A21N preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/dashboard.page.png)
+
+## [Door operations](doors.md)
+
+![Door operations preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/doors.page.png)
+
+## [ECAM display selector](ecam.md)
+
+![ECAM display selector preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ecam.page.png)
+
+## [EFIS display selector + some FCU commands](efis.md)
+
+![EFIS display selector + some FCU commands preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/efis.page.png)
+
+## [Electric panel (ATA 24)](ovrhdelec.md)
+
+![Electric panel (ATA 24) preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdelec.page.png)
+
+## [Fire panels (ATA 26)](ovrhdfire.md)
+
+![Fire panels (ATA 26) preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdfire.page.png)
+
+## [Fuel panel (ATA 28)](ovrhdfuel.md)
+
+![Fuel panel (ATA 28) preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdfuel.page.png)
+
+## [Hydraulics (ATA 29)](ovrhdhyd.md)
+
+![Hydraulics (ATA 29) preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdhyd.page.png)
+
+## [Pedestal](piedestal.md)
+
+![Pedestal preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/piedestal.page.png)
+
+## [All popups on pos. 16 to 28](popups.md)
+
+![All popups on pos. 16 to 28 preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/popups.page.png)
+
+## [Radio panel](radio.md)
+
+![Radio panel preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/radio.page.png)
+
+## [ToLiss aircraft specific actions, not available in real aircraft...](toliss.md)
+
+![ToLiss aircraft specific actions, not available in real aircraft... preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/toliss.page.png)
+
+## [X-Plane specific actions, not linked to aircraft](xplane.md)
+
+![X-Plane specific actions, not linked to aircraft preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/xplane.page.png)
+
+## [Transponder panel](xpndr.md)
+
+![Transponder panel preview](../../../assets/images/toliss-airbus-a330-neo/generated/panels/xpndr.page.png)
