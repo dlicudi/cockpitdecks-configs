@@ -6,7 +6,7 @@ icon: material/dialpad
 
 # Loupedeck Live
 
-Loupedeck Live layout for Vans Aircraft Rv 10.
+Loupedeck Live layout for Van's Aircraft RV-10.
 
 ## Pages
 

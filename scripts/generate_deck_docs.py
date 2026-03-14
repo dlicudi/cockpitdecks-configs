@@ -16,11 +16,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DECKS_DIR = ROOT / "decks"
 DOCS_DECKS_DIR = ROOT / "docs" / "decks"
 IMAGE_ROOT = ROOT / "docs" / "assets" / "images"
-SR22_SCRIPT = ROOT / "scripts" / "generate_sr22_docs.py"
 RENDER_PREVIEW_SCRIPT = ROOT / "scripts" / "render_deck_preview.py"
 REPO_BLOB_BASE = "https://github.com/dlicudi/cockpitdecks-configs/blob/main"
-CUSTOM_LAYOUT_DOC_SLUGS = {"cirrus-sr22"}
-GENERATED_PREVIEW_SLUGS = {"lancair-evolution", "vans-aircraft-rv-10"}
 
 PAGE_NAME_OVERRIDES = {
     "audiopanel": "Audio Panel",
@@ -134,7 +131,58 @@ def normalize_docs_metadata(meta: dict[str, Any] | None) -> dict[str, Any]:
     return meta
 
 
-def layout_entries(config: dict[str, Any], deckconfig_dir: Path) -> list[dict[str, Any]]:
+def resolve_repo_path(value: str | Path | None) -> Path | None:
+    if value is None:
+        return None
+    candidate = Path(str(value))
+    if candidate.is_absolute():
+        return candidate
+    return ROOT / candidate
+
+
+def layout_docs_metadata(docs_meta: dict[str, Any], layout_name: str) -> dict[str, Any]:
+    layouts = docs_meta.get("layouts")
+    if not isinstance(layouts, dict):
+        return {}
+    meta = layouts.get(layout_name)
+    return meta if isinstance(meta, dict) else {}
+
+
+def ordered_page_files(layout_dir: Path, layout_meta: dict[str, Any]) -> list[Path]:
+    page_map = {
+        path.stem: path
+        for path in sorted(layout_dir.glob("*.yaml"))
+        if path.name not in {"config.yaml", "pager.yaml"}
+    }
+    if not page_map:
+        return []
+
+    ordered_names = layout_meta.get("pages")
+    if isinstance(ordered_names, list):
+        ordered: list[Path] = []
+        seen: set[str] = set()
+        for entry in ordered_names:
+            name = str(entry).strip()
+            if not name or name in seen or name not in page_map:
+                continue
+            ordered.append(page_map[name])
+            seen.add(name)
+        return ordered
+
+    excluded = {
+        str(entry).strip()
+        for entry in layout_meta.get("exclude_pages", [])
+        if str(entry).strip()
+    }
+    return [path for name, path in page_map.items() if name not in excluded]
+
+
+def aircraft_title(slug: str, config: dict[str, Any], docs_meta: dict[str, Any]) -> str:
+    aircraft_meta = normalize_docs_metadata(docs_meta.get("aircraft"))
+    return str(aircraft_meta.get("title") or config.get("model") or config.get("aircraft") or titleize_slug(slug))
+
+
+def layout_entries(config: dict[str, Any], deckconfig_dir: Path, docs_meta: dict[str, Any]) -> list[dict[str, Any]]:
     entries = config.get("decks", [])
     layouts: list[dict[str, Any]] = []
     if isinstance(entries, list):
@@ -145,9 +193,8 @@ def layout_entries(config: dict[str, Any], deckconfig_dir: Path) -> list[dict[st
             if not layout_name:
                 continue
             layout_dir = deckconfig_dir / layout_name
-            page_files = []
-            if layout_dir.exists():
-                page_files = [path for path in sorted(layout_dir.glob("*.yaml")) if path.name not in {"config.yaml", "pager.yaml"}]
+            layout_meta = layout_docs_metadata(docs_meta, layout_name)
+            page_files = ordered_page_files(layout_dir, layout_meta) if layout_dir.exists() else []
             deck_type = str(entry.get("type") or "").strip()
             layouts.append(
                 {
@@ -156,6 +203,7 @@ def layout_entries(config: dict[str, Any], deckconfig_dir: Path) -> list[dict[st
                     "layout": layout_name,
                     "dir": layout_dir,
                     "pages": page_files,
+                    "docs": layout_meta,
                     "title": humanize_deck_type(deck_type) if deck_type else str(entry.get("name") or layout_name),
                 }
             )
@@ -185,7 +233,11 @@ def page_image_path(slug: str, page_path: Path) -> Path | None:
 
 
 def render_layout_page_images(slug: str, layout: dict[str, Any]) -> dict[Path, Path]:
-    if slug not in GENERATED_PREVIEW_SLUGS or not RENDER_PREVIEW_SCRIPT.exists():
+    if not RENDER_PREVIEW_SCRIPT.exists():
+        return {}
+
+    preview_mode = str(layout["docs"].get("preview") or "").strip().lower()
+    if preview_mode != "generated":
         return {}
 
     output_dir = IMAGE_ROOT / slug / "generated" / layout["layout"]
@@ -201,6 +253,9 @@ def render_layout_page_images(slug: str, layout: dict[str, Any]) -> dict[Path, P
             "--output-dir",
             str(temp_image_dir),
         ]
+        fixture = resolve_repo_path(layout["docs"].get("fixture"))
+        if fixture is not None:
+            render_args.extend(["--fixture", str(fixture)])
         for page_path in layout["pages"]:
             render_args.extend(["--page", page_path.stem])
         run(render_args)
@@ -225,8 +280,8 @@ def page_anchor_id(slug: str, layout_name: str, page_name: str) -> str:
     return f"{slug}-{layout_name}-{page_name}-preview"
 
 
-def build_layout_page(slug: str, title: str, layout: dict[str, Any], page_docs: list[dict[str, str]]) -> str:
-    aircraft_title = titleize_slug(slug)
+def build_layout_page(aircraft_title: str, title: str, layout: dict[str, Any], page_docs: list[dict[str, str]]) -> str:
+    style = str(layout["docs"].get("style") or "cards").strip().lower()
     lines = [
         "---",
         "icon: material/dialpad",
@@ -238,23 +293,36 @@ def build_layout_page(slug: str, title: str, layout: dict[str, Any], page_docs: 
         "",
         f"{title} layout for {aircraft_title}.",
         "",
-        "## Pages",
+        "## Pages" if style != "deck-map" else "## Deck Map",
         "",
-        '<div class="cdx-grid cdx-grid--cards">',
     ]
-    for page in page_docs:
-        lines.extend(
-            [
-                f'  <a class="cdx-card" href="{page["href"]}">',
-                f'    <img src="{page["image"]}" alt="{page["title"]} page preview" />',
-                '    <div class="cdx-card__body">',
-                f'      <h3>{page["title"]}</h3>',
-                "      <p>Page config and preview.</p>",
-                "    </div>",
-                "  </a>",
-            ]
-        )
-    lines.extend(["</div>", ""])
+    if style == "deck-map":
+        lines.append('<div class="cdx-deck">')
+        for page in page_docs:
+            lines.extend(
+                [
+                    f'  <a class="cdx-deck__key" href="{page["href"]}" data-preview>',
+                    f'    <img src="{page["image"]}" alt="{page["title"]} page preview" />',
+                    f'    <span>{page["title"]}</span>',
+                    "  </a>",
+                ]
+            )
+        lines.extend(["</div>", ""])
+    else:
+        lines.append('<div class="cdx-grid cdx-grid--cards">')
+        for page in page_docs:
+            lines.extend(
+                [
+                    f'  <a class="cdx-card" href="{page["href"]}">',
+                    f'    <img src="{page["image"]}" alt="{page["title"]} page preview" />',
+                    '    <div class="cdx-card__body">',
+                    f'      <h3>{page["title"]}</h3>',
+                    "      <p>Page config and preview.</p>",
+                    "    </div>",
+                    "  </a>",
+                ]
+            )
+        lines.extend(["</div>", ""])
     return "\n".join(lines)
 
 
@@ -298,11 +366,9 @@ def build_page_doc(slug: str, layout_name: str, layout_title: str, page_path: Pa
     return "\n".join(lines)
 
 
-def generate_layout_docs(slug: str, config: dict[str, Any], deckconfig_dir: Path) -> None:
-    if slug in CUSTOM_LAYOUT_DOC_SLUGS:
-        return
-
-    for layout in layout_entries(config, deckconfig_dir):
+def generate_layout_docs(slug: str, config: dict[str, Any], deckconfig_dir: Path, docs_meta: dict[str, Any]) -> None:
+    title = aircraft_title(slug, config, docs_meta)
+    for layout in layout_entries(config, deckconfig_dir, docs_meta):
         if not layout["pages"]:
             continue
 
@@ -339,7 +405,7 @@ def generate_layout_docs(slug: str, config: dict[str, Any], deckconfig_dir: Path
             )
 
         (layout_doc_dir / "index.md").write_text(
-            build_layout_page(slug, str(layout["title"]), layout, page_docs),
+            build_layout_page(title, str(layout["title"]), layout, page_docs),
             encoding="utf-8",
         )
 
@@ -347,7 +413,7 @@ def generate_layout_docs(slug: str, config: dict[str, Any], deckconfig_dir: Path
 def build_overview(slug: str, config: dict[str, Any], docs_meta: dict[str, Any], doc_path: Path) -> str:
     aircraft_meta = normalize_docs_metadata(docs_meta.get("aircraft"))
     deckconfig_dir = DECKS_DIR / slug / "deckconfig"
-    title = str(aircraft_meta.get("title") or config.get("model") or config.get("aircraft") or titleize_slug(slug))
+    title = aircraft_title(slug, config, docs_meta)
     summary = str(aircraft_meta.get("summary") or config.get("description") or f"Deck definitions for {title}.")
     eyebrow = str(aircraft_meta.get("eyebrow") or "")
     tags = aircraft_meta.get("tags", [])
@@ -363,7 +429,7 @@ def build_overview(slug: str, config: dict[str, Any], docs_meta: dict[str, Any],
     hero_src = built_page_asset_path(hero_path, doc_path) if hero_path and hero_path.exists() else ""
     hero_alt = str(aircraft_meta.get("hero_alt") or title)
 
-    layouts = layout_entries(config, deckconfig_dir)
+    layouts = layout_entries(config, deckconfig_dir, docs_meta)
 
     lines = [
         "---",
@@ -447,9 +513,6 @@ def build_index(aircraft_entries: list[dict[str, str]]) -> str:
 def main() -> int:
     DOCS_DECKS_DIR.mkdir(parents=True, exist_ok=True)
 
-    if SR22_SCRIPT.exists():
-        run(["python3", str(SR22_SCRIPT)])
-
     aircraft_entries: list[dict[str, str]] = []
     for aircraft_dir in sorted(path for path in DECKS_DIR.iterdir() if path.is_dir()):
         deckconfig_dir = aircraft_dir / "deckconfig"
@@ -460,12 +523,12 @@ def main() -> int:
         slug = aircraft_dir.name
         config = load_yaml(config_path)
         docs_meta = load_yaml(deckconfig_dir / "_docs.yaml") if (deckconfig_dir / "_docs.yaml").exists() else {}
-        generate_layout_docs(slug, config, deckconfig_dir)
+        generate_layout_docs(slug, config, deckconfig_dir, docs_meta)
         doc_path = DOCS_DECKS_DIR / doc_filename(slug)
         doc_path.write_text(build_overview(slug, config, docs_meta, doc_path), encoding="utf-8")
 
         aircraft_meta = normalize_docs_metadata(docs_meta.get("aircraft"))
-        title = str(aircraft_meta.get("title") or config.get("model") or config.get("aircraft") or titleize_slug(slug))
+        title = aircraft_title(slug, config, docs_meta)
         summary = str(aircraft_meta.get("summary") or config.get("description") or f"Deck definitions for {title}.")
         image_path = aircraft_meta.get("hero_image")
         if image_path:

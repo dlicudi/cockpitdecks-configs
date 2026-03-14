@@ -6,7 +6,7 @@ icon: material/dialpad
 
 # Stream Deck XL
 
-Stream Deck XL layout for Vans Aircraft Rv 10.
+Stream Deck XL layout for Van's Aircraft RV-10.
 
 ## Pages
 
