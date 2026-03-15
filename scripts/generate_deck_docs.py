@@ -475,6 +475,20 @@ def build_overview(slug: str, config: dict[str, Any], docs_meta: dict[str, Any],
             lines.append("")
             lines.append(f"`{layout['type']}` layout with {page_count} page{'s' if page_count != 1 else ''}.")
             lines.append("")
+            if layout["pages"]:
+                layout_dir = layout["layout"]
+                page_names: list[str] = []
+                for page_path in layout["pages"]:
+                    name = page_title(page_path)
+                    doc_stem = page_doc_stem(page_path)
+                    page_doc = DOCS_DECKS_DIR / slug / layout_dir / f"{doc_stem}.md"
+                    if page_doc.exists():
+                        page_href = rel_path(page_doc, doc_path)
+                        page_names.append(f"[{name}]({page_href})")
+                    else:
+                        page_names.append(name)
+                lines.append("**Pages:** " + " · ".join(page_names))
+                lines.append("")
     else:
         lines.append("No layout metadata found.")
         lines.append("")
@@ -502,8 +516,15 @@ def parse_tracking(meta: dict[str, Any] | None) -> dict[str, Any]:
     }
 
 
+STATE_ADMONITION = {
+    "stable": ("success", "Stable"),
+    "active": ("info", "Active Development"),
+    "wip": ("warning", "Work in Progress"),
+}
+
+
 def render_tracking(tracking: dict[str, Any]) -> list[str]:
-    """Render tracking metadata as markdown lines for the aircraft overview."""
+    """Render tracking metadata as Material admonitions."""
     state = tracking.get("state", "")
     issues = tracking.get("issues", [])
     missing = tracking.get("missing", [])
@@ -512,24 +533,22 @@ def render_tracking(tracking: dict[str, Any]) -> list[str]:
         return []
     lines: list[str] = ["## Status", ""]
     if state:
-        lines.extend([f"**State:** `{state}`", ""])
+        admonition_type, label = STATE_ADMONITION.get(state, ("note", state.title()))
+        lines.extend([f'!!! {admonition_type} "State: {label}"', ""])
     if issues:
-        lines.append("**Known issues:**")
-        lines.append("")
+        lines.extend(['!!! bug "Known Issues"', ""])
         for item in issues:
-            lines.append(f"- {item}")
+            lines.append(f"    - {item}")
         lines.append("")
     if missing:
-        lines.append("**Missing:**")
-        lines.append("")
+        lines.extend(['!!! warning "Missing"', ""])
         for item in missing:
-            lines.append(f"- {item}")
+            lines.append(f"    - {item}")
         lines.append("")
     if planned:
-        lines.append("**Planned:**")
-        lines.append("")
+        lines.extend(['!!! tip "Planned"', ""])
         for item in planned:
-            lines.append(f"- {item}")
+            lines.append(f"    - {item}")
         lines.append("")
     return lines
 
