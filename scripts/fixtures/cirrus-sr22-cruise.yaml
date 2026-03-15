@@ -56,9 +56,29 @@ datarefs:
   cockpitdecks/fms_browser/count: 28
   cockpitdecks/fms_browser/plan_departure: EHAM
   cockpitdecks/fms_browser/plan_destination: LIML
+  cockpitdecks/fms_browser/plan_name: EHAM LIML
   cockpitdecks/fms_browser/plan_filename: EHAMLIML01.fms
-  cockpitdecks/fms_browser/status: READY
+  cockpitdecks/fms_browser/plan_dep_runway: "24"
+  cockpitdecks/fms_browser/plan_dest_runway: "35R"
+  cockpitdecks/fms_browser/plan_sid: BERGI3E
+  cockpitdecks/fms_browser/plan_star: RNAV35R
+  cockpitdecks/fms_browser/plan_distance_nm: 487.3
+  cockpitdecks/fms_browser/plan_waypoint_count: 14
+  cockpitdecks/fms_browser/plan_max_altitude: 36000
+  cockpitdecks/fms_browser/status: LOADED
   cockpitdecks/fms_browser/plan_cycle: AIRAC 2501
-  cockpitdecks/fms_browser/loaded: 0
+  cockpitdecks/fms_browser/loaded: 1
   cockpitdecks/fms_browser/last_error: ""
   cockpitdecks/fms_browser/action: 0
+  cockpitdecks/fms_browser/fms_entry_count: 14
+  cockpitdecks/fms_browser/fms_active_index: 6
+  cockpitdecks/fms_browser/fms_active_ident: TITIX
+  cockpitdecks/fms_browser/fms_active_altitude: 36000
+  cockpitdecks/fms_browser/fms_displayed_index: 8
+  cockpitdecks/fms_browser/fms_displayed_ident: MOKDI
+  cockpitdecks/fms_browser/fms_displayed_altitude: 24000
+  cockpitdecks/fms_browser/fms_last_ident: LIML
+  cockpitdecks/fms_browser/fms_last_altitude: 0
+  sim/cockpit2/gauges/indicators/ground_speed_kt: 186
+  sim/cockpit2/radios/indicators/fms_distance_to_tod_pilot: 122.7
+  laminar/sr22/annunciators/ap/nav: 1
