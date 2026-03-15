@@ -34,7 +34,6 @@ nav:
   - Home: index.md
   - Getting Started:
       - Installation: getting-started/installation.md
-      - Requirements: getting-started/requirements.md
       - Development: getting-started/development.md
   - Decks:
       - Overview: decks/index.md
@@ -52,14 +51,7 @@ nav:
       - Overview: reference/index.md
       - Compatibility: reference/compatibility.md
       - Deck Types: reference/deck-types.md
-      - Modules:
-          - Overview: modules/modules.md
-          - Audio Panel: modules/audio-panel.md
-          - Engine: modules/engine.md
-          - G1000: modules/g1000.md
-          - Radio: modules/radio.md
-          - Views: modules/views.md
-          - Weather: modules/weather.md
+      - Modules: modules/modules.md
       - Tags: reference/tags.md
 
 not_in_nav: |

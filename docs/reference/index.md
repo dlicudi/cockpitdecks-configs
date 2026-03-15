@@ -1,11 +1,23 @@
 # Reference
 
-Shared technical notes for `cockpitdecks-configs`.
+Technical reference for cockpitdecks-configs — information that applies across all aircraft.
 
-Use this section for information that is not tied to a single aircraft:
+<div class="grid cards" markdown>
 
-- compatibility requirements
-- deck capabilities and deck type definitions
-- reusable modules such as radio, weather, views, and G1000 pages
+-   :material-check-decagram: **[Compatibility](compatibility.md)**
 
-If you are new to the project, start with [Installation](../getting-started/installation.md) and then browse the [Aircraft](../decks/index.md) pages.
+    Supported software versions, hardware, and recommended setup.
+
+-   :material-card-multiple: **[Deck Types](deck-types.md)**
+
+    Deck type YAML definitions — actions, feedback, and driver mappings.
+
+-   :material-puzzle: **[Modules](../modules/modules.md)**
+
+    Reusable page configurations shared across aircraft (radio, engine, G1000, etc.).
+
+-   :material-tag-multiple: **[Tags](tags.md)**
+
+    Browse all documentation pages by tag.
+
+</div>
