@@ -1,5 +1,4 @@
 name: mfd
-includes: includes/pagerfull
 
 buttons:
 
@@ -310,6 +309,216 @@ buttons:
           text: "${formula} g"
 
   - index: 11
+    name: AIRCRAFT
+    type: none
+    label: AIRCRAFT
+    label-color: black
+    label-size: 10
+    annunciator:
+      size: medium
+      model: F
+      parts:
+        F0:
+          color: Gold
+          text-size: 30
+          text: "${formula}\nQNH"
+          text-format: "{0:.2f}"
+          formula: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}"
+        F1:
+          color: White
+          text-size: 30
+          text: "${formula}\nhPa"
+          text-format: "{0:.0f}"
+          formula: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot} 33.8639 *"
+        F2:
+          color: White
+          text-size: 30
+          text: "${sim/cockpit2/clock_timer/hobbs_time_hours}:${sim/cockpit2/clock_timer/hobbs_time_minutes}\nHOBBS"
+          formula: "1"
+        F3:
+          color: Turquoise
+          text-size: 30
+          text: "${sim/cockpit/radios/transponder_code}\nXPDR"
+          text-format: "{:04.0f}"
+          formula: "1"
+
+  - index: 12
+    name: FUEL
+    type: none
+    label: FUEL QTY
+    label-color: black
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: yellow
+          text-size: 32
+          formula: "${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn"
+          text: "L ${formula} gal"
+        B1:
+          color: yellow
+          text-size: 32
+          formula: "${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn"
+          text: "R ${formula} gal"
+
+  - index: 13
+    name: ELECTRICAL
+    type: none
+    label: ELECTRICAL
+    label-color: black
+    label-size: 10
+    annunciator:
+      size: medium
+      model: F
+      parts:
+        F0:
+          color: Lime
+          text-size: 30
+          text: "${formula}\nBAT A"
+          text-format: "{0:.1f}"
+          formula: "${sim/cockpit2/electrical/battery_amps[0]}"
+        F1:
+          color: deepskyblue
+          text-size: 28
+          text: "ALT1"
+          framed: true
+          formula: "${sim/cockpit2/electrical/generator_on[0]} 1 eq"
+        F2:
+          color: deepskyblue
+          text-size: 28
+          text: "ALT2"
+          framed: true
+          formula: "${sim/cockpit2/electrical/generator_on[1]} 1 eq"
+        F3:
+          color: deepskyblue
+          text-size: 28
+          text: "AVNX"
+          framed: true
+          formula: "${sim/cockpit/electrical/avionics_on} 1 eq"
+
+  - index: 14
+    name: THROTTLE
+    type: none
+    label: THROTTLE
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: A
+      parts:
+        A0:
+          color: lime
+          text-size: 100
+          formula: "${sim/flightmodel/engine/ENGN_thro[0]} 100 *"
+          text: "${formula}%"
+          text-font: Segment7Standard.otf
+          text-format: "{0:.0f}"
+
+  - index: 15
+    name: MIXTURE
+    type: none
+    label: MIXTURE
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: A
+      parts:
+        A0:
+          color: lime
+          text-size: 100
+          formula: "${sim/flightmodel/engine/ENGN_mixt[0]} 100 *"
+          text: "${formula}%"
+          text-font: Segment7Standard.otf
+          text-format: "{0:.0f}"
+
+  - index: 16
+    type: page
+    page: engine
+    label: ENGINE
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 24
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 17
+    type: page
+    page: switches
+    label: SWITCHES
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 18
+    type: page
+    page: lights
+    label: LIGHTS
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 19
+    type: page
+    page: icing
+    label: ICING
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 20
+    type: page
+    page: radio
+    label: RADIO
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 21
+    type: page
+    page: gcu478
+    label: GCU-478
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 30, 40)
+
+  - index: 22
+    type: page
+    page: weather
+    label: WEATHER
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 23
     type: page
     page: pedestal
     label: PEDESTAL
@@ -318,5 +527,85 @@ buttons:
     text-color: khaki
     text-size: 40
     text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 24
+    type: page
+    page: mfd
+    text: MFD
+    text-color: black
+    text-size: 24
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: deepskyblue
+
+  - index: 25
+    type: page
+    page: engine
+    text: ENGINE
+    text-color: khaki
+    text-size: 20
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 26
+    type: page
+    page: weather
+    text: WX
+    text-color: khaki
+    text-size: 24
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 27
+    type: page
+    page: transponder
+    text: XPDR
+    text-color: khaki
+    text-size: 20
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 28
+    type: page
+    page: radio
+    text: RADIO
+    text-color: khaki
+    text-size: 20
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 29
+    type: page
+    page: gcu478
+    text: GCU478
+    text-color: khaki
+    text-size: 18
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 30
+    type: page
+    page: pedestal
+    text: AUX
+    text-color: khaki
+    text-size: 24
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 31
+    type: page
+    page: index
+    text: HOME
+    text-color: khaki
+    text-size: 20
+    text-font: D-DIN-Bold.otf
     text-position: cm
     text-bg-color: (40, 40, 40)

@@ -44,4 +44,11 @@ datarefs:
   sim/cockpit2/electrical/battery_on[1]: 1
   sim/cockpit2/electrical/generator_on[0]: 1
   sim/cockpit2/electrical/generator_on[1]: 1
+  sim/cockpit/switches/pitot_heat_on: 0
+  sim/cockpit/switches/anti_ice_prop_heat: 0
+  sim/cockpit/switches/anti_ice_window_heat: 0
+  sim/cockpit2/ice/tks_backup_pump: 0
+  sim/weather/aircraft/temperature_ambient_deg_c: 17
   laminar/sr22/fuel_selector_pos: 1
+  laminar/sr22/switch/ice_protect: 0
+  laminar/sr22/switch/ice_norm_high: 0

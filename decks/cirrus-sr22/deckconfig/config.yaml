@@ -36,6 +36,7 @@ dataref-roundings:
     sim/flightmodel/engine/ENGN_FF_[0]: 2
     sim/flightmodel/engine/ENGN_mixt[0]: 2
     sim/flightmodel/engine/ENGN_thro[0]: 2
+    sim/weather/aircraft/temperature_ambient_deg_c: 0
 #     # used in Weather button 3 or 4 decimals sufficient...
 #     sim/flightmodel/position/latitude: 8
 #     sim/flightmodel/position/longitude: 8
