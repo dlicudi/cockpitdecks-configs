@@ -1,0 +1,15 @@
+aircraft:
+  eyebrow: ToLiss / X-Plane 12
+  summary: >-
+    Airbus A330-900neo (Trent 7000 engines) with the most comprehensive deck support.
+    Twelve layouts covering physical and virtual decks including Loupedeck Live, Stream Deck family,
+    and X-Touch Mini.
+  tags:
+    - Airliner
+    - ToLiss
+    - Loupedeck Live
+    - Stream Deck XL
+    - X-Plane 12
+
+tracking:
+  state: stable

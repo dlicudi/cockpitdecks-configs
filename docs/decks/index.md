@@ -6,83 +6,121 @@
 
 -   **Robin DR401**
 
-    Decks for Robin DR401
+    ![Robin DR401 preview](../assets/images/aerobask-robin-dr401/generated/loupedecklive1/index.page.png){ loading=lazy }
 
-    2 layouts · 25 pages
+    :material-airplane-marker: *Aerobask / X-Plane 12*
+
+    GA single-engine with G1000 glass cockpit. Layouts for Loupedeck Live and Stream Deck XL covering primary flight, engine, radio, and navigation pages.
+
+    :material-check-circle:{ .success } Stable · 2 layouts · 25 pages
 
     [:octicons-arrow-right-24: View deck](aerobask-robin-dr401/index.md)
 
 -   **Beechcraft Baron 58**
 
-    Decks for Beechcraft Baron 58
+    ![Beechcraft Baron 58 preview](../assets/images/beechcraft-baron-58/generated/loupedecklive1/index.page.png){ loading=lazy }
 
-    1 layout · 13 pages
+    :material-airplane-marker: *Laminar Research / X-Plane 12*
+
+    Twin-engine GA aircraft with conventional instruments. Loupedeck Live layout covering flight, engine, and systems pages.
+
+    :material-check-circle:{ .success } Stable · 1 layout · 13 pages
 
     [:octicons-arrow-right-24: View deck](beechcraft-baron-58/index.md)
 
 -   **Cessna 172 SP**
 
-    Decks for Cessna 172 SP
+    ![Cessna 172 SP preview](../assets/images/cessna-172-sp/generated/loupedecklive1/index.page.png){ loading=lazy }
 
-    1 layout · 10 pages
+    :material-airplane-marker: *Laminar Research / X-Plane 12*
+
+    Classic GA trainer with G1000 glass cockpit. Loupedeck Live layout with primary flight, radio, engine, and navigation pages.
+
+    :material-check-circle:{ .success } Stable · 1 layout · 10 pages
 
     [:octicons-arrow-right-24: View deck](cessna-172-sp/index.md)
 
--   **Cirrus SR22** · `stable`
+-   **Cirrus SR22**
+
+    ![Cirrus SR22 preview](../assets/images/cirrus-sr22/generated/loupedecklive1/index.page.png){ loading=lazy }
+
+    :material-airplane-marker: *Laminar Research / X-Plane 12*
 
     G1000-oriented layout for the Loupedeck Live, tuned for fast in-flight page switching and practical SR22 workflows.
 
-    `GA` · `Loupedeck Live` · `G1000` · `X-Plane 12`
-
-    1 layout · 11 pages
+    :material-check-circle:{ .success } Stable · 1 layout · 11 pages
 
     [:octicons-arrow-right-24: View deck](cirrus-sr22/index.md)
 
 -   **Embraer E-Jets Family**
 
-    Decks
+    ![Embraer E-Jets Family preview](../assets/images/embraer-e-jets-family/generated/loupedecklive1/index.page.png){ loading=lazy }
 
-    3 layouts · 43 pages
+    :material-airplane-marker: *X-Crafts / X-Plane 12*
+
+    Regional jet family (E170/E175/E190/E195) with full overhead panel support. Layouts for Loupedeck Live, Stream Deck XL, and a dedicated overhead panel deck.
+
+    :material-alert-circle:{ .warning } WIP · 3 layouts · 43 pages
 
     [:octicons-arrow-right-24: View deck](embraer-e-jets-family/index.md)
 
--   **Lancair Evolution** · `stable`
+-   **Lancair Evolution**
 
-    Decks for Lancair Evolution
+    ![Lancair Evolution preview](../assets/images/lancair-evolution/generated/loupedecklive1/home.page.png){ loading=lazy }
 
-    2 layouts · 24 pages
+    :material-airplane-marker: *Laminar Research / X-Plane 12*
+
+    High-performance single-engine with G1000 glass cockpit. Layouts for Loupedeck Live and Stream Deck XL with full avionics, engine, and systems pages.
+
+    :material-check-circle:{ .success } Stable · 2 layouts · 24 pages
 
     [:octicons-arrow-right-24: View deck](lancair-evolution/index.md)
 
 -   **Airbus A320neo**
 
-    Decks for Toliss Airbus A320neo
+    ![Airbus A320neo preview](../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/index.page.png){ loading=lazy }
 
-    2 layouts · 21 pages
+    :material-airplane-marker: *ToLiss / X-Plane 12*
+
+    Airbus A320neo with ECAM, FCU, and overhead panel pages. Layouts for Loupedeck Live and Stream Deck XL.
+
+    :material-check-circle:{ .success } Stable · 2 layouts · 21 pages
 
     [:octicons-arrow-right-24: View deck](toliss-airbus-a320-neo/index.md)
 
 -   **Toliss A321neo**
 
-    Definition of decks for Toliss A321 + neo add-on (neo variant is XLR but all three variants use same cockpit)
+    ![Toliss A321neo preview](../assets/images/toliss-airbus-a321-neo/generated/fcu/index.page.png){ loading=lazy }
 
-    5 layouts · 34 pages
+    :material-airplane-marker: *ToLiss / X-Plane 12*
+
+    Airbus A321neo (XLR variant, all three variants share the same cockpit). Five deck layouts covering Loupedeck Live, Stream Deck XL, Stream Deck Original, Stream Deck +, and X-Touch Mini.
+
+    :material-check-circle:{ .success } Stable · 5 layouts · 34 pages
 
     [:octicons-arrow-right-24: View deck](toliss-airbus-a321-neo/index.md)
 
 -   **ToLiss A330neo**
 
-    Definition of decks for ToLiss A330neo
+    ![ToLiss A330neo preview](../assets/images/toliss-airbus-a330-neo/generated/fcu/index.page.png){ loading=lazy }
 
-    12 layouts · 68 pages
+    :material-airplane-marker: *ToLiss / X-Plane 12*
+
+    Airbus A330-900neo (Trent 7000 engines) with the most comprehensive deck support. Twelve layouts covering physical and virtual decks including Loupedeck Live, Stream Deck family, and X-Touch Mini.
+
+    :material-check-circle:{ .success } Stable · 12 layouts · 68 pages
 
     [:octicons-arrow-right-24: View deck](toliss-airbus-a330-neo/index.md)
 
--   **Van's Aircraft RV-10** · `active`
+-   **Van's Aircraft RV-10**
 
-    Decks for RV-10
+    ![Van's Aircraft RV-10 preview](../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/index.page.png){ loading=lazy }
 
-    2 layouts · 26 pages
+    :material-airplane-marker: *Laminar Research / X-Plane 12*
+
+    Experimental four-seat GA aircraft with G1000 glass cockpit. Layouts for Loupedeck Live and Stream Deck XL.
+
+    :material-progress-wrench:{ .info } Active · 2 layouts · 26 pages
 
     [:octicons-arrow-right-24: View deck](vans-aircraft-rv-10/index.md)
 

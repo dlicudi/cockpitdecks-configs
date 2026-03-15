@@ -1,0 +1,12 @@
+aircraft:
+  eyebrow: Laminar Research / X-Plane 12
+  summary: >-
+    Twin-engine GA aircraft with conventional instruments. Loupedeck Live layout
+    covering flight, engine, and systems pages.
+  tags:
+    - GA
+    - Loupedeck Live
+    - X-Plane 12
+
+tracking:
+  state: stable

@@ -234,10 +234,10 @@ markdown_extensions:
       configurations:
         - sources:
             include:
-              - decks/cirrus-sr22/**
+              - decks/*
           targets:
             include:
-              - decks/cirrus-sr22/**
+              - decks/**
   - pymdownx.snippets:
       base_path:
         - .

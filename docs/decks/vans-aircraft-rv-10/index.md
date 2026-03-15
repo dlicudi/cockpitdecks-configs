@@ -1,5 +1,6 @@
 ---
 icon: material/airplane
+tags: [GA, Loupedeck Live, Stream Deck XL, G1000, X-Plane 12]
 status: active
 ---
 
@@ -7,9 +8,9 @@ status: active
 
 # Van's Aircraft RV-10
 
-!!! abstract ""
+*Laminar Research / X-Plane 12*
 
-    Decks for RV-10
+Experimental four-seat GA aircraft with G1000 glass cockpit. Layouts for Loupedeck Live and Stream Deck XL.
 
 === "Loupedeck Live"
 
@@ -115,9 +116,9 @@ status: active
 
         [:material-github: `engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/engine.yaml)
 
-    -   **Mfd**
+    -   **MFD**
 
-        ![Mfd preview](../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/mfd.page.png)
+        ![MFD preview](../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/mfd.page.png)
 
         [:material-github: `mfd.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/mfd.yaml)
 

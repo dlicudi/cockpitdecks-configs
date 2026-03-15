@@ -8,9 +8,9 @@ status: stable
 
 # Cirrus SR22
 
-!!! abstract "Laminar Research / X-Plane 12"
+*Laminar Research / X-Plane 12*
 
-    G1000-oriented layout for the Loupedeck Live, tuned for fast in-flight page switching and practical SR22 workflows.
+G1000-oriented layout for the Loupedeck Live, tuned for fast in-flight page switching and practical SR22 workflows.
 
 ## Loupedeck Live
 

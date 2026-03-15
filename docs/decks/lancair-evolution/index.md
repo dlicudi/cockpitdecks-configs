@@ -1,5 +1,6 @@
 ---
 icon: material/airplane
+tags: [GA, Loupedeck Live, Stream Deck XL, G1000, X-Plane 12]
 status: stable
 ---
 
@@ -7,9 +8,9 @@ status: stable
 
 # Lancair Evolution
 
-!!! abstract ""
+*Laminar Research / X-Plane 12*
 
-    Decks for Lancair Evolution
+High-performance single-engine with G1000 glass cockpit. Layouts for Loupedeck Live and Stream Deck XL with full avionics, engine, and systems pages.
 
 === "Loupedeck Live"
 

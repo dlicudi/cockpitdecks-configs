@@ -318,6 +318,11 @@
   word-break: normal;
 }
 
+/* Status icon colors for index cards */
+.success { color: #4caf50; }
+.info { color: #2196f3; }
+.warning { color: #ff9800; }
+
 @media screen and (max-width: 76.2344em) {
   .cdx-hero,
   .cdx-grid--three,

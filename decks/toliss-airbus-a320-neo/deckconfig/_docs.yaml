@@ -1,14 +1,14 @@
 aircraft:
-  eyebrow: Laminar Research / X-Plane 12
+  eyebrow: ToLiss / X-Plane 12
   summary: >-
-    Experimental four-seat GA aircraft with G1000 glass cockpit.
+    Airbus A320neo with ECAM, FCU, and overhead panel pages.
     Layouts for Loupedeck Live and Stream Deck XL.
   tags:
-    - GA
+    - Airliner
+    - ToLiss
     - Loupedeck Live
     - Stream Deck XL
-    - G1000
     - X-Plane 12
 
 tracking:
-  state: active
+  state: stable
