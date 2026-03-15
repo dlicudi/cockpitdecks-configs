@@ -59,21 +59,3 @@ It is built around X-Plane and tested primarily on the Loupedeck Live.
 
     Use that fork unless a specific aircraft page says otherwise.
 
-## Examples
-
-<div class="grid" markdown>
-
-![Cirrus SR22 home page](./assets/images/cirrus-sr22/home.png)
-
-![Cirrus SR22 primary flight instruments](./assets/images/cirrus-sr22/pfi.png)
-
-![Cirrus SR22 engine page](./assets/images/cirrus-sr22/engine.png)
-
-![Cirrus SR22 transponder page](./assets/images/cirrus-sr22/transponder.png)
-
-</div>
-
-## Notes
-
-- The `Examples` section documents stable patterns already in use in configs.
-- The `Experimental` section documents custom extensions and prototype behaviours that may require the `dlicudi/cockpitdecks` fork.
