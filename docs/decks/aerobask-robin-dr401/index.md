@@ -6,11 +6,10 @@ icon: material/airplane
 
 Decks for Robin DR401
 
-![Robin DR401](../../assets/images/aerobask-robin-dr401/audiopanel.png)
+## [Loupedeck Live](loupedecklive1/index.md)
 
-## Layouts
+`LoupedeckLive` layout with 13 pages.
 
-| Layout | Summary |
-| --- | --- |
-| [Loupedeck Live](loupedecklive1/index.md) | `LoupedeckLive` layout with 13 pages. |
-| [Stream Deck XL](streamdeckxl1/index.md) | `Stream Deck XL` layout with 12 pages. |
+## [Stream Deck XL](streamdeckxl1/index.md)
+
+`Stream Deck XL` layout with 12 pages.

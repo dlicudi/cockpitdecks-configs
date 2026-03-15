@@ -6,10 +6,6 @@ icon: material/airplane
 
 Decks for Cessna 172 SP
 
-![Cessna 172 SP](../../assets/images/cessna-172-sp/cessna-172-sp.png)
+## [Loupedeck Live](loupedecklive1/index.md)
 
-## Layouts
-
-| Layout | Summary |
-| --- | --- |
-| [Loupedeck Live](loupedecklive1/index.md) | `LoupedeckLive` layout with 10 pages. |
+`LoupedeckLive` layout with 10 pages.

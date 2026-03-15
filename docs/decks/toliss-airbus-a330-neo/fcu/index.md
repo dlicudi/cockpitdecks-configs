@@ -6,7 +6,7 @@ icon: material/dialpad
 
 # Virtual Loupedeck Live
 
-Virtual Loupedeck Live layout for Airbus A330-900 with Trent 7000-72 engines, version 251t (Airbus A330-941N).
+Virtual Loupedeck Live layout for ToLiss A330neo.
 
 ## [Home](home.md)
 

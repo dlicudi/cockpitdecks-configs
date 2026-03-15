@@ -6,7 +6,7 @@ icon: material/dialpad
 
 # Stream Deck XL
 
-Stream Deck XL layout for E170, E175, E190, E195.
+Stream Deck XL layout for Embraer E-Jets Family.
 
 ## [Home](home.md)
 

@@ -6,7 +6,7 @@ icon: material/dialpad
 
 # Loupedeck Live
 
-Loupedeck Live layout for Airbus A321-253NY (CFM LEAP-1A33).
+Loupedeck Live layout for Toliss A321neo.
 
 ## [Home](home.md)
 

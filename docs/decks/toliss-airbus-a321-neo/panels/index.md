@@ -6,7 +6,7 @@ icon: material/dialpad
 
 # Stream Deck XL
 
-Stream Deck XL layout for Airbus A321-253NY (CFM LEAP-1A33).
+Stream Deck XL layout for Toliss A321neo.
 
 ## [Home](home.md)
 

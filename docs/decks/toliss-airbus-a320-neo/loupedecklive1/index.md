@@ -6,7 +6,7 @@ icon: material/dialpad
 
 # Loupedeck Live
 
-Loupedeck Live layout for Toliss Airbus A320neo.
+Loupedeck Live layout for Airbus A320neo.
 
 ## [Home](home.md)
 

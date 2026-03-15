@@ -6,10 +6,6 @@ icon: material/airplane
 
 Decks for Beechcraft Baron 58
 
-![Beechcraft Baron 58](../../assets/images/beechcraft-baron-58/beechcraft-baron-58.png)
+## [Loupedeck Live](loupedecklive1/index.md)
 
-## Layouts
-
-| Layout | Summary |
-| --- | --- |
-| [Loupedeck Live](loupedecklive1/index.md) | `LoupedeckLive` layout with 13 pages. |
+`LoupedeckLive` layout with 13 pages.

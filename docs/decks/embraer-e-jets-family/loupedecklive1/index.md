@@ -6,7 +6,7 @@ icon: material/dialpad
 
 # Loupedeck Live
 
-Loupedeck Live layout for E170, E175, E190, E195.
+Loupedeck Live layout for Embraer E-Jets Family.
 
 ## [Home](home.md)
 

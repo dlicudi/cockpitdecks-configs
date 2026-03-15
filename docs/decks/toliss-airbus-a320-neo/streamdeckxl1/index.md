@@ -6,7 +6,7 @@ icon: material/dialpad
 
 # Stream Deck XL
 
-Stream Deck XL layout for Toliss Airbus A320neo.
+Stream Deck XL layout for Airbus A320neo.
 
 ## [Home](home.md)
 

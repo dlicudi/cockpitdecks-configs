@@ -2,17 +2,88 @@
 
 # Decks
 
-Browse the available config-driven deck docs.
+<div class="grid cards" markdown>
 
-| Aircraft | Summary |
-| --- | --- |
-| [Robin DR401](aerobask-robin-dr401/index.md) | Decks for Robin DR401 |
-| [Beechcraft Baron 58](beechcraft-baron-58/index.md) | Decks for Beechcraft Baron 58 |
-| [Cessna 172 SP](cessna-172-sp/index.md) | Decks for Cessna 172 SP |
-| [Cirrus SR22](cirrus-sr22/index.md) | G1000-oriented layout for the Loupedeck Live, tuned for fast in-flight page switching and practical SR22 workflows. |
-| [E170, E175, E190, E195](embraer-e-jets-family/index.md) | Decks |
-| [Lancair Evolution](lancair-evolution/index.md) | Decks for Lancair Evolution |
-| [Toliss Airbus A320neo](toliss-airbus-a320-neo/index.md) | Decks for Toliss Airbus A320neo |
-| [Airbus A321-253NY (CFM LEAP-1A33)](toliss-airbus-a321-neo/index.md) | Definition of decks for Toliss A321 + neo add-on (neo variant is XLR but all three variants use same cockpit) |
-| [Airbus A330-900 with Trent 7000-72 engines, version 251t (Airbus A330-941N)](toliss-airbus-a330-neo/index.md) | Definition of decks for ToLiss A330neo |
-| [Van's Aircraft RV-10](vans-aircraft-rv-10/index.md) | Decks for RV-10 |
+-   **Robin DR401**
+
+    Decks for Robin DR401
+
+    2 layouts · 25 pages
+
+    [:octicons-arrow-right-24: View deck](aerobask-robin-dr401/index.md)
+
+-   **Beechcraft Baron 58**
+
+    Decks for Beechcraft Baron 58
+
+    1 layout · 13 pages
+
+    [:octicons-arrow-right-24: View deck](beechcraft-baron-58/index.md)
+
+-   **Cessna 172 SP**
+
+    Decks for Cessna 172 SP
+
+    1 layout · 10 pages
+
+    [:octicons-arrow-right-24: View deck](cessna-172-sp/index.md)
+
+-   **Cirrus SR22** · `stable`
+
+    G1000-oriented layout for the Loupedeck Live, tuned for fast in-flight page switching and practical SR22 workflows.
+
+    `GA` · `Loupedeck Live` · `G1000` · `X-Plane 12`
+
+    1 layout · 11 pages
+
+    [:octicons-arrow-right-24: View deck](cirrus-sr22/index.md)
+
+-   **Embraer E-Jets Family**
+
+    Decks
+
+    3 layouts · 43 pages
+
+    [:octicons-arrow-right-24: View deck](embraer-e-jets-family/index.md)
+
+-   **Lancair Evolution** · `stable`
+
+    Decks for Lancair Evolution
+
+    2 layouts · 24 pages
+
+    [:octicons-arrow-right-24: View deck](lancair-evolution/index.md)
+
+-   **Airbus A320neo**
+
+    Decks for Toliss Airbus A320neo
+
+    2 layouts · 21 pages
+
+    [:octicons-arrow-right-24: View deck](toliss-airbus-a320-neo/index.md)
+
+-   **Toliss A321neo**
+
+    Definition of decks for Toliss A321 + neo add-on (neo variant is XLR but all three variants use same cockpit)
+
+    5 layouts · 34 pages
+
+    [:octicons-arrow-right-24: View deck](toliss-airbus-a321-neo/index.md)
+
+-   **ToLiss A330neo**
+
+    Definition of decks for ToLiss A330neo
+
+    12 layouts · 68 pages
+
+    [:octicons-arrow-right-24: View deck](toliss-airbus-a330-neo/index.md)
+
+-   **Van's Aircraft RV-10** · `active`
+
+    Decks for RV-10
+
+    2 layouts · 26 pages
+
+    [:octicons-arrow-right-24: View deck](vans-aircraft-rv-10/index.md)
+
+</div>

@@ -38,47 +38,16 @@ nav:
       - Development: getting-started/development.md
   - Decks:
       - Overview: decks/index.md
-      - Status: decks/status.md
-      - Aerobask Robin DR401:
-          - decks/aerobask-robin-dr401/index.md
-          - Loupedeck Live: decks/aerobask-robin-dr401/loupedecklive1/index.md
-          - Stream Deck XL: decks/aerobask-robin-dr401/streamdeckxl1/index.md
-      - Beechcraft Baron 58:
-          - decks/beechcraft-baron-58/index.md
-          - Loupedeck Live: decks/beechcraft-baron-58/loupedecklive1/index.md
-      - Cessna 172 SP:
-          - decks/cessna-172-sp/index.md
-          - Loupedeck Live: decks/cessna-172-sp/loupedecklive1/index.md
-      - Cirrus SR22:
-          - decks/cirrus-sr22/index.md
-          - Loupedeck Live: decks/cirrus-sr22/loupedecklive1/index.md
-      - Embraer E-Jets Family:
-          - decks/embraer-e-jets-family/index.md
-          - Loupedeck Live: decks/embraer-e-jets-family/loupedecklive1/index.md
-          - Stream Deck XL: decks/embraer-e-jets-family/streamdeckxl1/index.md
-      - Lancair Evolution:
-          - decks/lancair-evolution/index.md
-          - Loupedeck Live: decks/lancair-evolution/loupedecklive1/index.md
-          - Stream Deck XL: decks/lancair-evolution/streamdeckxl1/index.md
-      - ToLiss Airbus A320 NEO:
-          - decks/toliss-airbus-a320-neo/index.md
-          - Loupedeck Live: decks/toliss-airbus-a320-neo/loupedecklive1/index.md
-          - Stream Deck XL: decks/toliss-airbus-a320-neo/streamdeckxl1/index.md
-      - ToLiss Airbus A321 NEO:
-          - decks/toliss-airbus-a321-neo/index.md
-          - Loupedeck Live: decks/toliss-airbus-a321-neo/fcu/index.md
-          - Stream Deck Original: decks/toliss-airbus-a321-neo/efis-ecam/index.md
-          - Stream Deck XL: decks/toliss-airbus-a321-neo/panels/index.md
-      - ToLiss Airbus A330 NEO:
-          - decks/toliss-airbus-a330-neo/index.md
-          - Loupedeck Live: decks/toliss-airbus-a330-neo/fcu/index.md
-          - Stream Deck Original: decks/toliss-airbus-a330-neo/efis-ecam/index.md
-          - Stream Deck XL: decks/toliss-airbus-a330-neo/panels/index.md
-          - Virtual Streamdeck Mini: decks/toliss-airbus-a330-neo/vmini/index.md
-      - Van's Aircraft RV-10:
-          - decks/vans-aircraft-rv-10/index.md
-          - Loupedeck Live: decks/vans-aircraft-rv-10/loupedecklive1/index.md
-          - Stream Deck XL: decks/vans-aircraft-rv-10/streamdeckxl1/index.md
+      - Robin DR401: decks/aerobask-robin-dr401/index.md
+      - Beechcraft Baron 58: decks/beechcraft-baron-58/index.md
+      - Cessna 172 SP: decks/cessna-172-sp/index.md
+      - Cirrus SR22: decks/cirrus-sr22/index.md
+      - Embraer E-Jets Family: decks/embraer-e-jets-family/index.md
+      - Lancair Evolution: decks/lancair-evolution/index.md
+      - Airbus A320neo: decks/toliss-airbus-a320-neo/index.md
+      - Toliss A321neo: decks/toliss-airbus-a321-neo/index.md
+      - ToLiss A330neo: decks/toliss-airbus-a330-neo/index.md
+      - Van's Aircraft RV-10: decks/vans-aircraft-rv-10/index.md
   - Reference:
       - Overview: reference/index.md
       - Compatibility: reference/compatibility.md
@@ -97,8 +66,7 @@ not_in_nav: |
   examples/*
   experimental/*
   generated/*
-  decks/*.md
-  decks/*/*/*.md
+  decks/*/**
 
 # Copyright
 copyright: Copyright &copy; 2023 - 2024 Duane Licudi
@@ -260,7 +228,6 @@ markdown_extensions:
       configurations:
         - sources:
             include:
-              - decks/cirrus-sr22.md
               - decks/cirrus-sr22/**
           targets:
             include:

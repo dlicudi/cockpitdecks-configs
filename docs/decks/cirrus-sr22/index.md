@@ -10,10 +10,10 @@ G1000-oriented layout for the Loupedeck Live, tuned for fast in-flight page swit
 
 Tags: `GA` · `Loupedeck Live` · `G1000` · `X-Plane 12`
 
-![Cirrus SR22 deck overview](../../assets/images/cirrus-sr22/cirrus-sr22.png)
+## [Loupedeck Live](loupedecklive1/index.md)
 
-## Layouts
+`LoupedeckLive` layout with 11 pages.
 
-| Layout | Summary |
-| --- | --- |
-| [Loupedeck Live](loupedecklive1/index.md) | `LoupedeckLive` layout with 11 pages. |
+## Status
+
+**State:** `stable`

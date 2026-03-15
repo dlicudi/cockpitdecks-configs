@@ -6,7 +6,7 @@ icon: material/dialpad
 
 # Stream Deck Original
 
-Stream Deck Original layout for Airbus A321-253NY (CFM LEAP-1A33).
+Stream Deck Original layout for Toliss A321neo.
 
 ## [Home](home.md)
 
