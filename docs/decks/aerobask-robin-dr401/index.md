@@ -12,7 +12,7 @@ icon: material/airplane
 
 === "Loupedeck Live"
 
-    `LoupedeckLive` layout with 13 pages.
+    Loupedeck Live layout with 13 pages.
 
     <div class="grid cards" markdown>
 
@@ -98,7 +98,7 @@ icon: material/airplane
 
 === "Stream Deck XL"
 
-    `Stream Deck XL` layout with 12 pages.
+    Stream Deck XL layout with 12 pages.
 
     <div class="grid cards" markdown>
 

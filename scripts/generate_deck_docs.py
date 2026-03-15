@@ -337,12 +337,17 @@ def build_overview(slug: str, config: dict[str, Any], docs_meta: dict[str, Any],
 
     layouts = layout_entries(config, deckconfig_dir, docs_meta)
 
+    tracking = parse_tracking(docs_meta.get("tracking"))
+    state = tracking.get("state", "")
+
     frontmatter = [
         "---",
         f"icon: {icon}",
     ]
     if tags:
         frontmatter.append(f"tags: [{', '.join(tags)}]")
+    if state:
+        frontmatter.append(f"status: {state}")
     frontmatter.append("---")
 
     lines = [
@@ -371,7 +376,7 @@ def build_overview(slug: str, config: dict[str, Any], docs_meta: dict[str, Any],
             else:
                 lines.append(f"## {layout_label}")
             lines.append("")
-            lines.append(f"{p}`{layout['type']}` layout with {page_count} page{'s' if page_count != 1 else ''}.")
+            lines.append(f"{p}{layout_label} layout with {page_count} page{'s' if page_count != 1 else ''}.")
             lines.append("")
             images = page_images.get(layout["layout"], {})
             if layout["pages"]:
@@ -394,7 +399,6 @@ def build_overview(slug: str, config: dict[str, Any], docs_meta: dict[str, Any],
         lines.append("No layout metadata found.")
         lines.append("")
 
-    tracking = parse_tracking(docs_meta.get("tracking"))
     lines.extend(render_tracking(tracking))
 
     return "\n".join(lines).rstrip() + "\n"

@@ -12,7 +12,7 @@ icon: material/airplane
 
 ## Loupedeck Live
 
-`LoupedeckLive` layout with 10 pages.
+Loupedeck Live layout with 10 pages.
 
 <div class="grid cards" markdown>
 

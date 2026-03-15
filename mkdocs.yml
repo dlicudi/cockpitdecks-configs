@@ -173,6 +173,9 @@ extra:
   status:
     new: Recently added
     deprecated: Deprecated
+    stable: Stable
+    active: Active Development
+    wip: Work in Progress
   # analytics:
   #   provider: google
   #   property: !ENV GOOGLE_ANALYTICS_KEY

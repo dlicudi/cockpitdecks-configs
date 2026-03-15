@@ -12,7 +12,7 @@ icon: material/airplane
 
 === "Loupedeck Live"
 
-    `LoupedeckLive` layout with 6 pages.
+    Loupedeck Live layout with 6 pages.
 
     <div class="grid cards" markdown>
 
@@ -56,7 +56,7 @@ icon: material/airplane
 
 === "Stream Deck Original"
 
-    `Stream Deck Original` layout with 2 pages.
+    Stream Deck Original layout with 2 pages.
 
     <div class="grid cards" markdown>
 
@@ -76,7 +76,7 @@ icon: material/airplane
 
 === "Stream Deck XL"
 
-    `Stream Deck XL` layout with 21 pages.
+    Stream Deck XL layout with 21 pages.
 
     <div class="grid cards" markdown>
 
@@ -210,7 +210,7 @@ icon: material/airplane
 
 === "Stream Deck +"
 
-    `Stream Deck +` layout with 1 page.
+    Stream Deck + layout with 1 page.
 
     <div class="grid cards" markdown>
 
@@ -222,7 +222,7 @@ icon: material/airplane
 
 === "X Touch Mini"
 
-    `X-Touch Mini` layout with 4 pages.
+    X Touch Mini layout with 4 pages.
 
     <div class="grid cards" markdown>
 

@@ -12,7 +12,7 @@ icon: material/airplane
 
 === "Loupedeck Live"
 
-    `LoupedeckLive` layout with 5 pages.
+    Loupedeck Live layout with 5 pages.
 
     <div class="grid cards" markdown>
 
@@ -50,7 +50,7 @@ icon: material/airplane
 
 === "Stream Deck Original"
 
-    `Stream Deck Original` layout with 2 pages.
+    Stream Deck Original layout with 2 pages.
 
     <div class="grid cards" markdown>
 
@@ -70,7 +70,7 @@ icon: material/airplane
 
 === "Stream Deck XL"
 
-    `Stream Deck XL` layout with 21 pages.
+    Stream Deck XL layout with 21 pages.
 
     <div class="grid cards" markdown>
 
@@ -204,7 +204,7 @@ icon: material/airplane
 
 === "Stream Deck +"
 
-    `Stream Deck +` layout with 1 page.
+    Stream Deck + layout with 1 page.
 
     <div class="grid cards" markdown>
 
@@ -216,7 +216,7 @@ icon: material/airplane
 
 === "X Touch Mini"
 
-    `X-Touch Mini` layout with 4 pages.
+    X Touch Mini layout with 4 pages.
 
     <div class="grid cards" markdown>
 
@@ -240,7 +240,7 @@ icon: material/airplane
 
 === "Virtual Streamdeck MK.2"
 
-    `Virtual Streamdeck MK.2` layout with 2 pages.
+    Virtual Streamdeck MK.2 layout with 2 pages.
 
     <div class="grid cards" markdown>
 
@@ -260,7 +260,7 @@ icon: material/airplane
 
 === "Virtual Streamdeck XL"
 
-    `Virtual Streamdeck XL` layout with 21 pages.
+    Virtual Streamdeck XL layout with 21 pages.
 
     <div class="grid cards" markdown>
 
@@ -394,7 +394,7 @@ icon: material/airplane
 
 === "Virtual Streamdeck Mini"
 
-    `Virtual Streamdeck Mini` layout with 1 page.
+    Virtual Streamdeck Mini layout with 1 page.
 
     <div class="grid cards" markdown>
 
@@ -408,7 +408,7 @@ icon: material/airplane
 
 === "Virtual Streamdeck +"
 
-    `Virtual Streamdeck +` layout with 1 page.
+    Virtual Streamdeck + layout with 1 page.
 
     <div class="grid cards" markdown>
 
@@ -420,7 +420,7 @@ icon: material/airplane
 
 === "Virtual Stream Deck Neo"
 
-    `Virtual Stream Deck Neo` layout with 1 page.
+    Virtual Stream Deck Neo layout with 1 page.
 
     <div class="grid cards" markdown>
 
@@ -432,7 +432,7 @@ icon: material/airplane
 
 === "Virtual Loupedeck Live"
 
-    `Virtual LoupedeckLive` layout with 5 pages.
+    Virtual Loupedeck Live layout with 5 pages.
 
     <div class="grid cards" markdown>
 
@@ -470,7 +470,7 @@ icon: material/airplane
 
 === "Virtual X Touch Mini"
 
-    `Virtual X-Touch Mini` layout with 4 pages.
+    Virtual X Touch Mini layout with 4 pages.
 
     <div class="grid cards" markdown>
 
