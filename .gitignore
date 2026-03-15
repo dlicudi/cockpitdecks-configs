@@ -1,6 +1,7 @@
 .DS_Store
 cockpitdecks.log
 secret.yaml
+**/secret.yaml
 resources
 examples/*
 .vscode/*

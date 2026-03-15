@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Any
 
 import yaml
-from PIL import Image, ImageColor, ImageDraw, ImageFont
+from PIL import Image, ImageChops, ImageColor, ImageDraw, ImageFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -222,12 +222,24 @@ class PreviewRenderer:
         page = self._load_page(page_name)
         image = self._render_composite(page)
         output_path.parent.mkdir(parents=True, exist_ok=True)
+        if self._png_pixels_match(output_path, image):
+            return
         buffer = io.BytesIO()
         image.save(buffer, format="PNG")
         content = buffer.getvalue()
         if output_path.exists() and output_path.read_bytes() == content:
             return
         output_path.write_bytes(content)
+
+    def _png_pixels_match(self, output_path: Path, image: Image.Image) -> bool:
+        if not output_path.exists():
+            return False
+        with Image.open(output_path) as existing:
+            candidate = image.convert("RGBA")
+            existing_rgba = existing.convert("RGBA")
+            if existing_rgba.size != candidate.size:
+                return False
+            return ImageChops.difference(existing_rgba, candidate).getbbox() is None
 
     def _load_layout(self) -> Layout:
         decktype = self._load_yaml(self.decktype_path)
