@@ -20,6 +20,8 @@ dataref-roundings:
     sim/cockpit/autopilot/vertical_velocity: 0
     sim/cockpit/misc/barometer_setting: 2
     sim/cockpit2/autopilot/altitude_dial_ft: 0
+    sim/cockpit2/electrical/battery_on[*]: 0
+    sim/cockpit2/electrical/generator_on[*]: 0
     sim/cockpit2/engine/indicators/EGT_deg_cel[0]: 0
     sim/cockpit2/engine/indicators/oil_pressure_psi[0]: 0
     sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]: 0

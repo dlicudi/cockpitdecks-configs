@@ -137,6 +137,18 @@ buttons:
 
   - index: 11
     type: page
+    page: fms
+    label: FMS
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 12
+    type: page
     page: views
     label: VIEWS
     label-color: Gold
