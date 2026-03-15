@@ -7,7 +7,7 @@ Decks for Cirrus SR22
 
 ### Loupedeck Live
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 14 pages&emsp;🎮 Loupedeck Live</div>
+<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 13 pages&emsp;🎮 Loupedeck Live</div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -41,9 +41,9 @@ Decks for Cirrus SR22
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/engine.yaml">engine.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/pedestal.page.png" alt="Pedestal preview" loading="lazy">
-<div class="page-name">Pedestal</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pedestal.yaml">pedestal.yaml</a></div>
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/fms.page.png" alt="Fms preview" loading="lazy">
+<div class="page-name">Fms</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fms.yaml">fms.yaml</a></div>
 </div>
 <div class="page-card">
 <img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/transponder.page.png" alt="Transponder preview" loading="lazy">
@@ -56,29 +56,24 @@ Decks for Cirrus SR22
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/gcu478.yaml">gcu478.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/weather.page.png" alt="Weather preview" loading="lazy">
-<div class="page-name">Weather</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/weather.yaml">weather.yaml</a></div>
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/pedestal.page.png" alt="Pedestal preview" loading="lazy">
+<div class="page-name">Pedestal</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pedestal.yaml">pedestal.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/fms.page.png" alt="Fms preview" loading="lazy">
-<div class="page-name">Fms</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fms.yaml">fms.yaml</a></div>
-</div>
-<div class="page-card">
-<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/fms_edit.page.png" alt="Fms Edit preview" loading="lazy">
-<div class="page-name">Fms Edit</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fms_edit.yaml">fms_edit.yaml</a></div>
-</div>
-<div class="page-card">
-<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/fms_load.page.png" alt="Fms Load preview" loading="lazy">
-<div class="page-name">Fms Load</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fms_load.yaml">fms_load.yaml</a></div>
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/index2.page.png" alt="Index2 preview" loading="lazy">
+<div class="page-name">Index2</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/index2.yaml">index2.yaml</a></div>
 </div>
 <div class="page-card">
 <img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/views.page.png" alt="Views preview" loading="lazy">
 <div class="page-name">Views</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/views.yaml">views.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/weather.page.png" alt="Weather preview" loading="lazy">
+<div class="page-name">Weather</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/weather.yaml">weather.yaml</a></div>
 </div>
 </div>
 
