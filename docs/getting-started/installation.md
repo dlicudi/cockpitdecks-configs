@@ -30,31 +30,31 @@ source .venv/bin/activate
 pip install --upgrade pip
 ```
 
-=== "Loupedeck"
+#### Loupedeck
 
-    ```sh
-    pip install 'cockpitdecks[xplane,loupedeck] @ git+https://github.com/dlicudi/cockpitdecks.git'
-    ```
+```sh
+pip install 'cockpitdecks[xplane,loupedeck] @ git+https://github.com/dlicudi/cockpitdecks.git'
+```
 
-=== "Stream Deck"
+#### Stream Deck
 
-    ```sh
-    pip install 'cockpitdecks[xplane,streamdeck] @ git+https://github.com/dlicudi/cockpitdecks.git'
-    ```
+```sh
+pip install 'cockpitdecks[xplane,streamdeck] @ git+https://github.com/dlicudi/cockpitdecks.git'
+```
 
-=== "X-Touch Mini"
+#### X-Touch Mini
 
-    ```sh
-    pip install 'cockpitdecks[xplane,xtouchmini] @ git+https://github.com/dlicudi/cockpitdecks.git'
-    ```
+```sh
+pip install 'cockpitdecks[xplane,xtouchmini] @ git+https://github.com/dlicudi/cockpitdecks.git'
+```
 
-=== "Editable (dev)"
+#### Editable (dev)
 
-    ```sh
-    git clone https://github.com/dlicudi/cockpitdecks.git
-    cd cockpitdecks
-    pip install -e '.[xplane,loupedeck]'
-    ```
+```sh
+git clone https://github.com/dlicudi/cockpitdecks.git
+cd cockpitdecks
+pip install -e '.[xplane,loupedeck]'
+```
 
 ??? note "Available extras"
     | Extra | Description |

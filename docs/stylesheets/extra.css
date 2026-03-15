@@ -1,4 +1,4 @@
-/* Status icon colors for index cards */
-.success { color: #4caf50; }
-.info { color: #2196f3; }
-.warning { color: #ff9800; }
+/* Status label colors */
+.status-stable { color: #4caf50; }
+.status-active { color: #2196f3; }
+.status-wip { color: #ff9800; }
