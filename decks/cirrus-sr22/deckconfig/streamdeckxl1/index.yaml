@@ -101,10 +101,10 @@ buttons:
 
   - index: 8
     type: page
-    page: pedestal
-    label: PEDESTAL
+    page: mfd
+    label: MFD
     label-color: Gold
-    text: 
+    text: 
     text-color: khaki
     text-size: 40
     text-font: fontawesome.otf
