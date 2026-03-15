@@ -12,73 +12,73 @@ status: stable
 
 Classic GA trainer with G1000 glass cockpit. Loupedeck Live layout with primary flight, radio, engine, and navigation pages.
 
-## Loupedeck Live
+=== "Loupedeck Live"
 
-Loupedeck Live layout with 10 pages.
+    Loupedeck Live layout with 10 pages.
 
-<div class="grid cards" markdown>
+    <div class="grid cards" markdown>
 
--   **Home**
+    -   **Home**
 
-    ![Home preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/index.page.png)
+        ![Home preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/index.page.png)
 
-    [:material-github: `index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/index.yaml)
+        [:material-github: `index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/index.yaml)
 
--   **PFI**
+    -   **PFI**
 
-    ![PFI preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/pfi.page.png)
+        ![PFI preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/pfi.page.png)
 
-    [:material-github: `pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pfi.yaml)
+        [:material-github: `pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pfi.yaml)
 
--   **Switches**
+    -   **Switches**
 
-    ![Switches preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/switches.page.png)
+        ![Switches preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/switches.page.png)
 
-    [:material-github: `switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/switches.yaml)
+        [:material-github: `switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/switches.yaml)
 
--   **FCU**
+    -   **FCU**
 
-    ![FCU preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/fcu.page.png)
+        ![FCU preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/fcu.page.png)
 
-    [:material-github: `fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/fcu.yaml)
+        [:material-github: `fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/fcu.yaml)
 
--   **Radio**
+    -   **Radio**
 
-    ![Radio preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/radio.page.png)
+        ![Radio preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/radio.page.png)
 
-    [:material-github: `radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/radio.yaml)
+        [:material-github: `radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/radio.yaml)
 
--   **Engine**
+    -   **Engine**
 
-    ![Engine preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/engine.page.png)
+        ![Engine preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/engine.page.png)
 
-    [:material-github: `engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/engine.yaml)
+        [:material-github: `engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/engine.yaml)
 
--   **Weather**
+    -   **Weather**
 
-    ![Weather preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/weather.page.png)
+        ![Weather preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/weather.page.png)
 
-    [:material-github: `weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/weather.yaml)
+        [:material-github: `weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/weather.yaml)
 
--   **Transponder**
+    -   **Transponder**
 
-    ![Transponder preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/transponder.page.png)
+        ![Transponder preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/transponder.page.png)
 
-    [:material-github: `transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/transponder.yaml)
+        [:material-github: `transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/transponder.yaml)
 
--   **G1000**
+    -   **G1000**
 
-    ![G1000 preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/g1000.page.png)
+        ![G1000 preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/g1000.page.png)
 
-    [:material-github: `g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/g1000.yaml)
+        [:material-github: `g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/g1000.yaml)
 
--   **Pedestal**
+    -   **Pedestal**
 
-    ![Pedestal preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/pedestal.page.png)
+        ![Pedestal preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/pedestal.page.png)
 
-    [:material-github: `pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pedestal.yaml)
+        [:material-github: `pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pedestal.yaml)
 
-</div>
+    </div>
 
 ## Status
 

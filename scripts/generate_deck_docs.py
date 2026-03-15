@@ -368,16 +368,11 @@ def build_overview(slug: str, config: dict[str, Any], docs_meta: dict[str, Any],
         lines.append(summary)
         lines.append("")
     if layouts:
-        use_tabs = len(layouts) > 1
         for layout in layouts:
             page_count = len(layout["pages"])
             layout_label = layout["title"]
-            # Indent prefix: 4 spaces inside tabs, none otherwise
-            p = "    " if use_tabs else ""
-            if use_tabs:
-                lines.append(f'=== "{layout_label}"')
-            else:
-                lines.append(f"## {layout_label}")
+            p = "    "
+            lines.append(f'=== "{layout_label}"')
             lines.append("")
             lines.append(f"{p}{layout_label} layout with {page_count} page{'s' if page_count != 1 else ''}.")
             lines.append("")
