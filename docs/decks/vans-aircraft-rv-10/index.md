@@ -5,42 +5,146 @@
 
 Decks for RV-10
 
-### Loupedeck Live — Active Development
+### Loupedeck Live
 
-13 pages.
+<div class="layout-meta">🔧 <strong>Active Development</strong>&emsp;📄 13 pages&emsp;🎮 Loupedeck Live</div>
 
-| Page | Preview | Config |
-|------|---------|--------|
-| **Home** | <img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/index.page.png" alt="Home preview" loading="lazy"> | [`index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/index.yaml) |
-| **PFI** | <img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/pfi.page.png" alt="PFI preview" loading="lazy"> | [`pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/pfi.yaml) |
-| **Switches** | <img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/switches.page.png" alt="Switches preview" loading="lazy"> | [`switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/switches.yaml) |
-| **FCU** | <img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/fcu.page.png" alt="FCU preview" loading="lazy"> | [`fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/fcu.yaml) |
-| **Radio** | <img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/radio.page.png" alt="Radio preview" loading="lazy"> | [`radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/radio.yaml) |
-| **Engine** | <img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/engine.page.png" alt="Engine preview" loading="lazy"> | [`engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/engine.yaml) |
-| **Weather** | <img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/weather.page.png" alt="Weather preview" loading="lazy"> | [`weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/weather.yaml) |
-| **Transponder** | <img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/transponder.page.png" alt="Transponder preview" loading="lazy"> | [`transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/transponder.yaml) |
-| **Switches 2** | <img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/switches2.page.png" alt="Switches 2 preview" loading="lazy"> | [`switches2.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/switches2.yaml) |
-| **Audio Panel** | <img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/audiopanel.page.png" alt="Audio Panel preview" loading="lazy"> | [`audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/audiopanel.yaml) |
-| **G1000** | <img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/g1000.page.png" alt="G1000 preview" loading="lazy"> | [`g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/g1000.yaml) |
-| **Pedestal** | <img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/pedestal.page.png" alt="Pedestal preview" loading="lazy"> | [`pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/pedestal.yaml) |
-| **Views** | <img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/views.page.png" alt="Views preview" loading="lazy"> | [`views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/views.yaml) |
+<div class="page-gallery">
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/index.page.png" alt="Home preview" loading="lazy">
+<div class="page-name">Home</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/index.yaml">index.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/pfi.page.png" alt="PFI preview" loading="lazy">
+<div class="page-name">PFI</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/pfi.yaml">pfi.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/switches.page.png" alt="Switches preview" loading="lazy">
+<div class="page-name">Switches</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/switches.yaml">switches.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/fcu.page.png" alt="FCU preview" loading="lazy">
+<div class="page-name">FCU</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/fcu.yaml">fcu.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/radio.page.png" alt="Radio preview" loading="lazy">
+<div class="page-name">Radio</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/radio.yaml">radio.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/engine.page.png" alt="Engine preview" loading="lazy">
+<div class="page-name">Engine</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/engine.yaml">engine.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/weather.page.png" alt="Weather preview" loading="lazy">
+<div class="page-name">Weather</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/weather.yaml">weather.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/transponder.page.png" alt="Transponder preview" loading="lazy">
+<div class="page-name">Transponder</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/transponder.yaml">transponder.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/switches2.page.png" alt="Switches 2 preview" loading="lazy">
+<div class="page-name">Switches 2</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/switches2.yaml">switches2.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/audiopanel.page.png" alt="Audio Panel preview" loading="lazy">
+<div class="page-name">Audio Panel</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/audiopanel.yaml">audiopanel.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/g1000.page.png" alt="G1000 preview" loading="lazy">
+<div class="page-name">G1000</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/g1000.yaml">g1000.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/pedestal.page.png" alt="Pedestal preview" loading="lazy">
+<div class="page-name">Pedestal</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/pedestal.yaml">pedestal.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/loupedecklive1/views.page.png" alt="Views preview" loading="lazy">
+<div class="page-name">Views</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/loupedecklive1/views.yaml">views.yaml</a></div>
+</div>
+</div>
 
-### Stream Deck XL — Active Development
+### Stream Deck XL
 
-13 pages.
+<div class="layout-meta">🔧 <strong>Active Development</strong>&emsp;📄 13 pages&emsp;🎮 Stream Deck XL</div>
 
-| Page | Preview | Config |
-|------|---------|--------|
-| **Home** | <img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/index.page.png" alt="Home preview" loading="lazy"> | [`index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/index.yaml) |
-| **Engine** | <img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/engine.page.png" alt="Engine preview" loading="lazy"> | [`engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/engine.yaml) |
-| **MFD** | <img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/mfd.page.png" alt="MFD preview" loading="lazy"> | [`mfd.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/mfd.yaml) |
-| **PFI** | <img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/pfi.page.png" alt="PFI preview" loading="lazy"> | [`pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/pfi.yaml) |
-| **Audio Panel** | <img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/audiopanel.page.png" alt="Audio Panel preview" loading="lazy"> | [`audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/audiopanel.yaml) |
-| **Transponder** | <img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/transponder.page.png" alt="Transponder preview" loading="lazy"> | [`transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/transponder.yaml) |
-| **Switches** | <img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/switches.page.png" alt="Switches preview" loading="lazy"> | [`switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/switches.yaml) |
-| **Weather** | <img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/weather.page.png" alt="Weather preview" loading="lazy"> | [`weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/weather.yaml) |
-| **Views** | <img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/views.page.png" alt="Views preview" loading="lazy"> | [`views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/views.yaml) |
-| **G1000** | <img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/g1000.page.png" alt="G1000 preview" loading="lazy"> | [`g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/g1000.yaml) |
-| **TruTrak Sorcerer** | <img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/trutrak_sorcerer.page.png" alt="TruTrak Sorcerer preview" loading="lazy"> | [`trutrak_sorcerer.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/trutrak_sorcerer.yaml) |
-| **Radio** | <img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/radio.page.png" alt="Radio preview" loading="lazy"> | [`radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/radio.yaml) |
-| **FCU** | <img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/fcu.page.png" alt="FCU preview" loading="lazy"> | [`fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/fcu.yaml) |
+<div class="page-gallery">
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/index.page.png" alt="Home preview" loading="lazy">
+<div class="page-name">Home</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/index.yaml">index.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/engine.page.png" alt="Engine preview" loading="lazy">
+<div class="page-name">Engine</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/engine.yaml">engine.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/mfd.page.png" alt="MFD preview" loading="lazy">
+<div class="page-name">MFD</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/mfd.yaml">mfd.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/pfi.page.png" alt="PFI preview" loading="lazy">
+<div class="page-name">PFI</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/pfi.yaml">pfi.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/audiopanel.page.png" alt="Audio Panel preview" loading="lazy">
+<div class="page-name">Audio Panel</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/audiopanel.yaml">audiopanel.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/transponder.page.png" alt="Transponder preview" loading="lazy">
+<div class="page-name">Transponder</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/transponder.yaml">transponder.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/switches.page.png" alt="Switches preview" loading="lazy">
+<div class="page-name">Switches</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/switches.yaml">switches.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/weather.page.png" alt="Weather preview" loading="lazy">
+<div class="page-name">Weather</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/weather.yaml">weather.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/views.page.png" alt="Views preview" loading="lazy">
+<div class="page-name">Views</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/views.yaml">views.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/g1000.page.png" alt="G1000 preview" loading="lazy">
+<div class="page-name">G1000</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/g1000.yaml">g1000.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/trutrak_sorcerer.page.png" alt="TruTrak Sorcerer preview" loading="lazy">
+<div class="page-name">TruTrak Sorcerer</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/trutrak_sorcerer.yaml">trutrak_sorcerer.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/radio.page.png" alt="Radio preview" loading="lazy">
+<div class="page-name">Radio</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/radio.yaml">radio.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/vans-aircraft-rv-10/generated/streamdeckxl1/fcu.page.png" alt="FCU preview" loading="lazy">
+<div class="page-name">FCU</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/vans-aircraft-rv-10/deckconfig/streamdeckxl1/fcu.yaml">fcu.yaml</a></div>
+</div>
+</div>

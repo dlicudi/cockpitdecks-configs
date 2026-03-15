@@ -5,22 +5,74 @@
 
 Decks for Beechcraft Baron 58
 
-### Loupedeck Live — Stable
+### Loupedeck Live
 
-13 pages.
+<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 13 pages&emsp;🎮 Loupedeck Live</div>
 
-| Page | Preview | Config |
-|------|---------|--------|
-| **Home** | <img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/index.page.png" alt="Home preview" loading="lazy"> | [`index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/index.yaml) |
-| **PFI** | <img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/pfi.page.png" alt="PFI preview" loading="lazy"> | [`pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pfi.yaml) |
-| **Switches** | <img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switches.page.png" alt="Switches preview" loading="lazy"> | [`switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/switches.yaml) |
-| **FCU** | <img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/fcu.page.png" alt="FCU preview" loading="lazy"> | [`fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/fcu.yaml) |
-| **Radio** | <img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/radio.page.png" alt="Radio preview" loading="lazy"> | [`radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/radio.yaml) |
-| **Engine** | <img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/engine.page.png" alt="Engine preview" loading="lazy"> | [`engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/engine.yaml) |
-| **Pedestal** | <img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/pedestal.page.png" alt="Pedestal preview" loading="lazy"> | [`pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pedestal.yaml) |
-| **Transponder** | <img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/transponder.page.png" alt="Transponder preview" loading="lazy"> | [`transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/transponder.yaml) |
-| **G530** | <img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/g530.page.png" alt="G530 preview" loading="lazy"> | [`g530.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/g530.yaml) |
-| **Weather** | <img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/weather.page.png" alt="Weather preview" loading="lazy"> | [`weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/weather.yaml) |
-| **Views** | <img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/views.page.png" alt="Views preview" loading="lazy"> | [`views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/views.yaml) |
-| **Switch Panel** | <img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switchesicing.page.png" alt="Switch Panel preview" loading="lazy"> | [`switchesicing.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/switchesicing.yaml) |
-| **Switch Panel** | <img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switcheslights.page.png" alt="Switch Panel preview" loading="lazy"> | [`switcheslights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/switcheslights.yaml) |
+<div class="page-gallery">
+<div class="page-card">
+<img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/index.page.png" alt="Home preview" loading="lazy">
+<div class="page-name">Home</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/index.yaml">index.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/pfi.page.png" alt="PFI preview" loading="lazy">
+<div class="page-name">PFI</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pfi.yaml">pfi.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switches.page.png" alt="Switches preview" loading="lazy">
+<div class="page-name">Switches</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/switches.yaml">switches.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/fcu.page.png" alt="FCU preview" loading="lazy">
+<div class="page-name">FCU</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/fcu.yaml">fcu.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/radio.page.png" alt="Radio preview" loading="lazy">
+<div class="page-name">Radio</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/radio.yaml">radio.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/engine.page.png" alt="Engine preview" loading="lazy">
+<div class="page-name">Engine</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/engine.yaml">engine.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/pedestal.page.png" alt="Pedestal preview" loading="lazy">
+<div class="page-name">Pedestal</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pedestal.yaml">pedestal.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/transponder.page.png" alt="Transponder preview" loading="lazy">
+<div class="page-name">Transponder</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/transponder.yaml">transponder.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/g530.page.png" alt="G530 preview" loading="lazy">
+<div class="page-name">G530</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/g530.yaml">g530.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/weather.page.png" alt="Weather preview" loading="lazy">
+<div class="page-name">Weather</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/weather.yaml">weather.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/views.page.png" alt="Views preview" loading="lazy">
+<div class="page-name">Views</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/views.yaml">views.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switchesicing.page.png" alt="Switch Panel preview" loading="lazy">
+<div class="page-name">Switch Panel</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/switchesicing.yaml">switchesicing.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switcheslights.page.png" alt="Switch Panel preview" loading="lazy">
+<div class="page-name">Switch Panel</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/switcheslights.yaml">switcheslights.yaml</a></div>
+</div>
+</div>

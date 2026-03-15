@@ -5,37 +5,121 @@
 
 Decks for Toliss Airbus A320neo
 
-### Loupedeck Live — Stable
+### Loupedeck Live
 
-7 pages.
+<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 7 pages&emsp;🎮 Loupedeck Live</div>
 
-| Page | Preview | Config |
-|------|---------|--------|
-| **Home** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/index.page.png" alt="Home preview" loading="lazy"> | [`index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/index.yaml) |
-| **PFI** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/pfi.page.png" alt="PFI preview" loading="lazy"> | [`pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/pfi.yaml) |
-| **FCU** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/fcu.page.png" alt="FCU preview" loading="lazy"> | [`fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/fcu.yaml) |
-| **Radio** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/radio.page.png" alt="Radio preview" loading="lazy"> | [`radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/radio.yaml) |
-| **Transponder** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/transponder.page.png" alt="Transponder preview" loading="lazy"> | [`transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/transponder.yaml) |
-| **Weather** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/weather.page.png" alt="Weather preview" loading="lazy"> | [`weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/weather.yaml) |
-| **Views** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/views.page.png" alt="Views preview" loading="lazy"> | [`views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/views.yaml) |
+<div class="page-gallery">
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/index.page.png" alt="Home preview" loading="lazy">
+<div class="page-name">Home</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/index.yaml">index.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/pfi.page.png" alt="PFI preview" loading="lazy">
+<div class="page-name">PFI</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/pfi.yaml">pfi.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/fcu.page.png" alt="FCU preview" loading="lazy">
+<div class="page-name">FCU</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/fcu.yaml">fcu.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/radio.page.png" alt="Radio preview" loading="lazy">
+<div class="page-name">Radio</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/radio.yaml">radio.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/transponder.page.png" alt="Transponder preview" loading="lazy">
+<div class="page-name">Transponder</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/transponder.yaml">transponder.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/weather.page.png" alt="Weather preview" loading="lazy">
+<div class="page-name">Weather</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/weather.yaml">weather.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/views.page.png" alt="Views preview" loading="lazy">
+<div class="page-name">Views</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/views.yaml">views.yaml</a></div>
+</div>
+</div>
 
-### Stream Deck XL — Stable
+### Stream Deck XL
 
-14 pages.
+<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 14 pages&emsp;🎮 Stream Deck XL</div>
 
-| Page | Preview | Config |
-|------|---------|--------|
-| **Home** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/home.page.png" alt="Home preview" loading="lazy"> | [`home.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/home.yaml) |
-| **PFI** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/pfi.page.png" alt="PFI preview" loading="lazy"> | [`pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pfi.yaml) |
-| **Switches** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/switches.page.png" alt="Switches preview" loading="lazy"> | [`switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/switches.yaml) |
-| **FCU** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/fcu.page.png" alt="FCU preview" loading="lazy"> | [`fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/fcu.yaml) |
-| **Radio** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/radio.page.png" alt="Radio preview" loading="lazy"> | [`radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/radio.yaml) |
-| **Engine** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/engine.page.png" alt="Engine preview" loading="lazy"> | [`engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/engine.yaml) |
-| **Pedestal** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/pedestal.page.png" alt="Pedestal preview" loading="lazy"> | [`pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pedestal.yaml) |
-| **Transponder** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/transponder.page.png" alt="Transponder preview" loading="lazy"> | [`transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/transponder.yaml) |
-| **Switches 2** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/switches2.page.png" alt="Switches 2 preview" loading="lazy"> | [`switches2.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/switches2.yaml) |
-| **Audio Panel** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/audiopanel.page.png" alt="Audio Panel preview" loading="lazy"> | [`audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/audiopanel.yaml) |
-| **G1000** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/g1000.page.png" alt="G1000 preview" loading="lazy"> | [`g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/g1000.yaml) |
-| **Weather** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/weather.page.png" alt="Weather preview" loading="lazy"> | [`weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/weather.yaml) |
-| **Views** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/views.page.png" alt="Views preview" loading="lazy"> | [`views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/views.yaml) |
-| **ANTI ICE** | <img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/overhead_antiice.page.png" alt="ANTI ICE preview" loading="lazy"> | [`overhead_antiice.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/overhead_antiice.yaml) |
+<div class="page-gallery">
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/home.page.png" alt="Home preview" loading="lazy">
+<div class="page-name">Home</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/home.yaml">home.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/pfi.page.png" alt="PFI preview" loading="lazy">
+<div class="page-name">PFI</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pfi.yaml">pfi.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/switches.page.png" alt="Switches preview" loading="lazy">
+<div class="page-name">Switches</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/switches.yaml">switches.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/fcu.page.png" alt="FCU preview" loading="lazy">
+<div class="page-name">FCU</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/fcu.yaml">fcu.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/radio.page.png" alt="Radio preview" loading="lazy">
+<div class="page-name">Radio</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/radio.yaml">radio.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/engine.page.png" alt="Engine preview" loading="lazy">
+<div class="page-name">Engine</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/engine.yaml">engine.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/pedestal.page.png" alt="Pedestal preview" loading="lazy">
+<div class="page-name">Pedestal</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pedestal.yaml">pedestal.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/transponder.page.png" alt="Transponder preview" loading="lazy">
+<div class="page-name">Transponder</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/transponder.yaml">transponder.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/switches2.page.png" alt="Switches 2 preview" loading="lazy">
+<div class="page-name">Switches 2</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/switches2.yaml">switches2.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/audiopanel.page.png" alt="Audio Panel preview" loading="lazy">
+<div class="page-name">Audio Panel</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/audiopanel.yaml">audiopanel.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/g1000.page.png" alt="G1000 preview" loading="lazy">
+<div class="page-name">G1000</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/g1000.yaml">g1000.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/weather.page.png" alt="Weather preview" loading="lazy">
+<div class="page-name">Weather</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/weather.yaml">weather.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/views.page.png" alt="Views preview" loading="lazy">
+<div class="page-name">Views</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/views.yaml">views.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/overhead_antiice.page.png" alt="ANTI ICE preview" loading="lazy">
+<div class="page-name">ANTI ICE</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/overhead_antiice.yaml">overhead_antiice.yaml</a></div>
+</div>
+</div>

@@ -5,66 +5,237 @@
 
 Decks
 
-### Loupedeck Live — Work in Progress
+### Loupedeck Live
 
-28 pages.
+<div class="layout-meta">🚧 <strong>Work in Progress</strong>&emsp;📄 28 pages&emsp;🎮 Loupedeck Live</div>
 
-| Page | Preview | Config |
-|------|---------|--------|
-| **Home** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/index.page.png" alt="Home preview" loading="lazy"> | [`index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/index.yaml) |
-| **PFI** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pfi.page.png" alt="PFI preview" loading="lazy"> | [`pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pfi.yaml) |
-| **Switches** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/switches.page.png" alt="Switches preview" loading="lazy"> | [`switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/switches.yaml) |
-| **FCU** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/fcu.page.png" alt="FCU preview" loading="lazy"> | [`fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/fcu.yaml) |
-| **Radio** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/radio.page.png" alt="Radio preview" loading="lazy"> | [`radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/radio.yaml) |
-| **Engine** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/engine.page.png" alt="Engine preview" loading="lazy"> | [`engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/engine.yaml) |
-| **Weather** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/weather.page.png" alt="Weather preview" loading="lazy"> | [`weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/weather.yaml) |
-| **Transponder** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/transponder.page.png" alt="Transponder preview" loading="lazy"> | [`transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/transponder.yaml) |
-| **Ground Services** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/ground_services.page.png" alt="Ground Services preview" loading="lazy"> | [`ground_services.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/ground_services.yaml) |
-| **Audio Panel** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/audiopanel.page.png" alt="Audio Panel preview" loading="lazy"> | [`audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/audiopanel.yaml) |
-| **G1000** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/g1000.page.png" alt="G1000 preview" loading="lazy"> | [`g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/g1000.yaml) |
-| **Pedestal** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pedestal.page.png" alt="Pedestal preview" loading="lazy"> | [`pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pedestal.yaml) |
-| **Views** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/views.page.png" alt="Views preview" loading="lazy"> | [`views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/views.yaml) |
-| **FCU 2** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/fcu2.page.png" alt="FCU 2 preview" loading="lazy"> | [`fcu2.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/fcu2.yaml) |
-| **APU Control** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_apu_control.page.png" alt="APU Control preview" loading="lazy"> | [`overhead_apu_control.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_apu_control.yaml) |
-| **Cockpit Lights** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_cockpit_lights.page.png" alt="Cockpit Lights preview" loading="lazy"> | [`overhead_cockpit_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_cockpit_lights.yaml) |
-| **Electric** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_electric.page.png" alt="Electric preview" loading="lazy"> | [`overhead_electric.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_electric.yaml) |
-| **External Lights** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_external_lights.page.png" alt="External Lights preview" loading="lazy"> | [`overhead_external_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_external_lights.yaml) |
-| **Fire Extinguisher** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_fire_extinguisher.page.png" alt="Fire Extinguisher preview" loading="lazy"> | [`overhead_fire_extinguisher.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_fire_extinguisher.yaml) |
-| **Fuel** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_fuel.page.png" alt="Fuel preview" loading="lazy"> | [`overhead_fuel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_fuel.yaml) |
-| **Hydraulic** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_hydraulic.page.png" alt="Hydraulic preview" loading="lazy"> | [`overhead_hydraulic.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_hydraulic.yaml) |
-| **Ice Protection** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_ice_protection.page.png" alt="Ice Protection preview" loading="lazy"> | [`overhead_ice_protection.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_ice_protection.yaml) |
-| **Passenger Signs** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_passenger_signs.page.png" alt="Passenger Signs preview" loading="lazy"> | [`overhead_passenger_signs.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_passenger_signs.yaml) |
-| **Pneumatic** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_pneumatic.page.png" alt="Pneumatic preview" loading="lazy"> | [`overhead_pneumatic.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_pneumatic.yaml) |
-| **Pressurization** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_pressurization.page.png" alt="Pressurization preview" loading="lazy"> | [`overhead_pressurization.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_pressurization.yaml) |
-| **Windshield Wiper** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_windshield_wiper.page.png" alt="Windshield Wiper preview" loading="lazy"> | [`overhead_windshield_wiper.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_windshield_wiper.yaml) |
-| **Powerplant** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pedestal_powerplant.page.png" alt="Powerplant preview" loading="lazy"> | [`pedestal_powerplant.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pedestal_powerplant.yaml) |
-| **Switches 2** | <img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/switches2.page.png" alt="Switches 2 preview" loading="lazy"> | [`switches2.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/switches2.yaml) |
+<div class="page-gallery">
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/index.page.png" alt="Home preview" loading="lazy">
+<div class="page-name">Home</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/index.yaml">index.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pfi.page.png" alt="PFI preview" loading="lazy">
+<div class="page-name">PFI</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pfi.yaml">pfi.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/switches.page.png" alt="Switches preview" loading="lazy">
+<div class="page-name">Switches</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/switches.yaml">switches.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/fcu.page.png" alt="FCU preview" loading="lazy">
+<div class="page-name">FCU</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/fcu.yaml">fcu.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/radio.page.png" alt="Radio preview" loading="lazy">
+<div class="page-name">Radio</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/radio.yaml">radio.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/engine.page.png" alt="Engine preview" loading="lazy">
+<div class="page-name">Engine</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/engine.yaml">engine.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/weather.page.png" alt="Weather preview" loading="lazy">
+<div class="page-name">Weather</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/weather.yaml">weather.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/transponder.page.png" alt="Transponder preview" loading="lazy">
+<div class="page-name">Transponder</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/transponder.yaml">transponder.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/ground_services.page.png" alt="Ground Services preview" loading="lazy">
+<div class="page-name">Ground Services</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/ground_services.yaml">ground_services.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/audiopanel.page.png" alt="Audio Panel preview" loading="lazy">
+<div class="page-name">Audio Panel</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/audiopanel.yaml">audiopanel.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/g1000.page.png" alt="G1000 preview" loading="lazy">
+<div class="page-name">G1000</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/g1000.yaml">g1000.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pedestal.page.png" alt="Pedestal preview" loading="lazy">
+<div class="page-name">Pedestal</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pedestal.yaml">pedestal.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/views.page.png" alt="Views preview" loading="lazy">
+<div class="page-name">Views</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/views.yaml">views.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/fcu2.page.png" alt="FCU 2 preview" loading="lazy">
+<div class="page-name">FCU 2</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/fcu2.yaml">fcu2.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_apu_control.page.png" alt="APU Control preview" loading="lazy">
+<div class="page-name">APU Control</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_apu_control.yaml">overhead_apu_control.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_cockpit_lights.page.png" alt="Cockpit Lights preview" loading="lazy">
+<div class="page-name">Cockpit Lights</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_cockpit_lights.yaml">overhead_cockpit_lights.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_electric.page.png" alt="Electric preview" loading="lazy">
+<div class="page-name">Electric</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_electric.yaml">overhead_electric.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_external_lights.page.png" alt="External Lights preview" loading="lazy">
+<div class="page-name">External Lights</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_external_lights.yaml">overhead_external_lights.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_fire_extinguisher.page.png" alt="Fire Extinguisher preview" loading="lazy">
+<div class="page-name">Fire Extinguisher</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_fire_extinguisher.yaml">overhead_fire_extinguisher.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_fuel.page.png" alt="Fuel preview" loading="lazy">
+<div class="page-name">Fuel</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_fuel.yaml">overhead_fuel.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_hydraulic.page.png" alt="Hydraulic preview" loading="lazy">
+<div class="page-name">Hydraulic</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_hydraulic.yaml">overhead_hydraulic.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_ice_protection.page.png" alt="Ice Protection preview" loading="lazy">
+<div class="page-name">Ice Protection</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_ice_protection.yaml">overhead_ice_protection.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_passenger_signs.page.png" alt="Passenger Signs preview" loading="lazy">
+<div class="page-name">Passenger Signs</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_passenger_signs.yaml">overhead_passenger_signs.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_pneumatic.page.png" alt="Pneumatic preview" loading="lazy">
+<div class="page-name">Pneumatic</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_pneumatic.yaml">overhead_pneumatic.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_pressurization.page.png" alt="Pressurization preview" loading="lazy">
+<div class="page-name">Pressurization</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_pressurization.yaml">overhead_pressurization.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_windshield_wiper.page.png" alt="Windshield Wiper preview" loading="lazy">
+<div class="page-name">Windshield Wiper</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_windshield_wiper.yaml">overhead_windshield_wiper.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pedestal_powerplant.page.png" alt="Powerplant preview" loading="lazy">
+<div class="page-name">Powerplant</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pedestal_powerplant.yaml">pedestal_powerplant.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/loupedecklive1/switches2.page.png" alt="Switches 2 preview" loading="lazy">
+<div class="page-name">Switches 2</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/switches2.yaml">switches2.yaml</a></div>
+</div>
+</div>
 
-### Stream Deck XL — Work in Progress
+### Stream Deck XL
 
-14 pages.
+<div class="layout-meta">🚧 <strong>Work in Progress</strong>&emsp;📄 14 pages&emsp;🎮 Stream Deck XL</div>
 
-| Page | Preview | Config |
-|------|---------|--------|
-| **Home** | <img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/index.page.png" alt="Home preview" loading="lazy"> | [`index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/index.yaml) |
-| **PFI** | <img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/pfi.page.png" alt="PFI preview" loading="lazy"> | [`pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/pfi.yaml) |
-| **MFD** | <img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/mfd.page.png" alt="MFD preview" loading="lazy"> | [`mfd.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/mfd.yaml) |
-| **Switches** | <img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches.page.png" alt="Switches preview" loading="lazy"> | [`switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/switches.yaml) |
-| **Audio Panel** | <img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/audiopanel.page.png" alt="Audio Panel preview" loading="lazy"> | [`audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/audiopanel.yaml) |
-| **FCU** | <img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/fcu.page.png" alt="FCU preview" loading="lazy"> | [`fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/fcu.yaml) |
-| **G1000** | <img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/g1000.page.png" alt="G1000 preview" loading="lazy"> | [`g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/g1000.yaml) |
-| **Radio** | <img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/radio.page.png" alt="Radio preview" loading="lazy"> | [`radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/radio.yaml) |
-| **Engine** | <img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/engine.page.png" alt="Engine preview" loading="lazy"> | [`engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/engine.yaml) |
-| **Transponder** | <img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/transponder.page.png" alt="Transponder preview" loading="lazy"> | [`transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/transponder.yaml) |
-| **Weather** | <img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/weather.page.png" alt="Weather preview" loading="lazy"> | [`weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/weather.yaml) |
-| **Views** | <img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/views.page.png" alt="Views preview" loading="lazy"> | [`views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/views.yaml) |
-| **Switches 2** | <img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches2.page.png" alt="Switches 2 preview" loading="lazy"> | [`switches2.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/switches2.yaml) |
-| **Switches3** | <img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches3.page.png" alt="Switches3 preview" loading="lazy"> | [`switches3.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/switches3.yaml) |
+<div class="page-gallery">
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/index.page.png" alt="Home preview" loading="lazy">
+<div class="page-name">Home</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/index.yaml">index.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/pfi.page.png" alt="PFI preview" loading="lazy">
+<div class="page-name">PFI</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/pfi.yaml">pfi.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/mfd.page.png" alt="MFD preview" loading="lazy">
+<div class="page-name">MFD</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/mfd.yaml">mfd.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches.page.png" alt="Switches preview" loading="lazy">
+<div class="page-name">Switches</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/switches.yaml">switches.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/audiopanel.page.png" alt="Audio Panel preview" loading="lazy">
+<div class="page-name">Audio Panel</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/audiopanel.yaml">audiopanel.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/fcu.page.png" alt="FCU preview" loading="lazy">
+<div class="page-name">FCU</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/fcu.yaml">fcu.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/g1000.page.png" alt="G1000 preview" loading="lazy">
+<div class="page-name">G1000</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/g1000.yaml">g1000.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/radio.page.png" alt="Radio preview" loading="lazy">
+<div class="page-name">Radio</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/radio.yaml">radio.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/engine.page.png" alt="Engine preview" loading="lazy">
+<div class="page-name">Engine</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/engine.yaml">engine.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/transponder.page.png" alt="Transponder preview" loading="lazy">
+<div class="page-name">Transponder</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/transponder.yaml">transponder.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/weather.page.png" alt="Weather preview" loading="lazy">
+<div class="page-name">Weather</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/weather.yaml">weather.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/views.page.png" alt="Views preview" loading="lazy">
+<div class="page-name">Views</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/views.yaml">views.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches2.page.png" alt="Switches 2 preview" loading="lazy">
+<div class="page-name">Switches 2</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/switches2.yaml">switches2.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches3.page.png" alt="Switches3 preview" loading="lazy">
+<div class="page-name">Switches3</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/switches3.yaml">switches3.yaml</a></div>
+</div>
+</div>
 
-### e190.overhead.v2 — Work in Progress
+### e190.overhead.v2
 
-1 page.
+<div class="layout-meta">🚧 <strong>Work in Progress</strong>&emsp;📄 1 page&emsp;🎮 e190.overhead.v2</div>
 
-| Page | Preview | Config |
-|------|---------|--------|
-| **Home** | — | [`index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/overhead/index.yaml) |
+<div class="page-gallery">
+<div class="page-card">
+<div class="page-name">Home</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/overhead/index.yaml">index.yaml</a></div>
+</div>
+</div>

@@ -342,6 +342,12 @@ STATUS_LABEL = {
     "wip": "Work in Progress",
 }
 
+STATUS_ICON = {
+    "stable": "\u2705",       # ✅
+    "active": "\U0001f527",   # 🔧
+    "wip": "\U0001f6a7",      # 🚧
+}
+
 
 def build_overview(slug: str, config: dict[str, Any], doc_path: Path, page_images: dict[str, dict[Path, Path]]) -> str:
     deckconfig_dir = DECKS_DIR / slug / "deckconfig"
@@ -361,30 +367,36 @@ def build_overview(slug: str, config: dict[str, Any], doc_path: Path, page_image
     if layouts:
         for layout in layouts:
             page_count = len(layout["pages"])
-            layout_label = layout["title"]
-            status = str(layout["layout_docs"].get("status") or "").strip()
-            status_text = STATUS_LABEL.get(status, "")
-
-            heading = layout_label
-            if status_text:
-                heading += f" — {status_text}"
-            lines.append(f"### {heading}")
-            lines.append("")
-            lines.append(f"{page_count} page{'s' if page_count != 1 else ''}.")
-            lines.append("")
-
-            # Render per-layout issues/planned if present
             layout_docs = layout["layout_docs"]
+            status = str(layout_docs.get("status") or "").strip()
+            deck_type = layout["type"]
+
+            lines.append(f"### {layout['title']}")
+            lines.append("")
+
+            # Metadata bar
+            meta_items: list[str] = []
+            if status and status in STATUS_LABEL:
+                icon = STATUS_ICON.get(status, "")
+                label = STATUS_LABEL[status]
+                meta_items.append(f'{icon} <strong>{label}</strong>')
+            meta_items.append(f'\U0001f4c4 {page_count} page{"s" if page_count != 1 else ""}')
+            if deck_type:
+                meta_items.append(f'\U0001f3ae {humanize_deck_type(deck_type)}')
+            lines.append(f'<div class="layout-meta">{"&emsp;".join(meta_items)}</div>')
+            lines.append("")
+
+            # Issues and planned
             issues = layout_docs.get("issues")
             planned = layout_docs.get("planned")
             if isinstance(issues, list) and issues:
-                lines.append("**Known issues:**")
+                lines.append(f'\u26a0\ufe0f **Known issues:**')
                 lines.append("")
                 for item in issues:
                     lines.append(f"- {item}")
                 lines.append("")
             if isinstance(planned, list) and planned:
-                lines.append("**Planned:**")
+                lines.append(f'\U0001f4cb **Planned:**')
                 lines.append("")
                 for item in planned:
                     lines.append(f"- {item}")
@@ -392,18 +404,19 @@ def build_overview(slug: str, config: dict[str, Any], doc_path: Path, page_image
 
             images = page_images.get(layout["layout"], {})
             if layout["pages"]:
-                lines.append("| Page | Preview | Config |")
-                lines.append("|------|---------|--------|")
+                lines.append('<div class="page-gallery">')
                 for page_path in layout["pages"]:
                     name = page_title(page_path)
                     image_path = images.get(page_path)
+                    config_url = repo_blob_url(page_path)
+                    lines.append('<div class="page-card">')
                     if image_path:
                         image_ref = rel_path(image_path, doc_path)
-                        preview_cell = f'<img src="{image_ref}" alt="{name} preview" loading="lazy">'
-                    else:
-                        preview_cell = "—"
-                    config_cell = f"[`{page_path.name}`]({repo_blob_url(page_path)})"
-                    lines.append(f"| **{name}** | {preview_cell} | {config_cell} |")
+                        lines.append(f'<img src="{image_ref}" alt="{name} preview" loading="lazy">')
+                    lines.append(f'<div class="page-name">{name}</div>')
+                    lines.append(f'<div class="page-config"><a href="{config_url}">{page_path.name}</a></div>')
+                    lines.append('</div>')
+                lines.append('</div>')
                 lines.append("")
     else:
         lines.append("No layout metadata found.")

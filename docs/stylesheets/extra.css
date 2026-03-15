@@ -2,3 +2,43 @@
 .status-stable { color: #4caf50; }
 .status-active { color: #2196f3; }
 .status-wip { color: #ff9800; }
+
+/* Layout metadata bar */
+.layout-meta {
+  background: #f5f5f5;
+  border-left: 3px solid #4caf50;
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 0 1rem;
+  border-radius: 2px;
+  font-size: 0.95em;
+}
+
+/* Page gallery grid */
+.page-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.page-gallery .page-card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.page-gallery .page-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.page-gallery .page-card .page-name {
+  font-weight: bold;
+  margin: 0.4rem 0 0.2rem;
+}
+
+.page-gallery .page-card .page-config {
+  font-size: 0.85em;
+}
