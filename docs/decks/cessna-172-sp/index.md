@@ -14,82 +14,66 @@ icon: material/airplane
 
 `LoupedeckLive` layout with 10 pages.
 
-### Home
+<div class="grid cards" markdown>
 
-![Home preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/index.page.png)
+-   **Home**
 
-[:material-github: `loupedecklive1/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/index.yaml)
+    ![Home preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/index.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    [:material-github: `index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/index.yaml)
 
-### PFI
+-   **PFI**
 
-![PFI preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/pfi.page.png)
+    ![PFI preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/pfi.page.png)
 
-[:material-github: `loupedecklive1/pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pfi.yaml)
+    [:material-github: `pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pfi.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+-   **Switches**
 
-### Switches
+    ![Switches preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/switches.page.png)
 
-![Switches preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/switches.page.png)
+    [:material-github: `switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/switches.yaml)
 
-[:material-github: `loupedecklive1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/switches.yaml)
+-   **FCU**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    ![FCU preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/fcu.page.png)
 
-### FCU
+    [:material-github: `fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/fcu.yaml)
 
-![FCU preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/fcu.page.png)
+-   **Radio**
 
-[:material-github: `loupedecklive1/fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/fcu.yaml)
+    ![Radio preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/radio.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    [:material-github: `radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/radio.yaml)
 
-### Radio
+-   **Engine**
 
-![Radio preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/radio.page.png)
+    ![Engine preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/engine.page.png)
 
-[:material-github: `loupedecklive1/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/radio.yaml)
+    [:material-github: `engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/engine.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/encoders/encoders_radio.yaml)
+-   **Weather**
 
-### Engine
+    ![Weather preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/weather.page.png)
 
-![Engine preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/engine.page.png)
+    [:material-github: `weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/weather.yaml)
 
-[:material-github: `loupedecklive1/engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/engine.yaml)
+-   **Transponder**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    ![Transponder preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/transponder.page.png)
 
-### Weather
+    [:material-github: `transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/transponder.yaml)
 
-![Weather preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/weather.page.png)
+-   **G1000**
 
-[:material-github: `loupedecklive1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/weather.yaml)
+    ![G1000 preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/g1000.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    [:material-github: `g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/g1000.yaml)
 
-### Transponder
+-   **Pedestal**
 
-![Transponder preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/transponder.page.png)
+    ![Pedestal preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/pedestal.page.png)
 
-[:material-github: `loupedecklive1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/transponder.yaml)
+    [:material-github: `pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pedestal.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
-
-### G1000
-
-![G1000 preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/g1000.page.png)
-
-[:material-github: `loupedecklive1/g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/g1000.yaml)
-
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/encoders/encoders_g1000.yaml)
-
-### Pedestal
-
-![Pedestal preview](../../assets/images/cessna-172-sp/generated/loupedecklive1/pedestal.page.png)
-
-[:material-github: `loupedecklive1/pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pedestal.yaml)
-
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+</div>

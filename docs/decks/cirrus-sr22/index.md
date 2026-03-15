@@ -15,93 +15,75 @@ tags: [GA, Loupedeck Live, G1000, X-Plane 12]
 
 `LoupedeckLive` layout with 11 pages.
 
-### Home
+<div class="grid cards" markdown>
 
-![Home preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/index.page.png)
+-   **Home**
 
-[:material-github: `loupedecklive1/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/index.yaml)
+    ![Home preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/index.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    [:material-github: `index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/index.yaml)
 
-### PFI
+-   **PFI**
 
-![PFI preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/pfi.page.png)
+    ![PFI preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/pfi.page.png)
 
-[:material-github: `loupedecklive1/pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pfi.yaml)
+    [:material-github: `pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pfi.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+-   **Switches**
 
-### Switches
+    ![Switches preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/switches.page.png)
 
-![Switches preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/switches.page.png)
+    [:material-github: `switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/switches.yaml)
 
-[:material-github: `loupedecklive1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/switches.yaml)
+-   **FCU**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    ![FCU preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/fcu.page.png)
 
-### FCU
+    [:material-github: `fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fcu.yaml)
 
-![FCU preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/fcu.page.png)
+-   **Radio**
 
-[:material-github: `loupedecklive1/fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fcu.yaml)
+    ![Radio preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/radio.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    [:material-github: `radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/radio.yaml)
 
-### Radio
+-   **Engine**
 
-![Radio preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/radio.page.png)
+    ![Engine preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/engine.page.png)
 
-[:material-github: `loupedecklive1/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/radio.yaml)
+    [:material-github: `engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/engine.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/encoders/encoders_radio.yaml)
+-   **Pedestal**
 
-### Engine
+    ![Pedestal preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/pedestal.page.png)
 
-![Engine preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/engine.page.png)
+    [:material-github: `pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pedestal.yaml)
 
-[:material-github: `loupedecklive1/engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/engine.yaml)
+-   **Transponder**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    ![Transponder preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/transponder.page.png)
 
-### Pedestal
+    [:material-github: `transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/transponder.yaml)
 
-![Pedestal preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/pedestal.page.png)
+-   **GCU478**
 
-[:material-github: `loupedecklive1/pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pedestal.yaml)
+    ![GCU478 preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/gcu478.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/encoders/encoders_pedestal.yaml)
+    [:material-github: `gcu478.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/gcu478.yaml)
 
-### Transponder
+-   **Weather**
 
-![Transponder preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/transponder.page.png)
+    ![Weather preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/weather.page.png)
 
-[:material-github: `loupedecklive1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/transponder.yaml)
+    [:material-github: `weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/weather.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+-   **Views**
 
-### GCU478
+    ![Views preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/views.page.png)
 
-![GCU478 preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/gcu478.page.png)
+    [:material-github: `views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/views.yaml)
 
-[:material-github: `loupedecklive1/gcu478.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/gcu478.yaml)
-
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_gcu478.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/encoders/encoders_gcu478.yaml)
-
-### Weather
-
-![Weather preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/weather.page.png)
-
-[:material-github: `loupedecklive1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/weather.yaml)
-
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
-
-### Views
-
-![Views preview](../../assets/images/cirrus-sr22/generated/loupedecklive1/views.page.png)
-
-[:material-github: `loupedecklive1/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/views.yaml)
-
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+</div>
 
 ## Status
 

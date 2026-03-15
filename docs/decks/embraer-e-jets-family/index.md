@@ -10,354 +10,282 @@ icon: material/airplane
 
     Decks
 
-## Loupedeck Live
+=== "Loupedeck Live"
 
-`LoupedeckLive` layout with 28 pages.
+    `LoupedeckLive` layout with 28 pages.
 
-### Home
+    <div class="grid cards" markdown>
 
-![Home preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/index.page.png)
+    -   **Home**
 
-[:material-github: `loupedecklive1/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/index.yaml)
+        ![Home preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/index.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+        [:material-github: `index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/index.yaml)
 
-### PFI
+    -   **PFI**
 
-![PFI preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pfi.page.png)
+        ![PFI preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pfi.page.png)
 
-[:material-github: `loupedecklive1/pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pfi.yaml)
+        [:material-github: `pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pfi.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    -   **Switches**
 
-### Switches
+        ![Switches preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/switches.page.png)
 
-![Switches preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/switches.page.png)
+        [:material-github: `switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/switches.yaml)
 
-[:material-github: `loupedecklive1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/switches.yaml)
+    -   **FCU**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+        ![FCU preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/fcu.page.png)
 
-### FCU
+        [:material-github: `fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/fcu.yaml)
 
-![FCU preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/fcu.page.png)
+    -   **Radio**
 
-[:material-github: `loupedecklive1/fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/fcu.yaml)
+        ![Radio preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/radio.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+        [:material-github: `radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/radio.yaml)
 
-### Radio
+    -   **Engine**
 
-![Radio preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/radio.page.png)
+        ![Engine preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/engine.page.png)
 
-[:material-github: `loupedecklive1/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/radio.yaml)
+        [:material-github: `engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/engine.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_radio.yaml)
+    -   **Weather**
 
-### Engine
+        ![Weather preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/weather.page.png)
 
-![Engine preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/engine.page.png)
+        [:material-github: `weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/weather.yaml)
 
-[:material-github: `loupedecklive1/engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/engine.yaml)
+    -   **Transponder**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+        ![Transponder preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/transponder.page.png)
 
-### Weather
+        [:material-github: `transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/transponder.yaml)
 
-![Weather preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/weather.page.png)
+    -   **Ground Services**
 
-[:material-github: `loupedecklive1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/weather.yaml)
+        ![Ground Services preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/ground_services.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+        [:material-github: `ground_services.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/ground_services.yaml)
 
-### Transponder
+    -   **Audio Panel**
 
-![Transponder preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/transponder.page.png)
+        ![Audio Panel preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/audiopanel.page.png)
 
-[:material-github: `loupedecklive1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/transponder.yaml)
+        [:material-github: `audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/audiopanel.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    -   **G1000**
 
-### Ground Services
+        ![G1000 preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/g1000.page.png)
 
-![Ground Services preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/ground_services.page.png)
+        [:material-github: `g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/g1000.yaml)
 
-[:material-github: `loupedecklive1/ground_services.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/ground_services.yaml)
+    -   **Pedestal**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+        ![Pedestal preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pedestal.page.png)
 
-### Audio Panel
+        [:material-github: `pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pedestal.yaml)
 
-![Audio Panel preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/audiopanel.page.png)
+    -   **Views**
 
-[:material-github: `loupedecklive1/audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/audiopanel.yaml)
+        ![Views preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/views.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_radio.yaml)
+        [:material-github: `views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/views.yaml)
 
-### G1000
+    -   **FCU 2**
 
-![G1000 preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/g1000.page.png)
+        ![FCU 2 preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/fcu2.page.png)
 
-[:material-github: `loupedecklive1/g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/g1000.yaml)
+        [:material-github: `fcu2.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/fcu2.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_g1000.yaml)
+    -   **APU Control**
 
-### Pedestal
+        ![APU Control preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_apu_control.page.png)
 
-![Pedestal preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pedestal.page.png)
+        [:material-github: `overhead_apu_control.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_apu_control.yaml)
 
-[:material-github: `loupedecklive1/pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pedestal.yaml)
+    -   **Cockpit Lights**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+        ![Cockpit Lights preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_cockpit_lights.page.png)
 
-### Views
+        [:material-github: `overhead_cockpit_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_cockpit_lights.yaml)
 
-![Views preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/views.page.png)
+    -   **Electric**
 
-[:material-github: `loupedecklive1/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/views.yaml)
+        ![Electric preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_electric.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+        [:material-github: `overhead_electric.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_electric.yaml)
 
-### FCU 2
+    -   **External Lights**
 
-![FCU 2 preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/fcu2.page.png)
+        ![External Lights preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_external_lights.page.png)
 
-[:material-github: `loupedecklive1/fcu2.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/fcu2.yaml)
+        [:material-github: `overhead_external_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_external_lights.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    -   **Fire Extinguisher**
 
-### APU Control
+        ![Fire Extinguisher preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_fire_extinguisher.page.png)
 
-![APU Control preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_apu_control.page.png)
+        [:material-github: `overhead_fire_extinguisher.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_fire_extinguisher.yaml)
 
-[:material-github: `loupedecklive1/overhead_apu_control.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_apu_control.yaml)
+    -   **Fuel**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+        ![Fuel preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_fuel.page.png)
 
-### Cockpit Lights
+        [:material-github: `overhead_fuel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_fuel.yaml)
 
-![Cockpit Lights preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_cockpit_lights.page.png)
+    -   **Hydraulic**
 
-[:material-github: `loupedecklive1/overhead_cockpit_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_cockpit_lights.yaml)
+        ![Hydraulic preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_hydraulic.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+        [:material-github: `overhead_hydraulic.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_hydraulic.yaml)
 
-### Electric
+    -   **Ice Protection**
 
-![Electric preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_electric.page.png)
+        ![Ice Protection preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_ice_protection.page.png)
 
-[:material-github: `loupedecklive1/overhead_electric.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_electric.yaml)
+        [:material-github: `overhead_ice_protection.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_ice_protection.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+    -   **Passenger Signs**
 
-### External Lights
+        ![Passenger Signs preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_passenger_signs.page.png)
 
-![External Lights preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_external_lights.page.png)
+        [:material-github: `overhead_passenger_signs.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_passenger_signs.yaml)
 
-[:material-github: `loupedecklive1/overhead_external_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_external_lights.yaml)
+    -   **Pneumatic**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+        ![Pneumatic preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_pneumatic.page.png)
 
-### Fire Extinguisher
+        [:material-github: `overhead_pneumatic.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_pneumatic.yaml)
 
-![Fire Extinguisher preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_fire_extinguisher.page.png)
+    -   **Pressurization**
 
-[:material-github: `loupedecklive1/overhead_fire_extinguisher.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_fire_extinguisher.yaml)
+        ![Pressurization preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_pressurization.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+        [:material-github: `overhead_pressurization.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_pressurization.yaml)
 
-### Fuel
+    -   **Windshield Wiper**
 
-![Fuel preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_fuel.page.png)
+        ![Windshield Wiper preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_windshield_wiper.page.png)
 
-[:material-github: `loupedecklive1/overhead_fuel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_fuel.yaml)
+        [:material-github: `overhead_windshield_wiper.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_windshield_wiper.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+    -   **Powerplant**
 
-### Hydraulic
+        ![Powerplant preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pedestal_powerplant.page.png)
 
-![Hydraulic preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_hydraulic.page.png)
+        [:material-github: `pedestal_powerplant.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pedestal_powerplant.yaml)
 
-[:material-github: `loupedecklive1/overhead_hydraulic.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_hydraulic.yaml)
+    -   **Switches 2**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+        ![Switches 2 preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/switches2.page.png)
 
-### Ice Protection
+        [:material-github: `switches2.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/switches2.yaml)
 
-![Ice Protection preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_ice_protection.page.png)
+    </div>
 
-[:material-github: `loupedecklive1/overhead_ice_protection.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_ice_protection.yaml)
+=== "Stream Deck XL"
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+    `Stream Deck XL` layout with 14 pages.
 
-### Passenger Signs
+    <div class="grid cards" markdown>
 
-![Passenger Signs preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_passenger_signs.page.png)
+    -   **Home**
 
-[:material-github: `loupedecklive1/overhead_passenger_signs.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_passenger_signs.yaml)
+        ![Home preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/index.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+        [:material-github: `index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/index.yaml)
 
-### Pneumatic
+    -   **PFI**
 
-![Pneumatic preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_pneumatic.page.png)
+        ![PFI preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/pfi.page.png)
 
-[:material-github: `loupedecklive1/overhead_pneumatic.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_pneumatic.yaml)
+        [:material-github: `pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/pfi.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+    -   **Mfd**
 
-### Pressurization
+        ![Mfd preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/mfd.page.png)
 
-![Pressurization preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_pressurization.page.png)
+        [:material-github: `mfd.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/mfd.yaml)
 
-[:material-github: `loupedecklive1/overhead_pressurization.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_pressurization.yaml)
+    -   **Switches**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+        ![Switches preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches.page.png)
 
-### Windshield Wiper
+        [:material-github: `switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/switches.yaml)
 
-![Windshield Wiper preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/overhead_windshield_wiper.page.png)
+    -   **Audio Panel**
 
-[:material-github: `loupedecklive1/overhead_windshield_wiper.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/overhead_windshield_wiper.yaml)
+        ![Audio Panel preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/audiopanel.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+        [:material-github: `audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/audiopanel.yaml)
 
-### Powerplant
+    -   **FCU**
 
-![Powerplant preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/pedestal_powerplant.page.png)
+        ![FCU preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/fcu.page.png)
 
-[:material-github: `loupedecklive1/pedestal_powerplant.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pedestal_powerplant.yaml)
+        [:material-github: `fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/fcu.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+    -   **G1000**
 
-### Switches 2
+        ![G1000 preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/g1000.page.png)
 
-![Switches 2 preview](../../assets/images/embraer-e-jets-family/generated/loupedecklive1/switches2.page.png)
+        [:material-github: `g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/g1000.yaml)
 
-[:material-github: `loupedecklive1/switches2.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/switches2.yaml)
+    -   **Radio**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_lights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/loupedecklive1/encoders/encoders_lights.yaml)
+        ![Radio preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/radio.page.png)
 
-## Stream Deck XL
+        [:material-github: `radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/radio.yaml)
 
-`Stream Deck XL` layout with 14 pages.
+    -   **Engine**
 
-### Home
+        ![Engine preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/engine.page.png)
 
-![Home preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/index.page.png)
+        [:material-github: `engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/engine.yaml)
 
-[:material-github: `streamdeckxl1/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/index.yaml)
+    -   **Transponder**
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+        ![Transponder preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/transponder.page.png)
 
-### PFI
+        [:material-github: `transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/transponder.yaml)
 
-![PFI preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/pfi.page.png)
+    -   **Weather**
 
-[:material-github: `streamdeckxl1/pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/pfi.yaml)
+        ![Weather preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/weather.page.png)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml) · [:material-source-branch: `includes/annunciators.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/annunciators.yaml)
+        [:material-github: `weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/weather.yaml)
 
-### Mfd
+    -   **Views**
 
-![Mfd preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/mfd.page.png)
+        ![Views preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/views.page.png)
 
-[:material-github: `streamdeckxl1/mfd.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/mfd.yaml)
+        [:material-github: `views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/views.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+    -   **Switches 2**
 
-### Switches
+        ![Switches 2 preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches2.page.png)
 
-![Switches preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches.page.png)
+        [:material-github: `switches2.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/switches2.yaml)
 
-[:material-github: `streamdeckxl1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/switches.yaml)
+    -   **Switches3**
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+        ![Switches3 preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches3.page.png)
 
-### Audio Panel
+        [:material-github: `switches3.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/switches3.yaml)
 
-![Audio Panel preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/audiopanel.page.png)
+    </div>
 
-[:material-github: `streamdeckxl1/audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/audiopanel.yaml)
+=== "e190.overhead.v2"
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+    `e190.overhead.v2` layout with 1 page.
 
-### FCU
+    <div class="grid cards" markdown>
 
-![FCU preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/fcu.page.png)
+    -   **Home**
 
-[:material-github: `streamdeckxl1/fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/fcu.yaml)
+        [:material-github: `index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/overhead/index.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
-
-### G1000
-
-![G1000 preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/g1000.page.png)
-
-[:material-github: `streamdeckxl1/g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/g1000.yaml)
-
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
-
-### Radio
-
-![Radio preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/radio.page.png)
-
-[:material-github: `streamdeckxl1/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/radio.yaml)
-
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
-
-### Engine
-
-![Engine preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/engine.page.png)
-
-[:material-github: `streamdeckxl1/engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/engine.yaml)
-
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
-
-### Transponder
-
-![Transponder preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/transponder.page.png)
-
-[:material-github: `streamdeckxl1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/transponder.yaml)
-
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
-
-### Weather
-
-![Weather preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/weather.page.png)
-
-[:material-github: `streamdeckxl1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/weather.yaml)
-
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
-
-### Views
-
-![Views preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/views.page.png)
-
-[:material-github: `streamdeckxl1/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/views.yaml)
-
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
-
-### Switches 2
-
-![Switches 2 preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches2.page.png)
-
-[:material-github: `streamdeckxl1/switches2.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/switches2.yaml)
-
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
-
-### Switches3
-
-![Switches3 preview](../../assets/images/embraer-e-jets-family/generated/streamdeckxl1/switches3.page.png)
-
-[:material-github: `streamdeckxl1/switches3.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/switches3.yaml)
-
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
-
-## e190.overhead.v2
-
-`e190.overhead.v2` layout with 1 page.
-
-### Home
-
-[:material-github: `overhead/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/embraer-e-jets-family/deckconfig/overhead/index.yaml)
+    </div>

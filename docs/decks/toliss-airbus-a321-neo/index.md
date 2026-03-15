@@ -10,228 +10,236 @@ icon: material/airplane
 
     Definition of decks for Toliss A321 + neo add-on (neo variant is XLR but all three variants use same cockpit)
 
-## Loupedeck Live
+=== "Loupedeck Live"
 
-`LoupedeckLive` layout with 6 pages.
+    `LoupedeckLive` layout with 6 pages.
 
-### Home
+    <div class="grid cards" markdown>
 
-![Home preview](../../assets/images/toliss-airbus-a321-neo/generated/fcu/index.page.png)
+    -   **Home**
 
-[:material-github: `fcu/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/index.yaml)
+        ![Home preview](../../assets/images/toliss-airbus-a321-neo/generated/fcu/index.page.png)
 
-### FCU
+        [:material-github: `index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/index.yaml)
 
-![FCU preview](../../assets/images/toliss-airbus-a321-neo/generated/fcu/fcu.page.png)
+    -   **FCU**
 
-[:material-github: `fcu/fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/fcu.yaml)
+        ![FCU preview](../../assets/images/toliss-airbus-a321-neo/generated/fcu/fcu.page.png)
 
-Includes: [:material-source-branch: `views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/views.yaml)
+        [:material-github: `fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/fcu.yaml)
 
-### Transponder and other communication for Loupedeck Live
+    -   **Transponder and other communication for Loupedeck Live**
 
-![Transponder and other communication for Loupedeck Live preview](../../assets/images/toliss-airbus-a321-neo/generated/fcu/toliss.page.png)
+        ![Transponder and other communication for Loupedeck Live preview](../../assets/images/toliss-airbus-a321-neo/generated/fcu/toliss.page.png)
 
-[:material-github: `fcu/toliss.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/toliss.yaml)
+        [:material-github: `toliss.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/toliss.yaml)
 
-Includes: [:material-source-branch: `views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/views.yaml)
+    -   **Include with all display popups for Loupedeck Live**
 
-### Include with all display popups for Loupedeck Live
+        ![Include with all display popups for Loupedeck Live preview](../../assets/images/toliss-airbus-a321-neo/generated/fcu/popups.page.png)
 
-![Include with all display popups for Loupedeck Live preview](../../assets/images/toliss-airbus-a321-neo/generated/fcu/popups.page.png)
+        [:material-github: `popups.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/popups.yaml)
 
-[:material-github: `fcu/popups.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/popups.yaml)
+    -   **Include with all views for Loupedeck Live**
 
-### Include with all views for Loupedeck Live
+        ![Include with all views for Loupedeck Live preview](../../assets/images/toliss-airbus-a321-neo/generated/fcu/views.page.png)
 
-![Include with all views for Loupedeck Live preview](../../assets/images/toliss-airbus-a321-neo/generated/fcu/views.page.png)
+        [:material-github: `views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/views.yaml)
 
-[:material-github: `fcu/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/views.yaml)
+    -   **Transponder and other communication for Loupedeck Live**
 
-### Transponder and other communication for Loupedeck Live
+        ![Transponder and other communication for Loupedeck Live preview](../../assets/images/toliss-airbus-a321-neo/generated/fcu/xpndr.page.png)
 
-![Transponder and other communication for Loupedeck Live preview](../../assets/images/toliss-airbus-a321-neo/generated/fcu/xpndr.page.png)
+        [:material-github: `xpndr.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/xpndr.yaml)
 
-[:material-github: `fcu/xpndr.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/xpndr.yaml)
+    </div>
 
-## Stream Deck Original
+=== "Stream Deck Original"
 
-`Stream Deck Original` layout with 2 pages.
+    `Stream Deck Original` layout with 2 pages.
 
-### Home
+    <div class="grid cards" markdown>
 
-![Home preview](../../assets/images/toliss-airbus-a321-neo/generated/efis-ecam/index.page.png)
+    -   **Home**
 
-[:material-github: `efis-ecam/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/efis-ecam/index.yaml)
+        ![Home preview](../../assets/images/toliss-airbus-a321-neo/generated/efis-ecam/index.page.png)
 
-### EFIS display selector + some FCU commands for Streamdeck 15 keys
+        [:material-github: `index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/efis-ecam/index.yaml)
 
-![EFIS display selector + some FCU commands for Streamdeck 15 keys preview](../../assets/images/toliss-airbus-a321-neo/generated/efis-ecam/efis.page.png)
+    -   **EFIS display selector + some FCU commands for Streamdeck 15 keys**
 
-[:material-github: `efis-ecam/efis.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/efis-ecam/efis.yaml)
+        ![EFIS display selector + some FCU commands for Streamdeck 15 keys preview](../../assets/images/toliss-airbus-a321-neo/generated/efis-ecam/efis.page.png)
 
-## Stream Deck XL
+        [:material-github: `efis.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/efis-ecam/efis.yaml)
 
-`Stream Deck XL` layout with 21 pages.
+    </div>
 
-### Home
+=== "Stream Deck XL"
 
-![Home preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/index.page.png)
+    `Stream Deck XL` layout with 21 pages.
 
-[:material-github: `panels/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/index.yaml)
+    <div class="grid cards" markdown>
 
-### Overhead AIR COND Panel with annunciator buttons
+    -   **Home**
 
-![Overhead AIR COND Panel with annunciator buttons preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdaircond.page.png)
+        ![Home preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/index.page.png)
 
-[:material-github: `panels/ovrhdaircond.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdaircond.yaml)
+        [:material-github: `index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/index.yaml)
 
-### Internal lights
+    -   **Overhead AIR COND Panel with annunciator buttons**
 
-![Internal lights preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/intlights.page.png)
+        ![Overhead AIR COND Panel with annunciator buttons preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdaircond.page.png)
 
-[:material-github: `panels/intlights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/intlights.yaml)
+        [:material-github: `ovrhdaircond.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdaircond.yaml)
 
-### ALternate index page
+    -   **Internal lights**
 
-![ALternate index page preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/index-alt.page.png)
+        ![Internal lights preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/intlights.page.png)
 
-[:material-github: `panels/index-alt.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/index-alt.yaml)
+        [:material-github: `intlights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/intlights.yaml)
 
-Includes: [:material-source-branch: `popups.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/popups.yaml)
+    -   **ALternate index page**
 
-### ADIRS Start/stop
+        ![ALternate index page preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/index-alt.page.png)
 
-![ADIRS Start/stop preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/adirs.page.png)
+        [:material-github: `index-alt.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/index-alt.yaml)
 
-[:material-github: `panels/adirs.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/adirs.yaml)
+    -   **ADIRS Start/stop**
 
-### Airport-navigator dashboard
+        ![ADIRS Start/stop preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/adirs.page.png)
 
-![Airport-navigator dashboard preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/aptnav.page.png)
+        [:material-github: `adirs.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/adirs.yaml)
 
-[:material-github: `panels/aptnav.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/aptnav.yaml)
+    -   **Airport-navigator dashboard**
 
-### Cockpitdecks specific actions, not linked to aircraft
+        ![Airport-navigator dashboard preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/aptnav.page.png)
 
-![Cockpitdecks specific actions, not linked to aircraft preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/cockpitdecks.page.png)
+        [:material-github: `aptnav.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/aptnav.yaml)
 
-[:material-github: `panels/cockpitdecks.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/cockpitdecks.yaml)
+    -   **Cockpitdecks specific actions, not linked to aircraft**
 
-### Cockpitdecks Special Dashboard of A21N
+        ![Cockpitdecks specific actions, not linked to aircraft preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/cockpitdecks.page.png)
 
-![Cockpitdecks Special Dashboard of A21N preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/dashboard.page.png)
+        [:material-github: `cockpitdecks.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/cockpitdecks.yaml)
 
-[:material-github: `panels/dashboard.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/dashboard.yaml)
+    -   **Cockpitdecks Special Dashboard of A21N**
 
-### Cabin and cargo door management
+        ![Cockpitdecks Special Dashboard of A21N preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/dashboard.page.png)
 
-![Cabin and cargo door management preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/doors.page.png)
+        [:material-github: `dashboard.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/dashboard.yaml)
 
-[:material-github: `panels/doors.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/doors.yaml)
+    -   **Cabin and cargo door management**
 
-### ECAM display selector
+        ![Cabin and cargo door management preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/doors.page.png)
 
-![ECAM display selector preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/ecam.page.png)
+        [:material-github: `doors.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/doors.yaml)
 
-[:material-github: `panels/ecam.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ecam.yaml)
+    -   **ECAM display selector**
 
-### EFIS display selector + some FCU commands
+        ![ECAM display selector preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/ecam.page.png)
 
-![EFIS display selector + some FCU commands preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/efis.page.png)
+        [:material-github: `ecam.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ecam.yaml)
 
-[:material-github: `panels/efis.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/efis.yaml)
+    -   **EFIS display selector + some FCU commands**
 
-### Overhead ELEC Panel
+        ![EFIS display selector + some FCU commands preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/efis.page.png)
 
-![Overhead ELEC Panel preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdelec.page.png)
+        [:material-github: `efis.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/efis.yaml)
 
-[:material-github: `panels/ovrhdelec.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdelec.yaml)
+    -   **Overhead ELEC Panel**
 
-### Overhead FIRE Panel
+        ![Overhead ELEC Panel preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdelec.page.png)
 
-![Overhead FIRE Panel preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdfire.page.png)
+        [:material-github: `ovrhdelec.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdelec.yaml)
 
-[:material-github: `panels/ovrhdfire.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdfire.yaml)
+    -   **Overhead FIRE Panel**
 
-### Overhead Fuel Panel
+        ![Overhead FIRE Panel preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdfire.page.png)
 
-![Overhead Fuel Panel preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdfuel.page.png)
+        [:material-github: `ovrhdfire.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdfire.yaml)
 
-[:material-github: `panels/ovrhdfuel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdfuel.yaml)
+    -   **Overhead Fuel Panel**
 
-### Overhead Hydraulics Panel
+        ![Overhead Fuel Panel preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdfuel.page.png)
 
-![Overhead Hydraulics Panel preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdhyd.page.png)
+        [:material-github: `ovrhdfuel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdfuel.yaml)
 
-[:material-github: `panels/ovrhdhyd.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdhyd.yaml)
+    -   **Overhead Hydraulics Panel**
 
-### Piedestal (partial, project, prototype, uncompleted)
+        ![Overhead Hydraulics Panel preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/ovrhdhyd.page.png)
 
-![Piedestal (partial, project, prototype, uncompleted) preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/piedestal.page.png)
+        [:material-github: `ovrhdhyd.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/ovrhdhyd.yaml)
 
-[:material-github: `panels/piedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/piedestal.yaml)
+    -   **Piedestal (partial, project, prototype, uncompleted)**
 
-### All popups on pos. 16 to 28
+        ![Piedestal (partial, project, prototype, uncompleted) preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/piedestal.page.png)
 
-![All popups on pos. 16 to 28 preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/popups.page.png)
+        [:material-github: `piedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/piedestal.yaml)
 
-[:material-github: `panels/popups.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/popups.yaml)
+    -   **All popups on pos. 16 to 28**
 
-### RAdio control
+        ![All popups on pos. 16 to 28 preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/popups.page.png)
 
-![RAdio control preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/radio.page.png)
+        [:material-github: `popups.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/popups.yaml)
 
-[:material-github: `panels/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/radio.yaml)
+    -   **RAdio control**
 
-### Toliss aircraft specific actions, not available in real aircraft...
+        ![RAdio control preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/radio.page.png)
 
-![Toliss aircraft specific actions, not available in real aircraft... preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/toliss.page.png)
+        [:material-github: `radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/radio.yaml)
 
-[:material-github: `panels/toliss.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/toliss.yaml)
+    -   **Toliss aircraft specific actions, not available in real aircraft...**
 
-Includes: [:material-source-branch: `popups.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/popups.yaml)
+        ![Toliss aircraft specific actions, not available in real aircraft... preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/toliss.page.png)
 
-### X-Plane specific actions, not linked to aircraft
+        [:material-github: `toliss.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/toliss.yaml)
 
-![X-Plane specific actions, not linked to aircraft preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/xplane.page.png)
+    -   **X-Plane specific actions, not linked to aircraft**
 
-[:material-github: `panels/xplane.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/xplane.yaml)
+        ![X-Plane specific actions, not linked to aircraft preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/xplane.page.png)
 
-### Transponder and related controls
+        [:material-github: `xplane.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/xplane.yaml)
 
-![Transponder and related controls preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/xpndr.page.png)
+    -   **Transponder and related controls**
 
-[:material-github: `panels/xpndr.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/xpndr.yaml)
+        ![Transponder and related controls preview](../../assets/images/toliss-airbus-a321-neo/generated/panels/xpndr.page.png)
 
-## Stream Deck +
+        [:material-github: `xpndr.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/xpndr.yaml)
 
-`Stream Deck +` layout with 1 page.
+    </div>
 
-### Home
+=== "Stream Deck +"
 
-[:material-github: `efis/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/efis/index.yaml)
+    `Stream Deck +` layout with 1 page.
 
-## X Touch Mini
+    <div class="grid cards" markdown>
 
-`X-Touch Mini` layout with 4 pages.
+    -   **Home**
 
-### Internal lights (all of them, panel lighting, etc.)
+        [:material-github: `index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/efis/index.yaml)
 
-[:material-github: `comm-radio/intlights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/comm-radio/intlights.yaml)
+    </div>
 
-### Encoders and push buttons on "Page A" of X-Touch mini
+=== "X Touch Mini"
 
-[:material-github: `comm-radio/a.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/comm-radio/a.yaml)
+    `X-Touch Mini` layout with 4 pages.
 
-Includes: [:material-source-branch: `encoders.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/comm-radio/encoders.yaml)
+    <div class="grid cards" markdown>
 
-### Encoders and push buttons on "Page B" of X-Touch mini
+    -   **Internal lights (all of them, panel lighting, etc.)**
 
-[:material-github: `comm-radio/b.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/comm-radio/b.yaml)
+        [:material-github: `intlights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/comm-radio/intlights.yaml)
 
-Includes: [:material-source-branch: `encoders.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/comm-radio/encoders.yaml)
+    -   **Encoders and push buttons on "Page A" of X-Touch mini**
 
-### Encoders common to both pages
+        [:material-github: `a.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/comm-radio/a.yaml)
 
-[:material-github: `comm-radio/encoders.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/comm-radio/encoders.yaml)
+    -   **Encoders and push buttons on "Page B" of X-Touch mini**
+
+        [:material-github: `b.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/comm-radio/b.yaml)
+
+    -   **Encoders common to both pages**
+
+        [:material-github: `encoders.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/comm-radio/encoders.yaml)
+
+    </div>

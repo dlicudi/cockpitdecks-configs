@@ -360,39 +360,36 @@ def build_overview(slug: str, config: dict[str, Any], docs_meta: dict[str, Any],
             lines.append(f"    {summary}")
             lines.append("")
     if layouts:
+        use_tabs = len(layouts) > 1
         for layout in layouts:
             page_count = len(layout["pages"])
             layout_label = layout["title"]
-            lines.append(f"## {layout_label}")
+            # Indent prefix: 4 spaces inside tabs, none otherwise
+            p = "    " if use_tabs else ""
+            if use_tabs:
+                lines.append(f'=== "{layout_label}"')
+            else:
+                lines.append(f"## {layout_label}")
             lines.append("")
-            lines.append(f"`{layout['type']}` layout with {page_count} page{'s' if page_count != 1 else ''}.")
+            lines.append(f"{p}`{layout['type']}` layout with {page_count} page{'s' if page_count != 1 else ''}.")
             lines.append("")
             images = page_images.get(layout["layout"], {})
-            for page_path in layout["pages"]:
-                name = page_title(page_path)
-                lines.append(f"### {name}")
+            if layout["pages"]:
+                lines.append(f'{p}<div class="grid cards" markdown>')
                 lines.append("")
-                image_path = images.get(page_path)
-                if image_path:
-                    image_ref = rel_path(image_path, doc_path)
-                    lines.append(f"![{name} preview]({image_ref})")
+                for page_path in layout["pages"]:
+                    name = page_title(page_path)
+                    image_path = images.get(page_path)
+                    lines.append(f"{p}-   **{name}**")
                     lines.append("")
-                # Source link
-                lines.append(f'[:material-github: `{page_path.parent.name}/{page_path.name}`]({repo_blob_url(page_path)})')
+                    if image_path:
+                        image_ref = rel_path(image_path, doc_path)
+                        lines.append(f"{p}    ![{name} preview]({image_ref})")
+                        lines.append("")
+                    lines.append(f'{p}    [:material-github: `{page_path.name}`]({repo_blob_url(page_path)})')
+                    lines.append("")
+                lines.append(f"{p}</div>")
                 lines.append("")
-                # Includes
-                page_data = load_yaml(page_path)
-                includes = [part.strip() for part in str(page_data.get("includes", "")).split(",") if part.strip()]
-                if includes:
-                    include_links: list[str] = []
-                    for include in includes:
-                        include_path = page_path.parent / f"{include}.yaml"
-                        if include_path.exists():
-                            include_links.append(f'[:material-source-branch: `{include}.yaml`]({repo_blob_url(include_path)})')
-                        else:
-                            include_links.append(f"`{include}.yaml`")
-                    lines.append("Includes: " + " · ".join(include_links))
-                    lines.append("")
     else:
         lines.append("No layout metadata found.")
         lines.append("")

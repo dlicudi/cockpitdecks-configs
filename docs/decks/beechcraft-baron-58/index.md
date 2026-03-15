@@ -14,106 +14,84 @@ icon: material/airplane
 
 `LoupedeckLive` layout with 13 pages.
 
-### Home
+<div class="grid cards" markdown>
 
-![Home preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/index.page.png)
+-   **Home**
 
-[:material-github: `loupedecklive1/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/index.yaml)
+    ![Home preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/index.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    [:material-github: `index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/index.yaml)
 
-### PFI
+-   **PFI**
 
-![PFI preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/pfi.page.png)
+    ![PFI preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/pfi.page.png)
 
-[:material-github: `loupedecklive1/pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pfi.yaml)
+    [:material-github: `pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pfi.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+-   **Switches**
 
-### Switches
+    ![Switches preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switches.page.png)
 
-![Switches preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switches.page.png)
+    [:material-github: `switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/switches.yaml)
 
-[:material-github: `loupedecklive1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/switches.yaml)
+-   **FCU**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    ![FCU preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/fcu.page.png)
 
-### FCU
+    [:material-github: `fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/fcu.yaml)
 
-![FCU preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/fcu.page.png)
+-   **Radio**
 
-[:material-github: `loupedecklive1/fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/fcu.yaml)
+    ![Radio preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/radio.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    [:material-github: `radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/radio.yaml)
 
-### Radio
+-   **Engine**
 
-![Radio preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/radio.page.png)
+    ![Engine preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/engine.page.png)
 
-[:material-github: `loupedecklive1/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/radio.yaml)
+    [:material-github: `engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/engine.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_radio.yaml)
+-   **Pedestal**
 
-### Engine
+    ![Pedestal preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/pedestal.page.png)
 
-![Engine preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/engine.page.png)
+    [:material-github: `pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pedestal.yaml)
 
-[:material-github: `loupedecklive1/engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/engine.yaml)
+-   **Transponder**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    ![Transponder preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/transponder.page.png)
 
-### Pedestal
+    [:material-github: `transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/transponder.yaml)
 
-![Pedestal preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/pedestal.page.png)
+-   **G530**
 
-[:material-github: `loupedecklive1/pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pedestal.yaml)
+    ![G530 preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/g530.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_pedestal.yaml)
+    [:material-github: `g530.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/g530.yaml)
 
-### Transponder
+-   **Weather**
 
-![Transponder preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/transponder.page.png)
+    ![Weather preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/weather.page.png)
 
-[:material-github: `loupedecklive1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/transponder.yaml)
+    [:material-github: `weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/weather.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+-   **Views**
 
-### G530
+    ![Views preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/views.page.png)
 
-![G530 preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/g530.page.png)
+    [:material-github: `views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/views.yaml)
 
-[:material-github: `loupedecklive1/g530.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/g530.yaml)
+-   **Switch Panel**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_g530.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_g530.yaml)
+    ![Switch Panel preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switchesicing.page.png)
 
-### Weather
+    [:material-github: `switchesicing.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/switchesicing.yaml)
 
-![Weather preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/weather.page.png)
+-   **Switch Panel**
 
-[:material-github: `loupedecklive1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/weather.yaml)
+    ![Switch Panel preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switcheslights.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    [:material-github: `switcheslights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/switcheslights.yaml)
 
-### Views
-
-![Views preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/views.page.png)
-
-[:material-github: `loupedecklive1/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/views.yaml)
-
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
-
-### Switch Panel
-
-![Switch Panel preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switchesicing.page.png)
-
-[:material-github: `loupedecklive1/switchesicing.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/switchesicing.yaml)
-
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
-
-### Switch Panel
-
-![Switch Panel preview](../../assets/images/beechcraft-baron-58/generated/loupedecklive1/switcheslights.page.png)
-
-[:material-github: `loupedecklive1/switcheslights.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/switcheslights.yaml)
-
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/beechcraft-baron-58/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+</div>

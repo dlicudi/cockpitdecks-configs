@@ -10,178 +10,144 @@ icon: material/airplane
 
     Decks for Toliss Airbus A320neo
 
-## Loupedeck Live
+=== "Loupedeck Live"
 
-`LoupedeckLive` layout with 7 pages.
+    `LoupedeckLive` layout with 7 pages.
 
-### Home
+    <div class="grid cards" markdown>
 
-![Home preview](../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/index.page.png)
+    -   **Home**
 
-[:material-github: `loupedecklive1/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/index.yaml)
+        ![Home preview](../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/index.page.png)
 
-Includes: [:material-source-branch: `includes/pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/pager.yaml) · [:material-source-branch: `includes/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/encoders_fcu.yaml)
+        [:material-github: `index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/index.yaml)
 
-### PFI
+    -   **PFI**
 
-![PFI preview](../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/pfi.page.png)
+        ![PFI preview](../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/pfi.page.png)
 
-[:material-github: `loupedecklive1/pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/pfi.yaml)
+        [:material-github: `pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/pfi.yaml)
 
-Includes: [:material-source-branch: `includes/pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/pager.yaml) · [:material-source-branch: `includes/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/encoders_fcu.yaml)
+    -   **FCU**
 
-### FCU
+        ![FCU preview](../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/fcu.page.png)
 
-![FCU preview](../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/fcu.page.png)
+        [:material-github: `fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/fcu.yaml)
 
-[:material-github: `loupedecklive1/fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/fcu.yaml)
+    -   **Radio**
 
-Includes: [:material-source-branch: `includes/pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/pager.yaml) · [:material-source-branch: `includes/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/encoders_fcu.yaml)
+        ![Radio preview](../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/radio.page.png)
 
-### Radio
+        [:material-github: `radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/radio.yaml)
 
-![Radio preview](../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/radio.page.png)
+    -   **Transponder**
 
-[:material-github: `loupedecklive1/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/radio.yaml)
+        ![Transponder preview](../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/transponder.page.png)
 
-Includes: [:material-source-branch: `includes/pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/pager.yaml) · [:material-source-branch: `includes/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/encoders_fcu.yaml)
+        [:material-github: `transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/transponder.yaml)
 
-### Transponder
+    -   **Weather**
 
-![Transponder preview](../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/transponder.page.png)
+        ![Weather preview](../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/weather.page.png)
 
-[:material-github: `loupedecklive1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/transponder.yaml)
+        [:material-github: `weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/weather.yaml)
 
-Includes: [:material-source-branch: `includes/pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/pager.yaml) · [:material-source-branch: `includes/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/encoders_fcu.yaml)
+    -   **Views**
 
-### Weather
+        ![Views preview](../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/views.page.png)
 
-![Weather preview](../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/weather.page.png)
+        [:material-github: `views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/views.yaml)
 
-[:material-github: `loupedecklive1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/weather.yaml)
+    </div>
 
-Includes: [:material-source-branch: `includes/pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/pager.yaml) · [:material-source-branch: `includes/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/encoders_fcu.yaml)
+=== "Stream Deck XL"
 
-### Views
+    `Stream Deck XL` layout with 14 pages.
 
-![Views preview](../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/views.page.png)
+    <div class="grid cards" markdown>
 
-[:material-github: `loupedecklive1/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/views.yaml)
+    -   **Home**
 
-Includes: [:material-source-branch: `includes/pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/pager.yaml) · [:material-source-branch: `includes/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/includes/encoders_fcu.yaml)
+        ![Home preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/home.page.png)
 
-## Stream Deck XL
+        [:material-github: `home.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/home.yaml)
 
-`Stream Deck XL` layout with 14 pages.
+    -   **PFI**
 
-### Home
+        ![PFI preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/pfi.page.png)
 
-![Home preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/home.page.png)
+        [:material-github: `pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pfi.yaml)
 
-[:material-github: `streamdeckxl1/home.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/home.yaml)
+    -   **Switches**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+        ![Switches preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/switches.page.png)
 
-### PFI
+        [:material-github: `switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/switches.yaml)
 
-![PFI preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/pfi.page.png)
+    -   **FCU**
 
-[:material-github: `streamdeckxl1/pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pfi.yaml)
+        ![FCU preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/fcu.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+        [:material-github: `fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/fcu.yaml)
 
-### Switches
+    -   **Radio**
 
-![Switches preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/switches.page.png)
+        ![Radio preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/radio.page.png)
 
-[:material-github: `streamdeckxl1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/switches.yaml)
+        [:material-github: `radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/radio.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+    -   **Engine**
 
-### FCU
+        ![Engine preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/engine.page.png)
 
-![FCU preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/fcu.page.png)
+        [:material-github: `engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/engine.yaml)
 
-[:material-github: `streamdeckxl1/fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/fcu.yaml)
+    -   **Pedestal**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml)
+        ![Pedestal preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/pedestal.page.png)
 
-### Radio
+        [:material-github: `pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pedestal.yaml)
 
-![Radio preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/radio.page.png)
+    -   **Transponder**
 
-[:material-github: `streamdeckxl1/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/radio.yaml)
+        ![Transponder preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/transponder.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_radio.yaml`
+        [:material-github: `transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/transponder.yaml)
 
-### Engine
+    -   **Switches 2**
 
-![Engine preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/engine.page.png)
+        ![Switches 2 preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/switches2.page.png)
 
-[:material-github: `streamdeckxl1/engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/engine.yaml)
+        [:material-github: `switches2.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/switches2.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+    -   **Audio Panel**
 
-### Pedestal
+        ![Audio Panel preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/audiopanel.page.png)
 
-![Pedestal preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/pedestal.page.png)
+        [:material-github: `audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/audiopanel.yaml)
 
-[:material-github: `streamdeckxl1/pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pedestal.yaml)
+    -   **G1000**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+        ![G1000 preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/g1000.page.png)
 
-### Transponder
+        [:material-github: `g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/g1000.yaml)
 
-![Transponder preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/transponder.page.png)
+    -   **Weather**
 
-[:material-github: `streamdeckxl1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/transponder.yaml)
+        ![Weather preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/weather.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+        [:material-github: `weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/weather.yaml)
 
-### Switches 2
+    -   **Views**
 
-![Switches 2 preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/switches2.page.png)
+        ![Views preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/views.page.png)
 
-[:material-github: `streamdeckxl1/switches2.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/switches2.yaml)
+        [:material-github: `views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/views.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+    -   **ANTI ICE**
 
-### Audio Panel
+        ![ANTI ICE preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/overhead_antiice.page.png)
 
-![Audio Panel preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/audiopanel.page.png)
+        [:material-github: `overhead_antiice.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/overhead_antiice.yaml)
 
-[:material-github: `streamdeckxl1/audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/audiopanel.yaml)
-
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_radio.yaml`
-
-### G1000
-
-![G1000 preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/g1000.page.png)
-
-[:material-github: `streamdeckxl1/g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/g1000.yaml)
-
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_g1000.yaml`
-
-### Weather
-
-![Weather preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/weather.page.png)
-
-[:material-github: `streamdeckxl1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/weather.yaml)
-
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
-
-### Views
-
-![Views preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/views.page.png)
-
-[:material-github: `streamdeckxl1/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/views.yaml)
-
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
-
-### ANTI ICE
-
-![ANTI ICE preview](../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/overhead_antiice.page.png)
-
-[:material-github: `streamdeckxl1/overhead_antiice.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/overhead_antiice.yaml)
-
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pager.yaml) · `encoders/encoders_fcu.yaml`
+    </div>

@@ -10,205 +10,165 @@ icon: material/airplane
 
     Decks for Lancair Evolution
 
-## Loupedeck Live
+=== "Loupedeck Live"
 
-`LoupedeckLive` layout with 13 pages.
+    `LoupedeckLive` layout with 13 pages.
 
-### Home
+    <div class="grid cards" markdown>
 
-![Home preview](../../assets/images/lancair-evolution/generated/loupedecklive1/home.page.png)
+    -   **Home**
 
-[:material-github: `loupedecklive1/home.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/home.yaml)
+        ![Home preview](../../assets/images/lancair-evolution/generated/loupedecklive1/home.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+        [:material-github: `home.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/home.yaml)
 
-### PFI
+    -   **PFI**
 
-![PFI preview](../../assets/images/lancair-evolution/generated/loupedecklive1/pfi.page.png)
+        ![PFI preview](../../assets/images/lancair-evolution/generated/loupedecklive1/pfi.page.png)
 
-[:material-github: `loupedecklive1/pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pfi.yaml)
+        [:material-github: `pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pfi.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    -   **Switches**
 
-### Switches
+        ![Switches preview](../../assets/images/lancair-evolution/generated/loupedecklive1/switches.page.png)
 
-![Switches preview](../../assets/images/lancair-evolution/generated/loupedecklive1/switches.page.png)
+        [:material-github: `switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/switches.yaml)
 
-[:material-github: `loupedecklive1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/switches.yaml)
+    -   **FCU**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+        ![FCU preview](../../assets/images/lancair-evolution/generated/loupedecklive1/fcu.page.png)
 
-### FCU
+        [:material-github: `fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/fcu.yaml)
 
-![FCU preview](../../assets/images/lancair-evolution/generated/loupedecklive1/fcu.page.png)
+    -   **Radio**
 
-[:material-github: `loupedecklive1/fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/fcu.yaml)
+        ![Radio preview](../../assets/images/lancair-evolution/generated/loupedecklive1/radio.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+        [:material-github: `radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/radio.yaml)
 
-### Radio
+    -   **Engine**
 
-![Radio preview](../../assets/images/lancair-evolution/generated/loupedecklive1/radio.page.png)
+        ![Engine preview](../../assets/images/lancair-evolution/generated/loupedecklive1/engine.page.png)
 
-[:material-github: `loupedecklive1/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/radio.yaml)
+        [:material-github: `engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/engine.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/encoders/encoders_radio.yaml)
+    -   **Pedestal**
 
-### Engine
+        ![Pedestal preview](../../assets/images/lancair-evolution/generated/loupedecklive1/pedestal.page.png)
 
-![Engine preview](../../assets/images/lancair-evolution/generated/loupedecklive1/engine.page.png)
+        [:material-github: `pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pedestal.yaml)
 
-[:material-github: `loupedecklive1/engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/engine.yaml)
+    -   **Transponder**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+        ![Transponder preview](../../assets/images/lancair-evolution/generated/loupedecklive1/transponder.page.png)
 
-### Pedestal
+        [:material-github: `transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/transponder.yaml)
 
-![Pedestal preview](../../assets/images/lancair-evolution/generated/loupedecklive1/pedestal.page.png)
+    -   **Switches 2**
 
-[:material-github: `loupedecklive1/pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pedestal.yaml)
+        ![Switches 2 preview](../../assets/images/lancair-evolution/generated/loupedecklive1/switches2.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_pedestal.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/encoders/encoders_pedestal.yaml)
+        [:material-github: `switches2.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/switches2.yaml)
 
-### Transponder
+    -   **Audio Panel**
 
-![Transponder preview](../../assets/images/lancair-evolution/generated/loupedecklive1/transponder.page.png)
+        ![Audio Panel preview](../../assets/images/lancair-evolution/generated/loupedecklive1/audiopanel.page.png)
 
-[:material-github: `loupedecklive1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/transponder.yaml)
+        [:material-github: `audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/audiopanel.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    -   **G1000**
 
-### Switches 2
+        ![G1000 preview](../../assets/images/lancair-evolution/generated/loupedecklive1/g1000.page.png)
 
-![Switches 2 preview](../../assets/images/lancair-evolution/generated/loupedecklive1/switches2.page.png)
+        [:material-github: `g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/g1000.yaml)
 
-[:material-github: `loupedecklive1/switches2.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/switches2.yaml)
+    -   **Weather**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+        ![Weather preview](../../assets/images/lancair-evolution/generated/loupedecklive1/weather.page.png)
 
-### Audio Panel
+        [:material-github: `weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/weather.yaml)
 
-![Audio Panel preview](../../assets/images/lancair-evolution/generated/loupedecklive1/audiopanel.page.png)
+    -   **Views**
 
-[:material-github: `loupedecklive1/audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/audiopanel.yaml)
+        ![Views preview](../../assets/images/lancair-evolution/generated/loupedecklive1/views.page.png)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/encoders/encoders_radio.yaml)
+        [:material-github: `views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/views.yaml)
 
-### G1000
+    </div>
 
-![G1000 preview](../../assets/images/lancair-evolution/generated/loupedecklive1/g1000.page.png)
+=== "Stream Deck XL"
 
-[:material-github: `loupedecklive1/g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/g1000.yaml)
+    `Stream Deck XL` layout with 11 pages.
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/encoders/encoders_g1000.yaml)
+    <div class="grid cards" markdown>
 
-### Weather
+    -   **Home**
 
-![Weather preview](../../assets/images/lancair-evolution/generated/loupedecklive1/weather.page.png)
+        ![Home preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/index.page.png)
 
-[:material-github: `loupedecklive1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/weather.yaml)
+        [:material-github: `index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/index.yaml)
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+    -   **Engine**
 
-### Views
+        ![Engine preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/engine.page.png)
 
-![Views preview](../../assets/images/lancair-evolution/generated/loupedecklive1/views.page.png)
+        [:material-github: `engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/engine.yaml)
 
-[:material-github: `loupedecklive1/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/views.yaml)
+    -   **PFI**
 
-Includes: [:material-source-branch: `pager.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pager.yaml) · [:material-source-branch: `encoders/encoders_fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/encoders/encoders_fcu.yaml)
+        ![PFI preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/pfi.page.png)
 
-## Stream Deck XL
+        [:material-github: `pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/pfi.yaml)
 
-`Stream Deck XL` layout with 11 pages.
+    -   **G1000**
 
-### Home
+        ![G1000 preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/g1000.page.png)
 
-![Home preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/index.page.png)
+        [:material-github: `g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/g1000.yaml)
 
-[:material-github: `streamdeckxl1/index.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/index.yaml)
+    -   **Audio Panel**
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+        ![Audio Panel preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/audiopanel.page.png)
 
-### Engine
+        [:material-github: `audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/audiopanel.yaml)
 
-![Engine preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/engine.page.png)
+    -   **Transponder**
 
-[:material-github: `streamdeckxl1/engine.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/engine.yaml)
+        ![Transponder preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/transponder.page.png)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+        [:material-github: `transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/transponder.yaml)
 
-### PFI
+    -   **Switches**
 
-![PFI preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/pfi.page.png)
+        ![Switches preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/switches.page.png)
 
-[:material-github: `streamdeckxl1/pfi.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/pfi.yaml)
+        [:material-github: `switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/switches.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml) · [:material-source-branch: `includes/annunciators.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/annunciators.yaml)
+    -   **Weather**
 
-### G1000
+        ![Weather preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/weather.page.png)
 
-![G1000 preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/g1000.page.png)
+        [:material-github: `weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/weather.yaml)
 
-[:material-github: `streamdeckxl1/g1000.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/g1000.yaml)
+    -   **Views**
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+        ![Views preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/views.page.png)
 
-### Audio Panel
+        [:material-github: `views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/views.yaml)
 
-![Audio Panel preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/audiopanel.page.png)
+    -   **Radio**
 
-[:material-github: `streamdeckxl1/audiopanel.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/audiopanel.yaml)
+        ![Radio preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/radio.page.png)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+        [:material-github: `radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/radio.yaml)
 
-### Transponder
+    -   **FCU**
 
-![Transponder preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/transponder.page.png)
+        ![FCU preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/fcu.page.png)
 
-[:material-github: `streamdeckxl1/transponder.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/transponder.yaml)
+        [:material-github: `fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/fcu.yaml)
 
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
-
-### Switches
-
-![Switches preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/switches.page.png)
-
-[:material-github: `streamdeckxl1/switches.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/switches.yaml)
-
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
-
-### Weather
-
-![Weather preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/weather.page.png)
-
-[:material-github: `streamdeckxl1/weather.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/weather.yaml)
-
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
-
-### Views
-
-![Views preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/views.page.png)
-
-[:material-github: `streamdeckxl1/views.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/views.yaml)
-
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
-
-### Radio
-
-![Radio preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/radio.page.png)
-
-[:material-github: `streamdeckxl1/radio.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/radio.yaml)
-
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
-
-### FCU
-
-![FCU preview](../../assets/images/lancair-evolution/generated/streamdeckxl1/fcu.page.png)
-
-[:material-github: `streamdeckxl1/fcu.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/fcu.yaml)
-
-Includes: [:material-source-branch: `includes/pagerfull.yaml`](https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/includes/pagerfull.yaml)
+    </div>
 
 ## Status
 
