@@ -102,13 +102,13 @@ buttons:
         B0:
           color: lime
           led: bars
-          formula: ${sim/cockpit2/autopilot/gpss_status} 2 eq
+          formula: ${laminar/sr22/annunciators/ap/nav}
         B1:
           text: NAV
           text-size: 60
           text-font: D-DINCondensed-Bold.otf
           formula: "1"
-    command: sim/autopilot/gpss
+    command: sim/autopilot/NAV
 
 
   - index: 5

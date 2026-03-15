@@ -1,0 +1,203 @@
+name: fms
+includes: pager,encoders/encoders_fms_track
+
+buttons:
+
+# Row 1: Route overview
+
+- index: 0
+  name: FMS_ROUTE
+  type: none
+  label: ROUTE
+  label-size: 9
+  label-color: Gold
+  annunciator:
+    size: medium
+    model: B
+    B0:
+      text: "${cockpitdecks/fms_browser/plan_departure}"
+      text-font: B612Mono-Regular.ttf
+      text-size: 28
+      color: deepskyblue
+      formula: "1"
+    B1:
+      text: "${cockpitdecks/fms_browser/plan_destination}"
+      text-font: B612Mono-Regular.ttf
+      text-size: 28
+      color: deepskyblue
+      formula: "1"
+
+- index: 1
+  name: FMS_ACTIVE_WP
+  type: none
+  label: ACTIVE
+  label-size: 9
+  label-color: lime
+  annunciator:
+    size: medium
+    model: B
+    B0:
+      text: "${cockpitdecks/fms_browser/fms_active_ident}"
+      text-font: B612Mono-Regular.ttf
+      text-size: 28
+      color: lime
+      formula: "1"
+    B1:
+      text: "${cockpitdecks/fms_browser/fms_active_altitude}ft"
+      text-font: B612Mono-Regular.ttf
+      text-size: 18
+      color: darkorange
+      formula: "1"
+
+- index: 2
+  name: FMS_LAST_WP
+  type: none
+  label: DEST
+  label-size: 9
+  label-color: Gold
+  annunciator:
+    size: medium
+    model: B
+    B0:
+      text: "${cockpitdecks/fms_browser/fms_last_ident}"
+      text-font: B612Mono-Regular.ttf
+      text-size: 28
+      color: deepskyblue
+      formula: "1"
+    B1:
+      text: "${cockpitdecks/fms_browser/fms_last_altitude}ft"
+      text-font: B612Mono-Regular.ttf
+      text-size: 18
+      color: darkorange
+      formula: "1"
+
+- index: 3
+  name: FMS_PROGRESS
+  type: none
+  label: PROGRESS
+  label-size: 9
+  label-color: Gold
+  annunciator:
+    size: medium
+    model: B
+    B0:
+      text: "${cockpitdecks/fms_browser/fms_active_index}/${cockpitdecks/fms_browser/fms_entry_count}"
+      text-font: B612Mono-Regular.ttf
+      text-size: 24
+      color: white
+      formula: "1"
+    B1:
+      text: "${cockpitdecks/fms_browser/plan_distance_nm}nm"
+      text-font: B612Mono-Regular.ttf
+      text-size: 22
+      text-format: "{0:.0f}"
+      color: darkorange
+      formula: "1"
+
+# Row 2: Live nav data
+
+- index: 4
+  name: FMS_DIST_TO_WP
+  type: none
+  label: DIST
+  label-size: 9
+  label-color: Gold
+  text: "${sim/cockpit2/radios/indicators/gps_dme_distance_nm}\nnm"
+  text-format: "{0:.1f}"
+  text-color: white
+  text-size: 16
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 5
+  name: FMS_TIME_TO_WP
+  type: none
+  label: ETE
+  label-size: 9
+  label-color: Gold
+  text: "${sim/cockpit2/radios/indicators/gps_dme_time_min}\nmin"
+  text-format: "{0:.0f}"
+  text-color: white
+  text-size: 16
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 6
+  name: FMS_GS
+  type: none
+  label: GS
+  label-size: 9
+  label-color: Gold
+  text: "${sim/cockpit2/gauges/indicators/ground_speed_kt}\nkts"
+  text-format: "{0:.0f}"
+  text-color: white
+  text-size: 16
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 7
+  name: FMS_BEARING
+  type: none
+  label: DTK
+  label-size: 9
+  label-color: Gold
+  text: "${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}"
+  text-format: "{0:.0f}"
+  text-color: white
+  text-size: 16
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+# Row 3: ETA + TOD + navigation
+
+- index: 8
+  name: FMS_ETA
+  type: none
+  label: ETA
+  label-size: 9
+  label-color: Gold
+  text: "${sim/cockpit2/radios/indicators/gps_dme_time_min}\nmin"
+  text-format: "{0:.0f}"
+  text-color: darkorange
+  text-size: 16
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 9
+  name: FMS_TOD
+  type: none
+  label: TOD
+  label-size: 9
+  label-color: Gold
+  text: "${sim/cockpit2/radios/indicators/fms_distance_to_tod_pilot}\nnm"
+  text-format: "{0:.1f}"
+  text-color: darkorange
+  text-size: 16
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 10
+  type: page
+  page: fms_edit
+  text: "EDIT"
+  text-color: khaki
+  text-size: 20
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (40, 30, 40)
+
+- index: 11
+  type: page
+  page: fms_load
+  text: "LOAD"
+  text-color: khaki
+  text-size: 20
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (40, 30, 40)
