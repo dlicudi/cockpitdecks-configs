@@ -1,0 +1,118 @@
+
+buttons:
+
+# Left encoders: waypoint navigation
+
+- index: e0
+  name: wp_browser
+  type: encoder-push
+  commands:
+  - cockpitdecks/fms_browser/wp_direct
+  - cockpitdecks/fms_browser/wp_previous
+  - cockpitdecks/fms_browser/wp_next
+
+- index: e1
+  name: wp_clear
+  type: encoder-push
+  commands:
+  - cockpitdecks/fms_browser/clear_fms_entry
+  - cockpitdecks/fms_browser/wp_previous
+  - cockpitdecks/fms_browser/wp_next
+
+- index: e2
+  name: map_range
+  type: encoder-push
+  commands:
+  - cockpitdecks/fms_browser/map_toggle
+  - cockpitdecks/fms_browser/map_range_up
+  - cockpitdecks/fms_browser/map_range_down
+
+# Right encoders: plan file browsing
+
+- index: e3
+  name: plan_browser_fpl
+  type: encoder-push
+  commands:
+  - cockpitdecks/fms_browser/open_fpl
+  - cockpitdecks/fms_browser/previous
+  - cockpitdecks/fms_browser/next
+
+- index: e4
+  name: plan_browser_alt
+  type: encoder-push
+  commands:
+  - cockpitdecks/fms_browser/refresh
+  - cockpitdecks/fms_browser/previous
+  - cockpitdecks/fms_browser/next
+
+- index: e5
+  name: plan_load
+  type: encoder-push
+  commands:
+  - cockpitdecks/fms_browser/load
+  - cockpitdecks/fms_browser/previous
+  - cockpitdecks/fms_browser/next
+
+# Side screens
+
+- index: left
+  name: left_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: "WPT"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "D->"
+      - label: "WPT"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "CLR"
+      - label: "MAP -/+"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "${cockpitdecks/fms_browser/map_mode}"
+
+- index: right
+  name: right_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: "PUSH"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "FPL"
+      - label: "PUSH"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "Sync"
+      - label: "PUSH"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "Load"

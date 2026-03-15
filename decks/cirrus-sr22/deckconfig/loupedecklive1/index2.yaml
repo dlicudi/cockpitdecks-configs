@@ -1,0 +1,40 @@
+name: index2
+includes: pager,encoders/encoders_fcu
+
+buttons:
+
+  - index: 0
+    type: page
+    page: weather
+    label: WEATHER
+    label-color: Gold
+    text: ""
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 1
+    type: page
+    page: views
+    label: VIEWS
+    label-color: Gold
+    text: ""
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 11
+    type: page
+    page: index
+    label: BACK
+    label-color: Gold
+    text: "<<"
+    text-color: khaki
+    text-size: 30
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (40, 30, 40)

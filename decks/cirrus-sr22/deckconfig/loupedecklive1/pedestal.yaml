@@ -94,10 +94,10 @@ buttons:
 
 - index: 10
   type: page
-  page: fms_load
+  page: fms
   label: FMS
   label-color: Gold
-  text: "PLANS"
+  text: "FMS"
   text-color: khaki
   text-size: 24
   text-font: D-DINCondensed.otf

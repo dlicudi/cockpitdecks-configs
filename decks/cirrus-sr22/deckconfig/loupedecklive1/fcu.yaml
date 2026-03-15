@@ -7,8 +7,6 @@ buttons:
     name: AP
     type: push
     annunciator:
-      annunciator-style: v
-      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -28,8 +26,6 @@ buttons:
     name: FD
     type: push
     annunciator:
-      annunciator-style: v
-      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -51,8 +47,6 @@ buttons:
     name: HDG
     type: push
     annunciator:
-      annunciator-style: v
-      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -72,8 +66,6 @@ buttons:
     name: ALT
     type: push
     annunciator:
-      annunciator-style: v
-      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -94,8 +86,6 @@ buttons:
     name: NAV
     type: push
     annunciator:
-      annunciator-style: v
-      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -115,8 +105,6 @@ buttons:
     name: VNAV
     type: push
     annunciator:
-      annunciator-style: v
-      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -137,8 +125,6 @@ buttons:
     name: APR
     type: push
     annunciator:
-      annunciator-style: v
-      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -157,8 +143,6 @@ buttons:
     name: REV
     type: push
     annunciator:
-      annunciator-style: v
-      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -177,8 +161,6 @@ buttons:
     name: VS
     type: push
     annunciator:
-      annunciator-style: v
-      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -197,8 +179,6 @@ buttons:
     name: FLC
     type: push
     annunciator:
-      annunciator-style: v
-      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -223,8 +203,6 @@ buttons:
     label-color: black
     command: sim/autopilot/hsi_toggle_gps
     annunciator:
-      annunciator-style: v
-      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -249,8 +227,6 @@ buttons:
     label-color: black
     command: sim/autopilot/hsi_toggle_nav
     annunciator:
-      annunciator-style: v
-      light-off-intensity: 8
       size: medium
       model: B
       parts:

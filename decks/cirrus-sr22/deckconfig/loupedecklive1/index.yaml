@@ -126,10 +126,10 @@ buttons:
 
   - index: 10
     type: page
-    page: weather
-    label: WEATHER
+    page: fms
+    label: FMS
     label-color: Gold
-    text: 
+    text: 
     text-color: khaki
     text-size: 40
     text-font: fontawesome.otf
@@ -138,12 +138,12 @@ buttons:
 
   - index: 11
     type: page
-    page: fms
-    label: FMS
+    page: index2
+    label: MORE
     label-color: Gold
-    text: 
+    text: ">>"
     text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
+    text-size: 30
+    text-font: D-DINCondensed.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
+    text-bg-color: (40, 30, 40)
