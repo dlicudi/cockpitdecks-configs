@@ -6,7 +6,9 @@ icon: material/airplane
 
 # Cessna 172 SP
 
-Decks for Cessna 172 SP
+!!! abstract ""
+
+    Decks for Cessna 172 SP
 
 ## Loupedeck Live
 

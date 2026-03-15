@@ -6,7 +6,9 @@ icon: material/airplane
 
 # Robin DR401
 
-Decks for Robin DR401
+!!! abstract ""
+
+    Decks for Robin DR401
 
 ## Loupedeck Live
 

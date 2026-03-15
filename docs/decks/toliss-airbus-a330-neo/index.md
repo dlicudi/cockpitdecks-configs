@@ -6,7 +6,9 @@ icon: material/airplane
 
 # ToLiss A330neo
 
-Definition of decks for ToLiss A330neo
+!!! abstract ""
+
+    Definition of decks for ToLiss A330neo
 
 ## Loupedeck Live
 

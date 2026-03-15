@@ -6,7 +6,9 @@ icon: material/airplane
 
 # Airbus A320neo
 
-Decks for Toliss Airbus A320neo
+!!! abstract ""
+
+    Decks for Toliss Airbus A320neo
 
 ## Loupedeck Live
 

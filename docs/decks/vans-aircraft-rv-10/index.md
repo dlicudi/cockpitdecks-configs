@@ -6,7 +6,9 @@ icon: material/airplane
 
 # Van's Aircraft RV-10
 
-Decks for RV-10
+!!! abstract ""
+
+    Decks for RV-10
 
 ## Loupedeck Live
 

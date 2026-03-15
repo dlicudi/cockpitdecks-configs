@@ -6,7 +6,9 @@ icon: material/airplane
 
 # Lancair Evolution
 
-Decks for Lancair Evolution
+!!! abstract ""
+
+    Decks for Lancair Evolution
 
 ## Loupedeck Live
 

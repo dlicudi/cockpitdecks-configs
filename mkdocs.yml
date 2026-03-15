@@ -149,8 +149,11 @@ plugins:
         - GA
         - Airliner
         - Loupedeck
+        - Loupedeck Live
         - G1000
         - ToLiss
+        - X-Plane 12
+        - Stream Deck XL
         - Work in Progress
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'

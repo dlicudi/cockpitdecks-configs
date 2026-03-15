@@ -6,7 +6,9 @@ icon: material/airplane
 
 # Toliss A321neo
 
-Definition of decks for Toliss A321 + neo add-on (neo variant is XLR but all three variants use same cockpit)
+!!! abstract ""
+
+    Definition of decks for Toliss A321 + neo add-on (neo variant is XLR but all three variants use same cockpit)
 
 ## Loupedeck Live
 

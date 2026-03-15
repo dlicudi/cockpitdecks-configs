@@ -6,7 +6,9 @@ icon: material/airplane
 
 # Beechcraft Baron 58
 
-Decks for Beechcraft Baron 58
+!!! abstract ""
+
+    Decks for Beechcraft Baron 58
 
 ## Loupedeck Live
 

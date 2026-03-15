@@ -6,7 +6,9 @@ icon: material/airplane
 
 # Embraer E-Jets Family
 
-Decks
+!!! abstract ""
+
+    Decks
 
 ## Loupedeck Live
 
