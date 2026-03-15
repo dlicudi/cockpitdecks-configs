@@ -1,5 +1,5 @@
 name: overhead_external_lights
-description: Switch Panel
+description: External Lights
 includes: pager,encoders/encoders_lights
 default-icon-color: Black
 

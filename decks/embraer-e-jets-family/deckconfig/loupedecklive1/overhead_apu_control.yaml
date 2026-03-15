@@ -1,5 +1,5 @@
 name: overhead_apu_control
-description: Switch Panel
+description: APU Control
 includes: pager,encoders/encoders_lights
 default-icon-color: Black
 default-vibrate: SHORT

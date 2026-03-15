@@ -1,5 +1,5 @@
 name: overhead_windshield_wiper
-description: Switch Panel
+description: Windshield Wiper
 includes: pager,encoders/encoders_lights
 default-icon-color: Black
 

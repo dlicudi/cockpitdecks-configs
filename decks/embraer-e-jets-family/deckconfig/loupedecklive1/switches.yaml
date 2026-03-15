@@ -1,4 +1,4 @@
-description: Switch Panel
+description: Switches
 includes: pager,encoders/encoders_lights
 name: switches
 

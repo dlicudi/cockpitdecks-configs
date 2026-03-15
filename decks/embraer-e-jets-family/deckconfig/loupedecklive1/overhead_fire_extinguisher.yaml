@@ -1,5 +1,5 @@
 name: overhead_fire_extinguisher
-description: Switch Panel
+description: Fire Extinguisher
 includes: pager,encoders/encoders_lights
 default-icon-color: Black
 

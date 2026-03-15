@@ -1,5 +1,5 @@
 name: overhead_hydraulic
-description: Switch Panel
+description: Hydraulic
 includes: pager,encoders/encoders_lights
 default-icon-color: Black
 

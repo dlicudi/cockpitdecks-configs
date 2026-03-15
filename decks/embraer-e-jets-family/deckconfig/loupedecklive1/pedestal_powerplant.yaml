@@ -1,5 +1,5 @@
 name: pedestal_powerplant
-description: POWERPLANT
+description: Powerplant
 includes: pager,encoders/encoders_lights
 default-icon-color: Black
 

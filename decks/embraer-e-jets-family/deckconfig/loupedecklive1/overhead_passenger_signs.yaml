@@ -1,5 +1,5 @@
 name: overhead_passenger_signs
-description: Switch Panel
+description: Passenger Signs
 includes: pager,encoders/encoders_lights
 default-icon-color: Black
 

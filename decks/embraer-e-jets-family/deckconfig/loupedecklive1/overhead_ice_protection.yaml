@@ -1,5 +1,5 @@
 name: overhead_ice_protection
-description: Switch Panel
+description: Ice Protection
 includes: pager,encoders/encoders_lights
 default-icon-color: Black
 

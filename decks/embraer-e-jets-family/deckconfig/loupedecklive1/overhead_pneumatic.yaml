@@ -1,5 +1,5 @@
 name: overhead_pneumatic
-description: Switch Panel
+description: Pneumatic
 includes: pager,encoders/encoders_lights
 default-icon-color: Black
 

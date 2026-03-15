@@ -1,4 +1,4 @@
-description: FCU
+description: FCU 2
 includes: pager,encoders/encoders_fcu
 default-icon-color: Black
 name: fcu2

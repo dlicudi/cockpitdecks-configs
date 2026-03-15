@@ -1,5 +1,5 @@
 name: overhead_fuel
-description: Switch Panel
+description: Fuel
 includes: pager,encoders/encoders_lights
 default-icon-color: Black
 
