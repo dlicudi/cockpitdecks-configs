@@ -399,7 +399,7 @@ def build_overview(slug: str, config: dict[str, Any], doc_path: Path, page_image
                     image_path = images.get(page_path)
                     if image_path:
                         image_ref = rel_path(image_path, doc_path)
-                        preview_cell = f"![{name} preview]({image_ref})"
+                        preview_cell = f'<img src="{image_ref}" alt="{name} preview" loading="lazy">'
                     else:
                         preview_cell = "—"
                     config_cell = f"[`{page_path.name}`]({repo_blob_url(page_path)})"
