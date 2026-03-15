@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import io
 import math
 import re
 from dataclasses import dataclass
@@ -221,7 +222,12 @@ class PreviewRenderer:
         page = self._load_page(page_name)
         image = self._render_composite(page)
         output_path.parent.mkdir(parents=True, exist_ok=True)
-        image.save(output_path)
+        buffer = io.BytesIO()
+        image.save(buffer, format="PNG")
+        content = buffer.getvalue()
+        if output_path.exists() and output_path.read_bytes() == content:
+            return
+        output_path.write_bytes(content)
 
     def _load_layout(self) -> Layout:
         decktype = self._load_yaml(self.decktype_path)

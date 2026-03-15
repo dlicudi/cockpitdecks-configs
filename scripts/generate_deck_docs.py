@@ -49,6 +49,20 @@ def load_yaml(path: Path) -> dict[str, Any]:
     return data
 
 
+def write_bytes_if_changed(path: Path, content: bytes) -> bool:
+    if path.exists() and path.read_bytes() == content:
+        return False
+    path.write_bytes(content)
+    return True
+
+
+def write_text_if_changed(path: Path, content: str) -> bool:
+    if path.exists() and path.read_text(encoding="utf-8") == content:
+        return False
+    path.write_text(content, encoding="utf-8")
+    return True
+
+
 def titleize_slug(slug: str) -> str:
     return " ".join(part.upper() if part.isupper() else part.capitalize() for part in slug.replace("-", " ").split())
 
@@ -324,7 +338,7 @@ def render_layout_page_images(slug: str, layout: dict[str, Any]) -> dict[Path, P
         for page_path in layout["pages"]:
             source = temp_image_dir / f"{page_path.stem}.png"
             target = output_dir / f"{page_path.stem}.page.png"
-            target.write_bytes(source.read_bytes())
+            write_bytes_if_changed(target, source.read_bytes())
             expected_images[page_path] = target
             expected_names.add(target.name)
 
@@ -466,7 +480,7 @@ def update_mkdocs_nav(aircraft_records: list[dict[str, Any]]) -> None:
 
     nav_text = "  - Decks:\n" + format_nav_yaml(aircraft_records) + "\n"
     new_text = "".join(lines[:decks_start]) + nav_text + "".join(lines[decks_end:])
-    MKDOCS_CONFIG.write_text(new_text, encoding="utf-8")
+    write_text_if_changed(MKDOCS_CONFIG, new_text)
 
 
 def render_all_images(slug: str, config: dict[str, Any], deckconfig_dir: Path) -> dict[str, dict[Path, Path]]:
@@ -504,7 +518,7 @@ def main() -> int:
         page_images = render_all_images(slug, config, deckconfig_dir)
         doc_path = DOCS_DECKS_DIR / slug / "index.md"
         doc_path.parent.mkdir(parents=True, exist_ok=True)
-        doc_path.write_text(build_overview(slug, config, doc_path, page_images), encoding="utf-8")
+        write_text_if_changed(doc_path, build_overview(slug, config, doc_path, page_images))
 
         title = aircraft_title(slug, config)
         aircraft_records.append({"slug": slug, "title": title})

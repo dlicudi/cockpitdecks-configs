@@ -1,0 +1,53 @@
+buttons:
+
+  - index: 24
+    type: page
+    page: index
+    label: HOME
+    label-color: Gold
+    label-bg-color: Black
+    text: ""
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 25
+    type: page
+    page: pfi
+    label: PFI
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 26
+    type: page
+    page: fcu
+    label: FCU
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+  - index: 27
+    type: page
+    page: views
+    label: VIEWS
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

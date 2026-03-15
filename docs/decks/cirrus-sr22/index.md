@@ -66,3 +66,75 @@ Decks for Cirrus SR22
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/views.yaml">views.yaml</a></div>
 </div>
 </div>
+
+### Stream Deck XL
+
+<div class="layout-meta">🔧 <strong>Active Development</strong>&emsp;📄 13 pages&emsp;🎮 Stream Deck XL</div>
+
+<div class="page-gallery">
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/index.page.png" alt="Home preview" loading="lazy">
+<div class="page-name">Home</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/index.yaml">index.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/pfi.page.png" alt="PFI preview" loading="lazy">
+<div class="page-name">PFI</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/pfi.yaml">pfi.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/switches.page.png" alt="Switches preview" loading="lazy">
+<div class="page-name">Switches</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/switches.yaml">switches.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/icing.page.png" alt="Switch Panel preview" loading="lazy">
+<div class="page-name">Switch Panel</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/icing.yaml">icing.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/lights.page.png" alt="Switch Panel preview" loading="lazy">
+<div class="page-name">Switch Panel</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/lights.yaml">lights.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/fcu.page.png" alt="FCU preview" loading="lazy">
+<div class="page-name">FCU</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/fcu.yaml">fcu.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/gcu478.page.png" alt="GCU478 preview" loading="lazy">
+<div class="page-name">GCU478</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/gcu478.yaml">gcu478.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/radio.page.png" alt="Radio preview" loading="lazy">
+<div class="page-name">Radio</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/radio.yaml">radio.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/engine.page.png" alt="Engine preview" loading="lazy">
+<div class="page-name">Engine</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/engine.yaml">engine.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/pedestal.page.png" alt="Pedestal preview" loading="lazy">
+<div class="page-name">Pedestal</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/pedestal.yaml">pedestal.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/transponder.page.png" alt="Transponder preview" loading="lazy">
+<div class="page-name">Transponder</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/transponder.yaml">transponder.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/weather.page.png" alt="Weather preview" loading="lazy">
+<div class="page-name">Weather</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/weather.yaml">weather.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/views.page.png" alt="Views preview" loading="lazy">
+<div class="page-name">Views</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/views.yaml">views.yaml</a></div>
+</div>
+</div>
