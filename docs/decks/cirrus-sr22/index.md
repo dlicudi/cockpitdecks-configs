@@ -69,7 +69,7 @@ Decks for Cirrus SR22
 
 ### Stream Deck XL
 
-<div class="layout-meta">🔧 <strong>Active Development</strong>&emsp;📄 13 pages&emsp;🎮 Stream Deck XL</div>
+<div class="layout-meta">🔧 <strong>Active Development</strong>&emsp;📄 14 pages&emsp;🎮 Stream Deck XL</div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -118,9 +118,9 @@ Decks for Cirrus SR22
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/engine.yaml">engine.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/pedestal.page.png" alt="Pedestal preview" loading="lazy">
-<div class="page-name">Pedestal</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/pedestal.yaml">pedestal.yaml</a></div>
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/mfd.page.png" alt="MFD preview" loading="lazy">
+<div class="page-name">MFD</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/mfd.yaml">mfd.yaml</a></div>
 </div>
 <div class="page-card">
 <img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/transponder.page.png" alt="Transponder preview" loading="lazy">
@@ -136,5 +136,10 @@ Decks for Cirrus SR22
 <img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/views.page.png" alt="Views preview" loading="lazy">
 <div class="page-name">Views</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/views.yaml">views.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/pedestal.page.png" alt="Pedestal preview" loading="lazy">
+<div class="page-name">Pedestal</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/pedestal.yaml">pedestal.yaml</a></div>
 </div>
 </div>
