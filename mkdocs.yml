@@ -141,6 +141,7 @@ theme:
 
 # Plugins
 plugins:
+  - glightbox
   - social
   - optimize:
       enabled: !ENV [CI, false]
@@ -238,6 +239,8 @@ markdown_extensions:
       base_path:
         - .
       check_paths: true
+      auto_append:
+        - docs/includes/abbreviations.md
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
