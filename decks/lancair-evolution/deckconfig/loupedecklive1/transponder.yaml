@@ -18,7 +18,7 @@ buttons:
   text-color: Lime
   text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 1000 / floor
-  command: sim/radios/transponder_1000_up
+  command: sim/transponder/transponder_thousands_up
 
 - index: 1
   name: SQUAWK1
@@ -35,7 +35,7 @@ buttons:
   text-color: Lime
   text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 100 / floor 10 %
-  command: sim/radios/transponder_100_up
+  command: sim/transponder/transponder_hundreds_up
 
 - index: 2
   name: SQUAWK2  
@@ -52,7 +52,7 @@ buttons:
   text-color: Lime
   text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 10 / floor 10 %
-  command: sim/radios/transponder_10_up
+  command: sim/transponder/transponder_tens_up
 
 - index: 3
   name: SQUAWK3
@@ -69,7 +69,7 @@ buttons:
   text-color: Lime
   text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 10 %
-  command: sim/radios/transponder_1_up
+  command: sim/transponder/transponder_ones_up
 
 - index: 4
   name: ON
@@ -164,7 +164,7 @@ buttons:
         text-size: 60
         text-font: D-DIN-Bold.otf
         formula: "1"
-  command: sim/radios/transponder_ident
+  command: sim/transponder/transponder_ident
 
 
 - index: 9

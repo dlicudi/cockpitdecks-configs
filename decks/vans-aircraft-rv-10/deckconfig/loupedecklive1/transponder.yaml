@@ -164,7 +164,7 @@ buttons:
         text-size: 60
         text-font: DIN Bold
         formula: "1"
-  command: sim/radios/transponder_ident
+  command: sim/transponder/transponder_ident
 
 
 - index: 9

@@ -246,7 +246,7 @@ buttons:
     type: push
     label: IDENT
     name: ATCIDENT
-    command: sim/radios/transponder_ident
+    command: sim/transponder/transponder_ident
     push-switch:
       button-size: 100
       button-fill-color: black
