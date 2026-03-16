@@ -5,6 +5,9 @@ buttons:
 - index: e0
   name: com1_encoder
   type: encoder-toggle
+  toggle-labels:
+    - "[1 MHz]"
+    - "[25 kHz]"
   commands:
   - sim/radios/stby_com1_coarse_down
   - sim/radios/stby_com1_coarse_up
@@ -15,6 +18,9 @@ buttons:
 - index: e1
   name: nav1_encoder
   type: encoder-toggle
+  toggle-labels:
+    - "[1 MHz]"
+    - "[50 kHz]"
   commands:
   - sim/radios/stby_nav1_coarse_down
   - sim/radios/stby_nav1_coarse_up
@@ -25,6 +31,9 @@ buttons:
 - index: e2
   name: adf_encoder
   type: encoder-toggle
+  toggle-labels:
+    - "[100]"
+    - "[1]"
   commands:
   - sim/radios/stby_adf1_hundreds_thous_down
   - sim/radios/stby_adf1_hundreds_thous_up
@@ -36,6 +45,9 @@ buttons:
 - index: e3
   name: com2_encoder
   type: encoder-toggle
+  toggle-labels:
+    - "[1 MHz]"
+    - "[25 kHz]"
   commands:
   - sim/radios/stby_com2_coarse_down
   - sim/radios/stby_com2_coarse_up
@@ -46,6 +58,9 @@ buttons:
 - index: e4
   name: nav2_encoder
   type: encoder-toggle
+  toggle-labels:
+    - "[1 MHz]"
+    - "[50 kHz]"
   commands:
   - sim/radios/stby_nav2_coarse_down
   - sim/radios/stby_nav2_coarse_up

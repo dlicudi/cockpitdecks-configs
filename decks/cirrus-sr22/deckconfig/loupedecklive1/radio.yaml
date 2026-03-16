@@ -29,11 +29,10 @@ buttons:
         text-format: "{0:.3f}"
         frame: True
       D2:
-        text-size: 24
-        formula: "${data:com1_encoder-toggle}"
-        text: "${formula}"
-        text-format: "{0:.0f}"
+        text-size: 28
+        text: "${data:com1_encoder-toggle}"
         text-color: Orange
+        formula: 1
 
 - index: 3
   name: COM2
@@ -61,11 +60,10 @@ buttons:
         text-format: "{0:.3f}"
         frame: True
       D2:
-        text-size: 24
-        formula: "${data:com2_encoder-toggle}"
-        text: "${formula}"
-        text-format: "{0:.0f}"
+        text-size: 28
+        text: "${data:com2_encoder-toggle}"
         text-color: Orange
+        formula: 1
 
 # ROW 2: NAV1 (left) / NAV2 (right)
 - index: 4
@@ -94,11 +92,10 @@ buttons:
         text-format: "{0:.2f}"
         frame: True
       D2:
-        text-size: 24
-        formula: "${data:nav1_encoder-toggle}"
-        text: "${formula}"
-        text-format: "{0:.0f}"
+        text-size: 28
+        text: "${data:nav1_encoder-toggle}"
         text-color: Orange
+        formula: 1
 
 - index: 7
   name: NAV2
@@ -126,11 +123,10 @@ buttons:
         text-format: "{0:.2f}"
         frame: True
       D2:
-        text-size: 24
-        formula: "${data:nav2_encoder-toggle}"
-        text: "${formula}"
-        text-format: "{0:.0f}"
+        text-size: 28
+        text: "${data:nav2_encoder-toggle}"
         text-color: Orange
+        formula: 1
 
 # ROW 3: ADF
 - index: 8
@@ -159,8 +155,7 @@ buttons:
         text-format: "{0:04.0f}"
         frame: True
       D2:
-        text-size: 24
-        formula: "${data:adf_encoder-toggle}"
-        text: "${formula}"
-        text-format: "{0:.0f}"
+        text-size: 28
+        text: "${data:adf_encoder-toggle}"
         text-color: Orange
+        formula: 1
