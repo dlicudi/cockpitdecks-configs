@@ -126,4 +126,9 @@ dataref-roundings:
 # dataref-fetch-frequencies:
 #     sim/flightmodel/position/latitude: 1
 #     sim/flightmodel/position/longitude: 1
+
+# Radio datarefs are NOT listed here so they get instant
+# websocket push updates with no throttling.
+# dataref-fetch-frequencies acts as a throttle, not a poll rate.
+# Omitting a dataref means get_frequency() returns None → no throttle.
 # debug: cockpitdecks.deck
