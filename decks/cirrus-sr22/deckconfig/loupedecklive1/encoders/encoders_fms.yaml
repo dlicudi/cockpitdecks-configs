@@ -1,23 +1,17 @@
 
 buttons:
 
-# Left encoders: waypoint navigation
+# ============================================================
+# Left encoders: Plan browsing + Map control
+# ============================================================
 
 - index: e0
-  name: wp_browser
+  name: plan_load
   type: encoder-push
   commands:
-  - cockpitdecks/fms_browser/wp_direct
-  - cockpitdecks/fms_browser/wp_previous
-  - cockpitdecks/fms_browser/wp_next
-
-- index: e1
-  name: wp_clear
-  type: encoder-push
-  commands:
-  - cockpitdecks/fms_browser/clear_fms_entry
-  - cockpitdecks/fms_browser/wp_previous
-  - cockpitdecks/fms_browser/wp_next
+  - cockpitdecks/fms_browser/load
+  - cockpitdecks/fms_browser/previous
+  - cockpitdecks/fms_browser/next
 
 - index: e2
   name: map_range
@@ -27,36 +21,75 @@ buttons:
   - cockpitdecks/fms_browser/map_range_up
   - cockpitdecks/fms_browser/map_range_down
 
-# Right encoders: plan file browsing
+# ============================================================
+# Right encoders: Waypoint navigation + Page cycling
+# ============================================================
 
 - index: e3
-  name: plan_browser_fpl
+  name: wp_browser
   type: encoder-push
   commands:
-  - cockpitdecks/fms_browser/open_fpl
-  - cockpitdecks/fms_browser/previous
-  - cockpitdecks/fms_browser/next
+  - cockpitdecks/fms_browser/wp_direct
+  - cockpitdecks/fms_browser/wp_previous
+  - cockpitdecks/fms_browser/wp_next
 
 - index: e4
-  name: plan_browser_alt
+  name: wp_clear
   type: encoder-push
   commands:
-  - cockpitdecks/fms_browser/refresh
-  - cockpitdecks/fms_browser/previous
-  - cockpitdecks/fms_browser/next
+  - cockpitdecks/fms_browser/clear_fms_entry
+  - cockpitdecks/fms_browser/wp_previous
+  - cockpitdecks/fms_browser/wp_next
 
 - index: e5
-  name: plan_load
-  type: encoder-push
-  commands:
-  - cockpitdecks/fms_browser/load
-  - cockpitdecks/fms_browser/previous
-  - cockpitdecks/fms_browser/next
+  name: page_cycle
+  type: page-cycle
+  pages:
+    - fms
+    - fms_legs
+    - fms_nav
+  page-labels:
+    - FMS
+    - LEGS
+    - NAV
 
-# Side screens
+# ============================================================
+# Side screens: Encoder labels
+# ============================================================
 
 - index: left
   name: left_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: "FPL"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "Load"
+      - label: ""
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: ""
+      - label: "MAP"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "${cockpitdecks/fms_browser/map_mode}"
+
+- index: right
+  name: right_screen
   type: none
   side:
     icon-color: Black
@@ -77,42 +110,11 @@ buttons:
         text-font: D-DIN.otf
         text-color: White
         text: "CLR"
-      - label: "MAP -/+"
+      - label: "PAGE"
         label-size: 14
         label-font: D-DINCondensed.otf
         label-color: Gold
         text-size: 16
         text-font: D-DIN.otf
         text-color: White
-        text: "${cockpitdecks/fms_browser/map_mode}"
-
-- index: right
-  name: right_screen
-  type: none
-  side:
-    icon-color: Black
-    labels:
-      - label: "PUSH"
-        label-size: 14
-        label-font: D-DINCondensed.otf
-        label-color: Gold
-        text-size: 16
-        text-font: D-DIN.otf
-        text-color: White
-        text: "FPL"
-      - label: "PUSH"
-        label-size: 14
-        label-font: D-DINCondensed.otf
-        label-color: Gold
-        text-size: 16
-        text-font: D-DIN.otf
-        text-color: White
-        text: "Sync"
-      - label: "PUSH"
-        label-size: 14
-        label-font: D-DINCondensed.otf
-        label-color: Gold
-        text-size: 16
-        text-font: D-DIN.otf
-        text-color: White
-        text: "Load"
+        text: "${data:cockpitdecks/page_cycle/current_page}"

@@ -1,0 +1,211 @@
+name: fms_nav
+includes: pager,encoders/encoders_fms
+
+buttons:
+
+# ============================================================
+# Navigation & Situational Awareness
+# Live telemetry, TOD, ETA, map control
+# ============================================================
+
+# Row 1: Active leg context
+
+- index: 0
+  name: FMS_ACT
+  type: none
+  label: ACT
+  label-size: 9
+  label-color: lime
+  annunciator:
+    size: medium
+    model: B
+    B0:
+      text: "${cockpitdecks/fms_browser/fms_active_ident}"
+      text-font: B612Mono-Regular.ttf
+      text-size: 38
+      color: lime
+      formula: "1"
+    B1:
+      text: "${cockpitdecks/fms_browser/fms_active_altitude}ft"
+      text-font: B612Mono-Regular.ttf
+      text-size: 38
+      color: darkorange
+      formula: "1"
+
+- index: 1
+  name: FMS_PROG
+  type: none
+  label: PROG
+  label-size: 9
+  label-color: Gold
+  annunciator:
+    size: medium
+    model: B
+    B0:
+      text: "${cockpitdecks/fms_browser/fms_active_index}/${cockpitdecks/fms_browser/fms_entry_count}"
+      text-font: B612Mono-Regular.ttf
+      text-size: 56
+      color: white
+      formula: "1"
+    B1:
+      text: "${cockpitdecks/fms_browser/loaded_distance_nm}nm"
+      text-font: B612Mono-Regular.ttf
+      text-size: 38
+      text-format: "{0:.0f}"
+      color: darkorange
+      formula: "1"
+
+- index: 2
+  name: FMS_DEP
+  type: none
+  label: DEP
+  label-size: 9
+  label-color: Gold
+  text: "${cockpitdecks/fms_browser/fms_first_ident}"
+  text-color: deepskyblue
+  text-size: 20
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 3
+  name: FMS_DEST
+  type: none
+  label: DEST
+  label-size: 9
+  label-color: Gold
+  text: "${cockpitdecks/fms_browser/fms_last_ident}"
+  text-color: deepskyblue
+  text-size: 20
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+# Row 2: Live navigation data
+
+- index: 4
+  name: FMS_DIST
+  type: none
+  label: DIST
+  label-size: 9
+  label-color: Gold
+  text: "${sim/cockpit2/radios/indicators/gps_dme_distance_nm}\nnm"
+  text-format: "{0:.1f}"
+  text-color: white
+  text-size: 24
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 5
+  name: FMS_ETE
+  type: none
+  label: ETE
+  label-size: 9
+  label-color: Gold
+  text: "${sim/cockpit2/radios/indicators/gps_dme_time_min}\nmin"
+  text-format: "{0:.0f}"
+  text-color: darkorange
+  text-size: 24
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 6
+  name: FMS_GS
+  type: none
+  label: GS
+  label-size: 9
+  label-color: Gold
+  text: "${sim/cockpit2/gauges/indicators/ground_speed_kt}\nkts"
+  text-format: "{0:.0f}"
+  text-color: white
+  text-size: 24
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 7
+  name: FMS_DTK
+  type: none
+  label: DTK
+  label-size: 9
+  label-color: Gold
+  text: "${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}"
+  text-format: "{0:.0f}"
+  text-color: darkorange
+  text-size: 24
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+# Row 3: Situational awareness
+
+- index: 8
+  name: FMS_TOD
+  type: none
+  label: TOD
+  label-size: 9
+  label-color: Gold
+  text: "${sim/cockpit2/radios/indicators/fms_distance_to_tod_pilot}\nnm"
+  text-format: "{0:.1f}"
+  text-color: white
+  text-size: 24
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 9
+  name: FMS_ETA
+  type: none
+  label: ETA
+  label-size: 9
+  label-color: Gold
+  text: "${sim/cockpit2/radios/indicators/fms1_act_eta_hour}:${sim/cockpit2/radios/indicators/fms1_act_eta_minute}Z"
+  text-color: darkorange
+  text-size: 24
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 10
+  name: FMS_PROC
+  type: none
+  label: PROC
+  label-size: 9
+  label-color: Gold
+  annunciator:
+    size: medium
+    model: B
+    B0:
+      text: "${cockpitdecks/fms_browser/loaded_sid}"
+      text-font: D-DINCondensed.otf
+      text-size: 30
+      color: white
+      formula: "1"
+    B1:
+      text: "${cockpitdecks/fms_browser/loaded_star}"
+      text-font: D-DINCondensed.otf
+      text-size: 30
+      color: darkorange
+      formula: "1"
+
+- index: 11
+  name: FMS_MAP
+  type: none
+  label: MAP
+  label-size: 9
+  label-color: Gold
+  annunciator:
+    size: medium
+    model: B
+    B0:
+      text: "${cockpitdecks/fms_browser/map_mode}"
+      text-font: D-DIN-Bold.otf
+      text-size: 38
+      color: deepskyblue
+      formula: "1"
+    B1:
+      text: ""
+      color: black
+      formula: "1"
