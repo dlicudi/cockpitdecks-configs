@@ -1,0 +1,105 @@
+
+buttons:
+
+# ============================================================
+# PLAN BROWSER encoders
+# E2 (e0): BROWSE — turn=prev/next plan  |  push=no-op
+# E3 (e1): ACTION — push=load plan       |  turn=no-op
+# E1 (e5): PAGE — page-cycle
+# ============================================================
+
+- index: e0
+  name: browse_plan
+  type: encoder-push
+  commands:
+  - ~
+  - cockpitdecks/fms_browser/previous
+  - cockpitdecks/fms_browser/next
+
+- index: e1
+  name: load_plan
+  type: encoder-push
+  commands:
+  - cockpitdecks/fms_browser/load
+  - ~
+  - ~
+
+- index: e5
+  name: page_cycle
+  type: page-cycle
+  pages:
+    - fms
+    - fms_route
+    - fms_leg
+    - fms_nav
+  page-labels:
+    - BROW
+    - ROUT
+    - LEG
+    - NAV
+
+# ============================================================
+# Side screens
+# ============================================================
+
+- index: left
+  name: left_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: "PLAN"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "${cockpitdecks/fms_browser/index}/${cockpitdecks/fms_browser/count}"
+      - label: "LOAD"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: ""
+      - label: ""
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: ""
+
+- index: right
+  name: right_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: ""
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: ""
+      - label: ""
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: ""
+      - label: "PAGE"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "${data:cockpitdecks/page_cycle/current_page}"

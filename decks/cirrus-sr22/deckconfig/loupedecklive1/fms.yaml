@@ -1,35 +1,36 @@
 name: fms
-includes: pager,encoders/encoders_fms
+includes: pager,encoders/encoders_fms_browser
 
 buttons:
 
 # ============================================================
-# Flight Plan Browser & Preview
-# Everything here reflects the BROWSED plan (e4 to browse)
-# Push e4 to load selected plan into FMS
+# PLAN BROWSER
+# Question: Which stored flight plan am I browsing before loading?
+# Primary object: BrowsedPlan
+# E2 (e0) turn: browse plans  |  E3 (e1) push: load plan
 # ============================================================
 
-# Row 1: Plan identity + route
+# Row 1: Route identity — name/file, departure, destination, distance
 
 - index: 0
-  name: FMS_SEL
+  name: FMS_PLAN
   type: none
-  label: SEL
+  label: PLAN
   label-size: 9
   label-color: Gold
   annunciator:
     size: medium
     model: B
     B0:
-      text: "${cockpitdecks/fms_browser/plan_filename}"
+      text: "${cockpitdecks/fms_browser/plan_name}"
       text-font: D-DINCondensed.otf
       text-size: 30
       color: darkorange
       formula: "1"
     B1:
-      text: "${cockpitdecks/fms_browser/index}/${cockpitdecks/fms_browser/count}"
-      text-font: B612Mono-Regular.ttf
-      text-size: 44
+      text: "${cockpitdecks/fms_browser/plan_filename}"
+      text-font: D-DINCondensed.otf
+      text-size: 24
       color: white
       formula: "1"
 
@@ -39,21 +40,12 @@ buttons:
   label: DEP
   label-size: 9
   label-color: Gold
-  annunciator:
-    size: medium
-    model: B
-    B0:
-      text: "${cockpitdecks/fms_browser/plan_departure}"
-      text-font: B612Mono-Regular.ttf
-      text-size: 56
-      color: deepskyblue
-      formula: "1"
-    B1:
-      text: "RW${cockpitdecks/fms_browser/plan_dep_runway}"
-      text-font: B612Mono-Regular.ttf
-      text-size: 38
-      color: darkorange
-      formula: "1"
+  text: "${cockpitdecks/fms_browser/plan_departure}"
+  text-color: deepskyblue
+  text-size: 36
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
 
 - index: 2
   name: FMS_DEST
@@ -61,41 +53,17 @@ buttons:
   label: DEST
   label-size: 9
   label-color: Gold
-  annunciator:
-    size: medium
-    model: B
-    B0:
-      text: "${cockpitdecks/fms_browser/plan_destination}"
-      text-font: B612Mono-Regular.ttf
-      text-size: 56
-      color: deepskyblue
-      formula: "1"
-    B1:
-      text: "RW${cockpitdecks/fms_browser/plan_dest_runway}"
-      text-font: B612Mono-Regular.ttf
-      text-size: 38
-      color: darkorange
-      formula: "1"
-
-- index: 3
-  name: FMS_CYCLE
-  type: none
-  label: CYCLE
-  label-size: 9
-  label-color: Gold
-  text: "${cockpitdecks/fms_browser/plan_cycle}"
-  text-color: white
-  text-size: 20
+  text: "${cockpitdecks/fms_browser/plan_destination}"
+  text-color: deepskyblue
+  text-size: 36
   text-font: B612Mono-Regular.ttf
   text-position: cm
   text-bg-color: (20, 20, 24)
 
-# Row 2: Plan details
-
-- index: 4
+- index: 3
   name: FMS_DIST
   type: none
-  label: DIST
+  label: NM
   label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_browser/plan_distance_nm}\nnm"
@@ -106,7 +74,48 @@ buttons:
   text-position: cm
   text-bg-color: (20, 20, 24)
 
+# Row 2: Runway + waypoint count + plan index
+
+- index: 4
+  name: FMS_IDX
+  type: none
+  label: IDX
+  label-size: 9
+  label-color: Gold
+  text: "${cockpitdecks/fms_browser/index}/${cockpitdecks/fms_browser/count}"
+  text-color: white
+  text-size: 24
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
 - index: 5
+  name: FMS_DEP_RWY
+  type: none
+  label: RWY
+  label-size: 9
+  label-color: Gold
+  text: "RW${cockpitdecks/fms_browser/plan_dep_runway}"
+  text-color: darkorange
+  text-size: 28
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 6
+  name: FMS_DEST_RWY
+  type: none
+  label: RWY
+  label-size: 9
+  label-color: Gold
+  text: "RW${cockpitdecks/fms_browser/plan_dest_runway}"
+  text-color: darkorange
+  text-size: 28
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 7
   name: FMS_WPTS
   type: none
   label: WPTS
@@ -114,66 +123,14 @@ buttons:
   label-color: Gold
   text: "${cockpitdecks/fms_browser/plan_waypoint_count}"
   text-color: white
-  text-size: 24
+  text-size: 32
   text-font: B612Mono-Regular.ttf
   text-position: cm
   text-bg-color: (20, 20, 24)
 
-- index: 6
-  name: FMS_ALT
-  type: none
-  label: MAX FL
-  label-size: 9
-  label-color: Gold
-  text: "${cockpitdecks/fms_browser/plan_max_altitude}\nft"
-  text-color: white
-  text-size: 24
-  text-font: B612Mono-Regular.ttf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-
-- index: 7
-  name: FMS_NAME
-  type: none
-  label: ROUTE
-  label-size: 9
-  label-color: Gold
-  text: "${cockpitdecks/fms_browser/plan_name}"
-  text-color: darkorange
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-
-# Row 3: Procedures + loaded plan reference
+# Row 3: Procedures + nav data currency + status
 
 - index: 8
-  name: FMS_SID
-  type: none
-  label: SID
-  label-size: 9
-  label-color: Gold
-  text: "${cockpitdecks/fms_browser/plan_sid}"
-  text-color: white
-  text-size: 20
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-
-- index: 9
-  name: FMS_STAR
-  type: none
-  label: STAR
-  label-size: 9
-  label-color: Gold
-  text: "${cockpitdecks/fms_browser/plan_star}"
-  text-color: darkorange
-  text-size: 20
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-
-- index: 10
   name: FMS_STATUS
   type: none
   label: STATUS
@@ -186,24 +143,41 @@ buttons:
   text-position: cm
   text-bg-color: (20, 20, 24)
 
-- index: 11
-  name: FMS_LOADED
+- index: 9
+  name: FMS_SID
   type: none
-  label: LOADED
+  label: SID
   label-size: 9
-  label-color: lime
-  annunciator:
-    size: medium
-    model: B
-    B0:
-      text: "${cockpitdecks/fms_browser/loaded_filename}"
-      text-font: D-DINCondensed.otf
-      text-size: 30
-      color: lime
-      formula: "1"
-    B1:
-      text: "${cockpitdecks/fms_browser/loaded_index}/${cockpitdecks/fms_browser/count}"
-      text-font: B612Mono-Regular.ttf
-      text-size: 44
-      color: white
-      formula: "1"
+  label-color: Gold
+  text: "${cockpitdecks/fms_browser/plan_sid}"
+  text-color: white
+  text-size: 20
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 10
+  name: FMS_STAR
+  type: none
+  label: STAR
+  label-size: 9
+  label-color: Gold
+  text: "${cockpitdecks/fms_browser/plan_star}"
+  text-color: darkorange
+  text-size: 20
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 11
+  name: FMS_CYCLE
+  type: none
+  label: CYCLE
+  label-size: 9
+  label-color: Gold
+  text: "${cockpitdecks/fms_browser/plan_cycle}"
+  text-color: darkorange
+  text-size: 20
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)

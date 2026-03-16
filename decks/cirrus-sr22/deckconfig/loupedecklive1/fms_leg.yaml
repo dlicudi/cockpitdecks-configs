@@ -1,0 +1,143 @@
+name: fms_leg
+includes: pager,encoders/encoders_fms_leg
+
+buttons:
+
+# ============================================================
+# ACTIVE LEG BROWSER
+# Question: Which leg of the active route am I inspecting?
+# Primary object: DisplayedLeg
+# E2 (e0) turn: previous/next leg (fms_displayed_index)
+# R1 = positional context  |  R2 = focal waypoint (large)
+# R3 = touch PREV/NEXT as backup to encoder
+# ============================================================
+
+# Row 1: Positional context — where am I browsing vs where is active leg
+
+- index: 0
+  name: FMS_DISP_IDX
+  type: none
+  label: LEG
+  label-size: 9
+  label-color: Gold
+  text: "${cockpitdecks/fms_browser/fms_displayed_index}"
+  text-color: white
+  text-size: 40
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 1
+  name: FMS_OF
+  type: none
+  label: OF
+  label-size: 9
+  label-color: Gold
+  text: "${cockpitdecks/fms_browser/fms_entry_count}"
+  text-color: white
+  text-size: 40
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 2
+  name: FMS_ACT_IDX
+  type: none
+  label: ACTIVE
+  label-size: 9
+  label-color: lime
+  text: "${cockpitdecks/fms_browser/fms_active_index}"
+  text-color: lime
+  text-size: 40
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 3
+  name: FMS_ACT_WPT
+  type: none
+  label: →WPT
+  label-size: 9
+  label-color: lime
+  text: "${cockpitdecks/fms_browser/fms_active_ident}"
+  text-color: lime
+  text-size: 32
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+# Row 2: Focal element — displayed waypoint ident (large) with position
+
+- index: 4
+  name: FMS_R2_A
+  type: none
+
+- index: 5
+  name: FMS_WPT
+  type: none
+  label: WPT
+  label-size: 9
+  label-color: Gold
+  annunciator:
+    size: medium
+    model: B
+    B0:
+      text: "${cockpitdecks/fms_browser/fms_displayed_ident}"
+      text-font: B612Mono-Regular.ttf
+      text-size: 56
+      color: white
+      formula: "1"
+    B1:
+      text: "${cockpitdecks/fms_browser/fms_displayed_index}/${cockpitdecks/fms_browser/fms_entry_count}"
+      text-font: B612Mono-Regular.ttf
+      text-size: 38
+      color: darkorange
+      formula: "1"
+
+- index: 6
+  name: FMS_R2_B
+  type: none
+
+- index: 7
+  name: FMS_R2_C
+  type: none
+
+# Row 3: Touch PREV/NEXT as backup to encoder turn
+
+- index: 8
+  name: FMS_PREV
+  type: push
+  label: ◄ PREV
+  label-size: 9
+  label-color: Gold
+  vibrate: SHORT
+  command: cockpitdecks/fms_browser/wp_previous
+  text: "◄"
+  text-color: white
+  text-size: 32
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 9
+  name: FMS_R3_A
+  type: none
+
+- index: 10
+  name: FMS_R3_B
+  type: none
+
+- index: 11
+  name: FMS_NEXT
+  type: push
+  label: NEXT ►
+  label-size: 9
+  label-color: Gold
+  vibrate: SHORT
+  command: cockpitdecks/fms_browser/wp_next
+  text: "►"
+  text-color: white
+  text-size: 32
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)

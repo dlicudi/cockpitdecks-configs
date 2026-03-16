@@ -1,0 +1,97 @@
+
+buttons:
+
+# ============================================================
+# ACTIVE LEG BROWSER encoders
+# E2 (e0): browse legs — fms_displayed_index (turn left/right)
+#          push: no-op
+# E1 (e5): page-cycle
+# ============================================================
+
+- index: e0
+  name: browse_leg
+  type: encoder-push
+  commands:
+  - ~
+  - cockpitdecks/fms_browser/wp_previous
+  - cockpitdecks/fms_browser/wp_next
+
+- index: e5
+  name: page_cycle
+  type: page-cycle
+  pages:
+    - fms
+    - fms_route
+    - fms_leg
+    - fms_nav
+  page-labels:
+    - BROW
+    - ROUT
+    - LEG
+    - NAV
+
+# ============================================================
+# Side screens
+# ============================================================
+
+- index: left
+  name: left_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: "LEG"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "${cockpitdecks/fms_browser/fms_displayed_index}/${cockpitdecks/fms_browser/fms_entry_count}"
+      - label: ""
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: ""
+      - label: ""
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: ""
+
+- index: right
+  name: right_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: ""
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: ""
+      - label: ""
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: ""
+      - label: "PAGE"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "${data:cockpitdecks/page_cycle/current_page}"
