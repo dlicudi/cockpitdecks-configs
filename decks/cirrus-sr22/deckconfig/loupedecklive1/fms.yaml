@@ -160,7 +160,7 @@ buttons:
 - index: 7
   name: FMS_DISPLAYED_WP
   type: none
-  label: SELECTED
+  label: WPT SEL
   label-size: 9
   label-color: Gold
   annunciator:
