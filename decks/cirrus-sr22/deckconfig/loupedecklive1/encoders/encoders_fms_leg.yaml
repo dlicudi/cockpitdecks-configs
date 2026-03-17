@@ -3,12 +3,13 @@ buttons:
 
 # ============================================================
 # LEGS LIST encoders
-# E1 (e0): BROWSE — turn=scroll selection up/down through route
+# E1 (e0): (empty)
 # E2 (e1): ACTION — push=direct-to selected waypoint
 # E3 (e2): PAGE   — page-cycle
+# E6 (e5): BROWSE — turn=scroll selection up/down through route
 # ============================================================
 
-- index: e0
+- index: e5
   name: browse_legs
   type: encoder
   commands:
@@ -29,8 +30,8 @@ buttons:
     - fms_leg
     - fms_nav
   page-labels:
-    - PLAN
-    - ROUT
+    - PLN
+    - RTE
     - LEGS
     - NAV
 
@@ -44,14 +45,7 @@ buttons:
   side:
     icon-color: Black
     labels:
-      - label: "LEGS"
-        label-size: 14
-        label-font: D-DINCondensed.otf
-        label-color: Gold
-        text-size: 16
-        text-font: D-DIN.otf
-        text-color: White
-        text: "${cockpitdecks/fms_legs/selected_index}/${cockpitdecks/fms_legs/entry_count}"
+      - label: ""
       - label: "D>"
         label-size: 14
         label-font: D-DINCondensed.otf
@@ -68,3 +62,20 @@ buttons:
         text-font: D-DIN.otf
         text-color: White
         text: "${data:cockpitdecks/page_cycle/current_page}"
+
+- index: right
+  name: right_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: ""
+      - label: ""
+      - label: "LEGS"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "${cockpitdecks/fms_legs/selected_index}/${cockpitdecks/fms_legs/entry_count}"

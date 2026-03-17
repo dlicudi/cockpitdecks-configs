@@ -23,9 +23,9 @@ buttons:
     - fms_leg
     - fms_nav
   page-labels:
-    - PLAN
-    - ROUT
-    - LEG
+    - PLN
+    - RTE
+    - LEGS
     - NAV
 
 # ============================================================
