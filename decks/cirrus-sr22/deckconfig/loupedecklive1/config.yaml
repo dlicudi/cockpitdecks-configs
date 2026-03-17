@@ -14,5 +14,5 @@ _docs:
   fixture: scripts/fixtures/cirrus-sr22-cruise.yaml
   style: deck-map
   exclude_pages:
-    - switchesicing
-    - switcheslights
+    - icing
+    - lights
