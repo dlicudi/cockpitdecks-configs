@@ -16,6 +16,7 @@ buttons:
 - index: 0
   name: FMS_DIST
   type: none
+  render-cooldown-ms: 500
   label: NM
   label-size: 9
   label-color: Gold
@@ -30,6 +31,7 @@ buttons:
 - index: 1
   name: FMS_ETE
   type: none
+  render-cooldown-ms: 500
   label: ETE
   label-size: 9
   label-color: Gold
@@ -44,6 +46,7 @@ buttons:
 - index: 2
   name: FMS_GS
   type: none
+  render-cooldown-ms: 500
   label: GS
   label-size: 9
   label-color: Gold
@@ -58,6 +61,7 @@ buttons:
 - index: 3
   name: FMS_DTK
   type: none
+  render-cooldown-ms: 500
   label: DTK
   label-size: 9
   label-color: Gold
@@ -74,6 +78,7 @@ buttons:
 - index: 4
   name: FMS_TOD
   type: none
+  render-cooldown-ms: 500
   label: TOD
   label-size: 9
   label-color: Gold
@@ -88,6 +93,7 @@ buttons:
 - index: 5
   name: FMS_ETA
   type: none
+  render-cooldown-ms: 500
   label: ETA
   label-size: 9
   label-color: Gold
@@ -101,6 +107,7 @@ buttons:
 - index: 6
   name: FMS_WPT
   type: none
+  render-cooldown-ms: 500
   label: ">WPT"
   label-size: 9
   label-color: lime
@@ -114,6 +121,7 @@ buttons:
 - index: 7
   name: FMS_DEST
   type: none
+  render-cooldown-ms: 500
   label: DEST
   label-size: 9
   label-color: Gold
@@ -129,6 +137,7 @@ buttons:
 - index: 8
   name: FMS_TRK
   type: none
+  render-cooldown-ms: 500
   label: TRK
   label-size: 9
   label-color: Gold

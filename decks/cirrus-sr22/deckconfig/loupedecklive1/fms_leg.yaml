@@ -22,6 +22,7 @@ buttons:
 - index: 0
   name: LEGS_R1_IDX
   type: none
+  render-cooldown-ms: 80
   label: "#"
   label-size: 9
   label-color: Gold
@@ -44,6 +45,7 @@ buttons:
 - index: 1
   name: LEGS_R1_WPT
   type: none
+  render-cooldown-ms: 80
   label: WPT
   label-size: 9
   label-color: Gold
@@ -57,6 +59,7 @@ buttons:
 - index: 2
   name: LEGS_R1_ALT
   type: none
+  render-cooldown-ms: 80
   label: ALT
   label-size: 9
   label-color: Gold
@@ -89,6 +92,7 @@ buttons:
 - index: 4
   name: LEGS_R2_IDX
   type: none
+  render-cooldown-ms: 80
   label: "#"
   label-size: 9
   label-color: Gold
@@ -111,6 +115,7 @@ buttons:
 - index: 5
   name: LEGS_R2_WPT
   type: none
+  render-cooldown-ms: 80
   label: WPT
   label-size: 9
   label-color: Gold
@@ -124,6 +129,7 @@ buttons:
 - index: 6
   name: LEGS_R2_ALT
   type: none
+  render-cooldown-ms: 80
   label: ALT
   label-size: 9
   label-color: Gold
@@ -137,6 +143,7 @@ buttons:
 - index: 7
   name: LEGS_SEL_CTR
   type: none
+  render-cooldown-ms: 80
   label: SEL
   label-size: 9
   label-color: Gold
@@ -154,6 +161,7 @@ buttons:
 - index: 8
   name: LEGS_R3_IDX
   type: none
+  render-cooldown-ms: 80
   label: "#"
   label-size: 9
   label-color: Gold
@@ -176,6 +184,7 @@ buttons:
 - index: 9
   name: LEGS_R3_WPT
   type: none
+  render-cooldown-ms: 80
   label: WPT
   label-size: 9
   label-color: Gold
@@ -189,6 +198,7 @@ buttons:
 - index: 10
   name: LEGS_R3_ALT
   type: none
+  render-cooldown-ms: 80
   label: ALT
   label-size: 9
   label-color: Gold

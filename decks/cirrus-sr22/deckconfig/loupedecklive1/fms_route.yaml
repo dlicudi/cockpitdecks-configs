@@ -16,6 +16,7 @@ buttons:
 - index: 0
   name: FMS_ORIG
   type: none
+  render-cooldown-ms: 500
   label: ORIG
   label-size: 9
   label-color: Gold
@@ -29,6 +30,7 @@ buttons:
 - index: 1
   name: FMS_ACT
   type: none
+  render-cooldown-ms: 500
   label: ">WPT"
   label-size: 9
   label-color: lime
@@ -42,6 +44,7 @@ buttons:
 - index: 2
   name: FMS_DEST
   type: none
+  render-cooldown-ms: 500
   label: DEST
   label-size: 9
   label-color: Gold
@@ -55,6 +58,7 @@ buttons:
 - index: 3
   name: FMS_LDIST
   type: none
+  render-cooldown-ms: 500
   label: NM
   label-size: 9
   label-color: Gold
@@ -72,6 +76,7 @@ buttons:
 - index: 4
   name: FMS_ORIG_ALT
   type: none
+  render-cooldown-ms: 500
   label: DEP ALT
   label-size: 9
   label-color: Gold
@@ -85,6 +90,7 @@ buttons:
 - index: 5
   name: FMS_ACT_ALT
   type: none
+  render-cooldown-ms: 500
   label: CRZ ALT
   label-size: 9
   label-color: lime
@@ -98,6 +104,7 @@ buttons:
 - index: 6
   name: FMS_DEST_ALT
   type: none
+  render-cooldown-ms: 500
   label: ALDEST ALT
   label-size: 9
   label-color: Gold
@@ -111,6 +118,7 @@ buttons:
 - index: 7
   name: FMS_LEGS
   type: none
+  render-cooldown-ms: 500
   label: LEGS
   label-size: 9
   label-color: Gold
@@ -130,6 +138,7 @@ buttons:
 - index: 9
   name: FMS_PROG_IDX
   type: none
+  render-cooldown-ms: 500
   label: LEG
   label-size: 9
   label-color: Gold
@@ -143,6 +152,7 @@ buttons:
 - index: 10
   name: FMS_PROG_OF
   type: none
+  render-cooldown-ms: 500
   label: OF
   label-size: 9
   label-color: Gold

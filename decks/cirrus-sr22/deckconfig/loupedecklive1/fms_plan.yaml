@@ -15,6 +15,7 @@ buttons:
 - index: 0
   name: FMS_PLAN
   type: none
+  render-cooldown-ms: 80
   label: PLAN
   label-size: 9
   label-color: Gold
@@ -37,6 +38,7 @@ buttons:
 - index: 1
   name: FMS_DEP
   type: none
+  render-cooldown-ms: 80
   label: DEP
   label-size: 9
   label-color: Gold
@@ -50,6 +52,7 @@ buttons:
 - index: 2
   name: FMS_DEST
   type: none
+  render-cooldown-ms: 80
   label: DEST
   label-size: 9
   label-color: Gold
@@ -63,6 +66,7 @@ buttons:
 - index: 3
   name: FMS_DIST
   type: none
+  render-cooldown-ms: 80
   label: NM
   label-size: 9
   label-color: Gold
@@ -79,6 +83,7 @@ buttons:
 - index: 4
   name: FMS_IDX
   type: none
+  render-cooldown-ms: 80
   label: IDX
   label-size: 9
   label-color: Gold
@@ -92,6 +97,7 @@ buttons:
 - index: 5
   name: FMS_DEP_RWY
   type: none
+  render-cooldown-ms: 80
   label: RWY
   label-size: 9
   label-color: Gold
@@ -105,6 +111,7 @@ buttons:
 - index: 6
   name: FMS_DEST_RWY
   type: none
+  render-cooldown-ms: 80
   label: RWY
   label-size: 9
   label-color: Gold
@@ -118,6 +125,7 @@ buttons:
 - index: 7
   name: FMS_WPTS
   type: none
+  render-cooldown-ms: 80
   label: WPTS
   label-size: 9
   label-color: Gold
@@ -133,6 +141,7 @@ buttons:
 - index: 8
   name: FMS_STATUS
   type: push
+  render-cooldown-ms: 80
   label: STATUS
   label-size: 9
   label-color: Gold
@@ -148,6 +157,7 @@ buttons:
 - index: 9
   name: FMS_SID
   type: none
+  render-cooldown-ms: 80
   label: SID
   label-size: 9
   label-color: Gold
@@ -161,6 +171,7 @@ buttons:
 - index: 10
   name: FMS_STAR
   type: none
+  render-cooldown-ms: 80
   label: STAR
   label-size: 9
   label-color: Gold
@@ -174,6 +185,7 @@ buttons:
 - index: 11
   name: FMS_CYCLE
   type: none
+  render-cooldown-ms: 80
   label: CYCLE
   label-size: 9
   label-color: Gold
