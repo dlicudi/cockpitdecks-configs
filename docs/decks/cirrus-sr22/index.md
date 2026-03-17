@@ -7,7 +7,7 @@ Decks for Cirrus SR22
 
 ### Loupedeck Live
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 13 pages&emsp;🎮 Loupedeck Live</div>
+<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 16 pages&emsp;🎮 Loupedeck Live</div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -41,11 +41,6 @@ Decks for Cirrus SR22
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/engine.yaml">engine.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/fms.page.png" alt="Fms preview" loading="lazy">
-<div class="page-name">Fms</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fms.yaml">fms.yaml</a></div>
-</div>
-<div class="page-card">
 <img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/transponder.page.png" alt="Transponder preview" loading="lazy">
 <div class="page-name">Transponder</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/transponder.yaml">transponder.yaml</a></div>
@@ -64,6 +59,26 @@ Decks for Cirrus SR22
 <img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/index2.page.png" alt="Index2 preview" loading="lazy">
 <div class="page-name">Index2</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/index2.yaml">index2.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/fms_leg.page.png" alt="Fms Leg preview" loading="lazy">
+<div class="page-name">Fms Leg</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fms_leg.yaml">fms_leg.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/fms_nav.page.png" alt="Fms Nav preview" loading="lazy">
+<div class="page-name">Fms Nav</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fms_nav.yaml">fms_nav.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/fms_plan.page.png" alt="Fms Plan preview" loading="lazy">
+<div class="page-name">Fms Plan</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fms_plan.yaml">fms_plan.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/fms_route.page.png" alt="Fms Route preview" loading="lazy">
+<div class="page-name">Fms Route</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fms_route.yaml">fms_route.yaml</a></div>
 </div>
 <div class="page-card">
 <img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/views.page.png" alt="Views preview" loading="lazy">

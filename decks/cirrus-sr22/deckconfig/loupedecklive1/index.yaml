@@ -137,7 +137,7 @@ buttons:
   - index: 10
     type: page
     vibrate: SHORT
-    page: fms
+    page: fms_nav
     label: FMS
     label-color: Gold
     text: 

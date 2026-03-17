@@ -21,7 +21,7 @@ buttons:
   label-color: Gold
   text: "${cockpitdecks/fms_browser/fms_first_ident}"
   text-color: deepskyblue
-  text-size: 36
+  text-size: 24
   text-font: B612Mono-Regular.ttf
   text-position: cm
   text-bg-color: (20, 20, 24)
@@ -29,12 +29,12 @@ buttons:
 - index: 1
   name: FMS_ACT
   type: none
-  label: →WPT
+  label: ">WPT"
   label-size: 9
   label-color: lime
   text: "${cockpitdecks/fms_browser/fms_active_ident}"
   text-color: lime
-  text-size: 36
+  text-size: 24
   text-font: B612Mono-Regular.ttf
   text-position: cm
   text-bg-color: (20, 20, 24)
@@ -47,7 +47,7 @@ buttons:
   label-color: Gold
   text: "${cockpitdecks/fms_browser/fms_last_ident}"
   text-color: deepskyblue
-  text-size: 36
+  text-size: 24
   text-font: B612Mono-Regular.ttf
   text-position: cm
   text-bg-color: (20, 20, 24)
@@ -72,7 +72,7 @@ buttons:
 - index: 4
   name: FMS_ORIG_ALT
   type: none
-  label: ALT
+  label: DEP ALT
   label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_browser/fms_first_altitude}\nft"
@@ -85,7 +85,7 @@ buttons:
 - index: 5
   name: FMS_ACT_ALT
   type: none
-  label: ALT
+  label: CRZ ALT
   label-size: 9
   label-color: lime
   text: "${cockpitdecks/fms_browser/fms_active_altitude}\nft"
@@ -98,7 +98,7 @@ buttons:
 - index: 6
   name: FMS_DEST_ALT
   type: none
-  label: ALT
+  label: ALDEST ALT
   label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_browser/fms_last_altitude}\nft"

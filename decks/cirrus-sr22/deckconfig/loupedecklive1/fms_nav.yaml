@@ -22,7 +22,7 @@ buttons:
   text: "${sim/cockpit2/radios/indicators/gps_dme_distance_nm}\nnm"
   text-format: "{0:.1f}"
   text-color: white
-  text-size: 24
+  text-size: 20
   text-font: B612Mono-Regular.ttf
   text-position: cm
   text-bg-color: (20, 20, 24)
@@ -36,7 +36,7 @@ buttons:
   text: "${sim/cockpit2/radios/indicators/gps_dme_time_min}\nmin"
   text-format: "{0:.0f}"
   text-color: darkorange
-  text-size: 24
+  text-size: 20
   text-font: B612Mono-Regular.ttf
   text-position: cm
   text-bg-color: (20, 20, 24)
@@ -50,7 +50,7 @@ buttons:
   text: "${sim/cockpit2/gauges/indicators/ground_speed_kt}\nkts"
   text-format: "{0:.0f}"
   text-color: white
-  text-size: 24
+  text-size: 20
   text-font: B612Mono-Regular.ttf
   text-position: cm
   text-bg-color: (20, 20, 24)
@@ -64,7 +64,7 @@ buttons:
   text: "${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}°"
   text-format: "{0:.0f}"
   text-color: darkorange
-  text-size: 24
+  text-size: 20
   text-font: B612Mono-Regular.ttf
   text-position: cm
   text-bg-color: (20, 20, 24)
@@ -80,7 +80,7 @@ buttons:
   text: "${sim/cockpit2/radios/indicators/fms_distance_to_tod_pilot}\nnm"
   text-format: "{0:.1f}"
   text-color: white
-  text-size: 24
+  text-size: 20
   text-font: B612Mono-Regular.ttf
   text-position: cm
   text-bg-color: (20, 20, 24)
@@ -93,7 +93,7 @@ buttons:
   label-color: Gold
   text: "${sim/cockpit2/radios/indicators/fms1_act_eta_hour}:${sim/cockpit2/radios/indicators/fms1_act_eta_minute}Z"
   text-color: darkorange
-  text-size: 24
+  text-size: 20
   text-font: B612Mono-Regular.ttf
   text-position: cm
   text-bg-color: (20, 20, 24)
@@ -101,12 +101,12 @@ buttons:
 - index: 6
   name: FMS_WPT
   type: none
-  label: →WPT
+  label: ">WPT"
   label-size: 9
   label-color: lime
   text: "${cockpitdecks/fms_browser/fms_active_ident}"
   text-color: lime
-  text-size: 32
+  text-size: 20
   text-font: B612Mono-Regular.ttf
   text-position: cm
   text-bg-color: (20, 20, 24)
@@ -119,16 +119,26 @@ buttons:
   label-color: Gold
   text: "${cockpitdecks/fms_browser/fms_last_ident}"
   text-color: deepskyblue
-  text-size: 32
+  text-size: 20
   text-font: B612Mono-Regular.ttf
   text-position: cm
   text-bg-color: (20, 20, 24)
 
-# Row 3: Reserved for future expansion (XTK, V/S, CDI deviation)
+# Row 3: Track + reserved
 
 - index: 8
-  name: FMS_R3_A
+  name: FMS_TRK
   type: none
+  label: TRK
+  label-size: 9
+  label-color: Gold
+  text: "${sim/cockpit2/gauges/indicators/ground_track_mag_pilot}°"
+  text-format: "{0:.0f}"
+  text-color: white
+  text-size: 20
+  text-font: B612Mono-Regular.ttf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
 
 - index: 9
   name: FMS_R3_B

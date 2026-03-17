@@ -4,19 +4,19 @@ buttons:
 # ============================================================
 # NAV PRIMARY encoders
 # All read-only telemetry page — no browse or action encoders.
-# E1 (e5): page-cycle only
+# E4 (e2): page-cycle only
 # ============================================================
 
-- index: e5
+- index: e2
   name: page_cycle
   type: page-cycle
   pages:
-    - fms
+    - fms_plan
     - fms_route
     - fms_leg
     - fms_nav
   page-labels:
-    - BROW
+    - PLAN
     - ROUT
     - LEG
     - NAV
@@ -27,37 +27,6 @@ buttons:
 
 - index: left
   name: left_screen
-  type: none
-  side:
-    icon-color: Black
-    labels:
-      - label: ""
-        label-size: 14
-        label-font: D-DINCondensed.otf
-        label-color: Gold
-        text-size: 16
-        text-font: D-DIN.otf
-        text-color: White
-        text: ""
-      - label: ""
-        label-size: 14
-        label-font: D-DINCondensed.otf
-        label-color: Gold
-        text-size: 16
-        text-font: D-DIN.otf
-        text-color: White
-        text: ""
-      - label: ""
-        label-size: 14
-        label-font: D-DINCondensed.otf
-        label-color: Gold
-        text-size: 16
-        text-font: D-DIN.otf
-        text-color: White
-        text: ""
-
-- index: right
-  name: right_screen
   type: none
   side:
     icon-color: Black
