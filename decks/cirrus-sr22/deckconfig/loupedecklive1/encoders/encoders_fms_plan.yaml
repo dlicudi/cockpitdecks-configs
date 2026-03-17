@@ -2,23 +2,23 @@
 buttons:
 
 # ============================================================
-# LEGS LIST encoders
-# E1 (e0): BROWSE — turn=scroll selection up/down through route
-# E2 (e1): ACTION — push=direct-to selected waypoint
-# E3 (e2): PAGE   — page-cycle
+# PLAN encoders
+# E2 (e0): BROWSE — turn=prev/next plan
+# E3 (e1): ACTION — push=load plan
+# E4 (e2): PAGE — page-cycle
 # ============================================================
 
 - index: e0
-  name: browse_legs
+  name: browse_plan
   type: encoder
   commands:
-  - cockpitdecks/fms_legs/scroll_up
-  - cockpitdecks/fms_legs/scroll_down
+  - cockpitdecks/fms_browser/previous
+  - cockpitdecks/fms_browser/next
 
 - index: e1
-  name: direct_to
+  name: load_plan
   type: push
-  command: cockpitdecks/fms_legs/direct_to
+  command: cockpitdecks/fms_browser/load
 
 - index: e2
   name: page_cycle
@@ -31,7 +31,7 @@ buttons:
   page-labels:
     - PLAN
     - ROUT
-    - LEGS
+    - LEG
     - NAV
 
 # ============================================================
@@ -44,22 +44,22 @@ buttons:
   side:
     icon-color: Black
     labels:
-      - label: "LEGS"
+      - label: "PLAN"
         label-size: 14
         label-font: D-DINCondensed.otf
         label-color: Gold
         text-size: 16
         text-font: D-DIN.otf
         text-color: White
-        text: "${cockpitdecks/fms_legs/selected_index}/${cockpitdecks/fms_legs/entry_count}"
-      - label: "D>"
+        text: "${cockpitdecks/fms_browser/index}/${cockpitdecks/fms_browser/count}"
+      - label: "LOAD"
         label-size: 14
         label-font: D-DINCondensed.otf
         label-color: Gold
         text-size: 16
         text-font: D-DIN.otf
         text-color: White
-        text: "Push"
+        text: ""
       - label: "PAGE"
         label-size: 14
         label-font: D-DINCondensed.otf

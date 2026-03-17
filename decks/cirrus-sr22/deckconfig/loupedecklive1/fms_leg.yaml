@@ -4,140 +4,212 @@ includes: pager,encoders/encoders_fms_leg
 buttons:
 
 # ============================================================
-# ACTIVE LEG BROWSER
-# Question: Which leg of the active route am I inspecting?
-# Primary object: DisplayedLeg
-# E2 (e0) turn: previous/next leg (fms_displayed_index)
-# R1 = positional context  |  R2 = focal waypoint (large)
-# R3 = touch PREV/NEXT as backup to encoder
+# LEGS LIST
+# Question: Which waypoints are in the active route?
+# Primary object: ScrollableWaypointList (3-row window)
+# E1 (e0) turn: scroll selection up/down through route
+# E2 (e1) push: direct-to selected waypoint
+# E3 (e2) turn: page-cycle (PLAN/ROUTE/LEGS/NAV)
+#
+# Layout: 3 rows × 3 columns (col 4 reserved)
+# Each row = one waypoint: INDEX | IDENT | ALT
 # ============================================================
 
-# Row 1: Positional context — where am I browsing vs where is active leg
+# ----------------------------------------------------------
+# Row 1: Waypoint at window position 1
+# ----------------------------------------------------------
 
 - index: 0
-  name: FMS_DISP_IDX
+  name: LEGS_R1_IDX
   type: none
-  label: LEG
-  label-size: 9
-  label-color: Gold
-  text: "${cockpitdecks/fms_browser/fms_displayed_index}"
-  text-color: white
-  text-size: 40
-  text-font: B612Mono-Regular.ttf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-
-- index: 1
-  name: FMS_OF
-  type: none
-  label: OF
-  label-size: 9
-  label-color: Gold
-  text: "${cockpitdecks/fms_browser/fms_entry_count}"
-  text-color: white
-  text-size: 40
-  text-font: B612Mono-Regular.ttf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-
-- index: 2
-  name: FMS_ACT_IDX
-  type: none
-  label: ACTIVE
-  label-size: 9
-  label-color: lime
-  text: "${cockpitdecks/fms_browser/fms_active_index}"
-  text-color: lime
-  text-size: 40
-  text-font: B612Mono-Regular.ttf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-
-- index: 3
-  name: FMS_ACT_WPT
-  type: none
-  label: →WPT
-  label-size: 9
-  label-color: lime
-  text: "${cockpitdecks/fms_browser/fms_active_ident}"
-  text-color: lime
-  text-size: 32
-  text-font: B612Mono-Regular.ttf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-
-# Row 2: Focal element — displayed waypoint ident (large) with position
-
-- index: 4
-  name: FMS_R2_A
-  type: none
-
-- index: 5
-  name: FMS_WPT
-  type: none
-  label: WPT
+  label: "#"
   label-size: 9
   label-color: Gold
   annunciator:
     size: medium
     model: B
     B0:
-      text: "${cockpitdecks/fms_browser/fms_displayed_ident}"
-      text-font: B612Mono-Regular.ttf
-      text-size: 56
+      text: "${cockpitdecks/fms_legs/row_1_index}"
+      text-font: D-DINCondensed.otf
+      text-size: 48
       color: white
       formula: "1"
     B1:
-      text: "${cockpitdecks/fms_browser/fms_displayed_index}/${cockpitdecks/fms_browser/fms_entry_count}"
-      text-font: B612Mono-Regular.ttf
-      text-size: 38
-      color: darkorange
-      formula: "1"
+      text: "${cockpitdecks/fms_legs/row_1_status}"
+      text-font: D-DINCondensed.otf
+      text-size: 28
+      color: lime
+      formula: "${cockpitdecks/fms_legs/row_1_is_active} ${cockpitdecks/fms_legs/row_1_is_selected} or"
 
-- index: 6
-  name: FMS_R2_B
+- index: 1
+  name: LEGS_R1_WPT
   type: none
-
-- index: 7
-  name: FMS_R2_C
-  type: none
-
-# Row 3: Touch PREV/NEXT as backup to encoder turn
-
-- index: 8
-  name: FMS_PREV
-  type: push
-  label: ◄ PREV
+  label: WPT
   label-size: 9
   label-color: Gold
-  vibrate: SHORT
-  command: cockpitdecks/fms_browser/wp_previous
-  text: "◄"
+  text: "${cockpitdecks/fms_legs/row_1_ident}"
   text-color: white
-  text-size: 32
+  text-size: 30
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 24)
 
-- index: 9
-  name: FMS_R3_A
+- index: 2
+  name: LEGS_R1_ALT
   type: none
-
-- index: 10
-  name: FMS_R3_B
-  type: none
-
-- index: 11
-  name: FMS_NEXT
-  type: push
-  label: NEXT ►
+  label: ALT
   label-size: 9
   label-color: Gold
+  text: "${cockpitdecks/fms_legs/row_1_alt}"
+  text-color: darkorange
+  text-size: 22
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 3
+  name: LEGS_SCROLL_UP
+  type: push
+  command: cockpitdecks/fms_legs/scroll_up
   vibrate: SHORT
-  command: cockpitdecks/fms_browser/wp_next
-  text: "►"
+  label: UP
+  label-size: 9
+  label-color: Gold
+  text: "UP"
   text-color: white
-  text-size: 32
+  text-size: 28
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+# ----------------------------------------------------------
+# Row 2: Waypoint at window position 2
+# ----------------------------------------------------------
+
+- index: 4
+  name: LEGS_R2_IDX
+  type: none
+  label: "#"
+  label-size: 9
+  label-color: Gold
+  annunciator:
+    size: medium
+    model: B
+    B0:
+      text: "${cockpitdecks/fms_legs/row_2_index}"
+      text-font: D-DINCondensed.otf
+      text-size: 48
+      color: white
+      formula: "1"
+    B1:
+      text: "${cockpitdecks/fms_legs/row_2_status}"
+      text-font: D-DINCondensed.otf
+      text-size: 28
+      color: lime
+      formula: "${cockpitdecks/fms_legs/row_2_is_active} ${cockpitdecks/fms_legs/row_2_is_selected} or"
+
+- index: 5
+  name: LEGS_R2_WPT
+  type: none
+  label: WPT
+  label-size: 9
+  label-color: Gold
+  text: "${cockpitdecks/fms_legs/row_2_ident}"
+  text-color: white
+  text-size: 30
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 6
+  name: LEGS_R2_ALT
+  type: none
+  label: ALT
+  label-size: 9
+  label-color: Gold
+  text: "${cockpitdecks/fms_legs/row_2_alt}"
+  text-color: darkorange
+  text-size: 22
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 7
+  name: LEGS_SEL_CTR
+  type: none
+  label: SEL
+  label-size: 9
+  label-color: Gold
+  text: "${cockpitdecks/fms_legs/selected_index}/${cockpitdecks/fms_legs/entry_count}"
+  text-color: white
+  text-size: 24
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+# ----------------------------------------------------------
+# Row 3: Waypoint at window position 3
+# ----------------------------------------------------------
+
+- index: 8
+  name: LEGS_R3_IDX
+  type: none
+  label: "#"
+  label-size: 9
+  label-color: Gold
+  annunciator:
+    size: medium
+    model: B
+    B0:
+      text: "${cockpitdecks/fms_legs/row_3_index}"
+      text-font: D-DINCondensed.otf
+      text-size: 48
+      color: white
+      formula: "1"
+    B1:
+      text: "${cockpitdecks/fms_legs/row_3_status}"
+      text-font: D-DINCondensed.otf
+      text-size: 28
+      color: lime
+      formula: "${cockpitdecks/fms_legs/row_3_is_active} ${cockpitdecks/fms_legs/row_3_is_selected} or"
+
+- index: 9
+  name: LEGS_R3_WPT
+  type: none
+  label: WPT
+  label-size: 9
+  label-color: Gold
+  text: "${cockpitdecks/fms_legs/row_3_ident}"
+  text-color: white
+  text-size: 30
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 10
+  name: LEGS_R3_ALT
+  type: none
+  label: ALT
+  label-size: 9
+  label-color: Gold
+  text: "${cockpitdecks/fms_legs/row_3_alt}"
+  text-color: darkorange
+  text-size: 22
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 11
+  name: LEGS_SCROLL_DN
+  type: push
+  command: cockpitdecks/fms_legs/scroll_down
+  vibrate: SHORT
+  label: DN
+  label-size: 9
+  label-color: Gold
+  text: "DN"
+  text-color: white
+  text-size: 28
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 24)
