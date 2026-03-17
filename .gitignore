@@ -14,3 +14,4 @@ datarefs-log.yaml
 scripts/*.log
 scripts/events.json
 *.pyc
+variable-database-dump.yaml
