@@ -121,7 +121,7 @@ buttons:
     page: switches
     label: SWITCHES
     label-size: 12
-    text: 
+    text: 
     text-font: fontawesome.otf
-    text-size: 32
+    text-size: 40
     text-color: Gold

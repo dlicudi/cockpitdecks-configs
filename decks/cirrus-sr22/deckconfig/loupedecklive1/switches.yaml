@@ -120,9 +120,9 @@ buttons:
     page: lights
     label: LIGHTS
     label-size: 12
-    text: 
+    text: 
     text-font: fontawesome.otf
-    text-size: 32
+    text-size: 40
     text-color: Gold
 
 
@@ -132,9 +132,9 @@ buttons:
     page: icing
     label: ICING
     label-size: 12
-    text: 
+    text: 
     text-font: fontawesome.otf
-    text-size: 32
+    text-size: 40
     text-color: Gold
 
 
