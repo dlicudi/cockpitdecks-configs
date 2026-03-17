@@ -39,6 +39,17 @@ dataref-roundings:
     sim/flightmodel/engine/ENGN_mixt[0]: 2
     sim/flightmodel/engine/ENGN_thro[0]: 2
     sim/weather/aircraft/temperature_ambient_deg_c: 0
+    sim/cockpit2/engine/indicators/engine_speed_rpm[0]: 0
+    sim/cockpit2/engine/indicators/CHT_deg_C[0]: 0
+    sim/cockpit2/engine/indicators/MPR_in_hg[0]: 2
+    sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]: 4
+    sim/cockpit2/electrical/battery_amps[0]: 2
+    sim/cockpit2/electrical/generator_amps[*]: 2
+    sim/cockpit/electrical/battery_charge_watt_hr[0]: 1
+    sim/cockpit2/transmissions/indicators/oil_pressure: 0
+    sim/cockpit2/transmissions/indicators/oil_temperature: 0
+    sim/cockpit/misc/vacuum: 1
+    sim/cockpit2/gauges/indicators/ground_speed_kt: 0
 #     # used in Weather button 3 or 4 decimals sufficient...
 #     sim/flightmodel/position/latitude: 8
 #     sim/flightmodel/position/longitude: 8
