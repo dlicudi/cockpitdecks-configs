@@ -14,7 +14,6 @@ buttons:
   text-size: 40
   text-font: D-DINCondensed.otf
   text-position: cm
-  text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_0
   long-press: sim/view/quick_look_0_mem
 
@@ -29,7 +28,6 @@ buttons:
   text-size: 40
   text-font: D-DINCondensed.otf
   text-position: cm
-  text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_1
   long-press: sim/view/quick_look_1_mem
 
@@ -44,7 +42,6 @@ buttons:
   text-size: 40
   text-font: D-DINCondensed.otf
   text-position: cm
-  text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_2
   long-press: sim/view/quick_look_2_mem
 
@@ -59,7 +56,6 @@ buttons:
   text-size: 40
   text-font: D-DINCondensed.otf
   text-position: cm
-  text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_3
   long-press: sim/view/quick_look_3_mem
 
@@ -74,7 +70,6 @@ buttons:
   text-size: 40
   text-font: D-DINCondensed.otf
   text-position: cm
-  text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_4
   long-press: sim/view/quick_look_4_mem
 
@@ -89,7 +84,6 @@ buttons:
   text-size: 40
   text-font: D-DINCondensed.otf
   text-position: cm
-  text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_5
   long-press: sim/view/quick_look_5_mem
 
@@ -104,7 +98,6 @@ buttons:
   text-size: 40
   text-font: D-DINCondensed.otf
   text-position: cm
-  text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_6
   long-press: sim/view/quick_look_6_mem
 
@@ -119,7 +112,6 @@ buttons:
   text-size: 40
   text-font: D-DINCondensed.otf
   text-position: cm
-  text-bg-color: (40, 40, 40)
   command: sim/view/quick_look_7
   long-press: sim/view/quick_look_7_mem
 
@@ -134,7 +126,6 @@ buttons:
   text-size: 20
   text-font: D-DINCondensed.otf
   text-position: cm
-  text-bg-color: (40, 40, 40)
   command: sim/view/3d_cockpit
 
 - index: 9
@@ -147,7 +138,6 @@ buttons:
   text-size: 20
   text-font: D-DINCondensed.otf
   text-position: cm
-  text-bg-color: (40, 40, 40)
   command: sim/view/chase
 
 - index: 10
@@ -160,7 +150,6 @@ buttons:
   text-size: 20
   text-font: D-DINCondensed.otf
   text-position: cm
-  text-bg-color: (40, 40, 40)
   command: sim/view/forward
 
 - index: 11
@@ -173,5 +162,4 @@ buttons:
   text-size: 20
   text-font: D-DINCondensed.otf
   text-position: cm
-  text-bg-color: (40, 40, 40)
   command: sim/view/show_physics_model

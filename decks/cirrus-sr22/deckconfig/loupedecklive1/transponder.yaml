@@ -75,8 +75,6 @@ buttons:
   name: ON
   type: push
   annunciator:
-    annunciator-style: v
-    light-off-intensity: 8
     size: medium
     model: B
     parts:
@@ -96,8 +94,6 @@ buttons:
   name: OFF
   type: push
   annunciator:
-    annunciator-style: v
-    light-off-intensity: 8
     size: medium
     model: B
     parts:
@@ -117,8 +113,6 @@ buttons:
   name: STBY
   type: push
   annunciator:
-    annunciator-style: v
-    light-off-intensity: 8
     size: medium
     model: B
     parts:
@@ -138,8 +132,6 @@ buttons:
   name: ALT
   type: push
   annunciator:
-    annunciator-style: v
-    light-off-intensity: 8
     size: medium
     model: B
     parts:
@@ -160,8 +152,6 @@ buttons:
   type: push
   vibrate: SHORT
   annunciator:
-    annunciator-style: v
-    light-off-intensity: 8
     size: medium
     model: B
     parts:
@@ -181,8 +171,6 @@ buttons:
   name: TEST
   type: push
   annunciator:
-    annunciator-style: v
-    light-off-intensity: 8
     size: medium
     model: B
     parts:
@@ -210,8 +198,6 @@ buttons:
   name: LIGHT
   type: none
   annunciator:
-    annunciator-style: v
-    light-off-intensity: 8
     size: medium
     model: A
     parts:

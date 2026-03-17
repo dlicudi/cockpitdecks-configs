@@ -121,7 +121,6 @@ buttons:
   type: none
   label: BATTERY
   label-size: 10
-  label-color: Black
   annunciator:
     size: medium
     model: B
@@ -164,7 +163,6 @@ buttons:
   type: push
   command: laminar/sr22/fuel_sel_left_select 
   label: FUEL L
-  label-color: Black
   label-size: 10
   annunciator:
     size: medium
@@ -186,7 +184,6 @@ buttons:
   type: push
   command: laminar/sr22/fuel_sel_right_select
   label: FUEL R
-  label-color: Black
   label-size: 10
   annunciator:
     size: medium

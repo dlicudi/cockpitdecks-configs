@@ -17,7 +17,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: PLAN
-  label-size: 9
   label-color: Gold
   annunciator:
     size: medium
@@ -40,7 +39,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: DEP
-  label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_browser/plan_departure}"
   text-color: deepskyblue
@@ -54,7 +52,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: DEST
-  label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_browser/plan_destination}"
   text-color: deepskyblue
@@ -68,7 +65,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: NM
-  label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_browser/plan_distance_nm}\nnm"
   text-format: "{0:.0f}"
@@ -85,7 +81,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: IDX
-  label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_browser/index}/${cockpitdecks/fms_browser/count}"
   text-color: white
@@ -99,7 +94,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: RWY
-  label-size: 9
   label-color: Gold
   text: "RW${cockpitdecks/fms_browser/plan_dep_runway}"
   text-color: darkorange
@@ -113,7 +107,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: RWY
-  label-size: 9
   label-color: Gold
   text: "RW${cockpitdecks/fms_browser/plan_dest_runway}"
   text-color: darkorange
@@ -127,7 +120,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: WPTS
-  label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_browser/plan_waypoint_count}"
   text-color: white
@@ -143,7 +135,6 @@ buttons:
   type: push
   render-cooldown-ms: 80
   label: STATUS
-  label-size: 9
   label-color: Gold
   vibrate: SHORT
   command: cockpitdecks/fms_browser/refresh
@@ -159,7 +150,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: SID
-  label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_browser/plan_sid}"
   text-color: white
@@ -173,7 +163,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: STAR
-  label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_browser/plan_star}"
   text-color: darkorange
@@ -187,7 +176,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: CYCLE
-  label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_browser/plan_cycle}"
   text-color: darkorange

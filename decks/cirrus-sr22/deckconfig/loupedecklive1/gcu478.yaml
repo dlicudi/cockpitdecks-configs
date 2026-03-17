@@ -11,7 +11,6 @@ buttons:
     text-size: 24
     text-font: D-DINCondensed.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
     command: sim/GPS/gcu478/direct
 
   - index: 1
@@ -22,7 +21,6 @@ buttons:
     text-size: 24
     text-font: D-DINCondensed.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
     command: sim/GPS/gcu478/menu
 
   - index: 2
@@ -33,7 +31,6 @@ buttons:
     text-size: 24
     text-font: D-DINCondensed.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
     command: sim/GPS/gcu478/fpl
 
   - index: 3
@@ -44,7 +41,6 @@ buttons:
     text-size: 24
     text-font: D-DINCondensed.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
     command: sim/GPS/gcu478/proc
 
   - index: 4
@@ -55,7 +51,6 @@ buttons:
     text-size: 24
     text-font: D-DINCondensed.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
     command: sim/GPS/gcu478/clr
 
   - index: 5
@@ -66,7 +61,6 @@ buttons:
     text-size: 24
     text-font: D-DINCondensed.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
     command: sim/GPS/gcu478/ent
 
   - index: 6
@@ -77,7 +71,6 @@ buttons:
     text-size: 24
     text-font: D-DINCondensed.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
     command: sim/GPS/gcu479/home
 
   - index: 7
@@ -88,7 +81,6 @@ buttons:
     text-size: 24
     text-font: D-DINCondensed.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
     command: sim/GPS/gcu478/ff
 
 
@@ -96,8 +88,6 @@ buttons:
     type: push
     command: sim/GPS/gcu478/com
     label: COM
-    label-color: black
-    label-size: 9
     annunciator:
       model: B
       size: medium
@@ -116,8 +106,6 @@ buttons:
     type: push
     command: sim/GPS/gcu478/nav
     label: NAV
-    label-color: black
-    label-size: 9
     annunciator:
       model: B
       size: medium
@@ -138,8 +126,6 @@ buttons:
     command: sim/GPS/gcu479/crs
     longpush: sim/autopilot/hsi_toggle_nav
     label: CRS
-    label-color: black
-    label-size: 9
     annunciator:
       model: E
       size: medium
@@ -164,8 +150,6 @@ buttons:
     type: push
     command: sim/GPS/gcu478/xpdr
     label: XPDR
-    label-color: black
-    label-size: 9
     annunciator:
       model: B
       size: medium

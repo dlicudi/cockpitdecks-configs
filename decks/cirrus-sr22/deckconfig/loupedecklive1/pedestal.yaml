@@ -7,8 +7,6 @@ buttons:
   name: THROTTLE
   type: none
   label: THROTTLE
-  label-size: 9
-  label-color: black
   annunciator:
     size: medium
     model: A
@@ -25,8 +23,6 @@ buttons:
   name: MIXTURE
   type: none
   label: MIXTURE
-  label-size: 9
-  label-color: black
   annunciator:
     size: medium
     model: A
@@ -76,8 +72,6 @@ buttons:
 - index: 7
   type: none
   label: FLAPS RATIO
-  label-color: black
-  label-size: 9
   annunciator:
     model: B
     size: medium

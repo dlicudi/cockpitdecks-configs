@@ -200,7 +200,6 @@ buttons:
     type: push
     label: HSI GPS
     label-size: 10
-    label-color: black
     command: sim/autopilot/hsi_toggle_gps
     annunciator:
       size: medium
@@ -224,7 +223,6 @@ buttons:
     type: push
     label: HSI NAV
     label-size: 10
-    label-color: black
     command: sim/autopilot/hsi_toggle_nav
     annunciator:
       size: medium

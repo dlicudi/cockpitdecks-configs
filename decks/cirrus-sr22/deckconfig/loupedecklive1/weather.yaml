@@ -7,7 +7,6 @@ buttons:
     name: WIND_DIR
     label: WIND DIR
     label-size: 10
-    label-color: Black
     type: none
     data:
       top-line-color: darkorchid
@@ -35,7 +34,6 @@ buttons:
     name: WIND_SPEED
     label: WIND SPD
     label-size: 10
-    label-color: Black
     type: none
     data:
       top-line-color: darkorchid
@@ -63,7 +61,6 @@ buttons:
     name: VISIBILITY
     label: VISIBILITY
     label-size: 10
-    label-color: Black
     type: none
     data:
       top-line-color: deepskyblue
@@ -93,7 +90,6 @@ buttons:
     name: DEWPOINT
     label: DEWPOINT
     label-size: 10
-    label-color: Black
     type: none
     data:
       top-line-color: ivory
@@ -122,7 +118,6 @@ buttons:
     name: TEMPERATURE
     label: TEMP
     label-size: 10
-    label-color: Black
     type: none
     data:
       top-line-color: gold
@@ -151,7 +146,6 @@ buttons:
     name: TROPO_ALT
     label: TROPO ALT
     label-size: 10
-    label-color: Black
     type: none
     data:
       top-line-color: gold
@@ -180,7 +174,6 @@ buttons:
     name: TROPO_TEMP
     label: TROPO TEMP
     label-size: 10
-    label-color: Black
     type: none
     data:
       top-line-color: gold
@@ -210,7 +203,6 @@ buttons:
     name: PRESSURE2
     label: QNH
     label-size: 10
-    label-color: Black
     type: none
     data:
       top-line-color: deepskyblue
@@ -238,7 +230,6 @@ buttons:
     name: PRESSURE
     label: QNH
     label-size: 10
-    label-color: Black
     type: none
     data:
       top-line-color: deepskyblue
@@ -265,7 +256,6 @@ buttons:
   - index: 11
     name: CLOUD1
     label: Clouds
-    label-color: Black
     label-size: 10
     type: none
     annunciator:
@@ -300,7 +290,6 @@ buttons:
   - index: 7
     name: CLOUD2
     label: Clouds
-    label-color: Black
     label-size: 10
     type: none
     annunciator:
@@ -335,7 +324,6 @@ buttons:
   - index: 3
     name: CLOUD3
     label: Clouds
-    label-color: Black
     label-size: 10
     type: none
     annunciator:

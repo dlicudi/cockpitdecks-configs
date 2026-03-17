@@ -15,7 +15,6 @@ buttons:
     text-size: 40
     text-font: fontawesome.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
 
   - index: 1
     type: page
@@ -28,7 +27,6 @@ buttons:
     text-size: 40
     text-font: fontawesome.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
 
   - index: 2
     type: page
@@ -41,7 +39,6 @@ buttons:
     text-size: 40
     text-font: fontawesome.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
 
   - index: 3
     type: page
@@ -54,7 +51,6 @@ buttons:
     text-size: 40
     text-font: fontawesome.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
 
   - index: 4
     type: page
@@ -67,7 +63,6 @@ buttons:
     text-size: 40
     text-font: fontawesome.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
 
   - index: 5
     type: page
@@ -93,7 +88,6 @@ buttons:
     text-size: 40
     text-font: fontawesome.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
 
   - index: 7
     type: page
@@ -106,7 +100,6 @@ buttons:
     text-size: 24
     text-font: fontawesome.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
 
   - index: 8
     type: page
@@ -119,7 +112,6 @@ buttons:
     text-size: 40
     text-font: fontawesome.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
 
   - index: 9
     type: page
@@ -132,7 +124,6 @@ buttons:
     text-size: 40
     text-font: fontawesome.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
 
   - index: 10
     type: page
@@ -145,7 +136,6 @@ buttons:
     text-size: 40
     text-font: fontawesome.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
 
   - index: 11
     type: page

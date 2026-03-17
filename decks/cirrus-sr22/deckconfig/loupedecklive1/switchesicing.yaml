@@ -9,8 +9,6 @@ buttons:
     type: push
     command: sim/ice/pitot_heat0_tog
     label: PITOT
-    label-color: black
-    label-size: 9
     annunciator:
       model: B
       size: medium
@@ -27,8 +25,6 @@ buttons:
   - index: 1
     type: onoff
     label: ICE PROTECT
-    label-color: black
-    label-size: 9
     annunciator:
       model: B
       size: medium
@@ -47,8 +43,6 @@ buttons:
   - index: 2
     type: onoff
     label: PUMP BKUP
-    label-color: black
-    label-size: 9
     annunciator:
       model: B
       size: medium
@@ -66,8 +60,6 @@ buttons:
   - index: 3
     type: onoff
     label: NORM/HIGH
-    label-color: black
-    label-size: 9
     annunciator:
       model: B
       size: medium
@@ -87,8 +79,6 @@ buttons:
     type: push
     command: sim/ice/prop_heat_tog
     label: PROP
-    label-color: black
-    label-size: 9
     annunciator:
       model: B
       size: medium
@@ -106,8 +96,6 @@ buttons:
     type: push
     command: sim/ice/window_heat_tog
     label: WSHLD
-    label-color: black
-    label-size: 9
     annunciator:
       model: B
       size: medium

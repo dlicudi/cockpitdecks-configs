@@ -7,7 +7,6 @@ buttons:
   name: COM1
   label: "COM 1"
   label-color: white
-  label-size: 9
   type: push
   vibrate: SHORT
   command: sim/GPS/g1000n1_com_ff
@@ -38,7 +37,6 @@ buttons:
   name: COM2
   label: "COM 2"
   label-color: white
-  label-size: 9
   type: push
   vibrate: SHORT
   command: sim/radios/com2_standy_flip
@@ -70,7 +68,6 @@ buttons:
   name: NAV1
   label: "NAV 1"
   label-color: white
-  label-size: 9
   type: push
   vibrate: SHORT
   command: sim/GPS/g1000n3_nav_ff
@@ -101,7 +98,6 @@ buttons:
   name: NAV2
   label: "NAV 2"
   label-color: white
-  label-size: 9
   type: push
   vibrate: SHORT
   command: sim/radios/nav2_standy_flip
@@ -133,7 +129,6 @@ buttons:
   name: ADF
   label: "ADF"
   label-color: white
-  label-size: 9
   type: push
   vibrate: SHORT
   command: sim/radios/adf1_standy_flip

@@ -21,10 +21,7 @@ buttons:
     name: SPD
     type: none
     label: SPD
-    label-size: 9
-    label-color: black
     annunciator:
-      annunciator-style: v
       size: medium
       model: A
       parts:
@@ -40,10 +37,7 @@ buttons:
     name: HDG
     type: none
     label: HDG
-    label-size: 9
-    label-color: black
     annunciator:
-      annunciator-style: v
       size: medium
       model: A
       parts:
@@ -59,10 +53,7 @@ buttons:
     name: ALT
     type: none
     label: ALT
-    label-size: 9
-    label-color: black
     annunciator:
-      annunciator-style: v
       size: medium
       model: D
       parts:
@@ -90,10 +81,7 @@ buttons:
     name: VS
     type: none
     label: VS
-    label-size: 9
-    label-color: black
     annunciator:
-      annunciator-style: v
       size: medium
       model: A
       parts:
@@ -111,10 +99,8 @@ buttons:
     name: FUEL
     type: none
     label: FUEL QTY
-    label-color: Black
     label-size: 10
     annunciator:
-      annunciator-style: v
       size: medium
       model: B
       parts:
@@ -133,11 +119,9 @@ buttons:
   - index: 5 # EGT/Fuel Flow
     name: EGT/Fuel Flow
     label: EGT/FF
-    label-color: Black
     label-size: 10
     type: none
     annunciator:
-      annunciator-style: v
       size: medium
       model: B
       parts:
@@ -160,10 +144,8 @@ buttons:
     name: OIL
     type: none
     label: OIL
-    label-color: Black
     label-size: 10
     annunciator:
-      annunciator-style: v
       size: medium
       model: B
       parts:
@@ -185,10 +167,8 @@ buttons:
     name: VACAMP
     type: none
     label: VAC/AMP
-    label-color: Black
     label-size: 10
     annunciator:
-      annunciator-style: v
       size: medium
       model: B
       parts:
@@ -210,10 +190,8 @@ buttons:
     name: RPM
     type: none
     label: RPM
-    label-color: Black
     label-size: 10
     annunciator:
-      annunciator-style: v
       size: medium
       model: B
       parts:
@@ -234,10 +212,7 @@ buttons:
     type: none
     label: CAUTION
     label-size: 10
-    label-color: black
     annunciator:
-      annunciator-style: v
-      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -261,10 +236,7 @@ buttons:
     type: none
     label: WARNING
     label-size: 10
-    label-color: black
     annunciator:
-      annunciator-style: v
-      light-off-intensity: 8
       size: medium
       model: B
       parts:
@@ -287,10 +259,8 @@ buttons:
     type: none
     label: NEXT WAYPOINT
     label-size: 8
-    label-color: black
     string-datarefs: ["sim/cockpit2/radios/indicators/gps_nav_id"]
     annunciator:
-      annunciator-style: v
       size: medium
       model: F
       parts:

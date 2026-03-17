@@ -28,14 +28,10 @@ buttons:
     type: push
     command: sim/systems/avionics_toggle
     label: AVIONICS
-    label-color: black
     label-size: 10
-    label-position: ct
     annunciator:
-      annunciator-style: v
       model: B
       size: medium
-      light-off-intensity: 8
       B0:
         text: "OFF"
         color: darkorange
@@ -51,13 +47,9 @@ buttons:
     type: push
     command: sim/electrical/battery_2_toggle
     label: BAT 2
-    label-color: black
-    label-size: 9
     annunciator:
-      annunciator-style: v
       model: B
       size: medium
-      light-off-intensity: 8
       B0:
         text: "OFF"
         color: darkorange
@@ -72,13 +64,9 @@ buttons:
     type: push
     command: sim/electrical/battery_1_toggle
     label: BAT 1
-    label-color: black
-    label-size: 9
     annunciator:
-      annunciator-style: v
       model: B
       size: medium
-      light-off-intensity: 8
       B0:
         text: "OFF"
         color: darkorange
@@ -94,13 +82,9 @@ buttons:
     type: push
     command: sim/electrical/generator_1_toggle    
     label: ALT 1
-    label-color: black
-    label-size: 9
     annunciator:
-      annunciator-style: v
       model: B
       size: medium
-      light-off-intensity: 8
       B0:
         text: "OFF"
         color: darkorange
@@ -116,13 +100,9 @@ buttons:
     type: push
     command: sim/electrical/generator_2_toggle    
     label: ALT 2
-    label-color: black
-    label-size: 9
     annunciator:
-      annunciator-style: v
       model: B
       size: medium
-      light-off-intensity: 8
       B0:
         text: "OFF"
         color: darkorange
@@ -163,13 +143,9 @@ buttons:
     type: push
     command: laminar/sr22/fuel_sel_left_off    
     label: FUEL OFF
-    label-color: black
-    label-size: 9
     annunciator:
-      annunciator-style: v
       model: B
       size: medium
-      light-off-intensity: 8
       B0:
         led: bar
         color: grey
@@ -185,13 +161,9 @@ buttons:
     type: push
     command: laminar/sr22/fuel_sel_left_select 
     label: FUEL LEFT
-    label-color: black
-    label-size: 9
     annunciator:
-      annunciator-style: v
       model: B
       size: medium
-      light-off-intensity: 8
       B0:
         led: bar
         color: grey
@@ -207,13 +179,9 @@ buttons:
     type: push
     command: laminar/sr22/fuel_sel_right_select 
     label: FUEL RIGHT
-    label-color: black
-    label-size: 9
     annunciator:
-      annunciator-style: v
       model: B
       size: medium
-      light-off-intensity: 8
       B0:
         led: bar
         color: grey
@@ -230,13 +198,9 @@ buttons:
     type: push
     command: laminar/sr22/fuel_sel_right_off    
     label: FUEL OFF
-    label-color: black
-    label-size: 9
     annunciator:
-      annunciator-style: v
       model: B
       size: medium
-      light-off-intensity: 8
       B0:
         led: bar
         color: grey

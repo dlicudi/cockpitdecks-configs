@@ -24,7 +24,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: "#"
-  label-size: 9
   label-color: Gold
   annunciator:
     size: medium
@@ -47,7 +46,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: WPT
-  label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_legs/row_1_ident}"
   text-color: white
@@ -61,7 +59,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: ALT
-  label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_legs/row_1_alt}"
   text-color: darkorange
@@ -76,7 +73,6 @@ buttons:
   command: cockpitdecks/fms_legs/scroll_up
   vibrate: SHORT
   label: UP
-  label-size: 9
   label-color: Gold
   text: "UP"
   text-color: white
@@ -94,7 +90,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: "#"
-  label-size: 9
   label-color: Gold
   annunciator:
     size: medium
@@ -117,7 +112,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: WPT
-  label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_legs/row_2_ident}"
   text-color: white
@@ -131,7 +125,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: ALT
-  label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_legs/row_2_alt}"
   text-color: darkorange
@@ -145,7 +138,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: SEL
-  label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_legs/selected_index}/${cockpitdecks/fms_legs/entry_count}"
   text-color: white
@@ -163,7 +155,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: "#"
-  label-size: 9
   label-color: Gold
   annunciator:
     size: medium
@@ -186,7 +177,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: WPT
-  label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_legs/row_3_ident}"
   text-color: white
@@ -200,7 +190,6 @@ buttons:
   type: none
   render-cooldown-ms: 80
   label: ALT
-  label-size: 9
   label-color: Gold
   text: "${cockpitdecks/fms_legs/row_3_alt}"
   text-color: darkorange
@@ -215,7 +204,6 @@ buttons:
   command: cockpitdecks/fms_legs/scroll_down
   vibrate: SHORT
   label: DN
-  label-size: 9
   label-color: Gold
   text: "DN"
   text-color: white

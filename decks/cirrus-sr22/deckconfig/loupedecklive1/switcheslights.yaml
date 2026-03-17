@@ -10,8 +10,6 @@ buttons:
     type: push
     command: sim/lights/nav_lights_toggle
     label: NAV
-    label-color: black
-    label-size: 9
     annunciator:
       model: B
       size: medium
@@ -29,8 +27,6 @@ buttons:
     type: push
     command: sim/lights/strobe_lights_toggle
     label: STROBE
-    label-color: black
-    label-size: 9
     annunciator:
       model: B
       size: medium
@@ -48,8 +44,6 @@ buttons:
   - index: 2
     type: push
     label: LAND
-    label-color: black
-    label-size: 9
     command: sim/lights/landing_01_light_tog    
     annunciator:
       model: B
@@ -68,8 +62,6 @@ buttons:
   - index: 3
     type: push
     label: ICE
-    label-color: black
-    label-size: 9
     command: sim/lights/generic_01_light_tog
     annunciator:
       model: B
