@@ -115,28 +115,15 @@ buttons:
 
 
   - index: 6
-    name: Lights
+    name: LightsIcing
     type: page
-    page: lights
-    label: LIGHTS
-    label-size: 12
-    text: 
+    page: switches2
+    label: LIGHTS & ICING
+    label-size: 11
+    text: →
     text-font: fontawesome.otf
     text-size: 40
     text-color: Gold
-
-
-  - index: 7
-    name: Icing
-    type: page
-    page: icing
-    label: ICING
-    label-size: 12
-    text: 
-    text-font: fontawesome.otf
-    text-size: 40
-    text-color: Gold
-
 
   - index: 8
     vibrate: SHORT

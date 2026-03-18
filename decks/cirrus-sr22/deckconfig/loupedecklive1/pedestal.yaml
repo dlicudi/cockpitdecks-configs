@@ -41,15 +41,19 @@ buttons:
   vibrate: SHORT
   label: "TOGGLE BRAKES"
   label-size: 8
-  label-color: White
-  command: sim/flight_controls/brakes_toggle_max
-  text-bg-color: Black
-  multi-texts:
-    - text: "OFF"
-      text-color: Lime
-    - text: "ON"
-      text-color: Red
-  formula: ${sim/cockpit2/controls/parking_brake_ratio}
+  command: sim/flight_controls/park_brake_valve_toggle
+  annunciator:
+    model: B
+    size: medium
+    B0:
+      text: "OFF"
+      color: darkorange
+      formula: ${sim/cockpit2/controls/park_brake_valve} 0 eq
+    B1:
+      text: "ON"
+      color: deepskyblue
+      framed: true
+      formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
 
 
 # FLAPS UP/FLAPS RATIO/FLAPS DOWN
