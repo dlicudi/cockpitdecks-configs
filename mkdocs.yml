@@ -6,7 +6,7 @@ site_description: >-
   A set of aircraft cockpit configs for Cockpitdecks
 
 # Repository
-repo_name: dlicudi/cockpitdecks-configs
+repo_name: GitHub
 repo_url: https://github.com/dlicudi/cockpitdecks-configs
 edit_uri: blob/main/docs/
 
@@ -15,6 +15,8 @@ nav:
   - Getting Started:
       - Installation: getting-started/installation.md
       - Development: getting-started/development.md
+  - Architecture:
+      - Overview: architecture/index.md
   - Decks:
       - Robin DR401: decks/aerobask-robin-dr401/index.md
       - Beechcraft Baron 58: decks/beechcraft-baron-58/index.md
