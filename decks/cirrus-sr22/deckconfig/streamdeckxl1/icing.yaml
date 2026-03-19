@@ -40,7 +40,9 @@ buttons:
         color: deepskyblue
         framed: true
         formula: ${laminar/sr22/switch/ice_protect} 1 eq
-    set-dataref: laminar/sr22/switch/ice_protect
+    commands:
+      - laminar/sr22/switch/ice_protect_on
+      - laminar/sr22/switch/ice_protect_off
     initial-value: 0
 
   - index: 2
@@ -60,7 +62,9 @@ buttons:
         color: deepskyblue
         framed: true
         formula: ${sim/cockpit2/ice/tks_backup_pump} 1 eq
-    set-dataref: sim/cockpit2/ice/tks_backup_pump
+    commands:
+      - sim/ice/tks_bkup_on
+      - sim/ice/tks_bkup_off
 
   - index: 3
     type: onoff
@@ -79,7 +83,9 @@ buttons:
         color: deepskyblue
         framed: true
         formula: ${laminar/sr22/switch/ice_norm_high} 1 eq
-    set-dataref: laminar/sr22/switch/ice_norm_high
+    commands:
+      - laminar/sr22/switch/ice_protect_high
+      - laminar/sr22/switch/ice_protect_norm
 
   - index: 4
     type: push

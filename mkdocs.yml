@@ -33,6 +33,7 @@ nav:
       - Compatibility: reference/compatibility.md
       - Deck Types: reference/deck-types.md
       - Plugin Interface: reference/plugin-interface.md
+      - Cirrus SR22 Gaps: reference/cirrus-sr22-gaps.md
       - Modules: modules/modules.md
 
 not_in_nav: |

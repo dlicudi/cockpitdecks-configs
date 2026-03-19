@@ -117,18 +117,6 @@ buttons:
         formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
 
 
-  - index: 7
-    name: switches2
-    type: page
-    vibrate: SHORT
-    page: switches2
-    label: SWITCHES 2
-    label-size: 11
-    text: →
-    text-font: fontawesome.otf
-    text-size: 40
-    text-color: Gold
-
   - index: 6
     type: push
     vibrate: SHORT
@@ -146,6 +134,9 @@ buttons:
         color: deepskyblue
         framed: true
         formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
+
+  - index: 7
+    type: none
 
   - index: 8
     vibrate: SHORT
@@ -203,19 +194,13 @@ buttons:
 
 
   - index: 11
+    name: switches2
+    type: page
     vibrate: SHORT
-    type: push
-    command: laminar/sr22/fuel_sel_right_off    
-    label: FUEL OFF
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        led: bar
-        color: grey
-        formula: ${laminar/sr22/fuel_selector_pos} 3 eq not
-      B1:
-        text: "OFF"
-        color: red
-        framed: true
-        formula: ${laminar/sr22/fuel_selector_pos} 3 eq
+    page: switches2
+    label: SWITCHES 2
+    label-size: 11
+    text: →
+    text-font: fontawesome.otf
+    text-size: 40
+    text-color: Gold
