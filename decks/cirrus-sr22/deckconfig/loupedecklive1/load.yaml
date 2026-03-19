@@ -166,7 +166,7 @@ buttons:
 - index: 11
   name: LOAD_BACK
   type: page
-  page: index
+  page: index2
   label: BACK
   label-color: Gold
   text: "<<"
