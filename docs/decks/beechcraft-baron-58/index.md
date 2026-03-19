@@ -7,7 +7,7 @@ Decks for Beechcraft Baron 58
 
 ### Loupedeck Live
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 13 pages&emsp;🎮 Loupedeck Live</div>
+<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 13 pages&emsp;🎮 Loupedeck Live</div></div>
 
 <div class="page-gallery">
 <div class="page-card">

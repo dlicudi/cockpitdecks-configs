@@ -11,6 +11,39 @@
   margin: 0.5rem 0 1rem;
   border-radius: 2px;
   font-size: 0.95em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.layout-meta-items {
+  line-height: 1.3;
+}
+
+/* Mini progress bar (inside layout-meta) */
+.layout-progress-mini {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.layout-progress-mini .layout-progress-track {
+  flex: 1;
+  height: 0.4rem;
+  background: #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.layout-progress-mini .layout-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #66bb6a);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+.layout-progress-mini .layout-progress-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #555;
+  flex-shrink: 0;
 }
 
 /* Page gallery grid */

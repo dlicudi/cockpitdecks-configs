@@ -7,7 +7,7 @@ Decks for Lancair Evolution
 
 ### Loupedeck Live
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 13 pages&emsp;🎮 Loupedeck Live</div>
+<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 13 pages&emsp;🎮 Loupedeck Live</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -79,7 +79,7 @@ Decks for Lancair Evolution
 
 ### Stream Deck XL
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 11 pages&emsp;🎮 Stream Deck XL</div>
+<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 11 pages&emsp;🎮 Stream Deck XL</div></div>
 
 <div class="page-gallery">
 <div class="page-card">

@@ -7,7 +7,7 @@ Definition of decks for ToLiss A330neo
 
 ### Loupedeck Live
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 5 pages&emsp;🎮 Loupedeck Live</div>
+<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 5 pages&emsp;🎮 Loupedeck Live</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -39,7 +39,7 @@ Definition of decks for ToLiss A330neo
 
 ### Stream Deck Original
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 2 pages&emsp;🎮 Stream Deck Original</div>
+<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 2 pages&emsp;🎮 Stream Deck Original</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -56,7 +56,7 @@ Definition of decks for ToLiss A330neo
 
 ### Stream Deck XL
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 21 pages&emsp;🎮 Stream Deck XL</div>
+<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 21 pages&emsp;🎮 Stream Deck XL</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -168,7 +168,7 @@ Definition of decks for ToLiss A330neo
 
 ### Stream Deck +
 
-<div class="layout-meta">📄 1 page&emsp;🎮 Stream Deck +</div>
+<div class="layout-meta"><div class="layout-meta-items">📄 1 page&emsp;🎮 Stream Deck +</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -179,7 +179,7 @@ Definition of decks for ToLiss A330neo
 
 ### X Touch Mini
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 4 pages&emsp;🎮 X Touch Mini</div>
+<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 4 pages&emsp;🎮 X Touch Mini</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -202,7 +202,7 @@ Definition of decks for ToLiss A330neo
 
 ### Virtual Streamdeck MK.2
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 2 pages&emsp;🎮 Virtual Streamdeck MK.2</div>
+<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 2 pages&emsp;🎮 Virtual Streamdeck MK.2</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -219,7 +219,7 @@ Definition of decks for ToLiss A330neo
 
 ### Virtual Streamdeck XL
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 21 pages&emsp;🎮 Virtual Streamdeck XL</div>
+<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 21 pages&emsp;🎮 Virtual Streamdeck XL</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -331,7 +331,7 @@ Definition of decks for ToLiss A330neo
 
 ### Virtual Streamdeck Mini
 
-<div class="layout-meta">📄 1 page&emsp;🎮 Virtual Streamdeck Mini</div>
+<div class="layout-meta"><div class="layout-meta-items">📄 1 page&emsp;🎮 Virtual Streamdeck Mini</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -343,7 +343,7 @@ Definition of decks for ToLiss A330neo
 
 ### Virtual Streamdeck +
 
-<div class="layout-meta">📄 1 page&emsp;🎮 Virtual Streamdeck +</div>
+<div class="layout-meta"><div class="layout-meta-items">📄 1 page&emsp;🎮 Virtual Streamdeck +</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -354,7 +354,7 @@ Definition of decks for ToLiss A330neo
 
 ### Virtual Stream Deck Neo
 
-<div class="layout-meta">📄 1 page&emsp;🎮 Virtual Stream Deck Neo</div>
+<div class="layout-meta"><div class="layout-meta-items">📄 1 page&emsp;🎮 Virtual Stream Deck Neo</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -365,7 +365,7 @@ Definition of decks for ToLiss A330neo
 
 ### Virtual Loupedeck Live
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 5 pages&emsp;🎮 Virtual Loupedeck Live</div>
+<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 5 pages&emsp;🎮 Virtual Loupedeck Live</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -397,7 +397,7 @@ Definition of decks for ToLiss A330neo
 
 ### Virtual X Touch Mini
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 4 pages&emsp;🎮 Virtual X Touch Mini</div>
+<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 4 pages&emsp;🎮 Virtual X Touch Mini</div></div>
 
 <div class="page-gallery">
 <div class="page-card">

@@ -7,7 +7,7 @@ Decks for RV-10
 
 ### Loupedeck Live
 
-<div class="layout-meta">🔧 <strong>Active Development</strong>&emsp;📄 13 pages&emsp;🎮 Loupedeck Live</div>
+<div class="layout-meta"><div class="layout-meta-items">🔧 <strong>Active Development</strong>&emsp;📄 13 pages&emsp;🎮 Loupedeck Live</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -79,7 +79,7 @@ Decks for RV-10
 
 ### Stream Deck XL
 
-<div class="layout-meta">🔧 <strong>Active Development</strong>&emsp;📄 13 pages&emsp;🎮 Stream Deck XL</div>
+<div class="layout-meta"><div class="layout-meta-items">🔧 <strong>Active Development</strong>&emsp;📄 13 pages&emsp;🎮 Stream Deck XL</div></div>
 
 <div class="page-gallery">
 <div class="page-card">

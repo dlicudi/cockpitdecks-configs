@@ -7,7 +7,7 @@ Definition of decks for Toliss A321 + neo add-on (neo variant is XLR but all thr
 
 ### Loupedeck Live
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 6 pages&emsp;🎮 Loupedeck Live</div>
+<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 6 pages&emsp;🎮 Loupedeck Live</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -44,7 +44,7 @@ Definition of decks for Toliss A321 + neo add-on (neo variant is XLR but all thr
 
 ### Stream Deck Original
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 2 pages&emsp;🎮 Stream Deck Original</div>
+<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 2 pages&emsp;🎮 Stream Deck Original</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -61,7 +61,7 @@ Definition of decks for Toliss A321 + neo add-on (neo variant is XLR but all thr
 
 ### Stream Deck XL
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 21 pages&emsp;🎮 Stream Deck XL</div>
+<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 21 pages&emsp;🎮 Stream Deck XL</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -173,7 +173,7 @@ Definition of decks for Toliss A321 + neo add-on (neo variant is XLR but all thr
 
 ### Stream Deck +
 
-<div class="layout-meta">📄 1 page&emsp;🎮 Stream Deck +</div>
+<div class="layout-meta"><div class="layout-meta-items">📄 1 page&emsp;🎮 Stream Deck +</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -184,7 +184,7 @@ Definition of decks for Toliss A321 + neo add-on (neo variant is XLR but all thr
 
 ### X Touch Mini
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 4 pages&emsp;🎮 X Touch Mini</div>
+<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 4 pages&emsp;🎮 X Touch Mini</div></div>
 
 <div class="page-gallery">
 <div class="page-card">

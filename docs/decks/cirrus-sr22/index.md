@@ -7,7 +7,19 @@ Decks for Cirrus SR22
 
 ### Loupedeck Live
 
-<div class="layout-meta">✅ <strong>Stable</strong>&emsp;📄 15 pages&emsp;🎮 Loupedeck Live</div>
+<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 15 pages&emsp;🎮 Loupedeck Live&emsp;🏷 v1.0.0</div><div class="layout-progress-mini" title="Completion: 85%"><div class="layout-progress-track"><div class="layout-progress-bar" style="width: 85%"></div></div><span class="layout-progress-label">85%</span></div></div>
+
+⚠️ **Known issues:**
+
+- Load, FPL, and NAV pages require PI_CockpitdecksFMSBrowser plugin in X-Plane (see cockpitdecks_xp link_fms_plugin.sh)
+
+📋 **Planned:**
+
+- Inside lighting
+- Climate fan speed control (laminar/sr22/climate_fan_speed)
+- Sun visors (laminar/sr22/sun_visor_left, sun_visor_right)
+- Map range controls via FMS plugin (map_range_down, map_range_up, map_toggle)
+- G1000 annunciators (flaps, O2, audio panel)
 
 <div class="page-gallery">
 <div class="page-card">
@@ -89,7 +101,7 @@ Decks for Cirrus SR22
 
 ### Stream Deck XL
 
-<div class="layout-meta">🔧 <strong>Active Development</strong>&emsp;📄 15 pages&emsp;🎮 Stream Deck XL</div>
+<div class="layout-meta"><div class="layout-meta-items">🔧 <strong>Active Development</strong>&emsp;📄 15 pages&emsp;🎮 Stream Deck XL</div></div>
 
 <div class="page-gallery">
 <div class="page-card">

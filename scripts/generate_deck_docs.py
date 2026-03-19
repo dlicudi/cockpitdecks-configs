@@ -397,7 +397,32 @@ def build_overview(slug: str, config: dict[str, Any], doc_path: Path, page_image
             meta_items.append(f'\U0001f4c4 {page_count} page{"s" if page_count != 1 else ""}')
             if deck_type:
                 meta_items.append(f'\U0001f3ae {humanize_deck_type(deck_type)}')
-            lines.append(f'<div class="layout-meta">{"&emsp;".join(meta_items)}</div>')
+            version = layout_docs.get("version")
+            if version is not None:
+                ver_str = str(version).strip()
+                if ver_str and not ver_str.startswith("v"):
+                    ver_str = f"v{ver_str}"
+                if ver_str:
+                    meta_items.append(f'\U0001f3f7 {ver_str}')
+
+            # Optional mini progress bar inside the panel
+            progress_html = ""
+            progress = layout_docs.get("progress")
+            if progress is not None:
+                try:
+                    pct = max(0, min(100, int(progress)))
+                except (TypeError, ValueError):
+                    pct = 0
+                progress_html = (
+                    f'<div class="layout-progress-mini" title="Completion: {pct}%">'
+                    f'<div class="layout-progress-track"><div class="layout-progress-bar" style="width: {pct}%"></div></div>'
+                    f'<span class="layout-progress-label">{pct}%</span></div>'
+                )
+
+            meta_content = f'<div class="layout-meta-items">{"&emsp;".join(meta_items)}</div>'
+            if progress_html:
+                meta_content += progress_html
+            lines.append(f'<div class="layout-meta">{meta_content}</div>')
             lines.append("")
 
             # Issues and planned

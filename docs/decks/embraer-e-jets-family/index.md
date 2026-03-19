@@ -7,7 +7,7 @@ Decks
 
 ### Loupedeck Live
 
-<div class="layout-meta">🚧 <strong>Work in Progress</strong>&emsp;📄 28 pages&emsp;🎮 Loupedeck Live</div>
+<div class="layout-meta"><div class="layout-meta-items">🚧 <strong>Work in Progress</strong>&emsp;📄 28 pages&emsp;🎮 Loupedeck Live</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -154,7 +154,7 @@ Decks
 
 ### Stream Deck XL
 
-<div class="layout-meta">🚧 <strong>Work in Progress</strong>&emsp;📄 14 pages&emsp;🎮 Stream Deck XL</div>
+<div class="layout-meta"><div class="layout-meta-items">🚧 <strong>Work in Progress</strong>&emsp;📄 14 pages&emsp;🎮 Stream Deck XL</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -231,7 +231,7 @@ Decks
 
 ### e190.overhead.v2
 
-<div class="layout-meta">🚧 <strong>Work in Progress</strong>&emsp;📄 1 page&emsp;🎮 e190.overhead.v2</div>
+<div class="layout-meta"><div class="layout-meta-items">🚧 <strong>Work in Progress</strong>&emsp;📄 1 page&emsp;🎮 e190.overhead.v2</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
