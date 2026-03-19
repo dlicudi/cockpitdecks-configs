@@ -79,6 +79,26 @@ datarefs:
   cockpitdecks/fms_browser/fms_displayed_altitude: 24000
   cockpitdecks/fms_browser/fms_last_ident: LIML
   cockpitdecks/fms_browser/fms_last_altitude: 0
+  cockpitdecks/fms_legs/entry_count: 10
+  cockpitdecks/fms_legs/selected_index: 9
+  cockpitdecks/fms_legs/row_1_index: 8
+  cockpitdecks/fms_legs/row_1_ident: TULOM
+  cockpitdecks/fms_legs/row_1_alt: 5000
+  cockpitdecks/fms_legs/row_1_is_active: 0
+  cockpitdecks/fms_legs/row_1_is_selected: 0
+  cockpitdecks/fms_legs/row_1_status: ""
+  cockpitdecks/fms_legs/row_2_index: 9
+  cockpitdecks/fms_legs/row_2_ident: OKLA
+  cockpitdecks/fms_legs/row_2_alt: 3000
+  cockpitdecks/fms_legs/row_2_is_active: 1
+  cockpitdecks/fms_legs/row_2_is_selected: 1
+  cockpitdecks/fms_legs/row_2_status: "ACT"
+  cockpitdecks/fms_legs/row_3_index: 10
+  cockpitdecks/fms_legs/row_3_ident: LDSP
+  cockpitdecks/fms_legs/row_3_alt: 0
+  cockpitdecks/fms_legs/row_3_is_active: 0
+  cockpitdecks/fms_legs/row_3_is_selected: 0
+  cockpitdecks/fms_legs/row_3_status: ""
   sim/cockpit2/gauges/indicators/ground_speed_kt: 186
   sim/cockpit2/radios/indicators/fms_distance_to_tod_pilot: 122.7
   laminar/sr22/annunciators/ap/nav: 1
