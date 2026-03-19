@@ -11,12 +11,10 @@ buttons:
   name: page_cycle
   type: page-cycle
   pages:
-    - fms_plan
     - fms_route
     - fms_leg
     - fms_nav
   page-labels:
-    - PLN
     - RTE
     - LEGS
     - NAV

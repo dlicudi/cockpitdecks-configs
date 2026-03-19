@@ -1,4 +1,4 @@
-description: Lights, Icing & Parking Brake
+description: Lights & Icing
 includes: pager,encoders/encoders_fcu
 name: switches2
 
@@ -7,6 +7,7 @@ buttons:
   # --- Lights ---
   - index: 0
     type: push
+    vibrate: SHORT
     command: sim/lights/nav_lights_toggle
     label: NAV
     annunciator:
@@ -24,6 +25,7 @@ buttons:
 
   - index: 1
     type: push
+    vibrate: SHORT
     command: sim/lights/strobe_lights_toggle
     label: STROBE
     annunciator:
@@ -41,6 +43,7 @@ buttons:
 
   - index: 2
     type: push
+    vibrate: SHORT
     label: LAND
     command: sim/lights/landing_01_light_tog
     annunciator:
@@ -58,6 +61,7 @@ buttons:
 
   - index: 3
     type: push
+    vibrate: SHORT
     label: ICE
     command: sim/lights/generic_01_light_tog
     annunciator:
@@ -76,6 +80,7 @@ buttons:
   # --- Icing ---
   - index: 4
     type: push
+    vibrate: SHORT
     command: sim/ice/pitot_heat0_tog
     label: PITOT
     annunciator:
@@ -93,6 +98,7 @@ buttons:
 
   - index: 5
     type: onoff
+    vibrate: SHORT
     label: ICE PROTECT
     annunciator:
       model: B
@@ -111,6 +117,7 @@ buttons:
 
   - index: 6
     type: onoff
+    vibrate: SHORT
     label: PUMP BKUP
     annunciator:
       model: B
@@ -128,6 +135,7 @@ buttons:
 
   - index: 7
     type: onoff
+    vibrate: SHORT
     label: NORM/HIGH
     annunciator:
       model: B
@@ -145,6 +153,7 @@ buttons:
 
   - index: 8
     type: push
+    vibrate: SHORT
     command: sim/ice/prop_heat_tog
     label: PROP
     annunciator:
@@ -162,6 +171,7 @@ buttons:
 
   - index: 9
     type: push
+    vibrate: SHORT
     command: sim/ice/window_heat_tog
     label: WSHLD
     annunciator:
@@ -177,29 +187,11 @@ buttons:
         framed: true
         formula: ${sim/cockpit/switches/anti_ice_window_heat} 1 eq
 
-  # --- Parking brake ---
-  - index: 10
-    type: push
-    vibrate: SHORT
-    command: sim/flight_controls/park_brake_valve_toggle
-    label: PARK BRAKE
-    annunciator:
-      model: B
-      size: medium
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit2/controls/park_brake_valve} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
-
   # --- Back to Switches ---
   - index: 11
     name: Switches
     type: page
+    vibrate: SHORT
     page: switches
     label: SWITCHES
     label-size: 12

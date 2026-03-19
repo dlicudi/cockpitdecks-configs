@@ -2,10 +2,9 @@
 buttons:
 
 # ============================================================
-# PLAN encoders
+# PLAN encoders — standalone load-FPL page, no page-cycle
 # E2 (e0): BROWSE — turn=prev/next plan
 # E3 (e1): ACTION — push=load plan
-# E4 (e2): PAGE — page-cycle
 # ============================================================
 
 - index: e0
@@ -19,20 +18,6 @@ buttons:
   name: load_plan
   type: push
   command: cockpitdecks/fms_browser/load
-
-- index: e2
-  name: page_cycle
-  type: page-cycle
-  pages:
-    - fms_plan
-    - fms_route
-    - fms_leg
-    - fms_nav
-  page-labels:
-    - PLN
-    - RTE
-    - LEGS
-    - NAV
 
 # ============================================================
 # Side screens
@@ -60,11 +45,11 @@ buttons:
         text-font: D-DIN.otf
         text-color: White
         text: ""
-      - label: "PAGE"
+      - label: ""
         label-size: 14
         label-font: D-DINCondensed.otf
         label-color: Gold
         text-size: 16
         text-font: D-DIN.otf
         text-color: White
-        text: "${data:cockpitdecks/page_cycle/current_page}"
+        text: ""

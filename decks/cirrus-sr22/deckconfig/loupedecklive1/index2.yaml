@@ -25,6 +25,17 @@ buttons:
     text-font: fontawesome.otf
     text-position: cm
 
+  - index: 2
+    type: page
+    page: fms_plan
+    label: LOAD FPL
+    label-color: Gold
+    text: "\uf15b"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+
   - index: 11
     type: page
     page: index
