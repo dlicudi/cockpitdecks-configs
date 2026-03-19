@@ -127,10 +127,10 @@ buttons:
   - index: 10
     type: page
     vibrate: SHORT
-    page: fms_nav
+    page: nav
     label: FMS
     label-color: Gold
-    text: 
+    text: "\uf279"
     text-color: khaki
     text-size: 40
     text-font: fontawesome.otf

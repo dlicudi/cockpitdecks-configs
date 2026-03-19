@@ -16,6 +16,10 @@ Technical reference for cockpitdecks-configs — information that applies across
 
     Reusable page configurations shared across aircraft (radio, engine, G1000, etc.).
 
+-   :material-connection: **[Plugin Interface](plugin-interface.md)**
+
+    PI_CockpitdecksFMSBrowser datarefs and commands for FPL, NAV, and LOAD pages.
+
 -   :material-tag-multiple: **[Tags](tags.md)**
 
     Browse all documentation pages by tag.

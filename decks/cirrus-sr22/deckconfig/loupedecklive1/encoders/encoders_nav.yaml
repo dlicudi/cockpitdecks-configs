@@ -1,0 +1,45 @@
+# NAV encoders — E2 = page cycle (FPL <-> NAV) only
+# Read-only telemetry page, no browse/action on encoders
+
+buttons:
+
+- index: e2
+  name: page_cycle
+  type: page-cycle
+  pages:
+    - nav
+    - fpl
+  page-labels:
+    - NAV
+    - LEGS
+
+- index: left
+  name: left_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: ""
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: ""
+      - label: ""
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: ""
+      - label: "PAGE"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "${data:cockpitdecks/page_cycle/current_page}"

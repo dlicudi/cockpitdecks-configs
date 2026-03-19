@@ -32,6 +32,7 @@ nav:
       - Overview: reference/index.md
       - Compatibility: reference/compatibility.md
       - Deck Types: reference/deck-types.md
+      - Plugin Interface: reference/plugin-interface.md
       - Modules: modules/modules.md
 
 not_in_nav: |

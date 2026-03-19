@@ -1,0 +1,186 @@
+# NAV — Live flight data. 4×3 grid, G1000-style situational awareness.
+# Read-only. E2 = page cycle (FPL <-> NAV).
+name: nav
+includes: pager,encoders/encoders_nav
+label-font: D-DINCondensed.otf
+
+buttons:
+
+# Row 1: DIS | ETE | GS | DTK
+# DIS: large=dist to WPT, small=DST to dest (when plugin provides)
+- index: 0
+  name: NAV_DIS
+  type: none
+  render-cooldown-ms: 500
+  label: DIS
+  label-color: Gold
+  text: "${sim/cockpit2/radios/indicators/gps_dme_distance_nm}\nDST ${cockpitdecks/fms_browser/loaded_distance_nm}"
+  text-format: "{0:.1f}"
+  text-color: white
+  text-size: 20
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+# ETE: large=time to WPT, small=min
+- index: 1
+  name: NAV_ETE
+  type: none
+  render-cooldown-ms: 500
+  label: ETE
+  label-color: Gold
+  text: "${sim/cockpit2/radios/indicators/gps_dme_time_min}\nmin"
+  text-format: "{0:.0f}"
+  text-color: darkorange
+  text-size: 20
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 2
+  name: NAV_GS
+  type: none
+  render-cooldown-ms: 500
+  label: GS
+  label-color: Gold
+  text: "${sim/cockpit2/gauges/indicators/ground_speed_kt}\nkts"
+  text-format: "{0:.0f}"
+  text-color: white
+  text-size: 20
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 3
+  name: NAV_DTK
+  type: none
+  render-cooldown-ms: 500
+  label: DTK
+  label-color: Gold
+  text: "${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}°"
+  text-format: "{0:.0f}"
+  text-color: darkorange
+  text-size: 20
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+# Row 2: WPT | ETA | BRG | XTK
+- index: 4
+  name: NAV_WPT
+  type: none
+  render-cooldown-ms: 500
+  label: WPT
+  label-color: Gold
+  text: "${cockpitdecks/fms_browser/fms_active_ident}"
+  text-color: lime
+  text-size: 22
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 5
+  name: NAV_ETA
+  type: none
+  render-cooldown-ms: 500
+  label: ETA
+  label-color: Gold
+  text: "${sim/cockpit2/radios/indicators/fms1_act_eta_hour}:${sim/cockpit2/radios/indicators/fms1_act_eta_minute}Z"
+  text-color: darkorange
+  text-size: 20
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 6
+  name: NAV_BRG
+  type: none
+  render-cooldown-ms: 500
+  label: BRG
+  label-color: Gold
+  text: "${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}°"
+  text-format: "{0:.0f}"
+  text-color: white
+  text-size: 20
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 7
+  name: NAV_XTK
+  type: none
+  render-cooldown-ms: 500
+  label: XTK
+  label-color: Gold
+  text: "${sim/cockpit/radios/gps_course_deviation} nm"
+  text-format: "{0:.1f}"
+  text-color: white
+  text-size: 20
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+# Row 3: TRK | DEST | DTO | SRC
+- index: 8
+  name: NAV_TRK
+  type: none
+  render-cooldown-ms: 500
+  label: TRK
+  label-color: Gold
+  text: "${sim/cockpit2/gauges/indicators/ground_track_mag_pilot}°"
+  text-format: "{0:.0f}"
+  text-color: white
+  text-size: 20
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 9
+  name: NAV_DEST
+  type: none
+  render-cooldown-ms: 500
+  label: DEST
+  label-color: Gold
+  text: "${cockpitdecks/fms_browser/fms_last_ident}"
+  text-color: deepskyblue
+  text-size: 22
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)
+
+- index: 10
+  name: NAV_DTO
+  type: push
+  command: cockpitdecks/fms_legs/direct_to
+  vibrate: SHORT
+  render-cooldown-ms: 500
+  label: DTO
+  label-color: Gold
+  annunciator:
+    size: medium
+    model: B
+    B0:
+      text: "→ ${cockpitdecks/fms_browser/fms_active_ident}"
+      text-font: D-DINCondensed.otf
+      text-size: 22
+      color: lime
+      formula: "1"
+    B1:
+      text: "Direct To"
+      text-font: D-DINCondensed.otf
+      text-size: 16
+      color: white
+      formula: "1"
+
+- index: 11
+  name: NAV_SRC
+  type: none
+  render-cooldown-ms: 500
+  label: SRC
+  label-color: Gold
+  text: "GPS"
+  text-color: lime
+  text-size: 24
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 24)

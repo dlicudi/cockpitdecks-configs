@@ -1,0 +1,80 @@
+# FPL encoders — E2 = page cycle (FPL <-> NAV), E5 = waypoint paging
+# E0: scroll waypoints | E1: Direct To selected | E2: page cycle | E3: CLR
+
+buttons:
+
+- index: e0
+  name: browse_legs
+  type: encoder
+  dataref: cockpitdecks/fms_legs/snapshot
+  commands:
+  - cockpitdecks/fms_legs/scroll_up
+  - cockpitdecks/fms_legs/scroll_down
+
+- index: e1
+  name: direct_to
+  type: push
+  command: cockpitdecks/fms_legs/direct_to
+
+- index: e2
+  name: page_cycle
+  type: page-cycle
+  pages:
+    - nav
+    - fpl
+  page-labels:
+    - NAV
+    - LEGS
+
+- index: e3
+  name: clear_leg
+  type: push
+  command: cockpitdecks/fms_legs/clear_selected
+
+- index: left
+  name: left_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: ""
+      - label: "D>"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "Push"
+      - label: "PAGE"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "${data:cockpitdecks/page_cycle/current_page}"
+
+- index: right
+  name: right_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: ""
+      - label: "CLR"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "Push"
+      - label: "LEGS"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "${cockpitdecks/fms_legs/selected_index}/${cockpitdecks/fms_legs/entry_count}"

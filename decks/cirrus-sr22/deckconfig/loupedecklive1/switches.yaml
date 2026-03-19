@@ -117,19 +117,19 @@ buttons:
         formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
 
 
-  - index: 6
-    name: LightsIcing
+  - index: 7
+    name: switches2
     type: page
     vibrate: SHORT
     page: switches2
-    label: LIGHTS & ICING
+    label: SWITCHES 2
     label-size: 11
     text: →
     text-font: fontawesome.otf
     text-size: 40
     text-color: Gold
 
-  - index: 7
+  - index: 6
     type: push
     vibrate: SHORT
     command: sim/flight_controls/park_brake_valve_toggle

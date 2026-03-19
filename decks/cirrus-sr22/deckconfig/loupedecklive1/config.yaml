@@ -17,3 +17,7 @@ _docs:
     - icing
     - lights
     - switches2
+    - fms_plan
+    - fms_route
+    - fms_leg
+    - fms_nav
