@@ -196,13 +196,20 @@ buttons:
 
 
   - index: 11
-    name: icing
-    type: page
+    type: onoff
     vibrate: SHORT
-    page: icing
-    label: ICING
-    label-size: 11
-    text: "\uf2dc"
-    text-font: fontawesome.otf
-    text-size: 36
-    text-color: Gold
+    set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
+    label: BOOST PUMP
+    label-size: 10
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 1 eq
