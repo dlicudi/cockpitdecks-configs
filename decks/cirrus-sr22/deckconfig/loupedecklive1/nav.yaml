@@ -160,15 +160,15 @@ buttons:
     size: medium
     model: B
     B0:
-      text: "→ ${cockpitdecks/fms_browser/fms_active_ident}"
+      text: "${cockpitdecks/fms_browser/fms_active_ident}"
       text-font: D-DINCondensed.otf
-      text-size: 22
+      text-size: 34
       color: lime
       formula: "1"
     B1:
       text: "Direct To"
       text-font: D-DINCondensed.otf
-      text-size: 16
+      text-size: 34
       color: white
       formula: "1"
 
