@@ -78,7 +78,7 @@ From `SR22.systems.lua`:
 
 **Commands:** Use `sim/lights/generic_0X_light_tog` for indices 0–11, or `sim/cockpit2/switches/generic_lights_switch` via set-dataref.
 
-*Current config:* switches2 uses `generic_01_light_tog` for ICE light (index 0). Dome, flood, reading, edge, wingtip are not mapped.
+*Current config:* lights page has NAV, STROBE, LAND, READ 1, DOME, FLOOD, READ 2, EDGE. switches2 has NAV, STROBE, LAND, ICE (index 0). Wingtip (index 11) not mapped.
 
 ---
 

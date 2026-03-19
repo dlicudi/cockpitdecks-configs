@@ -5,23 +5,16 @@ name: switches
 buttons:
 
   - index: 0
+    name: ENGINE START
     type: begin-end-command
+    vibrate: LONG
     command: sim/starters/engage_starter_1
-    vibrate: RUMBLE5
-    label: "IGNITION"
-    label-color: Lime
-    text-bg-color: Black
-    multi-texts:
-      - text: "OFF"
-        text-color: White
-      - text: "R"
-        text-color: Orange
-      - text: "L"
-        text-color: Orange
-      - text: "BOTH"
-        text-color: Orange
-      - text: "START"
-        text-color: Red
+    multi-icons:
+      - ENGINE_START.svg
+      - ENGINE_START.svg
+      - ENGINE_START.svg
+      - ENGINE_START.svg
+      - ENGINE_START_PRESSED.png
     formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
 
   - index: 1
@@ -136,7 +129,16 @@ buttons:
         formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
 
   - index: 7
-    type: none
+    name: lights
+    type: page
+    vibrate: SHORT
+    page: lights
+    label: LIGHTS
+    label-size: 11
+    text: "\uf0eb"
+    text-font: fontawesome.otf
+    text-size: 36
+    text-color: Gold
 
   - index: 8
     vibrate: SHORT
@@ -194,13 +196,13 @@ buttons:
 
 
   - index: 11
-    name: switches2
+    name: icing
     type: page
     vibrate: SHORT
-    page: switches2
-    label: SWITCHES 2
+    page: icing
+    label: ICING
     label-size: 11
-    text: →
+    text: "\uf2dc"
     text-font: fontawesome.otf
-    text-size: 40
+    text-size: 36
     text-color: Gold

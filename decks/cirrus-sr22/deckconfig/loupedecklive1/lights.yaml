@@ -61,7 +61,7 @@ buttons:
 
   - index: 3
     type: push
-    label: ICE
+    label: READ 1
     command: sim/lights/generic_01_light_tog
     annunciator:
       model: B
@@ -76,6 +76,78 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 1 eq
 
+  # --- Internal ---
+  - index: 4
+    type: push
+    vibrate: SHORT
+    label: DOME
+    command: sim/lights/generic_05_light_tog
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[4]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[4]} 1 eq
+
+  - index: 5
+    type: push
+    vibrate: SHORT
+    label: FLOOD
+    command: sim/lights/generic_07_light_tog
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[6]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[6]} 1 eq
+
+  - index: 6
+    type: push
+    vibrate: SHORT
+    label: READ 2
+    command: sim/lights/generic_02_light_tog
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[1]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[1]} 1 eq
+
+  - index: 7
+    type: push
+    vibrate: SHORT
+    label: EDGE
+    command: sim/lights/generic_11_light_tog
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[10]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[10]} 1 eq
 
   - index: 11
     name: Switches
