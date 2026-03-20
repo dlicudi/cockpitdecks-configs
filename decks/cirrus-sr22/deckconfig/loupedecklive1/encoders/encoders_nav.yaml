@@ -1,17 +1,17 @@
-# NAV encoders — E2 = page cycle (FPL <-> NAV) only
+# NAV encoders — E2 = function cycle (FPL <-> NAV)
 # Read-only telemetry page, no browse/action on encoders
 
 buttons:
 
 - index: e2
-  name: page_cycle
+  name: func_cycle
   type: page-cycle
   pages:
-    - nav
-    - fpl
+    - fms_nav
+    - fms_fpl
   page-labels:
     - NAV
-    - LEGS
+    - FPL
 
 - index: left
   name: left_screen
@@ -35,7 +35,7 @@ buttons:
         text-font: D-DIN.otf
         text-color: White
         text: ""
-      - label: "PAGE"
+      - label: "FUNC"
         label-size: 14
         label-font: D-DINCondensed.otf
         label-color: Gold

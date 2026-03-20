@@ -92,7 +92,7 @@ buttons:
 
 - index: 10
   type: page
-  page: nav
+  page: fms_nav
   label: FMS
   label-color: Gold
   text: "FMS"

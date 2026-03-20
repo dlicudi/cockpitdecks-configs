@@ -1,20 +1,57 @@
-# LOAD page encoders — browse plans, push to load
-# E0: browse prev/next | E1: push = load plan
-# No page-cycle (LOAD is standalone from HOME)
+# LOAD page encoders — E0: page scroll | E1: select in page | E2 push: LOAD | E3/E4: sort toggles | E5 push: REFRESH
+# E0 type encoder: [0]=CCW, [1]=CW
+# E1 type encoder: [0]=CCW, [1]=CW
+# Sort key/direction readout stays on the side labels.
 
 buttons:
 
+# LEFT SCREEN
 - index: e0
-  name: browse_plan
+  name: browse_plan_pages
   type: encoder
+  dataref: cockpitdecks/fms_browser/list_snapshot
+  commands:
+  - cockpitdecks/fms_browser/list_scroll_up
+  - cockpitdecks/fms_browser/list_scroll_down
+
+- index: e1
+  name: select_plan
+  type: encoder
+  dataref: cockpitdecks/fms_browser/list_snapshot
   commands:
   - cockpitdecks/fms_browser/previous
   - cockpitdecks/fms_browser/next
 
-- index: e1
-  name: load_plan
+- index: e2
+  name: load_selected_plan
   type: push
   command: cockpitdecks/fms_browser/load
+
+
+# RIGHT SCREEN
+
+- index: e3
+  name: sort_by_key
+  type: encoder-push
+  commands:
+  - cockpitdecks/fms_browser/list_sort_toggle_key
+  - cockpitdecks/fms_browser/list_sort_filename
+  - cockpitdecks/fms_browser/list_sort_timestamp
+  vibrate: SHORT
+
+- index: e4
+  name: sort_by_direction
+  type: encoder-push
+  commands:
+  - cockpitdecks/fms_browser/list_sort_toggle_direction
+  - cockpitdecks/fms_browser/list_sort_asc
+  - cockpitdecks/fms_browser/list_sort_desc
+  vibrate: SHORT
+
+- index: e5
+  name: refresh_plan_list
+  type: push
+  command: cockpitdecks/fms_browser/refresh
 
 - index: left
   name: left_screen
@@ -22,14 +59,22 @@ buttons:
   side:
     icon-color: Black
     labels:
-      - label: "PLAN"
+      - label: "PAGE"
         label-size: 14
         label-font: D-DINCondensed.otf
         label-color: Gold
         text-size: 16
         text-font: D-DIN.otf
         text-color: White
-        text: "${cockpitdecks/fms_browser/index}/${cockpitdecks/fms_browser/count}"
+        text: "${cockpitdecks/fms_browser/list_page}"
+      - label: "SEL"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "${cockpitdecks/fms_browser/list_sel_count}"
       - label: "LOAD"
         label-size: 14
         label-font: D-DINCondensed.otf
@@ -37,12 +82,35 @@ buttons:
         text-size: 16
         text-font: D-DIN.otf
         text-color: White
-        text: ""
-      - label: ""
+        text: "${cockpitdecks/fms_browser/status}"
+
+- index: right
+  name: right_screen
+  type: none
+  side:
+    icon-color: Black
+    labels:
+      - label: "SORT"
         label-size: 14
         label-font: D-DINCondensed.otf
         label-color: Gold
         text-size: 16
         text-font: D-DIN.otf
         text-color: White
-        text: ""
+        text: "${cockpitdecks/fms_browser/list_sort_key}"
+      - label: "DIR"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "${cockpitdecks/fms_browser/list_sort_direction}"
+      - label: "REFR"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "PUSH"

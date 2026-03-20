@@ -1,10 +1,10 @@
-# FPL encoders — E2 = page cycle (FPL <-> NAV), E5 = waypoint paging
-# E0: scroll waypoints | E1: Direct To selected | E2: page cycle | E3: CLR
+# FPL encoders — E0: waypoint page scroll | E2: function cycle (FPL <-> NAV)
+# E1: row selection (within visible rows 1-3) + CLR push | E3: Direct To selected
 
 buttons:
 
 - index: e0
-  name: browse_legs
+  name: browse_fpl_pages
   type: encoder
   dataref: cockpitdecks/fms_legs/snapshot
   commands:
@@ -12,24 +12,42 @@ buttons:
   - cockpitdecks/fms_legs/scroll_down
 
 - index: e1
+  name: select_leg
+  type: encoder-push
+  dataref: cockpitdecks/fms_legs/snapshot
+  commands:
+  - cockpitdecks/fms_legs/clear_selected
+  - cockpitdecks/fms_legs/previous
+  - cockpitdecks/fms_legs/next
+
+- index: e2
+  name: func_cycle
+  type: page-cycle
+  pages:
+    - fms_nav
+    - fms_fpl
+  page-labels:
+    - NAV
+    - FPL
+
+- index: e3
   name: direct_to
   type: push
   command: cockpitdecks/fms_legs/direct_to
 
-- index: e2
-  name: page_cycle
-  type: page-cycle
-  pages:
-    - nav
-    - fpl
-  page-labels:
-    - NAV
-    - LEGS
+- index: e5
+  name: fpl_spare
+  type: none
 
-- index: e3
-  name: clear_leg
-  type: push
-  command: cockpitdecks/fms_legs/clear_selected
+# Some devices emit SEL push/turn on e4; mirror e1 mapping to avoid dropped events.
+- index: e4
+  name: select_leg_alt
+  type: encoder-push
+  dataref: cockpitdecks/fms_legs/snapshot
+  commands:
+  - cockpitdecks/fms_legs/clear_selected
+  - cockpitdecks/fms_legs/previous
+  - cockpitdecks/fms_legs/next
 
 - index: left
   name: left_screen
@@ -37,16 +55,23 @@ buttons:
   side:
     icon-color: Black
     labels:
-      - label: ""
-      - label: "D>"
+      - label: "PAGE"
         label-size: 14
         label-font: D-DINCondensed.otf
         label-color: Gold
         text-size: 16
         text-font: D-DIN.otf
         text-color: White
-        text: "Push"
-      - label: "PAGE"
+        text: "${cockpitdecks/fms_legs/page}"
+      - label: "SEL"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "${cockpitdecks/fms_legs/sel_count}"
+      - label: "FUNC"
         label-size: 14
         label-font: D-DINCondensed.otf
         label-color: Gold
@@ -62,7 +87,7 @@ buttons:
     icon-color: Black
     labels:
       - label: ""
-      - label: "CLR"
+      - label: "D>"
         label-size: 14
         label-font: D-DINCondensed.otf
         label-color: Gold
@@ -70,7 +95,7 @@ buttons:
         text-font: D-DIN.otf
         text-color: White
         text: "Push"
-      - label: "LEGS"
+      - label: "FPL"
         label-size: 14
         label-font: D-DINCondensed.otf
         label-color: Gold

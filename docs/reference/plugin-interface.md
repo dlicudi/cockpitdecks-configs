@@ -2,15 +2,37 @@
 
 G1000-style FMS layout expects the following datarefs and commands.
 
-## Current (used by fpl, nav, load)
+## Current (used by `fms_fpl`, `fms_nav`, `fms_load` pages)
 
 ### fms_browser (plan browser / LOAD)
+
+**3-row paged list (same paging model as `fms_legs` on FPL):** show plans 1–3, then 4–6, etc.
+
+- `list_row_1_filename` … `list_row_3_filename` — file basename without `.fms`
+- `list_row_1_timestamp` … `list_row_3_timestamp` — file timestamp label used on the LOAD page
+- `list_row_1_index` … `list_row_3_index` — 1-based index of that row’s plan in the full sorted list (empty if row blank)
+- `list_row_1_route` … `list_row_3_route` — departure / destination line for the row’s plan
+- `list_row_1_wpt_count` … `list_row_3_wpt_count` — waypoint count in file
+- `list_row_1_max_alt_ft` … `list_row_3_max_alt_ft` — max waypoint altitude in file (ft MSL; 0 if empty row)
+- `list_row_1_distance_nm` … `list_row_3_distance_nm` — total great-circle distance along parsed route (nm)
+- `list_row_1_is_selected` … `list_row_3_is_selected` — highlight when that row’s plan is selected
+- `list_page` — e.g. `1/4` (current page / total pages)
+- `list_sel_count` — which **visible row** (1–3) is selected on the current page, e.g. `2/3` or `-/3` when none; use `list_page` + row `list_row_*_index` for global plan order
+- `list_sort_key` / `list_sort_mode` — `NAME` or `TIME`
+- `list_sort_direction` — `ASC` or `DESC`
+- `list_snapshot` — JSON for encoder binding (window + row indices + selection + `sort_key` + `sort_desc`)
+- Commands: `list_scroll_up`, `list_scroll_down` — move by **one page** (three plans), not one-by-one (Loupedeck SR22 Load binds these to **E0**; deck keys may use sort or `refresh` instead)
+- Commands: `list_sort_toggle_key`, `list_sort_toggle_direction` — toggle the browser sort key/direction
+- Commands: `list_sort_filename`, `list_sort_timestamp`, `list_sort_asc`, `list_sort_desc` — explicit setters if you want fixed-state actions
+
+**Legacy single-selection datarefs** (reflect the tapped/selected plan, not the visible page):
+
 - `plan_name`, `plan_filename`, `plan_departure`, `plan_destination`
 - `plan_distance_nm`, `plan_waypoint_count`
 - `plan_dep_runway`, `plan_dest_runway`, `plan_sid`, `plan_star`
 - `index`, `count`, `status`
 - `loaded_distance_nm` — total distance of loaded route (nm)
-- Commands: `previous`, `next`, `load`, `refresh`
+- Commands: `previous`, `next` — move selection within the **current visible 3-row page only** (no page change); `load`, `refresh`
 
 ### fms_browser (live FMS)
 - `fms_active_ident`, `fms_active_index`, `fms_active_altitude`

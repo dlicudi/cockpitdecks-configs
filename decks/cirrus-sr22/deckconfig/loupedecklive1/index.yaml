@@ -127,7 +127,7 @@ buttons:
   - index: 10
     type: page
     vibrate: SHORT
-    page: nav
+    page: fms_nav
     label: FMS
     label-color: Gold
     text: "\uf279"

@@ -27,8 +27,8 @@ buttons:
 
   - index: 2
     type: page
-    page: load
-    label: LOAD
+    page: fms_load
+    label: LOAD FPL
     label-color: Gold
     text: "\uf15b"
     text-color: khaki

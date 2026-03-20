@@ -1,6 +1,8 @@
 # FPL — Flight Plan. View and edit route, scroll waypoints, DIRECT TO.
 # E2 = page cycle (FPL <-> NAV) | E5 = waypoint paging
-name: fpl
+name: fms_fpl
+_docs:
+  title: FPL
 includes: pager,encoders/encoders_fpl
 
 buttons:
@@ -9,24 +11,23 @@ buttons:
 - index: 0
   name: FPL_R1_IDX
   type: none
+  dataref: cockpitdecks/fms_legs/row_1_is_selected
   render-cooldown-ms: 80
   label: "#"
   label-color: Gold
-  annunciator:
-    size: medium
-    model: B
-    B0:
-      text: "${cockpitdecks/fms_legs/row_1_index}"
+  multi-texts:
+    - text: "${cockpitdecks/fms_legs/row_1_index}\n${cockpitdecks/fms_legs/row_1_status}"
+      text-color: white
+      text-size: 22
       text-font: D-DINCondensed.otf
-      text-size: 48
-      color: white
-      formula: "1"
-    B1:
-      text: "${cockpitdecks/fms_legs/row_1_status}"
+      text-position: cm
+      text-bg-color: (20, 20, 24)
+    - text: "${cockpitdecks/fms_legs/row_1_index}\n${cockpitdecks/fms_legs/row_1_status}"
+      text-color: white
+      text-size: 22
       text-font: D-DINCondensed.otf
-      text-size: 28
-      color: lime
-      formula: "${cockpitdecks/fms_legs/row_1_is_active} ${cockpitdecks/fms_legs/row_1_is_selected} or"
+      text-position: cm
+      text-bg-color: (70, 55, 20)
 
 - index: 1
   name: FPL_R1_WPT
@@ -54,15 +55,23 @@ buttons:
 - index: 2
   name: FPL_R1_ALT
   type: none
+  dataref: cockpitdecks/fms_legs/row_1_is_selected
   render-cooldown-ms: 80
   label: ALT
   label-color: Gold
-  text: "${cockpitdecks/fms_legs/row_1_alt}"
-  text-color: darkorange
-  text-size: 22
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
+  multi-texts:
+    - text: "${cockpitdecks/fms_legs/row_1_alt}"
+      text-color: darkorange
+      text-size: 22
+      text-font: D-DINCondensed.otf
+      text-position: cm
+      text-bg-color: (20, 20, 24)
+    - text: "${cockpitdecks/fms_legs/row_1_alt}"
+      text-color: darkorange
+      text-size: 22
+      text-font: D-DINCondensed.otf
+      text-position: cm
+      text-bg-color: (70, 55, 20)
 
 - index: 3
   name: FPL_SCROLL_UP
@@ -82,24 +91,23 @@ buttons:
 - index: 4
   name: FPL_R2_IDX
   type: none
+  dataref: cockpitdecks/fms_legs/row_2_is_selected
   render-cooldown-ms: 80
   label: "#"
   label-color: Gold
-  annunciator:
-    size: medium
-    model: B
-    B0:
-      text: "${cockpitdecks/fms_legs/row_2_index}"
+  multi-texts:
+    - text: "${cockpitdecks/fms_legs/row_2_index}\n${cockpitdecks/fms_legs/row_2_status}"
+      text-color: white
+      text-size: 22
       text-font: D-DINCondensed.otf
-      text-size: 48
-      color: white
-      formula: "1"
-    B1:
-      text: "${cockpitdecks/fms_legs/row_2_status}"
+      text-position: cm
+      text-bg-color: (20, 20, 24)
+    - text: "${cockpitdecks/fms_legs/row_2_index}\n${cockpitdecks/fms_legs/row_2_status}"
+      text-color: white
+      text-size: 22
       text-font: D-DINCondensed.otf
-      text-size: 28
-      color: lime
-      formula: "${cockpitdecks/fms_legs/row_2_is_active} ${cockpitdecks/fms_legs/row_2_is_selected} or"
+      text-position: cm
+      text-bg-color: (70, 55, 20)
 
 - index: 5
   name: FPL_R2_WPT
@@ -127,15 +135,23 @@ buttons:
 - index: 6
   name: FPL_R2_ALT
   type: none
+  dataref: cockpitdecks/fms_legs/row_2_is_selected
   render-cooldown-ms: 80
   label: ALT
   label-color: Gold
-  text: "${cockpitdecks/fms_legs/row_2_alt}"
-  text-color: darkorange
-  text-size: 22
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
+  multi-texts:
+    - text: "${cockpitdecks/fms_legs/row_2_alt}"
+      text-color: darkorange
+      text-size: 22
+      text-font: D-DINCondensed.otf
+      text-position: cm
+      text-bg-color: (20, 20, 24)
+    - text: "${cockpitdecks/fms_legs/row_2_alt}"
+      text-color: darkorange
+      text-size: 22
+      text-font: D-DINCondensed.otf
+      text-position: cm
+      text-bg-color: (70, 55, 20)
 
 - index: 7
   name: FPL_SEL
@@ -143,7 +159,7 @@ buttons:
   render-cooldown-ms: 80
   label: SEL
   label-color: Gold
-  text: "${cockpitdecks/fms_legs/selected_index}/${cockpitdecks/fms_legs/entry_count}"
+  text: "${cockpitdecks/fms_legs/sel_count}"
   text-color: white
   text-size: 24
   text-font: D-DINCondensed.otf
@@ -154,24 +170,23 @@ buttons:
 - index: 8
   name: FPL_R3_IDX
   type: none
+  dataref: cockpitdecks/fms_legs/row_3_is_selected
   render-cooldown-ms: 80
   label: "#"
   label-color: Gold
-  annunciator:
-    size: medium
-    model: B
-    B0:
-      text: "${cockpitdecks/fms_legs/row_3_index}"
+  multi-texts:
+    - text: "${cockpitdecks/fms_legs/row_3_index}\n${cockpitdecks/fms_legs/row_3_status}"
+      text-color: white
+      text-size: 22
       text-font: D-DINCondensed.otf
-      text-size: 48
-      color: white
-      formula: "1"
-    B1:
-      text: "${cockpitdecks/fms_legs/row_3_status}"
+      text-position: cm
+      text-bg-color: (20, 20, 24)
+    - text: "${cockpitdecks/fms_legs/row_3_index}\n${cockpitdecks/fms_legs/row_3_status}"
+      text-color: white
+      text-size: 22
       text-font: D-DINCondensed.otf
-      text-size: 28
-      color: lime
-      formula: "${cockpitdecks/fms_legs/row_3_is_active} ${cockpitdecks/fms_legs/row_3_is_selected} or"
+      text-position: cm
+      text-bg-color: (70, 55, 20)
 
 - index: 9
   name: FPL_R3_WPT
@@ -199,15 +214,23 @@ buttons:
 - index: 10
   name: FPL_R3_ALT
   type: none
+  dataref: cockpitdecks/fms_legs/row_3_is_selected
   render-cooldown-ms: 80
   label: ALT
   label-color: Gold
-  text: "${cockpitdecks/fms_legs/row_3_alt}"
-  text-color: darkorange
-  text-size: 22
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
+  multi-texts:
+    - text: "${cockpitdecks/fms_legs/row_3_alt}"
+      text-color: darkorange
+      text-size: 22
+      text-font: D-DINCondensed.otf
+      text-position: cm
+      text-bg-color: (20, 20, 24)
+    - text: "${cockpitdecks/fms_legs/row_3_alt}"
+      text-color: darkorange
+      text-size: 22
+      text-font: D-DINCondensed.otf
+      text-position: cm
+      text-bg-color: (70, 55, 20)
 
 - index: 11
   name: FPL_SCROLL_DN

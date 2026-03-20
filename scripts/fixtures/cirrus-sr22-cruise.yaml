@@ -79,6 +79,44 @@ datarefs:
   cockpitdecks/fms_browser/fms_displayed_altitude: 24000
   cockpitdecks/fms_browser/fms_last_ident: LIML
   cockpitdecks/fms_browser/fms_last_altitude: 0
+  cockpitdecks/fms_browser/list_page: 1/10
+  cockpitdecks/fms_browser/list_sel_count: "-/3"
+  cockpitdecks/fms_browser/list_sort_key: NAME
+  cockpitdecks/fms_browser/list_sort_direction: ASC
+  cockpitdecks/fms_browser/list_snapshot: '{"window_start":0,"plan_count":28,"selected_plan_index":-1,"sort_key":0,"sort_desc":0,"page":1,"page_count":10,"row_1_list_index":"1","row_1_is_selected":0,"row_2_list_index":"2","row_2_is_selected":0,"row_3_list_index":"3","row_3_is_selected":0}'
+  cockpitdecks/fms_browser/list_row_1_index: "1"
+  cockpitdecks/fms_browser/list_row_1_filename: EDDM_LOWI
+  cockpitdecks/fms_browser/list_row_1_timestamp: "2026-03-20 08:10"
+  cockpitdecks/fms_browser/list_row_1_dep: EDDM
+  cockpitdecks/fms_browser/list_row_1_dest: LOWI
+  cockpitdecks/fms_browser/list_row_1_route: EDDM LOWI
+  cockpitdecks/fms_browser/list_row_1_wpt_count: 9
+  cockpitdecks/fms_browser/list_row_1_max_alt_ft: 36000
+  cockpitdecks/fms_browser/list_row_1_distance_nm: 145.0
+  cockpitdecks/fms_browser/list_row_1_is_selected: 0
+  cockpitdecks/fms_browser/list_row_1_status: ""
+  cockpitdecks/fms_browser/list_row_2_index: "2"
+  cockpitdecks/fms_browser/list_row_2_filename: LOWI_LSZH
+  cockpitdecks/fms_browser/list_row_2_timestamp: "2026-03-20 08:12"
+  cockpitdecks/fms_browser/list_row_2_dep: LOWI
+  cockpitdecks/fms_browser/list_row_2_dest: LSZH
+  cockpitdecks/fms_browser/list_row_2_route: LOWI LSZH
+  cockpitdecks/fms_browser/list_row_2_wpt_count: 7
+  cockpitdecks/fms_browser/list_row_2_max_alt_ft: 24000
+  cockpitdecks/fms_browser/list_row_2_distance_nm: 92.0
+  cockpitdecks/fms_browser/list_row_2_is_selected: 0
+  cockpitdecks/fms_browser/list_row_2_status: ""
+  cockpitdecks/fms_browser/list_row_3_index: "3"
+  cockpitdecks/fms_browser/list_row_3_filename: EHAM_LIML
+  cockpitdecks/fms_browser/list_row_3_timestamp: "2026-03-20 08:15"
+  cockpitdecks/fms_browser/list_row_3_dep: EHAM
+  cockpitdecks/fms_browser/list_row_3_dest: LIML
+  cockpitdecks/fms_browser/list_row_3_route: EHAM LIML
+  cockpitdecks/fms_browser/list_row_3_wpt_count: 14
+  cockpitdecks/fms_browser/list_row_3_max_alt_ft: 39000
+  cockpitdecks/fms_browser/list_row_3_distance_nm: 487.3
+  cockpitdecks/fms_browser/list_row_3_is_selected: 0
+  cockpitdecks/fms_browser/list_row_3_status: ""
   cockpitdecks/fms_legs/entry_count: 10
   cockpitdecks/fms_legs/selected_index: 9
   cockpitdecks/fms_legs/row_1_index: 8
