@@ -1,0 +1,325 @@
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="Duane Licudi"><link rel="canonical" href="https://dlicudi.github.io/cockpitdecks-configs/getting-started/installation/">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Installation - Cockpitdecks Configs</title>
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Installation";
+        var mkdocs_page_input_path = "getting-started/installation.md";
+        var mkdocs_page_url = "/cockpitdecks-configs/getting-started/installation/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Cockpitdecks Configs
+        </a><div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Installation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#1-install-xppython3">1. Install XPPython3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-install-cockpitdecks">2. Install Cockpitdecks</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#loupedeck">Loupedeck</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#stream-deck">Stream Deck</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#x-touch-mini">X-Touch Mini</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#editable-dev">Editable (dev)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#x-plane-plugin">X-Plane plugin</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-clone-cockpitdecks-configs">3. Clone cockpitdecks-configs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-link-an-aircraft">4. Link an aircraft</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-start-flying">5. Start flying</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../development/">Development</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Architecture</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/">Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Decks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/aerobask-robin-dr401/">Robin DR401</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/beechcraft-baron-58/">Beechcraft Baron 58</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/cessna-172-sp/">Cessna 172 SP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/cirrus-sr22/">Cirrus SR22</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/embraer-e-jets-family/">Embraer E-Jets Family</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/lancair-evolution/">Lancair Evolution</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a320-neo/">Airbus A320neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a321-neo/">Toliss A321neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a330-neo/">ToLiss A330neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/vans-aircraft-rv-10/">Van's Aircraft RV-10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/compatibility/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/deck-types/">Deck Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/plugin-interface/">Plugin Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cirrus-sr22-gaps/">Cirrus SR22 Gaps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cirrus-sr22-reference/">Cirrus SR22 Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/modules/">Modules</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Cockpitdecks Configs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Getting Started</li>
+      <li class="breadcrumb-item active">Installation</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/docs/getting-started/installation.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h1>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Version</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X-Plane</td>
+<td>12</td>
+<td><a href="https://www.x-plane.com">x-plane.com</a></td>
+</tr>
+<tr>
+<td>Python</td>
+<td>3.10+</td>
+<td><a href="https://www.python.org">python.org</a></td>
+</tr>
+<tr>
+<td>XPPython3</td>
+<td>Latest</td>
+<td><a href="https://xppython3.readthedocs.io/en/latest/index.html">Documentation</a></td>
+</tr>
+<tr>
+<td>Deck hardware</td>
+<td>Loupedeck Live, Stream Deck XL, or other supported deck</td>
+<td><a href="../../reference/deck-types/">Deck Types</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-install-xppython3">1. Install XPPython3<a class="headerlink" href="#1-install-xppython3" title="Permanent link">¶</a></h2>
+<ol>
+<li>Download the XPPython3 zip from the <a href="https://xppython3.readthedocs.io/en/latest/index.html">XPPython3 site</a></li>
+<li>Extract into <code>X-Plane/Resources/plugins/</code></li>
+<li>Start X-Plane once to confirm the plugin loads</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">macOS</p>
+<p>Follow the <a href="https://xppython3.readthedocs.io/en/latest/usage/mac_quarantine.html">quarantine steps</a>
+before first launch.</p>
+</div>
+<h2 id="2-install-cockpitdecks">2. Install Cockpitdecks<a class="headerlink" href="#2-install-cockpitdecks" title="Permanent link">¶</a></h2>
+<p>Create a virtual environment and install Cockpitdecks with the extras that match your
+simulator and deck hardware.</p>
+<pre class="highlight"><code class="language-sh">python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip</code></pre>
+<h4 id="loupedeck">Loupedeck<a class="headerlink" href="#loupedeck" title="Permanent link">¶</a></h4>
+<pre class="highlight"><code class="language-sh">pip install 'cockpitdecks[xplane,loupedeck] @ git+https://github.com/dlicudi/cockpitdecks.git'</code></pre>
+<h4 id="stream-deck">Stream Deck<a class="headerlink" href="#stream-deck" title="Permanent link">¶</a></h4>
+<pre class="highlight"><code class="language-sh">pip install 'cockpitdecks[xplane,streamdeck] @ git+https://github.com/dlicudi/cockpitdecks.git'</code></pre>
+<h4 id="x-touch-mini">X-Touch Mini<a class="headerlink" href="#x-touch-mini" title="Permanent link">¶</a></h4>
+<pre class="highlight"><code class="language-sh">pip install 'cockpitdecks[xplane,xtouchmini] @ git+https://github.com/dlicudi/cockpitdecks.git'</code></pre>
+<h4 id="editable-dev">Editable (dev)<a class="headerlink" href="#editable-dev" title="Permanent link">¶</a></h4>
+<pre class="highlight"><code class="language-sh">git clone https://github.com/dlicudi/cockpitdecks.git
+cd cockpitdecks
+pip install -e '.[xplane,loupedeck]'</code></pre>
+<details class="note">
+<summary>Available extras</summary>
+<table>
+<thead>
+<tr>
+<th>Extra</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>xplane</code></td>
+<td>X-Plane simulator support</td>
+</tr>
+<tr>
+<td><code>loupedeck</code></td>
+<td>Loupedeck Live / Live S / CT</td>
+</tr>
+<tr>
+<td><code>streamdeck</code></td>
+<td>Elgato Stream Deck models</td>
+</tr>
+<tr>
+<td><code>xtouchmini</code></td>
+<td>Behringer X-Touch Mini</td>
+</tr>
+<tr>
+<td><code>weather</code></td>
+<td>Weather icon support</td>
+</tr>
+<tr>
+<td><code>toliss</code></td>
+<td>ToLiss aircraft extensions</td>
+</tr>
+</tbody>
+</table>
+<p>Combine extras as needed, e.g. <code>cockpitdecks[xplane,loupedeck,weather,toliss]</code>.</p>
+</details>
+<h3 id="x-plane-plugin">X-Plane plugin<a class="headerlink" href="#x-plane-plugin" title="Permanent link">¶</a></h3>
+<p>Cockpitdecks requires <code>PI_cockpitdecks.py</code> in:</p>
+<pre class="highlight"><code class="language-text">X-Plane/Resources/plugins/PythonPlugins/</code></pre>
+<p>This file is included with the Cockpitdecks install.</p>
+<h2 id="3-clone-cockpitdecks-configs">3. Clone cockpitdecks-configs<a class="headerlink" href="#3-clone-cockpitdecks-configs" title="Permanent link">¶</a></h2>
+<p><code>cockpitdecks-configs</code> is configuration data, not a Python package — just clone it:</p>
+<pre class="highlight"><code class="language-sh">git clone https://github.com/dlicudi/cockpitdecks-configs.git</code></pre>
+<h2 id="4-link-an-aircraft">4. Link an aircraft<a class="headerlink" href="#4-link-an-aircraft" title="Permanent link">¶</a></h2>
+<p>Symlink the aircraft <code>deckconfig</code> folder into the matching X-Plane aircraft directory:</p>
+<pre class="highlight"><code class="language-sh">ln -s /path/to/cockpitdecks-configs/decks/cirrus-sr22/deckconfig \
+      ~/X-Plane\ 12/Aircraft/Laminar\ Research/Cirrus\ SR22/deckconfig</code></pre>
+<p>Repeat for other aircraft by changing the source and destination paths.</p>
+<h2 id="5-start-flying">5. Start flying<a class="headerlink" href="#5-start-flying" title="Permanent link">¶</a></h2>
+<p>With X-Plane running and XPPython3 loaded, start Cockpitdecks from your virtual environment:</p>
+<pre class="highlight"><code class="language-sh">cockpitdecks-cli</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Upstream docs</p>
+<p>For additional detail, see the <a href="https://devleaks.github.io/cockpitdecks-docs/Installation/">Cockpitdecks documentation</a>.</p>
+</div>
+<p>For local development tips and VS Code launch configurations, see <a href="../development/">Development</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../development/" class="btn btn-neutral float-right" title="Development">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2023 - 2024 Duane Licudi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/dlicudi/cockpitdecks-configs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../.." style="color: #fcfcfc">« Previous</a></span>
+    
+    
+      <span><a href="../development/" style="color: #fcfcfc">Next »</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

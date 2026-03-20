@@ -1,0 +1,449 @@
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="Duane Licudi"><link rel="canonical" href="https://dlicudi.github.io/cockpitdecks-configs/reference/deck-types/">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Deck Types - Cockpitdecks Configs</title>
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Deck Types";
+        var mkdocs_page_input_path = "reference/deck-types.md";
+        var mkdocs_page_url = "/cockpitdecks-configs/reference/deck-types/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Cockpitdecks Configs
+        </a><div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/development/">Development</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Architecture</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/">Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Decks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/aerobask-robin-dr401/">Robin DR401</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/beechcraft-baron-58/">Beechcraft Baron 58</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/cessna-172-sp/">Cessna 172 SP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/cirrus-sr22/">Cirrus SR22</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/embraer-e-jets-family/">Embraer E-Jets Family</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/lancair-evolution/">Lancair Evolution</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a320-neo/">Airbus A320neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a321-neo/">Toliss A321neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a330-neo/">ToLiss A330neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/vans-aircraft-rv-10/">Van's Aircraft RV-10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compatibility/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Deck Types</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#supported-decks">Supported Decks</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#physical">Physical</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#virtual">Virtual</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#actions">Actions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#feedback">Feedback</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#yaml-format">YAML Format</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#drivers">Drivers</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plugin-interface/">Plugin Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cirrus-sr22-gaps/">Cirrus SR22 Gaps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cirrus-sr22-reference/">Cirrus SR22 Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/modules/">Modules</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Cockpitdecks Configs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Reference</li>
+      <li class="breadcrumb-item active">Deck Types</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/docs/reference/deck-types.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="deck-types">Deck Types<a class="headerlink" href="#deck-types" title="Permanent link">¶</a></h1>
+<p>Deck type definitions describe the buttons, actions, and feedback available on each supported deck model.
+The <code>.yaml</code> files live in the <a href="https://github.com/dlicudi/cockpitdecks-configs/tree/main/decktypes"><code>decktypes/</code></a> directory.</p>
+<h2 id="supported-decks">Supported Decks<a class="headerlink" href="#supported-decks" title="Permanent link">¶</a></h2>
+<h3 id="physical">Physical<a class="headerlink" href="#physical" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Deck</th>
+<th>Driver</th>
+<th>Buttons</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Loupedeck Live</td>
+<td><code>loupedeck</code></td>
+<td>12 image keys, 6 encoders, touchscreen strips</td>
+<td>Primary development deck</td>
+</tr>
+<tr>
+<td>Stream Deck XL</td>
+<td><code>streamdeck</code></td>
+<td>32 image keys</td>
+<td>Large grid layout</td>
+</tr>
+<tr>
+<td>Stream Deck MK.2</td>
+<td><code>streamdeck</code></td>
+<td>15 image keys</td>
+<td>Standard size</td>
+</tr>
+<tr>
+<td>Stream Deck Mini</td>
+<td><code>streamdeck</code></td>
+<td>6 image keys</td>
+<td>Compact</td>
+</tr>
+<tr>
+<td>Stream Deck Neo</td>
+<td><code>streamdeck</code></td>
+<td>8 image keys + info strip</td>
+<td></td>
+</tr>
+<tr>
+<td>Stream Deck +</td>
+<td><code>streamdeck</code></td>
+<td>8 image keys + 4 encoders + touchscreen</td>
+<td></td>
+</tr>
+<tr>
+<td>X-Touch Mini</td>
+<td><code>xtouchmini</code></td>
+<td>16 buttons, 8 encoders, slider</td>
+<td>MIDI controller</td>
+</tr>
+</tbody>
+</table>
+<h3 id="virtual">Virtual<a class="headerlink" href="#virtual" title="Permanent link">¶</a></h3>
+<p>Virtual decks mirror the layout of physical decks in a browser window — useful for
+development and testing without hardware.</p>
+<table>
+<thead>
+<tr>
+<th>Deck</th>
+<th>Mirrors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Virtual Loupedeck Live</td>
+<td>Loupedeck Live</td>
+</tr>
+<tr>
+<td>Virtual Streamdeck XL</td>
+<td>Stream Deck XL</td>
+</tr>
+<tr>
+<td>Virtual Streamdeck MK.2</td>
+<td>Stream Deck MK.2</td>
+</tr>
+<tr>
+<td>Virtual Streamdeck Mini</td>
+<td>Stream Deck Mini</td>
+</tr>
+<tr>
+<td>Virtual Streamdeck Neo</td>
+<td>Stream Deck Neo</td>
+</tr>
+<tr>
+<td>Virtual Streamdeck +</td>
+<td>Stream Deck +</td>
+</tr>
+<tr>
+<td>Virtual X-Touch Mini</td>
+<td>X-Touch Mini</td>
+</tr>
+</tbody>
+</table>
+<h2 id="actions">Actions<a class="headerlink" href="#actions" title="Permanent link">¶</a></h2>
+<p>Supported interaction types:</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>none</code></td>
+<td>Display only, no interaction</td>
+</tr>
+<tr>
+<td><code>press</code></td>
+<td>Single press event</td>
+</tr>
+<tr>
+<td><code>longpress</code></td>
+<td>Long-press event (decks that support it directly)</td>
+</tr>
+<tr>
+<td><code>push</code></td>
+<td>Pressed and released events — more flexible, allows timing-sensitive actions</td>
+</tr>
+<tr>
+<td><code>encoder</code></td>
+<td>Stepped rotary encoder input</td>
+</tr>
+<tr>
+<td><code>cursor</code></td>
+<td>Continuous slider/cursor input</td>
+</tr>
+<tr>
+<td><code>swipe</code></td>
+<td>Touch-surface gestures</td>
+</tr>
+</tbody>
+</table>
+<p>In practice, <code>push</code> is the more flexible event type because it allows timing-sensitive
+actions such as long-press handling.</p>
+<h2 id="feedback">Feedback<a class="headerlink" href="#feedback" title="Permanent link">¶</a></h2>
+<p>Supported output types:</p>
+<table>
+<thead>
+<tr>
+<th>Feedback</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>none</code></td>
+<td>No visual feedback</td>
+</tr>
+<tr>
+<td><code>led</code></td>
+<td>Single-colour LED</td>
+</tr>
+<tr>
+<td><code>colored-led</code></td>
+<td>RGB LED</td>
+</tr>
+<tr>
+<td><code>encoder-leds</code></td>
+<td>LED ring around encoder</td>
+</tr>
+<tr>
+<td><code>image</code></td>
+<td>Rendered image on key screen</td>
+</tr>
+<tr>
+<td><code>vibrate</code></td>
+<td>Haptic feedback</td>
+</tr>
+</tbody>
+</table>
+<h2 id="yaml-format">YAML Format<a class="headerlink" href="#yaml-format" title="Permanent link">¶</a></h2>
+<pre class="highlight"><code class="language-yaml">---
+type: LoupedeckLive
+driver: loupedeck
+buttons:
+  - name: 0
+    action: push
+    feedback: image
+    image: [90, 90, 0, 0]
+    repeat: 12</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td>Deck type name reported by the driver</td>
+</tr>
+<tr>
+<td><code>driver</code></td>
+<td>Cockpitdecks driver for the hardware</td>
+</tr>
+<tr>
+<td><code>action</code></td>
+<td>Supported interaction type for the control</td>
+</tr>
+<tr>
+<td><code>feedback</code></td>
+<td>Supported output type for the control</td>
+</tr>
+<tr>
+<td><code>image</code></td>
+<td>Icon size and placement <code>[width, height, x, y]</code> for screen-based controls</td>
+</tr>
+<tr>
+<td><code>repeat</code></td>
+<td>Number of identical buttons in a grid</td>
+</tr>
+<tr>
+<td><code>range</code></td>
+<td>Min/max value range for sliders or cursor-style controls</td>
+</tr>
+</tbody>
+</table>
+<h2 id="drivers">Drivers<a class="headerlink" href="#drivers" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Driver</th>
+<th>Hardware</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>streamdeck</code></td>
+<td>All Elgato Stream Deck models</td>
+</tr>
+<tr>
+<td><code>loupedeck</code></td>
+<td>Loupedeck Live and CT</td>
+</tr>
+<tr>
+<td><code>xtouchmini</code></td>
+<td>Behringer X-Touch Mini</td>
+</tr>
+</tbody>
+</table>
+<p>For the original detailed notes, see <a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decktypes/README.md"><code>decktypes/README.md</code></a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../compatibility/" class="btn btn-neutral float-left" title="Compatibility"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../plugin-interface/" class="btn btn-neutral float-right" title="Plugin Interface">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2023 - 2024 Duane Licudi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/dlicudi/cockpitdecks-configs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../compatibility/" style="color: #fcfcfc">« Previous</a></span>
+    
+    
+      <span><a href="../plugin-interface/" style="color: #fcfcfc">Next »</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
