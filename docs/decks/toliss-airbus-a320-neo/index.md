@@ -19,8 +19,8 @@
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/pfi.yaml">pfi.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/fcu.page.png" alt="FCU preview" loading="lazy">
-<div class="page-name">FCU</div>
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/loupedecklive1/fcu.page.png" alt="Main FCU page for Loupedeck Live preview" loading="lazy">
+<div class="page-name">Main FCU page for Loupedeck Live</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/loupedecklive1/fcu.yaml">fcu.yaml</a></div>
 </div>
 <div class="page-card">
@@ -61,8 +61,8 @@
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/pfi.yaml">pfi.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/switches.page.png" alt="Switches preview" loading="lazy">
-<div class="page-name">Switches</div>
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/switches.page.png" alt="Switch Panel preview" loading="lazy">
+<div class="page-name">Switch Panel</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/switches.yaml">switches.yaml</a></div>
 </div>
 <div class="page-card">
@@ -91,8 +91,8 @@
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/transponder.yaml">transponder.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/switches2.page.png" alt="Switches 2 preview" loading="lazy">
-<div class="page-name">Switches 2</div>
+<img src="../../assets/images/toliss-airbus-a320-neo/generated/streamdeckxl1/switches2.page.png" alt="Switch Panel 2 preview" loading="lazy">
+<div class="page-name">Switch Panel 2</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a320-neo/deckconfig/streamdeckxl1/switches2.yaml">switches2.yaml</a></div>
 </div>
 <div class="page-card">

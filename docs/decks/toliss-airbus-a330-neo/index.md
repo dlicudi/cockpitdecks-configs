@@ -9,13 +9,13 @@
 
 <div class="page-gallery">
 <div class="page-card">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/index.page.png" alt="Home preview" loading="lazy">
-<div class="page-name">Home</div>
+<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/index.page.png" alt="Transponder and other communication for Loupedeck Live preview" loading="lazy">
+<div class="page-name">Transponder and other communication for Loupedeck Live</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/index.yaml">index.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/fcu.page.png" alt="FCU preview" loading="lazy">
-<div class="page-name">FCU</div>
+<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/fcu.page.png" alt="Main FCU page for Loupedeck Live preview" loading="lazy">
+<div class="page-name">Main FCU page for Loupedeck Live</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/fcu.yaml">fcu.yaml</a></div>
 </div>
 <div class="page-card">
@@ -41,8 +41,8 @@
 
 <div class="page-gallery">
 <div class="page-card">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/index.page.png" alt="Home preview" loading="lazy">
-<div class="page-name">Home</div>
+<img src="../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/index.page.png" alt="EFIS display selector + some FCU commands for Streamdeck 15 keys preview" loading="lazy">
+<div class="page-name">EFIS display selector + some FCU commands for Streamdeck 15 keys</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/efis-ecam/index.yaml">index.yaml</a></div>
 </div>
 <div class="page-card">
@@ -58,8 +58,8 @@
 
 <div class="page-gallery">
 <div class="page-card">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/index.page.png" alt="Home preview" loading="lazy">
-<div class="page-name">Home</div>
+<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/index.page.png" alt="Bottom part of overhead panel, external lights preview" loading="lazy">
+<div class="page-name">Bottom part of overhead panel, external lights</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/index.yaml">index.yaml</a></div>
 </div>
 <div class="page-card">
@@ -204,8 +204,8 @@
 
 <div class="page-gallery">
 <div class="page-card">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/index.page.png" alt="Home preview" loading="lazy">
-<div class="page-name">Home</div>
+<img src="../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/index.page.png" alt="EFIS display selector + some FCU commands for Streamdeck 15 keys preview" loading="lazy">
+<div class="page-name">EFIS display selector + some FCU commands for Streamdeck 15 keys</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/efis-ecam/index.yaml">index.yaml</a></div>
 </div>
 <div class="page-card">
@@ -221,8 +221,8 @@
 
 <div class="page-gallery">
 <div class="page-card">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/index.page.png" alt="Home preview" loading="lazy">
-<div class="page-name">Home</div>
+<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/index.page.png" alt="Bottom part of overhead panel, external lights preview" loading="lazy">
+<div class="page-name">Bottom part of overhead panel, external lights</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/index.yaml">index.yaml</a></div>
 </div>
 <div class="page-card">
@@ -333,8 +333,8 @@
 
 <div class="page-gallery">
 <div class="page-card">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/vmini/index.page.png" alt="Home preview" loading="lazy">
-<div class="page-name">Home</div>
+<img src="../../assets/images/toliss-airbus-a330-neo/generated/vmini/index.page.png" alt="Test deck for Virtual Streamdeck Mini (6 images) preview" loading="lazy">
+<div class="page-name">Test deck for Virtual Streamdeck Mini (6 images)</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/vmini/index.yaml">index.yaml</a></div>
 </div>
 </div>
@@ -356,7 +356,7 @@
 
 <div class="page-gallery">
 <div class="page-card">
-<div class="page-name">Home</div>
+<div class="page-name">Test deck for Virtual Streamdeck Neo (8 images, 2 buttons, 2 leds, 1 display)</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/vneo/index.yaml">index.yaml</a></div>
 </div>
 </div>
@@ -367,13 +367,13 @@
 
 <div class="page-gallery">
 <div class="page-card">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/index.page.png" alt="Home preview" loading="lazy">
-<div class="page-name">Home</div>
+<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/index.page.png" alt="Transponder and other communication for Loupedeck Live preview" loading="lazy">
+<div class="page-name">Transponder and other communication for Loupedeck Live</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/index.yaml">index.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/fcu.page.png" alt="FCU preview" loading="lazy">
-<div class="page-name">FCU</div>
+<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/fcu.page.png" alt="Main FCU page for Loupedeck Live preview" loading="lazy">
+<div class="page-name">Main FCU page for Loupedeck Live</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/fcu.yaml">fcu.yaml</a></div>
 </div>
 <div class="page-card">

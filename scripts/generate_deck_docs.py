@@ -21,6 +21,8 @@ RENDER_PREVIEW_SCRIPT = ROOT / "scripts" / "render_deck_preview.py"
 REPO_BLOB_BASE = "https://github.com/dlicudi/cockpitdecks-configs/blob/main"
 MKDOCS_CONFIG = ROOT / "mkdocs.yml"
 
+# Fallback display titles for generated docs when a page YAML has no `_docs.title`,
+# `description`, or distinct `name`. Prefer per-page `_docs: { title: "..." }` in deck YAML.
 PAGE_NAME_OVERRIDES = {
     "audiopanel": "Audio Panel",
     "home": "Home",
@@ -284,10 +286,26 @@ def layout_entries(config: dict[str, Any], deckconfig_dir: Path) -> list[dict[st
 def page_title(page_path: Path) -> str:
     page = load_yaml(page_path)
     docs = normalize_docs_metadata(page.get("_docs") or page.get("docs"))
-    title = str(docs.get("title") or page.get("description") or page.get("name") or page_path.stem)
-    if page_path.stem in PAGE_NAME_OVERRIDES:
-        return PAGE_NAME_OVERRIDES[page_path.stem]
-    return title if title != page_path.stem else titleize_slug(title.replace("_", "-"))
+    stem = page_path.stem
+
+    doc_title = docs.get("title")
+    if doc_title is not None and str(doc_title).strip():
+        return str(doc_title).strip()
+
+    desc = page.get("description")
+    if desc is not None and str(desc).strip():
+        return str(desc).strip()
+
+    name = page.get("name")
+    if name is not None and str(name).strip():
+        name_s = str(name).strip()
+        if name_s != stem:
+            return name_s
+
+    if stem in PAGE_NAME_OVERRIDES:
+        return PAGE_NAME_OVERRIDES[stem]
+
+    return titleize_slug(stem.replace("_", "-"))
 
 
 

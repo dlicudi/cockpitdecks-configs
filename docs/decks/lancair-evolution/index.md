@@ -19,8 +19,8 @@
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/pfi.yaml">pfi.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/lancair-evolution/generated/loupedecklive1/switches.page.png" alt="Switches preview" loading="lazy">
-<div class="page-name">Switches</div>
+<img src="../../assets/images/lancair-evolution/generated/loupedecklive1/switches.page.png" alt="Switch Panel preview" loading="lazy">
+<div class="page-name">Switch Panel</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/switches.yaml">switches.yaml</a></div>
 </div>
 <div class="page-card">
@@ -49,8 +49,8 @@
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/transponder.yaml">transponder.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/lancair-evolution/generated/loupedecklive1/switches2.page.png" alt="Switches 2 preview" loading="lazy">
-<div class="page-name">Switches 2</div>
+<img src="../../assets/images/lancair-evolution/generated/loupedecklive1/switches2.page.png" alt="Switch Panel preview" loading="lazy">
+<div class="page-name">Switch Panel</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/loupedecklive1/switches2.yaml">switches2.yaml</a></div>
 </div>
 <div class="page-card">
@@ -111,8 +111,8 @@
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/transponder.yaml">transponder.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/lancair-evolution/generated/streamdeckxl1/switches.page.png" alt="Switches preview" loading="lazy">
-<div class="page-name">Switches</div>
+<img src="../../assets/images/lancair-evolution/generated/streamdeckxl1/switches.page.png" alt="Switch Panel preview" loading="lazy">
+<div class="page-name">Switch Panel</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/lancair-evolution/deckconfig/streamdeckxl1/switches.yaml">switches.yaml</a></div>
 </div>
 <div class="page-card">

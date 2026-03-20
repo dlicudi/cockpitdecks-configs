@@ -29,8 +29,8 @@
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pfi.yaml">pfi.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/switches.page.png" alt="Switches preview" loading="lazy">
-<div class="page-name">Switches</div>
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/switches.page.png" alt="Switch Panel preview" loading="lazy">
+<div class="page-name">Switch Panel</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/switches.yaml">switches.yaml</a></div>
 </div>
 <div class="page-card">
@@ -49,9 +49,9 @@
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/engine.yaml">engine.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/nav.page.png" alt="Nav preview" loading="lazy">
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/fms_nav.page.png" alt="Nav preview" loading="lazy">
 <div class="page-name">Nav</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/nav.yaml">nav.yaml</a></div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fms_nav.yaml">fms_nav.yaml</a></div>
 </div>
 <div class="page-card">
 <img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/transponder.page.png" alt="Transponder preview" loading="lazy">
@@ -74,14 +74,14 @@
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/index2.yaml">index2.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/fpl.page.png" alt="Fpl preview" loading="lazy">
-<div class="page-name">Fpl</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fpl.yaml">fpl.yaml</a></div>
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/fms_fpl.page.png" alt="FPL preview" loading="lazy">
+<div class="page-name">FPL</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fms_fpl.yaml">fms_fpl.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/load.page.png" alt="Load preview" loading="lazy">
-<div class="page-name">Load</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/load.yaml">load.yaml</a></div>
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/fms_load.page.png" alt="Load FPL preview" loading="lazy">
+<div class="page-name">Load FPL</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fms_load.yaml">fms_load.yaml</a></div>
 </div>
 <div class="page-card">
 <img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/views.page.png" alt="Views preview" loading="lazy">
@@ -111,8 +111,8 @@
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/pfi.yaml">pfi.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/switches.page.png" alt="Switches preview" loading="lazy">
-<div class="page-name">Switches</div>
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/switches.page.png" alt="Switch Panel preview" loading="lazy">
+<div class="page-name">Switch Panel</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/switches.yaml">switches.yaml</a></div>
 </div>
 <div class="page-card">

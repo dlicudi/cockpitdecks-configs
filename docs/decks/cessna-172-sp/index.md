@@ -19,8 +19,8 @@
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/pfi.yaml">pfi.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/cessna-172-sp/generated/loupedecklive1/switches.page.png" alt="Switches preview" loading="lazy">
-<div class="page-name">Switches</div>
+<img src="../../assets/images/cessna-172-sp/generated/loupedecklive1/switches.page.png" alt="Switch Panel preview" loading="lazy">
+<div class="page-name">Switch Panel</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cessna-172-sp/deckconfig/loupedecklive1/switches.yaml">switches.yaml</a></div>
 </div>
 <div class="page-card">

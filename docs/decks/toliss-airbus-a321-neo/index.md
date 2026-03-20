@@ -9,13 +9,13 @@
 
 <div class="page-gallery">
 <div class="page-card">
-<img src="../../assets/images/toliss-airbus-a321-neo/generated/fcu/index.page.png" alt="Home preview" loading="lazy">
-<div class="page-name">Home</div>
+<img src="../../assets/images/toliss-airbus-a321-neo/generated/fcu/index.page.png" alt="Transponder and other communication for Loupedeck Live preview" loading="lazy">
+<div class="page-name">Transponder and other communication for Loupedeck Live</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/index.yaml">index.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/toliss-airbus-a321-neo/generated/fcu/fcu.page.png" alt="FCU preview" loading="lazy">
-<div class="page-name">FCU</div>
+<img src="../../assets/images/toliss-airbus-a321-neo/generated/fcu/fcu.page.png" alt="Main FCU page for Loupedeck Live preview" loading="lazy">
+<div class="page-name">Main FCU page for Loupedeck Live</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/fcu/fcu.yaml">fcu.yaml</a></div>
 </div>
 <div class="page-card">
@@ -46,8 +46,8 @@
 
 <div class="page-gallery">
 <div class="page-card">
-<img src="../../assets/images/toliss-airbus-a321-neo/generated/efis-ecam/index.page.png" alt="Home preview" loading="lazy">
-<div class="page-name">Home</div>
+<img src="../../assets/images/toliss-airbus-a321-neo/generated/efis-ecam/index.page.png" alt="ECAM display selector for Toliss A321neo for Streamdeck 15 keys preview" loading="lazy">
+<div class="page-name">ECAM display selector for Toliss A321neo for Streamdeck 15 keys</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/efis-ecam/index.yaml">index.yaml</a></div>
 </div>
 <div class="page-card">
@@ -63,8 +63,8 @@
 
 <div class="page-gallery">
 <div class="page-card">
-<img src="../../assets/images/toliss-airbus-a321-neo/generated/panels/index.page.png" alt="Home preview" loading="lazy">
-<div class="page-name">Home</div>
+<img src="../../assets/images/toliss-airbus-a321-neo/generated/panels/index.page.png" alt="Main index page, with external lights preview" loading="lazy">
+<div class="page-name">Main index page, with external lights</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/panels/index.yaml">index.yaml</a></div>
 </div>
 <div class="page-card">
@@ -175,7 +175,7 @@
 
 <div class="page-gallery">
 <div class="page-card">
-<div class="page-name">Home</div>
+<div class="page-name">EFIS control for Srteamdeck+ (encoders and a few buttons)</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a321-neo/deckconfig/efis/index.yaml">index.yaml</a></div>
 </div>
 </div>
