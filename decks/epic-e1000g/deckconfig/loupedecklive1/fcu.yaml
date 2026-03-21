@@ -1,0 +1,131 @@
+description: FCU
+includes: pager,encoders/encoders_fcu
+name: fcu
+
+buttons:
+
+  - index: 0
+    type: push
+    name: TRK
+    text: TRK
+    text-color: white
+    text-size: 40
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: black
+    command: sim/autopilot/track
+
+  - index: 1
+    name: NAV
+    type: push
+    text-bg-color: black
+    multi-texts:
+      - text: NAV
+        text-color: White
+        text-size: 40
+        text-font: D-DINCondensed.otf
+      - text: NAV
+        text-color: White
+        text-size: 40
+        text-font: D-DINCondensed.otf
+      - text: NAV
+        text-color: Lime
+        text-size: 40
+        text-font: D-DINCondensed.otf
+    formula: ${sim/cockpit2/autopilot/nav_status}
+    command: sim/autopilot/gpss
+
+  - index: 2
+    type: push
+    name: REV
+    text: REV
+    text-color: white
+    text-size: 40
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: black
+    command: sim/autopilot/back_course
+
+  - index: 3
+    type: push
+    name: ALT
+    text: ALT
+    text-color: white
+    text-size: 40
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: black
+    command: sim/autopilot/altitude_hold
+    vibrate: SHORT
+
+  - index: 4
+    name: SEL
+    type: push
+    text-bg-color: black
+    multi-texts:
+      - text: SEL
+        text-color: White
+        text-size: 40
+        text-font: D-DINCondensed.otf
+      - text: SEL
+        text-color: White
+        text-size: 40
+        text-font: D-DINCondensed.otf
+      - text: SEL
+        text-color: Lime
+        text-size: 40
+        text-font: D-DINCondensed.otf
+    formula: ${sim/cockpit2/autopilot/vvi_status}
+    command: sim/autopilot/alt_vs
+
+  - index: 5
+    name: VNAV
+    type: push
+    text: VNAV
+    text-color: white
+    text-size: 40
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: black
+    command: sim/autopilot/vnav
+    vibrate: SHORT
+
+  - index: 6
+    name: AP
+    type: push
+    text-bg-color: black
+    multi-texts:
+      - text: AP
+        text-color: White
+        text-size: 40
+        text-font: D-DINCondensed.otf
+      - text: AP
+        text-color: White
+        text-size: 40
+        text-font: D-DINCondensed.otf
+      - text: AP
+        text-color: Lime
+        text-size: 40
+        text-font: D-DINCondensed.otf
+    formula: ${sim/cockpit/autopilot/autopilot_mode}  
+    command: sim/autopilot/servos_toggle
+
+  - index: 7
+    name: GPSS
+    type: push
+    text-bg-color: black
+    multi-texts:
+      - text: GPSS
+        text-color: White
+        text-size: 40
+        text-font: D-DINCondensed.otf
+      - text: GPSS
+        text-color: White
+        text-size: 40
+        text-font: D-DINCondensed.otf
+      - text: GPSS
+        text-color: Lime
+        text-size: 40
+        text-font: D-DINCondensed.otf
+    formula: ${sim/cockpit2/autopilot/gpss_status}
+    command: sim/autopilot/gpss

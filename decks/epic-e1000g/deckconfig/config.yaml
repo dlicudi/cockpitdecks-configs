@@ -1,0 +1,19 @@
+aircraft: Epic E1000G
+icao: E100
+model:  Epic E1000G
+decks:
+  - name: XPLive
+    type: LoupedeckLive
+    layout: loupedecklive1
+    brightness: 100
+description: Loupedeck Live layout for Aerobask Epic E1000G (G1000 / GMC710, turboprop).
+print-page-dir: screendumps/epic-e1000g
+
+# cache-icon: True
+# dataref-roundings:
+#     sim/cockpit/autopilot/heading_mag: 2
+#     sim/flightmodel/position/latitude: 8
+#     sim/flightmodel/position/longitude: 8
+#     sim/cockpit/misc/barometer_setting: 2
+
+# debug: cockpitdecks.deck
