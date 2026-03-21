@@ -44,8 +44,8 @@ buttons:
       tick-underline: false
     dataref: sim/cockpit2/electrical/battery_on[0]
     commands:
-      - sim/electrical/battery_1_on
-      - sim/electrical/battery_1_off
+      - sim/electrical/battery_1_toggle
+      - sim/electrical/battery_1_toggle
 
   - index: 2
     name: BAT 2
@@ -66,8 +66,8 @@ buttons:
     options: large
     dataref: sim/cockpit2/electrical/battery_on[1]
     commands:
-      - sim/electrical/battery_2_on
-      - sim/electrical/battery_2_off
+      - sim/electrical/battery_2_toggle
+      - sim/electrical/battery_2_toggle
 
   - index: 3
     name: GEN
