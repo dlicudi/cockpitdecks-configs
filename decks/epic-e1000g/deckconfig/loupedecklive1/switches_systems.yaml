@@ -1,0 +1,77 @@
+description: SYSTEMS
+includes: pager,encoders/encoders_fcu
+name: switches_systems
+
+buttons:
+
+  - index: 0
+    name: BLEED AIR
+    label: BLEED AIR
+    label-font: D-DINCondensed.otf
+    type: onoff
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: D-DIN-Bold.otf
+      tick-underline: false
+    options: round
+    dataref: sim/cockpit2/bleedair/actuators/engine_bleed_sov[0]
+    commands:
+      - sim/bleed_air/engine_1_on
+      - sim/bleed_air/engine_1_off
+
+  - index: 1
+    name: CBN DUMP
+    label: CBN DUMP
+    label-font: D-DINCondensed.otf
+    type: onoff
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: D-DIN-Bold.otf
+      tick-underline: false
+    options: round
+    dataref: sim/cockpit2/pressurization/actuators/dump_all_on
+    commands:
+      - sim/pressurization/dump_on
+      - sim/pressurization/dump_off
+
+  - index: 2
+    name: AUTOPILOT
+    label: AUTOPILOT
+    label-font: D-DINCondensed.otf
+    type: onoff
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: D-DIN-Bold.otf
+      tick-underline: false
+    options: round
+    dataref: sim/cockpit2/autopilot/autopilot_electric_master
+    commands:
+      - sim/autopilot/electric_master_on
+      - sim/autopilot/electric_master_off
+
+  - index: 11
+    name: Switch hub
+    type: page
+    page: switches
+    text: ←
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold

@@ -1,0 +1,100 @@
+description: PRE-TAXI
+includes: pager,encoders/encoders_fcu
+name: switches_pretaxi
+
+buttons:
+
+  - index: 0
+    name: IGNITER
+    label: IGNITER
+    label-font: D-DINCondensed.otf
+    type: onoff
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: D-DIN-Bold.otf
+      tick-underline: false
+    dataref: aerobask/igniter_on
+    commands:
+      - aerobask/igniter_toggle
+      - aerobask/igniter_toggle
+
+  - index: 1
+    name: START
+    label: START
+    label-font: D-DINCondensed.otf
+    type: onoff
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "START"
+        - "OFF"
+      tick-label-size: 36
+      tick-label-font: D-DIN-Bold.otf
+      tick-underline: false
+    dataref: sim/cockpit2/engine/actuators/ignition_key[0]
+    commands:
+      - set-dataref: sim/cockpit2/engine/actuators/ignition_key[0]
+        value: 4
+      - set-dataref: sim/cockpit2/engine/actuators/ignition_key[0]
+        value: 0
+
+  - index: 2
+    name: FUEL AUTO
+    label: FUEL AUTO
+    label-font: D-DINCondensed.otf
+    type: onoff
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: D-DIN-Bold.otf
+      tick-underline: false
+    dataref: aerobask/fuel_auto_on
+    commands:
+      - aerobask/fuel_auto_toggle
+      - aerobask/fuel_auto_toggle
+
+  - index: 3
+    name: PUSHER
+    label: PUSHER
+    label-font: D-DINCondensed.otf
+    type: onoff
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+        - "ON"
+        - "OFF"
+      tick-label-size: 42
+      tick-label-font: D-DIN-Bold.otf
+      tick-underline: false
+    dataref: aerobask/pusher_on
+    commands:
+      - aerobask/pusher_toggle
+      - aerobask/pusher_toggle
+
+  - index: 11
+    name: Switch hub
+    type: page
+    page: switches
+    text: ←
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold
