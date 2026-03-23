@@ -17,3 +17,4 @@ scripts/events.json
 variable-database-dump.yaml
 requirements-dev.txt
 CLAUDE.md
+.claude/*
