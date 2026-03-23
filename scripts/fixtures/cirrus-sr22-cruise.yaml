@@ -83,7 +83,7 @@ datarefs:
   cockpitdecks/fms_browser/list_sel_count: "-/3"
   cockpitdecks/fms_browser/list_sort_key: NAME
   cockpitdecks/fms_browser/list_sort_direction: ASC
-  cockpitdecks/fms_browser/list_snapshot: '{"window_start":0,"plan_count":28,"selected_plan_index":-1,"sort_key":0,"sort_desc":0,"page":1,"page_count":10,"row_1_list_index":"1","row_1_is_selected":0,"row_2_list_index":"2","row_2_is_selected":0,"row_3_list_index":"3","row_3_is_selected":0}'
+  cockpitdecks/fms_browser/list_window_page: 1
   cockpitdecks/fms_browser/list_row_1_index: "1"
   cockpitdecks/fms_browser/list_row_1_filename: EDDM_LOWI
   cockpitdecks/fms_browser/list_row_1_timestamp: "2026-03-20 08:10"

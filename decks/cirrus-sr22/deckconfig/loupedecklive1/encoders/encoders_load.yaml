@@ -9,7 +9,7 @@ buttons:
 - index: e0
   name: browse_plan_pages
   type: encoder
-  dataref: cockpitdecks/fms_browser/list_snapshot
+  dataref: cockpitdecks/fms_browser/list_window_page
   commands:
   - cockpitdecks/fms_browser/list_scroll_up
   - cockpitdecks/fms_browser/list_scroll_down
@@ -17,7 +17,7 @@ buttons:
 - index: e1
   name: select_plan
   type: encoder
-  dataref: cockpitdecks/fms_browser/list_snapshot
+  dataref: cockpitdecks/fms_browser/index
   commands:
   - cockpitdecks/fms_browser/previous
   - cockpitdecks/fms_browser/next

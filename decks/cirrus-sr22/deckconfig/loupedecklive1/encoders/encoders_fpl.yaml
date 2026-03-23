@@ -6,7 +6,7 @@ buttons:
 - index: e0
   name: browse_fpl_pages
   type: encoder
-  dataref: cockpitdecks/fms_legs/snapshot
+  dataref: cockpitdecks/fms_legs/window_start
   commands:
   - cockpitdecks/fms_legs/scroll_up
   - cockpitdecks/fms_legs/scroll_down
@@ -14,7 +14,7 @@ buttons:
 - index: e1
   name: select_leg
   type: encoder-push
-  dataref: cockpitdecks/fms_legs/snapshot
+  dataref: cockpitdecks/fms_legs/selected_index
   commands:
   - cockpitdecks/fms_legs/clear_selected
   - cockpitdecks/fms_legs/previous
@@ -43,7 +43,7 @@ buttons:
 - index: e4
   name: select_leg_alt
   type: encoder-push
-  dataref: cockpitdecks/fms_legs/snapshot
+  dataref: cockpitdecks/fms_legs/selected_index
   commands:
   - cockpitdecks/fms_legs/clear_selected
   - cockpitdecks/fms_legs/previous

@@ -20,7 +20,7 @@ G1000-style FMS layout expects the following datarefs and commands.
 - `list_sel_count` — which **visible row** (1–3) is selected on the current page, e.g. `2/3` or `-/3` when none; use `list_page` + row `list_row_*_index` for global plan order
 - `list_sort_key` / `list_sort_mode` — `NAME` or `TIME`
 - `list_sort_direction` — `ASC` or `DESC`
-- `list_snapshot` — JSON for encoder binding (window + row indices + selection + `sort_key` + `sort_desc`)
+- `list_window_page` — int, 1-based visible page (for encoder / subscriptions; same paging as `list_scroll_*`)
 - Commands: `list_scroll_up`, `list_scroll_down` — move by **one page** (three plans), not one-by-one (Loupedeck SR22 Load binds these to **E0**; deck keys may use sort or `refresh` instead)
 - Commands: `list_sort_toggle_key`, `list_sort_toggle_direction` — toggle the browser sort key/direction
 - Commands: `list_sort_filename`, `list_sort_timestamp`, `list_sort_asc`, `list_sort_desc` — explicit setters if you want fixed-state actions
@@ -42,7 +42,7 @@ G1000-style FMS layout expects the following datarefs and commands.
 ### fms_legs (FPL waypoint list)
 - `row_1_index`, `row_1_ident`, `row_1_alt`, `row_1_is_active`, `row_1_is_selected`, `row_1_status`
 - (same for row_2, row_3)
-- `selected_index`, `entry_count`, `snapshot`, `window_start` (read=page 1,2,3…; writable=set page)
+- `selected_index`, `entry_count`, `window_start` (read=page 1,2,3…; writable=set page)
 - Commands: `scroll_up`, `scroll_down` — move by **page** (1–3, 4–6, 7–9…), *not* 1-by-1
 - Commands: `direct_to`, `select_row_1`, `select_row_2`, `select_row_3`, `clear_selected`
 
