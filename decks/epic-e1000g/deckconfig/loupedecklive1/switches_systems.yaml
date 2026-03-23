@@ -5,73 +5,167 @@ name: switches_systems
 buttons:
 
   - index: 0
-    name: BLEED AIR
-    label: BLEED AIR
-    label-font: D-DINCondensed.otf
+    name: PRESS AIR
+    label: PRESS AIR
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    options: round
-    dataref: sim/cockpit2/bleedair/actuators/engine_bleed_sov[0]
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${aerobask/lt_press_air} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${aerobask/lt_press_air} 1 eq
     commands:
-      - sim/bleed_air/engine_1_on
-      - sim/bleed_air/engine_1_off
+    - aerobask/press_air_toggle
+    - aerobask/press_air_toggle
 
   - index: 1
-    name: CBN DUMP
-    label: CBN DUMP
-    label-font: D-DINCondensed.otf
-    type: onoff
-    switch:
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    options: round
-    dataref: sim/cockpit2/pressurization/actuators/dump_all_on
-    commands:
-      - sim/pressurization/dump_on
-      - sim/pressurization/dump_off
-
-  - index: 2
     name: AUTOPILOT
     label: AUTOPILOT
-    label-font: D-DINCondensed.otf
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    options: round
-    dataref: sim/cockpit2/autopilot/autopilot_electric_master
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${aerobask/lt_otto} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${aerobask/lt_otto} 1 eq
     commands:
-      - sim/autopilot/electric_master_on
-      - sim/autopilot/electric_master_off
+    - aerobask/otto_pwr_toggle
+    - aerobask/otto_pwr_toggle
+
+  - index: 2
+    name: TRIM
+    label: TRIM
+    label-color: white
+    label-size: 9
+    type: onoff
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${aerobask/lt_trim} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${aerobask/lt_trim} 1 eq
+    commands:
+    - aerobask/trim_toggle
+    - aerobask/trim_toggle
+
+  - index: 4
+    name: DUMP VALVE
+    label: DUMP VALVE
+    label-color: white
+    label-size: 9
+    type: onoff
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${aerobask/lt_dump_valve} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${aerobask/lt_dump_valve} 1 eq
+    commands:
+    - aerobask/dump_valve_toggle
+    - aerobask/dump_valve_toggle
+
+  - index: 5
+    name: EMERG OXYGEN
+    label: "EMERG OXYGEN"
+    label-color: white
+    label-size: 9
+    type: onoff
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${aerobask/lt_emerg_oxygen} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${aerobask/lt_emerg_oxygen} 1 eq
+    commands:
+    - aerobask/emerg_oxygen_toggle
+    - aerobask/emerg_oxygen_toggle
+
+  - index: 6
+    name: EMERG PRESS
+    label: "EMERG PRESS"
+    label-color: white
+    label-size: 9
+    type: onoff
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${aerobask/lt_emerg_press} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${aerobask/lt_emerg_press} 1 eq
+    commands:
+    - aerobask/emerg_press
+    - aerobask/emerg_press
+
+
+
+
+
+  - index: 8
+    name: Back
+    type: page
+    page: switches_pretaxi
+    label: PRE-TAXI
+    label-color: Gold
+    label-size: 10
+    text: ←
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold
 
   - index: 11
-    name: Switch hub
+    name: Next
     type: page
-    page: switches
-    text: ←
+    page: switches_lights
+    label: LIGHTS
+    label-color: Gold
+    label-size: 10
+    text: →
     text-font: fontawesome.otf
     text-size: 48
     text-color: Gold

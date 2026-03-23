@@ -18,7 +18,7 @@ buttons:
 
   - index: 1
     type: page
-    page: switches
+    page: switches_prestart
     label: SWITCHES
     label-color: Gold
     label-size: 10

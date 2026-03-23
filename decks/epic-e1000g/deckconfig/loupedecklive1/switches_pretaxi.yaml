@@ -7,20 +7,23 @@ buttons:
   - index: 0
     name: IGNITER
     label: IGNITER
-    label-font: D-DINCondensed.otf
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      switch-style: rect
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    dataref: aerobask/igniter_on
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit/engine/igniters_on[0]} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit/engine/igniters_on[0]} 1 eq
+    dataref: sim/cockpit/engine/igniters_on[0]
     commands:
       - aerobask/igniter_toggle
       - aerobask/igniter_toggle
@@ -28,73 +31,96 @@ buttons:
   - index: 1
     name: START
     label: START
-    label-font: D-DINCondensed.otf
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      switch-style: rect
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "START"
-        - "OFF"
-      tick-label-size: 36
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    dataref: sim/cockpit2/engine/actuators/ignition_key[0]
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit2/engine/actuators/ignition_key[0]} 4 ne
+        B1:
+          text: "START"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit2/engine/actuators/ignition_key[0]} 4 eq
     commands:
-      - set-dataref: sim/cockpit2/engine/actuators/ignition_key[0]
-        value: 4
-      - set-dataref: sim/cockpit2/engine/actuators/ignition_key[0]
-        value: 0
+      - sim/starters/engage_starter_1
+      - sim/starters/engage_starter_1
+
 
   - index: 2
     name: FUEL AUTO
     label: FUEL AUTO
-    label-font: D-DINCondensed.otf
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      switch-style: rect
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    dataref: aerobask/fuel_auto_on
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${aerobask/lt_fuel_auto} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${aerobask/lt_fuel_auto} 1 eq
     commands:
-      - aerobask/fuel_auto_toggle
-      - aerobask/fuel_auto_toggle
+    - aerobask/fuel_auto_toggle
+    - aerobask/fuel_auto_toggle
+
 
   - index: 3
     name: PUSHER
     label: PUSHER
-    label-font: D-DINCondensed.otf
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      switch-style: rect
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    dataref: aerobask/pusher_on
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${aerobask/lt_pusher} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${aerobask/lt_pusher} 1 eq
     commands:
-      - aerobask/pusher_toggle
-      - aerobask/pusher_toggle
+    - aerobask/pusher_toggle
+    - aerobask/pusher_toggle
+
+
+
+  - index: 8
+    name: Back
+    type: page
+    page: switches_prestart
+    label: PRE-START
+    label-color: Gold
+    label-size: 10
+    text: ←
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold
 
   - index: 11
-    name: Switch hub
+    name: Next
     type: page
-    page: switches
-    text: ←
+    page: switches_systems
+    label: SYSTEMS
+    label-color: Gold
+    label-size: 10
+    text: →
     text-font: fontawesome.otf
     text-size: 48
     text-color: Gold

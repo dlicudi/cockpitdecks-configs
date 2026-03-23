@@ -5,94 +5,151 @@ name: switches_lights
 buttons:
 
   - index: 0
-    name: STRB LTS
-    label: STRB LTS
-    label-font: D-DINCondensed.otf
+    name: STROBE
+    label: STROBE
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    options: round
-    dataref: sim/cockpit/electrical/strobe_lights_on
-    commands:
-      - sim/lights/strobe_lights_on
-      - sim/lights/strobe_lights_off
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit/electrical/strobe_lights_on} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit/electrical/strobe_lights_on} 1 eq
+    set-dataref: aerobask/pb_light_strobe
 
   - index: 1
-    name: NAV LTS
-    label: NAV LTS
-    label-font: D-DINCondensed.otf
+    name: NAV
+    label: NAV
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    options: round
-    dataref: sim/cockpit/electrical/nav_lights_on
-    commands:
-      - sim/lights/nav_lights_on
-      - sim/lights/nav_lights_off
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit/electrical/nav_lights_on} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit/electrical/nav_lights_on} 1 eq
+    set-dataref: aerobask/pb_light_nav
 
   - index: 2
-    name: TAXI LTS
-    label: TAXI LTS
-    label-font: D-DINCondensed.otf
+    name: TAXI
+    label: TAXI
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    options: round
-    dataref: sim/cockpit2/switches/taxi_light_on
-    commands:
-      - sim/lights/taxi_light_on
-      - sim/lights/taxi_light_off
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit2/switches/taxi_light_on} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit2/switches/taxi_light_on} 1 eq
+    set-dataref: aerobask/pb_light_taxi
 
   - index: 3
-    name: LAND LTS
-    label: LAND LTS
-    label-font: D-DINCondensed.otf
+    name: LANDING
+    label: LANDING
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    options: round
-    dataref: sim/cockpit/electrical/landing_lights_on
-    commands:
-      - sim/lights/landing_01_light_on
-      - sim/lights/landing_01_light_off
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit/electrical/landing_lights_on} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
+    set-dataref: aerobask/pb_light_land
+
+  - index: 4
+    name: BEACON
+    label: BEACON
+    label-color: white
+    label-size: 9
+    type: onoff
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit/electrical/beacon_lights_on} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit/electrical/beacon_lights_on} 1 eq
+    set-dataref: aerobask/pb_light_beacon
+
+  - index: 5
+    name: ICE LT
+    label: ICE LT
+    label-color: white
+    label-size: 9
+    type: onoff
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${aerobask/pb_light_ice} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${aerobask/pb_light_ice} 1 eq
+    set-dataref: aerobask/pb_light_ice
+
+  - index: 8
+    name: Back
+    type: page
+    page: switches_systems
+    label: SYSTEMS
+    label-color: Gold
+    label-size: 10
+    text: ←
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold
 
   - index: 11
-    name: Switch hub
+    name: Next
     type: page
-    page: switches
-    text: ←
+    page: switches_ice
+    label: ICE
+    label-color: Gold
+    label-size: 10
+    text: →
     text-font: fontawesome.otf
     text-size: 48
     text-color: Gold

@@ -5,93 +5,117 @@ name: switches_ice
 buttons:
 
   - index: 0
-    name: PART SEP ON
-    label: PART SEP ON
-    label-font: D-DINCondensed.otf
+    name: PART SEP
+    label: PART SEP
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    options: round
-    dataref: sim/cockpit/switches/anti_ice_engine_air[0]
-    commands:
-      - sim/altair/alternate_air_on_1
-      - sim/altair/alternate_air_off_1
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${aerobask/lt_inert_sep} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${aerobask/lt_inert_sep} 1 eq
+    set-dataref: aerobask/pb_inert_sep
 
   - index: 1
     name: PITOT HEAT
     label: PITOT HEAT
-    label-font: D-DINCondensed.otf
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    options: round
-    dataref: sim/cockpit/switches/pitot_heat_on
-    commands:
-      - sim/ice/pitot_heat0_on
-      - sim/ice/pitot_heat0_off
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${aerobask/lt_pitot_stall} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${aerobask/lt_pitot_stall} 1 eq
+    set-dataref: aerobask/pb_pitot_stall
 
   - index: 2
     name: PROP HEAT
     label: PROP HEAT
-    label-font: D-DINCondensed.otf
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    options: round
-    dataref: sim/cockpit/switches/anti_ice_prop_heat
-    commands:
-      - sim/ice/prop_heat0_on
-      - sim/ice/prop_heat0_off
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${aerobask/lt_prop_heat} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${aerobask/lt_prop_heat} 1 eq
+    set-dataref: aerobask/pb_prop_heat
 
   - index: 3
-    name: INLET HEAT
-    label: INLET HEAT
-    label-font: D-DINCondensed.otf
+    name: WNDSH HEAT
+    label: WNDSH HEAT
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    options: round
-    dataref: sim/cockpit/switches/anti_ice_inlet_heat
-    commands:
-      - sim/ice/inlet_heat0_on
-      - sim/ice/inlet_heat0_off
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${aerobask/lt_windsh_heat} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${aerobask/lt_windsh_heat} 1 eq
+    set-dataref: aerobask/pb_windsh_heat
 
-  - index: 11
-    name: Switch hub
+  - index: 4
+    name: DE-ICE
+    label: DE-ICE
+    label-color: white
+    label-size: 9
+    type: onoff
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${aerobask/lt_deice_boots} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${aerobask/lt_deice_boots} 1 eq
+    set-dataref: aerobask/pb_deice_boots
+
+  - index: 8
+    name: Back
     type: page
-    page: switches
+    page: switches_lights
+    label: LIGHTS
+    label-color: Gold
+    label-size: 10
     text: ←
     text-font: fontawesome.otf
     text-size: 48

@@ -7,20 +7,22 @@ buttons:
   - index: 0
     name: BAT 1
     label: BAT 1
-    label-font: D-DINCondensed.otf
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      switch-style: rect
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    dataref: sim/cockpit2/electrical/battery_on[0]
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit2/electrical/battery_on[0]} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
     commands:
       - sim/electrical/battery_1_toggle
       - sim/electrical/battery_1_toggle
@@ -28,20 +30,22 @@ buttons:
   - index: 1
     name: BAT 2
     label: BAT 2
-    label-font: D-DINCondensed.otf
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      switch-style: rect
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    dataref: sim/cockpit2/electrical/battery_on[1]
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit2/electrical/battery_on[1]} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit2/electrical/battery_on[1]} 1 eq
     commands:
       - sim/electrical/battery_2_toggle
       - sim/electrical/battery_2_toggle
@@ -49,19 +53,22 @@ buttons:
   - index: 2
     name: AVIONICS
     label: AVIONICS
-    label-font: D-DINCondensed.otf
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      switch-style: rect
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit2/switches/avionics_power_on} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
     dataref: sim/cockpit2/switches/avionics_power_on
     commands:
       - sim/systems/avionics_toggle
@@ -70,20 +77,23 @@ buttons:
   - index: 3
     name: L FUEL PUMP
     label: L FUEL PUMP
-    label-font: D-DINCondensed.otf
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      switch-style: rect
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    dataref: aerobask/pump_L_on
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${aerobask/lt_pump_L} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${aerobask/lt_pump_L} 1 eq
+    dataref: aerobask/pb_pump_L
     commands:
       - aerobask/pump_L_toggle
       - aerobask/pump_L_toggle
@@ -91,20 +101,23 @@ buttons:
   - index: 4
     name: R FUEL PUMP
     label: R FUEL PUMP
-    label-font: D-DINCondensed.otf
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      switch-style: rect
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
-    dataref: aerobask/pump_R_on
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${aerobask/lt_pump_R} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${aerobask/lt_pump_R} 1 eq
+    dataref: aerobask/pb_pump_R
     commands:
       - aerobask/pump_R_toggle
       - aerobask/pump_R_toggle
@@ -112,20 +125,35 @@ buttons:
   - index: 5
     name: GEN
     label: GEN
-    label-font: D-DINCondensed.otf
+    label-color: white
+    label-size: 9
     type: onoff
-    switch:
-      switch-style: rect
-      button-fill-color: black
-      button-underline-width: 4
-      button-underline-color: coral
-      tick-labels:
-        - "ON"
-        - "OFF"
-      tick-label-size: 42
-      tick-label-font: D-DIN-Bold.otf
-      tick-underline: false
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
     dataref: sim/cockpit2/electrical/generator_on[0]
     commands:
       - sim/electrical/generator_1_toggle
       - sim/electrical/generator_1_toggle
+
+  - index: 11
+    name: Next
+    type: page
+    page: switches_pretaxi
+    label: PRE-TAXI
+    label-color: Gold
+    label-size: 10
+    text: →
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold
