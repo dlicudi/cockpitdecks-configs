@@ -1,126 +1,115 @@
 description: PRE-TAXI
-includes: pager,encoders/encoders_fcu
+includes: pager,encoders/encoders_pfd
 name: switches_pretaxi
-
+default-text-size: 56
+default-annunciator-color: '#222222'
 buttons:
 
-  - index: 0
-    name: IGNITER
-    label: IGNITER
-    label-color: white
-    label-size: 9
-    type: onoff
-    annunciator:
-      model: B
-      size: medium
-      parts:
-        B0:
-          text: "OFF"
-          color: darkorange
-          formula: ${sim/cockpit/engine/igniters_on[0]} 0 eq
-        B1:
-          text: "ON"
-          color: deepskyblue
-          framed: true
-          formula: ${sim/cockpit/engine/igniters_on[0]} 1 eq
-    dataref: sim/cockpit/engine/igniters_on[0]
-    commands:
-      - aerobask/igniter_toggle
-      - aerobask/igniter_toggle
+- index: 0
+  name: IGNITER
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: IGNITER
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit/engine/igniters_on[0]} 1 eq
+  dataref: sim/cockpit/engine/igniters_on[0]
+  commands:
+  - aerobask/igniter_toggle
+  - aerobask/igniter_toggle
 
-  - index: 1
-    name: START
-    label: START
-    label-color: white
-    label-size: 9
-    type: onoff
-    annunciator:
-      model: B
-      size: medium
-      parts:
-        B0:
-          text: "OFF"
-          color: darkorange
-          formula: ${sim/cockpit2/engine/actuators/ignition_key[0]} 4 ne
-        B1:
-          text: "START"
-          color: deepskyblue
-          framed: true
-          formula: ${sim/cockpit2/engine/actuators/ignition_key[0]} 4 eq
-    commands:
-      - sim/starters/engage_starter_1
-      - sim/starters/engage_starter_1
+- index: 1
+  name: START
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: START
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/engine/actuators/ignition_key[0]} 4 eq
+  commands:
+  - sim/starters/engage_starter_1
+  - sim/starters/engage_starter_1
 
 
-  - index: 2
-    name: FUEL AUTO
-    label: FUEL AUTO
-    label-color: white
-    label-size: 9
-    type: onoff
-    annunciator:
-      model: B
-      size: medium
-      parts:
-        B0:
-          text: "OFF"
-          color: darkorange
-          formula: ${aerobask/lt_fuel_auto} 0 eq
-        B1:
-          text: "ON"
-          color: deepskyblue
-          framed: true
-          formula: ${aerobask/lt_fuel_auto} 1 eq
-    commands:
-    - aerobask/fuel_auto_toggle
-    - aerobask/fuel_auto_toggle
+- index: 2
+  name: FUEL AUTO
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: "FUEL\nAUTO SEL"
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_fuel_auto} 1 eq
+  commands:
+  - aerobask/fuel_auto_toggle
+  - aerobask/fuel_auto_toggle
 
 
-  - index: 3
-    name: PUSHER
-    label: PUSHER
-    label-color: white
-    label-size: 9
-    type: onoff
-    annunciator:
-      model: B
-      size: medium
-      parts:
-        B0:
-          text: "OFF"
-          color: darkorange
-          formula: ${aerobask/lt_pusher} 0 eq
-        B1:
-          text: "ON"
-          color: deepskyblue
-          framed: true
-          formula: ${aerobask/lt_pusher} 1 eq
-    commands:
-    - aerobask/pusher_toggle
-    - aerobask/pusher_toggle
+- index: 3
+  name: PUSHER
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: PUSHER
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_pusher} 1 eq
+  commands:
+  - aerobask/pusher_toggle
+  - aerobask/pusher_toggle
 
 
 
-  - index: 8
-    name: Back
-    type: page
-    page: switches_prestart
-    label: PRE-START
-    label-color: Gold
-    label-size: 10
-    text: ←
-    text-font: fontawesome.otf
-    text-size: 48
-    text-color: Gold
+- index: 8
+  name: Back
+  type: page
+  page: switches_prestart
+  label: PRE-START
+  label-color: Gold
+  label-size: 10
+  text: ←
+  text-font: fontawesome.otf
+  text-size: 48
+  text-color: Gold
 
-  - index: 11
-    name: Next
-    type: page
-    page: switches_systems
-    label: SYSTEMS
-    label-color: Gold
-    label-size: 10
-    text: →
-    text-font: fontawesome.otf
-    text-size: 48
-    text-color: Gold
+- index: 11
+  name: Next
+  type: page
+  page: switches_systems
+  label: SYSTEMS
+  label-color: Gold
+  label-size: 10
+  text: →
+  text-font: fontawesome.otf
+  text-size: 48
+  text-color: Gold

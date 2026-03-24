@@ -1,159 +1,142 @@
 description: PRE-START
-includes: pager,encoders/encoders_fcu
+includes: pager,encoders/encoders_pfd
 name: switches_prestart
-
+default-text-size: 56
+default-annunciator-color: '#222222'
 buttons:
 
-  - index: 0
-    name: BAT 1
-    label: BAT 1
-    label-color: white
-    label-size: 9
-    type: onoff
-    annunciator:
-      model: B
-      size: medium
-      parts:
-        B0:
-          text: "OFF"
-          color: darkorange
-          formula: ${sim/cockpit2/electrical/battery_on[0]} 0 eq
-        B1:
-          text: "ON"
-          color: deepskyblue
-          framed: true
-          formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
-    commands:
-      - sim/electrical/battery_1_toggle
-      - sim/electrical/battery_1_toggle
+- index: 0
+  name: BAT 1
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: BATT 1
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
+  commands:
+  - sim/electrical/battery_1_toggle
+  - sim/electrical/battery_1_toggle
 
-  - index: 1
-    name: BAT 2
-    label: BAT 2
-    label-color: white
-    label-size: 9
-    type: onoff
-    annunciator:
-      model: B
-      size: medium
-      parts:
-        B0:
-          text: "OFF"
-          color: darkorange
-          formula: ${sim/cockpit2/electrical/battery_on[1]} 0 eq
-        B1:
-          text: "ON"
-          color: deepskyblue
-          framed: true
-          formula: ${sim/cockpit2/electrical/battery_on[1]} 1 eq
-    commands:
-      - sim/electrical/battery_2_toggle
-      - sim/electrical/battery_2_toggle
+- index: 1
+  name: BAT 2
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: BATT 2
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/battery_on[1]} 1 eq
+  commands:
+  - sim/electrical/battery_2_toggle
+  - sim/electrical/battery_2_toggle
 
-  - index: 2
-    name: AVIONICS
-    label: AVIONICS
-    label-color: white
-    label-size: 9
-    type: onoff
-    annunciator:
-      model: B
-      size: medium
-      parts:
-        B0:
-          text: "OFF"
-          color: darkorange
-          formula: ${sim/cockpit2/switches/avionics_power_on} 0 eq
-        B1:
-          text: "ON"
-          color: deepskyblue
-          framed: true
-          formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
-    dataref: sim/cockpit2/switches/avionics_power_on
-    commands:
-      - sim/systems/avionics_toggle
-      - sim/systems/avionics_toggle
+- index: 2
+  name: AVIONICS
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: "AVIONICS\nMASTER"
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
+  dataref: sim/cockpit2/switches/avionics_power_on
+  commands:
+  - sim/systems/avionics_toggle
+  - sim/systems/avionics_toggle
 
-  - index: 3
-    name: L FUEL PUMP
-    label: L FUEL PUMP
-    label-color: white
-    label-size: 9
-    type: onoff
-    annunciator:
-      model: B
-      size: medium
-      parts:
-        B0:
-          text: "OFF"
-          color: darkorange
-          formula: ${aerobask/lt_pump_L} 0 eq
-        B1:
-          text: "ON"
-          color: deepskyblue
-          framed: true
-          formula: ${aerobask/lt_pump_L} 1 eq
-    dataref: aerobask/pb_pump_L
-    commands:
-      - aerobask/pump_L_toggle
-      - aerobask/pump_L_toggle
+- index: 3
+  name: L FUEL PUMP
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: "L FUEL\nPUMP"
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_pump_L} 1 eq
+  dataref: aerobask/pb_pump_L
+  commands:
+  - aerobask/pump_L_toggle
+  - aerobask/pump_L_toggle
 
-  - index: 4
-    name: R FUEL PUMP
-    label: R FUEL PUMP
-    label-color: white
-    label-size: 9
-    type: onoff
-    annunciator:
-      model: B
-      size: medium
-      parts:
-        B0:
-          text: "OFF"
-          color: darkorange
-          formula: ${aerobask/lt_pump_R} 0 eq
-        B1:
-          text: "ON"
-          color: deepskyblue
-          framed: true
-          formula: ${aerobask/lt_pump_R} 1 eq
-    dataref: aerobask/pb_pump_R
-    commands:
-      - aerobask/pump_R_toggle
-      - aerobask/pump_R_toggle
+- index: 4
+  name: R FUEL PUMP
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: "R FUEL\nPUMP"
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_pump_R} 1 eq
+  dataref: aerobask/pb_pump_R
+  commands:
+  - aerobask/pump_R_toggle
+  - aerobask/pump_R_toggle
 
-  - index: 5
-    name: GEN
-    label: GEN
-    label-color: white
-    label-size: 9
-    type: onoff
-    annunciator:
-      model: B
-      size: medium
-      parts:
-        B0:
-          text: "OFF"
-          color: darkorange
-          formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
-        B1:
-          text: "ON"
-          color: deepskyblue
-          framed: true
-          formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
-    dataref: sim/cockpit2/electrical/generator_on[0]
-    commands:
-      - sim/electrical/generator_1_toggle
-      - sim/electrical/generator_1_toggle
+- index: 5
+  name: GEN
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: "STARTER\nGEN"
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
+  dataref: sim/cockpit2/electrical/generator_on[0]
+  commands:
+  - sim/electrical/generator_1_toggle
+  - sim/electrical/generator_1_toggle
 
-  - index: 11
-    name: Next
-    type: page
-    page: switches_pretaxi
-    label: PRE-TAXI
-    label-color: Gold
-    label-size: 10
-    text: →
-    text-font: fontawesome.otf
-    text-size: 48
-    text-color: Gold
+- index: 11
+  name: Next
+  type: page
+  page: switches_pretaxi
+  label: PRE-TAXI
+  label-color: Gold
+  label-size: 10
+  text: →
+  text-font: fontawesome.otf
+  text-size: 48
+  text-color: Gold

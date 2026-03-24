@@ -1,6 +1,6 @@
 # Weather 1.0.0
 name: weather
-includes: pager,encoders/encoders_fcu
+includes: pager,encoders/encoders_pfd
 
 buttons:
 
@@ -420,6 +420,5 @@ buttons:
   #     mark-size: 20
   #     mark-font: fontawesome.otf
   #     mark-color: red
-
 
 

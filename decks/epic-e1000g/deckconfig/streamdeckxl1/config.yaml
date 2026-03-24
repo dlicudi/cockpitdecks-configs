@@ -1,6 +1,6 @@
 # This is at layout level
 default-label-color: blue
-default-label-font: D-DIN.otf
+default-label-font: D-DIN-Bold.otf
 default-label-size: 13
 default-text-size: 24
 default-label-position: ct
@@ -11,3 +11,4 @@ default-icon-color: (94, 111, 130)
 default-annunciator-style: v
 default-light-off-intensity: 8
 default-annunciator-color: "#222222"
+default-text-font: D-DIN-Bold.otf

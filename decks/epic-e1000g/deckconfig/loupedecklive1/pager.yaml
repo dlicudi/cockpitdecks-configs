@@ -16,7 +16,7 @@ buttons:
   - index: b1
     name: P1
     type: page
-    page: pfi
+    page: pfd
     colored-led: green
 
   - index: b2

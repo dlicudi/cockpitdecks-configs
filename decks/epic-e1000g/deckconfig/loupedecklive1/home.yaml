@@ -1,12 +1,12 @@
 name: home
-includes: pager,encoders/encoders_fcu
+includes: pager,encoders/encoders_pfd
 
 buttons:
 
   - index: 0
     type: page
-    page: pfi
-    label: PFI
+    page: pfd
+    label: PFD
     label-color: Gold
     label-bg-color: Black
     text: 

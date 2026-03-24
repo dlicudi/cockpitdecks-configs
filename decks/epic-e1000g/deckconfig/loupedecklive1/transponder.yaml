@@ -1,5 +1,5 @@
 name: transponder
-includes: pager,encoders/encoders_fcu
+includes: pager,encoders/encoders_pfd
 
 buttons:
 
@@ -232,4 +232,3 @@ buttons:
         text-font: Segment7Standard.otf
         text-position: tr
   formula: ${sim/cockpit2/radios/actuators/transponder_mode}
-
