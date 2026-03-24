@@ -165,7 +165,11 @@ class FormulaEvaluator:
             value = context.get(key)
             if value is None:
                 value = self.get_value(key)
-            return self._format_value(value, text_format)
+            # text-format can be a dict mapping dataref names to individual format strings
+            fmt = text_format
+            if isinstance(text_format, dict):
+                fmt = text_format.get(key)
+            return self._format_value(value, fmt)
 
         return PLACEHOLDER_RE.sub(replace, raw)
 

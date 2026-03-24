@@ -97,7 +97,7 @@
 
 ### Stream Deck XL
 
-<div class="layout-meta"><div class="layout-meta-items">🔧 <strong>Active Development</strong>&emsp;📄 15 pages&emsp;🎮 Stream Deck XL</div></div>
+<div class="layout-meta"><div class="layout-meta-items">🔧 <strong>Active Development</strong>&emsp;📄 16 pages&emsp;🎮 Stream Deck XL</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -169,6 +169,11 @@
 <img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/views.page.png" alt="Views preview" loading="lazy">
 <div class="page-name">Views</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/views.yaml">views.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/fms_load.page.png" alt="Load FPL preview" loading="lazy">
+<div class="page-name">Load FPL</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/streamdeckxl1/fms_load.yaml">fms_load.yaml</a></div>
 </div>
 <div class="page-card">
 <img src="../../assets/images/cirrus-sr22/generated/streamdeckxl1/pedestal.page.png" alt="Pedestal preview" loading="lazy">
