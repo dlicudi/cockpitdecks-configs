@@ -33,7 +33,7 @@ buttons:
           color: white
           text-size: 32
           formula: "1"
-          text: "${sim/cockpit2/gauges/indicators/groundspeed_kts}\nGS"
+          text: "${sim/cockpit2/gauges/indicators/ground_speed_kt}\nGS"
           text-font: D-DIN-Bold.otf
           text-format: "{0:.0f}"
 
@@ -227,10 +227,28 @@ buttons:
           text-size: 80
           formula: "1"
           text: "${sim/cockpit2/temperature/outside_air_temp_degc}°C"
-          text-font: Segment7Standard.otf
+          text-font: D-DIN-Bold.otf
           text-format: "{0:.0f}"
 
-  - index: 9 # Local simulator time and hobbs
+  - index: 9 # ISA deviation: OAT - (15 - altitude_ft * 0.00198)
+    name: ISA
+    type: none
+    label: ISA
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: A
+      parts:
+        A0:
+          color: white
+          text-size: 80
+          formula: "${sim/cockpit2/temperature/outside_air_temp_degc} 15 ${sim/cockpit2/gauges/indicators/altitude_ft_pilot} 0.00198 * - -"
+          text: "${formula}"
+          text-font: D-DIN-Bold.otf
+          text-format: "{0:+.0f}°C"
+
+  - index: 10 # Local simulator time and hobbs
     name: CLOCK
     type: none
     label: CLOCK
@@ -259,14 +277,6 @@ buttons:
             sim/cockpit2/clock_timer/hobbs_time_hours: "{:02.0f}"
             sim/cockpit2/clock_timer/hobbs_time_minutes: "{:02.0f}"
             sim/cockpit2/clock_timer/hobbs_time_seconds: "{:02.0f}"
-
-  # Reserved for future use (minimums, autopilot mode annunciation, or timer)
-  - index: 10
-    name: RESERVED
-    type: none
-    label: RESERVED
-    label-size: 9
-    label-color: black
 
   - index: 11
     name: WAYPOINT
