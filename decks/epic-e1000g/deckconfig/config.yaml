@@ -6,6 +6,10 @@ decks:
     type: LoupedeckLive
     layout: loupedecklive1
     brightness: 100
+  - name: StreamDeckXL
+    type: Stream Deck XL
+    layout: streamdeckxl1
+    brightness: 100
 description: Loupedeck Live layout for Aerobask Epic E1000G (G1000 / GMC710, turboprop).
 print-page-dir: screendumps/epic-e1000g
 

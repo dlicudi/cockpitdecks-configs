@@ -1,0 +1,574 @@
+description: Switch Panel
+name: switches
+default-text-size: 56
+
+
+buttons:
+- index: 0
+  name: BATT 1
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: BATT 1
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
+  commands:
+  - sim/electrical/battery_1_toggle
+  - sim/electrical/battery_1_toggle
+
+- index: 1
+  name: BATT 2
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: BATT 2
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/battery_on[1]} 1 eq
+  commands:
+  - sim/electrical/battery_2_toggle
+  - sim/electrical/battery_2_toggle
+
+- index: 2
+  name: AVIONICS
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: "AVIONICS\nMASTER"
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
+  dataref: sim/cockpit2/switches/avionics_power_on
+  commands:
+  - sim/systems/avionics_toggle
+  - sim/systems/avionics_toggle
+
+- index: 3
+  name: L FUEL PUMP
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: "L FUEL\nPUMP"
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_pump_L} 1 eq
+  dataref: aerobask/pb_pump_L
+  commands:
+  - aerobask/pump_L_toggle
+  - aerobask/pump_L_toggle
+
+- index: 4
+  name: R FUEL PUMP
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: "R FUEL\nPUMP"
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_pump_R} 1 eq
+  dataref: aerobask/pb_pump_R
+  commands:
+  - aerobask/pump_R_toggle
+  - aerobask/pump_R_toggle
+
+- index: 5
+  name: GEN
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: "STARTER\nGEN"
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
+  dataref: sim/cockpit2/electrical/generator_on[0]
+  commands:
+  - sim/electrical/generator_1_toggle
+  - sim/electrical/generator_1_toggle
+
+- index: 8
+  name: IGNITER
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: IGNITER
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit/engine/igniters_on[0]} 1 eq
+  dataref: sim/cockpit/engine/igniters_on[0]
+  commands:
+  - aerobask/igniter_toggle
+  - aerobask/igniter_toggle
+
+- index: 9
+  name: START
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: START
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/engine/actuators/ignition_key[0]} 4 eq
+  commands:
+  - sim/starters/engage_starter_1
+  - sim/starters/engage_starter_1
+
+- index: 11
+  name: FUEL AUTO
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: "FUEL\nAUTO SEL"
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_fuel_auto} 1 eq
+  commands:
+  - aerobask/fuel_auto_toggle
+  - aerobask/fuel_auto_toggle
+
+- index: 12
+  name: PUSHER
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: PUSHER
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_pusher} 1 eq
+  commands:
+  - aerobask/pusher_toggle
+  - aerobask/pusher_toggle
+
+- index: 16
+  name: PRESS AIR
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: "PRESS\nAIR"
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_press_air} 1 eq
+  commands:
+  - aerobask/press_air_toggle
+  - aerobask/press_air_toggle
+
+- index: 17
+  name: AUTOPILOT
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: "AUTO\nPILOT"
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_otto} 1 eq
+  commands:
+  - aerobask/otto_pwr_toggle
+  - aerobask/otto_pwr_toggle
+
+- index: 18
+  name: TRIM
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: TRIM
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_trim} 1 eq
+  commands:
+  - aerobask/trim_toggle
+  - aerobask/trim_toggle
+
+- index: 19
+  name: DUMP VALVE
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: "DUMP\nVALVE"
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_dump_valve} 1 eq
+  commands:
+  - aerobask/dump_valve_toggle
+  - aerobask/dump_valve_toggle
+
+- index: 20
+  name: EMERG OXYGEN
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: "EMERG\nOXYGEN"
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_emerg_oxygen} 1 eq
+  commands:
+  - aerobask/emerg_oxygen_toggle
+  - aerobask/emerg_oxygen_toggle
+
+- index: 21
+  name: EMERG PRESS
+  type: onoff
+  annunciator:
+    model: B
+    size: full
+    parts:
+      B0:
+        text: "EMERG\nPRESS"
+        color: white
+        formula: 1
+      B1:
+        text: "ON"
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_emerg_press} 1 eq
+  commands:
+  - aerobask/emerg_press
+  - aerobask/emerg_press
+
+  # - index: 23
+  #   name: STROBE
+  #   label: STROBE
+  #   label-color: black
+  #   label-size: 9
+  #   type: onoff
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     parts:
+  #       B0:
+  #         text: "OFF"
+  #         color: darkorange
+  #         formula: ${sim/cockpit/electrical/strobe_lights_on} 0 eq
+  #       B1:
+  #         text: "ON"
+  #         color: deepskyblue
+  #         framed: true
+  #         formula: ${sim/cockpit/electrical/strobe_lights_on} 1 eq
+  #   set-dataref: aerobask/pb_light_strobe
+
+  # - index: 17
+  #   name: NAV
+  #   label: NAV
+  #   label-color: black
+  #   label-size: 9
+  #   type: onoff
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     parts:
+  #       B0:
+  #         text: "OFF"
+  #         color: darkorange
+  #         formula: ${sim/cockpit/electrical/nav_lights_on} 0 eq
+  #       B1:
+  #         text: "ON"
+  #         color: deepskyblue
+  #         framed: true
+  #         formula: ${sim/cockpit/electrical/nav_lights_on} 1 eq
+  #   set-dataref: aerobask/pb_light_nav
+
+  # - index: 18
+  #   name: TAXI
+  #   label: TAXI
+  #   label-color: black
+  #   label-size: 9
+  #   type: onoff
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     parts:
+  #       B0:
+  #         text: "OFF"
+  #         color: darkorange
+  #         formula: ${sim/cockpit2/switches/taxi_light_on} 0 eq
+  #       B1:
+  #         text: "ON"
+  #         color: deepskyblue
+  #         framed: true
+  #         formula: ${sim/cockpit2/switches/taxi_light_on} 1 eq
+  #   set-dataref: aerobask/pb_light_taxi
+
+  # - index: 19
+  #   name: LANDING
+  #   label: LANDING
+  #   label-color: black
+  #   label-size: 9
+  #   type: onoff
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     parts:
+  #       B0:
+  #         text: "OFF"
+  #         color: darkorange
+  #         formula: ${sim/cockpit/electrical/landing_lights_on} 0 eq
+  #       B1:
+  #         text: "ON"
+  #         color: deepskyblue
+  #         framed: true
+  #         formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
+  #   set-dataref: aerobask/pb_light_land
+
+  # - index: 20
+  #   name: BEACON
+  #   label: BEACON
+  #   label-color: black
+  #   label-size: 9
+  #   type: onoff
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     parts:
+  #       B0:
+  #         text: "OFF"
+  #         color: darkorange
+  #         formula: ${sim/cockpit/electrical/beacon_lights_on} 0 eq
+  #       B1:
+  #         text: "ON"
+  #         color: deepskyblue
+  #         framed: true
+  #         formula: ${sim/cockpit/electrical/beacon_lights_on} 1 eq
+  #   set-dataref: aerobask/pb_light_beacon
+
+  # - index: 21
+  #   name: ICE LT
+  #   label: ICE LT
+  #   label-color: black
+  #   label-size: 9
+  #   type: onoff
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     parts:
+  #       B0:
+  #         text: "OFF"
+  #         color: darkorange
+  #         formula: ${aerobask/pb_light_ice} 0 eq
+  #       B1:
+  #         text: "ON"
+  #         color: deepskyblue
+  #         framed: true
+  #         formula: ${aerobask/pb_light_ice} 1 eq
+  #   set-dataref: aerobask/pb_light_ice
+
+  # - index: 22
+  #   name: PART SEP
+  #   label: PART SEP
+  #   label-color: black
+  #   label-size: 9
+  #   type: onoff
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     parts:
+  #       B0:
+  #         text: "OFF"
+  #         color: darkorange
+  #         formula: ${aerobask/lt_inert_sep} 0 eq
+  #       B1:
+  #         text: "ON"
+  #         color: deepskyblue
+  #         framed: true
+  #         formula: ${aerobask/lt_inert_sep} 1 eq
+  #   set-dataref: aerobask/pb_inert_sep
+
+  # - index: 23
+  #   name: PITOT HEAT
+  #   label: PITOT HEAT
+  #   label-color: black
+  #   label-size: 8
+  #   type: onoff
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     parts:
+  #       B0:
+  #         text: "OFF"
+  #         color: darkorange
+  #         formula: ${aerobask/lt_pitot_stall} 0 eq
+  #       B1:
+  #         text: "ON"
+  #         color: deepskyblue
+  #         framed: true
+  #         formula: ${aerobask/lt_pitot_stall} 1 eq
+  #   set-dataref: aerobask/pb_pitot_stall
+
+  # - index: 24
+  #   name: PROP HEAT
+  #   label: PROP HEAT
+  #   label-color: black
+  #   label-size: 8
+  #   type: onoff
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     parts:
+  #       B0:
+  #         text: "OFF"
+  #         color: darkorange
+  #         formula: ${aerobask/lt_prop_heat} 0 eq
+  #       B1:
+  #         text: "ON"
+  #         color: deepskyblue
+  #         framed: true
+  #         formula: ${aerobask/lt_prop_heat} 1 eq
+  #   set-dataref: aerobask/pb_prop_heat
+
+  # - index: 25
+  #   name: WNDSH HEAT
+  #   label: WNDSH HEAT
+  #   label-color: black
+  #   label-size: 8
+  #   type: onoff
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     parts:
+  #       B0:
+  #         text: "OFF"
+  #         color: darkorange
+  #         formula: ${aerobask/lt_windsh_heat} 0 eq
+  #       B1:
+  #         text: "ON"
+  #         color: deepskyblue
+  #         framed: true
+  #         formula: ${aerobask/lt_windsh_heat} 1 eq
+  #   set-dataref: aerobask/pb_windsh_heat
+
+  # - index: 26
+  #   name: DE-ICE
+  #   label: DE-ICE
+  #   label-color: black
+  #   label-size: 9
+  #   type: onoff
+  #   annunciator:
+  #     model: B
+  #     size: medium
+  #     parts:
+  #       B0:
+  #         text: "OFF"
+  #         color: darkorange
+  #         formula: ${aerobask/lt_deice_boots} 0 eq
+  #       B1:
+  #         text: "ON"
+  #         color: deepskyblue
+  #         framed: true
+  #         formula: ${aerobask/lt_deice_boots} 1 eq
+  #   set-dataref: aerobask/pb_deice_boots
+- index: 31
+  name: LIGHTS ICE
+  type: page
+  page: switches2
+  label: LIGHTS/ICE
+  label-color: Gold
+  label-size: 11
+  text: '>'
+  text-size: 48
+  text-color: Gold
+  text-position: cm
+  text-bg-color: '#3a3a3a'
+cockpit-color: '#3a3a3a'
