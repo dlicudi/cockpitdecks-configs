@@ -174,15 +174,15 @@ buttons:
         D0:
           color: Lime
           led: dot
-          formula: "${sim/cockpit2/gear/deploy_ratio[0]} 0.9 gt"
+          formula: "${sim/flightmodel2/gear/deploy_ratio[0]} 0.9 gt"
         D1:
           color: Lime
           led: dot
-          formula: "${sim/cockpit2/gear/deploy_ratio[1]} 0.9 gt"
+          formula: "${sim/flightmodel2/gear/deploy_ratio[1]} 0.9 gt"
         D2:
           color: Lime
           led: dot
-          formula: "${sim/cockpit2/gear/deploy_ratio[2]} 0.9 gt"
+          formula: "${sim/flightmodel2/gear/deploy_ratio[2]} 0.9 gt"
 
   - index: 7
     name: FLAPS
