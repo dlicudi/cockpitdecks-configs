@@ -5,26 +5,7 @@ aircraft: Laminar Research Cirrus SR22
 icao: SR22
 status: stable
 description: Official Cockpitdecks configuration for the Laminar Research Cirrus SR22.
-
-layouts:
-  - id: loupedecklive1
-    status: stable
-    version: 1.0.0
-    progress: 85
-    issues:
-      - Load, FPL, and NAV pages require PI_CockpitdecksFMSBrowser plugin in X-Plane.
-    planned:
-      - Inside lighting
-      - Climate fan speed control
-      - Sun visors
-      - Map range controls via FMS plugin
-      - G1000 annunciators
-  - id: streamdeckxl1
-    status: active
-
 requires:
   - cockpitdecks
   - xplane
-
-optional_dependencies:
   - PI_CockpitdecksFMSBrowser
