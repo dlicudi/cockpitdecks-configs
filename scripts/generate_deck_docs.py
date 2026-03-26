@@ -52,7 +52,7 @@ def load_yaml(path: Path) -> dict[str, Any]:
 
 
 def load_pack_metadata(slug: str) -> dict[str, Any]:
-    path = DECKS_DIR / slug / "pack.yaml"
+    path = DECKS_DIR / slug / "manifest.yaml"
     if not path.exists():
         return {}
     return load_yaml(path)
@@ -267,7 +267,7 @@ def pack_layout_docs(pack_meta: dict[str, Any], layout_name: str) -> dict[str, A
 
 
 def load_layout_docs(layout_dir: Path, pack_meta: dict[str, Any] | None = None) -> dict[str, Any]:
-    """Load layout doc metadata from pack.yaml first, then legacy _docs.yaml."""
+    """Load layout doc metadata from manifest.yaml first, then legacy _docs.yaml."""
     if pack_meta:
         from_pack = pack_layout_docs(pack_meta, layout_dir.name)
         if from_pack:

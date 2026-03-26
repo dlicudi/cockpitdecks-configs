@@ -2,7 +2,7 @@
 
 Official Cockpitdecks configuration for the Laminar Research Cirrus SR22.
 
-Release metadata for this pack is stored in `pack.yaml`.
+Release metadata for this deck is stored in `manifest.yaml`.
 
 ## Status
 
