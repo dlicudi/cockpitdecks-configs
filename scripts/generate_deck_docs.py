@@ -51,6 +51,13 @@ def load_yaml(path: Path) -> dict[str, Any]:
     return data
 
 
+def load_pack_metadata(slug: str) -> dict[str, Any]:
+    path = DECKS_DIR / slug / "pack.yaml"
+    if not path.exists():
+        return {}
+    return load_yaml(path)
+
+
 def write_bytes_if_changed(path: Path, content: bytes) -> bool:
     if path.exists() and path.read_bytes() == content:
         return False
@@ -242,15 +249,36 @@ def has_supported_preview_geometry(decktype_path: Path) -> bool:
     return not unsupported
 
 
-def load_layout_docs(layout_dir: Path) -> dict[str, Any]:
-    """Load per-layout _docs.yaml (status, issues, planned, etc.)."""
+def pack_layout_docs(pack_meta: dict[str, Any], layout_name: str) -> dict[str, Any]:
+    layouts = pack_meta.get("layouts")
+    if not isinstance(layouts, list):
+        return {}
+    for entry in layouts:
+        if not isinstance(entry, dict):
+            continue
+        if str(entry.get("id") or "").strip() != layout_name:
+            continue
+        return {
+            key: value
+            for key, value in entry.items()
+            if key != "id"
+        }
+    return {}
+
+
+def load_layout_docs(layout_dir: Path, pack_meta: dict[str, Any] | None = None) -> dict[str, Any]:
+    """Load layout doc metadata from pack.yaml first, then legacy _docs.yaml."""
+    if pack_meta:
+        from_pack = pack_layout_docs(pack_meta, layout_dir.name)
+        if from_pack:
+            return from_pack
     docs_path = layout_dir / "_docs.yaml"
     if not docs_path.exists():
         return {}
     return load_yaml(docs_path)
 
 
-def layout_entries(config: dict[str, Any], deckconfig_dir: Path) -> list[dict[str, Any]]:
+def layout_entries(config: dict[str, Any], deckconfig_dir: Path, pack_meta: dict[str, Any] | None = None) -> list[dict[str, Any]]:
     decktypes = decktype_catalog()
     entries = config.get("decks", [])
     layouts: list[dict[str, Any]] = []
@@ -263,7 +291,7 @@ def layout_entries(config: dict[str, Any], deckconfig_dir: Path) -> list[dict[st
                 continue
             layout_dir = deckconfig_dir / layout_name
             layout_meta = layout_docs_metadata(layout_dir)
-            layout_docs = load_layout_docs(layout_dir)
+            layout_docs = load_layout_docs(layout_dir, pack_meta=pack_meta)
             page_files = ordered_page_files(layout_dir, layout_meta) if layout_dir.exists() else []
             deck_type = str(entry.get("type") or "").strip()
             decktype_path = decktypes.get(deck_type)
@@ -384,7 +412,8 @@ STATUS_ICON = {
 def build_overview(slug: str, config: dict[str, Any], doc_path: Path, page_images: dict[str, dict[Path, Path]]) -> str:
     deckconfig_dir = DECKS_DIR / slug / "deckconfig"
     title = aircraft_title(slug, config)
-    layouts = layout_entries(config, deckconfig_dir)
+    pack_meta = load_pack_metadata(slug)
+    layouts = layout_entries(config, deckconfig_dir, pack_meta=pack_meta)
 
     lines = [
         f"# {title}",
