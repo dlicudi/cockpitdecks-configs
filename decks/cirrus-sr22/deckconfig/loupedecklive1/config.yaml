@@ -1,5 +1,5 @@
 # This is at layout level
-default-text-bg-color: (40, 40, 40)
+cockpit-color: (64, 64, 64)
 default-label-color: black
 default-label-font: D-DIN.otf
 default-label-size: 9

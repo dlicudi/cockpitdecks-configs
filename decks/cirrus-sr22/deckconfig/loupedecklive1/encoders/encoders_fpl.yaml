@@ -36,8 +36,9 @@ buttons:
   command: cockpitdecks/fms_legs/direct_to
 
 - index: e5
-  name: fpl_spare
-  type: none
+  name: activate_leg
+  type: push
+  command: cockpitdecks/fms_legs/activate
 
 # Some devices emit SEL push/turn on e4; mirror e1 mapping to avoid dropped events.
 - index: e4
@@ -86,8 +87,7 @@ buttons:
   side:
     icon-color: Black
     labels:
-      - label: ""
-      - label: "D>"
+      - label: "DIR-TO"
         label-size: 14
         label-font: D-DINCondensed.otf
         label-color: Gold
@@ -103,3 +103,11 @@ buttons:
         text-font: D-DIN.otf
         text-color: White
         text: "${cockpitdecks/fms_legs/selected_index}/${cockpitdecks/fms_legs/entry_count}"
+      - label: "ACT"
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DIN.otf
+        text-color: White
+        text: "Push"

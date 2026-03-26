@@ -1,7 +1,7 @@
-# LOAD page encoders — E0: page scroll | E1: select in page | E2 push: LOAD | E3/E4: sort toggles | E5 push: REFRESH
+# LOAD page encoders — E0: page scroll | E1: select in page | E2 push: LOAD | E5 push: REFRESH
+# Always shows the 9 most recent plans (newest first); no sort controls needed.
 # E0 type encoder: [0]=CCW, [1]=CW
 # E1 type encoder: [0]=CCW, [1]=CW
-# Sort key/direction readout stays on the side labels.
 
 buttons:
 
@@ -30,25 +30,15 @@ buttons:
 
 # RIGHT SCREEN
 
+# - index: e3
+#   name: load_spare_e3
+#   type: none
+
+# - index: e4
+#   name: load_spare_e4
+#   type: none
+
 - index: e3
-  name: sort_by_key
-  type: encoder-push
-  commands:
-  - cockpitdecks/fms_browser/list_sort_toggle_key
-  - cockpitdecks/fms_browser/list_sort_filename
-  - cockpitdecks/fms_browser/list_sort_timestamp
-  vibrate: SHORT
-
-- index: e4
-  name: sort_by_direction
-  type: encoder-push
-  commands:
-  - cockpitdecks/fms_browser/list_sort_toggle_direction
-  - cockpitdecks/fms_browser/list_sort_asc
-  - cockpitdecks/fms_browser/list_sort_desc
-  vibrate: SHORT
-
-- index: e5
   name: refresh_plan_list
   type: push
   command: cockpitdecks/fms_browser/refresh
@@ -60,27 +50,27 @@ buttons:
     icon-color: Black
     labels:
       - label: "PAGE"
-        label-size: 14
+        label-size: 18
         label-font: D-DINCondensed.otf
         label-color: Gold
         text-size: 16
-        text-font: D-DIN.otf
+        text-font: D-DINCondensed.otf
         text-color: White
         text: "${cockpitdecks/fms_browser/list_page}"
       - label: "SEL"
-        label-size: 14
+        label-size: 18
         label-font: D-DINCondensed.otf
         label-color: Gold
         text-size: 16
-        text-font: D-DIN.otf
+        text-font: D-DINCondensed.otf
         text-color: White
         text: "${cockpitdecks/fms_browser/list_sel_count}"
       - label: "LOAD"
-        label-size: 14
+        label-size: 18
         label-font: D-DINCondensed.otf
         label-color: Gold
-        text-size: 16
-        text-font: D-DIN.otf
+        text-size: 14
+        text-font: D-DINCondensed.otf
         text-color: White
         text: "${cockpitdecks/fms_browser/status}"
 
@@ -90,27 +80,11 @@ buttons:
   side:
     icon-color: Black
     labels:
-      - label: "SORT"
-        label-size: 14
-        label-font: D-DINCondensed.otf
-        label-color: Gold
-        text-size: 16
-        text-font: D-DIN.otf
-        text-color: White
-        text: "${cockpitdecks/fms_browser/list_sort_key}"
-      - label: "DIR"
-        label-size: 14
-        label-font: D-DINCondensed.otf
-        label-color: Gold
-        text-size: 16
-        text-font: D-DIN.otf
-        text-color: White
-        text: "${cockpitdecks/fms_browser/list_sort_direction}"
       - label: "REFR"
-        label-size: 14
+        label-size: 18
         label-font: D-DINCondensed.otf
         label-color: Gold
-        text-size: 16
-        text-font: D-DIN.otf
+        text-size: 14
+        text-font: D-DINCondensed.otf
         text-color: White
         text: "PUSH"
