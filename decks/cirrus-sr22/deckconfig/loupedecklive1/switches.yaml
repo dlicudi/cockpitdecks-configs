@@ -10,10 +10,10 @@ buttons:
     vibrate: LONG
     command: sim/starters/engage_starter_1
     multi-icons:
-      - ENGINE_START.svg
-      - ENGINE_START.svg
-      - ENGINE_START.svg
-      - ENGINE_START.svg
+      - ENGINE_START.png
+      - ENGINE_START.png
+      - ENGINE_START.png
+      - ENGINE_START.png
       - ENGINE_START_PRESSED.png
     formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
 
