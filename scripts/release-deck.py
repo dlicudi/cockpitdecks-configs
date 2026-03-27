@@ -94,7 +94,7 @@ def build_deck(manifest_yaml: Path) -> Path:
     return asset_path
 
 
-def gh_release_command(manifest_yaml: Path) -> list[str]:
+def gh_release_command(manifest_yaml: Path, notes: str) -> list[str]:
     info = deck_data(manifest_yaml)
     return [
         "gh",
@@ -105,7 +105,7 @@ def gh_release_command(manifest_yaml: Path) -> list[str]:
         "--title",
         info["title"],
         "--notes",
-        info["notes"],
+        notes,
     ]
 
 
@@ -151,7 +151,7 @@ def cmd_info(args: argparse.Namespace) -> int:
     print(f"tag: {info['tag']}")
     print(f"asset: {info['asset_path']}")
     print(f"title: {info['title']}")
-    print(f"gh: {gh_quote(gh_release_command(info['yaml']))}")
+    print(f"gh: {gh_quote(gh_release_command(info['yaml'], '<release notes>'))}")
     print(f"gh_available: {state['gh_available']}")
     print(f"release_exists: {state['release_exists']}")
     print(f"asset_exists: {state['asset_exists']}")
@@ -170,7 +170,7 @@ def cmd_release(args: argparse.Namespace) -> int:
     info = deck_data(manifest_yaml)
     state = gh_release_state(manifest_yaml)
     asset_path = build_deck(manifest_yaml)
-    command = gh_release_command(manifest_yaml)
+    command = gh_release_command(manifest_yaml, args.notes)
     print(f"asset: {asset_path}")
     print(f"gh: {gh_quote(command)}")
     print(f"release_exists: {state['release_exists']}")
@@ -198,6 +198,7 @@ def main() -> int:
 
     release = sub.add_parser("release", help="Build a deck zip and show or run gh release create")
     release.add_argument("deck", help="Deck id such as cirrus-sr22, or a path to manifest.yaml")
+    release.add_argument("--notes", required=True, help="Release changelog / notes (required)")
     release.add_argument("--execute", action="store_true", help="Run the gh release create command")
     release.set_defaults(func=cmd_release)
 
