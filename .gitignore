@@ -15,6 +15,7 @@ datarefs-log.yaml
 scripts/*.log
 scripts/events.json
 *.pyc
+*.pickle
 variable-database-dump.yaml
 requirements-dev.txt
 CLAUDE.md
