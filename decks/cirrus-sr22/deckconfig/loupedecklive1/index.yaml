@@ -19,7 +19,7 @@ buttons:
   - index: 1
     type: page
     vibrate: SHORT
-    page: switches
+    page: switches_master
     label: SWITCHES
     label-color: Gold
     text: 
@@ -31,7 +31,7 @@ buttons:
   - index: 2
     type: page
     vibrate: SHORT
-    page: icing
+    page: switches_icing
     label: ICING
     label-color: Gold
     text: 
@@ -43,7 +43,7 @@ buttons:
   - index: 3
     type: page
     vibrate: SHORT
-    page: lights
+    page: switches_lights
     label: LIGHTS
     label-color: Gold
     text: 

@@ -21,7 +21,7 @@ buttons:
   - index: b2
     name: P2
     type: page
-    page: switches
+    page: switches_master
     colored-led: blue
 
   - index: b3

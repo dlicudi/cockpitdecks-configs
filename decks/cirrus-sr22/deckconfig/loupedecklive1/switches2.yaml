@@ -198,7 +198,7 @@ buttons:
     name: Switches
     type: page
     vibrate: SHORT
-    page: switches
+    page: switches_master
     label: SWITCHES
     label-size: 12
     text: ←

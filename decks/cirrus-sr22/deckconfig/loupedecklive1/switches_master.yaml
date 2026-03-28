@@ -1,0 +1,139 @@
+description: Master Electrical
+includes: pager,encoders/encoders_fcu
+name: switches_master
+
+buttons:
+
+  - index: 0
+    type: push
+    vibrate: SHORT
+    command: sim/electrical/battery_2_toggle
+    label: BAT 2
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/battery_on[1]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/battery_on[1]} 1 eq
+
+  - index: 1
+    type: push
+    vibrate: SHORT
+    command: sim/electrical/battery_1_toggle
+    label: BAT 1
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/battery_on[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
+
+  - index: 2
+    type: push
+    vibrate: SHORT
+    command: sim/electrical/generator_1_toggle
+    label: ALT 1
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
+
+  - index: 3
+    type: push
+    vibrate: SHORT
+    command: sim/electrical/generator_2_toggle
+    label: ALT 2
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/generator_on[1]} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
+
+  - index: 4
+    type: push
+    vibrate: SHORT
+    command: sim/systems/avionics_toggle
+    label: AVIONICS
+    label-size: 10
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit/electrical/avionics_on} 0 eq
+      B1:
+        text: "ON"
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/avionics_on} 1 eq
+
+  # Nav row
+  - index: 8
+    type: none
+    text: MASTER
+    text-color: Gold
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (40, 35, 0)
+
+  - index: 9
+    type: page
+    page: switches_lights
+    vibrate: SHORT
+    text: LIGHTS
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
+
+  - index: 10
+    type: page
+    page: switches_icing
+    vibrate: SHORT
+    text: ICE
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
+
+  - index: 11
+    type: page
+    page: switches_ground
+    vibrate: SHORT
+    text: GROUND
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)

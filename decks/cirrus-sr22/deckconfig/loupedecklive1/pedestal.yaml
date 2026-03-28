@@ -51,7 +51,7 @@ buttons:
       formula: ${sim/cockpit2/controls/park_brake_valve} 0 eq
     B1:
       text: "ON"
-      color: deepskyblue
+      color: red
       framed: true
       formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
 

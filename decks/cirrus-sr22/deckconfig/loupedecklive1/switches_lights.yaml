@@ -1,13 +1,12 @@
-description: Switch Panel
+description: Lights
 includes: pager,encoders/encoders_fcu
-name: lights
-
+name: switches_lights
 
 buttons:
 
-
   - index: 0
     type: push
+    vibrate: SHORT
     command: sim/lights/nav_lights_toggle
     label: NAV
     annunciator:
@@ -25,6 +24,7 @@ buttons:
 
   - index: 1
     type: push
+    vibrate: SHORT
     command: sim/lights/strobe_lights_toggle
     label: STROBE
     annunciator:
@@ -40,11 +40,11 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
 
-
   - index: 2
     type: push
+    vibrate: SHORT
     label: LAND
-    command: sim/lights/landing_01_light_tog    
+    command: sim/lights/landing_01_light_tog
     annunciator:
       model: B
       size: medium
@@ -58,25 +58,24 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq
 
-
   - index: 3
     type: push
-    label: READ 1
-    command: sim/lights/generic_01_light_tog
+    vibrate: SHORT
+    label: ICE
+    command: sim/lights/generic_13_light_tog
     annunciator:
       model: B
       size: medium
       B0:
         text: "OFF"
         color: darkorange
-        formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 0 eq
+        formula: ${sim/cockpit2/switches/generic_lights_switch[12]} 0 eq
       B1:
         text: "ON"
         color: deepskyblue
         framed: true
-        formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 1 eq
+        formula: ${sim/cockpit2/switches/generic_lights_switch[12]} 1 eq
 
-  # --- Internal ---
   - index: 4
     type: push
     vibrate: SHORT
@@ -116,7 +115,7 @@ buttons:
   - index: 6
     type: push
     vibrate: SHORT
-    label: READ 2
+    label: READ 1
     command: sim/lights/generic_02_light_tog
     annunciator:
       model: B
@@ -149,13 +148,45 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/switches/generic_lights_switch[10]} 1 eq
 
-  - index: 11
-    name: Switches
+  # Nav row
+  - index: 8
     type: page
-    page: switches
-    label: SWITCHES
-    label-size: 12
-    text: 
-    text-font: fontawesome.otf
-    text-size: 40
+    page: switches_master
+    vibrate: SHORT
+    text: MASTER
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
+
+  - index: 9
+    type: none
+    text: LIGHTS
     text-color: Gold
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (40, 35, 0)
+
+  - index: 10
+    type: page
+    page: switches_icing
+    vibrate: SHORT
+    text: ICE
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
+
+  - index: 11
+    type: page
+    page: switches_ground
+    vibrate: SHORT
+    text: GROUND
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
