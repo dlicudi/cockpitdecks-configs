@@ -1,6 +1,6 @@
 id: cirrus-sr22
 name: Cirrus SR22
-version: 1.0.1
+version: 1.0.2
 aircraft: Laminar Research Cirrus SR22
 icao: SR22
 status: stable
