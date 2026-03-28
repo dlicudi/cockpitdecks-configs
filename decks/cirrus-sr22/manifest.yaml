@@ -5,6 +5,7 @@ aircraft: Laminar Research Cirrus SR22
 icao: SR22
 status: stable
 description: Official Cockpitdecks configuration for the Laminar Research Cirrus SR22.
+summary: Full coverage of the G1000-equipped SR22 including FCU, radios, engine monitoring, FMS, switches, and views.
 requires:
   - cockpitdecks
   - xplane

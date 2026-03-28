@@ -3,6 +3,7 @@
 # 1.0.0  03-APR-2023  Initial version
 #
 ---
+_docs: {title: FCU}
 aircraft: Toliss A321neo
 description: Main FCU page for Loupedeck Live
 version: 1.0.0

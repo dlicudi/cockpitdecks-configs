@@ -3,6 +3,7 @@
 # 1.0.0  03-APR-2023  Initial version
 #
 ---
+_docs: {title: Transponder}
 aircraft: Toliss A321neo
 description: Transponder and other communication for Loupedeck Live
 version: 1.0.0

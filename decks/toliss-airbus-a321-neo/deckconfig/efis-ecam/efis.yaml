@@ -1,4 +1,5 @@
 ---
+_docs: {title: EFIS}
 aircraft: Toliss A321neo
 description: EFIS display selector + some FCU commands for Streamdeck 15 keys
 version: 3.0.0
