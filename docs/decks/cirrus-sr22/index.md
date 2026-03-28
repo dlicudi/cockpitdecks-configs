@@ -5,17 +5,7 @@
 
 ### Loupedeck Live
 
-<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 15 pages&emsp;🎮 Loupedeck Live&emsp;🏷 v1.0.0</div><div class="layout-progress-mini" title="Completion: 85%"><div class="layout-progress-track"><div class="layout-progress-bar" style="width: 85%"></div></div><span class="layout-progress-label">85%</span></div></div>
-
-!!! warning "Known issues"
-    - Load, FPL, and NAV pages require PI_CockpitdecksFMSBrowser plugin in X-Plane (see cockpitdecks_xp link_fms_plugin.sh)
-
-!!! info "Planned"
-    - Inside lighting
-    - Climate fan speed control (laminar/sr22/climate_fan_speed)
-    - Sun visors (laminar/sr22/sun_visor_left, sun_visor_right)
-    - Map range controls via FMS plugin (map_range_down, map_range_up, map_toggle)
-    - G1000 annunciators (flaps, O2, audio panel)
+<div class="layout-meta"><div class="layout-meta-items">📄 18 pages&emsp;🎮 Loupedeck Live</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -29,9 +19,9 @@
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/pfi.yaml">pfi.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/switches.page.png" alt="Switch Panel preview" loading="lazy">
-<div class="page-name">Switch Panel</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/switches.yaml">switches.yaml</a></div>
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/switches_master.page.png" alt="Master Electrical preview" loading="lazy">
+<div class="page-name">Master Electrical</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/switches_master.yaml">switches_master.yaml</a></div>
 </div>
 <div class="page-card">
 <img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/fcu.page.png" alt="FCU preview" loading="lazy">
@@ -59,6 +49,16 @@
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/transponder.yaml">transponder.yaml</a></div>
 </div>
 <div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/switches_icing.page.png" alt="Ice Protection preview" loading="lazy">
+<div class="page-name">Ice Protection</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/switches_icing.yaml">switches_icing.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/switches_lights.page.png" alt="Lights preview" loading="lazy">
+<div class="page-name">Lights</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/switches_lights.yaml">switches_lights.yaml</a></div>
+</div>
+<div class="page-card">
 <img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/gcu478.page.png" alt="GCU478 preview" loading="lazy">
 <div class="page-name">GCU478</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/gcu478.yaml">gcu478.yaml</a></div>
@@ -79,9 +79,14 @@
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fms_fpl.yaml">fms_fpl.yaml</a></div>
 </div>
 <div class="page-card">
-<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/fms_load.page.png" alt="Load FPL preview" loading="lazy">
-<div class="page-name">Load FPL</div>
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/fms_load.page.png" alt="Fms Load preview" loading="lazy">
+<div class="page-name">Fms Load</div>
 <div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/fms_load.yaml">fms_load.yaml</a></div>
+</div>
+<div class="page-card">
+<img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/switches_ground.page.png" alt="Ground Operations preview" loading="lazy">
+<div class="page-name">Ground Operations</div>
+<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/cirrus-sr22/deckconfig/loupedecklive1/switches_ground.yaml">switches_ground.yaml</a></div>
 </div>
 <div class="page-card">
 <img src="../../assets/images/cirrus-sr22/generated/loupedecklive1/views.page.png" alt="Views preview" loading="lazy">
@@ -97,7 +102,7 @@
 
 ### Stream Deck XL
 
-<div class="layout-meta"><div class="layout-meta-items">🔧 <strong>Active Development</strong>&emsp;📄 16 pages&emsp;🎮 Stream Deck XL</div></div>
+<div class="layout-meta"><div class="layout-meta-items">📄 16 pages&emsp;🎮 Stream Deck XL</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
