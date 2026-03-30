@@ -2,21 +2,8 @@ buttons:
 
   - index: 24
     type: page
-    page: index
-    label: HOME
-    label-color: Gold
-    label-bg-color: Black
-    text: ""
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 25
-    type: page
-    page: pfi
-    label: PFI
+    page: pfd
+    label: PFD
     label-color: Gold
     label-size: 10
     text: 
@@ -24,30 +11,95 @@ buttons:
     text-size: 40
     text-font: fontawesome.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
+    text-bg-color: (25, 25, 25)
+
+  - index: 25
+    type: page
+    page: mfd
+    label: MFD
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (25, 25, 25)
 
   - index: 26
     type: page
-    page: fcu
-    label: FCU
+    page: engine
+    label: ENGINE
     label-color: Gold
     label-size: 10
-    text: 
+    text: 
     text-color: khaki
     text-size: 40
     text-font: fontawesome.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
+    text-bg-color: (25, 25, 25)
 
   - index: 27
     type: page
-    page: views
-    label: VIEWS
+    page: fms
+    label: FMS
     label-color: Gold
     label-size: 10
-    text: 
+    text: 
     text-color: khaki
     text-size: 40
     text-font: fontawesome.otf
     text-position: cm
-    text-bg-color: (40, 40, 40)
+    text-bg-color: (25, 25, 25)
+
+  - index: 28
+    type: page
+    page: transponder
+    label: XPDR
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+  - index: 29
+    type: page
+    page: switches
+    label: SWITCHES
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+  - index: 30
+    type: page
+    page: weather
+    label: WEATHER
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+  - index: 31
+    type: page
+    page: pedestal
+    label: PEDESTAL
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (25, 25, 25)

@@ -11,6 +11,9 @@ decks:
     type: Stream Deck XL
     layout: streamdeckxl1
     brightness: 70
+  # - name: WebDeck1
+  #   type: Virtual Streamdeck XL
+  #   layout: webdeck1
 description: Decks for Cirrus SR22
 
 

@@ -1,0 +1,98 @@
+name: main
+
+buttons:
+
+  - index: 0
+    name: SPD
+    type: none
+    label: "KIAS"
+    label-size: 9
+    label-color: white
+    annunciator:
+      annunciator-style: v
+      size: medium
+      model: D
+      parts:
+        D0:
+          color: lime
+          text-size: 64
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/airspeed_kts_pilot}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+
+  - index: 1
+    name: ALT
+    type: none
+    label: "ALT ft"
+    label-size: 9
+    label-color: white
+    annunciator:
+      annunciator-style: v
+      size: medium
+      model: D
+      parts:
+        D0:
+          color: lime
+          text-size: 64
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/altitude_ft_pilot}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+
+  - index: 2
+    name: HDG
+    type: none
+    label: "HDG mag"
+    label-size: 9
+    label-color: white
+    annunciator:
+      annunciator-style: v
+      size: medium
+      model: D
+      parts:
+        D0:
+          color: cyan
+          text-size: 64
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/compass_heading_deg_mag}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+
+  - index: 3
+    name: VSI
+    type: none
+    label: "VSI fpm"
+    label-size: 9
+    label-color: white
+    annunciator:
+      annunciator-style: v
+      size: medium
+      model: D
+      parts:
+        D0:
+          color: yellow
+          text-size: 64
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/vvi_fpm_pilot}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+
+  - index: 4
+    name: GND SPD
+    type: none
+    label: "GS kt"
+    label-size: 9
+    label-color: white
+    annunciator:
+      annunciator-style: v
+      size: medium
+      model: D
+      parts:
+        D0:
+          color: lime
+          text-size: 64
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/ground_speed_kt}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"

@@ -1,0 +1,682 @@
+name: pfd
+includes: includes/pagerfull
+
+buttons:
+
+  # Row 1 — primary flight instruments + autopilot + alerts
+  # Spatial order mirrors G1000 PFD: speed (left) → heading → altitude → baro → VSI → AP → alerts (right)
+
+  - index: 0
+    name: SPD
+    type: none
+    label: SPD
+    label-size: 9
+    label-color: black
+    annunciator:
+      annunciator-style: v
+      size: medium
+      model: D
+      parts:
+        D0:
+          color: lime
+          text-size: 72
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/airspeed_kts_pilot}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+        D1:
+          color: white
+          text-size: 32
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/true_airspeed_kts_pilot}\nTAS"
+          text-format: "{0:.0f}"
+        D2:
+          color: white
+          text-size: 32
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/ground_speed_kt}\nGS"
+          text-format: "{0:.0f}"
+
+  - index: 1
+    name: ATT
+    type: none
+    label: ATTITUDE
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: F
+      parts:
+        F0:
+          color: white
+          text-size: 60
+          formula: "${sim/cockpit2/gauges/indicators/pitch_ahrs_deg_pilot}"
+          text: "${formula}"
+          text-format: "{0:+.0f}"
+        F1:
+          color: white
+          text-size: 32
+          formula: "${sim/cockpit2/gauges/indicators/roll_ahrs_deg_pilot}"
+          text: "ROLL\n${formula}"
+          text-format: "{:0.0f}"
+        F2:
+          color: lime
+          text-size: 24
+          formula: "${sim/cockpit2/gauges/indicators/slip_deg}"
+          text: "${formula}\nBALL"
+          text-format: "{0:0.1f}"
+        F3:
+          color: white
+          text-size: 30
+          formula: "${sim/cockpit2/gauges/indicators/turn_rate_heading_deg_sec}"
+          text: "${formula}°/s"
+          text-format: "{0:0.1f}"
+
+  - index: 2
+    name: ALT
+    type: none
+    label: ALT ft
+    label-size: 9
+    label-color: black
+    annunciator:
+      annunciator-style: v
+      size: medium
+      model: D
+      parts:
+        D0:
+          color: lime
+          text-size: 72
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/altitude_ft_pilot}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+        D1:
+          color: gold
+          text-size: 32
+          formula: "${sim/cockpit2/gauges/indicators/radio_altimeter_height_ft_pilot}"
+          text: "RA\n${formula}"
+          text-format: "{0:.0f}"
+        D2:
+          color: gold
+          text-size: 32
+          formula: "${sim/cockpit2/autopilot/altitude_minimums}"
+          text: "MINS\n${formula}"
+          text-format: "{0:.0f}"
+
+  - index: 3
+    name: VSI
+    type: none
+    label: VS fpm
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          text-size: 60
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/vvi_fpm_pilot}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+        B1:
+          color: deepskyblue
+          text-size: 28
+          formula: "${sim/cockpit2/gauges/indicators/flight_path_angle_deg}"
+          text: "FPA\n${formula}"
+          text-format: "{0:0.1f}°"
+
+  - index: 4
+    name: HDG
+    type: none
+    label: HEADING
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          text-size: 60
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/compass_heading_deg_mag}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:03.0f}"
+        B1:
+          color: cyan
+          text-size: 28
+          formula: "${sim/cockpit/autopilot/heading_mag}"
+          text: "BUG\n${formula}"
+          text-format: "{0:03.0f}"
+
+  - index: 5
+    name: TRK
+    type: none
+    label: TRACK
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: cyan
+          text-size: 60
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/ground_track_mag_pilot}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:03.0f}"
+        B1:
+          color: cyan
+          text-size: 28
+          formula: "${sim/cockpit2/gauges/indicators/ground_track_mag_pilot} ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag} - 180 + 360 % 180 -"
+          text: "DRIFT\n${formula}"
+          text-format: "{0:.0f}"
+
+  - index: 6
+    name: BARO
+    type: none
+    label: BARO
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: gold
+          text-size: 40
+          formula: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}"
+          text: "${formula}"
+          text-format: "{0:.2f}"
+        B1:
+          color: white
+          text-size: 32
+          formula: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot} 33.8639 *"
+          text: "${formula} hPa"
+          text-format: "{0:.0f}"
+
+  - index: 7
+    name: ALERTS
+    type: none
+    label: MASTER ALERTS
+    label-color: Black
+    label-size: 9
+    annunciator:
+      size: medium
+      model: F
+      parts:
+        F0:
+          text: "WNG"
+          text-color: "#ffffff"
+          on-color: firebrick
+          off-color: "#3f1414"
+          text-font: D-DINCondensed-Bold.otf
+          text-size: 36
+          formula: ${sim/cockpit2/annunciators/master_warning}
+        F1:
+          text: "CAU"
+          text-color: "#000000"
+          on-color: darkorange
+          off-color: "#3a2613"
+          text-font: D-DINCondensed-Bold.otf
+          text-size: 36
+          formula: ${sim/cockpit2/annunciators/master_caution}
+
+
+  # Row 2 — COM/NAV radios + XPDR + clock + next waypoint
+  # Grouped: COMs together, NAVs together, then reference data
+
+  - index: 8
+    name: NAV_SRC
+    type: none
+    label: NAV SOURCE
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: F
+      parts:
+        F0:
+          text: "NAV 1"
+          color: white
+          on-color: lime
+          off-color: "#1a331a"
+          formula: "${sim/cockpit2/radios/actuators/HSI_source_select_pilot} 0 eq"
+        F1:
+          text: "NAV 2"
+          color: white
+          on-color: lime
+          off-color: "#1a331a"
+          formula: "${sim/cockpit2/radios/actuators/HSI_source_select_pilot} 1 eq"
+        F2:
+          text: "GPS"
+          color: white
+          on-color: magenta
+          off-color: "#331a33"
+          formula: "${sim/cockpit2/radios/actuators/HSI_source_select_pilot} 2 eq"
+
+  - index: 9
+    name: COURSE
+    type: none
+    label: COURSE
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: gold
+          text-size: 60
+          formula: "1"
+          text: "${sim/cockpit2/radios/actuators/nav1_obs_deg_mag_pilot}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:03.0f}"
+        B1:
+          color: magenta
+          text-size: 28
+          formula: "1"
+          text: "DTK\n${sim/cockpit2/radios/indicators/gps_course_deg_mag_pilot}"
+          text-format: "{0:03.0f}"
+
+  - index: 10
+    name: CDI
+    type: none
+    label: CDI
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: F
+      parts:
+        F0:
+          text: "LOC 1"
+          text-size: 24
+          on-color: lime
+          off-color: "#000000"
+          formula: "${sim/cockpit2/radios/actuators/HSI_source_select_pilot} 0 eq"
+        F1:
+          text: "LOC 2"
+          text-size: 24
+          on-color: lime
+          off-color: "#000000"
+          formula: "${sim/cockpit2/radios/actuators/HSI_source_select_pilot} 1 eq"
+        F2:
+          text: "GPS"
+          text-size: 24
+          on-color: magenta
+          off-color: "#000000"
+          formula: "${sim/cockpit2/radios/actuators/HSI_source_select_pilot} 2 eq"
+        F3:
+          color: white
+          on-color: lime
+          off-color: magenta
+          text-size: 40
+          formula: "${sim/cockpit2/radios/indicators/nav1_hdef_dot_pilot} ${sim/cockpit2/radios/actuators/HSI_source_select_pilot} 0 eq * ${sim/cockpit2/radios/indicators/nav2_hdef_dot_pilot} ${sim/cockpit2/radios/actuators/HSI_source_select_pilot} 1 eq * + ${sim/cockpit2/radios/indicators/gps_hdef_dot_pilot} ${sim/cockpit2/radios/actuators/HSI_source_select_pilot} 2 eq * +"
+          text: "${formula}"
+          text-format: "{0:+.1f}"
+
+  - index: 11
+    name: GS
+    type: none
+    label: GLIDESLOPE
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: F
+      parts:
+        F0:
+          text: "GS 1"
+          text-size: 24
+          on-color: lime
+          off-color: "#000000"
+          formula: "${sim/cockpit2/radios/actuators/HSI_source_select_pilot} 0 eq"
+        F1:
+          text: "GS 2"
+          text-size: 24
+          on-color: lime
+          off-color: "#000000"
+          formula: "${sim/cockpit2/radios/actuators/HSI_source_select_pilot} 1 eq"
+        F2:
+          text: "GP"
+          text-size: 24
+          on-color: magenta
+          off-color: "#000000"
+          formula: "${sim/cockpit2/radios/actuators/HSI_source_select_pilot} 2 eq"
+        F3:
+          color: white
+          on-color: lime
+          off-color: magenta
+          text-size: 40
+          formula: "${sim/cockpit2/radios/indicators/nav1_vdef_dot_pilot} ${sim/cockpit2/radios/actuators/HSI_source_select_pilot} 0 eq * ${sim/cockpit2/radios/indicators/nav2_vdef_dot_pilot} ${sim/cockpit2/radios/actuators/HSI_source_select_pilot} 1 eq * + ${sim/cockpit2/radios/indicators/gps_vdef_dot_pilot} ${sim/cockpit2/radios/actuators/HSI_source_select_pilot} 2 eq * +"
+          text: "${formula}"
+          text-format: "{0:+.1f}"
+
+  - index: 12
+    name: WAYPOINT
+    type: none
+    label: NEXT WPT
+    label-size: 9
+    label-color: black
+    string-datarefs: ["sim/cockpit2/radios/indicators/gps_nav_id"]
+    annunciator:
+      size: medium
+      model: A
+      parts:
+        A0:
+          text: "${sim/cockpit2/radios/indicators/gps_nav_id}"
+          text-color: magenta
+          text-font: D-DINCondensed-Bold.otf
+          text-size: 60
+          formula: "1"
+
+  - index: 13
+    name: DIST
+    type: none
+    label: DISTANCE
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: magenta
+          text-size: 60
+          formula: "1"
+          text: "${sim/cockpit2/radios/indicators/gps_dme_distance_nm}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.1f}"
+        B1:
+          text: "NM"
+          color: white
+          text-size: 24
+
+  - index: 14
+    name: TIME
+    type: none
+    label: ETE / ETA
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: white
+          text-size: 40
+          formula: "${sim/cockpit2/radios/indicators/gps_dme_time_min}"
+          text: "ETE\n${formula}"
+          text-format: "{0:.0f}m"
+        B1:
+          color: white
+          text-size: 40
+          formula: "${sim/cockpit2/radios/indicators/gps_eta_time_sec} 60 /"
+          text: "ETA\n${formula}"
+          text-format: "{0:.0f}m"
+
+  - index: 15
+    name: BRG
+    type: none
+    label: BEARINGS
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: cyan
+          text-size: 32
+          formula: "${sim/cockpit2/radios/indicators/nav1_bearing_deg_mag_pilot}"
+          text: "B1\n${formula}"
+          text-format: "{0:03.0f}"
+        B1:
+          color: white
+          text-size: 32
+          formula: "${sim/cockpit2/radios/indicators/nav2_bearing_deg_mag_pilot}"
+          text: "B2\n${formula}"
+          text-format: "{0:03.0f}"
+
+
+  # Row 3 — environmental context (breathing room intentional)
+
+  - index: 16
+    name: WIND
+    label: WIND DATA
+    label-color: Black
+    label-size: 10
+    type: none
+    annunciator:
+      size: medium
+      model: F
+      parts:
+        F0:
+          color: yellow
+          text-size: 28
+          formula: "${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag} - cos ${sim/cockpit2/gauges/indicators/wind_speed_kts} *"
+          text-font: fontawesome.otf
+          text: "↓ ${formula}"
+          text-format: "{0:.0f}"
+        F1:
+          color: yellow
+          text-size: 28
+          formula: "${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} 180 + ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag} - sin ${sim/cockpit2/gauges/indicators/wind_speed_kts} *"
+          text-font: fontawesome.otf
+          text: "→ ${formula}"
+          text-format: "{0:.0f}"
+        F2:
+          color: yellow
+          text-size: 28
+          formula: "${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} 180 + ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag} - cos ${sim/cockpit2/gauges/indicators/wind_speed_kts} *"
+          text-font: fontawesome.otf
+          text: "↑ ${formula}"
+          text-format: "{0:.0f}"
+        F3:
+          color: yellow
+          text-size: 28
+          formula: "${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag} - sin ${sim/cockpit2/gauges/indicators/wind_speed_kts} *"
+          text-font: fontawesome.otf
+          text: "← ${formula}"
+          text-format: "{0:.0f}"
+
+  - index: 17
+    name: OAT_CLK
+    type: none
+    label: OAT / LOCAL
+    label-color: Black
+    label-size: 9
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: deepskyblue
+          text-size: 50
+          formula: "${sim/cockpit2/temperature/outside_air_temp_degc}"
+          text: "${formula}°C"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.1f}"
+        B1:
+          color: white
+          text-size: 30
+          formula: "1"
+          text: "${sim/cockpit2/clock_timer/local_time_hours}:${sim/cockpit2/clock_timer/local_time_minutes}"
+          text-font: D-DINCondensed-Bold.otf
+          text-format:
+            sim/cockpit2/clock_timer/local_time_hours: "{:02.0f}"
+            sim/cockpit2/clock_timer/local_time_minutes: "{:02.0f}"
+
+  - index: 18
+    name: XPDR
+    type: none
+    label: XPDR
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          text-size: 60
+          formula: "1"
+          text: "${sim/cockpit2/radios/actuators/transponder_code}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:04.0f}"
+        B1:
+          color: white
+          text-size: 28
+          formula: "${sim/cockpit2/radios/actuators/transponder_mode}"
+          text: "MODE\n${formula}"
+          text-format: "{0:.0f}"
+
+  - index: 19
+    name: AP_YD
+    type: none
+    label: AP / YD
+    label-color: black
+    label-size: 9
+    annunciator:
+      size: medium
+      model: F
+      parts:
+        F0:
+          text: "AP"
+          text-color: "#000000"
+          on-color: lime
+          off-color: "#1a331a"
+          text-size: 36
+          framed: true
+          formula: "${sim/cockpit2/autopilot/servos_on}"
+        F1:
+          text: "YD"
+          text-color: "#000000"
+          on-color: lime
+          off-color: "#1a331a"
+          text-size: 36
+          formula: "${sim/cockpit2/autopilot/yaw_damper_on}"
+        F2:
+          text: "FD"
+          text-color: white
+          on-color: green
+          off-color: "#1a331a"
+          text-size: 28
+          formula: "${sim/cockpit2/autopilot/flight_director_mode}"
+
+  - index: 20
+    name: LAT_MODE
+    type: none
+    label: LATERAL
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: F
+      parts:
+        F0:
+          text: "ROL"
+          on-color: lime
+          off-color: "#1a331a"
+          text-size: 32
+          formula: "${sim/cockpit2/autopilot/lateral_status} 0 eq"
+        F1:
+          text: "HDG"
+          on-color: lime
+          off-color: "#1a331a"
+          text-size: 32
+          formula: "${sim/cockpit2/autopilot/lateral_status} 1 eq"
+        F2:
+          text: "NAV"
+          on-color: lime
+          off-color: "#1a331a"
+          text-size: 32
+          formula: "${sim/cockpit2/autopilot/lateral_status} 2 eq"
+        F3:
+          text: "APPR"
+          color: white
+          on-color: lime
+          off-color: white
+          text-size: 28
+          formula: "${sim/cockpit2/autopilot/approach_status} 2 eq"
+          formula2: "${sim/cockpit2/autopilot/approach_status} 1 eq"
+
+  - index: 21
+    name: VERT_MODE
+    type: none
+    label: VERTICAL
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: F
+      parts:
+        F0:
+          text: "PIT"
+          on-color: lime
+          off-color: "#1a331a"
+          formula: "${sim/cockpit2/autopilot/vertical_status} 0 eq"
+        F1:
+          text: "VS"
+          on-color: lime
+          off-color: "#1a331a"
+          formula: "${sim/cockpit2/autopilot/vertical_status} 1 eq"
+        F2:
+          text: "ALT"
+          color: white
+          on-color: lime
+          off-color: white
+          formula: "${sim/cockpit2/autopilot/vertical_status} 2 eq"
+        F3:
+          text: "GS"
+          color: white
+          on-color: lime
+          off-color: white
+          formula: "${sim/cockpit2/autopilot/vertical_status} 3 eq"
+
+  - index: 22
+    name: SEL_ALT
+    type: none
+    label: SEL ALT
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: A
+      parts:
+        A0:
+          color: cyan
+          text-size: 60
+          formula: "1"
+          text: "${sim/cockpit2/autopilot/altitude_dial_ft}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+
+  - index: 23
+    name: SEL_VS
+    type: none
+    label: SEL VS
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: cyan
+          text-size: 44
+          formula: "1"
+          text: "${sim/cockpit2/autopilot/vvi_dial_fpm}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+        B1:
+          color: cyan
+          text-size: 30
+          formula: "${sim/cockpit2/autopilot/airspeed_select_kts_pilot}"
+          text: "FLC\n${formula}"
+          text-format: "{0:.0f}"
+
