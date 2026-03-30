@@ -3,17 +3,20 @@ icao: SR22
 model:  Cirrus SR22
 render-flush-delay-ms: 400
 decks:
-  - name: XPLive
+  - name: Loupedeck Live 1
     type: LoupedeckLive
     layout: loupedecklive1
     brightness: 70
-  - name: StreamDeckXL
+  - name: StreamDeck XL 1
     type: Stream Deck XL
     layout: streamdeckxl1
     brightness: 70
-  # - name: WebDeck1
-  #   type: Virtual Streamdeck XL
-  #   layout: webdeck1
+  - name: Virtual Streamdeck XL 1
+    type: Virtual Streamdeck XL
+    layout: streamdeckxl1
+  - name: Virtual Loupedeck Live 1
+    type: Virtual LoupedeckLive
+    layout: loupedecklive1
 description: Decks for Cirrus SR22
 
 
