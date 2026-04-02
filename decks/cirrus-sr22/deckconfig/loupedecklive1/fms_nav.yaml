@@ -1,8 +1,6 @@
 # NAV — Live flight data. 4×3 grid, G1000-style situational awareness.
 # Read-only. E2 = page cycle (FPL <-> NAV).
 name: fms_nav
-_docs:
-  title: Nav
 includes: pager,encoders/encoders_nav
 label-font: D-DINCondensed.otf
 

@@ -1,8 +1,6 @@
 # FPL — Flight Plan. View and edit route, scroll waypoints, DIRECT TO.
 # E2 = page cycle (FPL <-> NAV) | E5 = waypoint paging
 name: fms_fpl
-_docs:
-  title: FPL
 includes: pager,encoders/encoders_fpl
 
 buttons:

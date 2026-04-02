@@ -10,10 +10,3 @@ default-vibrate: SHORT
 default-icon-color: (94, 111, 130)
 default-annunciator-style: v
 default-light-off-intensity: 8
-_docs:
-  fixture: scripts/fixtures/cirrus-sr22-cruise.yaml
-  style: deck-map
-  exclude_pages:
-    - icing
-    - lights
-
