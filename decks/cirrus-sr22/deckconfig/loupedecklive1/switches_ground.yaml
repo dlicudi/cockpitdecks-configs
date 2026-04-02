@@ -15,12 +15,12 @@ buttons:
       B0:
         led: bar
         color: grey
-        formula: ${laminar/sr22/fuel_selector_pos} 0 eq not
+        formula: ${laminar/sr22/fuel_selector_pos} 1 eq ${laminar/sr22/fuel_selector_pos} 2 eq +
       B1:
         text: "OFF"
         color: red
         framed: true
-        formula: ${laminar/sr22/fuel_selector_pos} 0 eq
+        formula: ${laminar/sr22/fuel_selector_pos} 0 eq ${laminar/sr22/fuel_selector_pos} 3 eq +
 
   - index: 1
     type: push
@@ -94,6 +94,57 @@ buttons:
         color: red
         framed: true
         formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
+
+  - index: 5
+    type: push
+    vibrate: SHORT
+    command: sim/engines/mixture_max
+    label: MAX MIXTURE
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: "OFF"
+        color: darkorange
+        formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 lt
+      B1:
+        text: "ON"
+        color: red
+        framed: true
+        formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 eq
+
+  - index: 6
+    type: none
+    label: FUEL
+    formula: ${laminar/sr22/fuel_selector_pos}
+    circular-switch:
+      button-size: 54
+      button-fill-color: firebrick
+      switch-style: medium
+      down: 22
+      tick-from: 45
+      tick-to: 315
+      tick-steps: 4
+      tick-space: 26
+      tick-width: 2
+      tick-underline-width: 0
+      tick-color: white
+      tick-off-color: grey
+      needle-color: white
+      needle-underline-width: 0
+      needle-start: 86
+      needle-length: 0
+      needle-tip: arri
+      needle-tip-size: 8
+      tick-labels:
+        - "OFF"
+        - "LEFT"
+        - "RIGHT"
+        - "OFF"
+      tick-label-space: 8
+      tick-label-size: 20
+      tick-label-font: D-DIN-Bold.otf
+
 
   - index: 7
     name: ENGINE START

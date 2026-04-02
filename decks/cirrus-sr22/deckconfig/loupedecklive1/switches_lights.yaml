@@ -15,12 +15,12 @@ buttons:
       B0:
         text: "OFF"
         color: darkorange
-        formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+        formula: "${sim/cockpit2/switches/navigation_lights_on} 0 eq"
       B1:
         text: "ON"
         color: deepskyblue
         framed: true
-        formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
+        formula: "${sim/cockpit2/switches/navigation_lights_on} 1 eq"
 
   - index: 1
     type: push
@@ -33,12 +33,12 @@ buttons:
       B0:
         text: "OFF"
         color: darkorange
-        formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
+        formula: "${sim/cockpit2/switches/strobe_lights_on} 0 eq"
       B1:
         text: "ON"
         color: deepskyblue
         framed: true
-        formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
+        formula: "${sim/cockpit2/switches/strobe_lights_on} 1 eq"
 
   - index: 2
     type: push
@@ -51,12 +51,12 @@ buttons:
       B0:
         text: "OFF"
         color: darkorange
-        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 0 eq
+        formula: "${sim/cockpit2/switches/landing_lights_switch[0]} 0 eq"
       B1:
         text: "ON"
         color: deepskyblue
         framed: true
-        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq
+        formula: "${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq"
 
   - index: 3
     type: push
@@ -69,12 +69,12 @@ buttons:
       B0:
         text: "OFF"
         color: darkorange
-        formula: ${sim/cockpit2/switches/generic_lights_switch[12]} 0 eq
+        formula: "${sim/cockpit2/switches/generic_lights_switch[12]} 0 eq"
       B1:
         text: "ON"
         color: deepskyblue
         framed: true
-        formula: ${sim/cockpit2/switches/generic_lights_switch[12]} 1 eq
+        formula: "${sim/cockpit2/switches/generic_lights_switch[12]} 1 eq"
 
   - index: 4
     type: push
@@ -87,12 +87,12 @@ buttons:
       B0:
         text: "OFF"
         color: darkorange
-        formula: ${sim/cockpit2/switches/generic_lights_switch[4]} 0 eq
+        formula: "${sim/cockpit2/switches/generic_lights_switch[4]} 0 eq"
       B1:
         text: "ON"
         color: deepskyblue
         framed: true
-        formula: ${sim/cockpit2/switches/generic_lights_switch[4]} 1 eq
+        formula: "${sim/cockpit2/switches/generic_lights_switch[4]} 1 eq"
 
   - index: 5
     type: push
@@ -105,12 +105,12 @@ buttons:
       B0:
         text: "OFF"
         color: darkorange
-        formula: ${sim/cockpit2/switches/generic_lights_switch[6]} 0 eq
+        formula: "${sim/cockpit2/switches/generic_lights_switch[6]} 0 eq"
       B1:
         text: "ON"
         color: deepskyblue
         framed: true
-        formula: ${sim/cockpit2/switches/generic_lights_switch[6]} 1 eq
+        formula: "${sim/cockpit2/switches/generic_lights_switch[6]} 1 eq"
 
   - index: 6
     type: push
@@ -123,12 +123,12 @@ buttons:
       B0:
         text: "OFF"
         color: darkorange
-        formula: ${sim/cockpit2/switches/generic_lights_switch[1]} 0 eq
+        formula: "${sim/cockpit2/switches/generic_lights_switch[1]} 0 eq"
       B1:
         text: "ON"
         color: deepskyblue
         framed: true
-        formula: ${sim/cockpit2/switches/generic_lights_switch[1]} 1 eq
+        formula: "${sim/cockpit2/switches/generic_lights_switch[1]} 1 eq"
 
   - index: 7
     type: push
@@ -141,12 +141,12 @@ buttons:
       B0:
         text: "OFF"
         color: darkorange
-        formula: ${sim/cockpit2/switches/generic_lights_switch[10]} 0 eq
+        formula: "${sim/cockpit2/switches/generic_lights_switch[10]} 0 eq"
       B1:
         text: "ON"
         color: deepskyblue
         framed: true
-        formula: ${sim/cockpit2/switches/generic_lights_switch[10]} 1 eq
+        formula: "${sim/cockpit2/switches/generic_lights_switch[10]} 1 eq"
 
   # Nav row
   - index: 8
