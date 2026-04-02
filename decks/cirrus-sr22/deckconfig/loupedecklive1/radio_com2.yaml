@@ -9,12 +9,13 @@ buttons:
     label-color: white
     type: push
     vibrate: SHORT
+    render-cooldown-ms: 50
     command: sim/radios/com2_standy_flip
     annunciator:
       size: medium
-      model: D
+      model: A
       parts:
-        D0:
+        A0:
           color: cyan
           text-size: 80
           text-font: D-DINCondensed.otf
@@ -22,30 +23,74 @@ buttons:
           text: "${formula}"
           text-format: "{0:.3f}"
 
+  - index: 3
+    name: COM2_AUDIO
+    type: push
+    vibrate: SHORT
+    label: AUDIO
+    label-color: white
+    command: sim/audio_panel/select_audio_com2
+    annunciator:
+      model: A
+      size: medium
+      parts:
+        A0:
+          led: dot
+          color: deepskyblue
+          formula: ${laminar/sr22/annunciators/audio/com2}
+
+  - index: 7
+    name: COM2_MIC
+    type: push
+    vibrate: SHORT
+    label: MIC2
+    label-color: white
+    command: sim/audio_panel/transmit_audio_com2
+    annunciator:
+      model: A
+      size: medium
+      parts:
+        A0:
+          led: dot
+          color: deepskyblue
+          formula: ${laminar/sr22/annunciators/audio/mic2}
+
   - index: 1
-    name: COM2_ACTIVE
-    label: "COM2"
+    name: COM2_FLIPFLOP
+    label: "FLIP FLOP"
     label-color: white
     type: push
     vibrate: SHORT
     command: sim/radios/com2_standy_flip
     annunciator:
       size: medium
-      model: B
+      model: A
       parts:
-        B0:
+        A0:
+          color: white
+          text-size: 240
+          text-font: DejaVuSans.ttf
+          formula: 1
+          text: "↔"
+          frame: false
+
+  - index: 2
+    name: COM2_ACTIVE
+    label: "COM2"
+    label-color: white
+    type: none
+    render-cooldown-ms: 50
+    annunciator:
+      size: medium
+      model: A
+      parts:
+        A0:
           color: lime
           text-size: 80
           text-font: D-DINCondensed.otf
           formula: "${sim/cockpit2/radios/actuators/com2_frequency_hz_833} 1000 /"
           text: "${formula}"
           text-format: "{0:.3f}"
-        B1:
-          color: darkgrey
-          text-size: 64
-          text-font: DejaVuSans.ttf
-          formula: "1"
-          text: "⇄"
 
   # Nav row
   - index: 8

@@ -9,12 +9,13 @@ buttons:
     label-color: white
     type: push
     vibrate: SHORT
+    render-cooldown-ms: 50
     command: sim/radios/nav2_standy_flip
     annunciator:
       size: medium
-      model: D
+      model: A
       parts:
-        D0:
+        A0:
           color: cyan
           text-size: 80
           text-font: D-DINCondensed.otf
@@ -23,29 +24,57 @@ buttons:
           text-format: "{0:.2f}"
 
   - index: 1
-    name: NAV2_ACTIVE
-    label: "NAV2"
+    name: NAV2_FLIPFLOP
+    label: "FLIP FLOP"
     label-color: white
     type: push
     vibrate: SHORT
     command: sim/radios/nav2_standy_flip
     annunciator:
       size: medium
-      model: B
+      model: A
       parts:
-        B0:
+        A0:
+          color: white
+          text-size: 240
+          text-font: DejaVuSans.ttf
+          formula: 1
+          text: "↔"
+          frame: false
+
+  - index: 2
+    name: NAV2_ACTIVE
+    label: "NAV2"
+    label-color: white
+    type: none
+    render-cooldown-ms: 50
+    annunciator:
+      size: medium
+      model: A
+      parts:
+        A0:
           color: lime
           text-size: 80
           text-font: D-DINCondensed.otf
           formula: "${sim/cockpit/radios/nav2_freq_hz} 100 /"
           text: "${formula}"
           text-format: "{0:.2f}"
-        B1:
-          color: darkgrey
-          text-size: 64
-          text-font: DejaVuSans.ttf
-          formula: "1"
-          text: "⇄"
+
+  - index: 3
+    name: NAV2_AUDIO
+    type: push
+    vibrate: SHORT
+    label: AUDIO
+    label-color: white
+    command: sim/audio_panel/select_audio_nav2
+    annunciator:
+      model: A
+      size: medium
+      parts:
+        A0:
+          led: dot
+          color: deepskyblue
+          formula: ${laminar/sr22/annunciators/audio/nav2}
 
   # Nav row
   - index: 8
