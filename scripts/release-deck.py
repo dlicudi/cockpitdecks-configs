@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import shlex
 import subprocess
 from pathlib import Path
@@ -134,6 +135,73 @@ def gh_release_state(manifest_yaml: Path) -> dict[str, Any]:
     }
 
 
+_SKIP_RE = re.compile(
+    r"^(bump .* to v\d|update .* readme|remove _docs|merge pull request)",
+    re.IGNORECASE,
+)
+
+
+def _previous_pack_tag(pack_id: str) -> str | None:
+    """Return the most recent git tag for this pack, or None if no prior release."""
+    try:
+        proc = subprocess.run(
+            ["git", "tag", "--list", f"pack-{pack_id}-v*", "--sort=-version:refname"],
+            cwd=ROOT, capture_output=True, text=True, check=True,
+        )
+        tags = [t.strip() for t in proc.stdout.splitlines() if t.strip()]
+        return tags[0] if tags else None
+    except subprocess.CalledProcessError:
+        return None
+
+
+def _git_log_since(prev_tag: str | None, pack_dir: Path) -> list[str]:
+    """Commit subject lines since *prev_tag* that touch *pack_dir*."""
+    rel_dir = pack_dir.relative_to(ROOT)
+    rev_range = f"{prev_tag}..HEAD" if prev_tag else "HEAD"
+    try:
+        proc = subprocess.run(
+            ["git", "log", rev_range, "--pretty=format:%s", "--", str(rel_dir)],
+            cwd=ROOT, capture_output=True, text=True, check=True,
+        )
+        return [
+            line.strip()
+            for line in proc.stdout.splitlines()
+            if line.strip() and not _SKIP_RE.match(line.strip())
+        ]
+    except subprocess.CalledProcessError:
+        return []
+
+
+def generate_release_notes(manifest_yaml: Path) -> str:
+    """Auto-generate release notes from manifest summary and git log."""
+    info = deck_data(manifest_yaml)
+    pack_id = info["id"]
+    summary = str(info["meta"].get("summary") or info["meta"].get("description") or "").strip()
+
+    prev_tag = _previous_pack_tag(pack_id)
+    commits = _git_log_since(prev_tag, info["dir"])
+
+    lines: list[str] = []
+    if summary:
+        lines += [summary, ""]
+
+    if prev_tag:
+        prev_ver = re.sub(r"^pack-.+-v", "", prev_tag)
+        lines.append(f"## Changes since v{prev_ver}")
+    else:
+        lines.append("## Changes")
+
+    if commits:
+        lines += [f"- {msg}" for msg in commits]
+    else:
+        lines.append("- Maintenance release")
+
+    readme_url = f"https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/{pack_id}/README.md"
+    lines += ["", f"Documentation: {readme_url}"]
+
+    return "\n".join(lines)
+
+
 def cmd_list(_: argparse.Namespace) -> int:
     for path in list_manifest_yamls():
         info = deck_data(path)
@@ -169,12 +237,22 @@ def cmd_release(args: argparse.Namespace) -> int:
     manifest_yaml = resolve_manifest_yaml(args.deck)
     info = deck_data(manifest_yaml)
     state = gh_release_state(manifest_yaml)
+
+    notes = args.notes if args.notes else generate_release_notes(manifest_yaml)
+
     asset_path = build_deck(manifest_yaml)
-    command = gh_release_command(manifest_yaml, args.notes)
+    command = gh_release_command(manifest_yaml, notes)
+
     print(f"asset: {asset_path}")
-    print(f"gh: {gh_quote(command)}")
     print(f"release_exists: {state['release_exists']}")
     print(f"asset_exists: {state['asset_exists']}")
+    print()
+    print("── release notes ──────────────────────────────")
+    print(notes)
+    print("───────────────────────────────────────────────")
+    print()
+    print(f"gh: {gh_quote(command)}")
+
     if args.execute:
         if state["release_exists"] and state["asset_exists"]:
             raise SystemExit(f"release asset already exists for {info['tag']}: {info['asset_name']}")
@@ -198,7 +276,7 @@ def main() -> int:
 
     release = sub.add_parser("release", help="Build a deck zip and show or run gh release create")
     release.add_argument("deck", help="Deck id such as cirrus-sr22, or a path to manifest.yaml")
-    release.add_argument("--notes", required=True, help="Release changelog / notes (required)")
+    release.add_argument("--notes", default="", help="Override release notes (auto-generated from git log if omitted)")
     release.add_argument("--execute", action="store_true", help="Run the gh release create command")
     release.set_defaults(func=cmd_release)
 
