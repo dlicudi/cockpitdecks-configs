@@ -48,7 +48,7 @@ buttons:
       data-color: white
       data-trend: 0
       data-unit: kts
-      formula: ${sim/weather/region/wind_speed_msc[0]}
+      formula: "${sim/weather/region/wind_speed_msc[0]} 1.944 *"
       bottomline: speed in kts
       bottomline-size: 30
       bottomline-color: red
@@ -161,7 +161,7 @@ buttons:
       data-progress: 31
       data-trend: 0
       data-unit: "FT"
-      formula: ${sim/weather/region/tropo_alt_m}
+      formula: "${sim/weather/region/tropo_alt_m} 3.28084 *"
       bottomline: "FT"
       bottomline-size: 30
       bottomline-color: red
@@ -211,13 +211,13 @@ buttons:
       icon-size: 60
       icon-color: deepskyblue
       data: ${formula}
-      data-format: "{:04.0f}"
+      data-format: "{:05.2f}"
       data-font: D-DINCondensed.otf
       data-size: 60
       data-color: white
       data-trend: 0
       data-unit: "inHG"
-      formula: "${sim/weather/region/qnh_pas} 0.02953 *"
+      formula: "${sim/weather/region/qnh_pas} 100 / 0.02953 *"
       bottomline: inHG
       bottomline-size: 30
       bottomline-color: red
