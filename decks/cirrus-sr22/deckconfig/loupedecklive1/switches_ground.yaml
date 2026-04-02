@@ -113,39 +113,6 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 eq
 
-  - index: 6
-    type: none
-    label: FUEL
-    formula: ${laminar/sr22/fuel_selector_pos}
-    circular-switch:
-      button-size: 54
-      button-fill-color: firebrick
-      switch-style: medium
-      down: 22
-      tick-from: 45
-      tick-to: 315
-      tick-steps: 4
-      tick-space: 26
-      tick-width: 2
-      tick-underline-width: 0
-      tick-color: white
-      tick-off-color: grey
-      needle-color: white
-      needle-underline-width: 0
-      needle-start: 86
-      needle-length: 0
-      needle-tip: arri
-      needle-tip-size: 8
-      tick-labels:
-        - "OFF"
-        - "LEFT"
-        - "RIGHT"
-        - "OFF"
-      tick-label-space: 8
-      tick-label-size: 20
-      tick-label-font: D-DIN-Bold.otf
-
-
   - index: 7
     name: ENGINE START
     type: begin-end-command

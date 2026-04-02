@@ -67,8 +67,8 @@ buttons:
   - index: 5
     type: page
     vibrate: SHORT
-    page: gcu478
-    label: GCU-478
+    page: gcu479
+    label: GCU-479
     label-color: Gold
     text: 
     text-color: khaki
