@@ -6,9 +6,9 @@ buttons:
   name: range_encoder
   type: encoder-push
   commands:
-  - sim/GPS/gcu479/pan_push # push
-  - sim/GPS/gcu479/range_down
-  - sim/GPS/gcu479/range_up
+  - sim/GPS/gcu478/pan_push # push
+  - sim/GPS/gcu478/range_down
+  - sim/GPS/gcu478/range_up
 
 - index: e1
   name: fms_encoder
@@ -18,7 +18,7 @@ buttons:
   - sim/GPS/g1000n3_fms_outer_up
   - sim/GPS/g1000n3_fms_inner_down
   - sim/GPS/g1000n3_fms_inner_up
-  long-press: sim/GPS/gcu479/cursor
+  long-press: sim/GPS/gcu478/cursor
 
 
 - index: e2
