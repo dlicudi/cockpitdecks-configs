@@ -62,7 +62,7 @@ buttons:
         label-font: B612Mono-Regular.ttf
         label-color: Gold
         text-size: 18
-        text-font: Segment7Standard.otf
+        text-font: D-DINCondensed.otf
         text-color: White
         text: "+/-"
       - label: "PAN"
@@ -70,7 +70,7 @@ buttons:
         label-font: B612Mono-Regular.ttf
         label-color: Gold
         text-size: 18
-        text-font: Segment7Standard.otf
+        text-font: D-DINCondensed.otf
         text-color: White
         text: "L/R"
       - label: "PAN"
@@ -78,7 +78,7 @@ buttons:
         label-font: B612Mono-Regular.ttf
         label-color: Gold
         text-size: 18
-        text-font: Segment7Standard.otf
+        text-font: D-DINCondensed.otf
         text-color: White
         text: "U/D"
 
@@ -93,7 +93,7 @@ buttons:
         label-font: B612Mono-Regular.ttf
         label-color: Gold
         text-size: 18
-        text-font: Segment7Standard.otf
+        text-font: D-DINCondensed.otf
         text-color: White
         text: "Outer"
       - label: "FMS"
@@ -101,7 +101,7 @@ buttons:
         label-font: B612Mono-Regular.ttf
         label-color: Gold
         text-size: 18
-        text-font: Segment7Standard.otf
+        text-font: D-DINCondensed.otf
         text-color: White
         text: "Inner"
       - label: "GCU479"
@@ -109,6 +109,6 @@ buttons:
         label-font: B612Mono-Regular.ttf
         label-color: Gold
         text-size: 18
-        text-font: Segment7Standard.otf
+        text-font: D-DINCondensed.otf
         text-color: White
         text: "COMBO"
