@@ -33,7 +33,7 @@ buttons:
   - index: b4
     name: P4
     type: page
-    page: radio
+    page: radio_com1
     colored-led: yellow
 
   - index: b5

@@ -1,0 +1,91 @@
+name: radio_com2
+includes: pager,encoders/encoders_com2
+
+buttons:
+
+  - index: 0
+    name: COM2_STDBY
+    label: "STDBY"
+    label-color: white
+    type: push
+    vibrate: SHORT
+    command: sim/radios/com2_standy_flip
+    annunciator:
+      size: medium
+      model: D
+      parts:
+        D0:
+          color: cyan
+          text-size: 80
+          text-font: D-DINCondensed.otf
+          formula: "${sim/cockpit2/radios/actuators/com2_standby_frequency_hz_833} 1000 /"
+          text: "${formula}"
+          text-format: "{0:.3f}"
+
+  - index: 1
+    name: COM2_ACTIVE
+    label: "COM2"
+    label-color: white
+    type: push
+    vibrate: SHORT
+    command: sim/radios/com2_standy_flip
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          text-size: 80
+          text-font: D-DINCondensed.otf
+          formula: "${sim/cockpit2/radios/actuators/com2_frequency_hz_833} 1000 /"
+          text: "${formula}"
+          text-format: "{0:.3f}"
+        B1:
+          color: darkgrey
+          text-size: 64
+          text-font: DejaVuSans.ttf
+          formula: "1"
+          text: "⇄"
+
+  # Nav row
+  - index: 8
+    type: page
+    page: radio_com1
+    vibrate: SHORT
+    text: COM1
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
+
+  - index: 9
+    type: none
+    text: COM2
+    text-color: Gold
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (40, 35, 0)
+
+  - index: 10
+    type: page
+    page: radio_nav1
+    vibrate: SHORT
+    text: NAV1
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
+
+  - index: 11
+    type: page
+    page: radio_nav2
+    vibrate: SHORT
+    text: NAV2
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)

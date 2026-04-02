@@ -1,7 +1,7 @@
 aircraft: Cirrus SR22
 icao: SR22
 model:  Cirrus SR22
-render-flush-delay-ms: 400
+render-flush-delay-ms: 50
 decks:
   - name: Loupedeck Live 1
     type: LoupedeckLive

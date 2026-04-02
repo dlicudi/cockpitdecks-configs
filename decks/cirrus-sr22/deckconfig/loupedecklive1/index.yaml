@@ -79,7 +79,7 @@ buttons:
   - index: 6
     type: page
     vibrate: SHORT
-    page: radio
+    page: radio_com1
     label: RADIO
     label-color: Gold
     text: 

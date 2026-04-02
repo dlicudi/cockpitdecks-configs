@@ -1,0 +1,129 @@
+name: radio_com1
+includes: pager,encoders/encoders_com1
+
+buttons:
+
+  - index: 0
+    name: COM1_STDBY
+    label: "STDBY"
+    label-color: white
+    type: push
+    vibrate: SHORT
+    render-cooldown-ms: 50
+    command: sim/GPS/g1000n1_com_ff
+    annunciator:
+      size: medium
+      model: D
+      parts:
+        D0:
+          color: cyan
+          text-size: 80
+          text-font: D-DINCondensed.otf
+          formula: "${sim/cockpit2/radios/actuators/com1_standby_frequency_hz_833} 1000 /"
+          text: "${formula}"
+          text-format: "{0:.3f}"
+
+  - index: 1
+    name: COM1_FLIPFLOP
+    type: push
+    vibrate: SHORT
+    label: FLIP FLOP
+    label-color: white
+    command: sim/GPS/g1000n1_com_ff
+    text: "⇄"
+    text-size: 60
+    text-color: darkorange
+    text-font: DejaVuSans.ttf
+    text-position: cm
+    text-bg-color: black
+
+  - index: 2
+    name: COM1_ACTIVE
+    label: "COM1"
+    label-color: white
+    type: none
+    render-cooldown-ms: 50
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          text-size: 80
+          text-font: D-DINCondensed.otf
+          formula: "${sim/cockpit2/radios/actuators/com1_frequency_hz_833} 1000 /"
+          text: "${formula}"
+          text-format: "{0:.3f}"
+
+  - index: 3
+    name: COM1_AUDIO
+    type: push
+    vibrate: SHORT
+    label: AUDIO
+    label-color: white
+    command: sim/audio_panel/select_audio_com1
+    annunciator:
+      model: A
+      size: medium
+      A0:
+        led: dot
+        color: deepskyblue
+        formula: ${laminar/sr22/annunciators/audio/com1}
+
+  # Nav row
+  - index: 8
+    type: none
+    text: COM1
+    text-color: Gold
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (40, 35, 0)
+
+  - index: 9
+    type: page
+    page: radio_com2
+    vibrate: SHORT
+    text: COM2
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
+
+  - index: 10
+    type: page
+    page: radio_nav1
+    vibrate: SHORT
+    text: NAV1
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
+
+  - index: 11
+    type: page
+    page: radio_nav2
+    vibrate: SHORT
+    text: NAV2
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
+
+  - index: 7
+    name: COM1_MIC
+    type: push
+    vibrate: SHORT
+    label: MIC1
+    label-color: white
+    command: sim/audio_panel/transmit_audio_com1
+    annunciator:
+      model: A
+      size: medium
+      A0:
+        led: dot
+        color: deepskyblue
+        formula: ${laminar/sr22/annunciators/audio/mic1}
