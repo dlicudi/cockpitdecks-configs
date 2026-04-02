@@ -1,64 +1,75 @@
 # cockpitdecks-configs
-A collection of aircraft configs for [cockpitdecks](https://github.com/devleaks/cockpitdecks).
+
+Aircraft deck configurations for [Cockpitdecks](https://github.com/dlicudi/cockpitdecks).
 
 Documentation: [Cockpitdecks Configs Docs](https://dlicudi.github.io/cockpitdecks-configs/)
 
 ## Aircraft
 
-Aircraft configs completed, planned or in progress.
-
-### Laminar Research
-- [x] LR Cessna 172 SP (Laminar Research)
-- [x] LR Cirrus SR22 (Laminar Research) 
-- [x] LR Beechcraft Baron 58 (Laminar Research)
-- [x] LR Lancair Evolution (Laminar Research)
-
-### Toliss
-- [x] Toliss Airbus A321 Neo (devleaks)
-- [ ] Toliss Airbus A320 Neo
-
-### Aerobask
-- [x] LR Robin DR401 (Aerobask)
+| Pack | Aircraft | Available |
+|------|----------|-----------|
+| `cirrus-sr22` | Laminar Research Cirrus SR22 | Deck Packs tab |
+| `cessna-172-sp` | Laminar Research Cessna 172 SP | Manual install |
+| `beechcraft-baron-58` | Laminar Research Beechcraft Baron 58 | Manual install |
+| `lancair-evolution` | Laminar Research Lancair Evolution | Manual install |
+| `embraer-e-jets-family` | Laminar Research Embraer E-Jets Family | Manual install |
+| `epic-e1000g` | Laminar Research Epic E1000G | Manual install |
+| `vans-aircraft-rv-10` | Van's Aircraft RV-10 | Manual install |
+| `aerobask-robin-dr401` | Aerobask Robin DR401 | Manual install |
+| `toliss-airbus-a320-neo` | Toliss Airbus A320 Neo | Manual install |
+| `toliss-airbus-a321-neo` | Toliss Airbus A321 Neo | Manual install |
+| `toliss-airbus-a330-neo` | Toliss Airbus A330 Neo | Manual install |
 
 ## Installation
 
-Install `cockpitdecks` as a Python package, then clone this repository as config data:
+### Via Cockpitdecks Desktop (recommended)
+
+Packs marked **Deck Packs tab** can be installed directly from the **Decks → Packs** tab in [Cockpitdecks Desktop](https://github.com/dlicudi/cockpitdecks-desktop). No manual steps required.
+
+### Manual install
+
+For configs without a published pack release, clone this repo and symlink the `deckconfig` folder into the aircraft directory:
+
+```sh
+git clone https://github.com/dlicudi/cockpitdecks-configs.git
+```
+
+Then symlink the config into your X-Plane aircraft folder:
+
+```sh
+ln -s ~/GitHub/cockpitdecks-configs/decks/cirrus-sr22/deckconfig \
+  ~/X-Plane\ 12/Aircraft/Laminar\ Research/Cirrus\ SR22/deckconfig
+```
+
+> [!IMPORTANT]
+> You must use a symlink — an alias (macOS Finder) will not work for long-press buttons.
+
+### Installing Cockpitdecks
 
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install --upgrade pip
 pip install 'cockpitdecks[xplane,loupedeck] @ git+https://github.com/dlicudi/cockpitdecks.git'
-git clone https://github.com/dlicudi/cockpitdecks-configs.git
 ```
 
-`cockpitdecks-configs` is not a Python package, so it should be cloned, not installed with `pip`.
+`cockpitdecks-configs` is not a Python package and should not be installed with `pip`.
 
+## Releasing a pack
 
-## Examples
+```sh
+# Preview
+python scripts/release-deck.py release cirrus-sr22
 
-### Home
-![Home](./docs/assets/images/cirrus-sr22/home.png)
+# Publish
+python scripts/release-deck.py release cirrus-sr22 --execute
+```
 
-### Primary Flight Instruments
-![PFI](./docs/assets/images/cirrus-sr22/pfi.png)
+Release notes are auto-generated from the git log since the previous tag. See each pack's `README.md` for full documentation.
 
-### Garmin GCU-478
-![GCU-478](./docs/assets/images/cirrus-sr22/gcu478.png)
+## Preview generation
 
-## Preview Generation
-
-Deck docs, preview images, and generated SR22 markdown can be regenerated in one step:
+Deck docs and preview images can be regenerated without X-Plane running:
 
 ```sh
 python3 scripts/generate_deck_docs.py
 ```
-
-This produces page-only preview images and generated doc fragments from config plus sample datarefs, without requiring X-Plane to be running.
-
-
-## Notes on long press buttons
-
-> [!IMPORTANT]
-> You must have either the deckconfig in the Aircraft's folder or a symlink (on MAC an alias will not work) e.g.
-> `ln -s ~/Documents/GitHub/cockpitdecks-configs/decks/cessna-172-sp/deckconfig ~/X-Plane\ 12/Aircraft/Laminar\ Research/Cessna\ 172\ SP`
