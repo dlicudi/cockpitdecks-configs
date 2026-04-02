@@ -2,37 +2,20 @@
 
 Official Cockpitdecks configuration for the Laminar Research Cirrus SR22.
 
-Release metadata for this deck is stored in `manifest.yaml`.
-
-## Status
-
-- Aircraft: Laminar Research Cirrus SR22
-- ICAO: `SR22`
-- Config root: `deckconfig/`
-- Included layouts:
-  - `loupedecklive1`
-  - `streamdeckxl1`
-
-The Loupedeck Live layout is currently the most complete documented layout.
+Release metadata (version, status, dependencies) is in `manifest.yaml`.
 
 ## Requirements
 
 - X-Plane 12 with the Laminar Research Cirrus SR22
-- `cockpitdecks`
-- Matching Cockpitdecks runtime dependencies for your hardware
-- One of:
-  - Loupedeck Live
-  - Stream Deck XL
-
-Optional:
-
-- `PI_CockpitdecksFMSBrowser` for FMS Load / FPL / NAV pages on the Loupedeck Live layout
+- `cockpitdecks` with the X-Plane adapter (`cockpitdecks_xp`)
+- Hardware driver matching your device:
+  - `cockpitdecks_ld` — Loupedeck Live
+  - `cockpitdecks_sd` — Stream Deck XL
+- `PI_CockpitdecksFMSBrowser` X-Plane plugin for FMS pages (FPL / NAV / Load)
 
 ## Install
 
-Clone or copy this aircraft config so that the aircraft can see its `deckconfig` folder.
-
-Example:
+Clone or copy this config so the aircraft folder contains a `deckconfig` directory.
 
 ```sh
 ln -s ~/GitHub/cockpitdecks-configs/decks/cirrus-sr22/deckconfig \
@@ -45,50 +28,56 @@ If you use a Loupedeck device, copy `secret.yaml.dist` to `secret.yaml` and set 
 cp deckconfig/secret.yaml.dist deckconfig/secret.yaml
 ```
 
-## Notes
+## Layouts
 
-- `deckconfig/config.yaml` defines both included layouts.
-- The FMS-related Loupedeck pages require the Cockpitdecks FMS browser plugin in X-Plane.
-- The config includes local icons and fonts under `deckconfig/resources/`.
+Defined in `deckconfig/config.yaml`. Three layouts are included:
+
+| Layout | Device | Status |
+|--------|--------|--------|
+| `loupedecklive1` | Loupedeck Live | Full |
+| `streamdeckxl1` | Stream Deck XL | Full |
+| `webdeck1` | Virtual / Web deck | Minimal |
+
+Virtual equivalents of the Loupedeck and Stream Deck XL layouts are also available for testing without hardware.
 
 ## Pages
 
-Main pages currently included across the layouts:
+### Loupedeck Live (`loupedecklive1`)
 
-- Home / index
-- PFI
-- FCU
-- GCU478
-- Engine
-- Radio
-- Transponder
-- Weather
-- Lights
-- Icing
-- Pedestal
-- Views
-- FMS-related pages
+| Page | Description |
+|------|-------------|
+| `index` / `index2` | Home |
+| `pfi` | Primary Flight Instruments |
+| `fcu` | Flight Control Unit (autopilot) |
+| `gcu479` | GCU 479 keypad |
+| `engine` | Engine monitoring |
+| `radio` | Radio overview + COM1/2, NAV1/2 sub-pages |
+| `transponder` | Transponder |
+| `weather` | Weather |
+| `pedestal` | Pedestal controls |
+| `views` | View control |
+| `switches_master` / `switches_ground` / `switches_lights` / `switches_icing` | Switch groups |
+| `fms_fpl` | FMS — Flight Plan |
+| `fms_nav` | FMS — Navigation |
+| `fms_load` | FMS — Load flight plan |
 
-## Screenshots
+### Stream Deck XL (`streamdeckxl1`)
 
-### Cockpit
-
-![Cockpit](../../docs/assets/images/cirrus-sr22/cirrus-sr22-cockpit.png)
-
-### Home
-
-![Home](../../docs/assets/images/cirrus-sr22/home.png)
-
-### PFI
-
-![PFI](../../docs/assets/images/cirrus-sr22/pfi.png)
-
-### GCU478
-
-![GCU478](../../docs/assets/images/cirrus-sr22/gcu478.png)
-
-## Changelog
-
-## [1.0.0] - 2024-06-11
-
-- Added: New changelog
+| Page | Description |
+|------|-------------|
+| `index` | Home |
+| `pfd` | Primary Flight Display |
+| `fcu` | Flight Control Unit (autopilot) |
+| `gcu478` | GCU 478 keypad |
+| `mfd` | Multi-Function Display |
+| `engine` | Engine monitoring |
+| `radio` | Radios |
+| `transponder` | Transponder |
+| `weather` | Weather |
+| `pedestal` | Pedestal controls |
+| `views` | View control |
+| `switches` | Switches |
+| `icing` | Ice protection |
+| `lights` | Lighting |
+| `fms` | FMS — Flight Plan |
+| `fms_load` | FMS — Load flight plan |
