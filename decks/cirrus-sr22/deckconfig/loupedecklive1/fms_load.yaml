@@ -11,19 +11,19 @@ buttons:
 - index: 0
   name: LOAD_R1_FILE
   type: push
-  command: cockpitdecks/fms_browser/list_select_row_1
-  dataref: cockpitdecks/fms_browser/list_row_1_is_selected
+  command: cockpitdecks/fms/load/list_select_row_1
+  dataref: cockpitdecks/fms/load/list_row_1_is_selected
   vibrate: SHORT
   label: FPL
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms_browser/list_row_1_filename}"
+    - text: "${cockpitdecks/fms/load/list_row_1_filename}"
       text-font: D-DINCondensed.otf
       text-size: 16
       text-color: darkorange
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms_browser/list_row_1_filename}"
+    - text: "${cockpitdecks/fms/load/list_row_1_filename}"
       text-font: D-DINCondensed.otf
       text-size: 16
       text-color: white
@@ -33,20 +33,20 @@ buttons:
 - index: 1
   name: LOAD_R1_WPTS
   type: push
-  command: cockpitdecks/fms_browser/list_select_row_1
-  dataref: cockpitdecks/fms_browser/list_row_1_is_selected
+  command: cockpitdecks/fms/load/list_select_row_1
+  dataref: cockpitdecks/fms/load/list_row_1_is_selected
   vibrate: SHORT
   label: WPTS
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms_browser/list_row_1_wpt_count}"
+    - text: "${cockpitdecks/fms/load/list_row_1_wpt_count}"
       text-format: "{0:.0f}"
       text-color: darkorange
       text-size: 22
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms_browser/list_row_1_wpt_count}"
+    - text: "${cockpitdecks/fms/load/list_row_1_wpt_count}"
       text-format: "{0:.0f}"
       text-color: white
       text-size: 22
@@ -57,18 +57,18 @@ buttons:
 - index: 2
   name: LOAD_R1_MAX
   type: none
-  dataref: cockpitdecks/fms_browser/list_row_1_is_selected
+  dataref: cockpitdecks/fms/load/list_row_1_is_selected
   label: MAX ALT
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms_browser/list_row_1_max_alt_ft}\nft"
+    - text: "${cockpitdecks/fms/load/list_row_1_max_alt_ft}\nft"
       text-format: "{0:.0f}"
       text-color: darkorange
       text-size: 22
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms_browser/list_row_1_max_alt_ft}\nft"
+    - text: "${cockpitdecks/fms/load/list_row_1_max_alt_ft}\nft"
       text-format: "{0:.0f}"
       text-color: white
       text-size: 22
@@ -79,18 +79,18 @@ buttons:
 - index: 3
   name: LOAD_R1_DIS
   type: none
-  dataref: cockpitdecks/fms_browser/list_row_1_is_selected
+  dataref: cockpitdecks/fms/load/list_row_1_is_selected
   label: DIS
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms_browser/list_row_1_distance_nm}\nnm"
+    - text: "${cockpitdecks/fms/load/list_row_1_distance_nm}\nnm"
       text-format: "{0:.0f}"
       text-color: darkorange
       text-size: 22
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms_browser/list_row_1_distance_nm}\nnm"
+    - text: "${cockpitdecks/fms/load/list_row_1_distance_nm}\nnm"
       text-format: "{0:.0f}"
       text-color: white
       text-size: 22
@@ -102,19 +102,19 @@ buttons:
 - index: 4
   name: LOAD_R2_FILE
   type: push
-  command: cockpitdecks/fms_browser/list_select_row_2
-  dataref: cockpitdecks/fms_browser/list_row_2_is_selected
+  command: cockpitdecks/fms/load/list_select_row_2
+  dataref: cockpitdecks/fms/load/list_row_2_is_selected
   vibrate: SHORT
   label: FPL
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms_browser/list_row_2_filename}"
+    - text: "${cockpitdecks/fms/load/list_row_2_filename}"
       text-font: D-DINCondensed.otf
       text-size: 16
       text-color: darkorange
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms_browser/list_row_2_filename}"
+    - text: "${cockpitdecks/fms/load/list_row_2_filename}"
       text-font: D-DINCondensed.otf
       text-size: 16
       text-color: white
@@ -124,20 +124,20 @@ buttons:
 - index: 5
   name: LOAD_R2_WPTS
   type: push
-  command: cockpitdecks/fms_browser/list_select_row_2
-  dataref: cockpitdecks/fms_browser/list_row_2_is_selected
+  command: cockpitdecks/fms/load/list_select_row_2
+  dataref: cockpitdecks/fms/load/list_row_2_is_selected
   vibrate: SHORT
   label: WPTS
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms_browser/list_row_2_wpt_count}"
+    - text: "${cockpitdecks/fms/load/list_row_2_wpt_count}"
       text-format: "{0:.0f}"
       text-color: darkorange
       text-size: 22
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms_browser/list_row_2_wpt_count}"
+    - text: "${cockpitdecks/fms/load/list_row_2_wpt_count}"
       text-format: "{0:.0f}"
       text-color: white
       text-size: 22
@@ -148,18 +148,18 @@ buttons:
 - index: 6
   name: LOAD_R2_MAX
   type: none
-  dataref: cockpitdecks/fms_browser/list_row_2_is_selected
+  dataref: cockpitdecks/fms/load/list_row_2_is_selected
   label: MAX ALT
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms_browser/list_row_2_max_alt_ft}\nft"
+    - text: "${cockpitdecks/fms/load/list_row_2_max_alt_ft}\nft"
       text-format: "{0:.0f}"
       text-color: darkorange
       text-size: 22
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms_browser/list_row_2_max_alt_ft}\nft"
+    - text: "${cockpitdecks/fms/load/list_row_2_max_alt_ft}\nft"
       text-format: "{0:.0f}"
       text-color: white
       text-size: 22
@@ -170,18 +170,18 @@ buttons:
 - index: 7
   name: LOAD_R2_DIS
   type: none
-  dataref: cockpitdecks/fms_browser/list_row_2_is_selected
+  dataref: cockpitdecks/fms/load/list_row_2_is_selected
   label: DIS
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms_browser/list_row_2_distance_nm}\nnm"
+    - text: "${cockpitdecks/fms/load/list_row_2_distance_nm}\nnm"
       text-format: "{0:.0f}"
       text-color: darkorange
       text-size: 22
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms_browser/list_row_2_distance_nm}\nnm"
+    - text: "${cockpitdecks/fms/load/list_row_2_distance_nm}\nnm"
       text-format: "{0:.0f}"
       text-color: white
       text-size: 22
@@ -193,19 +193,19 @@ buttons:
 - index: 8
   name: LOAD_R3_FILE
   type: push
-  command: cockpitdecks/fms_browser/list_select_row_3
-  dataref: cockpitdecks/fms_browser/list_row_3_is_selected
+  command: cockpitdecks/fms/load/list_select_row_3
+  dataref: cockpitdecks/fms/load/list_row_3_is_selected
   vibrate: SHORT
   label: FPL
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms_browser/list_row_3_filename}"
+    - text: "${cockpitdecks/fms/load/list_row_3_filename}"
       text-font: D-DINCondensed.otf
       text-size: 16
       text-color: darkorange
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms_browser/list_row_3_filename}"
+    - text: "${cockpitdecks/fms/load/list_row_3_filename}"
       text-font: D-DINCondensed.otf
       text-size: 16
       text-color: white
@@ -215,20 +215,20 @@ buttons:
 - index: 9
   name: LOAD_R3_WPTS
   type: push
-  command: cockpitdecks/fms_browser/list_select_row_3
-  dataref: cockpitdecks/fms_browser/list_row_3_is_selected
+  command: cockpitdecks/fms/load/list_select_row_3
+  dataref: cockpitdecks/fms/load/list_row_3_is_selected
   vibrate: SHORT
   label: WPTS
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms_browser/list_row_3_wpt_count}"
+    - text: "${cockpitdecks/fms/load/list_row_3_wpt_count}"
       text-format: "{0:.0f}"
       text-color: darkorange
       text-size: 22
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms_browser/list_row_3_wpt_count}"
+    - text: "${cockpitdecks/fms/load/list_row_3_wpt_count}"
       text-format: "{0:.0f}"
       text-color: white
       text-size: 22
@@ -239,18 +239,18 @@ buttons:
 - index: 10
   name: LOAD_R3_MAX
   type: none
-  dataref: cockpitdecks/fms_browser/list_row_3_is_selected
+  dataref: cockpitdecks/fms/load/list_row_3_is_selected
   label: MAX ALT
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms_browser/list_row_3_max_alt_ft}\nft"
+    - text: "${cockpitdecks/fms/load/list_row_3_max_alt_ft}\nft"
       text-format: "{0:.0f}"
       text-color: darkorange
       text-size: 22
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms_browser/list_row_3_max_alt_ft}\nft"
+    - text: "${cockpitdecks/fms/load/list_row_3_max_alt_ft}\nft"
       text-format: "{0:.0f}"
       text-color: white
       text-size: 22
@@ -261,18 +261,18 @@ buttons:
 - index: 11
   name: LOAD_R3_DIS
   type: none
-  dataref: cockpitdecks/fms_browser/list_row_3_is_selected
+  dataref: cockpitdecks/fms/load/list_row_3_is_selected
   label: DIS
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms_browser/list_row_3_distance_nm}\nnm"
+    - text: "${cockpitdecks/fms/load/list_row_3_distance_nm}\nnm"
       text-format: "{0:.0f}"
       text-color: darkorange
       text-size: 22
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms_browser/list_row_3_distance_nm}\nnm"
+    - text: "${cockpitdecks/fms/load/list_row_3_distance_nm}\nnm"
       text-format: "{0:.0f}"
       text-color: white
       text-size: 22

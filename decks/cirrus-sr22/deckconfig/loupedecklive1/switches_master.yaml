@@ -95,6 +95,51 @@ buttons:
         framed: true
         formula: ${sim/cockpit/electrical/avionics_on} 1 eq
 
+  - index: 5
+    type: push
+    vibrate: SHORT
+    text: "UP"
+    text-color: Lime
+    command: sim/flight_controls/flaps_up
+    text-bg-color: Black
+
+  - index: 6
+    type: none
+    label: FLAPS
+    label-size: 8
+    annunciator:
+      model: F
+      size: medium
+      parts:
+        F0:
+          text: "CRUISE"
+          text-color: "#ffffff"
+          on-color: deepskyblue
+          off-color: "#000000"
+          text-size: 28
+          formula: ${laminar/sr22/annunciators/flaps_up} 1 eq
+        F1:
+          text: "TAKE OFF"
+          text-color: "#ffffff"
+          on-color: deepskyblue
+          off-color: "#000000"
+          text-size: 28
+          formula: ${laminar/sr22/annunciators/flaps_50} 1 eq
+        F2:
+          text: "LANDING"
+          text-color: "#ffffff"
+          on-color: deepskyblue
+          off-color: "#000000"
+          text-size: 28
+          formula: ${laminar/sr22/annunciators/flaps_100} 1 eq
+
+  - index: 7
+    type: push
+    text: "DOWN"
+    text-color: Lime
+    command: sim/flight_controls/flaps_down
+    text-bg-color: Black
+
   # Nav row
   - index: 8
     type: none

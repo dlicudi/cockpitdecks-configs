@@ -9,23 +9,23 @@ buttons:
 - index: e0
   name: browse_plan_pages
   type: encoder
-  dataref: cockpitdecks/fms_browser/list_window_page
+  dataref: cockpitdecks/fms/load/list_window_page
   commands:
-  - cockpitdecks/fms_browser/list_scroll_up
-  - cockpitdecks/fms_browser/list_scroll_down
+  - cockpitdecks/fms/load/list_scroll_up
+  - cockpitdecks/fms/load/list_scroll_down
 
 - index: e1
   name: select_plan
   type: encoder
-  dataref: cockpitdecks/fms_browser/index
+  dataref: cockpitdecks/fms/load/index
   commands:
-  - cockpitdecks/fms_browser/previous
-  - cockpitdecks/fms_browser/next
+  - cockpitdecks/fms/load/previous
+  - cockpitdecks/fms/load/next
 
 - index: e2
   name: load_selected_plan
   type: push
-  command: cockpitdecks/fms_browser/load
+  command: cockpitdecks/fms/load/load
 
 
 # RIGHT SCREEN
@@ -41,7 +41,7 @@ buttons:
 - index: e3
   name: refresh_plan_list
   type: push
-  command: cockpitdecks/fms_browser/refresh
+  command: cockpitdecks/fms/load/refresh
 
 - index: left
   name: left_screen
@@ -56,7 +56,7 @@ buttons:
         text-size: 16
         text-font: D-DINCondensed.otf
         text-color: White
-        text: "${cockpitdecks/fms_browser/list_page}"
+        text: "${cockpitdecks/fms/load/list_page}"
       - label: "SEL"
         label-size: 18
         label-font: D-DINCondensed.otf
@@ -64,7 +64,7 @@ buttons:
         text-size: 16
         text-font: D-DINCondensed.otf
         text-color: White
-        text: "${cockpitdecks/fms_browser/list_sel_count}"
+        text: "${cockpitdecks/fms/load/list_sel_count}"
       - label: "LOAD"
         label-size: 18
         label-font: D-DINCondensed.otf
@@ -72,7 +72,7 @@ buttons:
         text-size: 14
         text-font: D-DINCondensed.otf
         text-color: White
-        text: "${cockpitdecks/fms_browser/status}"
+        text: "${cockpitdecks/fms/load/status}"
 
 - index: right
   name: right_screen

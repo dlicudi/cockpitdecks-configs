@@ -1,4 +1,4 @@
-# NAV encoders — E2 = function cycle (FPL <-> NAV)
+# NAV encoders — E2 = function cycle (NAV/FPL/DEP/ARR/APP)
 # Read-only telemetry page, no browse/action on encoders
 
 buttons:
@@ -9,9 +9,15 @@ buttons:
   pages:
     - fms_nav
     - fms_fpl
+    - fms_proc_dep
+    - fms_proc_arr
+    - fms_proc_app
   page-labels:
     - NAV
     - FPL
+    - DEP
+    - ARR
+    - APP
 
 - index: left
   name: left_screen

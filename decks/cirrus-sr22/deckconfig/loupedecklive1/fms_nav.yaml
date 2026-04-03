@@ -14,7 +14,7 @@ buttons:
   render-cooldown-ms: 500
   label: DIS
   label-color: Gold
-  text: "${sim/cockpit2/radios/indicators/gps_dme_distance_nm}\nDST ${cockpitdecks/fms_browser/loaded_distance_nm}"
+  text: "${sim/cockpit2/radios/indicators/gps_dme_distance_nm}\nDST ${cockpitdecks/fms/load/loaded_distance_nm}"
   text-format: "{0:.1f}"
   text-color: white
   text-size: 20
@@ -72,7 +72,7 @@ buttons:
   render-cooldown-ms: 500
   label: WPT
   label-color: Gold
-  text: "${cockpitdecks/fms_browser/fms_active_ident}"
+  text: "${cockpitdecks/fms/load/fms_active_ident}"
   text-color: lime
   text-size: 22
   text-font: D-DINCondensed.otf
@@ -141,7 +141,7 @@ buttons:
   render-cooldown-ms: 500
   label: DEST
   label-color: Gold
-  text: "${cockpitdecks/fms_browser/fms_last_ident}"
+  text: "${cockpitdecks/fms/load/fms_last_ident}"
   text-color: deepskyblue
   text-size: 22
   text-font: D-DINCondensed.otf
@@ -151,7 +151,7 @@ buttons:
 - index: 10
   name: NAV_DTO
   type: push
-  command: cockpitdecks/fms_legs/direct_to
+  command: cockpitdecks/fms/legs/direct_to
   vibrate: SHORT
   render-cooldown-ms: 500
   label: DTO
@@ -160,7 +160,7 @@ buttons:
     size: medium
     model: B
     B0:
-      text: "${cockpitdecks/fms_browser/fms_active_ident}"
+      text: "${cockpitdecks/fms/load/fms_active_ident}"
       text-font: D-DINCondensed.otf
       text-size: 34
       color: lime

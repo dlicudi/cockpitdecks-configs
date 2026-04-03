@@ -1,26 +1,28 @@
-# FPL — Flight Plan. View and edit route, scroll waypoints, DIRECT TO.
-# E2 = page cycle (FPL <-> NAV) | E5 = waypoint paging
-name: fms_fpl
-includes: pager,encoders/encoders_fpl
+# APP — Approach procedure browser.
+# Browse with E0 (page scroll) or E1 (row select within page).
+# Activate selected approach with E3 push.
+# Col0: row index | Col1: approach name (tap to select) | Col2: runway | Col3: UP / status / DN
+name: fms_proc_app
+includes: pager,encoders/encoders_proc_app
 
 buttons:
 
-# Row 1: Waypoint 1 — IDENT | DTK | DIST | scroll up
+# ── Row 1 ────────────────────────────────────────────────────
 - index: 0
-  name: FPL_R1_IDX
+  name: APP_R1_IDX
   type: none
-  dataref: cockpitdecks/fms/legs/row_1_is_selected
+  dataref: cockpitdecks/fms/app/list_row_1_is_selected
   render-cooldown-ms: 80
   label: "#"
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms/legs/row_1_index}\n${cockpitdecks/fms/legs/row_1_status}"
+    - text: "${cockpitdecks/fms/app/list_row_1_index}"
       text-color: white
       text-size: 22
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms/legs/row_1_index}\n${cockpitdecks/fms/legs/row_1_status}"
+    - text: "${cockpitdecks/fms/app/list_row_1_index}"
       text-color: white
       text-size: 22
       text-font: D-DINCondensed.otf
@@ -28,43 +30,43 @@ buttons:
       text-bg-color: (70, 55, 20)
 
 - index: 1
-  name: FPL_R1_WPT
+  name: APP_R1_NAME
   type: push
-  command: cockpitdecks/fms/legs/select_row_1
-  dataref: cockpitdecks/fms/legs/row_1_is_selected
+  command: cockpitdecks/fms/app/select_row_1
+  dataref: cockpitdecks/fms/app/list_row_1_is_selected
   vibrate: SHORT
   render-cooldown-ms: 80
-  label: WPT
+  label: APPR
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms/legs/row_1_ident}"
+    - text: "${cockpitdecks/fms/app/list_row_1_name}"
       text-color: white
-      text-size: 30
+      text-size: 20
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms/legs/row_1_ident}"
+    - text: "${cockpitdecks/fms/app/list_row_1_name}"
       text-color: white
-      text-size: 30
+      text-size: 20
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (70, 55, 20)
 
 - index: 2
-  name: FPL_R1_ALT
+  name: APP_R1_RWY
   type: none
-  dataref: cockpitdecks/fms/legs/row_1_is_selected
+  dataref: cockpitdecks/fms/app/list_row_1_is_selected
   render-cooldown-ms: 80
-  label: ALT
+  label: RWY
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms/legs/row_1_alt}"
+    - text: "${cockpitdecks/fms/app/list_row_1_runway}"
       text-color: darkorange
       text-size: 22
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms/legs/row_1_alt}"
+    - text: "${cockpitdecks/fms/app/list_row_1_runway}"
       text-color: darkorange
       text-size: 22
       text-font: D-DINCondensed.otf
@@ -72,9 +74,9 @@ buttons:
       text-bg-color: (70, 55, 20)
 
 - index: 3
-  name: FPL_SCROLL_UP
+  name: APP_SCROLL_UP
   type: push
-  command: cockpitdecks/fms/legs/scroll_up
+  command: cockpitdecks/fms/app/scroll_up
   vibrate: SHORT
   label: UP
   label-color: Gold
@@ -85,22 +87,22 @@ buttons:
   text-position: cm
   text-bg-color: (20, 20, 24)
 
-# Row 2: Waypoint 2
+# ── Row 2 ────────────────────────────────────────────────────
 - index: 4
-  name: FPL_R2_IDX
+  name: APP_R2_IDX
   type: none
-  dataref: cockpitdecks/fms/legs/row_2_is_selected
+  dataref: cockpitdecks/fms/app/list_row_2_is_selected
   render-cooldown-ms: 80
   label: "#"
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms/legs/row_2_index}\n${cockpitdecks/fms/legs/row_2_status}"
+    - text: "${cockpitdecks/fms/app/list_row_2_index}"
       text-color: white
       text-size: 22
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms/legs/row_2_index}\n${cockpitdecks/fms/legs/row_2_status}"
+    - text: "${cockpitdecks/fms/app/list_row_2_index}"
       text-color: white
       text-size: 22
       text-font: D-DINCondensed.otf
@@ -108,43 +110,43 @@ buttons:
       text-bg-color: (70, 55, 20)
 
 - index: 5
-  name: FPL_R2_WPT
+  name: APP_R2_NAME
   type: push
-  command: cockpitdecks/fms/legs/select_row_2
-  dataref: cockpitdecks/fms/legs/row_2_is_selected
+  command: cockpitdecks/fms/app/select_row_2
+  dataref: cockpitdecks/fms/app/list_row_2_is_selected
   vibrate: SHORT
   render-cooldown-ms: 80
-  label: WPT
+  label: APPR
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms/legs/row_2_ident}"
+    - text: "${cockpitdecks/fms/app/list_row_2_name}"
       text-color: white
-      text-size: 30
+      text-size: 20
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms/legs/row_2_ident}"
+    - text: "${cockpitdecks/fms/app/list_row_2_name}"
       text-color: white
-      text-size: 30
+      text-size: 20
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (70, 55, 20)
 
 - index: 6
-  name: FPL_R2_ALT
+  name: APP_R2_RWY
   type: none
-  dataref: cockpitdecks/fms/legs/row_2_is_selected
+  dataref: cockpitdecks/fms/app/list_row_2_is_selected
   render-cooldown-ms: 80
-  label: ALT
+  label: RWY
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms/legs/row_2_alt}"
+    - text: "${cockpitdecks/fms/app/list_row_2_runway}"
       text-color: darkorange
       text-size: 22
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms/legs/row_2_alt}"
+    - text: "${cockpitdecks/fms/app/list_row_2_runway}"
       text-color: darkorange
       text-size: 22
       text-font: D-DINCondensed.otf
@@ -152,34 +154,34 @@ buttons:
       text-bg-color: (70, 55, 20)
 
 - index: 7
-  name: FPL_SEL
+  name: APP_STATUS
   type: none
   render-cooldown-ms: 80
   label: SEL
   label-color: Gold
-  text: "${cockpitdecks/fms/legs/sel_count}"
+  text: "${cockpitdecks/fms/app/list_sel_count}"
   text-color: white
   text-size: 24
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 24)
 
-# Row 3: Waypoint 3
+# ── Row 3 ────────────────────────────────────────────────────
 - index: 8
-  name: FPL_R3_IDX
+  name: APP_R3_IDX
   type: none
-  dataref: cockpitdecks/fms/legs/row_3_is_selected
+  dataref: cockpitdecks/fms/app/list_row_3_is_selected
   render-cooldown-ms: 80
   label: "#"
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms/legs/row_3_index}\n${cockpitdecks/fms/legs/row_3_status}"
+    - text: "${cockpitdecks/fms/app/list_row_3_index}"
       text-color: white
       text-size: 22
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms/legs/row_3_index}\n${cockpitdecks/fms/legs/row_3_status}"
+    - text: "${cockpitdecks/fms/app/list_row_3_index}"
       text-color: white
       text-size: 22
       text-font: D-DINCondensed.otf
@@ -187,43 +189,43 @@ buttons:
       text-bg-color: (70, 55, 20)
 
 - index: 9
-  name: FPL_R3_WPT
+  name: APP_R3_NAME
   type: push
-  command: cockpitdecks/fms/legs/select_row_3
-  dataref: cockpitdecks/fms/legs/row_3_is_selected
+  command: cockpitdecks/fms/app/select_row_3
+  dataref: cockpitdecks/fms/app/list_row_3_is_selected
   vibrate: SHORT
   render-cooldown-ms: 80
-  label: WPT
+  label: APPR
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms/legs/row_3_ident}"
+    - text: "${cockpitdecks/fms/app/list_row_3_name}"
       text-color: white
-      text-size: 30
+      text-size: 20
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms/legs/row_3_ident}"
+    - text: "${cockpitdecks/fms/app/list_row_3_name}"
       text-color: white
-      text-size: 30
+      text-size: 20
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (70, 55, 20)
 
 - index: 10
-  name: FPL_R3_ALT
+  name: APP_R3_RWY
   type: none
-  dataref: cockpitdecks/fms/legs/row_3_is_selected
+  dataref: cockpitdecks/fms/app/list_row_3_is_selected
   render-cooldown-ms: 80
-  label: ALT
+  label: RWY
   label-color: Gold
   multi-texts:
-    - text: "${cockpitdecks/fms/legs/row_3_alt}"
+    - text: "${cockpitdecks/fms/app/list_row_3_runway}"
       text-color: darkorange
       text-size: 22
       text-font: D-DINCondensed.otf
       text-position: cm
       text-bg-color: (20, 20, 24)
-    - text: "${cockpitdecks/fms/legs/row_3_alt}"
+    - text: "${cockpitdecks/fms/app/list_row_3_runway}"
       text-color: darkorange
       text-size: 22
       text-font: D-DINCondensed.otf
@@ -231,9 +233,9 @@ buttons:
       text-bg-color: (70, 55, 20)
 
 - index: 11
-  name: FPL_SCROLL_DN
+  name: APP_SCROLL_DN
   type: push
-  command: cockpitdecks/fms/legs/scroll_down
+  command: cockpitdecks/fms/app/scroll_down
   vibrate: SHORT
   label: DN
   label-color: Gold
