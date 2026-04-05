@@ -839,6 +839,12 @@ class SVGRenderer:
         return "\n".join(out)
 
     def _button_svg(self, button: dict[str, Any], page: dict[str, Any], x: int, y: int, w: int, h: int, page_path: Path) -> str:
+        """Render a single button as a nested <svg> viewport.
+
+        A nested <svg> with overflow="hidden" clips all child content to the button
+        boundary automatically — no clipPath needed.  All coordinates inside are
+        relative to the button's own (0, 0) origin.
+        """
         bg = self._color_hex(button.get("text-bg-color", button.get("text_bg_color", "Black")))
         tooltip = self._tooltip(button)
         link = self.repo_blob_url_fn(page_path) if self.repo_blob_url_fn else None
@@ -846,7 +852,8 @@ class SVGRenderer:
 
         annunciator = button.get("annunciator")
         if annunciator:
-            body = self._annunciator_svg(annunciator, button, page, x, y, w, h)
+            # annunciator_svg now works in button-local coordinates (origin at 0,0)
+            body = self._annunciator_svg(annunciator, button, page, w, h)
         else:
             ctx = self._formula_context(button)
             text_val = self._button_text_value(button, ctx)
@@ -855,10 +862,11 @@ class SVGRenderer:
             tcolor = self._color_hex(button.get("text-color", "white"))
             ff = self._font_family(button.get("text-font"))
             fw = self._font_weight(button.get("text-font"))
-            cx, cy = x + w // 2, y + h // 2 + 8
+            # Clamp font size so it fits vertically; horizontal overflow is clipped by the viewport
+            fs = min(tsize, h - 28)
             body = (
-                f'<text x="{cx}" y="{cy}" text-anchor="middle" dominant-baseline="middle" '
-                f'font-size="{min(tsize, h - 28)}" font-family="{ff}" font-weight="{fw}" fill="{tcolor}">'
+                f'<text x="{w // 2}" y="{h // 2 + 8}" text-anchor="middle" dominant-baseline="middle" '
+                f'font-size="{fs}" font-family="{ff}" font-weight="{fw}" fill="{tcolor}">'
                 f'{self._xml_escape(rendered)}</text>'
             )
 
@@ -868,35 +876,42 @@ class SVGRenderer:
             lc = self._color_hex(button.get("label-color", self.layout_defaults.get("default-label-color", "white")))
             ls = int(button.get("label-size", self.layout_defaults.get("default-label-size", 13)))
             label_svg = (
-                f'<text x="{x + w // 2}" y="{y + 16}" text-anchor="middle" dominant-baseline="middle" '
-                f'font-size="{ls}" font-family="system-ui, sans-serif" fill="{lc}">'
+                f'<text x="{w // 2}" y="16" text-anchor="middle" dominant-baseline="middle" '
+                f'font-size="{ls}" font-family="system-ui,sans-serif" fill="{lc}">'
                 f'{self._xml_escape(str(label))}</text>'
             )
 
-        active_ring = f'<rect x="{x+2}" y="{y+2}" width="{w-4}" height="{h-4}" fill="none" stroke="#ffbc40" stroke-width="3"/>' if is_active_page else ""
+        active_ring = f'<rect x="2" y="2" width="{w-4}" height="{h-4}" fill="none" stroke="#ffbc40" stroke-width="3"/>' if is_active_page else ""
         title_tag = f"<title>{self._xml_escape(tooltip)}</title>" if tooltip else ""
         wo = f'<a href="{link}" target="_blank">' if link else ""
         wc = "</a>" if link else ""
 
+        # Nested <svg> acts as a clipping viewport — content beyond w×h is hidden
         return (
-            f'{wo}<g class="dk-btn">'
+            f'{wo}'
+            f'<svg x="{x}" y="{y}" width="{w}" height="{h}" overflow="hidden" class="dk-btn">'
             f'{title_tag}'
-            f'<rect class="dk-bg" x="{x}" y="{y}" width="{w}" height="{h}" fill="{bg}" stroke="#767b80" stroke-width="2"/>'
-            f'<rect x="{x+6}" y="{y+6}" width="{w-12}" height="{h-12}" fill="none" stroke="#303438"/>'
+            f'<rect class="dk-bg" x="0" y="0" width="{w}" height="{h}" fill="{bg}" stroke="#767b80" stroke-width="2"/>'
+            f'<rect x="6" y="6" width="{w-12}" height="{h-12}" fill="none" stroke="#303438"/>'
             f'{body}{label_svg}{active_ring}'
-            f'</g>{wc}'
+            f'</svg>'
+            f'{wc}'
         )
 
     def _empty_button_svg(self, page: dict[str, Any], x: int, y: int, w: int, h: int) -> str:
         bg = self._page_bg_hex(page)
         return (
-            f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{bg}" stroke="#5a5f64" stroke-width="2"/>'
-            f'<rect x="{x+6}" y="{y+6}" width="{w-12}" height="{h-12}" fill="none" stroke="#24282c"/>'
+            f'<svg x="{x}" y="{y}" width="{w}" height="{h}" overflow="hidden">'
+            f'<rect x="0" y="0" width="{w}" height="{h}" fill="{bg}" stroke="#5a5f64" stroke-width="2"/>'
+            f'<rect x="6" y="6" width="{w-12}" height="{h-12}" fill="none" stroke="#24282c"/>'
+            f'</svg>'
         )
 
-    def _annunciator_svg(self, annunciator: dict[str, Any], button: dict[str, Any], page: dict[str, Any], x: int, y: int, w: int, h: int) -> str:
+    def _annunciator_svg(self, annunciator: dict[str, Any], button: dict[str, Any], page: dict[str, Any], w: int, h: int) -> str:
+        """Render annunciator parts in button-local coordinates (origin at 0,0)."""
         model = annunciator.get("model", "A")
-        x0, y0, x1, y1 = x + 8, y + 22, x + w - 8, y + h - 8
+        # content area in local coords
+        x0, y0, x1, y1 = 8, 22, w - 8, h - 8
         if model == "A":
             rects = [("A0", (x0, y0, x1, y1))]
         elif model == "B":
@@ -928,7 +943,7 @@ class SVGRenderer:
             led = str(part.get("led", "")).lower()
             if led in {"bar", "bars"}:
                 lc = chex if active else self._dim_hex(chex, off_i)
-                out.append(f'<rect x="{px0+8}" y="{py0+6}" width="{pw-16}" height="8" fill="{lc}"/>')
+                out.append(f'<rect x="{px0+8}" y="{py0+6}" width="{max(1, pw-16)}" height="8" fill="{lc}"/>')
             elif led == "dot":
                 lc = chex if active else self._dim_hex(chex, off_i)
                 cx, cy, r = (px0 + px1) // 2, (py0 + py1) // 2, max(8, min(pw, ph) // 5)
@@ -954,24 +969,23 @@ class SVGRenderer:
         return "".join(out)
 
     def _side_screen_svg(self, button: dict[str, Any] | None, page: dict[str, Any], x: int, y: int, w: int, h: int, page_path: Path) -> str:
+        """Render a Loupedeck side strip as a nested <svg> viewport (clips long text)."""
         bg = self._page_bg_hex(page)
-        out: list[str] = [f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{bg}" stroke="#6e7479" stroke-width="2"/>']
-        if not button or "side" not in button:
-            return "".join(out)
-        labels = button["side"].get("labels", [])
-        centers = button["side"].get("centers", [16, 50, 84])
-        for idx, lbl in enumerate(labels):
-            center = centers[idx] if idx < len(centers) else 16 + idx * 34
-            ly = y + (round(h * center / 100.0) if isinstance(center, (int, float)) and center <= 100 else int(center))
-            ctx = self._formula_context(lbl)
-            rendered = self.evaluator.render_template(lbl.get("text", ""), lbl.get("text-format"), ctx)
-            lsize, vsize = int(lbl.get("label-size", 14)), int(lbl.get("text-size", 18))
-            lc = self._color_hex(lbl.get("label-color", "gold"))
-            vc = self._color_hex(lbl.get("text-color", "white"))
-            cx = x + w // 2
-            out.append(f'<text x="{cx}" y="{ly - 16}" text-anchor="middle" font-size="{lsize}" font-family="system-ui,sans-serif" fill="{lc}">{self._xml_escape(str(lbl.get("label", "")))}</text>')
-            out.append(f'<text x="{cx}" y="{ly + 8}" text-anchor="middle" font-size="{vsize}" font-family="system-ui,sans-serif" fill="{vc}">{self._xml_escape(rendered)}</text>')
-        return "".join(out)
+        inner: list[str] = [f'<rect x="0" y="0" width="{w}" height="{h}" fill="{bg}" stroke="#6e7479" stroke-width="2"/>']
+        if button and "side" in button:
+            labels = button["side"].get("labels", [])
+            centers = button["side"].get("centers", [16, 50, 84])
+            for idx, lbl in enumerate(labels):
+                center = centers[idx] if idx < len(centers) else 16 + idx * 34
+                ly = round(h * center / 100.0) if isinstance(center, (int, float)) and center <= 100 else int(center)
+                ctx = self._formula_context(lbl)
+                rendered = self.evaluator.render_template(lbl.get("text", ""), lbl.get("text-format"), ctx)
+                lsize, vsize = int(lbl.get("label-size", 14)), int(lbl.get("text-size", 18))
+                lc = self._color_hex(lbl.get("label-color", "gold"))
+                vc = self._color_hex(lbl.get("text-color", "white"))
+                inner.append(f'<text x="{w // 2}" y="{ly - 16}" text-anchor="middle" font-size="{lsize}" font-family="system-ui,sans-serif" fill="{lc}">{self._xml_escape(str(lbl.get("label", "")))}</text>')
+                inner.append(f'<text x="{w // 2}" y="{ly + 8}" text-anchor="middle" font-size="{vsize}" font-family="system-ui,sans-serif" fill="{vc}">{self._xml_escape(rendered)}</text>')
+        return f'<svg x="{x}" y="{y}" width="{w}" height="{h}" overflow="hidden">{"".join(inner)}</svg>'
 
 
 def parse_args() -> argparse.Namespace:

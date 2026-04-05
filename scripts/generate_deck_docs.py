@@ -64,6 +64,21 @@ PAGE_NAME_OVERRIDES = {
 }
 
 
+_SVG_DIM_RE = re.compile(r'<svg[^>]*\bwidth="(\d+)"[^>]*\bheight="(\d+)"')
+
+
+def _svg_dimensions(path: Path) -> tuple[int, int] | None:
+    """Return (width, height) from the first <svg> tag, or None if unparseable."""
+    try:
+        header = path.read_text(encoding="utf-8", errors="ignore")[:512]
+        m = _SVG_DIM_RE.search(header)
+        if m:
+            return int(m.group(1)), int(m.group(2))
+    except OSError:
+        pass
+    return None
+
+
 def run(args: list[str]) -> None:
     subprocess.run(args, check=True, cwd=ROOT)
 
@@ -628,9 +643,11 @@ def build_overview(slug: str, config: dict[str, Any], doc_path: Path, page_image
                     lines.append('<div class="page-card">')
                     if svg_path:
                         svg_ref = rel_path(svg_path, doc_path)
-                        # <object> renders the SVG interactively (hover tooltips, clickable links).
-                        # The inner <img> is a fallback for browsers that don't support SVG objects.
-                        lines.append(f'<object type="image/svg+xml" data="{svg_ref}" title="{name}">')
+                        # Extract width/height from the SVG so <object> renders at the right size.
+                        # <object> renders SVG interactively (hover tooltips, clickable links).
+                        svg_dims = _svg_dimensions(svg_path)
+                        dim_attr = f' style="width:100%;max-width:{svg_dims[0]}px;aspect-ratio:{svg_dims[0]}/{svg_dims[1]}"' if svg_dims else ""
+                        lines.append(f'<object type="image/svg+xml" data="{svg_ref}" title="{name}"{dim_attr}>')
                         if image_path:
                             image_ref = rel_path(image_path, doc_path)
                             lines.append(f'<img src="{image_ref}" alt="{name} preview" loading="lazy">')
