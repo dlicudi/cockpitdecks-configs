@@ -2,7 +2,8 @@
 
 Aircraft deck configurations for [Cockpitdecks](https://github.com/dlicudi/cockpitdecks).
 
-Documentation: [Cockpitdecks Configs Docs](https://dlicudi.github.io/cockpitdecks-configs/)
+Repository-level docs live under `docs/`.
+Aircraft-specific notes live in each aircraft `README.md`.
 
 ## Aircraft
 
@@ -64,12 +65,4 @@ python scripts/release-deck.py release cirrus-sr22
 python scripts/release-deck.py release cirrus-sr22 --execute
 ```
 
-Release notes are auto-generated from the git log since the previous tag. See each pack's `README.md` for full documentation.
-
-## Preview generation
-
-Deck docs and preview images can be regenerated without X-Plane running:
-
-```sh
-python3 scripts/generate_deck_docs.py
-```
+Release notes are auto-generated from the git log since the previous tag. See each pack's `README.md` for aircraft-specific documentation.

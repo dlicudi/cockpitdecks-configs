@@ -1,29 +1,104 @@
-# Cockpitdecks Configuration File for ToLiss Airbus A330-900
+# ToLiss A330neo
 
-This is a collection of button definition for several deck and deck models.
-It exhibit most, if not all, capabilities of Cockpitdecks.
+Cockpitdecks configuration for the ToLiss A330neo.
 
-It is the main development configuration for several deck models.
+This folder includes both physical and virtual deck registrations.
 
-It may be necessary to do some adjustment to get a "production" layout.
-(I will later refine this configuration, from its "development" status that
-exhibit most features, to a production version that it tailored for this aircraft only.)
+## What Is In This Folder
 
-The hardest part is dataref hunting.
+- `deckconfig/config.yaml`: aircraft-level registration and styling
+- `deckconfig/fcu/`: Loupedeck Live layout
+- `deckconfig/efis-ecam/`: Stream Deck Original layout
+- `deckconfig/panels/`: Stream Deck XL layout
+- `deckconfig/efis/`: Stream Deck + layout
+- `deckconfig/comm-radio/`: X-Touch Mini layout
+- `deckconfig/vmini/`: Virtual Stream Deck Mini layout
+- `deckconfig/vneo/`: Virtual Stream Deck Neo layout
 
+## Installation
 
-It may work on other Toliss Airbus aicrafts (A319, A320, A321neo, A340) with adjustments.
-(I do not own them, so I cannot test...)
+Link this `deckconfig` folder into the matching aircraft folder in your X-Plane installation:
 
-Author: Pierre M. <pierre@devleaks.be>
-    
-Last updated 01-NOV-2024
+```sh
+ln -s ~/GitHub/cockpitdecks-configs/decks/toliss-airbus-a330-neo/deckconfig \
+  "<your X-Plane aircraft folder>/deckconfig"
+```
 
+Adjust the target path to your local ToLiss A330neo installation.
 
-# Changelog
+## Layouts
 
-This is the gobal, overall change log.
-Each file maintains its own changelog.
- 
-## [1.0.0] - 2024-11-01
-- Added: New changelog
+Defined in `deckconfig/config.yaml`.
+
+| Layout | Device | Pages |
+|---|---|---:|
+| `fcu` | Loupedeck Live | 5 |
+| `efis-ecam` | Stream Deck Original | 2 |
+| `panels` | Stream Deck XL | 21 |
+| `efis` | Stream Deck + | 1 |
+| `comm-radio` | X-Touch Mini | 4 |
+| `vmini` | Virtual Stream Deck Mini | 1 |
+| `vneo` | Virtual Stream Deck Neo | 1 |
+
+`config.yaml` also registers several virtual deck variants that reuse existing layouts, including virtual Stream Deck XL, Stream Deck +, Loupedeck Live, and X-Touch Mini.
+
+## Pages
+
+### `fcu` layout
+
+- `index`
+- `fcu`
+- `toliss`
+- `popups`
+- `views`
+
+### `efis-ecam` layout
+
+- `index`
+- `efis`
+
+### `panels` layout
+
+- `index`
+- `index-alt`
+- `dashboard`
+- `efis`
+- `ecam`
+- `radio`
+- `xpndr`
+- `aptnav`
+- `adirs`
+- `doors`
+- `intlights`
+- `piedestal`
+- `popups`
+- `toliss`
+- `xplane`
+- `cockpitdecks`
+- `ovrhdaircond`
+- `ovrhdelec`
+- `ovrhdfire`
+- `ovrhdfuel`
+- `ovrhdhyd`
+
+### `efis` layout
+
+- `index`
+
+### `comm-radio` layout
+
+- `a`
+- `b`
+- `encoders`
+- `intlights`
+
+### Virtual-only layouts
+
+- `vmini/index`
+- `vneo/index`
+
+## Configuration State
+
+This is a large and flexible Airbus config with the widest explicit virtual-deck registration in the repository.
+
+At the same time, the existing `config.yaml` comments describe it as a development-oriented configuration that may still need adjustment for production use. This README keeps that caveat because it is stated directly in the source folder.

@@ -8,9 +8,9 @@ How to create and modify aircraft deck configurations.
 cockpitdecks-configs/
 ├── decks/                      # Aircraft configurations
 │   └── cirrus-sr22/
+│       ├── README.md           # Aircraft-specific notes
 │       └── deckconfig/         # Symlinked into X-Plane aircraft folder
 │           ├── config.yaml     # Aircraft-level config
-│           ├── _docs.yaml      # Documentation metadata
 │           └── loupedecklive1/ # Layout for a specific deck
 │               ├── config.yaml # Layout defaults (fonts, colours, home page)
 │               ├── index.yaml  # Home page
@@ -92,9 +92,9 @@ Buttons use `formula` with `${dataref}` syntax to read live state from X-Plane.
 5. Add page `.yaml` files for each cockpit function
 6. Symlink `deckconfig/` into the X-Plane aircraft folder
 
-!!! tip
-    Start by copying an existing aircraft config with a similar cockpit.
-    The Cessna 172 SP is a good starting point for GA aircraft.
+Tip:
+Start by copying an existing aircraft config with a similar cockpit.
+The Cessna 172 SP is a good starting point for GA aircraft.
 
 ## Using modules
 
@@ -115,18 +115,18 @@ includes: pager, encoders/encoders_fcu
 
 See [Modules](../modules/modules.md) for the full list.
 
-## Generating docs
+## Aircraft documentation
 
-The deck overview pages under `docs/decks/` are auto-generated. After modifying
-configs, regenerate them:
+Aircraft-specific documentation should live in each aircraft folder as `README.md`.
 
-```sh
-python3 scripts/generate_deck_docs.py
-```
+Prefer maintaining:
 
-!!! warning
-    Do not manually edit files under `docs/decks/` — they will be overwritten.
-    Edit the source configs or `_docs.yaml` instead.
+- install notes
+- supported layouts
+- page summaries
+- aircraft-specific dependencies
+
+Avoid rebuilding a separate generated docs layer unless there is a clear need for it again.
 
 To preview the docs site locally:
 

@@ -39,9 +39,9 @@ layer. At a high level the local boundary looks like this:
    documentation sources.
 3. **X-Plane aircraft installation**
    Receives a symlinked `deckconfig/` folder for a specific aircraft.
-4. **Generated documentation**
-   MkDocs publishes documentation built from both hand-written pages and
-   generated deck overview pages.
+4. **Documentation**
+   MkDocs publishes the hand-written docs, while aircraft-specific notes live in
+   each aircraft `README.md`.
 
 ## Repository map
 
@@ -50,8 +50,8 @@ cockpitdecks-configs/
 ├── decks/           # Aircraft source configs
 ├── modules/         # Reusable config fragments shared across aircraft
 ├── decktypes/       # Deck capability/type definitions
-├── docs/            # Hand-written and generated documentation
-├── scripts/         # Documentation and preview generation tools
+├── docs/            # Hand-written documentation
+├── scripts/         # Support scripts
 └── mkdocs.yml       # Docs site navigation and configuration
 ```
 
@@ -62,15 +62,12 @@ Not every file in this repository should be edited directly.
 | Path | Role | Edit directly? |
 |---|---|---|
 | `decks/<aircraft>/deckconfig/` | Primary aircraft configuration source | Yes |
+| `decks/<aircraft>/README.md` | Aircraft-specific notes | Yes |
 | `modules/` | Reusable shared config source | Yes |
 | `decktypes/` | Deck type definitions | Yes |
-| `docs/decks/` | Generated aircraft overview docs | No |
-| `docs/generated/` | Generated page-level docs | No |
-| `docs/assets/images/*/generated/` | Generated preview images | No |
 | `docs/architecture/`, `docs/reference/`, `docs/getting-started/` | Hand-written docs | Yes |
 
-If a change should survive regeneration, make it in the config source or in the
-generation scripts, not in generated docs.
+If a change is aircraft-specific, prefer the aircraft `README.md` or the config source rather than a separate generated docs page.
 
 ## Configuration hierarchy
 
@@ -88,7 +85,7 @@ for that aircraft.
 Important files:
 
 - `config.yaml`: aircraft-level config and deck registrations
-- `_docs.yaml`: metadata used to generate documentation
+- `README.md`: aircraft-specific notes and usage details
 
 ### Layout
 
@@ -129,7 +126,7 @@ Reuse happens in three main ways:
 
 - **modules**: shared page fragments used across multiple aircraft
 - **layout defaults**: shared display defaults within one hardware layout
-- **documentation metadata**: `_docs.yaml` keeps aircraft docs separate from the operational config
+- **local documentation**: `README.md` keeps aircraft notes close to the operational config
 
 This means most work should begin by deciding whether a change is:
 
@@ -142,20 +139,10 @@ script.
 
 ## Documentation architecture
 
-The docs site has two content types:
+The docs site is intentionally small:
 
-- **hand-written docs** for concepts, setup, reference, and architecture
-- **generated docs** for aircraft deck overviews and page previews
-
-The generation flow is:
-
-1. edit `decks/.../deckconfig/` and optional `_docs.yaml`
-2. run `python3 scripts/generate_deck_docs.py`
-3. generated pages are written under `docs/decks/` and `docs/generated/`
-4. MkDocs renders the final site
-
-Preview images are generated separately and stored under
-`docs/assets/images/<aircraft>/generated/`.
+- hand-written docs for setup, architecture, and shared reference
+- aircraft-specific notes in each aircraft `README.md`
 
 ## Change guide
 
@@ -167,7 +154,7 @@ Use this table as a shortcut before editing:
 | reusable radio/engine/G1000 content | `modules/` |
 | deck hardware capabilities or mappings | `decktypes/` |
 | docs navigation or published section structure | `mkdocs.yml` |
-| generated deck overview text or structure | `scripts/generate_deck_docs.py` |
+| aircraft-specific notes | `decks/<aircraft>/README.md` |
 | conceptual docs for humans and agents | `docs/architecture/` or `docs/reference/` |
 
 ## Working rules for agents
@@ -175,8 +162,7 @@ Use this table as a shortcut before editing:
 If you are an AI agent operating in this repository:
 
 1. Treat `decks/`, `modules/`, and `decktypes/` as primary sources.
-2. Treat `docs/decks/`, `docs/generated/`, and generated preview images as
-   derived artifacts.
+2. Treat hand-written docs and aircraft `README.md` files as the source material.
 3. Check `mkdocs.yml` before adding a new documentation section.
 4. Prefer updating the source config or generator when the same issue appears in
    multiple aircraft pages.

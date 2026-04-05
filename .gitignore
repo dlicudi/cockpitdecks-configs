@@ -6,9 +6,6 @@ resources
 examples/*
 .vscode/*
 site/*
-docs/assets/configs.json
-docs/assets/fonts/
-docs/assets/js/
 .cache/*
 dist/*
 screendumps/*

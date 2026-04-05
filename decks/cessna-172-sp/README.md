@@ -1,28 +1,53 @@
-Laminar Research / Cessna 172 SP
+# Cessna 172 SP
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+Cockpitdecks configuration for the Laminar Research Cessna 172 SP.
 
-# Changelog
+## What Is In This Folder
 
-## Types of changes
+- `deckconfig/config.yaml`: aircraft-level registration
+- `deckconfig/loupedecklive1/`: Loupedeck Live layout
+- `deckconfig/secret.yaml.dist`: example local secret file
 
-- Added for new features.
-- Changed for changes in existing functionality.
-- Deprecated for soon-to-be removed features.
-- Removed for now removed features.
-- Fixed for any bug fixes.
-- Security in case of vulnerabilities.
+## Installation
 
-## [1.1.2] 2024-06-11
-- Added: Weather page
-- Added: index page to loupedecklive1
-- Updated PFI page (more closely resembles data provided by a HUD)
-- Changed: Loupedeck Live hardware button 6 changed from pedestal to weather page
+Link this `deckconfig` folder into the matching aircraft folder in your X-Plane installation:
 
+```sh
+ln -s ~/GitHub/cockpitdecks-configs/decks/cessna-172-sp/deckconfig \
+  "<your X-Plane aircraft folder>/deckconfig"
+```
 
-## [1.1.1] 2024-06-11
-- Changed: PFI RPM button changed to provide RPM + Manifold Pressure
+If you need local secrets for your setup, start from:
 
-## [1.1.0] - 2024-06-11
-- Added: New changelog
+```sh
+cp deckconfig/secret.yaml.dist deckconfig/secret.yaml
+```
+
+## Layouts
+
+Defined in `deckconfig/config.yaml`.
+
+| Layout | Device | Pages |
+|---|---|---:|
+| `loupedecklive1` | Loupedeck Live | 10 |
+
+## Pages
+
+### Loupedeck Live
+
+- `index`
+- `pfi`
+- `fcu`
+- `g1000`
+- `engine`
+- `radio`
+- `transponder`
+- `weather`
+- `pedestal`
+- `switches`
+
+## Configuration State
+
+This is a single-layout aircraft config aimed at the Loupedeck Live.
+
+Compared with the Cirrus SR22 and some dual-layout aircraft, this package is smaller and more focused. There is no separate Stream Deck XL layout in this folder.

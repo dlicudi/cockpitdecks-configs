@@ -15,9 +15,9 @@
 2. Extract into `X-Plane/Resources/plugins/`
 3. Start X-Plane once to confirm the plugin loads
 
-!!! tip "macOS"
-    Follow the [quarantine steps](https://xppython3.readthedocs.io/en/latest/usage/mac_quarantine.html)
-    before first launch.
+macOS note:
+Follow the [quarantine steps](https://xppython3.readthedocs.io/en/latest/usage/mac_quarantine.html)
+before first launch.
 
 ## 2. Install Cockpitdecks
 
@@ -56,17 +56,18 @@ cd cockpitdecks
 pip install -e '.[xplane,loupedeck]'
 ```
 
-??? note "Available extras"
-    | Extra | Description |
-    |-------|-------------|
-    | `xplane` | X-Plane simulator support |
-    | `loupedeck` | Loupedeck Live / Live S / CT |
-    | `streamdeck` | Elgato Stream Deck models |
-    | `xtouchmini` | Behringer X-Touch Mini |
-    | `weather` | Weather icon support |
-    | `toliss` | ToLiss aircraft extensions |
+Available extras:
 
-    Combine extras as needed, e.g. `cockpitdecks[xplane,loupedeck,weather,toliss]`.
+| Extra | Description |
+|-------|-------------|
+| `xplane` | X-Plane simulator support |
+| `loupedeck` | Loupedeck Live / Live S / CT |
+| `streamdeck` | Elgato Stream Deck models |
+| `xtouchmini` | Behringer X-Touch Mini |
+| `weather` | Weather icon support |
+| `toliss` | ToLiss aircraft extensions |
+
+Combine extras as needed, e.g. `cockpitdecks[xplane,loupedeck,weather,toliss]`.
 
 ### X-Plane plugin
 
@@ -105,7 +106,6 @@ With X-Plane running and XPPython3 loaded, start Cockpitdecks from your virtual 
 cockpitdecks-cli
 ```
 
-!!! info "Upstream docs"
-    For additional detail, see the [Cockpitdecks documentation](https://devleaks.github.io/cockpitdecks-docs/Installation/).
+For additional detail, see the [Cockpitdecks documentation](https://devleaks.github.io/cockpitdecks-docs/Installation/).
 
 For local development tips and VS Code launch configurations, see [Development](development.md).

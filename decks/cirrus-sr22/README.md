@@ -2,82 +2,114 @@
 
 Official Cockpitdecks configuration for the Laminar Research Cirrus SR22.
 
-Release metadata (version, status, dependencies) is in `manifest.yaml`.
+This is one of the most complete aircraft configs in this repository.
 
-## Requirements
+## Metadata
 
-- X-Plane 12 with the Laminar Research Cirrus SR22
-- `cockpitdecks` with the X-Plane adapter (`cockpitdecks_xp`)
-- Hardware driver matching your device:
-  - `cockpitdecks_ld` — Loupedeck Live
-  - `cockpitdecks_sd` — Stream Deck XL
-- `PI_CockpitdecksFMSBrowser` X-Plane plugin for FMS pages (FPL / NAV / Load)
+`manifest.yaml` declares:
 
-## Install
+- version: `1.1.2`
+- status: `stable`
+- summary: full G1000-focused SR22 coverage
+- requires: `cockpitdecks`, `xplane`, `PI_CockpitdecksFMSBrowser`
 
-Clone or copy this config so the aircraft folder contains a `deckconfig` directory.
+## What Is In This Folder
+
+- `deckconfig/config.yaml`: aircraft-level registration and tuning
+- `manifest.yaml`: package metadata
+- `deckconfig/loupedecklive1/`: main Loupedeck Live layout
+- `deckconfig/streamdeckxl1/`: Stream Deck XL layout
+- `deckconfig/webdeck1/`: minimal web deck
+- `deckconfig/resources/`: local resources used by the config
+- `deckconfig/secret.yaml.dist`: example local secret file
+
+## Installation
+
+Link this `deckconfig` folder into the Laminar SR22 folder:
 
 ```sh
 ln -s ~/GitHub/cockpitdecks-configs/decks/cirrus-sr22/deckconfig \
   ~/X-Plane\ 12/Aircraft/Laminar\ Research/Cirrus\ SR22/deckconfig
 ```
 
-If you use a Loupedeck device, copy `secret.yaml.dist` to `secret.yaml` and set the device serial number:
+If you need local secrets for your setup, start from:
 
 ```sh
 cp deckconfig/secret.yaml.dist deckconfig/secret.yaml
 ```
 
+## Requirements
+
+- X-Plane 12 with the Laminar Research Cirrus SR22
+- `cockpitdecks` with the X-Plane adapter
+- matching deck support for your hardware
+- `PI_CockpitdecksFMSBrowser` for the FMS pages
+
 ## Layouts
 
-Defined in `deckconfig/config.yaml`. Three layouts are included:
+Defined in `deckconfig/config.yaml`.
 
-| Layout | Device | Status |
-|--------|--------|--------|
-| `loupedecklive1` | Loupedeck Live | Full |
-| `streamdeckxl1` | Stream Deck XL | Full |
-| `webdeck1` | Virtual / Web deck | Minimal |
+| Layout | Device | Pages |
+|---|---|---:|
+| `loupedecklive1` | Loupedeck Live | 23 |
+| `streamdeckxl1` | Stream Deck XL | 16 |
+| `webdeck1` | Web deck | 1 |
 
-Virtual equivalents of the Loupedeck and Stream Deck XL layouts are also available for testing without hardware.
+Virtual Loupedeck Live and Virtual Stream Deck XL variants are also registered in `config.yaml`.
 
 ## Pages
 
-### Loupedeck Live (`loupedecklive1`)
+### Loupedeck Live
 
-| Page | Description |
-|------|-------------|
-| `index` / `index2` | Home |
-| `pfi` | Primary Flight Instruments |
-| `fcu` | Flight Control Unit (autopilot) |
-| `gcu479` | GCU 479 keypad |
-| `engine` | Engine monitoring |
-| `radio` | Radio overview + COM1/2, NAV1/2 sub-pages |
-| `transponder` | Transponder |
-| `weather` | Weather |
-| `pedestal` | Pedestal controls |
-| `views` | View control |
-| `switches_master` / `switches_ground` / `switches_lights` / `switches_icing` | Switch groups |
-| `fms_fpl` | FMS — Flight Plan |
-| `fms_nav` | FMS — Navigation |
-| `fms_load` | FMS — Load flight plan |
+- `index`
+- `pfi`
+- `fcu`
+- `gcu479`
+- `engine`
+- `radio`
+- `radio_com1`
+- `radio_com2`
+- `radio_nav1`
+- `radio_nav2`
+- `transponder`
+- `weather`
+- `views`
+- `switches_master`
+- `switches_ground`
+- `switches_lights`
+- `switches_icing`
+- `fms_fpl`
+- `fms_nav`
+- `fms_load`
+- `fms_proc_dep`
+- `fms_proc_arr`
+- `fms_proc_app`
 
-### Stream Deck XL (`streamdeckxl1`)
+### Stream Deck XL
 
-| Page | Description |
-|------|-------------|
-| `index` | Home |
-| `pfd` | Primary Flight Display |
-| `fcu` | Flight Control Unit (autopilot) |
-| `gcu478` | GCU 478 keypad |
-| `mfd` | Multi-Function Display |
-| `engine` | Engine monitoring |
-| `radio` | Radios |
-| `transponder` | Transponder |
-| `weather` | Weather |
-| `pedestal` | Pedestal controls |
-| `views` | View control |
-| `switches` | Switches |
-| `icing` | Ice protection |
-| `lights` | Lighting |
-| `fms` | FMS — Flight Plan |
-| `fms_load` | FMS — Load flight plan |
+- `index`
+- `pfd`
+- `mfd`
+- `fcu`
+- `gcu478`
+- `engine`
+- `radio`
+- `transponder`
+- `weather`
+- `pedestal`
+- `views`
+- `switches`
+- `icing`
+- `lights`
+- `fms`
+- `fms_load`
+
+### Web Deck
+
+- `main`
+
+## Configuration State
+
+This is the best reference example in the repository for a fuller aircraft package.
+
+It has the clearest metadata, multiple layouts, dedicated FMS pages, explicit requirements, and tuned dataref rounding in `config.yaml`. If another aircraft lacks documentation or structure, this is a reasonable model to follow.
