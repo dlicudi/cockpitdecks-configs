@@ -1,5 +1,5 @@
 name: transponder
-includes: pager,encoders/encoders_transponder
+includes: pager,encoders/transponder
 
 buttons:
 

@@ -1,5 +1,5 @@
 name: gcu479
-includes: pager,encoders/encoders_gcu479
+includes: pager,encoders/gcu479
 
 buttons:
 

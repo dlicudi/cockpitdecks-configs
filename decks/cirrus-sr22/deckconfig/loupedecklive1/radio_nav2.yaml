@@ -1,5 +1,5 @@
 name: radio_nav2
-includes: pager,encoders/encoders_nav2
+includes: pager,encoders/nav2
 
 buttons:
 

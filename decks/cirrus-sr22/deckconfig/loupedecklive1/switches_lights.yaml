@@ -1,5 +1,5 @@
 description: Lights
-includes: pager,encoders/encoders_fcu
+includes: pager,encoders/fcu
 name: switches_lights
 
 buttons:

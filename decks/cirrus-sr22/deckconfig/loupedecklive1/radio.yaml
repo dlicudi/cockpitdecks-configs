@@ -1,5 +1,5 @@
 name: radio
-includes: pager,encoders/encoders_radio
+includes: pager,encoders/radio
 buttons:
 
 # ROW 1: COM1 (left) / NAV1 (right)

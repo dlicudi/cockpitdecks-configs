@@ -3,7 +3,7 @@
 # Activate selected SID with E3 push.
 # Col0: row index | Col1: procedure name (tap to select) | Col2: runway | Col3: UP / status / DN
 name: fms_proc_dep
-includes: pager,encoders/encoders_proc_dep
+includes: pager,encoders/fms_proc_dep
 
 buttons:
 

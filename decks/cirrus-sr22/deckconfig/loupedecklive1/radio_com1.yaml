@@ -1,5 +1,5 @@
 name: radio_com1
-includes: pager,encoders/encoders_com1
+includes: pager,encoders/com1
 
 buttons:
 

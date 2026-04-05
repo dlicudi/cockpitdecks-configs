@@ -3,7 +3,7 @@
 # Load: E1 push or E2 push.
 # Col1: FILE/TIME | Col2: WPTS | Col3: MAX ALT | Col4: DIS
 name: fms_load
-includes: pager,encoders/encoders_load
+includes: pager,encoders/fms_load
 
 buttons:
 

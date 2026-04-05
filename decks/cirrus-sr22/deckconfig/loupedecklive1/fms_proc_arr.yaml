@@ -3,7 +3,7 @@
 # Activate selected STAR with E3 push.
 # Col0: row index | Col1: procedure name (tap to select) | Col2: transition | Col3: UP / status / DN
 name: fms_proc_arr
-includes: pager,encoders/encoders_proc_arr
+includes: pager,encoders/fms_proc_arr
 
 buttons:
 

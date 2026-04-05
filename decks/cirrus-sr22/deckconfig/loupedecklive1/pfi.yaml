@@ -1,5 +1,5 @@
 name: pfi
-includes: pager,encoders/encoders_fcu
+includes: pager,encoders/fcu
 
 # PRIMARY/SECONDARY INSTRUMENTS
 # Airspeed Indicator: 1 DONE
