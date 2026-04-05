@@ -94,6 +94,7 @@ class Layout:
     key_size: tuple[int, int]
     grid_repeat: tuple[int, int]
     screen_size: tuple[int, int] | None
+    has_encoders: bool = False
 
 
 class FormulaEvaluator:
@@ -252,7 +253,8 @@ class PreviewRenderer:
         repeat = tuple(key_button.get("repeat", (1, 1)))
         screen_button = next((button for button in decktype["buttons"] if button["name"] == "left" and button.get("feedback") == "image"), None)
         screen_size = tuple(screen_button["dimension"]) if screen_button else None
-        return Layout(key_size=tuple(key_button["dimension"]), grid_repeat=repeat, screen_size=screen_size)
+        has_encoders = any(b.get("prefix") == "e" for b in decktype["buttons"])
+        return Layout(key_size=tuple(key_button["dimension"]), grid_repeat=repeat, screen_size=screen_size, has_encoders=has_encoders)
 
     def _load_page(self, page_name: str) -> dict[str, Any]:
         page_path = self.layout_dir / f"{page_name}.yaml"
@@ -721,37 +723,42 @@ class SVGRenderer:
         return "".join(out)
 
     def _pager_strip_svg(self, pager_buttons: dict[int, Any], hw_w: int, y: int, h: int, active_page: str) -> str:
-        """Render the always-visible pager button strip along the bottom of the device."""
+        """Render the Loupedeck Live pager button strip as circular LEDs with slot numbers.
+
+        Slot 0 shows a filled dot (like the physical hardware); slots 1-7 show the slot number.
+        The active button glows at full color; others are dimmed.
+        """
         n_slots = 8
         slot_w = hw_w // n_slots
-        pad = 4
+        r = max(8, min(h // 2 - 6, 14))   # circle radius
+        cy = y + h // 2                    # vertical centre of strip
         out: list[str] = [f'<rect x="0" y="{y}" width="{hw_w}" height="{h}" fill="#111"/>']
         for slot in range(n_slots):
             btn = pager_buttons.get(slot)
-            sx = slot * slot_w
-            bx, by = sx + pad, y + pad
-            bw, bh = slot_w - pad * 2, h - pad * 2
+            cx = slot * slot_w + slot_w // 2
             target = str(btn.get("page", "")).strip() if btn else ""
             color_name = str(btn.get("colored-led", "")).strip() if btn else ""
-            full_color = self._color_hex(color_name) if color_name else "#555"
+            full_color = self._color_hex(color_name) if color_name else "#555555"
             dim_color = self._dim_hex(full_color, 3)
             is_active = target == active_page
-            bg = full_color if is_active else dim_color
+            fill = full_color if is_active else dim_color
             active_cls = " active" if is_active else ""
             onclick = f' onclick="showPage(\'{target}\')"' if target else ""
             tooltip = f'<title>→ {self._xml_escape(target)}</title>' if target else ""
-            label = target[:7].upper() if target else ""
-            out.append(
-                f'<g id="pb-{target}" class="pb{active_cls}"{onclick}>'
-                f'{tooltip}'
-                f'<rect class="pb-bg" x="{bx}" y="{by}" width="{bw}" height="{bh}" fill="{bg}" rx="4"/>'
-                f'<rect class="pb-ring" x="{bx}" y="{by}" width="{bw}" height="{bh}" fill="none" stroke="#fff" stroke-width="2" rx="4"/>'
-            )
-            if label:
+            out.append(f'<g id="pb-{target}" class="pb{active_cls}" cursor="pointer"{onclick}>{tooltip}')
+            # Outer ring (always visible at dim level; brightens when active)
+            out.append(f'<circle class="pb-bg" cx="{cx}" cy="{cy}" r="{r}" fill="{fill}" stroke="{full_color}" stroke-width="1.5"/>')
+            # Active ring overlay (shown via CSS .pb.active .pb-ring)
+            out.append(f'<circle class="pb-ring" cx="{cx}" cy="{cy}" r="{r + 3}" fill="none" stroke="#fff" stroke-width="1.5"/>')
+            # Label: slot 0 → filled dot; slots 1-7 → number
+            if slot == 0:
+                dot_r = max(3, r // 3)
+                out.append(f'<circle cx="{cx}" cy="{cy}" r="{dot_r}" fill="#fff"/>')
+            else:
                 out.append(
-                    f'<text x="{sx + slot_w // 2}" y="{by + bh // 2}" text-anchor="middle" '
-                    f'dominant-baseline="middle" font-size="8" font-family="system-ui,sans-serif" fill="#fff">'
-                    f'{self._xml_escape(label)}</text>'
+                    f'<text x="{cx}" y="{cy}" text-anchor="middle" dominant-baseline="middle" '
+                    f'font-size="{max(8, r - 2)}" font-family="system-ui,sans-serif" font-weight="bold" fill="#fff">'
+                    f'{slot}</text>'
                 )
             out.append('</g>')
         return "".join(out)
@@ -784,12 +791,18 @@ class SVGRenderer:
         enc_col_w = 54
         enc_gap = 6
         pad_v = 10
-        pager_h = 42
+        pager_h = 42 if self.layout.has_encoders else 0  # Stream Decks have no pager strip
 
-        lcd_x = enc_col_w + enc_gap
-        lcd_y = pad_v
-        right_enc_x = lcd_x + lcd_w + enc_gap
-        hw_w = right_enc_x + enc_col_w
+        if self.layout.has_encoders:
+            lcd_x = enc_col_w + enc_gap
+            lcd_y = pad_v
+            right_enc_x = lcd_x + lcd_w + enc_gap
+            hw_w = right_enc_x + enc_col_w
+        else:
+            lcd_x = pad_v
+            lcd_y = pad_v
+            right_enc_x = lcd_x + lcd_w  # unused but defined
+            hw_w = pad_v + lcd_w + pad_v
         hw_body_h = pad_v + lcd_h + pad_v
         hw_total_h = hw_body_h + pager_h
 
@@ -832,9 +845,12 @@ class SVGRenderer:
 
             active_cls = " active" if page_name == home_page else ""
 
-            # Encoder columns
-            enc_left = self._encoder_column_svg([enc.get(i) for i in range(3)], 0, lcd_y, enc_col_w, lcd_h)
-            enc_right = self._encoder_column_svg([enc.get(i + 3) for i in range(3)], right_enc_x, lcd_y, enc_col_w, lcd_h)
+            # Encoder columns (Loupedeck only)
+            if self.layout.has_encoders:
+                enc_left = self._encoder_column_svg([enc.get(i) for i in range(3)], 0, lcd_y, enc_col_w, lcd_h)
+                enc_right = self._encoder_column_svg([enc.get(i + 3) for i in range(3)], right_enc_x, lcd_y, enc_col_w, lcd_h)
+            else:
+                enc_left = enc_right = ""
 
             # Build click overlays for page-type buttons (transparent rects)
             overlays: list[str] = []
@@ -863,7 +879,7 @@ class SVGRenderer:
                 f'</g>'
             )
 
-        pager_svg = self._pager_strip_svg(pager_buttons, hw_w, hw_body_h, pager_h, home_page)
+        pager_svg = self._pager_strip_svg(pager_buttons, hw_w, hw_body_h, pager_h, home_page) if self.layout.has_encoders else ""
 
         svg_lines: list[str] = [
             f'<svg xmlns="http://www.w3.org/2000/svg" id="deck" width="{hw_w}" height="{hw_total_h}" viewBox="0 0 {hw_w} {hw_total_h}">',
