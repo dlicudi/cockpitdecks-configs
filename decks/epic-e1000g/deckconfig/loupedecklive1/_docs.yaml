@@ -1,6 +1,0 @@
-status: draft
-notes: >
-  Based on the Lancair Evolution Loupedeck layout (turboprop + G1000).
-  X-Plane still exposes integrated GPS/FMS commands as g1000n1/n3 and GCU
-  range/pan/FMS as sim/GPS/gcu478 and sim/GPS/gcu479 even though the 3D model
-  is a GCU477; if a control does nothing in-sim, verify against Datarefs & Commands.
