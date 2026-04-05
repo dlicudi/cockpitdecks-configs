@@ -230,5 +230,5 @@ buttons:
       - text: "TEST"
         text-color: Orange
         text-font: Segment7Standard.otf
-        text-position: tr
+        text-position: rt
   formula: ${sim/cockpit2/radios/actuators/transponder_mode}
