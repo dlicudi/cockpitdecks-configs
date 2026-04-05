@@ -156,10 +156,22 @@ class FormulaEvaluator:
                 stack.append(self._resolve_token(token, context))
         return stack[-1] if stack else None
 
+    @staticmethod
+    def _yaml_bool_str(value: Any) -> Any:
+        """PyYAML 1.1 parses ON/OFF/YES/NO/TRUE/FALSE as Python booleans.
+        Convert them back to their canonical uppercase string form so they
+        render correctly on buttons."""
+        if value is True:
+            return "ON"
+        if value is False:
+            return "OFF"
+        return value
+
     def render_template(self, template: Any, text_format: str | None = None, context: dict[str, Any] | None = None) -> str:
         if template is None:
             return ""
         context = context or {}
+        template = self._yaml_bool_str(template)
         raw = str(template)
 
         def replace(match: re.Match[str]) -> str:
@@ -328,7 +340,7 @@ class PreviewRenderer:
             )
             self._draw_text_box(draw, (8, 20, width - 8, height - 8), rendered, font, self._color(button.get("text-color", "white")), anchor="mm")
 
-        label = button.get("label")
+        label = self.evaluator._yaml_bool_str(button.get("label"))
         if label:
             label_box = (8, 8, width - 8, 24)
             label_color = self._color(button.get("label-color", self.layout_defaults.get("default-label-color", "white")))
@@ -368,10 +380,9 @@ class PreviewRenderer:
         multi_texts = button.get("multi-texts")
         if multi_texts:
             index = int(self.evaluator._as_number(context.get("formula", 0)))
-            if 0 <= index < len(multi_texts):
-                return multi_texts[index].get("text", "")
-            return multi_texts[0].get("text", "")
-        return button.get("text", "")
+            entry = multi_texts[index] if 0 <= index < len(multi_texts) else multi_texts[0]
+            return self.evaluator._yaml_bool_str(entry.get("text", ""))
+        return self.evaluator._yaml_bool_str(button.get("text", ""))
 
     def _render_side_screen(self, button: dict[str, Any] | None, page: dict[str, Any]) -> Image.Image:
         width, height = self.layout.screen_size
@@ -441,7 +452,8 @@ class PreviewRenderer:
 
     def _part_text(self, part: dict[str, Any]) -> str:
         context = self._formula_context(part)
-        return self.evaluator.render_template(part.get("text", ""), part.get("text-format"), context)
+        text = self.evaluator._yaml_bool_str(part.get("text", ""))
+        return self.evaluator.render_template(text, part.get("text-format"), context)
 
     def _part_text_color(self, part: dict[str, Any], active: bool, off_intensity: int | None) -> tuple[int, int, int]:
         if active:
