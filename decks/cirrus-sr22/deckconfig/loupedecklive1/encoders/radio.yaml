@@ -9,10 +9,10 @@ buttons:
     - 0
     - 1
   commands:
-  - sim/radios/stby_com1_coarse_down
   - sim/radios/stby_com1_coarse_up
-  - sim/radios/stby_com1_fine_down
+  - sim/radios/stby_com1_coarse_down
   - sim/radios/stby_com1_fine_up
+  - sim/radios/stby_com1_fine_down
   long-press: sim/GPS/g1000n1_com_ff
 
 - index: e2
@@ -22,10 +22,10 @@ buttons:
     - 0
     - 1
   commands:
-  - sim/radios/stby_com2_coarse_down
   - sim/radios/stby_com2_coarse_up
-  - sim/radios/stby_com2_fine_down
+  - sim/radios/stby_com2_coarse_down
   - sim/radios/stby_com2_fine_up
+  - sim/radios/stby_com2_fine_down
   long-press: sim/radios/com2_standy_flip
 
 
@@ -37,10 +37,10 @@ buttons:
     - 0
     - 1
   commands:
-  - sim/radios/stby_nav1_coarse_down
   - sim/radios/stby_nav1_coarse_up
-  - sim/radios/stby_nav1_fine_down
+  - sim/radios/stby_nav1_coarse_down
   - sim/radios/stby_nav1_fine_up
+  - sim/radios/stby_nav1_fine_down
   long-press: sim/GPS/g1000n3_nav_ff
 
 - index: e5
@@ -50,10 +50,10 @@ buttons:
     - 0
     - 1
   commands:
-  - sim/radios/stby_nav2_coarse_down
   - sim/radios/stby_nav2_coarse_up
-  - sim/radios/stby_nav2_fine_down
+  - sim/radios/stby_nav2_coarse_down
   - sim/radios/stby_nav2_fine_up
+  - sim/radios/stby_nav2_fine_down
   long-press: sim/radios/nav2_standy_flip
 
 - index: left

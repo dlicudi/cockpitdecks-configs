@@ -100,18 +100,6 @@ buttons:
     text-font: fontawesome.otf
     text-position: cm
 
-  - index: 8
-    type: page
-    vibrate: SHORT
-    page: pedestal
-    label: PEDESTAL
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-
   - index: 9
     type: page
     vibrate: SHORT
