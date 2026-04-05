@@ -1,0 +1,278 @@
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="Duane Licudi"><link rel="canonical" href="https://dlicudi.github.io/cockpitdecks-configs/reference/plugin-interface/">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Plugin Interface - Cockpitdecks Configs</title>
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Plugin Interface";
+        var mkdocs_page_input_path = "reference/plugin-interface.md";
+        var mkdocs_page_url = "/cockpitdecks-configs/reference/plugin-interface/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Cockpitdecks Configs
+        </a><div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/development/">Development</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Architecture</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/">Overview</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../config-browser.html">Config Browser</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Decks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/aerobask-robin-dr401/">Robin DR401</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/beechcraft-baron-58/">Beechcraft Baron 58</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/cessna-172-sp/">Cessna 172 SP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/cirrus-sr22/">Cirrus SR22</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/embraer-e-jets-family/">Embraer E-Jets Family</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/epic-e1000g/">Epic E1000G</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/lancair-evolution/">Lancair Evolution</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a320-neo/">Airbus A320neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a321-neo/">Toliss A321neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a330-neo/">ToLiss A330neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/vans-aircraft-rv-10/">Van's Aircraft RV-10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compatibility/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deck-types/">Deck Types</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Plugin Interface</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#current-used-by-fms_fpl-fms_nav-fms_load-pages">Current (used by fms_fpl, fms_nav, fms_load pages)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#fms_browser-plan-browser-load">fms_browser (plan browser / LOAD)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fms_browser-live-fms">fms_browser (live FMS)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fms_legs-fpl-waypoint-list">fms_legs (FPL waypoint list)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#desired-additions-for-full-g1000-parity">Desired additions (for full G1000 parity)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#per-waypoint-in-fpl-row_x_">Per-waypoint in FPL (row_X_)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nav-page">NAV page</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#x-plane-datarefs-used-verify-existence">X-Plane datarefs used (verify existence)</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cirrus-sr22-gaps/">Cirrus SR22 Gaps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cirrus-sr22-reference/">Cirrus SR22 Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/modules/">Modules</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Cockpitdecks Configs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Reference</li>
+      <li class="breadcrumb-item active">Plugin Interface</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/docs/reference/plugin-interface.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="plugin-helper-interface-pi_cockpitdecksfmsbrowser">Plugin Helper Interface (PI_CockpitdecksFMSBrowser)<a class="headerlink" href="#plugin-helper-interface-pi_cockpitdecksfmsbrowser" title="Permanent link">¶</a></h1>
+<p><abbr title="Garmin G1000 Integrated Flight Deck">G1000</abbr>-style FMS layout expects the following datarefs and commands.</p>
+<h2 id="current-used-by-fms_fpl-fms_nav-fms_load-pages">Current (used by <code>fms_fpl</code>, <code>fms_nav</code>, <code>fms_load</code> pages)<a class="headerlink" href="#current-used-by-fms_fpl-fms_nav-fms_load-pages" title="Permanent link">¶</a></h2>
+<h3 id="fms_browser-plan-browser-load">fms_browser (plan browser / LOAD)<a class="headerlink" href="#fms_browser-plan-browser-load" title="Permanent link">¶</a></h3>
+<p><strong>3-row paged list (same paging model as <code>fms_legs</code> on FPL):</strong> show plans 1–3, then 4–6, etc.</p>
+<ul>
+<li><code>list_row_1_filename</code> … <code>list_row_3_filename</code> — file basename without <code>.fms</code></li>
+<li><code>list_row_1_timestamp</code> … <code>list_row_3_timestamp</code> — file timestamp label used on the LOAD page</li>
+<li><code>list_row_1_index</code> … <code>list_row_3_index</code> — 1-based index of that row’s plan in the full sorted list (empty if row blank)</li>
+<li><code>list_row_1_route</code> … <code>list_row_3_route</code> — departure / destination line for the row’s plan</li>
+<li><code>list_row_1_wpt_count</code> … <code>list_row_3_wpt_count</code> — waypoint count in file</li>
+<li><code>list_row_1_max_alt_ft</code> … <code>list_row_3_max_alt_ft</code> — max waypoint altitude in file (ft MSL; 0 if empty row)</li>
+<li><code>list_row_1_distance_nm</code> … <code>list_row_3_distance_nm</code> — total great-circle distance along parsed route (nm)</li>
+<li><code>list_row_1_is_selected</code> … <code>list_row_3_is_selected</code> — highlight when that row’s plan is selected</li>
+<li><code>list_page</code> — e.g. <code>1/4</code> (current page / total pages)</li>
+<li><code>list_sel_count</code> — which <strong>visible row</strong> (1–3) is selected on the current page, e.g. <code>2/3</code> or <code>-/3</code> when none; use <code>list_page</code> + row <code>list_row_*_index</code> for global plan order</li>
+<li><code>list_sort_key</code> / <code>list_sort_mode</code> — <code>NAME</code> or <code>TIME</code></li>
+<li><code>list_sort_direction</code> — <code>ASC</code> or <code>DESC</code></li>
+<li><code>list_window_page</code> — int, 1-based visible page (for encoder / subscriptions; same paging as <code>list_scroll_*</code>)</li>
+<li>Commands: <code>list_scroll_up</code>, <code>list_scroll_down</code> — move by <strong>one page</strong> (three plans), not one-by-one (Loupedeck SR22 Load binds these to <strong>E0</strong>; deck keys may use sort or <code>refresh</code> instead)</li>
+<li>Commands: <code>list_sort_toggle_key</code>, <code>list_sort_toggle_direction</code> — toggle the browser sort key/direction</li>
+<li>Commands: <code>list_sort_filename</code>, <code>list_sort_timestamp</code>, <code>list_sort_asc</code>, <code>list_sort_desc</code> — explicit setters if you want fixed-state actions</li>
+</ul>
+<p><strong>Legacy single-selection datarefs</strong> (reflect the tapped/selected plan, not the visible page):</p>
+<ul>
+<li><code>plan_name</code>, <code>plan_filename</code>, <code>plan_departure</code>, <code>plan_destination</code></li>
+<li><code>plan_distance_nm</code>, <code>plan_waypoint_count</code></li>
+<li><code>plan_dep_runway</code>, <code>plan_dest_runway</code>, <code>plan_sid</code>, <code>plan_star</code></li>
+<li><code>index</code>, <code>count</code>, <code>status</code></li>
+<li><code>loaded_distance_nm</code> — total distance of loaded route (nm)</li>
+<li>Commands: <code>previous</code>, <code>next</code> — move selection within the <strong>current visible 3-row page only</strong> (no page change); <code>load</code>, <code>refresh</code></li>
+</ul>
+<h3 id="fms_browser-live-fms">fms_browser (live FMS)<a class="headerlink" href="#fms_browser-live-fms" title="Permanent link">¶</a></h3>
+<ul>
+<li><code>fms_active_ident</code>, <code>fms_active_index</code>, <code>fms_active_altitude</code></li>
+<li><code>fms_first_ident</code>, <code>fms_last_ident</code></li>
+<li><code>fms_entry_count</code></li>
+</ul>
+<h3 id="fms_legs-fpl-waypoint-list">fms_legs (FPL waypoint list)<a class="headerlink" href="#fms_legs-fpl-waypoint-list" title="Permanent link">¶</a></h3>
+<ul>
+<li><code>row_1_index</code>, <code>row_1_ident</code>, <code>row_1_alt</code>, <code>row_1_is_active</code>, <code>row_1_is_selected</code>, <code>row_1_status</code></li>
+<li>(same for row_2, row_3)</li>
+<li><code>selected_index</code>, <code>entry_count</code>, <code>window_start</code> (read=page 1,2,3…; writable=set page)</li>
+<li>Commands: <code>scroll_up</code>, <code>scroll_down</code> — move by <strong>page</strong> (1–3, 4–6, 7–9…), <em>not</em> 1-by-1</li>
+<li>Commands: <code>direct_to</code>, <code>select_row_1</code>, <code>select_row_2</code>, <code>select_row_3</code>, <code>clear_selected</code></li>
+</ul>
+<h2 id="desired-additions-for-full-g1000-parity">Desired additions (for full <abbr title="Garmin G1000 Integrated Flight Deck">G1000</abbr> parity)<a class="headerlink" href="#desired-additions-for-full-g1000-parity" title="Permanent link">¶</a></h2>
+<h3 id="per-waypoint-in-fpl-row_x_">Per-waypoint in FPL (row_X_)<a class="headerlink" href="#per-waypoint-in-fpl-row_x_" title="Permanent link">¶</a></h3>
+<ul>
+<li><code>row_X_dtk</code> — desired track to that waypoint (°)</li>
+<li><code>row_X_distance_nm</code> — distance to that waypoint (nm)</li>
+</ul>
+<h3 id="nav-page">NAV page<a class="headerlink" href="#nav-page" title="Permanent link">¶</a></h3>
+<ul>
+<li><code>distance_to_destination_nm</code> — remaining distance to last waypoint</li>
+<li><code>ete_to_destination_min</code> — ETE to destination</li>
+<li><code>nav_source</code> — "GPS" | "VLOC" (for SRC tile, future toggle)</li>
+</ul>
+<h3 id="x-plane-datarefs-used-verify-existence">X-Plane datarefs used (verify existence)<a class="headerlink" href="#x-plane-datarefs-used-verify-existence" title="Permanent link">¶</a></h3>
+<ul>
+<li><code>sim/cockpit2/radios/indicators/gps_dme_distance_nm</code> — dist to next WPT</li>
+<li><code>sim/cockpit2/radios/indicators/gps_dme_time_min</code> — ETE to next WPT</li>
+<li><code>sim/cockpit2/radios/indicators/gps_bearing_deg_mag</code> — DTK</li>
+<li><code>sim/cockpit2/radios/indicators/gps_nav_bearing_deg_mag</code> — BRG to WPT</li>
+<li><code>sim/cockpit/radios/gps_course_deviation</code> — XTK (nm)</li>
+<li><code>sim/cockpit2/gauges/indicators/ground_speed_kt</code></li>
+<li><code>sim/cockpit2/gauges/indicators/ground_track_mag_pilot</code></li>
+<li><code>sim/cockpit2/radios/indicators/fms1_act_eta_hour</code>, <code>fms1_act_eta_minute</code></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../deck-types/" class="btn btn-neutral float-left" title="Deck Types"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../cirrus-sr22-gaps/" class="btn btn-neutral float-right" title="Cirrus SR22 Gaps">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2023 - 2024 Duane Licudi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/dlicudi/cockpitdecks-configs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../deck-types/" style="color: #fcfcfc">« Previous</a></span>
+    
+    
+      <span><a href="../cirrus-sr22-gaps/" style="color: #fcfcfc">Next »</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

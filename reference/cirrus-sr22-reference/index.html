@@ -1,0 +1,897 @@
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="Duane Licudi"><link rel="canonical" href="https://dlicudi.github.io/cockpitdecks-configs/reference/cirrus-sr22-reference/">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Cirrus SR22 Reference - Cockpitdecks Configs</title>
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Cirrus SR22 Reference";
+        var mkdocs_page_input_path = "reference/cirrus-sr22-reference.md";
+        var mkdocs_page_url = "/cockpitdecks-configs/reference/cirrus-sr22-reference/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Cockpitdecks Configs
+        </a><div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/development/">Development</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Architecture</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/">Overview</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../config-browser.html">Config Browser</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Decks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/aerobask-robin-dr401/">Robin DR401</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/beechcraft-baron-58/">Beechcraft Baron 58</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/cessna-172-sp/">Cessna 172 SP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/cirrus-sr22/">Cirrus SR22</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/embraer-e-jets-family/">Embraer E-Jets Family</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/epic-e1000g/">Epic E1000G</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/lancair-evolution/">Lancair Evolution</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a320-neo/">Airbus A320neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a321-neo/">Toliss A321neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a330-neo/">ToLiss A330neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/vans-aircraft-rv-10/">Van's Aircraft RV-10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compatibility/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deck-types/">Deck Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plugin-interface/">Plugin Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cirrus-sr22-gaps/">Cirrus SR22 Gaps</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Cirrus SR22 Reference</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#source-files">Source Files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#custom-datarefs-laminarsr22">Custom Datarefs (laminar/sr22/*)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#sun-visors">Sun visors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fuel-boost-pump">Fuel &amp; boost pump</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#climate">Climate</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ice-protection-tks">Ice protection (TKS)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#annunciators-gcu-input">Annunciators — GCU input</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#annunciators-flaps">Annunciators — Flaps</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#annunciators-oxygen">Annunciators — Oxygen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#annunciators-audio-panel">Annunciators — Audio panel</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#annunciators-autopilot">Annunciators — Autopilot</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#read-write-animation-control">Read-write (animation / control)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#custom-commands-laminarsr22">Custom Commands (laminar/sr22/*)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#sun-visors_1">Sun visors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fuel-selector">Fuel selector</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#climate_1">Climate</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ice-protection-tks_1">Ice protection (TKS)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#boost-pump">Boost pump</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sim-datarefs-used-by-sr22">Sim Datarefs Used by SR22</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#lights-generic_lights_switch">Lights (generic_lights_switch)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#other-sim-datarefs">Other sim datarefs</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sim-commands-used-by-sr22">Sim Commands Used by SR22</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fuel-selector-mapping">Fuel Selector Mapping</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#related-documents">Related Documents</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/modules/">Modules</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Cockpitdecks Configs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Reference</li>
+      <li class="breadcrumb-item active">Cirrus SR22 Reference</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/docs/reference/cirrus-sr22-reference.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="cirrus-sr22-aircraft-reference">Cirrus SR22 Aircraft Reference<a class="headerlink" href="#cirrus-sr22-aircraft-reference" title="Permanent link">¶</a></h1>
+<p>Reference document for the <strong>Laminar Research Cirrus SR22</strong> (X-Plane 12 default aircraft). Derived from the aircraft files: <code>Cirrus SR22.acf</code>, <code>plugins/xlua/scripts/SR22.systems/SR22.systems.lua</code>.</p>
+<p>Use this document when building cockpit deck configurations for the SR22.</p>
+<hr>
+<h2 id="source-files">Source Files<a class="headerlink" href="#source-files" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>X-Plane 12/Aircraft/Laminar Research/Cirrus SR22/Cirrus SR22.acf</code></td>
+<td>Aircraft definition (geometry, properties)</td>
+</tr>
+<tr>
+<td><code>plugins/xlua/scripts/SR22.systems/SR22.systems.lua</code></td>
+<td>Systems logic, custom datarefs, custom commands</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="custom-datarefs-laminarsr22">Custom Datarefs (<code>laminar/sr22/*</code>)<a class="headerlink" href="#custom-datarefs-laminarsr22" title="Permanent link">¶</a></h2>
+<h3 id="sun-visors">Sun visors<a class="headerlink" href="#sun-visors" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataref</th>
+<th>Type</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/sun_visor_left</code></td>
+<td>number</td>
+<td>1 = down, 0 = neutral, -1 = stowed</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/sun_visor_right</code></td>
+<td>number</td>
+<td>1 = down, 0 = neutral, -1 = stowed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fuel-boost-pump">Fuel &amp; boost pump<a class="headerlink" href="#fuel-boost-pump" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataref</th>
+<th>Type</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/fuel_selector_pos</code></td>
+<td>number</td>
+<td>0 = left off, 1 = left select, 2 = right select, 3 = right off</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/switch/boost_pump</code></td>
+<td>number</td>
+<td>0 = off, 1 = boost, -1 = prime (momentary)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="climate">Climate<a class="headerlink" href="#climate" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataref</th>
+<th>Type</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/climate_fan_speed</code></td>
+<td>number</td>
+<td>0 = off, 1–3 = fan speed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ice-protection-tks">Ice protection (TKS)<a class="headerlink" href="#ice-protection-tks" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataref</th>
+<th>Type</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/switch/ice_protect</code></td>
+<td>number</td>
+<td>0 = off, 1 = on</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/switch/ice_norm_high</code></td>
+<td>number</td>
+<td>0 = norm, 1 = high</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/switch/ice_max</code></td>
+<td>number</td>
+<td>0–1 (animates during TKS MAX hold)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="annunciators-gcu-input">Annunciators — GCU input<a class="headerlink" href="#annunciators-gcu-input" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataref</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/annunciators/com</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/nav</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/crs</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/xpdr</code></td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+<h3 id="annunciators-flaps">Annunciators — Flaps<a class="headerlink" href="#annunciators-flaps" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataref</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/annunciators/flaps_up</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/flaps_50</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/flaps_100</code></td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+<h3 id="annunciators-oxygen">Annunciators — Oxygen<a class="headerlink" href="#annunciators-oxygen" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataref</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/annunciators/o2_full</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/o2_1600</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/o2_1200</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/o2_800</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/o2_400</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/o2_empty</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/o2_req</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/o2_fault</code></td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+<h3 id="annunciators-audio-panel">Annunciators — Audio panel<a class="headerlink" href="#annunciators-audio-panel" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataref</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/annunciators/audio/mkr_mute</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/audio/com1</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/audio/com2</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/audio/nav1</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/audio/nav2</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/audio/mic1</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/audio/mic2</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/audio/pilot</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/audio/coplt</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/audio/pass</code></td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+<h3 id="annunciators-autopilot">Annunciators — Autopilot<a class="headerlink" href="#annunciators-autopilot" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataref</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/annunciators/ap/ap</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/ap/fd</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/ap/lvl</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/ap/apr</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/ap/nav</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/ap/hdg</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/ap/flc</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/ap/vnv</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/ap/vs</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/ap/alt</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/air_con</code></td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+<h3 id="read-write-animation-control">Read-write (animation / control)<a class="headerlink" href="#read-write-animation-control" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataref</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/dome_light_rot_x-1</code> … <code>-4</code></td>
+<td>number</td>
+<td>Dome light rotation X</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/dome_light_rot_y-1</code> … <code>-4</code></td>
+<td>number</td>
+<td>Dome light rotation Y</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/eyeball_vent_rot_x-1</code> … <code>-4</code></td>
+<td>number</td>
+<td>Eyeball vent rotation X</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/eyeball_vent_rot_y-1</code> … <code>-4</code></td>
+<td>number</td>
+<td>Eyeball vent rotation Y</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/alt_air_pull</code></td>
+<td>number</td>
+<td>Alternate air pull</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/temp_control</code></td>
+<td>number</td>
+<td>Climate temperature control</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/knobs/parking_brake_valve_anim</code></td>
+<td>number</td>
+<td>Parking brake valve animation (0–1)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="custom-commands-laminarsr22">Custom Commands (<code>laminar/sr22/*</code>)<a class="headerlink" href="#custom-commands-laminarsr22" title="Permanent link">¶</a></h2>
+<h3 id="sun-visors_1">Sun visors<a class="headerlink" href="#sun-visors_1" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/sunvisor_left_up</code></td>
+<td>Sun visor left up</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/sunvisor_left_dn</code></td>
+<td>Sun visor left down</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/sunvisor_right_up</code></td>
+<td>Sun visor right up</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/sunvisor_right_dn</code></td>
+<td>Sun visor right down</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fuel-selector">Fuel selector<a class="headerlink" href="#fuel-selector" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/fuel_sel_left</code></td>
+<td>Rotate fuel selector left</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/fuel_sel_right</code></td>
+<td>Rotate fuel selector right</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/fuel_sel_left_off</code></td>
+<td>Set fuel selector to left off (position 0)</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/fuel_sel_left_select</code></td>
+<td>Set fuel selector to left select (position 1)</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/fuel_sel_right_select</code></td>
+<td>Set fuel selector to right select (position 2)</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/fuel_sel_right_off</code></td>
+<td>Set fuel selector to right off (position 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="climate_1">Climate<a class="headerlink" href="#climate_1" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/fan_speed_right</code></td>
+<td>Increase fan speed</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/fan_speed_left</code></td>
+<td>Decrease fan speed</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/button/air_con_toggle</code></td>
+<td>Air conditioning toggle</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ice-protection-tks_1">Ice protection (TKS)<a class="headerlink" href="#ice-protection-tks_1" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/anti_ice_tks_max</code></td>
+<td>TKS MAX (hold for max flow)</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/switch/ice_protect_on</code></td>
+<td>TKS ON</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/switch/ice_protect_off</code></td>
+<td>TKS OFF</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/switch/ice_protect_norm</code></td>
+<td>TKS NORM</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/switch/ice_protect_high</code></td>
+<td>TKS HIGH</td>
+</tr>
+</tbody>
+</table>
+<h3 id="boost-pump">Boost pump<a class="headerlink" href="#boost-pump" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/switch/boost_pump_up</code></td>
+<td>Boost pump switch up (ON)</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/switch/boost_pump_dn</code></td>
+<td>Boost pump switch down (OFF / prime on hold)</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/switch/boost_pump_boost</code></td>
+<td>Set boost pump to boost (simpit)</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/switch/boost_pump_off</code></td>
+<td>Set boost pump to off (simpit)</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/switch/boost_pump_prime</code></td>
+<td>Set boost pump to prime (simpit)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="sim-datarefs-used-by-sr22">Sim Datarefs Used by SR22<a class="headerlink" href="#sim-datarefs-used-by-sr22" title="Permanent link">¶</a></h2>
+<h3 id="lights-generic_lights_switch">Lights (generic_lights_switch)<a class="headerlink" href="#lights-generic_lights_switch" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>SR22 use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Reading light 1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Reading light 2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dome light</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Flood light</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Edge lighting</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Wingtip LIT force</td>
+</tr>
+</tbody>
+</table>
+<h3 id="other-sim-datarefs">Other sim datarefs<a class="headerlink" href="#other-sim-datarefs" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataref</th>
+<th>SR22 use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sim/cockpit2/switches/instrument_brightness_ratio[1]</code></td>
+<td><abbr title="Garmin G1000 Integrated Flight Deck">G1000</abbr> screen brightness</td>
+</tr>
+<tr>
+<td><code>sim/cockpit2/switches/instrument_brightness_ratio[3]</code></td>
+<td><abbr title="Garmin G1000 Integrated Flight Deck">G1000</abbr> bezel brightness</td>
+</tr>
+<tr>
+<td><code>sim/cockpit2/switches/instrument_brightness_ratio[4]</code></td>
+<td>Indicator lights</td>
+</tr>
+<tr>
+<td><code>sim/cockpit2/switches/landing_lights_switch[0]</code></td>
+<td>Landing lights master</td>
+</tr>
+<tr>
+<td><code>sim/cockpit2/switches/landing_lights_switch[1]</code></td>
+<td>Landing light left</td>
+</tr>
+<tr>
+<td><code>sim/cockpit2/switches/landing_lights_switch[2]</code></td>
+<td>Landing light right</td>
+</tr>
+<tr>
+<td><code>sim/cockpit2/ice/ice_surface_tks_left_on</code></td>
+<td>TKS wing left</td>
+</tr>
+<tr>
+<td><code>sim/cockpit2/ice/ice_surface_tks_right_on</code></td>
+<td>TKS wing right</td>
+</tr>
+<tr>
+<td><code>sim/cockpit2/ice/ice_prop_tks_on_per_engine[0]</code></td>
+<td>TKS prop</td>
+</tr>
+<tr>
+<td><code>sim/flightmodel2/controls/flap1_deploy_ratio</code></td>
+<td>Flaps (0, 0.5, 1)</td>
+</tr>
+<tr>
+<td><code>sim/cockpit2/controls/park_brake_valve</code></td>
+<td>Parking brake</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="sim-commands-used-by-sr22">Sim Commands Used by SR22<a class="headerlink" href="#sim-commands-used-by-sr22" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sim/ice/tks_max</code></td>
+<td>TKS max flow (called by <code>laminar/sr22/anti_ice_tks_max</code>)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="fuel-selector-mapping">Fuel Selector Mapping<a class="headerlink" href="#fuel-selector-mapping" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th><code>laminar/sr22/fuel_selector_pos</code></th>
+<th><code>sim/cockpit2/fuel/fuel_tank_selector</code></th>
+<th>Physical position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>Left off</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>Left select</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>Right select</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0</td>
+<td>Right off</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="related-documents">Related Documents<a class="headerlink" href="#related-documents" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="../cirrus-sr22-gaps/">cirrus-sr22-gaps.md</a> — Gap analysis vs. current loupedecklive1 config</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../cirrus-sr22-gaps/" class="btn btn-neutral float-left" title="Cirrus SR22 Gaps"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../modules/modules/" class="btn btn-neutral float-right" title="Modules">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2023 - 2024 Duane Licudi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/dlicudi/cockpitdecks-configs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../cirrus-sr22-gaps/" style="color: #fcfcfc">« Previous</a></span>
+    
+    
+      <span><a href="../../modules/modules/" style="color: #fcfcfc">Next »</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

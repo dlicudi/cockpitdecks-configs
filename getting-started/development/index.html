@@ -1,0 +1,330 @@
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="Duane Licudi"><link rel="canonical" href="https://dlicudi.github.io/cockpitdecks-configs/getting-started/development/">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Development - Cockpitdecks Configs</title>
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Development";
+        var mkdocs_page_input_path = "getting-started/development.md";
+        var mkdocs_page_url = "/cockpitdecks-configs/getting-started/development/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Cockpitdecks Configs
+        </a><div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Development</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#project-structure">Project structure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#config-hierarchy">Config hierarchy</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#aircraft-config">Aircraft config</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#layout-config">Layout config</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#page-files">Page files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#button-types">Button types</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#adding-a-new-aircraft">Adding a new aircraft</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-modules">Using modules</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#generating-docs">Generating docs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vs-code-yaml-support">VS Code YAML support</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Architecture</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/">Overview</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../config-browser.html">Config Browser</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Decks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/aerobask-robin-dr401/">Robin DR401</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/beechcraft-baron-58/">Beechcraft Baron 58</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/cessna-172-sp/">Cessna 172 SP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/cirrus-sr22/">Cirrus SR22</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/embraer-e-jets-family/">Embraer E-Jets Family</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/epic-e1000g/">Epic E1000G</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/lancair-evolution/">Lancair Evolution</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a320-neo/">Airbus A320neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a321-neo/">Toliss A321neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a330-neo/">ToLiss A330neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/vans-aircraft-rv-10/">Van's Aircraft RV-10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/compatibility/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/deck-types/">Deck Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/plugin-interface/">Plugin Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cirrus-sr22-gaps/">Cirrus SR22 Gaps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cirrus-sr22-reference/">Cirrus SR22 Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/modules/">Modules</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Cockpitdecks Configs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Getting Started</li>
+      <li class="breadcrumb-item active">Development</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/docs/getting-started/development.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="development">Development<a class="headerlink" href="#development" title="Permanent link">¶</a></h1>
+<p>How to create and modify aircraft deck configurations.</p>
+<h2 id="project-structure">Project structure<a class="headerlink" href="#project-structure" title="Permanent link">¶</a></h2>
+<pre class="highlight"><code class="language-text">cockpitdecks-configs/
+├── decks/                      # Aircraft configurations
+│   └── cirrus-sr22/
+│       └── deckconfig/         # Symlinked into X-Plane aircraft folder
+│           ├── config.yaml     # Aircraft-level config
+│           ├── _docs.yaml      # Documentation metadata
+│           └── loupedecklive1/ # Layout for a specific deck
+│               ├── config.yaml # Layout defaults (fonts, colours, home page)
+│               ├── index.yaml  # Home page
+│               ├── engine.yaml # Functional pages
+│               └── encoders/   # Encoder sub-pages
+├── modules/                    # Reusable page configs (radio, engine, etc.)
+├── decktypes/                  # Deck type YAML definitions
+├── scripts/                    # Doc generation scripts
+└── mkdocs.yml</code></pre>
+<h2 id="config-hierarchy">Config hierarchy<a class="headerlink" href="#config-hierarchy" title="Permanent link">¶</a></h2>
+<p>Configs follow a hierarchy: <strong>Aircraft → Layout → Page → Button</strong>.</p>
+<h3 id="aircraft-config">Aircraft config<a class="headerlink" href="#aircraft-config" title="Permanent link">¶</a></h3>
+<p>The top-level <code>config.yaml</code> in each <code>deckconfig/</code> folder defines the aircraft
+and which decks it supports:</p>
+<pre class="highlight"><code class="language-yaml">aircraft: Cirrus SR22
+icao: SR22
+decks:
+  loupedeck1:
+    type: LoupedeckLive
+    layout: loupedecklive1
+    brightness: 80</code></pre>
+<p>It can also include global dataref rounding settings to reduce WebSocket churn.</p>
+<h3 id="layout-config">Layout config<a class="headerlink" href="#layout-config" title="Permanent link">¶</a></h3>
+<p>Each layout folder (e.g. <code>loupedecklive1/</code>) contains its own <code>config.yaml</code>
+with display defaults:</p>
+<pre class="highlight"><code class="language-yaml">default-label-font: DIN Condensed
+default-label-size: 14
+default-label-color: white
+default-label-position: ct
+default-home-page-name: index</code></pre>
+<h3 id="page-files">Page files<a class="headerlink" href="#page-files" title="Permanent link">¶</a></h3>
+<p>Each <code>.yaml</code> file in the layout folder defines a page of buttons. Pages can
+include shared modules and encoder sub-pages:</p>
+<pre class="highlight"><code class="language-yaml">name: switches
+includes: pager, encoders/encoders_fcu
+buttons:
+  - index: 0
+    type: push
+    command: sim/electrical/battery_1_toggle
+    label: "BAT"
+    formula: ${sim/cockpit2/electrical/battery_on[0]}</code></pre>
+<h3 id="button-types">Button types<a class="headerlink" href="#button-types" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>page</code></td>
+<td>Navigates to another page</td>
+</tr>
+<tr>
+<td><code>push</code></td>
+<td>Single command on press</td>
+</tr>
+<tr>
+<td><code>begin-end-command</code></td>
+<td>Command on press and release (for multi-position switches)</td>
+</tr>
+<tr>
+<td><code>none</code></td>
+<td>Display only, no interaction</td>
+</tr>
+</tbody>
+</table>
+<p>Buttons use <code>formula</code> with <code>${dataref}</code> syntax to read live state from X-Plane.</p>
+<h2 id="adding-a-new-aircraft">Adding a new aircraft<a class="headerlink" href="#adding-a-new-aircraft" title="Permanent link">¶</a></h2>
+<ol>
+<li>Create a folder under <code>decks/</code> matching the X-Plane aircraft directory name</li>
+<li>Add a <code>deckconfig/</code> folder with a <code>config.yaml</code></li>
+<li>Create a layout folder for your deck (e.g. <code>loupedecklive1/</code>)</li>
+<li>Add a layout <code>config.yaml</code> with display defaults</li>
+<li>Add page <code>.yaml</code> files for each cockpit function</li>
+<li>Symlink <code>deckconfig/</code> into the X-Plane aircraft folder</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Start by copying an existing aircraft config with a similar cockpit.
+The Cessna 172 SP is a good starting point for GA aircraft.</p>
+</div>
+<h2 id="using-modules">Using modules<a class="headerlink" href="#using-modules" title="Permanent link">¶</a></h2>
+<p>Modules are reusable button sets shared across aircraft. They live in the
+<code>modules/</code> directory, organised by deck type:</p>
+<pre class="highlight"><code class="language-text">modules/
+├── loupedecklive/    # Loupedeck Live modules
+└── streamdeckxl/     # Stream Deck XL modules</code></pre>
+<p>Include a module in a page with the <code>includes</code> directive:</p>
+<pre class="highlight"><code class="language-yaml">includes: pager, encoders/encoders_fcu</code></pre>
+<p>See <a href="../../modules/modules/">Modules</a> for the full list.</p>
+<h2 id="generating-docs">Generating docs<a class="headerlink" href="#generating-docs" title="Permanent link">¶</a></h2>
+<p>The deck overview pages under <code>docs/decks/</code> are auto-generated. After modifying
+configs, regenerate them:</p>
+<pre class="highlight"><code class="language-sh">python3 scripts/generate_deck_docs.py</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not manually edit files under <code>docs/decks/</code> — they will be overwritten.
+Edit the source configs or <code>_docs.yaml</code> instead.</p>
+</div>
+<p>To preview the docs site locally:</p>
+<pre class="highlight"><code class="language-sh">mkdocs serve</code></pre>
+<h2 id="vs-code-yaml-support">VS Code YAML support<a class="headerlink" href="#vs-code-yaml-support" title="Permanent link">¶</a></h2>
+<p>For YAML validation in VS Code, add the following to your workspace settings:</p>
+<pre class="highlight"><code class="language-json">{
+  "yaml.schemas": {
+    "https://json.schemastore.org/mkdocs-1.0.json": "mkdocs.yml"
+  }
+}</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../installation/" class="btn btn-neutral float-left" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../architecture/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2023 - 2024 Duane Licudi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/dlicudi/cockpitdecks-configs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../installation/" style="color: #fcfcfc">« Previous</a></span>
+    
+    
+      <span><a href="../../architecture/" style="color: #fcfcfc">Next »</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
