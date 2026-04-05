@@ -2,48 +2,36 @@
 
 Aircraft deck configurations for [Cockpitdecks](https://github.com/dlicudi/cockpitdecks).
 
-Repository-level docs live under `docs/`.
-Aircraft-specific notes live in each aircraft `README.md`.
+Repository-level docs live under `docs/`. Aircraft-specific notes live in each aircraft `README.md`.
 
 ## Aircraft
 
-| Pack | Aircraft | Available |
-|------|----------|-----------|
-| `cirrus-sr22` | Laminar Research Cirrus SR22 | Deck Packs tab |
-| `cessna-172-sp` | Laminar Research Cessna 172 SP | Manual install |
-| `beechcraft-baron-58` | Laminar Research Beechcraft Baron 58 | Manual install |
-| `lancair-evolution` | Laminar Research Lancair Evolution | Manual install |
-| `embraer-e-jets-family` | Laminar Research Embraer E-Jets Family | Manual install |
-| `epic-e1000g` | Laminar Research Epic E1000G | Manual install |
-| `vans-aircraft-rv-10` | Van's Aircraft RV-10 | Manual install |
-| `aerobask-robin-dr401` | Aerobask Robin DR401 | Manual install |
-| `toliss-airbus-a320-neo` | Toliss Airbus A320 Neo | Manual install |
-| `toliss-airbus-a321-neo` | Toliss Airbus A321 Neo | Manual install |
-| `toliss-airbus-a330-neo` | Toliss Airbus A330 Neo | Manual install |
+Aircraft configs currently live under `decks/`.
+
+`cirrus-sr22` is available from the Cockpitdecks Desktop pack browser. The rest are manual install configs for now.
 
 ## Installation
 
-### Via Cockpitdecks Desktop (recommended)
+### Desktop
 
-Packs marked **Deck Packs tab** can be installed directly from the **Decks → Packs** tab in [Cockpitdecks Desktop](https://github.com/dlicudi/cockpitdecks-desktop). No manual steps required.
+Install published packs from **Decks → Packs** in [Cockpitdecks Desktop](https://github.com/dlicudi/cockpitdecks-desktop).
 
 ### Manual install
 
-For configs without a published pack release, clone this repo and symlink the `deckconfig` folder into the aircraft directory:
+Clone the repo:
 
 ```sh
 git clone https://github.com/dlicudi/cockpitdecks-configs.git
 ```
 
-Then symlink the config into your X-Plane aircraft folder:
+Link the aircraft `deckconfig` into the matching X-Plane aircraft folder:
 
 ```sh
 ln -s ~/GitHub/cockpitdecks-configs/decks/cirrus-sr22/deckconfig \
   ~/X-Plane\ 12/Aircraft/Laminar\ Research/Cirrus\ SR22/deckconfig
 ```
 
-> [!IMPORTANT]
-> You must use a symlink — an alias (macOS Finder) will not work for long-press buttons.
+Use a real symlink created with `ln -s`, not a Finder alias. Finder aliases are macOS shortcuts and can break Cockpitdecks behavior, including long-press handling.
 
 ### Installing Cockpitdecks
 
@@ -58,11 +46,8 @@ pip install 'cockpitdecks[xplane,loupedeck] @ git+https://github.com/dlicudi/coc
 ## Releasing a pack
 
 ```sh
-# Preview
 python scripts/release-deck.py release cirrus-sr22
-
-# Publish
 python scripts/release-deck.py release cirrus-sr22 --execute
 ```
 
-Release notes are auto-generated from the git log since the previous tag. See each pack's `README.md` for aircraft-specific documentation.
+See each aircraft `README.md` for aircraft-specific notes.
