@@ -284,8 +284,8 @@ class PreviewRenderer:
     def _render_composite(self, page: dict[str, Any]) -> Image.Image:
         key_w, key_h = self.layout.key_size
         cols, rows = self.layout.grid_repeat
-        grid_gap = 14
-        outer_gap = 18
+        grid_gap = 8
+        outer_gap = 14
         grid_w = key_w * cols + grid_gap * max(cols - 1, 0)
         grid_h = key_h * rows + grid_gap * max(rows - 1, 0)
         screen_w = screen_h = 0
@@ -298,7 +298,8 @@ class PreviewRenderer:
         canvas_w = right_x + screen_w if self.layout.screen_size else grid_w
         canvas_h = max(grid_h, screen_h) if self.layout.screen_size else grid_h
 
-        image = Image.new("RGBA", (canvas_w, canvas_h), (0, 0, 0, 0))
+        page_bg = self._page_background_color(page)
+        image = Image.new("RGBA", (canvas_w, canvas_h), (*page_bg, 255))
 
         groups = self._group_buttons(page["buttons"])
         if self.layout.screen_size:
@@ -320,7 +321,8 @@ class PreviewRenderer:
         width, height = self.layout.key_size
         image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
         draw = ImageDraw.Draw(image)
-        bg = self._color(button.get("text-bg-color", button.get("text_bg_color", "Black")))
+        bg_value = button.get("text-bg-color", button.get("text_bg_color"))
+        bg = self._color(bg_value) if bg_value is not None else self._page_background_color(page)
         draw.rectangle((0, 0, width - 1, height - 1), fill=bg, outline=(118, 123, 128), width=2)
         inner = (6, 6, width - 7, height - 7)
         draw.rectangle(inner, outline=(48, 52, 56))
@@ -344,7 +346,7 @@ class PreviewRenderer:
         if label:
             label_box = (8, 8, width - 8, 24)
             label_color = self._color(button.get("label-color", self.layout_defaults.get("default-label-color", "white")))
-            if annunciator and self._is_dark_color(label_color):
+            if not self._is_dark_color(bg) and self._is_dark_color(label_color):
                 draw.rectangle(label_box, fill=(178, 182, 186))
             self._draw_text_box(
                 draw,
