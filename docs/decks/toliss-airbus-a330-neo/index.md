@@ -5,220 +5,21 @@
 
 ## Loupedeck Live
 
-<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 5 pages&emsp;🎮 Loupedeck Live</div></div>
+<div class="layout-meta"><div class="layout-meta-items">📄 5 pages&emsp;🎮 Loupedeck Live</div></div>
 
-<div class="page-gallery">
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/fcu/index.page.png" data-glightbox data-title="Home">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/index.page.png" alt="Home preview" loading="lazy">
-</a>
-<div class="page-name">Home</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/index.yaml">index.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/fcu/fcu.page.png" data-glightbox data-title="FCU">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/fcu.page.png" alt="FCU preview" loading="lazy">
-</a>
-<div class="page-name">FCU</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/fcu.yaml">fcu.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/fcu/toliss.page.png" data-glightbox data-title="ToLiss">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/toliss.page.png" alt="ToLiss preview" loading="lazy">
-</a>
-<div class="page-name">ToLiss</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/toliss.yaml">toliss.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/fcu/popups.page.png" data-glightbox data-title="Popups">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/popups.page.png" alt="Popups preview" loading="lazy">
-</a>
-<div class="page-name">Popups</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/popups.yaml">popups.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/fcu/views.page.png" data-glightbox data-title="Views">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/views.page.png" alt="Views preview" loading="lazy">
-</a>
-<div class="page-name">Views</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/views.yaml">views.yaml</a></div>
-</div>
-</div>
+<iframe src="deck-fcu.html" scrolling="no" frameborder="0" style="width:100%;border:none;border-radius:8px;display:block;background:#1e1e1e" onload="(function(f){var s=f.contentDocument.getElementById('deck');if(s)f.style.height=s.getAttribute('height')+'px'})(this)"></iframe>
 
 ## Stream Deck Original
 
-<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 2 pages&emsp;🎮 Stream Deck Original</div></div>
+<div class="layout-meta"><div class="layout-meta-items">📄 2 pages&emsp;🎮 Stream Deck Original</div></div>
 
-<div class="page-gallery">
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/index.page.png" data-glightbox data-title="ECAM">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/index.page.png" alt="ECAM preview" loading="lazy">
-</a>
-<div class="page-name">ECAM</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/efis-ecam/index.yaml">index.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/efis.page.png" data-glightbox data-title="EFIS">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/efis.page.png" alt="EFIS preview" loading="lazy">
-</a>
-<div class="page-name">EFIS</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/efis-ecam/efis.yaml">efis.yaml</a></div>
-</div>
-</div>
+<iframe src="deck-efis-ecam.html" scrolling="no" frameborder="0" style="width:100%;border:none;border-radius:8px;display:block;background:#1e1e1e" onload="(function(f){var s=f.contentDocument.getElementById('deck');if(s)f.style.height=s.getAttribute('height')+'px'})(this)"></iframe>
 
 ## Stream Deck XL
 
-<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 21 pages&emsp;🎮 Stream Deck XL</div></div>
+<div class="layout-meta"><div class="layout-meta-items">📄 21 pages&emsp;🎮 Stream Deck XL</div></div>
 
-<div class="page-gallery">
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/index.page.png" data-glightbox data-title="Bottom part of overhead panel, external lights">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/index.page.png" alt="Bottom part of overhead panel, external lights preview" loading="lazy">
-</a>
-<div class="page-name">Bottom part of overhead panel, external lights</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/index.yaml">index.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdaircond.page.png" data-glightbox data-title="Overhead AIR COND Panel (ATA 21)">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdaircond.page.png" alt="Overhead AIR COND Panel (ATA 21) preview" loading="lazy">
-</a>
-<div class="page-name">Overhead AIR COND Panel (ATA 21)</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdaircond.yaml">ovrhdaircond.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/intlights.page.png" data-glightbox data-title="Internal lights">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/intlights.page.png" alt="Internal lights preview" loading="lazy">
-</a>
-<div class="page-name">Internal lights</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/intlights.yaml">intlights.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/index-alt.page.png" data-glightbox data-title="Alternate index page">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/index-alt.page.png" alt="Alternate index page preview" loading="lazy">
-</a>
-<div class="page-name">Alternate index page</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/index-alt.yaml">index-alt.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/adirs.page.png" data-glightbox data-title="ADIRS Start/stop">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/adirs.page.png" alt="ADIRS Start/stop preview" loading="lazy">
-</a>
-<div class="page-name">ADIRS Start/stop</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/adirs.yaml">adirs.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/aptnav.page.png" data-glightbox data-title="Airport Navigator">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/aptnav.page.png" alt="Airport Navigator preview" loading="lazy">
-</a>
-<div class="page-name">Airport Navigator</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/aptnav.yaml">aptnav.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/cockpitdecks.page.png" data-glightbox data-title="Cockpitdecks specific actions, not linked to aircraft">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/cockpitdecks.page.png" alt="Cockpitdecks specific actions, not linked to aircraft preview" loading="lazy">
-</a>
-<div class="page-name">Cockpitdecks specific actions, not linked to aircraft</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/cockpitdecks.yaml">cockpitdecks.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/dashboard.page.png" data-glightbox data-title="Cockpitdecks Special Dashboard of A21N">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/dashboard.page.png" alt="Cockpitdecks Special Dashboard of A21N preview" loading="lazy">
-</a>
-<div class="page-name">Cockpitdecks Special Dashboard of A21N</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/dashboard.yaml">dashboard.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/doors.page.png" data-glightbox data-title="Door operations">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/doors.page.png" alt="Door operations preview" loading="lazy">
-</a>
-<div class="page-name">Door operations</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/doors.yaml">doors.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/ecam.page.png" data-glightbox data-title="ECAM display selector">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/ecam.page.png" alt="ECAM display selector preview" loading="lazy">
-</a>
-<div class="page-name">ECAM display selector</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ecam.yaml">ecam.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/efis.page.png" data-glightbox data-title="EFIS display selector + some FCU commands">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/efis.page.png" alt="EFIS display selector + some FCU commands preview" loading="lazy">
-</a>
-<div class="page-name">EFIS display selector + some FCU commands</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/efis.yaml">efis.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdelec.page.png" data-glightbox data-title="Electric panel (ATA 24)">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdelec.page.png" alt="Electric panel (ATA 24) preview" loading="lazy">
-</a>
-<div class="page-name">Electric panel (ATA 24)</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdelec.yaml">ovrhdelec.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdfire.page.png" data-glightbox data-title="Fire panels (ATA 26)">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdfire.page.png" alt="Fire panels (ATA 26) preview" loading="lazy">
-</a>
-<div class="page-name">Fire panels (ATA 26)</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdfire.yaml">ovrhdfire.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdfuel.page.png" data-glightbox data-title="Fuel panel (ATA 28)">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdfuel.page.png" alt="Fuel panel (ATA 28) preview" loading="lazy">
-</a>
-<div class="page-name">Fuel panel (ATA 28)</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdfuel.yaml">ovrhdfuel.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdhyd.page.png" data-glightbox data-title="Hydraulics (ATA 29)">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdhyd.page.png" alt="Hydraulics (ATA 29) preview" loading="lazy">
-</a>
-<div class="page-name">Hydraulics (ATA 29)</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdhyd.yaml">ovrhdhyd.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/piedestal.page.png" data-glightbox data-title="Pedestal">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/piedestal.page.png" alt="Pedestal preview" loading="lazy">
-</a>
-<div class="page-name">Pedestal</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/piedestal.yaml">piedestal.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/popups.page.png" data-glightbox data-title="All popups on pos. 16 to 28">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/popups.page.png" alt="All popups on pos. 16 to 28 preview" loading="lazy">
-</a>
-<div class="page-name">All popups on pos. 16 to 28</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/popups.yaml">popups.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/radio.page.png" data-glightbox data-title="Radio panel">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/radio.page.png" alt="Radio panel preview" loading="lazy">
-</a>
-<div class="page-name">Radio panel</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/radio.yaml">radio.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/toliss.page.png" data-glightbox data-title="ToLiss aircraft specific actions, not available in real aircraft...">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/toliss.page.png" alt="ToLiss aircraft specific actions, not available in real aircraft... preview" loading="lazy">
-</a>
-<div class="page-name">ToLiss aircraft specific actions, not available in real aircraft...</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/toliss.yaml">toliss.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/xplane.page.png" data-glightbox data-title="X-Plane specific actions, not linked to aircraft">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/xplane.page.png" alt="X-Plane specific actions, not linked to aircraft preview" loading="lazy">
-</a>
-<div class="page-name">X-Plane specific actions, not linked to aircraft</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/xplane.yaml">xplane.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/xpndr.page.png" data-glightbox data-title="Transponder panel">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/xpndr.page.png" alt="Transponder panel preview" loading="lazy">
-</a>
-<div class="page-name">Transponder panel</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/xpndr.yaml">xpndr.yaml</a></div>
-</div>
-</div>
+<iframe src="deck-panels.html" scrolling="no" frameborder="0" style="width:100%;border:none;border-radius:8px;display:block;background:#1e1e1e" onload="(function(f){var s=f.contentDocument.getElementById('deck');if(s)f.style.height=s.getAttribute('height')+'px'})(this)"></iframe>
 
 ## Stream Deck +
 
@@ -233,7 +34,7 @@
 
 ## X Touch Mini
 
-<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 4 pages&emsp;🎮 X Touch Mini</div></div>
+<div class="layout-meta"><div class="layout-meta-items">📄 4 pages&emsp;🎮 X Touch Mini</div></div>
 
 <div class="page-gallery">
 <div class="page-card">
@@ -256,192 +57,21 @@
 
 ## Virtual Streamdeck MK.2
 
-<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 2 pages&emsp;🎮 Virtual Streamdeck MK.2</div></div>
+<div class="layout-meta"><div class="layout-meta-items">📄 2 pages&emsp;🎮 Virtual Streamdeck MK.2</div></div>
 
-<div class="page-gallery">
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/index.page.png" data-glightbox data-title="ECAM">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/index.page.png" alt="ECAM preview" loading="lazy">
-</a>
-<div class="page-name">ECAM</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/efis-ecam/index.yaml">index.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/efis.page.png" data-glightbox data-title="EFIS">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/efis-ecam/efis.page.png" alt="EFIS preview" loading="lazy">
-</a>
-<div class="page-name">EFIS</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/efis-ecam/efis.yaml">efis.yaml</a></div>
-</div>
-</div>
+<iframe src="deck-efis-ecam.html" scrolling="no" frameborder="0" style="width:100%;border:none;border-radius:8px;display:block;background:#1e1e1e" onload="(function(f){var s=f.contentDocument.getElementById('deck');if(s)f.style.height=s.getAttribute('height')+'px'})(this)"></iframe>
 
 ## Virtual Streamdeck XL
 
-<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 21 pages&emsp;🎮 Virtual Streamdeck XL</div></div>
+<div class="layout-meta"><div class="layout-meta-items">📄 21 pages&emsp;🎮 Virtual Streamdeck XL</div></div>
 
-<div class="page-gallery">
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/index.page.png" data-glightbox data-title="Bottom part of overhead panel, external lights">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/index.page.png" alt="Bottom part of overhead panel, external lights preview" loading="lazy">
-</a>
-<div class="page-name">Bottom part of overhead panel, external lights</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/index.yaml">index.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdaircond.page.png" data-glightbox data-title="Overhead AIR COND Panel (ATA 21)">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdaircond.page.png" alt="Overhead AIR COND Panel (ATA 21) preview" loading="lazy">
-</a>
-<div class="page-name">Overhead AIR COND Panel (ATA 21)</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdaircond.yaml">ovrhdaircond.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/intlights.page.png" data-glightbox data-title="Internal lights">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/intlights.page.png" alt="Internal lights preview" loading="lazy">
-</a>
-<div class="page-name">Internal lights</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/intlights.yaml">intlights.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/index-alt.page.png" data-glightbox data-title="Alternate index page">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/index-alt.page.png" alt="Alternate index page preview" loading="lazy">
-</a>
-<div class="page-name">Alternate index page</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/index-alt.yaml">index-alt.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/adirs.page.png" data-glightbox data-title="ADIRS Start/stop">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/adirs.page.png" alt="ADIRS Start/stop preview" loading="lazy">
-</a>
-<div class="page-name">ADIRS Start/stop</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/adirs.yaml">adirs.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/aptnav.page.png" data-glightbox data-title="Airport Navigator">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/aptnav.page.png" alt="Airport Navigator preview" loading="lazy">
-</a>
-<div class="page-name">Airport Navigator</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/aptnav.yaml">aptnav.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/cockpitdecks.page.png" data-glightbox data-title="Cockpitdecks specific actions, not linked to aircraft">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/cockpitdecks.page.png" alt="Cockpitdecks specific actions, not linked to aircraft preview" loading="lazy">
-</a>
-<div class="page-name">Cockpitdecks specific actions, not linked to aircraft</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/cockpitdecks.yaml">cockpitdecks.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/dashboard.page.png" data-glightbox data-title="Cockpitdecks Special Dashboard of A21N">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/dashboard.page.png" alt="Cockpitdecks Special Dashboard of A21N preview" loading="lazy">
-</a>
-<div class="page-name">Cockpitdecks Special Dashboard of A21N</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/dashboard.yaml">dashboard.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/doors.page.png" data-glightbox data-title="Door operations">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/doors.page.png" alt="Door operations preview" loading="lazy">
-</a>
-<div class="page-name">Door operations</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/doors.yaml">doors.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/ecam.page.png" data-glightbox data-title="ECAM display selector">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/ecam.page.png" alt="ECAM display selector preview" loading="lazy">
-</a>
-<div class="page-name">ECAM display selector</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ecam.yaml">ecam.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/efis.page.png" data-glightbox data-title="EFIS display selector + some FCU commands">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/efis.page.png" alt="EFIS display selector + some FCU commands preview" loading="lazy">
-</a>
-<div class="page-name">EFIS display selector + some FCU commands</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/efis.yaml">efis.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdelec.page.png" data-glightbox data-title="Electric panel (ATA 24)">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdelec.page.png" alt="Electric panel (ATA 24) preview" loading="lazy">
-</a>
-<div class="page-name">Electric panel (ATA 24)</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdelec.yaml">ovrhdelec.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdfire.page.png" data-glightbox data-title="Fire panels (ATA 26)">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdfire.page.png" alt="Fire panels (ATA 26) preview" loading="lazy">
-</a>
-<div class="page-name">Fire panels (ATA 26)</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdfire.yaml">ovrhdfire.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdfuel.page.png" data-glightbox data-title="Fuel panel (ATA 28)">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdfuel.page.png" alt="Fuel panel (ATA 28) preview" loading="lazy">
-</a>
-<div class="page-name">Fuel panel (ATA 28)</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdfuel.yaml">ovrhdfuel.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdhyd.page.png" data-glightbox data-title="Hydraulics (ATA 29)">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/ovrhdhyd.page.png" alt="Hydraulics (ATA 29) preview" loading="lazy">
-</a>
-<div class="page-name">Hydraulics (ATA 29)</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/ovrhdhyd.yaml">ovrhdhyd.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/piedestal.page.png" data-glightbox data-title="Pedestal">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/piedestal.page.png" alt="Pedestal preview" loading="lazy">
-</a>
-<div class="page-name">Pedestal</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/piedestal.yaml">piedestal.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/popups.page.png" data-glightbox data-title="All popups on pos. 16 to 28">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/popups.page.png" alt="All popups on pos. 16 to 28 preview" loading="lazy">
-</a>
-<div class="page-name">All popups on pos. 16 to 28</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/popups.yaml">popups.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/radio.page.png" data-glightbox data-title="Radio panel">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/radio.page.png" alt="Radio panel preview" loading="lazy">
-</a>
-<div class="page-name">Radio panel</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/radio.yaml">radio.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/toliss.page.png" data-glightbox data-title="ToLiss aircraft specific actions, not available in real aircraft...">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/toliss.page.png" alt="ToLiss aircraft specific actions, not available in real aircraft... preview" loading="lazy">
-</a>
-<div class="page-name">ToLiss aircraft specific actions, not available in real aircraft...</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/toliss.yaml">toliss.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/xplane.page.png" data-glightbox data-title="X-Plane specific actions, not linked to aircraft">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/xplane.page.png" alt="X-Plane specific actions, not linked to aircraft preview" loading="lazy">
-</a>
-<div class="page-name">X-Plane specific actions, not linked to aircraft</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/xplane.yaml">xplane.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/panels/xpndr.page.png" data-glightbox data-title="Transponder panel">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/panels/xpndr.page.png" alt="Transponder panel preview" loading="lazy">
-</a>
-<div class="page-name">Transponder panel</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/panels/xpndr.yaml">xpndr.yaml</a></div>
-</div>
-</div>
+<iframe src="deck-panels.html" scrolling="no" frameborder="0" style="width:100%;border:none;border-radius:8px;display:block;background:#1e1e1e" onload="(function(f){var s=f.contentDocument.getElementById('deck');if(s)f.style.height=s.getAttribute('height')+'px'})(this)"></iframe>
 
 ## Virtual Streamdeck Mini
 
 <div class="layout-meta"><div class="layout-meta-items">📄 1 page&emsp;🎮 Virtual Streamdeck Mini</div></div>
 
-<div class="page-gallery">
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/vmini/index.page.png" data-glightbox data-title="Test deck for Virtual Streamdeck Mini (6 images)">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/vmini/index.page.png" alt="Test deck for Virtual Streamdeck Mini (6 images) preview" loading="lazy">
-</a>
-<div class="page-name">Test deck for Virtual Streamdeck Mini (6 images)</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/vmini/index.yaml">index.yaml</a></div>
-</div>
-</div>
+<iframe src="deck-vmini.html" scrolling="no" frameborder="0" style="width:100%;border:none;border-radius:8px;display:block;background:#1e1e1e" onload="(function(f){var s=f.contentDocument.getElementById('deck');if(s)f.style.height=s.getAttribute('height')+'px'})(this)"></iframe>
 
 ## Virtual Streamdeck +
 
@@ -467,49 +97,13 @@
 
 ## Virtual Loupedeck Live
 
-<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 5 pages&emsp;🎮 Virtual Loupedeck Live</div></div>
+<div class="layout-meta"><div class="layout-meta-items">📄 5 pages&emsp;🎮 Virtual Loupedeck Live</div></div>
 
-<div class="page-gallery">
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/fcu/index.page.png" data-glightbox data-title="Home">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/index.page.png" alt="Home preview" loading="lazy">
-</a>
-<div class="page-name">Home</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/index.yaml">index.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/fcu/fcu.page.png" data-glightbox data-title="FCU">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/fcu.page.png" alt="FCU preview" loading="lazy">
-</a>
-<div class="page-name">FCU</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/fcu.yaml">fcu.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/fcu/toliss.page.png" data-glightbox data-title="ToLiss">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/toliss.page.png" alt="ToLiss preview" loading="lazy">
-</a>
-<div class="page-name">ToLiss</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/toliss.yaml">toliss.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/fcu/popups.page.png" data-glightbox data-title="Popups">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/popups.page.png" alt="Popups preview" loading="lazy">
-</a>
-<div class="page-name">Popups</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/popups.yaml">popups.yaml</a></div>
-</div>
-<div class="page-card">
-<a href="../../assets/images/toliss-airbus-a330-neo/generated/fcu/views.page.png" data-glightbox data-title="Views">
-<img src="../../assets/images/toliss-airbus-a330-neo/generated/fcu/views.page.png" alt="Views preview" loading="lazy">
-</a>
-<div class="page-name">Views</div>
-<div class="page-config"><a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/decks/toliss-airbus-a330-neo/deckconfig/fcu/views.yaml">views.yaml</a></div>
-</div>
-</div>
+<iframe src="deck-fcu.html" scrolling="no" frameborder="0" style="width:100%;border:none;border-radius:8px;display:block;background:#1e1e1e" onload="(function(f){var s=f.contentDocument.getElementById('deck');if(s)f.style.height=s.getAttribute('height')+'px'})(this)"></iframe>
 
 ## Virtual X Touch Mini
 
-<div class="layout-meta"><div class="layout-meta-items">✅ <strong>Stable</strong>&emsp;📄 4 pages&emsp;🎮 Virtual X Touch Mini</div></div>
+<div class="layout-meta"><div class="layout-meta-items">📄 4 pages&emsp;🎮 Virtual X Touch Mini</div></div>
 
 <div class="page-gallery">
 <div class="page-card">

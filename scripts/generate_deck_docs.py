@@ -64,21 +64,6 @@ PAGE_NAME_OVERRIDES = {
 }
 
 
-_SVG_DIM_RE = re.compile(r'<svg[^>]*\bwidth="(\d+)"[^>]*\bheight="(\d+)"')
-
-
-def _svg_dimensions(path: Path) -> tuple[int, int] | None:
-    """Return (width, height) from the first <svg> tag, or None if unparseable."""
-    try:
-        header = path.read_text(encoding="utf-8", errors="ignore")[:512]
-        m = _SVG_DIM_RE.search(header)
-        if m:
-            return int(m.group(1)), int(m.group(2))
-    except OSError:
-        pass
-    return None
-
-
 def run(args: list[str]) -> None:
     subprocess.run(args, check=True, cwd=ROOT)
 
@@ -451,21 +436,20 @@ def render_layout_page_images(slug: str, layout: dict[str, Any]) -> dict[Path, P
 
 
 
-def render_layout_page_svgs(slug: str, layout: dict[str, Any]) -> dict[Path, Path]:
-    """Render interactive SVG previews for each page in a layout.
+def render_layout_interactive_deck(slug: str, layout: dict[str, Any], doc_dir: Path) -> Path | None:
+    """Generate a self-contained interactive HTML deck file for a layout.
 
-    Returns {page_path: svg_path} for every page that was successfully rendered.
-    Falls back gracefully if SVGRenderer is not available or the decktype is unsupported.
+    Returns the path to the generated HTML file, or None if generation failed.
     """
     if not _SVG_RENDERER_AVAILABLE:
-        return {}
+        return None
     decktype_path = layout.get("decktype_path")
     if decktype_path is None or not has_supported_preview_geometry(decktype_path):
-        return {}
+        return None
+    if not layout["pages"]:
+        return None
 
-    output_dir = IMAGE_ROOT / slug / "generated" / layout["layout"]
-    output_dir.mkdir(parents=True, exist_ok=True)
-
+    output_path = doc_dir / f"deck-{layout['layout']}.html"
     fixture = resolve_repo_path(layout["docs"].get("fixture"), base_dir=layout["dir"])
     renderer = SVGRenderer(
         layout_dir=layout["dir"],
@@ -473,16 +457,15 @@ def render_layout_page_svgs(slug: str, layout: dict[str, Any]) -> dict[Path, Pat
         fixture_path=fixture,
         repo_blob_url_fn=repo_blob_url,
     )
+    page_names = [p.stem for p in layout["pages"]]
+    home = home_page_name(layout["dir"]) or (page_names[0] if page_names else "index")
+    try:
+        html = renderer.render_interactive_deck(page_names, home)
+        write_text_if_changed(output_path, html)
+        return output_path
+    except Exception:
+        return None
 
-    result: dict[Path, Path] = {}
-    for page_path in layout["pages"]:
-        target = output_dir / f"{page_path.stem}.page.svg"
-        try:
-            renderer.render_page(page_path.stem, target)
-            result[page_path] = target
-        except Exception:
-            pass
-    return result
 
 
 STATUS_LABEL = {
@@ -550,7 +533,13 @@ def build_pack_meta_section(pack_meta: dict[str, Any]) -> list[str]:
     return lines
 
 
-def build_overview(slug: str, config: dict[str, Any], doc_path: Path, page_images: dict[str, dict[Path, Path]], page_svgs: dict[str, dict[Path, Path]] | None = None) -> str:
+def build_overview(
+    slug: str,
+    config: dict[str, Any],
+    doc_path: Path,
+    page_images: dict[str, dict[Path, Path]],
+    interactive_decks: dict[str, Path] | None = None,
+) -> str:
     deckconfig_dir = DECKS_DIR / slug / "deckconfig"
     title = aircraft_title(slug, config)
     pack_meta = load_pack_metadata(slug)
@@ -631,28 +620,27 @@ def build_overview(slug: str, config: dict[str, Any], doc_path: Path, page_image
                     lines.append(f"    - {item}")
                 lines.append("")
 
-            images = page_images.get(layout["layout"], {})
-            svgs = (page_svgs or {}).get(layout["layout"], {})
-            if layout["pages"]:
+            interactive_path = (interactive_decks or {}).get(layout["layout"])
+            if interactive_path:
+                # Full interactive deck in an iframe — auto-sized to the SVG height.
+                iframe_src = rel_path(interactive_path, doc_path)
+                lines.append(
+                    f'<iframe src="{iframe_src}" scrolling="no" frameborder="0" '
+                    f'style="width:100%;border:none;border-radius:8px;display:block;background:#1e1e1e" '
+                    f'onload="(function(f){{var s=f.contentDocument.getElementById(\'deck\');'
+                    f'if(s)f.style.height=s.getAttribute(\'height\')+\'px\'}})(this)"></iframe>'
+                )
+                lines.append("")
+            elif layout["pages"]:
+                # Fallback: static page card gallery (PNG images)
+                images = page_images.get(layout["layout"], {})
                 lines.append('<div class="page-gallery">')
                 for page_path in layout["pages"]:
                     name = page_title(page_path)
                     image_path = images.get(page_path)
-                    svg_path = svgs.get(page_path)
                     config_url = repo_blob_url(page_path)
                     lines.append('<div class="page-card">')
-                    if svg_path:
-                        svg_ref = rel_path(svg_path, doc_path)
-                        # Extract width/height from the SVG so <object> renders at the right size.
-                        # <object> renders SVG interactively (hover tooltips, clickable links).
-                        svg_dims = _svg_dimensions(svg_path)
-                        dim_attr = f' style="width:100%;max-width:{svg_dims[0]}px;aspect-ratio:{svg_dims[0]}/{svg_dims[1]}"' if svg_dims else ""
-                        lines.append(f'<object type="image/svg+xml" data="{svg_ref}" title="{name}"{dim_attr}>')
-                        if image_path:
-                            image_ref = rel_path(image_path, doc_path)
-                            lines.append(f'<img src="{image_ref}" alt="{name} preview" loading="lazy">')
-                        lines.append('</object>')
-                    elif image_path:
+                    if image_path:
                         image_ref = rel_path(image_path, doc_path)
                         lines.append(f'<a href="{image_ref}" data-glightbox data-title="{name}">')
                         lines.append(f'<img src="{image_ref}" alt="{name} preview" loading="lazy">')
@@ -713,13 +701,17 @@ def update_mkdocs_nav(aircraft_records: list[dict[str, Any]]) -> None:
     write_text_if_changed(MKDOCS_CONFIG, new_text)
 
 
-def render_all_images(slug: str, config: dict[str, Any], deckconfig_dir: Path) -> tuple[dict[str, dict[Path, Path]], dict[str, dict[Path, Path]]]:
-    """Render preview images and SVGs for all layouts.
+def render_all_images(
+    slug: str, config: dict[str, Any], deckconfig_dir: Path, doc_dir: Path
+) -> tuple[dict[str, dict[Path, Path]], dict[str, Path]]:
+    """Render preview images and interactive decks for all layouts.
 
-    Returns (png_map, svg_map) where each map is {layout_name: {page_path: file_path}}.
+    Returns (png_map, interactive_map) where:
+      png_map          — {layout_name: {page_path: png_path}}
+      interactive_map  — {layout_name: html_path}
     """
     all_images: dict[str, dict[Path, Path]] = {}
-    all_svgs: dict[str, dict[Path, Path]] = {}
+    all_interactive: dict[str, Path] = {}
     for layout in layout_entries(config, deckconfig_dir):
         if not layout["pages"]:
             continue
@@ -733,10 +725,10 @@ def render_all_images(slug: str, config: dict[str, Any], deckconfig_dir: Path) -
                 images[page_path] = image_path
         if images:
             all_images[layout["layout"]] = images
-        svgs = render_layout_page_svgs(slug, layout)
-        if svgs:
-            all_svgs[layout["layout"]] = svgs
-    return all_images, all_svgs
+        html_path = render_layout_interactive_deck(slug, layout, doc_dir)
+        if html_path:
+            all_interactive[layout["layout"]] = html_path
+    return all_images, all_interactive
 
 
 def main() -> int:
@@ -751,10 +743,10 @@ def main() -> int:
 
         slug = aircraft_dir.name
         config = load_yaml(config_path)
-        page_images, page_svgs = render_all_images(slug, config, deckconfig_dir)
         doc_path = DOCS_DECKS_DIR / slug / "index.md"
         doc_path.parent.mkdir(parents=True, exist_ok=True)
-        write_text_if_changed(doc_path, build_overview(slug, config, doc_path, page_images, page_svgs))
+        page_images, interactive_decks = render_all_images(slug, config, deckconfig_dir, doc_path.parent)
+        write_text_if_changed(doc_path, build_overview(slug, config, doc_path, page_images, interactive_decks=interactive_decks))
 
         title = aircraft_title(slug, config)
         aircraft_records.append({"slug": slug, "title": title})
