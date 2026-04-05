@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cockpitdecks Config Browser</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: #141414;
+  color: #ccc;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+
+#sidebar {
+  width: 240px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #2a2a2a;
+  background: #111;
+  flex-shrink: 0;
+}
+
+#sidebar-header {
+  padding: 14px 14px 10px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+#sidebar-header h1 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+#search {
+  width: 100%;
+  margin-top: 8px;
+  padding: 5px 8px;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #ccc;
+  font-size: 12px;
+  outline: none;
+}
+#search::placeholder { color: #555; }
+#search:focus { border-color: #4a7aad; }
+
+#aircraft-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 0;
+}
+#aircraft-list::-webkit-scrollbar { width: 4px; }
+#aircraft-list::-webkit-scrollbar-track { background: transparent; }
+#aircraft-list::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+
+.ac-item {
+  padding: 7px 14px;
+  cursor: pointer;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-left: 2px solid transparent;
+}
+.ac-item:hover { background: #1a1a1a; color: #ddd; }
+.ac-item.selected { background: #162030; color: #fff; border-left-color: #2a6496; }
+.ac-item.hidden { display: none; }
+
+/* ── Main pane ────────────────────────────────────────────────────────────── */
+
+#main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+}
+
+/* ── Deck bar ─────────────────────────────────────────────────────────────── */
+
+#deck-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-bottom: 1px solid #2a2a2a;
+  background: #161616;
+  min-height: 42px;
+  flex-wrap: wrap;
+}
+
+.deck-tab {
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #222;
+  border: 1px solid #333;
+  color: #999;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.deck-tab:hover { background: #2a2a2a; color: #ddd; }
+.deck-tab.selected { background: #1a3050; border-color: #2a6496; color: #fff; }
+
+/* ── Page bar ─────────────────────────────────────────────────────────────── */
+
+#page-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 14px;
+  border-bottom: 1px solid #222;
+  background: #141414;
+  min-height: 36px;
+  flex-wrap: wrap;
+}
+
+.page-tab {
+  padding: 3px 9px;
+  border-radius: 3px;
+  cursor: pointer;
+  background: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  color: #888;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.page-tab:hover { background: #252525; color: #ccc; }
+.page-tab.selected { background: #1e3320; border-color: #2e5c2e; color: #7ec87e; }
+
+/* ── Canvas area ──────────────────────────────────────────────────────────── */
+
+#canvas-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  background: #0e0e0e;
+  padding: 20px;
+}
+
+#deck-canvas { display: block; }
+
+#empty-state {
+  color: #333;
+  text-align: center;
+  user-select: none;
+}
+#empty-state svg { width: 48px; height: 48px; margin-bottom: 12px; opacity: 0.3; }
+#empty-state p { font-size: 14px; }
+
+/* ── Status bar ───────────────────────────────────────────────────────────── */
+
+#status-bar {
+  padding: 3px 14px;
+  background: #0e0e0e;
+  border-top: 1px solid #1e1e1e;
+  font-size: 11px;
+  color: #444;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>
+</head>
+<body>
+
+<div id="sidebar">
+  <div id="sidebar-header">
+    <h1>Config Browser</h1>
+    <input id="search" type="search" placeholder="Filter aircraft…" autocomplete="off" spellcheck="false">
+  </div>
+  <div id="aircraft-list"></div>
+</div>
+
+<div id="main">
+  <div id="deck-bar"></div>
+  <div id="page-bar"></div>
+  <div id="canvas-area">
+    <div id="empty-state">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="2" y="3" width="20" height="14" rx="2"/>
+        <path d="M8 21h8M12 17v4"/>
+      </svg>
+      <p>Select an aircraft</p>
+    </div>
+    <canvas id="deck-canvas" style="display:none"></canvas>
+  </div>
+  <div id="status-bar">Loading…</div>
+</div>
+
+<script src="assets/js/deck-render.js"></script>
+<script>
+'use strict';
+
+// ── State ────────────────────────────────────────────────────────────────────
+
+let CONFIGS         = null;
+let currentAircraft = null;
+let currentDeck     = null;
+let currentRenderer = null;
+let loadedFonts     = new Set();   // font filenames already loaded
+let rendererCache   = new Map();   // deck id → DeckRenderer
+
+// ── Font loading ──────────────────────────────────────────────────────────────
+
+async function ensureFonts(fontEntries) {
+  const promises = fontEntries
+    .filter(f => !loadedFonts.has(f.file))
+    .map(async f => {
+      try {
+        const face = new FontFace(f.family, `url(assets/fonts/${encodeURIComponent(f.file)})`);
+        await face.load();
+        document.fonts.add(face);
+        loadedFonts.add(f.file);
+      } catch (e) {
+        console.warn('Font load failed:', f.file, e.message);
+      }
+    });
+  await Promise.all(promises);
+  // Wait for the browser to commit all fonts to the rendering pipeline
+  // before canvas fillText calls — without this, first-render can be blank
+  await document.fonts.ready;
+}
+
+// ── Aircraft list ─────────────────────────────────────────────────────────────
+
+function buildAircraftList(aircraft) {
+  const list = document.getElementById('aircraft-list');
+  list.innerHTML = '';
+  for (const ac of aircraft) {
+    const el = document.createElement('div');
+    el.className = 'ac-item';
+    el.textContent = ac.title;
+    el.dataset.slug = ac.slug;
+    el.title = ac.slug;
+    el.addEventListener('click', () => selectAircraft(ac));
+    list.appendChild(el);
+  }
+}
+
+function selectAircraft(ac) {
+  document.querySelectorAll('.ac-item').forEach(el =>
+    el.classList.toggle('selected', el.dataset.slug === ac.slug));
+  currentAircraft = ac;
+  buildDeckBar(ac.decks);
+  if (ac.decks.length > 0) selectDeck(ac.decks[0]);
+  pushHash(ac.slug);
+}
+
+// ── Deck bar ──────────────────────────────────────────────────────────────────
+
+function buildDeckBar(decks) {
+  const bar = document.getElementById('deck-bar');
+  bar.innerHTML = '';
+  for (const deck of decks) {
+    const tab = document.createElement('div');
+    tab.className = 'deck-tab';
+    tab.textContent = deck.title || deck.id;
+    tab.dataset.id = deck.id;
+    tab.addEventListener('click', () => selectDeck(deck));
+    bar.appendChild(tab);
+  }
+}
+
+async function selectDeck(deck) {
+  document.querySelectorAll('.deck-tab').forEach(el =>
+    el.classList.toggle('selected', el.dataset.id === deck.id));
+  currentDeck = deck;
+
+  setStatus('Loading fonts…');
+  await ensureFonts(deck.fonts || []);
+
+  // Bail out if another deck was selected while fonts were loading
+  if (currentDeck !== deck) return;
+
+  buildPageBar(deck.pages);
+
+  const home = deck.home_page || deck.pages[0]?.name;
+  if (home) showPage(home);
+
+  pushHash(currentAircraft?.slug, deck.id, home);
+}
+
+// ── Page bar ──────────────────────────────────────────────────────────────────
+
+function buildPageBar(pages) {
+  const bar = document.getElementById('page-bar');
+  bar.innerHTML = '';
+  for (const p of pages) {
+    const tab = document.createElement('div');
+    tab.className = 'page-tab';
+    tab.textContent = p.title || p.name;
+    tab.dataset.name = p.name;
+    tab.addEventListener('click', () => {
+      showPage(p.name);
+      pushHash(currentAircraft?.slug, currentDeck?.id, p.name);
+    });
+    bar.appendChild(tab);
+  }
+}
+
+function setPageTab(pageName) {
+  document.querySelectorAll('.page-tab').forEach(el =>
+    el.classList.toggle('selected', el.dataset.name === pageName));
+}
+
+// ── Canvas scaling ────────────────────────────────────────────────────────────
+
+function fitCanvas() {
+  const canvas = document.getElementById('deck-canvas');
+  if (canvas.style.display === 'none') return;
+  const area   = document.getElementById('canvas-area');
+  const avW    = area.clientWidth  - 32;   // 16px padding each side
+  const avH    = area.clientHeight - 32;
+  // Use renderer's own dimensions — canvas.width may still be from a previous deck
+  const cW     = currentRenderer ? currentRenderer.hw_w       : canvas.width;
+  const cH     = currentRenderer ? currentRenderer.hw_total_h : canvas.height;
+  if (!cW || !cH) return;
+  const scale  = Math.min(1, avW / cW, avH / cH);
+  canvas.style.transformOrigin = 'top left';
+  canvas.style.transform       = `scale(${scale})`;
+  // Shrink the element's layout footprint so the flex container centres it
+  canvas.style.width  = cW * scale + 'px';
+  canvas.style.height = cH * scale + 'px';
+}
+
+window.addEventListener('resize', fitCanvas);
+
+// ── Canvas / renderer ─────────────────────────────────────────────────────────
+
+function showPage(pageName) {
+  const deck = currentDeck;
+  if (!deck) return;
+
+  setPageTab(pageName);
+
+  const canvas = document.getElementById('deck-canvas');
+  document.getElementById('empty-state').style.display = 'none';
+  canvas.style.display = 'block';
+
+  // Reset any previous scale transform when switching decks
+  canvas.style.transform = '';
+  canvas.style.width     = '';
+  canvas.style.height    = '';
+
+  // Create or reuse renderer for this deck
+  let renderer = rendererCache.get(deck.id);
+  if (!renderer) {
+    renderer = new DeckRenderer(canvas, deck.config, {
+      onButtonClick: (_idx, button) => {
+        if (button?.type === 'page' && button.page) {
+          setPageTab(button.page);
+          pushHash(currentAircraft?.slug, deck.id, button.page);
+        }
+      }
+    });
+    // Intercept showPage so pager strip clicks also update our tab bar
+    const origShow = renderer.showPage.bind(renderer);
+    renderer.showPage = (name) => { origShow(name); setPageTab(name); };
+    rendererCache.set(deck.id, renderer);
+  } else if (renderer.canvas !== canvas) {
+    // Canvas was replaced somehow — recreate
+    rendererCache.delete(deck.id);
+    showPage(pageName);
+    return;
+  }
+
+  currentRenderer = renderer;
+  renderer.showPage(pageName);
+  fitCanvas();
+
+  const acTitle   = currentAircraft?.title || '';
+  const deckTitle = deck.title || deck.id;
+  setStatus(`${acTitle} / ${deckTitle} / ${pageName}`);
+}
+
+// ── URL hash navigation ───────────────────────────────────────────────────────
+// Format: #slug/deckId/pageName  (pageName optional)
+
+function pushHash(slug, deckId, pageName) {
+  const parts = [slug, deckId, pageName].filter(Boolean);
+  if (parts.length) history.replaceState(null, '', '#' + parts.join('/'));
+}
+
+function navigateToHash() {
+  if (!CONFIGS) return;
+  const hash = location.hash.slice(1);
+  if (!hash) return;
+  const [slug, deckId, pageName] = hash.split('/');
+  const ac = CONFIGS.aircraft.find(a => a.slug === slug);
+  if (!ac) return;
+
+  // Highlight sidebar item
+  const item = document.querySelector(`.ac-item[data-slug="${CSS.escape(slug)}"]`);
+  if (item) item.click();
+
+  if (deckId) {
+    const deck = ac.decks.find(d => d.id === deckId);
+    if (deck) {
+      const tab = document.querySelector(`.deck-tab[data-id="${CSS.escape(deckId)}"]`);
+      if (tab) {
+        // selectDeck is async; resolve after it settles
+        selectDeck(deck).then(() => {
+          if (pageName) showPage(pageName);
+        });
+        return;
+      }
+    }
+  }
+}
+
+window.addEventListener('hashchange', navigateToHash);
+
+// ── Search ────────────────────────────────────────────────────────────────────
+
+document.getElementById('search').addEventListener('input', e => {
+  const q = e.target.value.trim().toLowerCase();
+  document.querySelectorAll('.ac-item').forEach(el =>
+    el.classList.toggle('hidden', q !== '' && !el.textContent.toLowerCase().includes(q)));
+});
+
+// ── Status ────────────────────────────────────────────────────────────────────
+
+function setStatus(msg) {
+  document.getElementById('status-bar').textContent = msg;
+}
+
+// ── Bootstrap ─────────────────────────────────────────────────────────────────
+
+fetch('assets/configs.json')
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(data => {
+    CONFIGS = data;
+    buildAircraftList(data.aircraft);
+    const count = data.aircraft.length;
+    const ts = data.generated ? new Date(data.generated).toLocaleDateString() : '';
+    setStatus(`${count} aircraft  ${ts ? '· generated ' + ts : ''}`);
+    navigateToHash();
+  })
+  .catch(err => {
+    setStatus('Failed to load configs.json — run scripts/build_configs_json.py first');
+    document.getElementById('empty-state').querySelector('p').textContent =
+      'Run scripts/build_configs_json.py to generate the data file.';
+    console.error(err);
+  });
+</script>
+</body>
+</html>

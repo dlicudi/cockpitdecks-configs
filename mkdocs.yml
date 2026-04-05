@@ -17,6 +17,7 @@ nav:
       - Development: getting-started/development.md
   - Architecture:
       - Overview: architecture/index.md
+  - Config Browser: config-browser.html
   - Decks:
       - Robin DR401: decks/aerobask-robin-dr401/index.md
       - Beechcraft Baron 58: decks/beechcraft-baron-58/index.md

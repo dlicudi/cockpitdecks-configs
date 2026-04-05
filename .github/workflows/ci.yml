@@ -7,6 +7,8 @@ on:
       - .github/workflows/ci.yml
       - mkdocs.yml
       - docs/**
+      - decks/**
+      - scripts/**
   workflow_dispatch:
 permissions:
   contents: write
@@ -22,5 +24,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: pip install mkdocs mkdocs-glightbox pymdown-extensions
+      - run: pip install pyyaml pillow fonttools mkdocs mkdocs-glightbox pymdown-extensions
+      - run: python scripts/build_configs_json.py
       - run: mkdocs gh-deploy --force

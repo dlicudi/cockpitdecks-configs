@@ -6,7 +6,9 @@ from __future__ import annotations
 import argparse
 import base64
 import io
+import json
 import math
+import warnings
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -778,157 +780,345 @@ class SVGRenderer:
         return "".join(out)
 
     # ------------------------------------------------------------------
-    # Interactive deck HTML
+    # JSON conversion helpers (for deck-render.js canvas renderer)
     # ------------------------------------------------------------------
 
-    def render_interactive_deck(self, page_names: list[str], home_page: str) -> str:
-        """Render all pages into a self-contained HTML file with JS page switching.
+    @staticmethod
+    def _json_safe(value: Any) -> Any:
+        """Recursively convert Python types to JSON-serializable values."""
+        if isinstance(value, bool):
+            return value
+        if isinstance(value, dict):
+            return {str(k): SVGRenderer._json_safe(v) for k, v in value.items()}
+        if isinstance(value, (list, tuple)):
+            return [SVGRenderer._json_safe(v) for v in value]
+        if isinstance(value, (int, float)):
+            return value
+        if value is None:
+            return None
+        return str(value)
 
-        Page content is rendered pixel-accurately by PIL and embedded as base64 PNG.
-        Transparent SVG overlays handle clicks on page-type buttons.
-        Hardware chrome (encoders, pager strip) is drawn in SVG.
-        """
-        key_w, key_h = self.layout.key_size
-        cols, rows = self.layout.grid_repeat
-        gap = 14
-        outer_gap = 18
-        grid_w = key_w * cols + gap * max(cols - 1, 0)
-        grid_h = key_h * rows + gap * max(rows - 1, 0)
-        screen_w = screen_h = 0
-        if self.layout.screen_size:
-            screen_w, screen_h = self.layout.screen_size
-        main_x = screen_w + outer_gap if self.layout.screen_size else 0
-        right_x = main_x + grid_w + outer_gap if self.layout.screen_size else grid_w
-        lcd_w = right_x + screen_w if self.layout.screen_size else grid_w
-        lcd_h = max(grid_h, screen_h) if self.layout.screen_size else grid_h
+    def _page_to_json(self, page: dict[str, Any]) -> dict[str, Any]:
+        """Convert a loaded page dict to a JSON-serializable structure for deck-render.js."""
+        groups = self._group_buttons(page.get("buttons", []))
+        grid = {str(k): self._json_safe(v) for k, v in groups.get("grid", {}).items()}
+        enc  = {str(k): self._json_safe(v) for k, v in groups.get("enc", {}).items()}
+        left  = self._json_safe(groups.get("left"))
+        right = self._json_safe(groups.get("right"))
 
-        enc_col_w = 54
-        enc_gap = 6
-        pad_v = 10
-        pager_h = 42 if self.layout.has_encoders else 0  # Stream Decks have no pager strip
+        result: dict[str, Any] = {}
+        for key in (
+            "name", "description", "cockpit-color", "default-cockpit-color",
+            "default-text-size", "default-label-size", "default-label-color",
+            "default-label-font", "default-light-off-intensity",
+        ):
+            if key in page:
+                result[key] = self._json_safe(page[key])
 
-        if self.layout.has_encoders:
-            lcd_x = enc_col_w + enc_gap
-            lcd_y = pad_v
-            right_enc_x = lcd_x + lcd_w + enc_gap
-            hw_w = right_enc_x + enc_col_w
-        else:
-            lcd_x = pad_v
-            lcd_y = pad_v
-            right_enc_x = lcd_x + lcd_w  # unused but defined
-            hw_w = pad_v + lcd_w + pad_v
-        hw_body_h = pad_v + lcd_h + pad_v
-        hw_total_h = hw_body_h + pager_h
+        result["buttons"] = {"grid": grid, "enc": enc, "left": left, "right": right}
+        return result
 
-        # Load pager buttons
-        _pager_candidates = [
-            self.layout_dir / "pager.yaml",
-            self.layout_dir / "includes" / "pager.yaml",
-        ]
+    def _load_pager_json(self) -> dict[str, Any]:
+        """Load pager YAML and return {slot_str: button_data} for deck-render.js."""
         pager_yaml: dict[str, Any] = {}
-        for _pc in _pager_candidates:
+        for _pc in [self.layout_dir / "pager.yaml", self.layout_dir / "includes" / "pager.yaml"]:
             _data = self._load_yaml(_pc)
             if _data.get("buttons"):
                 pager_yaml = _data
                 break
-        pager_buttons: dict[int, dict[str, Any]] = {}
+        result: dict[str, Any] = {}
         for btn in pager_yaml.get("buttons", []):
             idx = btn.get("index", "")
             if isinstance(idx, str) and idx.startswith("b"):
                 try:
-                    pager_buttons[int(idx[1:])] = btn
+                    result[str(int(idx[1:]))] = self._json_safe(btn)
                 except ValueError:
                     pass
+        return result
 
-        # Render each page as a <g class="pg"> group
-        page_groups: list[str] = []
-        for page_name in page_names:
+    def yaml_to_json(self, page_names: list[str]) -> dict[str, Any]:
+        """Convert YAML layout + pages to a DECK_CONFIG dict consumed by deck-render.js."""
+        pages_json: dict[str, Any] = {}
+        for name in page_names:
             try:
-                b64_src, img_w, img_h = self._page_to_b64_png(page_name)
+                page = self._preview._load_page(name)
+                pages_json[name] = self._page_to_json(page)
             except Exception:
+                pass
+
+        lay = self.layout
+        layout_json: dict[str, Any] = {
+            "keySize":    list(lay.key_size),
+            "gridRepeat": list(lay.grid_repeat),
+            "screenSize": list(lay.screen_size) if lay.screen_size else None,
+            "hasEncoders": lay.has_encoders,
+            "gridGap":  8,
+            "outerGap": 14,
+            "encColW":  54,
+            "encGap":    6,
+            "padV":     10,
+            "pagerH":   42,
+        }
+
+        defaults: dict[str, Any] = {}
+        for key in (
+            "cockpit-color", "default-cockpit-color", "default-text-size",
+            "default-label-size", "default-label-color", "default-label-font",
+            "default-light-off-intensity",
+        ):
+            for source in (
+                self._preview.layout_defaults,
+                self._preview.deck_defaults,
+                self._preview.resources_defaults,
+            ):
+                if key in source:
+                    defaults[key] = self._json_safe(source[key])
+                    break
+
+        return {
+            "layout":   layout_json,
+            "defaults": defaults,
+            "datarefs": self._json_safe(self._preview.evaluator.datarefs),
+            "pager":    self._load_pager_json(),
+            "pages":    pages_json,
+        }
+
+    @staticmethod
+    def _collect_font_names(pages_json: dict[str, Any]) -> set[str]:
+        """Collect all text-font and label-font values across all pages."""
+        fonts: set[str] = set()
+
+        def _scan(obj: Any) -> None:
+            if isinstance(obj, dict):
+                for key in ("text-font", "label-font", "text_font", "label_font"):
+                    if obj.get(key):
+                        fonts.add(str(obj[key]).strip())
+                for v in obj.values():
+                    _scan(v)
+            elif isinstance(obj, list):
+                for item in obj:
+                    _scan(item)
+
+        _scan(pages_json)
+        return fonts
+
+    @staticmethod
+    def _collect_codepoints_for_font(pages_json: dict[str, Any], font_name: str) -> set[int]:
+        """Collect unicode codepoints used in text fields that reference font_name."""
+        codepoints: set[int] = set()
+
+        def _scan(obj: Any) -> None:
+            if isinstance(obj, dict):
+                # Check if this object uses the target font
+                for font_key in ("text-font", "text_font"):
+                    if str(obj.get(font_key) or "").strip() == font_name:
+                        text = obj.get("text") or obj.get("label") or ""
+                        for ch in str(text):
+                            codepoints.add(ord(ch))
+                for label_key in ("label-font", "label_font"):
+                    if str(obj.get(label_key) or "").strip() == font_name:
+                        label = obj.get("label") or ""
+                        for ch in str(label):
+                            codepoints.add(ord(ch))
+                for v in obj.values():
+                    _scan(v)
+            elif isinstance(obj, list):
+                for item in obj:
+                    _scan(item)
+
+        _scan(pages_json)
+        return codepoints
+
+    @staticmethod
+    def _subset_font(font_path: Path, codepoints: set[int]) -> bytes | None:
+        """Use fontTools to subset a font to the given codepoints. Returns bytes or None."""
+        try:
+            from fontTools import subset as ft_subset
+        except ImportError:
+            return None
+        if not codepoints:
+            return None
+        buf = io.BytesIO()
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            try:
+                tt = ft_subset.load_font(str(font_path), ft_subset.Options())
+                subsetter = ft_subset.Subsetter(options=ft_subset.Options(
+                    name_IDs=["*"],
+                    name_legacy=True,
+                    name_languages=["*"],
+                    hinting=False,
+                    desubroutinize=True,
+                    notdef_outline=True,
+                ))
+                subsetter.populate(unicodes=codepoints)
+                subsetter.subset(tt)
+                tt.save(buf)
+                return buf.getvalue()
+            except Exception:
+                return None
+
+    # Map font name/alias → (filename, CSS family)
+    _FONT_ALIAS: dict[str, tuple[str, str]] = {
+        "DIN Bold":               ("D-DIN-Bold.otf",          "D-DIN-Bold"),
+        "D-DIN Bold":             ("D-DIN-Bold.otf",          "D-DIN-Bold"),
+        "D-DIN-Bold":             ("D-DIN-Bold.otf",          "D-DIN-Bold"),
+        "D-DIN-Bold.otf":         ("D-DIN-Bold.otf",          "D-DIN-Bold"),
+        "D-DIN.otf":              ("D-DIN.otf",               "D-DIN"),
+        "DIN Condensed Light":    ("D-DINCondensed.otf",      "D-DINCondensed"),
+        "DIN Condensed Regular":  ("D-DINCondensed.otf",      "D-DINCondensed"),
+        "DIN Condensed Black.otf":("D-DINCondensed-Bold.otf", "D-DINCondensed-Bold"),
+        "DIN Condensed Black":    ("D-DINCondensed-Bold.otf", "D-DINCondensed-Bold"),
+        "D-DINCondensed.otf":     ("D-DINCondensed.otf",      "D-DINCondensed"),
+        "D-DINCondensed-Bold.otf":("D-DINCondensed-Bold.otf", "D-DINCondensed-Bold"),
+        "D-DINExp.otf":           ("D-DINExp.otf",            "D-DINExp"),
+        "D-DINExp-Bold.otf":      ("D-DINExp-Bold.otf",       "D-DINExp-Bold"),
+        "Seven Segment.ttf":      ("Segment7Standard.otf",    "Segment7Standard"),
+        "Segment7Standard.otf":   ("Segment7Standard.otf",    "Segment7Standard"),
+        "B612Mono-Regular.ttf":   ("B612Mono-Regular.ttf",    "B612 Mono"),
+        "B612-Bold":              ("B612Mono-Regular.ttf",    "B612 Mono"),
+        "DejaVuSans.ttf":         ("DejaVuSans.ttf",          "DejaVu Sans"),
+        "DejaVuSansMono.ttf":     ("DejaVuSansMono.ttf",      "DejaVu Sans Mono"),
+        "DIN Medium.ttf":         ("D-DIN.otf",               "D-DIN"),
+        "fontawesome.otf":        ("fontawesome.otf",         "FontAwesome"),
+        "Font Awesome 6 Free-Regular-400.otf": ("Font Awesome 6 Free-Regular-400.otf", "Font Awesome 6 Free"),
+        "Font Awesome 6 Free-Solid-900.otf":   ("Font Awesome 6 Free-Solid-900.otf",   "Font Awesome 6 Free Solid"),
+    }
+
+    def _embed_fonts(self, font_names: set[str], pages_json: dict[str, Any] | None = None,
+                     max_bytes: int = 150_000) -> str:
+        """Return CSS @font-face declarations for the given font names.
+
+        Small fonts (≤ max_bytes) are embedded whole.  Larger fonts are subsetted
+        via fontTools to only the codepoints actually used in pages_json, then
+        embedded.  Fonts that cannot be found or subsetted are silently skipped.
+        """
+        seen: set[str] = set()
+        decls: list[str] = []
+
+        for name in sorted(font_names):
+            info = self._FONT_ALIAS.get(name)
+            if not info:
+                lower = name.lower()
+                for k, v in self._FONT_ALIAS.items():
+                    if k.lower() == lower or v[0].lower() == lower:
+                        info = v
+                        break
+            if not info:
+                continue
+            filename, family = info
+            if filename in seen:
+                continue
+            seen.add(filename)
+
+            font_path: Path | None = None
+            for d in FONT_DIRS:
+                candidate = d / filename
+                if candidate.exists():
+                    font_path = candidate
+                    break
+            if not font_path:
                 continue
 
-            # Load page to find page-type buttons for click overlays
-            try:
-                page = self._preview._load_page(page_name)
-                groups = self._group_buttons(page["buttons"])
-                enc = groups.get("enc", {})
-            except Exception:
-                groups = {"grid": {}, "enc": {}}
-                enc = {}
+            font_bytes: bytes | None = None
+            file_size = font_path.stat().st_size
 
-            active_cls = " active" if page_name == home_page else ""
+            if file_size <= max_bytes:
+                # Small enough to embed whole
+                font_bytes = font_path.read_bytes()
+            elif pages_json is not None:
+                # Large font — subset to only the codepoints used with this font name
+                codepoints = self._collect_codepoints_for_font(pages_json, name)
+                if not codepoints:
+                    # Also check canonical filename as key
+                    codepoints = self._collect_codepoints_for_font(pages_json, filename)
+                if codepoints:
+                    font_bytes = self._subset_font(font_path, codepoints)
 
-            # Encoder columns (Loupedeck only)
-            if self.layout.has_encoders:
-                enc_left = self._encoder_column_svg([enc.get(i) for i in range(3)], 0, lcd_y, enc_col_w, lcd_h)
-                enc_right = self._encoder_column_svg([enc.get(i + 3) for i in range(3)], right_enc_x, lcd_y, enc_col_w, lcd_h)
-            else:
-                enc_left = enc_right = ""
+            if not font_bytes:
+                continue
 
-            # Build click overlays for page-type buttons (transparent rects)
-            overlays: list[str] = []
-            for idx, btn in groups["grid"].items():
-                if btn.get("type") == "page":
-                    target = str(btn.get("page", "")).strip()
-                    if target:
-                        row, col = divmod(idx, cols)
-                        bx = lcd_x + main_x + col * (key_w + gap)
-                        by = lcd_y + row * (key_h + gap)
-                        raw_name = btn.get("name")
-                        name = "" if (raw_name is None or isinstance(raw_name, bool)) else str(raw_name)
-                        title = f'<title>{self._xml_escape(name)} → {self._xml_escape(target)}</title>' if name else f'<title>→ {self._xml_escape(target)}</title>'
-                        overlays.append(
-                            f'<rect x="{bx}" y="{by}" width="{key_w}" height="{key_h}" '
-                            f'fill="transparent" class="dk-btn" onclick="showPage(\'{target}\')" cursor="pointer">'
-                            f'{title}</rect>'
-                        )
-
-            page_groups.append(
-                f'<g id="pg-{page_name}" class="pg{active_cls}">'
-                f'{enc_left}'
-                f'<image x="{lcd_x}" y="{lcd_y}" width="{img_w}" height="{img_h}" href="{b64_src}"/>'
-                f'{"".join(overlays)}'
-                f'{enc_right}'
-                f'</g>'
+            ext = font_path.suffix.lower().lstrip(".")
+            mime = "font/otf" if ext == "otf" else "font/ttf"
+            fmt  = "opentype" if ext == "otf" else "truetype"
+            b64  = base64.b64encode(font_bytes).decode()
+            decls.append(
+                f'@font-face{{font-family:"{family}";'
+                f'src:url(data:{mime};base64,{b64}) format("{fmt}");}}'
             )
 
-        pager_svg = self._pager_strip_svg(pager_buttons, hw_w, hw_body_h, pager_h, home_page) if self.layout.has_encoders else ""
+        return "\n".join(decls)
 
-        svg_lines: list[str] = [
-            f'<svg xmlns="http://www.w3.org/2000/svg" id="deck" width="{hw_w}" height="{hw_total_h}" viewBox="0 0 {hw_w} {hw_total_h}">',
-            "<defs><style>"
-            ".pg{display:none}.pg.active{display:block}"
-            ".dk-btn:hover{filter:brightness(1.3)}"
-            ".pb{cursor:pointer}.pb:hover .pb-bg{filter:brightness(1.3)}"
-            ".pb.active .pb-ring{display:block}.pb .pb-ring{display:none}"
-            "</style></defs>",
-            f'<rect x="0" y="0" width="{hw_w}" height="{hw_total_h}" fill="#1e1e1e" rx="12"/>',
-            f'<rect x="0" y="0" width="{hw_w}" height="{hw_body_h}" fill="#252525" rx="12"/>',
-            f'<rect x="{lcd_x - 3}" y="{lcd_y - 3}" width="{lcd_w + 6}" height="{lcd_h + 6}" fill="#000" rx="6"/>',
-        ]
-        svg_lines.extend(page_groups)
-        svg_lines.append(pager_svg)
-        svg_lines.append("</svg>")
+    # ------------------------------------------------------------------
+    # Interactive deck HTML  (Canvas 2D via deck-render.js)
+    # ------------------------------------------------------------------
 
-        js = """function showPage(name) {
-  document.querySelectorAll('#deck .pg').forEach(function(g) { g.classList.remove('active'); });
-  document.querySelectorAll('#deck .pb').forEach(function(b) { b.classList.remove('active'); });
-  var pg = document.getElementById('pg-' + name);
-  if (pg) pg.classList.add('active');
-  var pb = document.getElementById('pb-' + name);
-  if (pb) pb.classList.add('active');
-}"""
+    def render_interactive_deck(self, page_names: list[str], home_page: str) -> str:
+        """Render a self-contained interactive HTML deck preview.
+
+        Uses the Canvas 2D deck-render.js renderer.  All pages are serialised to
+        a DECK_CONFIG JSON object; deck-render.js draws them client-side without
+        any server or PIL dependency.  Fonts used in the layout are embedded as
+        base64 @font-face declarations (up to 150 KB per font file).
+        """
+        # Build DECK_CONFIG
+        config = self.yaml_to_json(page_names)
+        config_json = json.dumps(config, ensure_ascii=False, separators=(",", ":"))
+
+        # Load deck-render.js from the same directory as this script
+        render_js_path = Path(__file__).parent / "deck-render.js"
+        render_js = (
+            render_js_path.read_text(encoding="utf-8")
+            if render_js_path.exists()
+            else "/* deck-render.js not found */"
+        )
+
+        # Collect and embed fonts
+        font_names = self._collect_font_names(config["pages"])
+        # Always include the most common deck fonts
+        font_names.update({"Segment7Standard.otf", "D-DIN-Bold.otf", "D-DINCondensed.otf"})
+        font_css = self._embed_fonts(font_names, pages_json=config["pages"])
+
+        # Compute canvas pixel dimensions (mirrors _computeLayout in deck-render.js)
+        lay = self.layout
+        kw, kh = lay.key_size
+        cols, rows = lay.grid_repeat
+        gap = 8
+        outer = 14
+        enc_col_w, enc_gap, pad_v = 54, 6, 10
+        pager_h = 42 if lay.has_encoders else 0
+        grid_w = kw * cols + gap * max(cols - 1, 0)
+        grid_h = kh * rows + gap * max(rows - 1, 0)
+        screen_w = screen_h = 0
+        if lay.screen_size:
+            screen_w, screen_h = lay.screen_size
+        lcd_w = (screen_w + outer + grid_w + outer + screen_w) if lay.screen_size else grid_w
+        lcd_h = max(grid_h, screen_h) if lay.screen_size else grid_h
+        hw_w = (enc_col_w + enc_gap + lcd_w + enc_gap + enc_col_w) if lay.has_encoders else (pad_v + lcd_w + pad_v)
+        hw_h = pad_v + lcd_h + pad_v + pager_h
+
+        init_js = (
+            "document.fonts.ready.then(function(){"
+            "var c=document.getElementById('deck');"
+            f"var r=new DeckRenderer(c,DECK_CONFIG);"
+            f"r.showPage({json.dumps(home_page)});"
+            "});"
+        )
 
         return (
             '<!DOCTYPE html>\n<html lang="en"><head>\n'
             '<meta charset="utf-8">\n'
             '<meta name="viewport" content="width=device-width,initial-scale=1">\n'
-            '<style>html,body{margin:0;padding:0;background:transparent;overflow:hidden}'
-            'svg{display:block;max-width:100%}</style>\n'
-            '</head>\n<body>\n'
-            + "\n".join(svg_lines)
-            + f"\n<script>\n{js}\n</script>\n</body></html>"
+            "<style>\n"
+            + font_css
+            + "\nhtml,body{margin:0;padding:0;background:transparent;overflow:hidden}\n"
+            "canvas{display:block;max-width:100%}\n"
+            "</style>\n"
+            "</head>\n<body>\n"
+            f'<canvas id="deck" width="{hw_w}" height="{hw_h}"></canvas>\n'
+            f"<script>\n{render_js}\n</script>\n"
+            f"<script>\nconst DECK_CONFIG={config_json};\n{init_js}\n</script>\n"
+            "</body></html>"
         )
 
 def parse_args() -> argparse.Namespace:
