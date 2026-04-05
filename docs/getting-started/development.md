@@ -16,9 +16,7 @@ cockpitdecks-configs/
 │               ├── index.yaml  # Home page
 │               ├── engine.yaml # Functional pages
 │               └── encoders/   # Encoder sub-pages
-├── modules/                    # Reusable page configs (radio, engine, etc.)
-├── decktypes/                  # Deck type YAML definitions
-├── scripts/                    # Doc generation scripts
+├── scripts/                    # Repo support scripts
 └── mkdocs.yml
 ```
 
@@ -59,7 +57,7 @@ default-home-page-name: index
 ### Page files
 
 Each `.yaml` file in the layout folder defines a page of buttons. Pages can
-include shared modules and encoder sub-pages:
+include shared fragments and encoder sub-pages:
 
 ```yaml
 name: switches
@@ -95,25 +93,6 @@ Buttons use `formula` with `${dataref}` syntax to read live state from X-Plane.
 Tip:
 Start by copying an existing aircraft config with a similar cockpit.
 The Cessna 172 SP is a good starting point for GA aircraft.
-
-## Using modules
-
-Modules are reusable button sets shared across aircraft. They live in the
-`modules/` directory, organised by deck type:
-
-```text
-modules/
-├── loupedecklive/    # Loupedeck Live modules
-└── streamdeckxl/     # Stream Deck XL modules
-```
-
-Include a module in a page with the `includes` directive:
-
-```yaml
-includes: pager, encoders/encoders_fcu
-```
-
-See [Modules](../modules/modules.md) for the full list.
 
 ## Aircraft documentation
 

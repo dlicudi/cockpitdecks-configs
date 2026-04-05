@@ -40,10 +40,8 @@ Example:
         formula: "1"
 ```
 
-Use live aircraft or module YAML as the source of truth when copying patterns:
+Use live aircraft YAML as the source of truth when copying patterns:
 
-- `modules/loupedecklive/audiopanel.yaml`
-- `modules/streamdeckxl/transponder.yaml`
 - aircraft-specific `includes/annunciators.yaml` files
 
 ## Side Displays

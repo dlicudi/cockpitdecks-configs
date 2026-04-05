@@ -7,7 +7,7 @@
 | X-Plane | 12 | [x-plane.com](https://www.x-plane.com) |
 | Python | 3.10+ | [python.org](https://www.python.org) |
 | XPPython3 | Latest | [Documentation](https://xppython3.readthedocs.io/en/latest/index.html) |
-| Deck hardware | Loupedeck Live, Stream Deck XL, or other supported deck | [Deck Types](../reference/deck-types.md) |
+| Deck hardware | Loupedeck Live, Stream Deck XL, or another supported deck | Check the aircraft README and Cockpitdecks runtime support |
 
 ## 1. Install XPPython3
 
