@@ -12,9 +12,8 @@ edit_uri: blob/main/docs/
 
 nav:
   - Home: index.md
-  - Getting Started:
-      - Installation: getting-started/installation.md
-      - Development: getting-started/development.md
+  - Installation: getting-started/installation.md
+  - Development: getting-started/development.md
   - Architecture: architecture/index.md
   - Aircraft: aircraft/index.md
   - Reference: reference/index.md
