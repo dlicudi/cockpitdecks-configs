@@ -43,10 +43,10 @@ buttons:
   - index: 3
     type: page
     vibrate: SHORT
-    page: switches_lights
-    label: LIGHTS
+    page: weather
+    label: WEATHER
     label-color: Gold
-    text: 
+    text: "\uf0c2"
     text-color: khaki
     text-size: 40
     text-font: fontawesome.otf
@@ -100,6 +100,18 @@ buttons:
     text-font: fontawesome.otf
     text-position: cm
 
+  - index: 8
+    type: page
+    vibrate: SHORT
+    page: views
+    label: VIEWS
+    label-color: Gold
+    text: "\uf030"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+
   - index: 9
     type: page
     vibrate: SHORT
@@ -127,11 +139,11 @@ buttons:
   - index: 11
     type: page
     vibrate: SHORT
-    page: index2
-    label: MORE
+    page: fms_load
+    label: LOAD FPL
     label-color: Gold
-    text: ">>"
+    text: "\uf15b"
     text-color: khaki
-    text-size: 30
-    text-font: D-DINCondensed.otf
+    text-size: 40
+    text-font: fontawesome.otf
     text-position: cm
