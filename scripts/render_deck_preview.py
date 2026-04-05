@@ -591,6 +591,389 @@ class PreviewRenderer:
         draw.multiline_text((x, y), text, font=font, fill=fill, anchor=anchor, align="center", spacing=1)
 
 
+class SVGRenderer:
+    """Render deck page layouts as interactive SVG.
+
+    Each button becomes an SVG group with a <title> tooltip (name, type, command)
+    and an <a href> link to the YAML source on GitHub.  A small embedded stylesheet
+    adds a brightness-boost on hover so users can tell buttons are clickable.
+    """
+
+    _NAMED_COLORS: dict[str, str] = {
+        "black": "#000000", "white": "#ffffff", "red": "#ff0000", "lime": "#00ff00",
+        "green": "#008000", "blue": "#0000ff", "yellow": "#ffff00", "orange": "#ffa500",
+        "gold": "#ffd700", "gray": "#808080", "grey": "#808080", "cyan": "#00ffff",
+        "magenta": "#ff00ff", "purple": "#800080", "khaki": "#f0e68c",
+        "cornflowerblue": "#6495ed", "navy": "#000080", "teal": "#008080",
+        "silver": "#c0c0c0", "maroon": "#800000", "olive": "#808000",
+        "aqua": "#00ffff", "fuchsia": "#ff00ff",
+    }
+
+    def __init__(
+        self,
+        layout_dir: Path,
+        decktype_path: Path,
+        fixture_path: Path | None,
+        repo_blob_url_fn: Any = None,
+    ):
+        self.layout_dir = layout_dir
+        self.decktype_path = decktype_path
+        self.fixture = self._load_yaml(fixture_path) if fixture_path else {}
+        self.evaluator = FormulaEvaluator(self.fixture.get("datarefs", {}))
+        self.layout_defaults = self._load_yaml(layout_dir / "config.yaml")
+        self.deck_defaults = self._load_yaml(layout_dir.parent / "config.yaml")
+        self.resources_defaults = self._load_yaml(COCKPITDECKS_RESOURCES_CONFIG)
+        self.layout = self._load_layout()
+        self.repo_blob_url_fn = repo_blob_url_fn  # callable(path) -> url str | None
+
+    # ------------------------------------------------------------------
+    # Layout loading (mirrors PreviewRenderer)
+    # ------------------------------------------------------------------
+
+    def _load_layout(self) -> Layout:
+        decktype = self._load_yaml(self.decktype_path)
+        key_button = next(b for b in decktype["buttons"] if b.get("name") == 0 and b.get("feedback") == "image")
+        repeat = tuple(key_button.get("repeat", (1, 1)))
+        screen_button = next((b for b in decktype["buttons"] if b.get("name") == "left" and b.get("feedback") == "image"), None)
+        screen_size = tuple(screen_button["dimension"]) if screen_button else None
+        return Layout(key_size=tuple(key_button["dimension"]), grid_repeat=repeat, screen_size=screen_size)
+
+    def _load_page(self, page_name: str) -> dict[str, Any]:
+        page_path = self.layout_dir / f"{page_name}.yaml"
+        page = self._load_yaml(page_path)
+        buttons: list[dict[str, Any]] = []
+        includes = [p.strip() for p in str(page.get("includes", "")).split(",") if p.strip()]
+        for include in includes:
+            include_yaml = self._load_yaml(self.layout_dir / f"{include}.yaml")
+            buttons.extend(include_yaml.get("buttons", []))
+        buttons.extend(page.get("buttons", []))
+        page["buttons"] = buttons
+        return page
+
+    @staticmethod
+    def _load_yaml(path: Path | None) -> dict[str, Any]:
+        if path is None or not path.exists():
+            return {}
+        with path.open("r", encoding="utf-8") as fh:
+            data = yaml.safe_load(fh) or {}
+        return data if isinstance(data, dict) else {}
+
+    # ------------------------------------------------------------------
+    # Color helpers
+    # ------------------------------------------------------------------
+
+    def _color_hex(self, value: Any) -> str:
+        if isinstance(value, (tuple, list)):
+            r, g, b = (int(v) for v in list(value)[:3])
+            return f"#{r:02x}{g:02x}{b:02x}"
+        if value is None:
+            return "#ffffff"
+        text = str(value).strip()
+        if text.startswith("(") and text.endswith(")"):
+            parts = [int(p.strip()) for p in text[1:-1].split(",")]
+            r, g, b = parts[:3]
+            return f"#{r:02x}{g:02x}{b:02x}"
+        # Try PIL first, then our named-color table
+        try:
+            r, g, b = ImageColor.getrgb(text)[:3]
+            return f"#{r:02x}{g:02x}{b:02x}"
+        except (ValueError, AttributeError):
+            return self._NAMED_COLORS.get(text.lower(), "#ffffff")
+
+    def _dim_hex(self, color_hex: str, divisor: int) -> str:
+        factor = max(divisor, 1)
+        h = color_hex.lstrip("#")
+        r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+        return f"#{max(18, int(r / factor * 2)):02x}{max(18, int(g / factor * 2)):02x}{max(18, int(b / factor * 2)):02x}"
+
+    def _page_bg_hex(self, page: dict[str, Any]) -> str:
+        for key in ("cockpit-color", "default-cockpit-color"):
+            for source in (page, self.layout_defaults, self.deck_defaults, self.resources_defaults):
+                val = source.get(key) if isinstance(source, dict) else None
+                if val is not None:
+                    return self._color_hex(val)
+        return self._color_hex(DEFAULT_COCKPIT_COLOR)
+
+    # ------------------------------------------------------------------
+    # Font helpers (map deck fonts to SVG font-family / weight)
+    # ------------------------------------------------------------------
+
+    @staticmethod
+    def _font_family(font_name: str | None) -> str:
+        if not font_name:
+            return "system-ui, sans-serif"
+        n = font_name.lower()
+        if "segment" in n or "seven" in n:
+            return "'Courier New', 'Lucida Console', monospace"
+        return "system-ui, sans-serif"
+
+    @staticmethod
+    def _font_weight(font_name: str | None) -> str:
+        if font_name and "bold" in font_name.lower():
+            return "bold"
+        return "normal"
+
+    # ------------------------------------------------------------------
+    # Button helpers
+    # ------------------------------------------------------------------
+
+    @staticmethod
+    def _xml_escape(text: str) -> str:
+        return str(text).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+
+    def _tooltip(self, button: dict[str, Any]) -> str:
+        parts = []
+        raw_name = button.get("name")
+        # YAML 1.1 parses ON/OFF/YES/NO as booleans; skip boolean names as they lose their meaning
+        if raw_name is not None and not isinstance(raw_name, bool):
+            name = str(raw_name).strip()
+            if name:
+                parts.append(name)
+        btype = str(button.get("type") or "").strip()
+        if btype and btype != "none":
+            parts.append(f"type: {btype}")
+        cmd = str(button.get("command") or "").strip()
+        if cmd:
+            parts.append(f"cmd: {cmd}")
+        page = str(button.get("page") or "").strip()
+        if page:
+            parts.append(f"→ {page}")
+        return " | ".join(parts)
+
+    def _formula_context(self, config: dict[str, Any]) -> dict[str, Any]:
+        formula = config.get("formula")
+        return {"formula": self.evaluator.eval(formula)} if formula is not None else {}
+
+    def _button_text_value(self, button: dict[str, Any], context: dict[str, Any]) -> Any:
+        multi = button.get("multi-texts")
+        if multi:
+            idx = int(self.evaluator._as_number(context.get("formula", 0)))
+            entry = multi[idx] if 0 <= idx < len(multi) else multi[0]
+            return entry.get("text", "")
+        return button.get("text", "")
+
+    def _part_text(self, part: dict[str, Any]) -> str:
+        ctx = self._formula_context(part)
+        return self.evaluator.render_template(part.get("text", ""), part.get("text-format"), ctx)
+
+    def _off_intensity(self, button: dict[str, Any], annunciator: dict[str, Any], page: dict[str, Any]) -> int:
+        for src, key in [(annunciator, "light-off-intensity"), (button, "light-off-intensity")]:
+            if key in src:
+                return src[key]
+        for source in (page, self.layout_defaults, self.deck_defaults, self.resources_defaults):
+            if isinstance(source, dict) and "default-light-off-intensity" in source:
+                return source["default-light-off-intensity"]
+        return 10
+
+    @staticmethod
+    def _group_buttons(buttons: list[dict[str, Any]]) -> dict[str, Any]:
+        grid: dict[int, dict[str, Any]] = {}
+        side: dict[str, dict[str, Any]] = {}
+        for btn in buttons:
+            idx = btn.get("index")
+            if isinstance(idx, int):
+                grid[idx] = btn
+            elif idx in {"left", "right"}:
+                side[idx] = btn
+        return {"grid": grid, **side}
+
+    # ------------------------------------------------------------------
+    # SVG rendering
+    # ------------------------------------------------------------------
+
+    def render_page(self, page_name: str, output_path: Path | None = None) -> str:
+        page = self._load_page(page_name)
+        page_path = self.layout_dir / f"{page_name}.yaml"
+        svg = self._render_svg(page, page_path)
+        if output_path is not None:
+            existing = output_path.read_text(encoding="utf-8") if output_path.exists() else None
+            if existing != svg:
+                output_path.parent.mkdir(parents=True, exist_ok=True)
+                output_path.write_text(svg, encoding="utf-8")
+        return svg
+
+    def _render_svg(self, page: dict[str, Any], page_path: Path) -> str:
+        key_w, key_h = self.layout.key_size
+        cols, rows = self.layout.grid_repeat
+        gap = 14
+        outer_gap = 18
+        grid_w = key_w * cols + gap * max(cols - 1, 0)
+        grid_h = key_h * rows + gap * max(rows - 1, 0)
+        screen_w = screen_h = 0
+        if self.layout.screen_size:
+            screen_w, screen_h = self.layout.screen_size
+        main_x = screen_w + outer_gap if self.layout.screen_size else 0
+        right_x = main_x + grid_w + outer_gap if self.layout.screen_size else grid_w
+        canvas_w = right_x + screen_w if self.layout.screen_size else grid_w
+        canvas_h = max(grid_h, screen_h) if self.layout.screen_size else grid_h
+        bg = self._page_bg_hex(page)
+        groups = self._group_buttons(page["buttons"])
+
+        out: list[str] = []
+        out.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{canvas_w}" height="{canvas_h}" viewBox="0 0 {canvas_w} {canvas_h}">')
+        out.append(
+            "<defs><style>"
+            ".dk-btn{cursor:pointer;}"
+            ".dk-btn:hover .dk-bg{filter:brightness(1.4);}"
+            "</style></defs>"
+        )
+        out.append(f'<rect width="{canvas_w}" height="{canvas_h}" fill="{bg}"/>')
+
+        if self.layout.screen_size:
+            sw, sh = self.layout.screen_size
+            sy = max(0, (canvas_h - sh) // 2)
+            out.append(self._side_screen_svg(groups.get("left"), page, 0, sy, sw, sh, page_path))
+            out.append(self._side_screen_svg(groups.get("right"), page, right_x, sy, sw, sh, page_path))
+
+        for i in range(cols * rows):
+            row, col = divmod(i, cols)
+            x = main_x + col * (key_w + gap)
+            y = row * (key_h + gap)
+            btn = groups["grid"].get(i)
+            if btn:
+                out.append(self._button_svg(btn, page, x, y, key_w, key_h, page_path))
+            else:
+                out.append(self._empty_button_svg(page, x, y, key_w, key_h))
+
+        out.append("</svg>")
+        return "\n".join(out)
+
+    def _button_svg(self, button: dict[str, Any], page: dict[str, Any], x: int, y: int, w: int, h: int, page_path: Path) -> str:
+        bg = self._color_hex(button.get("text-bg-color", button.get("text_bg_color", "Black")))
+        tooltip = self._tooltip(button)
+        link = self.repo_blob_url_fn(page_path) if self.repo_blob_url_fn else None
+        is_active_page = button.get("type") == "page" and button.get("page") == page.get("name")
+
+        annunciator = button.get("annunciator")
+        if annunciator:
+            body = self._annunciator_svg(annunciator, button, page, x, y, w, h)
+        else:
+            ctx = self._formula_context(button)
+            text_val = self._button_text_value(button, ctx)
+            rendered = self.evaluator.render_template(text_val, button.get("text-format"), ctx)
+            tsize = int(button.get("text-size", self.layout_defaults.get("default-text-size", 24)))
+            tcolor = self._color_hex(button.get("text-color", "white"))
+            ff = self._font_family(button.get("text-font"))
+            fw = self._font_weight(button.get("text-font"))
+            cx, cy = x + w // 2, y + h // 2 + 8
+            body = (
+                f'<text x="{cx}" y="{cy}" text-anchor="middle" dominant-baseline="middle" '
+                f'font-size="{min(tsize, h - 28)}" font-family="{ff}" font-weight="{fw}" fill="{tcolor}">'
+                f'{self._xml_escape(rendered)}</text>'
+            )
+
+        label = button.get("label")
+        label_svg = ""
+        if label:
+            lc = self._color_hex(button.get("label-color", self.layout_defaults.get("default-label-color", "white")))
+            ls = int(button.get("label-size", self.layout_defaults.get("default-label-size", 13)))
+            label_svg = (
+                f'<text x="{x + w // 2}" y="{y + 16}" text-anchor="middle" dominant-baseline="middle" '
+                f'font-size="{ls}" font-family="system-ui, sans-serif" fill="{lc}">'
+                f'{self._xml_escape(str(label))}</text>'
+            )
+
+        active_ring = f'<rect x="{x+2}" y="{y+2}" width="{w-4}" height="{h-4}" fill="none" stroke="#ffbc40" stroke-width="3"/>' if is_active_page else ""
+        title_tag = f"<title>{self._xml_escape(tooltip)}</title>" if tooltip else ""
+        wo = f'<a href="{link}" target="_blank">' if link else ""
+        wc = "</a>" if link else ""
+
+        return (
+            f'{wo}<g class="dk-btn">'
+            f'{title_tag}'
+            f'<rect class="dk-bg" x="{x}" y="{y}" width="{w}" height="{h}" fill="{bg}" stroke="#767b80" stroke-width="2"/>'
+            f'<rect x="{x+6}" y="{y+6}" width="{w-12}" height="{h-12}" fill="none" stroke="#303438"/>'
+            f'{body}{label_svg}{active_ring}'
+            f'</g>{wc}'
+        )
+
+    def _empty_button_svg(self, page: dict[str, Any], x: int, y: int, w: int, h: int) -> str:
+        bg = self._page_bg_hex(page)
+        return (
+            f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{bg}" stroke="#5a5f64" stroke-width="2"/>'
+            f'<rect x="{x+6}" y="{y+6}" width="{w-12}" height="{h-12}" fill="none" stroke="#24282c"/>'
+        )
+
+    def _annunciator_svg(self, annunciator: dict[str, Any], button: dict[str, Any], page: dict[str, Any], x: int, y: int, w: int, h: int) -> str:
+        model = annunciator.get("model", "A")
+        x0, y0, x1, y1 = x + 8, y + 22, x + w - 8, y + h - 8
+        if model == "A":
+            rects = [("A0", (x0, y0, x1, y1))]
+        elif model == "B":
+            mid = y0 + (y1 - y0) // 2
+            rects = [("B0", (x0, y0, x1, mid - 3)), ("B1", (x0, mid + 3, x1, y1))]
+        elif model == "D":
+            split = y0 + int((y1 - y0) * 0.58)
+            mx = x0 + (x1 - x0) // 2
+            rects = [("D0", (x0, y0, x1, split - 3)), ("D1", (x0, split + 3, mx - 3, y1)), ("D2", (mx + 3, split + 3, x1, y1))]
+        elif model == "F":
+            mx, my = x0 + (x1 - x0) // 2, y0 + (y1 - y0) // 2
+            rects = [("F0", (x0, y0, mx - 3, my - 3)), ("F1", (mx + 3, y0, x1, my - 3)), ("F2", (x0, my + 3, mx - 3, y1)), ("F3", (mx + 3, my + 3, x1, y1))]
+        else:
+            rects = [("A0", (x0, y0, x1, y1))]
+
+        parts_dict = annunciator.get("parts") or {k: v for k, v in annunciator.items() if isinstance(v, dict) and re.fullmatch(r"[A-Z]\d+", str(k))}
+        off_i = self._off_intensity(button, annunciator, page)
+        out: list[str] = []
+
+        for pname, (px0, py0, px1, py1) in rects:
+            part = parts_dict.get(pname)
+            if not part:
+                continue
+            pw, ph = px1 - px0, py1 - py0
+            active = bool(self.evaluator.eval(part.get("formula", "1")))
+            chex = self._color_hex(part.get("color", part.get("text-color", "white")))
+            out.append(f'<rect x="{px0}" y="{py0}" width="{pw}" height="{ph}" fill="#101214"/>')
+
+            led = str(part.get("led", "")).lower()
+            if led in {"bar", "bars"}:
+                lc = chex if active else self._dim_hex(chex, off_i)
+                out.append(f'<rect x="{px0+8}" y="{py0+6}" width="{pw-16}" height="8" fill="{lc}"/>')
+            elif led == "dot":
+                lc = chex if active else self._dim_hex(chex, off_i)
+                cx, cy, r = (px0 + px1) // 2, (py0 + py1) // 2, max(8, min(pw, ph) // 5)
+                out.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="{lc}"/>')
+
+            text = self._part_text(part)
+            if text:
+                tsize = int(part.get("text-size", 28))
+                ff = self._font_family(part.get("text-font"))
+                fw = self._font_weight(part.get("text-font"))
+                if active:
+                    tc = self._color_hex(part.get("text-color", part.get("color", "white")))
+                elif part.get("off-color"):
+                    tc = self._color_hex(part["off-color"])
+                else:
+                    tc = self._dim_hex(self._color_hex(part.get("text-color", part.get("color", "white"))), off_i)
+                cx, cy = (px0 + px1) // 2, (py0 + py1) // 2
+                out.append(
+                    f'<text x="{cx}" y="{cy}" text-anchor="middle" dominant-baseline="middle" '
+                    f'font-size="{min(tsize, ph - 4)}" font-family="{ff}" font-weight="{fw}" fill="{tc}">'
+                    f'{self._xml_escape(text)}</text>'
+                )
+        return "".join(out)
+
+    def _side_screen_svg(self, button: dict[str, Any] | None, page: dict[str, Any], x: int, y: int, w: int, h: int, page_path: Path) -> str:
+        bg = self._page_bg_hex(page)
+        out: list[str] = [f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{bg}" stroke="#6e7479" stroke-width="2"/>']
+        if not button or "side" not in button:
+            return "".join(out)
+        labels = button["side"].get("labels", [])
+        centers = button["side"].get("centers", [16, 50, 84])
+        for idx, lbl in enumerate(labels):
+            center = centers[idx] if idx < len(centers) else 16 + idx * 34
+            ly = y + (round(h * center / 100.0) if isinstance(center, (int, float)) and center <= 100 else int(center))
+            ctx = self._formula_context(lbl)
+            rendered = self.evaluator.render_template(lbl.get("text", ""), lbl.get("text-format"), ctx)
+            lsize, vsize = int(lbl.get("label-size", 14)), int(lbl.get("text-size", 18))
+            lc = self._color_hex(lbl.get("label-color", "gold"))
+            vc = self._color_hex(lbl.get("text-color", "white"))
+            cx = x + w // 2
+            out.append(f'<text x="{cx}" y="{ly - 16}" text-anchor="middle" font-size="{lsize}" font-family="system-ui,sans-serif" fill="{lc}">{self._xml_escape(str(lbl.get("label", "")))}</text>')
+            out.append(f'<text x="{cx}" y="{ly + 8}" text-anchor="middle" font-size="{vsize}" font-family="system-ui,sans-serif" fill="{vc}">{self._xml_escape(rendered)}</text>')
+        return "".join(out)
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--layout-dir", type=Path, required=True, help="Path to the deck layout directory, e.g. decks/cirrus-sr22/deckconfig/loupedecklive1")
@@ -598,14 +981,21 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--fixture", type=Path, help="Fixture YAML with sample datarefs")
     parser.add_argument("--page", action="append", required=True, help="Page name to render, repeat for multiple pages")
     parser.add_argument("--output-dir", type=Path, required=True, help="Directory where rendered PNGs will be written")
+    parser.add_argument("--format", choices=["png", "svg", "both"], default="png", help="Output format (default: png)")
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
-    renderer = PreviewRenderer(args.layout_dir, args.decktype, args.fixture)
-    for page in args.page:
-        renderer.render_page(page, args.output_dir / f"{page}.png")
+    fmt = args.format
+    if fmt in ("png", "both"):
+        renderer = PreviewRenderer(args.layout_dir, args.decktype, args.fixture)
+        for page in args.page:
+            renderer.render_page(page, args.output_dir / f"{page}.png")
+    if fmt in ("svg", "both"):
+        svg_renderer = SVGRenderer(args.layout_dir, args.decktype, args.fixture)
+        for page in args.page:
+            svg_renderer.render_page(page, args.output_dir / f"{page}.svg")
     return 0
 
 

@@ -10,8 +10,16 @@ import os
 import tempfile
 
 import re
+import sys
 
 import yaml
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+try:
+    from render_deck_preview import SVGRenderer
+    _SVG_RENDERER_AVAILABLE = True
+except ImportError:
+    _SVG_RENDERER_AVAILABLE = False
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -428,6 +436,40 @@ def render_layout_page_images(slug: str, layout: dict[str, Any]) -> dict[Path, P
 
 
 
+def render_layout_page_svgs(slug: str, layout: dict[str, Any]) -> dict[Path, Path]:
+    """Render interactive SVG previews for each page in a layout.
+
+    Returns {page_path: svg_path} for every page that was successfully rendered.
+    Falls back gracefully if SVGRenderer is not available or the decktype is unsupported.
+    """
+    if not _SVG_RENDERER_AVAILABLE:
+        return {}
+    decktype_path = layout.get("decktype_path")
+    if decktype_path is None or not has_supported_preview_geometry(decktype_path):
+        return {}
+
+    output_dir = IMAGE_ROOT / slug / "generated" / layout["layout"]
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    fixture = resolve_repo_path(layout["docs"].get("fixture"), base_dir=layout["dir"])
+    renderer = SVGRenderer(
+        layout_dir=layout["dir"],
+        decktype_path=decktype_path,
+        fixture_path=fixture,
+        repo_blob_url_fn=repo_blob_url,
+    )
+
+    result: dict[Path, Path] = {}
+    for page_path in layout["pages"]:
+        target = output_dir / f"{page_path.stem}.page.svg"
+        try:
+            renderer.render_page(page_path.stem, target)
+            result[page_path] = target
+        except Exception:
+            pass
+    return result
+
+
 STATUS_LABEL = {
     "stable": "Stable",
     "active": "Active Development",
@@ -493,7 +535,7 @@ def build_pack_meta_section(pack_meta: dict[str, Any]) -> list[str]:
     return lines
 
 
-def build_overview(slug: str, config: dict[str, Any], doc_path: Path, page_images: dict[str, dict[Path, Path]]) -> str:
+def build_overview(slug: str, config: dict[str, Any], doc_path: Path, page_images: dict[str, dict[Path, Path]], page_svgs: dict[str, dict[Path, Path]] | None = None) -> str:
     deckconfig_dir = DECKS_DIR / slug / "deckconfig"
     title = aircraft_title(slug, config)
     pack_meta = load_pack_metadata(slug)
@@ -575,14 +617,25 @@ def build_overview(slug: str, config: dict[str, Any], doc_path: Path, page_image
                 lines.append("")
 
             images = page_images.get(layout["layout"], {})
+            svgs = (page_svgs or {}).get(layout["layout"], {})
             if layout["pages"]:
                 lines.append('<div class="page-gallery">')
                 for page_path in layout["pages"]:
                     name = page_title(page_path)
                     image_path = images.get(page_path)
+                    svg_path = svgs.get(page_path)
                     config_url = repo_blob_url(page_path)
                     lines.append('<div class="page-card">')
-                    if image_path:
+                    if svg_path:
+                        svg_ref = rel_path(svg_path, doc_path)
+                        # <object> renders the SVG interactively (hover tooltips, clickable links).
+                        # The inner <img> is a fallback for browsers that don't support SVG objects.
+                        lines.append(f'<object type="image/svg+xml" data="{svg_ref}" title="{name}">')
+                        if image_path:
+                            image_ref = rel_path(image_path, doc_path)
+                            lines.append(f'<img src="{image_ref}" alt="{name} preview" loading="lazy">')
+                        lines.append('</object>')
+                    elif image_path:
                         image_ref = rel_path(image_path, doc_path)
                         lines.append(f'<a href="{image_ref}" data-glightbox data-title="{name}">')
                         lines.append(f'<img src="{image_ref}" alt="{name} preview" loading="lazy">')
@@ -643,15 +696,18 @@ def update_mkdocs_nav(aircraft_records: list[dict[str, Any]]) -> None:
     write_text_if_changed(MKDOCS_CONFIG, new_text)
 
 
-def render_all_images(slug: str, config: dict[str, Any], deckconfig_dir: Path) -> dict[str, dict[Path, Path]]:
-    """Render preview images for all layouts; returns {layout_name: {page_path: image_path}}."""
+def render_all_images(slug: str, config: dict[str, Any], deckconfig_dir: Path) -> tuple[dict[str, dict[Path, Path]], dict[str, dict[Path, Path]]]:
+    """Render preview images and SVGs for all layouts.
+
+    Returns (png_map, svg_map) where each map is {layout_name: {page_path: file_path}}.
+    """
     all_images: dict[str, dict[Path, Path]] = {}
+    all_svgs: dict[str, dict[Path, Path]] = {}
     for layout in layout_entries(config, deckconfig_dir):
         if not layout["pages"]:
             continue
         images = render_layout_page_images(slug, layout)
         if not images:
-            # Fall back to pre-existing images
             for page_path in layout["pages"]:
                 image_path = page_image_path(slug, page_path)
                 if image_path is None:
@@ -660,7 +716,10 @@ def render_all_images(slug: str, config: dict[str, Any], deckconfig_dir: Path) -
                 images[page_path] = image_path
         if images:
             all_images[layout["layout"]] = images
-    return all_images
+        svgs = render_layout_page_svgs(slug, layout)
+        if svgs:
+            all_svgs[layout["layout"]] = svgs
+    return all_images, all_svgs
 
 
 def main() -> int:
@@ -675,10 +734,10 @@ def main() -> int:
 
         slug = aircraft_dir.name
         config = load_yaml(config_path)
-        page_images = render_all_images(slug, config, deckconfig_dir)
+        page_images, page_svgs = render_all_images(slug, config, deckconfig_dir)
         doc_path = DOCS_DECKS_DIR / slug / "index.md"
         doc_path.parent.mkdir(parents=True, exist_ok=True)
-        write_text_if_changed(doc_path, build_overview(slug, config, doc_path, page_images))
+        write_text_if_changed(doc_path, build_overview(slug, config, doc_path, page_images, page_svgs))
 
         title = aircraft_title(slug, config)
         aircraft_records.append({"slug": slug, "title": title})
