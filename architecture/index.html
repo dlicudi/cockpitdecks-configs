@@ -1,0 +1,438 @@
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="Duane Licudi"><link rel="canonical" href="https://dlicudi.github.io/cockpitdecks-configs/architecture/">
+      <link rel="shortcut icon" href="../img/favicon.ico">
+    <title>Overview - Cockpitdecks Configs</title>
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../stylesheets/extra.css" rel="stylesheet">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Overview";
+        var mkdocs_page_input_path = "architecture/index.md";
+        var mkdocs_page_url = "/cockpitdecks-configs/architecture/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Cockpitdecks Configs
+        </a><div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started/development/">Development</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Architecture</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Overview</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-this-repository-is">What this repository is</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#repository-boundaries">Repository boundaries</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#repository-map">Repository map</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#source-of-truth">Source of truth</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configuration-hierarchy">Configuration hierarchy</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#aircraft">Aircraft</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#layout">Layout</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#page">Page</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#button">Button</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reuse-model">Reuse model</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#documentation-architecture">Documentation architecture</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#change-guide">Change guide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#working-rules-for-agents">Working rules for agents</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scope-note">Scope note</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#related-pages">Related pages</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Decks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../decks/aerobask-robin-dr401/">Robin DR401</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../decks/beechcraft-baron-58/">Beechcraft Baron 58</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../decks/cessna-172-sp/">Cessna 172 SP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../decks/cirrus-sr22/">Cirrus SR22</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../decks/embraer-e-jets-family/">Embraer E-Jets Family</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../decks/epic-e1000g/">Epic E1000G</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../decks/lancair-evolution/">Lancair Evolution</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../decks/toliss-airbus-a320-neo/">Airbus A320neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../decks/toliss-airbus-a321-neo/">Toliss A321neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../decks/toliss-airbus-a330-neo/">ToLiss A330neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../decks/vans-aircraft-rv-10/">Van's Aircraft RV-10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/compatibility/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/deck-types/">Deck Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/plugin-interface/">Plugin Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/cirrus-sr22-gaps/">Cirrus SR22 Gaps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/cirrus-sr22-reference/">Cirrus SR22 Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/modules/">Modules</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Cockpitdecks Configs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Architecture</li>
+      <li class="breadcrumb-item active">Overview</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/docs/architecture/index.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">¶</a></h1>
+<p>This page is the shortest useful map of how <code>cockpitdecks-configs</code> itself is
+put together.</p>
+<p>It is intended for two audiences:</p>
+<ul>
+<li>humans trying to understand where behaviour comes from</li>
+<li>AI agents that need repository context before making changes</li>
+</ul>
+<h2 id="what-this-repository-is">What this repository is<a class="headerlink" href="#what-this-repository-is" title="Permanent link">¶</a></h2>
+<p><code>cockpitdecks-configs</code> is a configuration repository.</p>
+<p>It is <strong>not</strong> the Cockpitdecks runtime itself. The Python application, deck
+drivers, and simulator integration live in the Cockpitdecks project. This
+repository provides aircraft-specific and deck-specific YAML configuration that
+the runtime consumes.</p>
+<p>That separation matters:</p>
+<ul>
+<li>if you are changing <strong>layout, labels, page structure, commands, formulas, or reusable modules</strong>, edit this repo</li>
+<li>if you are changing <strong>runtime behaviour, parsing, device support, rendering logic, or simulator transport</strong>, that likely belongs in Cockpitdecks, not here</li>
+</ul>
+<h2 id="repository-boundaries">Repository boundaries<a class="headerlink" href="#repository-boundaries" title="Permanent link">¶</a></h2>
+<p>Within the broader Cockpitdecks ecosystem, this repository sits in the config
+layer. At a high level the local boundary looks like this:</p>
+<ol>
+<li><strong>Cockpitdecks runtime</strong>
+   Reads deck configuration, talks to X-Plane, evaluates formulas, and renders
+   controls on hardware.</li>
+<li><strong>This repository</strong>
+   Supplies aircraft configs, reusable modules, deck type definitions, and
+   documentation sources.</li>
+<li><strong>X-Plane aircraft installation</strong>
+   Receives a symlinked <code>deckconfig/</code> folder for a specific aircraft.</li>
+<li><strong>Generated documentation</strong>
+   MkDocs publishes documentation built from both hand-written pages and
+   generated deck overview pages.</li>
+</ol>
+<h2 id="repository-map">Repository map<a class="headerlink" href="#repository-map" title="Permanent link">¶</a></h2>
+<pre class="highlight"><code class="language-text">cockpitdecks-configs/
+├── decks/           # Aircraft source configs
+├── modules/         # Reusable config fragments shared across aircraft
+├── decktypes/       # Deck capability/type definitions
+├── docs/            # Hand-written and generated documentation
+├── scripts/         # Documentation and preview generation tools
+└── mkdocs.yml       # Docs site navigation and configuration</code></pre>
+<h2 id="source-of-truth">Source of truth<a class="headerlink" href="#source-of-truth" title="Permanent link">¶</a></h2>
+<p>Not every file in this repository should be edited directly.</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Role</th>
+<th>Edit directly?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>decks/&lt;aircraft&gt;/deckconfig/</code></td>
+<td>Primary aircraft configuration source</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>modules/</code></td>
+<td>Reusable shared config source</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>decktypes/</code></td>
+<td>Deck type definitions</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>docs/decks/</code></td>
+<td>Generated aircraft overview docs</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>docs/generated/</code></td>
+<td>Generated page-level docs</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>docs/assets/images/*/generated/</code></td>
+<td>Generated preview images</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>docs/architecture/</code>, <code>docs/reference/</code>, <code>docs/getting-started/</code></td>
+<td>Hand-written docs</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>If a change should survive regeneration, make it in the config source or in the
+generation scripts, not in generated docs.</p>
+<h2 id="configuration-hierarchy">Configuration hierarchy<a class="headerlink" href="#configuration-hierarchy" title="Permanent link">¶</a></h2>
+<p>The central model is:</p>
+<p><strong>Aircraft -&gt; Layout -&gt; Page -&gt; Button</strong></p>
+<h3 id="aircraft">Aircraft<a class="headerlink" href="#aircraft" title="Permanent link">¶</a></h3>
+<p>Each aircraft lives under <code>decks/&lt;aircraft&gt;/deckconfig/</code>.</p>
+<p>The top-level files define aircraft metadata and which hardware layouts exist
+for that aircraft.</p>
+<p>Important files:</p>
+<ul>
+<li><code>config.yaml</code>: aircraft-level config and deck registrations</li>
+<li><code>_docs.yaml</code>: metadata used to generate documentation</li>
+</ul>
+<h3 id="layout">Layout<a class="headerlink" href="#layout" title="Permanent link">¶</a></h3>
+<p>Each supported hardware layout gets its own directory such as
+<code>loupedecklive1/</code>, <code>streamdeckxl1/</code>, or <code>panels/</code>.</p>
+<p>Layout config typically defines:</p>
+<ul>
+<li>deck defaults</li>
+<li>typography and colour defaults</li>
+<li>home page</li>
+<li>layout-specific shared includes</li>
+</ul>
+<h3 id="page">Page<a class="headerlink" href="#page" title="Permanent link">¶</a></h3>
+<p>Each page is a YAML file inside the layout directory.</p>
+<p>A page defines:</p>
+<ul>
+<li>its name</li>
+<li>included modules or encoder fragments</li>
+<li>the button grid or panel controls for that page</li>
+</ul>
+<h3 id="button">Button<a class="headerlink" href="#button" title="Permanent link">¶</a></h3>
+<p>Buttons are the smallest functional unit.</p>
+<p>A button typically combines:</p>
+<ul>
+<li>an interaction type such as <code>push</code>, <code>page</code>, or <code>begin-end-command</code></li>
+<li>simulator commands</li>
+<li>display labels/icons</li>
+<li>formulas reading simulator state through datarefs</li>
+</ul>
+<h2 id="reuse-model">Reuse model<a class="headerlink" href="#reuse-model" title="Permanent link">¶</a></h2>
+<p>Reuse happens in three main ways:</p>
+<ul>
+<li><strong>modules</strong>: shared page fragments used across multiple aircraft</li>
+<li><strong>layout defaults</strong>: shared display defaults within one hardware layout</li>
+<li><strong>documentation metadata</strong>: <code>_docs.yaml</code> keeps aircraft docs separate from the operational config</li>
+</ul>
+<p>This means most work should begin by deciding whether a change is:</p>
+<ul>
+<li>aircraft-specific</li>
+<li>deck-specific</li>
+<li>reusable across several aircraft</li>
+</ul>
+<p>That decision determines whether the edit belongs in <code>decks/</code>, <code>modules/</code>, or a
+script.</p>
+<h2 id="documentation-architecture">Documentation architecture<a class="headerlink" href="#documentation-architecture" title="Permanent link">¶</a></h2>
+<p>The docs site has two content types:</p>
+<ul>
+<li><strong>hand-written docs</strong> for concepts, setup, reference, and architecture</li>
+<li><strong>generated docs</strong> for aircraft deck overviews and page previews</li>
+</ul>
+<p>The generation flow is:</p>
+<ol>
+<li>edit <code>decks/.../deckconfig/</code> and optional <code>_docs.yaml</code></li>
+<li>run <code>python3 scripts/generate_deck_docs.py</code></li>
+<li>generated pages are written under <code>docs/decks/</code> and <code>docs/generated/</code></li>
+<li>MkDocs renders the final site</li>
+</ol>
+<p>Preview images are generated separately and stored under
+<code>docs/assets/images/&lt;aircraft&gt;/generated/</code>.</p>
+<h2 id="change-guide">Change guide<a class="headerlink" href="#change-guide" title="Permanent link">¶</a></h2>
+<p>Use this table as a shortcut before editing:</p>
+<table>
+<thead>
+<tr>
+<th>If you want to change...</th>
+<th>Start here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aircraft pages, commands, labels, formulas</td>
+<td><code>decks/&lt;aircraft&gt;/deckconfig/&lt;layout&gt;/</code></td>
+</tr>
+<tr>
+<td>reusable radio/engine/<abbr title="Garmin G1000 Integrated Flight Deck">G1000</abbr> content</td>
+<td><code>modules/</code></td>
+</tr>
+<tr>
+<td>deck hardware capabilities or mappings</td>
+<td><code>decktypes/</code></td>
+</tr>
+<tr>
+<td>docs navigation or published section structure</td>
+<td><code>mkdocs.yml</code></td>
+</tr>
+<tr>
+<td>generated deck overview text or structure</td>
+<td><code>scripts/generate_deck_docs.py</code></td>
+</tr>
+<tr>
+<td>conceptual docs for humans and agents</td>
+<td><code>docs/architecture/</code> or <code>docs/reference/</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="working-rules-for-agents">Working rules for agents<a class="headerlink" href="#working-rules-for-agents" title="Permanent link">¶</a></h2>
+<p>If you are an AI agent operating in this repository:</p>
+<ol>
+<li>Treat <code>decks/</code>, <code>modules/</code>, and <code>decktypes/</code> as primary sources.</li>
+<li>Treat <code>docs/decks/</code>, <code>docs/generated/</code>, and generated preview images as
+   derived artifacts.</li>
+<li>Check <code>mkdocs.yml</code> before adding a new documentation section.</li>
+<li>Prefer updating the source config or generator when the same issue appears in
+   multiple aircraft pages.</li>
+<li>Do not infer runtime behaviour from this repo alone when the question is
+   really about Cockpitdecks internals.</li>
+</ol>
+<h2 id="scope-note">Scope note<a class="headerlink" href="#scope-note" title="Permanent link">¶</a></h2>
+<p>This page is intentionally limited to the configuration repository.</p>
+<p>System-level Cockpitdecks architecture, runtime flow, and multi-repository
+workspace mapping belong with the Cockpitdecks runtime repository rather than
+the config repository docs.</p>
+<h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="../getting-started/development/">Development</a></li>
+<li><a href="../reference/">Reference</a></li>
+<li><a href="../modules/modules/">Modules</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../getting-started/development/" class="btn btn-neutral float-left" title="Development"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../decks/aerobask-robin-dr401/" class="btn btn-neutral float-right" title="Robin DR401">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2023 - 2024 Duane Licudi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/dlicudi/cockpitdecks-configs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../getting-started/development/" style="color: #fcfcfc">« Previous</a></span>
+    
+    
+      <span><a href="../decks/aerobask-robin-dr401/" style="color: #fcfcfc">Next »</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

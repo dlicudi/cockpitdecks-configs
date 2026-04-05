@@ -1,0 +1,540 @@
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="Duane Licudi"><link rel="canonical" href="https://dlicudi.github.io/cockpitdecks-configs/reference/cirrus-sr22-gaps/">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Cirrus SR22 Gaps - Cockpitdecks Configs</title>
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Cirrus SR22 Gaps";
+        var mkdocs_page_input_path = "reference/cirrus-sr22-gaps.md";
+        var mkdocs_page_url = "/cockpitdecks-configs/reference/cirrus-sr22-gaps/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Cockpitdecks Configs
+        </a><div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/development/">Development</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Architecture</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/">Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Decks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/aerobask-robin-dr401/">Robin DR401</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/beechcraft-baron-58/">Beechcraft Baron 58</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/cessna-172-sp/">Cessna 172 SP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/cirrus-sr22/">Cirrus SR22</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/embraer-e-jets-family/">Embraer E-Jets Family</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/epic-e1000g/">Epic E1000G</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/lancair-evolution/">Lancair Evolution</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a320-neo/">Airbus A320neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a321-neo/">Toliss A321neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/toliss-airbus-a330-neo/">ToLiss A330neo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../decks/vans-aircraft-rv-10/">Van's Aircraft RV-10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compatibility/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deck-types/">Deck Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plugin-interface/">Plugin Interface</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Cirrus SR22 Gaps</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#currently-implemented">Currently implemented ✓</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#missing-sr22-specific-commands">Missing — SR22-specific commands</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#sun-visors">Sun visors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#climate-ventilation">Climate / ventilation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fuel-selector-rotary">Fuel selector (rotary)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tks-anti-ice-additional">TKS anti-ice (additional)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#boost-pump">Boost pump</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#missing-interior-lights-sr22-uses-sim-datarefs">Missing — Interior lights (SR22 uses sim datarefs)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#missing-annunciators-read-only-for-status-display">Missing — Annunciators (read-only, for status display)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#missing-landing-lights-leftright">Missing — Landing lights (left/right)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#suggested-additions-by-priority">Suggested additions (by priority)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference-sr22-fuel-selector-positions">Reference: SR22 fuel selector positions</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cirrus-sr22-reference/">Cirrus SR22 Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/modules/">Modules</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Cockpitdecks Configs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Reference</li>
+      <li class="breadcrumb-item active">Cirrus SR22 Gaps</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/dlicudi/cockpitdecks-configs/blob/main/docs/reference/cirrus-sr22-gaps.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="cirrus-sr22-missing-functions-datarefs-commands">Cirrus SR22 — Missing Functions / Datarefs / Commands<a class="headerlink" href="#cirrus-sr22-missing-functions-datarefs-commands" title="Permanent link">¶</a></h1>
+<p>Gap analysis based on the Laminar Cirrus SR22 aircraft files (<code>SR22.systems.lua</code>, <code>SR22_cockpit.obj</code>, <code>Cirrus SR22.acf</code>) vs. the current loupedecklive1 config.</p>
+<h2 id="currently-implemented">Currently implemented ✓<a class="headerlink" href="#currently-implemented" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Implemented</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Switches</strong></td>
+<td>IGNITION, AVIONICS, BAT ½, ALT ½, PARK BRAKE, FUEL OFF/LEFT/RIGHT, SWITCHES 2</td>
+</tr>
+<tr>
+<td><strong>Switches2 (Lights &amp; Icing)</strong></td>
+<td>NAV, STROBE, LAND, ICE lights; PITOT, ICE PROTECT, PUMP BKUP, NORM/HIGH, PROP, WSHLD</td>
+</tr>
+<tr>
+<td><strong>Fuel</strong></td>
+<td><code>laminar/sr22/fuel_sel_left_off</code>, <code>fuel_sel_left_select</code>, <code>fuel_sel_right_select</code></td>
+</tr>
+<tr>
+<td><strong>Icing</strong></td>
+<td><code>laminar/sr22/switch/ice_protect_*</code> commands; <code>sim/ice/tks_bkup_*</code> commands</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="missing-sr22-specific-commands">Missing — SR22-specific commands<a class="headerlink" href="#missing-sr22-specific-commands" title="Permanent link">¶</a></h2>
+<h3 id="sun-visors">Sun visors<a class="headerlink" href="#sun-visors" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/sunvisor_left_up</code></td>
+<td>Sun visor left up</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/sunvisor_left_dn</code></td>
+<td>Sun visor left down</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/sunvisor_right_up</code></td>
+<td>Sun visor right up</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/sunvisor_right_dn</code></td>
+<td>Sun visor right down</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Datarefs:</strong> <code>laminar/sr22/sun_visor_left</code>, <code>laminar/sr22/sun_visor_right</code> (1=down, 0=neutral, -1=stowed)</p>
+<h3 id="climate-ventilation">Climate / ventilation<a class="headerlink" href="#climate-ventilation" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/fan_speed_right</code></td>
+<td>Increase cabin fan speed</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/fan_speed_left</code></td>
+<td>Decrease cabin fan speed</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/button/air_con_toggle</code></td>
+<td>Air conditioning toggle</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dataref:</strong> <code>laminar/sr22/climate_fan_speed</code> (0–3)</p>
+<h3 id="fuel-selector-rotary">Fuel selector (rotary)<a class="headerlink" href="#fuel-selector-rotary" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/fuel_sel_left</code></td>
+<td>Rotate fuel selector left (OFF←LEFT←RIGHT)</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/fuel_sel_right</code></td>
+<td>Rotate fuel selector right (OFF→LEFT→RIGHT)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: Config uses direct-position commands (<code>fuel_sel_left_off</code>, <code>fuel_sel_left_select</code>, etc.) which are already implemented.</em></p>
+<h3 id="tks-anti-ice-additional">TKS anti-ice (additional)<a class="headerlink" href="#tks-anti-ice-additional" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/anti_ice_tks_max</code></td>
+<td>TKS MAX (hold for max flow)</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/switch/ice_protect_on</code></td>
+<td>TKS ON</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/switch/ice_protect_off</code></td>
+<td>TKS OFF</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/switch/ice_protect_norm</code></td>
+<td>TKS NORM</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/switch/ice_protect_high</code></td>
+<td>TKS HIGH</td>
+</tr>
+</tbody>
+</table>
+<p><em>Config uses <code>commands</code> for ice_protect (on/off), ice_norm_high (norm/high), and PUMP BKUP (<code>sim/ice/tks_bkup_on</code>, <code>sim/ice/tks_bkup_off</code>) to avoid read-only dataref write errors.</em></p>
+<h3 id="boost-pump">Boost pump<a class="headerlink" href="#boost-pump" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/switch/boost_pump_up</code></td>
+<td>Boost pump ON</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/switch/boost_pump_dn</code></td>
+<td>Boost pump OFF</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dataref:</strong> <code>laminar/sr22/switch/boost_pump</code> (writable, 0 or 1)</p>
+<hr>
+<h2 id="missing-interior-lights-sr22-uses-sim-datarefs">Missing — Interior lights (SR22 uses sim datarefs)<a class="headerlink" href="#missing-interior-lights-sr22-uses-sim-datarefs" title="Permanent link">¶</a></h2>
+<p>From <code>SR22.systems.lua</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Dataref</th>
+<th>SR22 use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sim/cockpit2/switches/generic_lights_switch[4]</code></td>
+<td>Dome light</td>
+</tr>
+<tr>
+<td><code>sim/cockpit2/switches/generic_lights_switch[6]</code></td>
+<td>Flood light</td>
+</tr>
+<tr>
+<td><code>sim/cockpit2/switches/generic_lights_switch[0]</code></td>
+<td>Reading light 1</td>
+</tr>
+<tr>
+<td><code>sim/cockpit2/switches/generic_lights_switch[1]</code></td>
+<td>Reading light 2</td>
+</tr>
+<tr>
+<td><code>sim/cockpit2/switches/generic_lights_switch[10]</code></td>
+<td>Edge lighting</td>
+</tr>
+<tr>
+<td><code>sim/cockpit2/switches/generic_lights_switch[11]</code></td>
+<td>Wingtip LIT force</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Commands:</strong> Use <code>sim/lights/generic_0X_light_tog</code> for indices 0–11, or <code>sim/cockpit2/switches/generic_lights_switch</code> via set-dataref.</p>
+<p><em>Current config:</em> lights page has NAV, STROBE, LAND, READ 1, DOME, FLOOD, READ 2, EDGE. switches2 has NAV, STROBE, LAND, ICE (index 0). Wingtip (index 11) not mapped.</p>
+<hr>
+<h2 id="missing-annunciators-read-only-for-status-display">Missing — Annunciators (read-only, for status display)<a class="headerlink" href="#missing-annunciators-read-only-for-status-display" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Dataref</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laminar/sr22/annunciators/com</code></td>
+<td>COM annunciator</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/nav</code></td>
+<td>NAV annunciator</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/crs</code></td>
+<td>CRS annunciator</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/xpdr</code></td>
+<td>XPDR annunciator</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/flaps_up</code></td>
+<td>Flaps up</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/flaps_50</code></td>
+<td>Flaps 50%</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/flaps_100</code></td>
+<td>Flaps 100%</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/o2_full</code> … <code>o2_empty</code></td>
+<td>O2 bottle pressure annunciators</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/audio/*</code></td>
+<td>Audio panel (COM½, NAV½, MKR, etc.)</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/ap/*</code></td>
+<td>Autopilot (AP, FD, LVL, APR, NAV, HDG, FLC, VNV, VS, ALT)</td>
+</tr>
+<tr>
+<td><code>laminar/sr22/annunciators/air_con</code></td>
+<td>Air conditioning</td>
+</tr>
+</tbody>
+</table>
+<p><em>Use case:</em> Status or annunciator pages; not currently wired in loupedecklive1.</p>
+<hr>
+<h2 id="missing-landing-lights-leftright">Missing — Landing lights (left/right)<a class="headerlink" href="#missing-landing-lights-leftright" title="Permanent link">¶</a></h2>
+<p>SR22 uses:
+- <code>sim/cockpit2/switches/landing_lights_switch[0]</code> — master (currently used as LAND)
+- <code>sim/cockpit2/switches/landing_lights_switch[1]</code> — left
+- <code>sim/cockpit2/switches/landing_lights_switch[2]</code> — right</p>
+<p><strong>Commands:</strong> <code>sim/lights/landing_01_light_tog</code>, <code>sim/lights/landing_02_light_tog</code>, <code>sim/lights/landing_03_light_tog</code> (or similar indices).</p>
+<hr>
+<h2 id="suggested-additions-by-priority">Suggested additions (by priority)<a class="headerlink" href="#suggested-additions-by-priority" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Item</th>
+<th>Page</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>High</strong></td>
+<td>Boost pump</td>
+<td>switches</td>
+<td><code>laminar/sr22/switch/boost_pump_up</code> / <code>boost_pump_dn</code> or set-dataref</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>TKS MAX</td>
+<td>switches2</td>
+<td><code>laminar/sr22/anti_ice_tks_max</code> (hold for max)</td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td>Dome, flood, reading lights</td>
+<td>switches2 or lights</td>
+<td><code>generic_lights_switch[4,6,0,1]</code></td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td>Climate fan</td>
+<td>new page or index</td>
+<td><code>laminar/sr22/fan_speed_right</code> / <code>fan_speed_left</code></td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td>Air conditioning</td>
+<td>new page or index</td>
+<td><code>laminar/sr22/button/air_con_toggle</code></td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>Sun visors</td>
+<td>new page</td>
+<td><code>laminar/sr22/sunvisor_*</code></td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>Landing L/R</td>
+<td>switches2</td>
+<td>Separate left/right landing lights</td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>Annunciators</td>
+<td>status page</td>
+<td>Read-only for display</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reference-sr22-fuel-selector-positions">Reference: SR22 fuel selector positions<a class="headerlink" href="#reference-sr22-fuel-selector-positions" title="Permanent link">¶</a></h2>
+<ul>
+<li><code>0</code> = OFF (left off)</li>
+<li><code>1</code> = LEFT</li>
+<li><code>2</code> = RIGHT</li>
+<li><code>3</code> = OFF (right off)</li>
+</ul>
+<p>Commands <code>fuel_sel_left_off|fuel_sel_left_select|fuel_sel_right_select|fuel_sel_right_off</code> set these positions directly.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../plugin-interface/" class="btn btn-neutral float-left" title="Plugin Interface"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../cirrus-sr22-reference/" class="btn btn-neutral float-right" title="Cirrus SR22 Reference">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2023 - 2024 Duane Licudi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/dlicudi/cockpitdecks-configs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../plugin-interface/" style="color: #fcfcfc">« Previous</a></span>
+    
+    
+      <span><a href="../cirrus-sr22-reference/" style="color: #fcfcfc">Next »</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
