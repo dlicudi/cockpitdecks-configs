@@ -15,15 +15,12 @@ nav:
   - Getting Started:
       - Installation: getting-started/installation.md
       - Development: getting-started/development.md
-  - Architecture:
-      - Overview: architecture/index.md
-  - Aircraft:
-      - Overview: aircraft/index.md
-  - Reference:
-      - Overview: reference/index.md
-      - Compatibility: reference/compatibility.md
-      - Config Patterns: reference/config-patterns.md
-      - Plugin Interface: reference/plugin-interface.md
+  - Architecture: architecture/index.md
+  - Aircraft: aircraft/index.md
+  - Reference: reference/index.md
+  - Compatibility: reference/compatibility.md
+  - Config Patterns: reference/config-patterns.md
+  - Plugin Interface: reference/plugin-interface.md
 
 not_in_nav: |
   includes/*
