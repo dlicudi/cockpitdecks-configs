@@ -4,7 +4,7 @@ name: switches_ground
 
 buttons:
 
-  - index: 0
+  - index: 6
     type: push
     vibrate: SHORT
     command: laminar/sr22/fuel_sel_left_off
@@ -22,7 +22,7 @@ buttons:
         framed: true
         formula: ${laminar/sr22/fuel_selector_pos} 0 eq ${laminar/sr22/fuel_selector_pos} 3 eq +
 
-  - index: 1
+  - index: 0
     type: push
     vibrate: SHORT
     command: laminar/sr22/fuel_sel_left_select
@@ -40,7 +40,7 @@ buttons:
         framed: true
         formula: ${laminar/sr22/fuel_selector_pos} 1 eq
 
-  - index: 2
+  - index: 1
     type: push
     vibrate: SHORT
     command: laminar/sr22/fuel_sel_right_select
@@ -58,7 +58,7 @@ buttons:
         framed: true
         formula: ${laminar/sr22/fuel_selector_pos} 2 eq
 
-  - index: 3
+  - index: 5
     type: onoff
     vibrate: SHORT
     set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
@@ -95,7 +95,7 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
 
-  - index: 5
+  - index: 2
     type: push
     vibrate: SHORT
     command: sim/engines/mixture_max
@@ -109,11 +109,11 @@ buttons:
         formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 lt
       B1:
         text: "ON"
-        color: red
+        color: green
         framed: true
         formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 eq
 
-  - index: 7
+  - index: 3
     name: ENGINE START
     type: begin-end-command
     vibrate: LONG

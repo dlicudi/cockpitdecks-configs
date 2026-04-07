@@ -137,13 +137,6 @@ buttons:
     text-position: cm
 
   - index: 11
-    type: page
-    vibrate: SHORT
-    page: fms_load
-    label: LOAD FPL
-    label-color: Gold
-    text: "\uf15b"
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
+    type: none
+    label: ""
+    text: ""

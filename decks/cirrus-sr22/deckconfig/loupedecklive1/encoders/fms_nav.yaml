@@ -1,23 +1,6 @@
-# NAV encoders — E2 = function cycle (NAV/FPL/DEP/ARR/APP)
-# Read-only telemetry page, no browse/action on encoders
+# NAV encoders — read-only telemetry, no page cycle
 
 buttons:
-
-- index: e2
-  name: func_cycle
-  type: page-cycle
-  pages:
-    - fms_nav
-    - fms_fpl
-    - fms_proc_dep
-    - fms_proc_arr
-    - fms_proc_app
-  page-labels:
-    - NAV
-    - FPL
-    - DEP
-    - ARR
-    - APP
 
 - index: left
   name: left_screen
@@ -30,7 +13,7 @@ buttons:
         label-font: D-DINCondensed.otf
         label-color: Gold
         text-size: 16
-        text-font: D-DIN.otf
+        text-font: D-DINCondensed.otf
         text-color: White
         text: ""
       - label: ""
@@ -38,14 +21,14 @@ buttons:
         label-font: D-DINCondensed.otf
         label-color: Gold
         text-size: 16
-        text-font: D-DIN.otf
+        text-font: D-DINCondensed.otf
         text-color: White
         text: ""
-      - label: "FUNC"
+      - label: "NAV"
         label-size: 14
         label-font: D-DINCondensed.otf
         label-color: Gold
         text-size: 16
-        text-font: D-DIN.otf
+        text-font: D-DINCondensed.otf
         text-color: White
-        text: "${data:cockpitdecks/page_cycle/current_page}"
+        text: ""
