@@ -17,7 +17,7 @@ buttons:
       parts:
         A0:
           color: cyan
-          text-size: 80
+          text-size: 30
           text-font: D-DINCondensed.otf
           formula: "${sim/cockpit2/radios/actuators/com2_standby_frequency_hz_833} 1000 /"
           text: "${formula}"
@@ -68,7 +68,7 @@ buttons:
       parts:
         A0:
           color: white
-          text-size: 240
+          text-size: 91
           text-font: DejaVuSans.ttf
           formula: 1
           text: "↔"
@@ -86,7 +86,7 @@ buttons:
       parts:
         A0:
           color: lime
-          text-size: 80
+          text-size: 30
           text-font: D-DINCondensed.otf
           formula: "${sim/cockpit2/radios/actuators/com2_frequency_hz_833} 1000 /"
           text: "${formula}"

@@ -4,14 +4,15 @@ name: switches_lights
 
 buttons:
 
-  - index: 0
-    type: push
-    vibrate: SHORT
-    command: sim/lights/nav_lights_toggle
-    label: NAV
-    annunciator:
-      model: B
-      size: medium
+- index: 0
+  type: push
+  vibrate: SHORT
+  command: sim/lights/nav_lights_toggle
+  label: NAV
+  annunciator:
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -22,14 +23,15 @@ buttons:
         framed: true
         formula: "${sim/cockpit2/switches/navigation_lights_on} 1 eq"
 
-  - index: 1
-    type: push
-    vibrate: SHORT
-    command: sim/lights/strobe_lights_toggle
-    label: STROBE
-    annunciator:
-      model: B
-      size: medium
+- index: 1
+  type: push
+  vibrate: SHORT
+  command: sim/lights/strobe_lights_toggle
+  label: STROBE
+  annunciator:
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -40,14 +42,15 @@ buttons:
         framed: true
         formula: "${sim/cockpit2/switches/strobe_lights_on} 1 eq"
 
-  - index: 2
-    type: push
-    vibrate: SHORT
-    label: LAND
-    command: sim/lights/landing_01_light_tog
-    annunciator:
-      model: B
-      size: medium
+- index: 2
+  type: push
+  vibrate: SHORT
+  label: LAND
+  command: sim/lights/landing_01_light_tog
+  annunciator:
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -58,14 +61,15 @@ buttons:
         framed: true
         formula: "${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq"
 
-  - index: 3
-    type: push
-    vibrate: SHORT
-    label: ICE
-    command: sim/lights/generic_13_light_tog
-    annunciator:
-      model: B
-      size: medium
+- index: 3
+  type: push
+  vibrate: SHORT
+  label: ICE
+  command: sim/lights/generic_13_light_tog
+  annunciator:
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -76,14 +80,15 @@ buttons:
         framed: true
         formula: "${sim/cockpit2/switches/generic_lights_switch[12]} 1 eq"
 
-  - index: 4
-    type: push
-    vibrate: SHORT
-    label: DOME
-    command: sim/lights/generic_05_light_tog
-    annunciator:
-      model: B
-      size: medium
+- index: 4
+  type: push
+  vibrate: SHORT
+  label: DOME
+  command: sim/lights/generic_05_light_tog
+  annunciator:
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -94,14 +99,15 @@ buttons:
         framed: true
         formula: "${sim/cockpit2/switches/generic_lights_switch[4]} 1 eq"
 
-  - index: 5
-    type: push
-    vibrate: SHORT
-    label: FLOOD
-    command: sim/lights/generic_07_light_tog
-    annunciator:
-      model: B
-      size: medium
+- index: 5
+  type: push
+  vibrate: SHORT
+  label: FLOOD
+  command: sim/lights/generic_07_light_tog
+  annunciator:
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -112,14 +118,15 @@ buttons:
         framed: true
         formula: "${sim/cockpit2/switches/generic_lights_switch[6]} 1 eq"
 
-  - index: 6
-    type: push
-    vibrate: SHORT
-    label: READ 1
-    command: sim/lights/generic_02_light_tog
-    annunciator:
-      model: B
-      size: medium
+- index: 6
+  type: push
+  vibrate: SHORT
+  label: READ 1
+  command: sim/lights/generic_02_light_tog
+  annunciator:
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -130,14 +137,15 @@ buttons:
         framed: true
         formula: "${sim/cockpit2/switches/generic_lights_switch[1]} 1 eq"
 
-  - index: 7
-    type: push
-    vibrate: SHORT
-    label: EDGE
-    command: sim/lights/generic_11_light_tog
-    annunciator:
-      model: B
-      size: medium
+- index: 7
+  type: push
+  vibrate: SHORT
+  label: EDGE
+  command: sim/lights/generic_11_light_tog
+  annunciator:
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -149,44 +157,44 @@ buttons:
         formula: "${sim/cockpit2/switches/generic_lights_switch[10]} 1 eq"
 
   # Nav row
-  - index: 8
-    type: page
-    page: switches_master
-    vibrate: SHORT
-    text: MASTER
-    text-color: khaki
-    text-size: 18
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (20, 20, 20)
+- index: 8
+  type: page
+  page: switches_master
+  vibrate: SHORT
+  text: MASTER
+  text-color: khaki
+  text-size: 18
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 20)
 
-  - index: 9
-    type: none
-    text: LIGHTS
-    text-color: Gold
-    text-size: 18
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (40, 35, 0)
+- index: 9
+  type: none
+  text: LIGHTS
+  text-color: Gold
+  text-size: 18
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (40, 35, 0)
 
-  - index: 10
-    type: page
-    page: switches_icing
-    vibrate: SHORT
-    text: ICE
-    text-color: khaki
-    text-size: 18
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (20, 20, 20)
+- index: 10
+  type: page
+  page: switches_icing
+  vibrate: SHORT
+  text: ICE
+  text-color: khaki
+  text-size: 18
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 20)
 
-  - index: 11
-    type: page
-    page: switches_ground
-    vibrate: SHORT
-    text: GROUND
-    text-color: khaki
-    text-size: 18
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (20, 20, 20)
+- index: 11
+  type: page
+  page: switches_ground
+  vibrate: SHORT
+  text: GROUND
+  text-color: khaki
+  text-size: 18
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 20)

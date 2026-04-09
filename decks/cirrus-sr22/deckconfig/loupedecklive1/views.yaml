@@ -11,7 +11,7 @@ buttons:
   label-size: 10
   text: "0"
   text-color: khaki
-  text-size: 40
+  text-size: 15
   text-font: D-DINCondensed.otf
   text-position: cm
   command: sim/view/quick_look_0
@@ -25,7 +25,7 @@ buttons:
   label-size: 10
   text: "1"
   text-color: khaki
-  text-size: 40
+  text-size: 15
   text-font: D-DINCondensed.otf
   text-position: cm
   command: sim/view/quick_look_1
@@ -39,7 +39,7 @@ buttons:
   label-size: 10
   text: "2"
   text-color: khaki
-  text-size: 40
+  text-size: 15
   text-font: D-DINCondensed.otf
   text-position: cm
   command: sim/view/quick_look_2
@@ -53,7 +53,7 @@ buttons:
   label-size: 10
   text: "3"
   text-color: khaki
-  text-size: 40
+  text-size: 15
   text-font: D-DINCondensed.otf
   text-position: cm
   command: sim/view/quick_look_3
@@ -67,7 +67,7 @@ buttons:
   label-size: 10
   text: "4"
   text-color: khaki
-  text-size: 40
+  text-size: 15
   text-font: D-DINCondensed.otf
   text-position: cm
   command: sim/view/quick_look_4
@@ -81,7 +81,7 @@ buttons:
   label-size: 10
   text: "5"
   text-color: khaki
-  text-size: 40
+  text-size: 15
   text-font: D-DINCondensed.otf
   text-position: cm
   command: sim/view/quick_look_5
@@ -95,7 +95,7 @@ buttons:
   label-size: 10
   text: "6"
   text-color: khaki
-  text-size: 40
+  text-size: 15
   text-font: D-DINCondensed.otf
   text-position: cm
   command: sim/view/quick_look_6
@@ -109,7 +109,7 @@ buttons:
   label-size: 10
   text: "7"
   text-color: khaki
-  text-size: 40
+  text-size: 15
   text-font: D-DINCondensed.otf
   text-position: cm
   command: sim/view/quick_look_7

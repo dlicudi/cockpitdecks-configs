@@ -4,38 +4,38 @@ name: switches
 
 buttons:
 
-  - index: 0
-    type: begin-end-command
-    command: sim/starters/engage_starter_1
-    vibrate: RUMBLE5
-    label: "IGNITION"
-    label-color: Lime
-    text-bg-color: Black
-    multi-texts:
-      - text: "OFF"
-        text-color: White
-      - text: "R"
-        text-color: Orange
-      - text: "L"
-        text-color: Orange
-      - text: "BOTH"
-        text-color: Orange
-      - text: "START"
-        text-color: Red
-    formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
+- index: 0
+  type: begin-end-command
+  command: sim/starters/engage_starter_1
+  vibrate: RUMBLE5
+  label: "IGNITION"
+  label-color: Lime
+  text-bg-color: Black
+  multi-texts:
+  - text: "OFF"
+    text-color: White
+  - text: "R"
+    text-color: Orange
+  - text: "L"
+    text-color: Orange
+  - text: "BOTH"
+    text-color: Orange
+  - text: "START"
+    text-color: Red
+  formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
 
-  - index: 1
-    type: push
-    command: sim/systems/avionics_toggle
-    label: AVIONICS
-    label-color: black
-    label-size: 10
-    label-position: ct
-    annunciator:
-      annunciator-style: v
-      model: B
-      size: medium
-      light-off-intensity: 8
+- index: 1
+  type: push
+  command: sim/systems/avionics_toggle
+  label: AVIONICS
+  label-color: black
+  label-size: 10
+  label-position: ct
+  annunciator:
+    annunciator-style: v
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -46,17 +46,18 @@ buttons:
         framed: true
         formula: ${sim/cockpit/electrical/avionics_on} 1 eq
 
-  - index: 2
-    type: push
-    command: sim/electrical/battery_2_toggle
-    label: BAT 2
-    label-color: black
-    label-size: 9
-    annunciator:
-      annunciator-style: v
-      model: B
-      size: medium
-      light-off-intensity: 8
+    light-off-intensity: 8
+- index: 2
+  type: push
+  command: sim/electrical/battery_2_toggle
+  label: BAT 2
+  label-color: black
+  label-size: 9
+  annunciator:
+    annunciator-style: v
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -67,17 +68,18 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/electrical/battery_on[1]} 1 eq
 
-  - index: 3
-    type: push
-    command: sim/electrical/battery_1_toggle
-    label: BAT 1
-    label-color: black
-    label-size: 9
-    annunciator:
-      annunciator-style: v
-      model: B
-      size: medium
-      light-off-intensity: 8
+    light-off-intensity: 8
+- index: 3
+  type: push
+  command: sim/electrical/battery_1_toggle
+  label: BAT 1
+  label-color: black
+  label-size: 9
+  annunciator:
+    annunciator-style: v
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -88,18 +90,19 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
 
-  - index: 4
-    vibrate: SHORT
-    type: push
-    command: sim/electrical/generator_1_toggle
-    label: ALT 1
-    label-color: black
-    label-size: 9
-    annunciator:
-      annunciator-style: v
-      model: B
-      size: medium
-      light-off-intensity: 8
+    light-off-intensity: 8
+- index: 4
+  vibrate: SHORT
+  type: push
+  command: sim/electrical/generator_1_toggle
+  label: ALT 1
+  label-color: black
+  label-size: 9
+  annunciator:
+    annunciator-style: v
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -110,18 +113,19 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
 
-  - index: 5
-    vibrate: SHORT
-    type: push
-    command: sim/electrical/generator_2_toggle
-    label: ALT 2
-    label-color: black
-    label-size: 9
-    annunciator:
-      annunciator-style: v
-      model: B
-      size: medium
-      light-off-intensity: 8
+    light-off-intensity: 8
+- index: 5
+  vibrate: SHORT
+  type: push
+  command: sim/electrical/generator_2_toggle
+  label: ALT 2
+  label-color: black
+  label-size: 9
+  annunciator:
+    annunciator-style: v
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -132,40 +136,41 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
 
-  - index: 6
-    name: Lights
-    type: page
-    page: lights
-    label: LIGHTS
-    label-size: 12
-    text: 
-    text-font: fontawesome.otf
-    text-size: 32
-    text-color: Gold
+    light-off-intensity: 8
+- index: 6
+  name: Lights
+  type: page
+  page: lights
+  label: LIGHTS
+  label-size: 12
+  text: 
+  text-font: fontawesome.otf
+  text-size: 12
+  text-color: Gold
 
-  - index: 7
-    name: Icing
-    type: page
-    page: icing
-    label: ICING
-    label-size: 12
-    text: 
-    text-font: fontawesome.otf
-    text-size: 32
-    text-color: Gold
+- index: 7
+  name: Icing
+  type: page
+  page: icing
+  label: ICING
+  label-size: 12
+  text: 
+  text-font: fontawesome.otf
+  text-size: 12
+  text-color: Gold
 
-  - index: 8
-    vibrate: SHORT
-    type: push
-    command: laminar/sr22/fuel_sel_left_off
-    label: FUEL OFF
-    label-color: black
-    label-size: 9
-    annunciator:
-      annunciator-style: v
-      model: B
-      size: medium
-      light-off-intensity: 8
+- index: 8
+  vibrate: SHORT
+  type: push
+  command: laminar/sr22/fuel_sel_left_off
+  label: FUEL OFF
+  label-color: black
+  label-size: 9
+  annunciator:
+    annunciator-style: v
+    model: B
+    size: medium
+    parts:
       B0:
         led: bar
         color: grey
@@ -176,18 +181,19 @@ buttons:
         framed: true
         formula: ${laminar/sr22/fuel_selector_pos} 0 eq
 
-  - index: 9
-    vibrate: SHORT
-    type: push
-    command: laminar/sr22/fuel_sel_left_select
-    label: FUEL LEFT
-    label-color: black
-    label-size: 9
-    annunciator:
-      annunciator-style: v
-      model: B
-      size: medium
-      light-off-intensity: 8
+    light-off-intensity: 8
+- index: 9
+  vibrate: SHORT
+  type: push
+  command: laminar/sr22/fuel_sel_left_select
+  label: FUEL LEFT
+  label-color: black
+  label-size: 9
+  annunciator:
+    annunciator-style: v
+    model: B
+    size: medium
+    parts:
       B0:
         led: bar
         color: grey
@@ -198,18 +204,19 @@ buttons:
         framed: true
         formula: ${laminar/sr22/fuel_selector_pos} 1 eq
 
-  - index: 10
-    vibrate: SHORT
-    type: push
-    command: laminar/sr22/fuel_sel_right_select
-    label: FUEL RIGHT
-    label-color: black
-    label-size: 9
-    annunciator:
-      annunciator-style: v
-      model: B
-      size: medium
-      light-off-intensity: 8
+    light-off-intensity: 8
+- index: 10
+  vibrate: SHORT
+  type: push
+  command: laminar/sr22/fuel_sel_right_select
+  label: FUEL RIGHT
+  label-color: black
+  label-size: 9
+  annunciator:
+    annunciator-style: v
+    model: B
+    size: medium
+    parts:
       B0:
         led: bar
         color: grey
@@ -220,18 +227,19 @@ buttons:
         framed: true
         formula: ${laminar/sr22/fuel_selector_pos} 2 eq
 
-  - index: 11
-    vibrate: SHORT
-    type: push
-    command: laminar/sr22/fuel_sel_right_off
-    label: FUEL OFF
-    label-color: black
-    label-size: 9
-    annunciator:
-      annunciator-style: v
-      model: B
-      size: medium
-      light-off-intensity: 8
+    light-off-intensity: 8
+- index: 11
+  vibrate: SHORT
+  type: push
+  command: laminar/sr22/fuel_sel_right_off
+  label: FUEL OFF
+  label-color: black
+  label-size: 9
+  annunciator:
+    annunciator-style: v
+    model: B
+    size: medium
+    parts:
       B0:
         led: bar
         color: grey
@@ -241,3 +249,4 @@ buttons:
         color: red
         framed: true
         formula: ${laminar/sr22/fuel_selector_pos} 3 eq
+    light-off-intensity: 8

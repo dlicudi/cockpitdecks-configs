@@ -1,0 +1,150 @@
+name: pfd
+fill-empty-keys: false
+
+buttons:
+  - index: 0
+    type: page
+    page: main
+    label: HOME
+    label-size: 10
+    text: HOME
+    text-size: 14
+    text-font: D-DINCondensed-Bold.otf
+    text-color: white
+
+  - index: 1
+    name: SPD
+    type: none
+    label: IAS KT
+    label-size: 10
+    annunciator:
+      annunciator-style: v
+      size: medium
+      model: D
+      parts:
+        D0:
+          color: lime
+          text-size: 24
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/airspeed_kts_pilot}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+
+  - index: 2
+    name: ALT
+    type: none
+    label: ALT FT
+    label-size: 10
+    annunciator:
+      annunciator-style: v
+      size: medium
+      model: D
+      parts:
+        D0:
+          color: lime
+          text-size: 24
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/altitude_ft_pilot}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+
+  - index: 3
+    name: VSI
+    type: none
+    label: VSI FPM
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: yellow
+          text-size: 20
+          formula: "1"
+          text: "${sim/cockpit2/gauges/indicators/vvi_fpm_pilot}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+        B1:
+          color: deepskyblue
+          text-size: 12
+          formula: "${sim/cockpit2/gauges/indicators/flight_path_angle_deg}"
+          text: "FPA ${formula}"
+          text-format: "{0:0.1f}°"
+
+  - index: 4
+    name: HDG
+    type: none
+    label: HDG/TRK
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: cyan
+          text-size: 20
+          formula: "${sim/cockpit2/gauges/indicators/compass_heading_deg_mag}"
+          text: "${formula}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:03.0f}"
+        B1:
+          color: white
+          text-size: 12
+          formula: "${sim/cockpit2/gauges/indicators/ground_track_mag_pilot}"
+          text: "TRK ${formula}"
+          text-format: "{0:03.0f}"
+
+  - index: 5
+    name: BARO
+    type: none
+    label: BARO
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: gold
+          text-size: 16
+          formula: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}"
+          text: "${formula} in"
+          text-format: "{0:.2f}"
+        B1:
+          color: white
+          text-size: 12
+          formula: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot} 33.8639 *"
+          text: "${formula} hPa"
+          text-format: "{0:.0f}"
+
+  - index: 6
+    name: GS
+    type: none
+    label: GS/TAS
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          text-size: 20
+          formula: "${sim/cockpit2/gauges/indicators/ground_speed_kt}"
+          text: "${formula}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+        B1:
+          color: white
+          text-size: 12
+          formula: "${sim/cockpit2/gauges/indicators/true_airspeed_kts_pilot}"
+          text: "TAS ${formula}"
+          text-format: "{0:.0f}"
+
+  - index: 7
+    type: page
+    page: tuning
+    label: NEXT
+    label-size: 10
+    text: BUGS
+    text-size: 16
+    text-font: D-DINCondensed-Bold.otf
+    text-color: violet

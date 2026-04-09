@@ -8,7 +8,7 @@ buttons:
     label-size: 10
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (25, 25, 25)
@@ -21,7 +21,7 @@ buttons:
     label-size: 10
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (25, 25, 25)
@@ -34,7 +34,7 @@ buttons:
     label-size: 10
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (25, 25, 25)
@@ -47,7 +47,7 @@ buttons:
     label-size: 10
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (25, 25, 25)
@@ -60,7 +60,7 @@ buttons:
     label-size: 10
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (25, 25, 25)
@@ -73,7 +73,7 @@ buttons:
     label-size: 10
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (25, 25, 25)
@@ -86,7 +86,7 @@ buttons:
     label-size: 10
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (25, 25, 25)
@@ -99,7 +99,7 @@ buttons:
     label-size: 10
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (25, 25, 25)

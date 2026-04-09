@@ -1,0 +1,143 @@
+name: approach
+fill-empty-keys: false
+
+buttons:
+  - index: 0
+    type: page
+    page: main
+    label: HOME
+    label-size: 10
+    text: HOME
+    text-size: 15
+    text-font: D-DINCondensed-Bold.otf
+    text-color: white
+
+  - index: 1
+    name: BARO
+    type: none
+    label: BARO
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: gold
+          text-size: 16
+          formula: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}"
+          text: "${formula} in"
+          text-format: "{0:.2f}"
+        B1:
+          color: white
+          text-size: 12
+          formula: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot} 33.8639 *"
+          text: "${formula} hPa"
+          text-format: "{0:.0f}"
+
+  - index: 2
+    name: APR
+    type: push
+    command: sim/autopilot/approach
+    label: APR
+    label-size: 10
+    annunciator:
+      annunciator-style: v
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/approach_status}
+        B1:
+          text: APR
+          text-size: 18
+          text-font: D-DINCondensed-Bold.otf
+          formula: "1"
+
+  - index: 3
+    name: NAV
+    type: push
+    command: sim/autopilot/gpss
+    label: NAV/GPS
+    label-size: 10
+    annunciator:
+      annunciator-style: v
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          led: bars
+          formula: ${sim/cockpit2/autopilot/gpss_status} 2 eq
+        B1:
+          text: NAV
+          text-size: 18
+          text-font: D-DINCondensed-Bold.otf
+          formula: "1"
+
+  - index: 4
+    name: ALT BUG
+    type: none
+    label: ALT SEL
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: lime
+          text-size: 18
+          formula: "${sim/cockpit2/autopilot/altitude_dial_ft}"
+          text: "${formula}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+        B1:
+          color: white
+          text-size: 10
+          formula: "${sim/cockpit2/autopilot/altitude_hold_status}"
+          text: "HOLD ${formula}"
+          text-format: "{0:.0f}"
+
+  - index: 5
+    name: VS BUG
+    type: none
+    label: VS BUG
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+        B0:
+          color: yellow
+          text-size: 18
+          formula: "${sim/cockpit/autopilot/vertical_velocity} 100 /"
+          text: "${formula}"
+          text-font: Seven Segment.ttf
+          text-format: "{0:.0f}"
+        B1:
+          color: white
+          text-size: 10
+          formula: "${sim/cockpit2/gauges/indicators/vvi_fpm_pilot}"
+          text: "ACT ${formula}"
+          text-format: "{0:.0f}"
+
+  - index: 6
+    type: page
+    page: radio
+    label: COM/NAV
+    label-size: 10
+    text: RADIO
+    text-size: 14
+    text-font: D-DINCondensed-Bold.otf
+    text-color: gold
+
+  - index: 7
+    type: page
+    page: autopilot
+    label: AP PANEL
+    label-size: 10
+    text: AP
+    text-size: 16
+    text-font: D-DINCondensed-Bold.otf
+    text-color: lime

@@ -167,7 +167,7 @@ buttons:
   label-color: Gold
   text: "GPS"
   text-color: lime
-  text-size: 24
+  text-size: 9
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 24)

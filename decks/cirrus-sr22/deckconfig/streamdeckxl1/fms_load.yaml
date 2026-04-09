@@ -117,7 +117,7 @@ buttons:
   label-color: Gold
   text: "\uf0aa"
   text-font: fontawesome.otf
-  text-size: 28
+  text-size: 11
   text-color: white
   vibrate: SHORT
   command: cockpitdecks/fms_browser/list_scroll_up
@@ -130,7 +130,7 @@ buttons:
   label-color: Gold
   text: "\uf0ab"
   text-font: fontawesome.otf
-  text-size: 28
+  text-size: 11
   text-color: white
   vibrate: SHORT
   command: cockpitdecks/fms_browser/list_scroll_down
@@ -143,7 +143,7 @@ buttons:
   label-color: Gold
   text: "\uf060"
   text-font: fontawesome.otf
-  text-size: 28
+  text-size: 11
   text-color: white
   vibrate: SHORT
   command: cockpitdecks/fms_browser/previous
@@ -156,7 +156,7 @@ buttons:
   label-color: Gold
   text: "\uf061"
   text-font: fontawesome.otf
-  text-size: 28
+  text-size: 11
   text-color: white
   vibrate: SHORT
   command: cockpitdecks/fms_browser/next
@@ -268,7 +268,7 @@ buttons:
   label-color: lime
   text: "\uf0c7"
   text-font: fontawesome.otf
-  text-size: 28
+  text-size: 11
   text-color: lime
   vibrate: SHORT
   command: cockpitdecks/fms_browser/load
@@ -281,7 +281,7 @@ buttons:
   label-color: Gold
   text: "\uf021"
   text-font: fontawesome.otf
-  text-size: 28
+  text-size: 11
   text-color: white
   vibrate: SHORT
   command: cockpitdecks/fms_browser/refresh
@@ -294,7 +294,7 @@ buttons:
   label-color: Gold
   text: "\uf0dc"
   text-font: fontawesome.otf
-  text-size: 26
+  text-size: 10
   text-color: white
   vibrate: SHORT
   command: cockpitdecks/fms_browser/list_sort_toggle_key
@@ -307,7 +307,7 @@ buttons:
   label-color: Gold
   text: "\uf161"
   text-font: fontawesome.otf
-  text-size: 26
+  text-size: 10
   text-color: white
   vibrate: SHORT
   command: cockpitdecks/fms_browser/list_sort_toggle_direction

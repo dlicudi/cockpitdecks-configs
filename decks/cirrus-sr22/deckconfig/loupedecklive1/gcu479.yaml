@@ -3,139 +3,143 @@ includes: pager,encoders/gcu479
 
 buttons:
 
-  - index: 0
-    type: push
-    name: DIRECT
-    text: DIRECT
-    text-color: white
-    text-size: 24
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (20, 20, 20)
-    command: sim/GPS/gcu478/direct
+- index: 0
+  type: push
+  name: DIRECT
+  text: DIRECT
+  text-color: white
+  text-size: 9
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 20)
+  command: sim/GPS/gcu478/direct
 
-  - index: 1
-    type: push
-    name: MENU
-    text: MENU
-    text-color: white
-    text-size: 24
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (20, 20, 20)
-    command: sim/GPS/gcu478/menu
+- index: 1
+  type: push
+  name: MENU
+  text: MENU
+  text-color: white
+  text-size: 9
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 20)
+  command: sim/GPS/gcu478/menu
 
-  - index: 2
-    type: push
-    name: FPL
-    text: FPL
-    text-color: white
-    text-size: 24
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (20, 20, 20)
-    command: sim/GPS/gcu478/fpl
+- index: 2
+  type: push
+  name: FPL
+  text: FPL
+  text-color: white
+  text-size: 9
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 20)
+  command: sim/GPS/gcu478/fpl
 
-  - index: 3
-    type: push
-    name: PROC
-    text: PROC
-    text-color: white
-    text-size: 24
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (20, 20, 20)
-    command: sim/GPS/gcu478/proc
+- index: 3
+  type: push
+  name: PROC
+  text: PROC
+  text-color: white
+  text-size: 9
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 20)
+  command: sim/GPS/gcu478/proc
 
-  - index: 4
-    type: push
-    name: CLR
-    text: CLR
-    text-color: white
-    text-size: 24
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (20, 20, 20)
-    command: sim/GPS/gcu478/clr
+- index: 4
+  type: push
+  name: CLR
+  text: CLR
+  text-color: white
+  text-size: 9
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 20)
+  command: sim/GPS/gcu478/clr
 
-  - index: 5
-    type: push
-    name: ENT
-    text: ENT
-    text-color: white
-    text-size: 24
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (20, 20, 20)
-    command: sim/GPS/gcu478/ent
+- index: 5
+  type: push
+  name: ENT
+  text: ENT
+  text-color: white
+  text-size: 9
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 20)
+  command: sim/GPS/gcu478/ent
 
-  - index: 6
-    type: push
-    name: HOME
-    text: HOME
-    text-color: white
-    text-size: 24
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (20, 20, 20)
-    command: sim/GPS/gcu479/home
+- index: 6
+  type: push
+  name: HOME
+  text: HOME
+  text-color: white
+  text-size: 9
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 20)
+  command: sim/GPS/gcu479/home
 
-  - index: 7
-    type: push
-    name: FF
-    text: <->
-    text-color: white
-    text-size: 24
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (20, 20, 20)
-    command: sim/GPS/gcu478/ff
+- index: 7
+  type: push
+  name: FF
+  text: <->
+  text-color: white
+  text-size: 9
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (20, 20, 20)
+  command: sim/GPS/gcu478/ff
 
 
-  - index: 8
-    type: push
-    command: sim/GPS/gcu478/com
-    label: COM
-    annunciator:
-      model: A
-      size: medium
+- index: 8
+  type: push
+  command: sim/GPS/gcu478/com
+  label: COM
+  annunciator:
+    model: A
+    size: medium
+    parts:
       A0:
         led: dot
         color: deepskyblue
         formula: ${sim/cockpit/g1000/gcu478_input_sel} 2 eq
 
-  - index: 9
-    type: push
-    command: sim/GPS/gcu478/nav
-    label: NAV
-    annunciator:
-      model: A
-      size: medium
+- index: 9
+  type: push
+  command: sim/GPS/gcu478/nav
+  label: NAV
+  annunciator:
+    model: A
+    size: medium
+    parts:
       A0:
         led: dot
         color: deepskyblue
         formula: ${sim/cockpit/g1000/gcu478_input_sel} 3 eq
 
-  - index: 10
-    type: push
-    command: sim/GPS/gcu479/crs
-    longpush: sim/autopilot/hsi_toggle_nav
-    label: CRS
-    annunciator:
-      model: A
-      size: medium
+- index: 10
+  type: push
+  command: sim/GPS/gcu479/crs
+  longpush: sim/autopilot/hsi_toggle_nav
+  label: CRS
+  annunciator:
+    model: A
+    size: medium
+    parts:
       A0:
         led: dot
         color: deepskyblue
         formula: ${sim/cockpit/g1000/gcu478_input_sel} 4 eq
 
-  - index: 11
-    type: push
-    command: sim/GPS/gcu478/xpdr
-    label: XPDR
-    annunciator:
-      model: A
-      size: medium
+- index: 11
+  type: push
+  command: sim/GPS/gcu478/xpdr
+  label: XPDR
+  annunciator:
+    model: A
+    size: medium
+    parts:
       A0:
         led: dot
         color: deepskyblue

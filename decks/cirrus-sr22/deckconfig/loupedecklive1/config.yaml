@@ -3,7 +3,7 @@ cockpit-color: (64, 64, 64)
 default-label-color: black
 default-label-font: D-DIN.otf
 default-label-size: 9
-default-text-size: 24
+default-text-size: 9
 default-label-position: ct
 home-page-name: index
 default-vibrate: SHORT

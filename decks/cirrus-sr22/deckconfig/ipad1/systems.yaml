@@ -1,0 +1,186 @@
+name: systems
+fill-empty-keys: false
+
+buttons:
+  - index: 0
+    type: page
+    page: main
+    label: HOME
+    label-size: 16
+    text: HOME
+    text-size: 13
+    text-font: D-DINCondensed-Bold.otf
+    text-color: white
+
+  - index: 1
+    type: push
+    command: sim/electrical/battery_1_toggle
+    label: BAT 1
+    label-size: 16
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit2/electrical/battery_on[0]} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
+
+  - index: 2
+    type: push
+    command: sim/systems/avionics_toggle
+    label: AVIONICS
+    label-size: 16
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit/electrical/avionics_on} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit/electrical/avionics_on} 1 eq
+
+  - index: 3
+    type: onoff
+    set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
+    label: BOOST PUMP
+    label-size: 16
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 1 eq
+
+  - index: 4
+    type: push
+    command: sim/lights/nav_lights_toggle
+    label: NAV
+    label-size: 16
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
+
+  - index: 5
+    type: push
+    command: sim/lights/strobe_lights_toggle
+    label: STROBE
+    label-size: 16
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
+
+  - index: 6
+    type: push
+    command: sim/lights/landing_01_light_tog
+    label: LAND
+    label-size: 16
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq
+
+  - index: 7
+    type: push
+    command: sim/ice/pitot_heat0_tog
+    label: PITOT HEAT
+    label-size: 16
+    annunciator:
+      model: B
+      size: medium
+      parts:
+        B0:
+          text: "OFF"
+          color: darkorange
+          formula: ${sim/cockpit/switches/pitot_heat_on} 0 eq
+        B1:
+          text: "ON"
+          color: deepskyblue
+          framed: true
+          formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
+
+  - index: 8
+    type: push
+    command: sim/engines/mixture_down
+    label: MIXTURE -
+    label-size: 16
+    text: LEAN
+    text-size: 13
+    text-font: D-DINCondensed-Bold.otf
+    text-color: orange
+
+  - index: 9
+    type: push
+    command: sim/engines/mixture_max
+    label: MIX FULL
+    label-size: 16
+    text: RICH
+    text-size: 13
+    text-font: D-DINCondensed-Bold.otf
+    text-color: lime
+
+  - index: 10
+    type: page
+    page: engine
+    label: ENGINE
+    label-size: 16
+    text: EIS
+    text-size: 14
+    text-font: D-DINCondensed-Bold.otf
+    text-color: orange
+
+  - index: 11
+    type: page
+    page: tuning
+    label: TUNING
+    label-size: 16
+    text: BUGS
+    text-size: 13
+    text-font: D-DINCondensed-Bold.otf
+    text-color: violet

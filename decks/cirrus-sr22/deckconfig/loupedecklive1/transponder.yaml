@@ -13,7 +13,7 @@ buttons:
   type: push
   text: ${formula}
   text-format: "{:01.0f}"
-  text-size: 50
+  text-size: 19
   text-font: Segment7Standard.otf
   text-color: Lime
   text-bg-color: Black
@@ -30,7 +30,7 @@ buttons:
   type: push
   text: ${formula}
   text-format: "{:01.0f}"
-  text-size: 50
+  text-size: 19
   text-font: Segment7Standard.otf
   text-color: Lime
   text-bg-color: Black
@@ -47,7 +47,7 @@ buttons:
   type: push
   text: ${formula}
   text-format: "{:01.0f}"
-  text-size: 50
+  text-size: 19
   text-font: Segment7Standard.otf
   text-color: Lime
   text-bg-color: Black
@@ -64,7 +64,7 @@ buttons:
   type: push
   text: ${formula}
   text-format: "{:01.0f}"
-  text-size: 50
+  text-size: 19
   text-font: Segment7Standard.otf
   text-color: Lime
   text-bg-color: Black
@@ -84,7 +84,7 @@ buttons:
         formula: ${sim/cockpit2/radios/actuators/transponder_mode} 2 eq
       B1:
         text: ON
-        text-size: 60
+        text-size: 23
         text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/transponder/transponder_on
@@ -103,7 +103,7 @@ buttons:
         formula: ${sim/cockpit2/radios/actuators/transponder_mode} 0 eq
       B1:
         text: OFF
-        text-size: 60
+        text-size: 23
         text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/transponder/transponder_off
@@ -122,7 +122,7 @@ buttons:
         formula: ${sim/cockpit2/radios/actuators/transponder_mode} 1 eq
       B1:
         text: STBY
-        text-size: 60
+        text-size: 23
         text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/transponder/transponder_standby
@@ -141,7 +141,7 @@ buttons:
         formula: ${sim/cockpit2/radios/actuators/transponder_mode} 3 eq
       B1:
         text: ALT
-        text-size: 60
+        text-size: 23
         text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/transponder/transponder_alt
@@ -161,7 +161,7 @@ buttons:
         formula: ${sim/cockpit/radios/transponder_id}
       B1:
         text: IDENT
-        text-size: 60
+        text-size: 23
         text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/transponder/transponder_ident
@@ -180,7 +180,7 @@ buttons:
         formula: ${sim/cockpit2/radios/actuators/transponder_mode} 4 eq
       B1:
         text: TEST
-        text-size: 60
+        text-size: 23
         text-font: D-DIN-Bold.otf
         formula: "1"
   command: sim/transponder/transponder_test

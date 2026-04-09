@@ -4,15 +4,16 @@ name: lights
 
 buttons:
 
-  - index: 0
-    type: push
-    command: sim/lights/nav_lights_toggle
-    label: NAV
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
+- index: 0
+  type: push
+  command: sim/lights/nav_lights_toggle
+  label: NAV
+  label-color: black
+  label-size: 9
+  annunciator:
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -23,15 +24,16 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
 
-  - index: 1
-    type: push
-    command: sim/lights/strobe_lights_toggle
-    label: STROBE
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
+- index: 1
+  type: push
+  command: sim/lights/strobe_lights_toggle
+  label: STROBE
+  label-color: black
+  label-size: 9
+  annunciator:
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -42,15 +44,16 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
 
-  - index: 2
-    type: push
-    label: LAND
-    label-color: black
-    label-size: 9
-    command: sim/lights/landing_01_light_tog
-    annunciator:
-      model: B
-      size: medium
+- index: 2
+  type: push
+  label: LAND
+  label-color: black
+  label-size: 9
+  command: sim/lights/landing_01_light_tog
+  annunciator:
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -61,15 +64,16 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq
 
-  - index: 3
-    type: push
-    label: ICE
-    label-color: black
-    label-size: 9
-    command: sim/lights/generic_01_light_tog
-    annunciator:
-      model: B
-      size: medium
+- index: 3
+  type: push
+  label: ICE
+  label-color: black
+  label-size: 9
+  command: sim/lights/generic_01_light_tog
+  annunciator:
+    model: B
+    size: medium
+    parts:
       B0:
         text: "OFF"
         color: darkorange
@@ -80,13 +84,13 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 1 eq
 
-  - index: 11
-    name: Switches
-    type: page
-    page: switches
-    label: SWITCHES
-    label-size: 12
-    text: 
-    text-font: fontawesome.otf
-    text-size: 32
-    text-color: Gold
+- index: 11
+  name: Switches
+  type: page
+  page: switches
+  label: SWITCHES
+  label-size: 12
+  text: 
+  text-font: fontawesome.otf
+  text-size: 12
+  text-color: Gold

@@ -11,13 +11,21 @@ decks:
     type: Stream Deck XL
     layout: streamdeckxl1
     brightness: 70
-  - name: Virtual Streamdeck XL 1
-    type: Virtual Streamdeck XL
-    layout: streamdeckxl1
-  - name: Virtual Loupedeck Live 1
-    type: Virtual LoupedeckLive
-    layout: loupedecklive1
+  # - name: Virtual Streamdeck XL 1
+  #   type: Virtual Streamdeck XL
+  #   layout: streamdeckxl1
+  # - name: Virtual Loupedeck Live 1
+  #   type: Virtual LoupedeckLive
+  #   layout: loupedecklive1
+  - name: sr22-ipad
+    type: SR22 iPad
+    layout: ipad1
 description: Decks for Cirrus SR22
+
+web-deck-defaults:
+    highlight: "#ffffff10"
+    flash: "#0f80ffb0"
+    flash_duration: 100
 
 
 # cache-icon: True

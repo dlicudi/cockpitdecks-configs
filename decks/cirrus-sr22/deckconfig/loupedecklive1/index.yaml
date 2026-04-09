@@ -12,7 +12,7 @@ buttons:
     label-bg-color: Black
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
 
@@ -24,7 +24,7 @@ buttons:
     label-color: Gold
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
 
@@ -36,7 +36,7 @@ buttons:
     label-color: Gold
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
 
@@ -48,7 +48,7 @@ buttons:
     label-color: Gold
     text: "\uf0c2"
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
 
@@ -60,7 +60,7 @@ buttons:
     label-color: Gold
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
 
@@ -72,7 +72,7 @@ buttons:
     label-color: Gold
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
 
@@ -84,7 +84,7 @@ buttons:
     label-color: Gold
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
 
@@ -96,7 +96,7 @@ buttons:
     label-color: Gold
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
 
@@ -108,7 +108,7 @@ buttons:
     label-color: Gold
     text: "\uf030"
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
 
@@ -120,7 +120,7 @@ buttons:
     label-color: Gold
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
 
@@ -132,7 +132,7 @@ buttons:
     label-color: Gold
     text: "\uf279"
     text-color: khaki
-    text-size: 40
+    text-size: 15
     text-font: fontawesome.otf
     text-position: cm
 

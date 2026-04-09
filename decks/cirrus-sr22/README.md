@@ -20,6 +20,7 @@ This is one of the most complete aircraft configs in this repository.
 - `deckconfig/loupedecklive1/`: main Loupedeck Live layout
 - `deckconfig/streamdeckxl1/`: Stream Deck XL layout
 - `deckconfig/webdeck1/`: minimal web deck
+- `deckconfig/ipad1/`: iPad-oriented web deck
 - `deckconfig/resources/`: local resources used by the config
 - `deckconfig/secret.yaml.dist`: example local secret file
 
@@ -54,8 +55,9 @@ Defined in `deckconfig/config.yaml`.
 | `loupedecklive1` | Loupedeck Live | 23 |
 | `streamdeckxl1` | Stream Deck XL | 16 |
 | `webdeck1` | Web deck | 1 |
+| `ipad1` | SR22 iPad web deck | 10 |
 
-Virtual Loupedeck Live and Virtual Stream Deck XL variants are also registered in `config.yaml`.
+Virtual Loupedeck Live, Virtual Stream Deck XL, and the `SR22 iPad` virtual web deck are also registered in `config.yaml`.
 
 ## Pages
 
@@ -107,6 +109,19 @@ Virtual Loupedeck Live and Virtual Stream Deck XL variants are also registered i
 ### Web Deck
 
 - `main`
+
+### iPad Web Deck
+
+- `main`
+- `startup`
+- `taxi`
+- `approach`
+- `pfd`
+- `autopilot`
+- `radio`
+- `engine`
+- `tuning`
+- `systems`
 
 ## Configuration State
 

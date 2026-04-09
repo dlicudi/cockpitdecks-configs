@@ -3,103 +3,104 @@ includes: includes/pagerfull
 
 buttons:
 
-  - index: 0
-    type: push
-    name: DIRECT
-    text: DIRECT
-    text-color: khaki
-    text-size: 24
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-    command: sim/GPS/gcu478/direct
+- index: 0
+  type: push
+  name: DIRECT
+  text: DIRECT
+  text-color: khaki
+  text-size: 9
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/GPS/gcu478/direct
 
-  - index: 1
-    type: push
-    name: MENU
-    text: MENU
-    text-color: khaki
-    text-size: 24
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-    command: sim/GPS/gcu478/menu
+- index: 1
+  type: push
+  name: MENU
+  text: MENU
+  text-color: khaki
+  text-size: 9
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/GPS/gcu478/menu
 
-  - index: 2
-    type: push
-    name: FPL
-    text: FPL
-    text-color: khaki
-    text-size: 24
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-    command: sim/GPS/gcu478/fpl
+- index: 2
+  type: push
+  name: FPL
+  text: FPL
+  text-color: khaki
+  text-size: 9
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/GPS/gcu478/fpl
 
-  - index: 3
-    type: push
-    name: PROC
-    text: PROC
-    text-color: khaki
-    text-size: 24
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-    command: sim/GPS/gcu478/proc
+- index: 3
+  type: push
+  name: PROC
+  text: PROC
+  text-color: khaki
+  text-size: 9
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/GPS/gcu478/proc
 
-  - index: 4
-    type: push
-    name: CLR
-    text: CLR
-    text-color: khaki
-    text-size: 24
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-    command: sim/GPS/gcu478/clr
+- index: 4
+  type: push
+  name: CLR
+  text: CLR
+  text-color: khaki
+  text-size: 9
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/GPS/gcu478/clr
 
-  - index: 5
-    type: push
-    name: ENT
-    text: ENT
-    text-color: khaki
-    text-size: 24
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-    command: sim/GPS/gcu478/ent
+- index: 5
+  type: push
+  name: ENT
+  text: ENT
+  text-color: khaki
+  text-size: 9
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/GPS/gcu478/ent
 
-  - index: 6
-    type: push
-    name: HOME
-    text: HOME
-    text-color: khaki
-    text-size: 24
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-    command: sim/GPS/gcu479/home
+- index: 6
+  type: push
+  name: HOME
+  text: HOME
+  text-color: khaki
+  text-size: 9
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/GPS/gcu479/home
 
-  - index: 7
-    type: push
-    name: FF
-    text: <->
-    text-color: khaki
-    text-size: 24
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-    command: sim/GPS/gcu478/ff
+- index: 7
+  type: push
+  name: FF
+  text: <->
+  text-color: khaki
+  text-size: 9
+  text-font: D-DINCondensed.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  command: sim/GPS/gcu478/ff
 
-  - index: 8
-    type: push
-    command: sim/GPS/gcu478/com
-    label: COM
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
+- index: 8
+  type: push
+  command: sim/GPS/gcu478/com
+  label: COM
+  label-color: black
+  label-size: 9
+  annunciator:
+    model: B
+    size: medium
+    parts:
       B0:
         formula: "${sim/cockpit2/radios/actuators/com1_standby_frequency_hz_833} 1000 /"
         text: "${formula}"
@@ -111,15 +112,16 @@ buttons:
         framed: true
         formula: ${sim/cockpit/g1000/gcu478_input_sel} 2 eq
 
-  - index: 9
-    type: push
-    command: sim/GPS/gcu478/nav
-    label: NAV
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
+- index: 9
+  type: push
+  command: sim/GPS/gcu478/nav
+  label: NAV
+  label-color: black
+  label-size: 9
+  annunciator:
+    model: B
+    size: medium
+    parts:
       B0:
         formula: "${sim/cockpit/radios/nav1_stdby_freq_hz} 100 /"
         text: "${formula}"
@@ -131,16 +133,17 @@ buttons:
         framed: true
         formula: ${sim/cockpit/g1000/gcu478_input_sel} 3 eq
 
-  - index: 10
-    type: push
-    command: sim/GPS/gcu479/crs
-    longpush: sim/autopilot/hsi_toggle_nav
-    label: CRS
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: E
-      size: medium
+- index: 10
+  type: push
+  command: sim/GPS/gcu479/crs
+  longpush: sim/autopilot/hsi_toggle_nav
+  label: CRS
+  label-color: black
+  label-size: 9
+  annunciator:
+    model: E
+    size: medium
+    parts:
       E0:
         text: "${sim/cockpit/radios/nav1_obs_degm}°"
         text-format: "{:01.0f}"
@@ -157,15 +160,16 @@ buttons:
         framed: true
         formula: ${sim/cockpit/g1000/gcu478_input_sel} 4 eq
 
-  - index: 11
-    type: push
-    command: sim/GPS/gcu478/xpdr
-    label: XPDR
-    label-color: black
-    label-size: 9
-    annunciator:
-      model: B
-      size: medium
+- index: 11
+  type: push
+  command: sim/GPS/gcu478/xpdr
+  label: XPDR
+  label-color: black
+  label-size: 9
+  annunciator:
+    model: B
+    size: medium
+    parts:
       B0:
         text: "${sim/cockpit2/radios/actuators/transponder_code}"
         text-format: "{:01.0f}"

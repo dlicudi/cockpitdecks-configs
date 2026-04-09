@@ -17,7 +17,7 @@ buttons:
       parts:
         A0:
           color: lime
-          text-size: 80
+          text-size: 30
           formula: "${sim/flightmodel/engine/ENGN_power[0]} 231167 / 100 *"
           text: "${formula}%"
           text-font: Segment7Standard.otf
@@ -35,7 +35,7 @@ buttons:
       parts:
         A0:
           color: lime
-          text-size: 80
+          text-size: 30
           formula: "1"
           text: "${sim/cockpit2/engine/indicators/prop_speed_rpm[0]}"
           text-font: Segment7Standard.otf
@@ -53,7 +53,7 @@ buttons:
       parts:
         A0:
           color: lime
-          text-size: 80
+          text-size: 30
           formula: "${sim/cockpit2/engine/indicators/MPR_in_hg[0]}"
           text: "${formula}"
           text-font: Segment7Standard.otf
@@ -71,7 +71,7 @@ buttons:
       parts:
         A0:
           color: yellow
-          text-size: 80
+          text-size: 30
           formula: "${sim/flightmodel/engine/ENGN_FF_[0]} 0.69 / 0.264172 * 3600 *"
           text: "${formula}"
           text-font: Segment7Standard.otf
@@ -89,7 +89,7 @@ buttons:
       parts:
         A0:
           color: yellow
-          text-size: 80
+          text-size: 30
           formula: "${sim/cockpit2/engine/indicators/EGT_deg_cel[0]} 9 * 5 / 32 +"
           text: "${formula}"
           text-font: Segment7Standard.otf
@@ -107,7 +107,7 @@ buttons:
       parts:
         A0:
           color: yellow
-          text-size: 80
+          text-size: 30
           formula: "${sim/cockpit2/engine/indicators/CHT_deg_C[0]} 9 * 5 / 32 +"
           text: "${formula}"
           text-font: Segment7Standard.otf
@@ -125,7 +125,7 @@ buttons:
       parts:
         A0:
           color: yellow
-          text-size: 80
+          text-size: 30
           formula: "${sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]} 9 * 5 / 32 +"
           text: "${formula}"
           text-font: Segment7Standard.otf
@@ -143,7 +143,7 @@ buttons:
       parts:
         A0:
           color: yellow
-          text-size: 90
+          text-size: 34
           formula: "${sim/cockpit2/engine/indicators/oil_pressure_psi[0]}"
           text: "${formula}"
           text-font: Segment7Standard.otf
@@ -164,12 +164,12 @@ buttons:
       parts:
         B0:
           color: lime
-          text-size: 32
+          text-size: 12
           formula: "${laminar/sr22/fuel_selector_pos} 1 eq"
           led: bar
         B1:
           color: yellow
-          text-size: 28
+          text-size: 11
           formula: "${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn"
           text: "${formula} gal"
           text-format: "{0:.1f}"
@@ -187,12 +187,12 @@ buttons:
       parts:
         B0:
           color: lime
-          text-size: 32
+          text-size: 12
           formula: "${laminar/sr22/fuel_selector_pos} 2 eq"
           led: bar
         B1:
           color: yellow
-          text-size: 28
+          text-size: 11
           formula: "${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn"
           text: "${formula} gal"
           text-format: "{0:.1f}"
@@ -209,13 +209,13 @@ buttons:
       parts:
         B0:
           color: yellow
-          text-size: 40
+          text-size: 15
           formula: "${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn"
           text: "L ${formula}"
           text-format: "{0:.1f}"
         B1:
           color: yellow
-          text-size: 40
+          text-size: 15
           formula: "${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn"
           text: "R ${formula}"
           text-format: "{0:.1f}"
@@ -232,7 +232,7 @@ buttons:
       parts:
         A0:
           color: green
-          text-size: 80
+          text-size: 30
           formula: "${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[1]} + ${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3 roundn 0.000001 + / 3600 / 1 roundn"
           text: "${formula} hrs"
           text-font: Segment7Standard.otf
@@ -250,7 +250,7 @@ buttons:
       parts:
         A0:
           color: white
-          text-size: 80
+          text-size: 30
           formula: "${sim/cockpit2/fuel/fuel_totalizer_sum_kg} 0.264172 * 2 roundn"
           text: "${formula} g"
           text-font: Segment7Standard.otf
@@ -268,7 +268,7 @@ buttons:
       parts:
         A0:
           color: lime
-          text-size: 100
+          text-size: 38
           formula: "${sim/flightmodel/engine/ENGN_thro[0]} 100 *"
           text: "${formula}%"
           text-font: Segment7Standard.otf
@@ -286,7 +286,7 @@ buttons:
       parts:
         A0:
           color: lime
-          text-size: 100
+          text-size: 38
           formula: "${sim/flightmodel/engine/ENGN_mixt[0]} 100 *"
           text: "${formula}%"
           text-font: Segment7Standard.otf
@@ -304,25 +304,25 @@ buttons:
       parts:
         F0:
           color: Lime
-          text-size: 30
+          text-size: 11
           text: "${formula}\nBAT A"
           text-format: "{0:.1f}"
           formula: "${sim/cockpit2/electrical/battery_amps[0]}"
         F1:
           color: deepskyblue
-          text-size: 28
+          text-size: 11
           text: "ALT1"
           framed: true
           formula: "${sim/cockpit2/electrical/generator_on[0]} 1 eq"
         F2:
           color: deepskyblue
-          text-size: 28
+          text-size: 11
           text: "ALT2"
           framed: true
           formula: "${sim/cockpit2/electrical/generator_on[1]} 1 eq"
         F3:
           color: deepskyblue
-          text-size: 28
+          text-size: 11
           text: "AVNX"
           framed: true
           formula: "${sim/cockpit/electrical/avionics_on} 1 eq"
@@ -341,7 +341,7 @@ buttons:
       parts:
         A0:
           color: yellow
-          text-size: 90
+          text-size: 34
           formula: "1"
           text: "${sim/cockpit/misc/vacuum}"
           text-font: Segment7Standard.otf
@@ -359,13 +359,13 @@ buttons:
       parts:
         B0:
           color: lime
-          text-size: 48
+          text-size: 18
           formula: "1"
           text: "${sim/cockpit2/electrical/bus_volts[0]}"
           text-format: "{0:.1f}"
         B1:
           color: lime
-          text-size: 48
+          text-size: 18
           formula: "1"
           text: "${sim/cockpit2/electrical/bus_volts[1]}"
           text-format: "{0:.1f}"
@@ -382,24 +382,24 @@ buttons:
       parts:
         F0:
           color: Gold
-          text-size: 30
+          text-size: 11
           text: "${formula}\nQNH"
           text-format: "{0:.2f}"
           formula: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}"
         F1:
           color: White
-          text-size: 30
+          text-size: 11
           text: "${formula}\nhPa"
           text-format: "{0:.0f}"
           formula: "${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot} 33.8639 *"
         F2:
           color: White
-          text-size: 30
+          text-size: 11
           text: "${sim/cockpit2/clock_timer/hobbs_time_hours}:${sim/cockpit2/clock_timer/hobbs_time_minutes}\nHOBBS"
           formula: "1"
         F3:
           color: Turquoise
-          text-size: 30
+          text-size: 11
           text: "${sim/cockpit/radios/transponder_code}\nXPDR"
           text-format: "{:04.0f}"
           formula: "1"
