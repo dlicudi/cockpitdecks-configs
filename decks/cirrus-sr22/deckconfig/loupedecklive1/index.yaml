@@ -1,142 +1,130 @@
 name: index
 includes: pager,encoders/fcu
-
 buttons:
-
-  - index: 0
-    type: page
-    vibrate: SHORT
-    page: pfi
-    label: PFI
-    label-color: Gold
-    label-bg-color: Black
-    text: 
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-
-  - index: 1
-    type: page
-    vibrate: SHORT
-    page: switches_master
-    label: SWITCHES
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-
-  - index: 2
-    type: page
-    vibrate: SHORT
-    page: switches_icing
-    label: ICING
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-
-  - index: 3
-    type: page
-    vibrate: SHORT
-    page: weather
-    label: WEATHER
-    label-color: Gold
-    text: "\uf0c2"
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-
-  - index: 4
-    type: page
-    vibrate: SHORT
-    page: fcu
-    label: FCU
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-
-  - index: 5
-    type: page
-    vibrate: SHORT
-    page: gcu479
-    label: GCU-479
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-
-  - index: 6
-    type: page
-    vibrate: SHORT
-    page: radio_com1
-    label: RADIO
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-
-  - index: 7
-    type: page
-    vibrate: SHORT
-    page: engine
-    label: ENGINE
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-
-  - index: 8
-    type: page
-    vibrate: SHORT
-    page: views
-    label: VIEWS
-    label-color: Gold
-    text: "\uf030"
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-
-  - index: 9
-    type: page
-    vibrate: SHORT
-    page: transponder
-    label: XPDR
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-
-  - index: 10
-    type: page
-    vibrate: SHORT
-    page: fms_nav
-    label: FMS
-    label-color: Gold
-    text: "\uf279"
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-
-  - index: 11
-    type: none
-    label: ""
-    text: ""
+- index: 0
+  type: page
+  vibrate: SHORT
+  page: pfi
+  label: PFI
+  label-color: Gold
+  label-bg-color: Black
+  text: "\uF3FD"
+  text-color: khaki
+  text-size: 38
+  text-font: fontawesome.otf
+  text-position: cm
+  label-size: 12
+- index: 1
+  type: page
+  vibrate: SHORT
+  page: switches_master
+  label: SWITCHES
+  label-color: Gold
+  text: "\uF204"
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+- index: 2
+  type: page
+  vibrate: SHORT
+  page: switches_icing
+  label: ICING
+  label-color: Gold
+  text: "\uF2DC"
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+- index: 3
+  type: page
+  vibrate: SHORT
+  page: weather
+  label: WEATHER
+  label-color: Gold
+  text: "\uF0C2"
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+- index: 4
+  type: page
+  vibrate: SHORT
+  page: fcu
+  label: FCU
+  label-color: Gold
+  text: "\uE22D"
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+- index: 5
+  type: page
+  vibrate: SHORT
+  page: gcu479
+  label: GCU-479
+  label-color: Gold
+  text: "\uF2DB"
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+- index: 6
+  type: page
+  vibrate: SHORT
+  page: radio_com1
+  label: RADIO
+  label-color: Gold
+  text: "\uE585"
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+- index: 7
+  type: page
+  vibrate: SHORT
+  page: engine
+  label: ENGINE
+  label-color: Gold
+  text: "\uF085"
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+- index: 8
+  type: page
+  vibrate: SHORT
+  page: views
+  label: VIEWS
+  label-color: Gold
+  text: "\uF030"
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+- index: 9
+  type: page
+  vibrate: SHORT
+  page: transponder
+  label: XPDR
+  label-color: Gold
+  text: "\uF8D7"
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+- index: 10
+  type: page
+  vibrate: SHORT
+  page: fms_nav
+  label: FMS
+  label-color: Gold
+  text: "\uF279"
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+- index: 11
+  type: none
+  label: ''
+  text: ''

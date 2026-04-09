@@ -19,7 +19,6 @@ buttons:
         color: deepskyblue
         framed: true
         formula: ${sim/cockpit2/electrical/battery_on[1]} 1 eq
-  name: ''
 - index: 1
   type: push
   vibrate: SHORT
@@ -38,27 +37,7 @@ buttons:
         color: deepskyblue
         framed: true
         formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
-  name: ''
 - index: 2
-  type: push
-  vibrate: SHORT
-  command: sim/electrical/generator_2_toggle
-  label: ALT 2
-  annunciator:
-    model: B
-    size: medium
-    parts:
-      B0:
-        text: 'OFF'
-        color: darkorange
-        formula: ${sim/cockpit2/electrical/generator_on[1]} 0 eq
-      B1:
-        text: 'ON'
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
-  name: ''
-- index: 3
   type: push
   vibrate: SHORT
   command: sim/electrical/generator_1_toggle
@@ -76,7 +55,24 @@ buttons:
         color: deepskyblue
         framed: true
         formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
-  name: ''
+- index: 3
+  type: push
+  vibrate: SHORT
+  command: sim/electrical/generator_2_toggle
+  label: ALT 2
+  annunciator:
+    model: B
+    size: medium
+    parts:
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/generator_on[1]} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
 - index: 4
   type: push
   vibrate: SHORT
@@ -96,12 +92,11 @@ buttons:
         color: deepskyblue
         framed: true
         formula: ${sim/cockpit/electrical/avionics_on} 1 eq
-  name: ''
-- index: 12
+- index: 6
   type: push
   vibrate: SHORT
-  command: sim/engines/mixture_max
-  label: MAX MIXTURE
+  label: LAND
+  command: sim/lights/landing_01_light_tog
   annunciator:
     model: B
     size: medium
@@ -109,14 +104,85 @@ buttons:
       B0:
         text: 'OFF'
         color: darkorange
-        formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 lt
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 0 eq
       B1:
         text: 'ON'
-        color: green
+        color: deepskyblue
         framed: true
-        formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 eq
-  name: ''
-- index: 13
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq
+- index: 7
+  type: push
+  vibrate: SHORT
+  command: sim/lights/strobe_lights_toggle
+  label: STROBE
+  annunciator:
+    model: B
+    size: medium
+    parts:
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
+- index: 8
+  type: push
+  vibrate: SHORT
+  command: sim/lights/nav_lights_toggle
+  label: NAV
+  annunciator:
+    model: B
+    size: medium
+    parts:
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
+- index: 9
+  type: push
+  vibrate: SHORT
+  label: ICE
+  command: sim/lights/generic_13_light_tog
+  annunciator:
+    model: B
+    size: medium
+    parts:
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[12]} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[12]} 1 eq
+- index: 11
+  type: push
+  vibrate: SHORT
+  command: sim/ice/pitot_heat0_tog
+  label: PITOT
+  annunciator:
+    model: B
+    size: medium
+    parts:
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/switches/pitot_heat_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
+- index: 12
   name: ENGINE START
   type: begin-end-command
   vibrate: LONG
@@ -128,49 +194,10 @@ buttons:
   - ENGINE_START.png
   - ENGINE_START_PRESSED.png
   formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
-- index: 14
-  type: push
+- index: 18
+  type: onoff
   vibrate: SHORT
-  command: laminar/sr22/fuel_sel_left_select
-  label: FUEL LEFT
-  annunciator:
-    model: B
-    size: medium
-    parts:
-      B0:
-        led: bar
-        color: grey
-        formula: ${laminar/sr22/fuel_selector_pos} 1 eq not
-      B1:
-        text: SELECTED
-        color: deepskyblue
-        framed: true
-        formula: ${laminar/sr22/fuel_selector_pos} 1 eq
-  name: ''
-- index: 15
-  type: push
-  vibrate: SHORT
-  command: laminar/sr22/fuel_sel_right_select
-  label: FUEL RIGHT
-  annunciator:
-    model: B
-    size: medium
-    parts:
-      B0:
-        led: bar
-        color: grey
-        formula: ${laminar/sr22/fuel_selector_pos} 2 eq not
-      B1:
-        text: SELECTED
-        color: deepskyblue
-        framed: true
-        formula: ${laminar/sr22/fuel_selector_pos} 2 eq
-  name: ''
-- index: 16
-  type: push
-  vibrate: SHORT
-  command: sim/flight_controls/park_brake_valve_toggle
-  label: PARK BRAKE
+  label: PUMP BKUP
   annunciator:
     model: B
     size: medium
@@ -178,18 +205,19 @@ buttons:
       B0:
         text: 'OFF'
         color: darkorange
-        formula: ${sim/cockpit2/controls/park_brake_valve} 0 eq
+        formula: ${sim/cockpit2/ice/tks_backup_pump} 0 eq
       B1:
         text: 'ON'
-        color: red
+        color: deepskyblue
         framed: true
-        formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
-  name: ''
-- index: 17
+        formula: ${sim/cockpit2/ice/tks_backup_pump} 1 eq
+  command-on: sim/ice/tks_bkup_on
+  command-off: sim/ice/tks_bkup_off
+- index: 19
   type: onoff
   vibrate: SHORT
-  set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
-  label: BOOST PUMP
+  formula: ${laminar/sr22/switch/ice_protect}
+  label: ICE PROTECT
   label-size: 10
   annunciator:
     model: B
@@ -198,94 +226,98 @@ buttons:
       B0:
         text: 'OFF'
         color: darkorange
-        formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 0 eq
+        formula: ${laminar/sr22/switch/ice_protect} 0 eq
       B1:
         text: 'ON'
         color: deepskyblue
         framed: true
-        formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 1 eq
-  name: ''
-- index: 18
-  type: push
+        formula: ${laminar/sr22/switch/ice_protect} 1 eq
+  command-on: laminar/sr22/switch/ice_protect_on
+  command-off: laminar/sr22/switch/ice_protect_off
+  initial-value: 0
+- index: 20
+  type: onoff
   vibrate: SHORT
-  command: laminar/sr22/fuel_sel_left_off
-  label: FUEL OFF
+  formula: ${laminar/sr22/switch/ice_norm_high}
+  label: NORM/HIGH
+  label-size: 10
   annunciator:
     model: B
     size: medium
     parts:
       B0:
-        led: bar
-        color: grey
-        formula: ${laminar/sr22/fuel_selector_pos} 1 eq ${laminar/sr22/fuel_selector_pos}
-          2 eq +
+        text: NORM
+        color: darkorange
+        formula: ${laminar/sr22/switch/ice_norm_high} 0 eq
       B1:
-        text: 'OFF'
-        color: red
+        text: HIGH
+        color: deepskyblue
         framed: true
-        formula: ${laminar/sr22/fuel_selector_pos} 0 eq ${laminar/sr22/fuel_selector_pos}
-          3 eq +
-  name: ''
-- index: 39
+        formula: ${laminar/sr22/switch/ice_norm_high} 1 eq
+  command-on: laminar/sr22/switch/ice_protect_high
+  command-off: laminar/sr22/switch/ice_protect_norm
+- index: 21
   type: push
   vibrate: SHORT
-  text: UP
-  text-color: Lime
-  command: sim/flight_controls/flaps_up
-  text-bg-color: Black
-  name: ''
-- index: 40
-  type: none
-  label: FLAPS
-  label-size: 8
+  command: sim/ice/window_heat_tog
+  label: WSHLD
+  annunciator:
+    model: B
+    size: medium
+    parts:
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/switches/anti_ice_window_heat} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/anti_ice_window_heat} 1 eq
+- index: 23
+  type: begin-end-command
+  vibrate: LONG
+  label: MAX
+  command: laminar/sr22/anti_ice_tks_max
+  annunciator:
+    model: A
+    size: medium
+    parts:
+      A0:
+        text: 'ON'
+        text-size: 47
+        text-font: D-DIN-Bold.otf
+        text-color: white
+        off-color: '#1a1a1a'
+        formula: ${laminar/sr22/switch/ice_max}
+- index: 26
+  name: NEW 16
+  type: onoff
+  label: FUEL
+  label-size: 9
+  command-on: laminar/sr22/fuel_sel_left_select
+  command-off: laminar/sr22/fuel_sel_right_select
   annunciator:
     model: F
     size: medium
     parts:
       F0:
-        text: CRUISE
-        text-color: '#ffffff'
-        on-color: deepskyblue
-        off-color: '#000000'
+        color: yellow
         text-size: 11
-        formula: ${laminar/sr22/annunciators/flaps_up} 1 eq
+        formula: ${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn
+        text: ${formula} g
       F1:
-        text: TAKE OFF
-        text-color: '#ffffff'
-        on-color: deepskyblue
-        off-color: '#000000'
+        color: yellow
         text-size: 11
-        formula: ${laminar/sr22/annunciators/flaps_50} 1 eq
+        formula: ${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn
+        text: ${formula} g
       F2:
-        text: LANDING
-        text-color: '#ffffff'
-        on-color: deepskyblue
-        off-color: '#000000'
-        text-size: 11
-        formula: ${laminar/sr22/annunciators/flaps_100} 1 eq
-  name: ''
-- index: 41
-  type: push
-  text: DOWN
-  text-color: Lime
-  command: sim/flight_controls/flaps_down
-  text-bg-color: Black
-  name: ''
-- index: 77
-  name: COM1_FLIPFLOP
-  label: FLIP FLOP
-  label-color: white
-  type: push
-  vibrate: SHORT
-  command: sim/GPS/g1000n1_com_ff
-  annunciator:
-    size: medium
-    model: A
-    parts:
-      A0:
-        color: white
-        text-size: 91
-        text-font: DejaVuSans.ttf
-        formula: 1
-        text: "\u2194"
-        frame: false
+        color: lime
+        text-size: 12
+        formula: ${laminar/sr22/fuel_selector_pos} 1 eq
+        led: dot
+      F3:
+        color: lime
+        text-size: 12
+        formula: ${laminar/sr22/fuel_selector_pos} 2 eq
+        led: dot
