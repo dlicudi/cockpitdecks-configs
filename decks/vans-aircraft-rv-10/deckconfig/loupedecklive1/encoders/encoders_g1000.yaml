@@ -1,116 +1,103 @@
-
 buttons:
-
 - index: e0
   name: range_encoder
-  type: encoder-push
+  activation: encoder-push
   commands:
-  - sim/GPS/gcu478/pan_push
-  - sim/GPS/gcu478/range_up
-  - sim/GPS/gcu478/range_down
-
+    press: sim/GPS/gcu478/pan_push
+    cw: sim/GPS/gcu478/range_down
+    ccw: sim/GPS/gcu478/range_up
 - index: e1
   name: range_leftright
-  type: encoder-push
+  activation: encoder-push
   commands:
-  - sim/GPS/gcu478/pan_push
-  - sim/GPS/gcu478/pan_left
-  - sim/GPS/gcu478/pan_right
-
+    press: sim/GPS/gcu478/pan_push
+    cw: sim/GPS/gcu478/pan_right
+    ccw: sim/GPS/gcu478/pan_left
 - index: e2
   name: range_updown
-  type: encoder-push
+  activation: encoder-push
   commands:
-  - sim/GPS/gcu478/pan_push
-  - sim/GPS/gcu478/pan_down
-  - sim/GPS/gcu478/pan_up
-
+    press: sim/GPS/gcu478/pan_push
+    cw: sim/GPS/gcu478/pan_up
+    ccw: sim/GPS/gcu478/pan_down
 - index: e3
   name: fms_encoder_outer
-  type: encoder-push
+  activation: encoder-push
   commands:
-  - sim/GPS/gcu479/cursor
-  - sim/GPS/g1000n3_fms_outer_down
-  - sim/GPS/g1000n3_fms_outer_up
-
+    press: sim/GPS/gcu479/cursor
+    cw: sim/GPS/g1000n3_fms_outer_up
+    ccw: sim/GPS/g1000n3_fms_outer_down
 - index: e4
   name: fms_encoder_inner
-  type: encoder-push
+  activation: encoder-push
   commands:
-  - sim/GPS/gcu479/cursor
-  - sim/GPS/g1000n3_fms_inner_down
-  - sim/GPS/g1000n3_fms_inner_up
-
+    press: sim/GPS/gcu479/cursor
+    cw: sim/GPS/g1000n3_fms_inner_up
+    ccw: sim/GPS/g1000n3_fms_inner_down
 - index: e5
   name: gcu478_encoder
-  type: encoder-toggle
   commands:
-  - sim/GPS/gcu478/outer_down
-  - sim/GPS/gcu478/outer_up
-  - sim/GPS/gcu478/inner_down
-  - sim/GPS/gcu478/inner_up
-  long-press: sim/GPS/gcu479/1_2_ctr
-
+    long-press: sim/GPS/gcu479/1_2_ctr
+  activation: encoder-mode
 - index: left
   name: left_screen
   render-cooldown-ms: 333
-  type: none
   side:
     icon-color: Black
     labels:
-      - label: "RNG"
-        label-size: 14
-        label-font: B612-Bold
-        label-color: Gold
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text: "+/-"
-      - label: "PAN"
-        label-size: 14
-        label-font: B612-Bold
-        label-color: Gold
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text: "L/R"
-      - label: "PAN"
-        label-size: 14
-        label-font: B612-Bold
-        label-color: Gold
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text: "U/D"
-
+    - label: RNG
+      label-size: 14
+      label-font: B612-Bold
+      label-color: Gold
+      text-size: 18
+      text-font: Seven Segment.ttf
+      text-color: White
+      text: +/-
+    - label: PAN
+      label-size: 14
+      label-font: B612-Bold
+      label-color: Gold
+      text-size: 18
+      text-font: Seven Segment.ttf
+      text-color: White
+      text: L/R
+    - label: PAN
+      label-size: 14
+      label-font: B612-Bold
+      label-color: Gold
+      text-size: 18
+      text-font: Seven Segment.ttf
+      text-color: White
+      text: U/D
+  activation: none
 - index: right
   name: right_screen
   render-cooldown-ms: 333
-  type: none
   side:
     icon-color: Black
     labels:
-      - label: "FMS"
-        label-size: 14
-        label-font: B612-Bold
-        label-color: Gold
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text: "Outer"
-      - label: "FMS"
-        label-size: 14
-        label-font: B612-Bold
-        label-color: Gold
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text: "Inner"
-      - label: "GCU478"
-        label-size: 14
-        label-font: B612-Bold
-        label-color: Gold
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text: "COMBO"
+    - label: FMS
+      label-size: 14
+      label-font: B612-Bold
+      label-color: Gold
+      text-size: 18
+      text-font: Seven Segment.ttf
+      text-color: White
+      text: Outer
+    - label: FMS
+      label-size: 14
+      label-font: B612-Bold
+      label-color: Gold
+      text-size: 18
+      text-font: Seven Segment.ttf
+      text-color: White
+      text: Inner
+    - label: GCU478
+      label-size: 14
+      label-font: B612-Bold
+      label-color: Gold
+      text-size: 18
+      text-font: Seven Segment.ttf
+      text-color: White
+      text: COMBO
+  activation: none

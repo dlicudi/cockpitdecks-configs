@@ -1,14 +1,14 @@
 name: overhead_external_lights
 description: External Lights
-includes: pager,encoders/encoders_lights
+includes:
+- pager
+- encoders/encoders_lights
 default-icon-color: Black
-
 buttons:
 - index: 0
   label: NAV
   label-size: 12
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: round
@@ -17,21 +17,20 @@ buttons:
     button-underline-color: coral
     options: invert
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${sim/cockpit/electrical/nav_lights_on}"
+  formula: ${sim/cockpit/electrical/nav_lights_on}
   set-dataref: sim/cockpit/electrical/nav_lights_on
-
+  activation: sweep
 - index: 1
   label: STROBE
   label-size: 12
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: rect
@@ -40,21 +39,20 @@ buttons:
     button-underline-color: coral
     options: invert
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${sim/cockpit/electrical/strobe_lights_on}"
+  formula: ${sim/cockpit/electrical/strobe_lights_on}
   set-dataref: sim/cockpit/electrical/strobe_lights_on
-
+  activation: sweep
 - index: 2
   label: RED BCN
   label-size: 12
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: round
@@ -63,21 +61,20 @@ buttons:
     button-underline-color: coral
     options: invert
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${sim/cockpit/electrical/beacon_lights_on}"
+  formula: ${sim/cockpit/electrical/beacon_lights_on}
   set-dataref: sim/cockpit/electrical/beacon_lights_on
-
+  activation: sweep
 - index: 3
   label: LOGO
   label-size: 12
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: round
@@ -86,21 +83,20 @@ buttons:
     button-underline-color: coral
     options: invert
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${XCrafts/light/logo_switch}"
+  formula: ${XCrafts/light/logo_switch}
   set-dataref: XCrafts/light/logo_switch
-
+  activation: sweep
 - index: 4
   label: NOSE
   label-size: 12
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: rect
@@ -109,21 +105,20 @@ buttons:
     button-underline-color: coral
     options: invert
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${sim/cockpit2/switches/taxi_light_on}"
+  formula: ${sim/cockpit2/switches/taxi_light_on}
   set-dataref: sim/cockpit2/switches/taxi_light_on
-
+  activation: sweep
 - index: 5
   label: SIDE
   label-size: 12
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: rect
@@ -132,21 +127,20 @@ buttons:
     button-underline-color: coral
     options: invert
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${sim/cockpit2/switches/generic_lights_switch[21]}"
+  formula: ${sim/cockpit2/switches/generic_lights_switch[21]}
   set-dataref: sim/cockpit2/switches/generic_lights_switch[21]
-
+  activation: sweep
 - index: 6
   label: INSP
   label-size: 12
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: round
@@ -155,21 +149,20 @@ buttons:
     button-underline-color: coral
     options: invert
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${XCrafts/light/inspection_switch}"
+  formula: ${XCrafts/light/inspection_switch}
   set-dataref: XCrafts/light/inspection_switch
-
+  activation: sweep
 - index: 8
   label: LEFT
   label-size: 12
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: 3dot
@@ -178,21 +171,20 @@ buttons:
     button-underline-color: coral
     options: invert
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${sim/cockpit2/switches/landing_lights_switch[1]}"
+  formula: ${sim/cockpit2/switches/landing_lights_switch[1]}
   set-dataref: sim/cockpit2/switches/landing_lights_switch[1]
-
+  activation: sweep
 - index: 9
   label: NOSE
   label-size: 12
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: 3dot
@@ -201,21 +193,20 @@ buttons:
     button-underline-color: coral
     options: invert
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${sim/cockpit2/switches/landing_lights_switch[0]}"
+  formula: ${sim/cockpit2/switches/landing_lights_switch[0]}
   set-dataref: sim/cockpit2/switches/landing_lights_switch[0]
-  
+  activation: sweep
 - index: 10
   label: RIGHT
   label-size: 12
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: 3dot
@@ -224,12 +215,13 @@ buttons:
     button-underline-color: coral
     options: invert
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${sim/cockpit2/switches/landing_lights_switch[2]}"
+  formula: ${sim/cockpit2/switches/landing_lights_switch[2]}
   set-dataref: sim/cockpit2/switches/landing_lights_switch[2]
+  activation: sweep

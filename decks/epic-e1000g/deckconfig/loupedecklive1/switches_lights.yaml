@@ -1,126 +1,119 @@
 description: LIGHTS
-includes: pager,encoders/encoders_pfd
+includes:
+- pager
+- encoders/encoders_pfd
 name: switches_lights
 default-text-size: 56
 default-annunciator-color: '#222222'
 buttons:
-
 - index: 0
   name: STROBE
-  type: onoff
   annunciator:
     model: B
     size: full
     parts:
-      B0:
-        text: STROBE
-        color: white
-        formula: 1
-      B1:
-        text: ON
-        color: cyan
-        framed: false
-        formula: ${sim/cockpit/electrical/strobe_lights_on} 1 eq
-  commands:
+    - text: STROBE
+      color: white
+      formula: 1
+    - text: true
+      color: cyan
+      framed: false
+      formula: ${sim/cockpit/electrical/strobe_lights_on} 1 eq
+  activation: sweep
+  representation: annunciator
+  positions:
   - sim/lights/strobe_lights_toggle
   - sim/lights/strobe_lights_toggle
 - index: 1
   name: NAV
-  type: onoff
   annunciator:
     model: B
     size: full
     parts:
-      B0:
-        text: NAV
-        color: white
-        formula: 1
-      B1:
-        text: ON
-        color: cyan
-        framed: false
-        formula: ${sim/cockpit/electrical/nav_lights_on} 1 eq
-  commands:
+    - text: NAV
+      color: white
+      formula: 1
+    - text: true
+      color: cyan
+      framed: false
+      formula: ${sim/cockpit/electrical/nav_lights_on} 1 eq
+  activation: sweep
+  representation: annunciator
+  positions:
   - sim/lights/nav_lights_toggle
   - sim/lights/nav_lights_toggle
 - index: 2
   name: TAXI
-  type: onoff
   annunciator:
     model: B
     size: full
     parts:
-      B0:
-        text: TAXI
-        color: white
-        formula: 1
-      B1:
-        text: ON
-        color: cyan
-        framed: false
-        formula: ${sim/cockpit2/switches/taxi_light_on} 1 eq
-  commands:
+    - text: TAXI
+      color: white
+      formula: 1
+    - text: true
+      color: cyan
+      framed: false
+      formula: ${sim/cockpit2/switches/taxi_light_on} 1 eq
+  activation: sweep
+  representation: annunciator
+  positions:
   - sim/lights/taxi_lights_toggle
   - sim/lights/taxi_lights_toggle
 - index: 3
   name: LANDING
-  type: onoff
   annunciator:
     model: B
     size: full
     parts:
-      B0:
-        text: LAND
-        color: white
-        formula: 1
-      B1:
-        text: ON
-        color: cyan
-        framed: false
-        formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
-  commands:
+    - text: LAND
+      color: white
+      formula: 1
+    - text: true
+      color: cyan
+      framed: false
+      formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
+  activation: sweep
+  representation: annunciator
+  positions:
   - sim/lights/landing_lights_toggle
   - sim/lights/landing_lights_toggle
 - index: 4
   name: BEACON
-  type: onoff
   annunciator:
     model: B
     size: full
     parts:
-      B0:
-        text: BEACON
-        color: white
-        formula: 1
-      B1:
-        text: ON
-        color: cyan
-        framed: false
-        formula: ${sim/cockpit/electrical/beacon_lights_on} 1 eq
+    - text: BEACON
+      color: white
+      formula: 1
+    - text: true
+      color: cyan
+      framed: false
+      formula: ${sim/cockpit/electrical/beacon_lights_on} 1 eq
   set-dataref: aerobask/pb_light_beacon
-
+  activation: sweep
+  representation: annunciator
 - index: 5
   name: ICE LT
-  type: onoff
   annunciator:
     model: B
     size: full
     parts:
-      B0:
-        text: ICE
-        color: white
-        formula: 1
-      B1:
-        text: ON
-        color: cyan
-        framed: false
-        formula: ${sim/cockpit2/switches/spot_light_on} 1 eq
-  commands:
+    - text: ICE
+      color: white
+      formula: 1
+    - text: true
+      color: cyan
+      framed: false
+      formula: ${sim/cockpit2/switches/spot_light_on} 1 eq
+  activation: sweep
+  representation: annunciator
+  positions:
   - sim/lights/spot_lights_toggle
   - sim/lights/spot_lights_toggle
 - index: 8
   name: Back
-  type: page
   page: switches_systems
   label: SYSTEMS
   label-color: Gold
@@ -129,10 +122,10 @@ buttons:
   text-font: fontawesome.otf
   text-size: 48
   text-color: Gold
-
+  activation: page
+  representation: text
 - index: 11
   name: Next
-  type: page
   page: switches_ice
   label: ICE
   label-color: Gold
@@ -141,3 +134,5 @@ buttons:
   text-font: fontawesome.otf
   text-size: 48
   text-color: Gold
+  activation: page
+  representation: text

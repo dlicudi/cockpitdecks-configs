@@ -1,4 +1,4 @@
 name: index
-includes: includes/pagerfull
-
+includes:
+- includes/pagerfull
 buttons: []

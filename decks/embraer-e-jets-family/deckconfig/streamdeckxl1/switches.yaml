@@ -1,11 +1,9 @@
-# Ejet Overhead Panel v1.0.0
 name: switches
-includes: includes/pagerfull
+includes:
+- includes/pagerfull
 default-icon-color: DarkSlateGray
-
 buttons:
 - index: 0
-  type: updown
   label: IDG 1
   label-position: cb
   label-color: White
@@ -23,13 +21,12 @@ buttons:
     tick-label-size: 28
     options: invert
     tick-labels:
-      - "OFF"
-      - "AUTO"
+    - 'OFF'
+    - AUTO
   dataref: sim/cockpit/electrical/generator_on[0]
   set-dataref: sim/cockpit/electrical/generator_on[0]
-
+  activation: sweep
 - index: 1
-  type: updown
   label: AC BUS TIES
   label-color: White
   label-position: cb
@@ -47,14 +44,17 @@ buttons:
     tick-label-size: 24
     options: invert
     tick-labels:
-      - "1\nOPEN"
-      - "AUTO"
-      - "2\nOPEN"
+    - '1
+
+      OPEN'
+    - AUTO
+    - '2
+
+      OPEN'
   dataref: XCrafts/electrical/ac_bus_tie_switch
   set-dataref: XCrafts/electrical/ac_bus_tie_switch
-
+  activation: sweep
 - index: 2
-  type: updown
   label: IDG 2
   label-color: White
   color: White
@@ -72,16 +72,15 @@ buttons:
     tick-label-size: 28
     options: invert
     tick-labels:
-      - "OFF"
-      - "AUTO"
+    - 'OFF'
+    - AUTO
   dataref: sim/cockpit/electrical/generator_on[1]
   set-dataref: sim/cockpit/electrical/generator_on[1]
-
+  activation: sweep
 - index: 3
   label: FIRE 1
   label-size: 12
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: 3dot
@@ -90,21 +89,20 @@ buttons:
     button-underline-color: coral
     options: invert
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${sim/cockpit2/engine/actuators/fire_extinguisher_on[0]}"
+  formula: ${sim/cockpit2/engine/actuators/fire_extinguisher_on[0]}
   set-dataref: sim/cockpit2/engine/actuators/fire_extinguisher_on[0]
-
+  activation: sweep
 - index: 4
   label: FIRE 2
   label-size: 12
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: 3dot
@@ -113,20 +111,17 @@ buttons:
     button-underline-color: coral
     options: invert
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${sim/cockpit2/engine/actuators/fire_extinguisher_on[1]}"
+  formula: ${sim/cockpit2/engine/actuators/fire_extinguisher_on[1]}
   set-dataref: sim/cockpit2/engine/actuators/fire_extinguisher_on[1]
-
-
+  activation: sweep
 - index: 5
-  type: push
-  command: sim/fuel/fuel_selector_3    
   label: FUEL XFEED
   label-color: black
   label-size: 9
@@ -138,13 +133,14 @@ buttons:
       color: white
       formula: ${sim/cockpit/engine/fuel_tank_selector} 3 eq
     B1:
-      text: "LOW 1"
+      text: LOW 1
       color: white
-      formula: "1"
-
+      formula: '1'
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/fuel/fuel_selector_3
 - index: 6
-  type: push
-  command: sim/fuel/left_fuel_selector_up
   label: FUEL XFEED
   label-color: black
   label-size: 9
@@ -156,13 +152,14 @@ buttons:
       color: white
       formula: ${sim/cockpit/engine/fuel_tank_selector} 4 eq
     B1:
-      text: "OFF"
+      text: 'OFF'
       color: white
-      formula: "1"
-
+      formula: '1'
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/fuel/left_fuel_selector_up
 - index: 7
-  type: push
-  command: sim/fuel/fuel_selector_1
   label: FUEL XFEED
   label-color: black
   label-size: 9
@@ -174,53 +171,52 @@ buttons:
       color: white
       formula: ${sim/cockpit/engine/fuel_tank_selector} 1 eq
     B1:
-      text: "LOW 2"
+      text: LOW 2
       color: white
-      formula: "1"
-
+      formula: '1'
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/fuel/fuel_selector_1
 - index: 11
   label: GPU
   label-size: 7
   label-color: White
-  type: onoff
   annunciator:
     size: large
     model: B
     parts:
-      B0:
-        text: "AVAIL"
-        text-size: 60
-        text-font: DIN Bold
-        text-color: white
-        formula: "${XCrafts/doors/GPU_OFF} ${sim/cockpit/electrical/gpu_on} -"
-      B1:
-        text: IN USE
-        text-size: 60
-        text-font: DIN Bold
-        text-color: white
-        formula: "${XCrafts/electric/GPU_sw}"
+    - text: AVAIL
+      text-size: 60
+      text-font: DIN Bold
+      text-color: white
+      formula: ${XCrafts/doors/GPU_OFF} ${sim/cockpit/electrical/gpu_on} -
+    - text: IN USE
+      text-size: 60
+      text-font: DIN Bold
+      text-color: white
+      formula: ${XCrafts/electric/GPU_sw}
   set-dataref: XCrafts/electric/GPU_sw
-
+  activation: sweep
+  representation: annunciator
 - index: 12
   label: APU GEN
   label-size: 10
   label-color: white
-  type: onoff
   annunciator:
     size: small
     model: A
     parts:
-      A0:
-        text-color: white
-        led: led
-        formula: "${sim/cockpit/electrical/generator_apu_on} 0 eq"
+    - text-color: white
+      led: led
+      formula: ${sim/cockpit/electrical/generator_apu_on} 0 eq
   set-dataref: sim/cockpit2/electrical/APU_generator_on
-
+  activation: sweep
+  representation: annunciator
 - index: 8
   label: TRU 1
   label-size: 8
   label-color: White
-  type: onoff
   stops: 2
   switch:
     switch-style: round
@@ -228,23 +224,22 @@ buttons:
     button-underline-width: 4
     button-underline-color: coral
     tick-labels:
-      - "AUTO"
-      - "OFF"
+    - AUTO
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${sim/cockpit/engine/inverter_on[0]}"
-  commands:
-    - sim/electrical/inverter_1_on
-    - sim/electrical/inverter_1_off
-
+  formula: ${sim/cockpit/engine/inverter_on[0]}
+  activation: sweep
+  positions:
+  - sim/electrical/inverter_1_on
+  - sim/electrical/inverter_1_off
 - index: 9
   label: TRU ESS
   label-size: 8
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: round
@@ -252,21 +247,20 @@ buttons:
     button-underline-width: 4
     button-underline-color: coral
     tick-labels:
-      - "AUTO"
-      - "OFF"
+    - AUTO
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${XCrafts/electrical/TRU_ESS_switch}"
+  formula: ${XCrafts/electrical/TRU_ESS_switch}
   set-dataref: XCrafts/electrical/TRU_ESS_switch
-
+  activation: sweep
 - index: 10
   label: TRU 2
   label-size: 8
   label-color: White
-  type: onoff
   stops: 2
   switch:
     switch-style: round
@@ -274,20 +268,19 @@ buttons:
     button-underline-width: 4
     button-underline-color: coral
     tick-labels:
-      - "AUTO"
-      - "OFF"
+    - AUTO
+    - 'OFF'
     tick-space: 10
     tick-color: White
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${sim/cockpit/engine/inverter_on[1]}"
-  commands:
-    - sim/electrical/inverter_2_on
-    - sim/electrical/inverter_2_off
-
+  formula: ${sim/cockpit/engine/inverter_on[1]}
+  activation: sweep
+  positions:
+  - sim/electrical/inverter_2_on
+  - sim/electrical/inverter_2_off
 - index: 16
-  type: updown
   label: BATT 1
   label-color: White
   label-position: cb
@@ -304,16 +297,15 @@ buttons:
     tick-label-size: 28
     options: invert
     tick-labels:
-      - "OFF"
-      - "ON"
+    - 'OFF'
+    - 'ON'
   dataref: sim/cockpit2/electrical/battery_on[0]
   set-dataref: sim/cockpit2/electrical/battery_on[0]
-  
+  activation: sweep
 - index: 17
   label: DC BUS TIES
   label-size: 8
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: round
@@ -321,18 +313,17 @@ buttons:
     button-underline-width: 4
     button-underline-color: coral
     tick-labels:
-      - "AUTO"
-      - "OFF"
+    - AUTO
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${XCrafts/electrical/dc_bus_tie_switch}"
+  formula: ${XCrafts/electrical/dc_bus_tie_switch}
   set-dataref: XCrafts/electrical/dc_bus_tie_switch
-
+  activation: sweep
 - index: 18
-  type: updown
   label: BATT 2
   label-color: White
   label-position: cb
@@ -349,19 +340,12 @@ buttons:
     tick-label-size: 28
     options: invert
     tick-labels:
-      - "OFF"
-      - "ON"
+    - 'OFF'
+    - 'ON'
   dataref: sim/cockpit2/electrical/battery_on[1]
   set-dataref: sim/cockpit2/electrical/battery_on[1]
-
-
-# - index: 19
-#   type: none
-#   icon: TEXTURE_FRAME.png
-
-
+  activation: sweep
 - index: 14
-  type: updown
   label: DC PUMP
   label-color: White
   label-position: cb
@@ -378,13 +362,12 @@ buttons:
     tick-label-size: 28
     options: invert
     tick-labels:
-      - "OFF"
-      - "AUTO"
-  formula: "${XCrafts/fuel_DC_pump_switch}"
+    - 'OFF'
+    - AUTO
+  formula: ${XCrafts/fuel_DC_pump_switch}
   set-dataref: XCrafts/fuel_DC_pump_switch
-
+  activation: sweep
 - index: 19
-  type: updown
   label: EMER LT
   label-color: White
   label-size: 10
@@ -402,14 +385,13 @@ buttons:
     tick-label-size: 28
     options: invert
     tick-labels:
-      - "OFF"
-      - "ARMED"
-      - "ON"
-  formula: "${XCrafts/light/emerg_switch}"
+    - 'OFF'
+    - ARMED
+    - 'ON'
+  formula: ${XCrafts/light/emerg_switch}
   set-dataref: XCrafts/light/emerg_switch
-
+  activation: sweep
 - index: 13
-  type: updown
   label: AC PUMP 1
   label-color: White
   label-position: cb
@@ -426,13 +408,12 @@ buttons:
     tick-label-size: 28
     options: invert
     tick-labels:
-      - "OFF"
-      - "AUTO"
-  formula: "${sim/cockpit2/engine/actuators/fuel_pump_on[0]}"
+    - 'OFF'
+    - AUTO
+  formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]}
   set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
-
+  activation: sweep
 - index: 15
-  type: updown
   label: AC PUMP 2
   label-color: White
   label-position: cb
@@ -449,16 +430,15 @@ buttons:
     tick-label-size: 28
     options: invert
     tick-labels:
-      - "OFF"
-      - "AUTO"
-  formula: "${sim/cockpit2/engine/actuators/fuel_pump_on[1]}"
+    - 'OFF'
+    - AUTO
+  formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[1]}
   set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[1]
-
+  activation: sweep
 - index: 20
   label: STERILE
   label-size: 8
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: round
@@ -466,21 +446,20 @@ buttons:
     button-underline-width: 4
     button-underline-color: coral
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${XCrafts/light/sterile_switch}"
+  formula: ${XCrafts/light/sterile_switch}
   set-dataref: XCrafts/light/sterile_switch
-
+  activation: sweep
 - index: 21
   label: NO SMKG
   label-size: 8
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: round
@@ -488,21 +467,20 @@ buttons:
     button-underline-width: 4
     button-underline-color: coral
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${sim/cockpit2/switches/no_smoking}"
+  formula: ${sim/cockpit2/switches/no_smoking}
   set-dataref: sim/cockpit2/switches/no_smoking
-
+  activation: sweep
 - index: 22
   label: FSTN BELTS
   label-size: 8
   label-color: White
-  type: updown
   stops: 2
   switch:
     switch-style: round
@@ -510,18 +488,17 @@ buttons:
     button-underline-width: 4
     button-underline-color: coral
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${sim/cockpit2/switches/fasten_seat_belts}"
+  formula: ${sim/cockpit2/switches/fasten_seat_belts}
   set-dataref: sim/cockpit2/switches/fasten_seat_belts
-
+  activation: sweep
 - index: 23
-  type: page
   page: switches2
   label: PAGE 2/3
   label-size: 10
@@ -530,3 +507,5 @@ buttons:
   text-font: fontawesome.otf
   text-size: 48
   text-color: Gold
+  activation: page
+  representation: text

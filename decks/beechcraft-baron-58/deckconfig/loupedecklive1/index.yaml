@@ -1,149 +1,150 @@
 name: index
-includes: pager,encoders/encoders_fcu
-
+includes:
+- pager
+- encoders/encoders_fcu
 buttons:
-
-  - index: 0
-    type: page
-    page: pfi
-    label: PFI
-    label-color: Gold
-    label-bg-color: Black
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 1
-    type: page
-    page: switches
-    label: SWITCHES
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 2
-    type: page
-    page: icing
-    label: ICING
-    label-color: Gold
-    text: ❄
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 3
-    type: page
-    page: lights
-    label: LIGHTS
-    label-color: Gold
-    text: 💡
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 4
-    type: page
-    page: fcu
-    label: FCU
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 5
-    type: page
-    page: g530
-    label: G530
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 30, 40)
-
-  - index: 6
-    type: page
-    page: radio
-    label: RADIO
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 7
-    type: page
-    page: engine
-    label: ENGINE
-    label-color: Gold
-    text: ⛽
-    text-color: khaki
-    text-size: 24
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 8
-    type: page
-    page: pedestal
-    label: PEDESTAL
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 9
-    type: page
-    page: transponder
-    label: XPDR
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 10
-    type: page
-    page: weather
-    label: WEATHER
-    label-color: Gold
-    text: 🌦
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 11
-    type: page
-    page: views
-    label: VIEWS
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
+- index: 0
+  page: pfi
+  label: PFI
+  label-color: Gold
+  label-bg-color: Black
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 1
+  page: switches
+  label: SWITCHES
+  label-color: Gold
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 2
+  page: icing
+  label: ICING
+  label-color: Gold
+  text: ❄
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 3
+  page: lights
+  label: LIGHTS
+  label-color: Gold
+  text: 💡
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 4
+  page: fcu
+  label: FCU
+  label-color: Gold
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 5
+  page: g530
+  label: G530
+  label-color: Gold
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 30, 40)
+  activation: page
+  representation: text
+- index: 6
+  page: radio
+  label: RADIO
+  label-color: Gold
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 7
+  page: engine
+  label: ENGINE
+  label-color: Gold
+  text: ⛽
+  text-color: khaki
+  text-size: 24
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 8
+  page: pedestal
+  label: PEDESTAL
+  label-color: Gold
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 9
+  page: transponder
+  label: XPDR
+  label-color: Gold
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 10
+  page: weather
+  label: WEATHER
+  label-color: Gold
+  text: 🌦
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 11
+  page: views
+  label: VIEWS
+  label-color: Gold
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text

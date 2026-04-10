@@ -1,12 +1,9 @@
 description: Switch Panel
-includes: includes/pagerfull
+includes:
+- includes/pagerfull
 name: lights
-
 buttons:
-
 - index: 0
-  type: push
-  command: sim/lights/nav_lights_toggle
   label: NAV
   label-color: black
   label-size: 9
@@ -14,19 +11,18 @@ buttons:
     model: B
     size: medium
     parts:
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
-
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+    - text: 'ON'
+      color: deepskyblue
+      framed: true
+      formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/lights/nav_lights_toggle
 - index: 1
-  type: push
-  command: sim/lights/strobe_lights_toggle
   label: STROBE
   label-color: black
   label-size: 9
@@ -34,59 +30,57 @@ buttons:
     model: B
     size: medium
     parts:
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
-
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
+    - text: 'ON'
+      color: deepskyblue
+      framed: true
+      formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/lights/strobe_lights_toggle
 - index: 2
-  type: push
   label: LAND
   label-color: black
   label-size: 9
-  command: sim/lights/landing_01_light_tog
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq
-
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 0 eq
+    - text: 'ON'
+      color: deepskyblue
+      framed: true
+      formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/lights/landing_01_light_tog
 - index: 3
-  type: push
   label: ICE
   label-color: black
   label-size: 9
-  command: sim/lights/generic_01_light_tog
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 1 eq
-
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 0 eq
+    - text: 'ON'
+      color: deepskyblue
+      framed: true
+      formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/lights/generic_01_light_tog
 - index: 11
   name: Switches
-  type: page
   page: switches
   label: SWITCHES
   label-size: 12
@@ -94,3 +88,5 @@ buttons:
   text-font: fontawesome.otf
   text-size: 12
   text-color: Gold
+  activation: page
+  representation: text

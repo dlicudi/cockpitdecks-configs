@@ -1,108 +1,113 @@
 description: ICE
-includes: pager,encoders/encoders_pfd
+includes:
+- pager
+- encoders/encoders_pfd
 name: switches_ice
 default-text-size: 56
 default-annunciator-color: '#222222'
 buttons:
-
 - index: 0
   name: PART SEP
-  type: onoff
   annunciator:
     model: B
     size: full
     parts:
-      B0:
-        text: "INERT\nSEP"
-        color: white
-        formula: 1
-      B1:
-        text: ON
-        color: cyan
-        framed: false
-        formula: ${aerobask/lt_inert_sep} 1 eq
-  commands:
+    - text: 'INERT
+
+        SEP'
+      color: white
+      formula: 1
+    - text: true
+      color: cyan
+      framed: false
+      formula: ${aerobask/lt_inert_sep} 1 eq
+  activation: sweep
+  representation: annunciator
+  positions:
   - aerobask/ins_sep_tog
   - aerobask/ins_sep_tog
 - index: 1
   name: PITOT HEAT
-  type: onoff
   annunciator:
     model: B
     size: full
     parts:
-      B0:
-        text: "PITOT\nSTALL HT"
-        color: white
-        formula: 1
-      B1:
-        text: ON
-        color: cyan
-        framed: false
-        formula: ${aerobask/lt_pitot_stall} 1 eq
-  commands:
+    - text: 'PITOT
+
+        STALL HT'
+      color: white
+      formula: 1
+    - text: true
+      color: cyan
+      framed: false
+      formula: ${aerobask/lt_pitot_stall} 1 eq
+  activation: sweep
+  representation: annunciator
+  positions:
   - sim/ice/pitot_heat0_tog
   - sim/ice/pitot_heat0_tog
 - index: 2
   name: PROP HEAT
-  type: onoff
   annunciator:
     model: B
     size: full
     parts:
-      B0:
-        text: "PROP\nHEAT"
-        color: white
-        formula: 1
-      B1:
-        text: ON
-        color: cyan
-        framed: false
-        formula: ${aerobask/lt_prop_heat} 1 eq
-  commands:
+    - text: 'PROP
+
+        HEAT'
+      color: white
+      formula: 1
+    - text: true
+      color: cyan
+      framed: false
+      formula: ${aerobask/lt_prop_heat} 1 eq
+  activation: sweep
+  representation: annunciator
+  positions:
   - sim/ice/prop_heat_tog
   - sim/ice/prop_heat_tog
 - index: 3
   name: WNDSH HEAT
-  type: onoff
   annunciator:
     model: B
     size: full
     parts:
-      B0:
-        text: "WNDSH\nHEAT"
-        color: white
-        formula: 1
-      B1:
-        text: ON
-        color: cyan
-        framed: false
-        formula: ${aerobask/lt_windsh_heat} 1 eq
-  commands:
+    - text: 'WNDSH
+
+        HEAT'
+      color: white
+      formula: 1
+    - text: true
+      color: cyan
+      framed: false
+      formula: ${aerobask/lt_windsh_heat} 1 eq
+  activation: sweep
+  representation: annunciator
+  positions:
   - sim/ice/window_heat_tog
   - sim/ice/window_heat_tog
 - index: 4
   name: DE-ICE
-  type: onoff
   annunciator:
     model: B
     size: full
     parts:
-      B0:
-        text: "DE-ICE\nBOOTS"
-        color: white
-        formula: 1
-      B1:
-        text: ON
-        color: cyan
-        framed: false
-        formula: ${aerobask/lt_deice_boots} 1 eq
-  commands:
+    - text: 'DE-ICE
+
+        BOOTS'
+      color: white
+      formula: 1
+    - text: true
+      color: cyan
+      framed: false
+      formula: ${aerobask/lt_deice_boots} 1 eq
+  activation: sweep
+  representation: annunciator
+  positions:
   - aerobask/deice_boots_toggle
   - aerobask/deice_boots_toggle
 - index: 8
   name: Back
-  type: page
   page: switches_lights
   label: LIGHTS
   label-color: Gold
@@ -111,3 +116,5 @@ buttons:
   text-font: fontawesome.otf
   text-size: 48
   text-color: Gold
+  activation: page
+  representation: text

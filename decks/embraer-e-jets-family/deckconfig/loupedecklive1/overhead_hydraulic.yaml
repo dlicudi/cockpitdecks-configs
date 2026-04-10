@@ -1,11 +1,11 @@
 name: overhead_hydraulic
 description: Hydraulic
-includes: pager,encoders/encoders_lights
+includes:
+- pager
+- encoders/encoders_lights
 default-icon-color: Black
-
 buttons:
 - index: 0
-  type: updown
   label: PTU
   label-color: White
   label-position: cb
@@ -23,14 +23,13 @@ buttons:
     tick-label-size: 24
     options: invert
     tick-labels:
-      - "OFF"
-      - "AUTO"
-      - "ON"
+    - 'OFF'
+    - AUTO
+    - 'ON'
   dataref: XCrafts/hydraulic/PTU_switch
   set-dataref: XCrafts/hydraulic/PTU_switch
-
+  activation: sweep
 - index: 1
-  type: updown
   label: ELEC PUMP 1
   label-color: White
   label-position: cb
@@ -48,14 +47,13 @@ buttons:
     tick-label-size: 24
     options: invert
     tick-labels:
-      - "OFF"
-      - "AUTO"
-      - "ON"
+    - 'OFF'
+    - AUTO
+    - 'ON'
   dataref: XCrafts/ERJ/Hydraulics1
   set-dataref: XCrafts/ERJ/Hydraulics1
-
+  activation: sweep
 - index: 2
-  type: updown
   label: ELEC PUMP 2
   label-color: White
   label-position: cb
@@ -73,14 +71,13 @@ buttons:
     tick-label-size: 24
     options: invert
     tick-labels:
-      - "OFF"
-      - "AUTO"
-      - "ON"
+    - 'OFF'
+    - AUTO
+    - 'ON'
   dataref: XCrafts/ERJ/Hydraulics2
   set-dataref: XCrafts/ERJ/Hydraulics2
-
+  activation: sweep
 - index: 3
-  type: updown
   label: ELEC PUMP A
   label-color: White
   label-position: cb
@@ -98,13 +95,12 @@ buttons:
     tick-label-size: 28
     options: invert
     tick-labels:
-      - "OFF"
-      - "ON"
+    - 'OFF'
+    - 'ON'
   dataref: XCrafts/hydraulic/sys3_elec_pump_a_switch
   set-dataref: XCrafts/hydraulic/sys3_elec_pump_a_switch
-
+  activation: sweep
 - index: 4
-  type: updown
   label: ELEC PUMP B
   label-color: White
   label-position: cb
@@ -122,9 +118,9 @@ buttons:
     tick-label-size: 24
     options: invert
     tick-labels:
-      - "OFF"
-      - "AUTO"
-      - "ON"
+    - 'OFF'
+    - AUTO
+    - 'ON'
   dataref: XCrafts/hydraulic/sys3_elec_pump_b_switch
   set-dataref: XCrafts/hydraulic/sys3_elec_pump_b_switch
-
+  activation: sweep

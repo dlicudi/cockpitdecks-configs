@@ -1,11 +1,9 @@
-# GMA 350–style selections via generic X-Plane audio panel commands (no aircraft-specific annunciators).
 name: audiopanel
-includes: pager,encoders/encoders_radio
-
+includes:
+- pager
+- encoders/encoders_radio
 buttons:
-
 - index: 0
-  type: push
   name: COM MIC 1
   text: COM MIC 1
   text-color: khaki
@@ -13,10 +11,11 @@ buttons:
   text-font: D-DIN-Bold.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-  command: sim/audio_panel/transmit_audio_com1
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/audio_panel/transmit_audio_com1
 - index: 1
-  type: push
   name: COM 1
   text: COM 1
   text-color: khaki
@@ -24,10 +23,11 @@ buttons:
   text-font: D-DIN-Bold.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-  command: sim/audio_panel/monitor_audio_com1
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/audio_panel/monitor_audio_com1
 - index: 2
-  type: push
   name: MKR MUTE
   text: MKR MUTE
   text-color: khaki
@@ -35,10 +35,11 @@ buttons:
   text-font: D-DIN-Bold.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-  command: sim/audio_panel/monitor_audio_mkr
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/audio_panel/monitor_audio_mkr
 - index: 3
-  type: push
   name: HI SENS
   text: HI SENS
   text-color: khaki
@@ -46,10 +47,11 @@ buttons:
   text-font: D-DIN-Bold.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-  command: sim/annunciator/marker_beacon_sens_toggle
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/annunciator/marker_beacon_sens_toggle
 - index: 4
-  type: push
   name: COM MIC 2
   text: COM MIC 2
   text-color: khaki
@@ -57,10 +59,11 @@ buttons:
   text-font: D-DIN-Bold.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-  command: sim/audio_panel/transmit_audio_com2
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/audio_panel/transmit_audio_com2
 - index: 5
-  type: push
   name: COM 2
   text: COM 2
   text-color: khaki
@@ -68,10 +71,11 @@ buttons:
   text-font: D-DIN-Bold.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-  command: sim/audio_panel/monitor_audio_com2
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/audio_panel/monitor_audio_com2
 - index: 6
-  type: push
   name: DME
   text: DME
   text-color: khaki
@@ -79,10 +83,11 @@ buttons:
   text-font: D-DIN-Bold.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-  command: sim/audio_panel/monitor_audio_dme
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/audio_panel/monitor_audio_dme
 - index: 7
-  type: push
   name: NAV 1
   text: NAV 1
   text-color: khaki
@@ -90,10 +95,11 @@ buttons:
   text-font: D-DIN-Bold.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-  command: sim/audio_panel/select_audio_nav1
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/audio_panel/select_audio_nav1
 - index: 10
-  type: push
   name: ADF 1
   text: ADF 1
   text-color: khaki
@@ -101,10 +107,11 @@ buttons:
   text-font: D-DIN-Bold.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-  command: sim/audio_panel/select_audio_adf1
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/audio_panel/select_audio_adf1
 - index: 11
-  type: push
   name: NAV 2
   text: NAV 2
   text-color: khaki
@@ -112,4 +119,7 @@ buttons:
   text-font: D-DIN-Bold.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-  command: sim/audio_panel/select_audio_nav2
+  activation: push
+  representation: text
+  commands:
+    press: sim/audio_panel/select_audio_nav2

@@ -1,173 +1,173 @@
-# NAV — Live flight data. 4×3 grid, G1000-style situational awareness.
-# Read-only. Native X-Plane datarefs only.
 name: fms_nav
-includes: pager,encoders/fms_nav
+includes:
+- pager
+- encoders/fms_nav
 label-font: D-DINCondensed.otf
-
 buttons:
-
-# Row 1: DIS | ETE | GS | DTK
 - index: 0
   name: NAV_DIS
-  type: none
   render-cooldown-ms: 500
   label: DIS
   label-color: Gold
-  text: "${sim/cockpit2/radios/indicators/gps_dme_distance_nm} nm"
-  text-format: "{0:.1f}"
+  text: ${sim/cockpit2/radios/indicators/gps_dme_distance_nm} nm
+  text-format: '{0:.1f}'
   text-color: white
   text-size: 20
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 24)
-
+  activation: none
+  representation: text
 - index: 1
   name: NAV_ETE
-  type: none
   render-cooldown-ms: 500
   label: ETE
   label-color: Gold
-  text: "${sim/cockpit2/radios/indicators/gps_dme_time_min}\nmin"
-  text-format: "{0:.0f}"
+  text: '${sim/cockpit2/radios/indicators/gps_dme_time_min}
+
+    min'
+  text-format: '{0:.0f}'
   text-color: darkorange
   text-size: 20
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 24)
-
+  activation: none
+  representation: text
 - index: 2
   name: NAV_GS
-  type: none
   render-cooldown-ms: 500
   label: GS
   label-color: Gold
-  text: "${sim/cockpit2/gauges/indicators/ground_speed_kt}\nkts"
-  text-format: "{0:.0f}"
+  text: '${sim/cockpit2/gauges/indicators/ground_speed_kt}
+
+    kts'
+  text-format: '{0:.0f}'
   text-color: white
   text-size: 20
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 24)
-
+  activation: none
+  representation: text
 - index: 3
   name: NAV_DTK
-  type: none
   render-cooldown-ms: 500
   label: DTK
   label-color: Gold
-  text: "${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}°"
-  text-format: "{0:.0f}"
+  text: ${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}°
+  text-format: '{0:.0f}'
   text-color: darkorange
   text-size: 20
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 24)
-
-# Row 2: WPT | ETA | BRG | XTK
+  activation: none
+  representation: text
 - index: 4
   name: NAV_WPT
-  type: none
   render-cooldown-ms: 500
   label: WPT
   label-color: Gold
-  text: "—"
+  text: —
   text-color: lime
   text-size: 22
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 24)
-
+  activation: none
+  representation: text
 - index: 5
   name: NAV_ETA
-  type: none
   render-cooldown-ms: 500
   label: ETA
   label-color: Gold
-  text: "${sim/cockpit2/radios/indicators/fms1_act_eta_hour}:${sim/cockpit2/radios/indicators/fms1_act_eta_minute}Z"
+  text: ${sim/cockpit2/radios/indicators/fms1_act_eta_hour}:${sim/cockpit2/radios/indicators/fms1_act_eta_minute}Z
   text-color: darkorange
   text-size: 20
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 24)
-
+  activation: none
+  representation: text
 - index: 6
   name: NAV_BRG
-  type: none
   render-cooldown-ms: 500
   label: BRG
   label-color: Gold
-  text: "${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}°"
-  text-format: "{0:.0f}"
+  text: ${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}°
+  text-format: '{0:.0f}'
   text-color: white
   text-size: 20
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 24)
-
+  activation: none
+  representation: text
 - index: 7
   name: NAV_XTK
-  type: none
   render-cooldown-ms: 500
   label: XTK
   label-color: Gold
-  text: "${sim/cockpit/radios/gps_course_deviation} nm"
-  text-format: "{0:.1f}"
+  text: ${sim/cockpit/radios/gps_course_deviation} nm
+  text-format: '{0:.1f}'
   text-color: white
   text-size: 20
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 24)
-
-# Row 3: TRK | DEST | — | SRC
+  activation: none
+  representation: text
 - index: 8
   name: NAV_TRK
-  type: none
   render-cooldown-ms: 500
   label: TRK
   label-color: Gold
-  text: "${sim/cockpit2/gauges/indicators/ground_track_mag_pilot}°"
-  text-format: "{0:.0f}"
+  text: ${sim/cockpit2/gauges/indicators/ground_track_mag_pilot}°
+  text-format: '{0:.0f}'
   text-color: white
   text-size: 20
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 24)
-
+  activation: none
+  representation: text
 - index: 9
   name: NAV_DEST
-  type: none
   render-cooldown-ms: 500
   label: DEST
   label-color: Gold
-  text: "—"
+  text: —
   text-color: deepskyblue
   text-size: 22
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 24)
-
+  activation: none
+  representation: text
 - index: 10
   name: NAV_DTO
-  type: none
   render-cooldown-ms: 500
   label: DTO
   label-color: Gold
-  text: "—"
+  text: —
   text-color: white
   text-size: 20
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 24)
-
+  activation: none
+  representation: text
 - index: 11
   name: NAV_SRC
-  type: none
   render-cooldown-ms: 500
   label: SRC
   label-color: Gold
-  text: "GPS"
+  text: GPS
   text-color: lime
   text-size: 9
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 24)
+  activation: none
+  representation: text

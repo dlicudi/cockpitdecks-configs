@@ -1,27 +1,25 @@
 name: overhead_pressurization
 description: Pressurization
-includes: pager,encoders/encoders_lights
+includes:
+- pager
+- encoders/encoders_lights
 default-icon-color: Black
-
 buttons:
 - index: 0
-  type: none
   icon: INOP.png
-
+  activation: none
+  representation: icon
 - index: 1
   label: DUMP
   label-size: 10
   label-color: white
-  type: onoff
   annunciator:
     size: small
     model: A
     parts:
-      A0:
-        text-color: white
-        led: led
-        formula: "${sim/cockpit/pressure/dump_to_alt}"
+    - text-color: white
+      led: led
+      formula: ${sim/cockpit/pressure/dump_to_alt}
   set-dataref: sim/cockpit/pressure/dump_to_alt
-
-
-
+  activation: sweep
+  representation: annunciator

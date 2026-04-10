@@ -38,7 +38,7 @@ dataref-roundings:
     sim/cockpit2/electrical/battery_on[*]: 0
     sim/cockpit2/electrical/generator_on[*]: 0
     sim/cockpit2/engine/actuators/ignition_key[*]: 0
-    sim/cockpit2/engine/indicators/EGT_deg_cel[0]: 0
+    sim/cockpit2/engine/indicators/EGT_deg_cel[*]: 0
     sim/cockpit2/engine/indicators/oil_pressure_psi[0]: 0
     sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]: 0
     sim/cockpit2/engine/indicators/prop_speed_rpm[0]: 0
@@ -51,12 +51,12 @@ dataref-roundings:
     sim/cockpit2/radios/indicators/gps_bearing_deg_mag: 0
     sim/cockpit2/radios/indicators/gps_dme_distance_nm: 1
     sim/cockpit2/radios/indicators/gps_dme_time_min: 0
-    sim/flightmodel/engine/ENGN_FF_[0]: 2
+    sim/flightmodel/engine/ENGN_FF_[0]: 4
     sim/flightmodel/engine/ENGN_mixt[0]: 2
     sim/flightmodel/engine/ENGN_thro[0]: 2
     sim/weather/aircraft/temperature_ambient_deg_c: 0
     sim/cockpit2/engine/indicators/engine_speed_rpm[0]: 0
-    sim/cockpit2/engine/indicators/CHT_deg_C[0]: 0
+    sim/cockpit2/engine/indicators/CHT_deg_C[*]: 0
     sim/cockpit2/engine/indicators/MPR_in_hg[0]: 2
     sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]: 4
     sim/cockpit2/electrical/battery_amps[0]: 2

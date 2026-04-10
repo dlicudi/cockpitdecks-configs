@@ -1,213 +1,199 @@
 name: transponder
-includes: includes/pagerfull
-
+includes:
+- includes/pagerfull
 buttons:
-
 - index: 0
   name: SQUAWK0
   vibrate: SHORT
-  label: "S Q U "
+  label: 'S Q U '
   label-position: rt
   label-size: 10
   label-color: White
-  type: push
   text: ${formula}
-  text-format: "{:01.0f}"
+  text-format: '{:01.0f}'
   text-size: 50
   text-font: Segment7Standard.otf
   text-color: Lime
   text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 1000 / floor
-  command: sim/transponder/transponder_thousands_up
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/transponder/transponder_thousands_up
 - index: 1
   name: SQUAWK1
   vibrate: SHORT
-  label: " A W K"
+  label: ' A W K'
   label-position: lt
   label-size: 10
   label-color: White
-  type: push
   text: ${formula}
-  text-format: "{:01.0f}"
+  text-format: '{:01.0f}'
   text-size: 50
   text-font: Segment7Standard.otf
   text-color: Lime
   text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 100 / floor 10 %
-  command: sim/transponder/transponder_hundreds_up
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/transponder/transponder_hundreds_up
 - index: 2
-  name: SQUAWK2  
+  name: SQUAWK2
   vibrate: SHORT
-  label: "C O "
+  label: 'C O '
   label-position: rt
   label-size: 10
   label-color: White
-  type: push
   text: ${formula}
-  text-format: "{:01.0f}"
+  text-format: '{:01.0f}'
   text-size: 50
   text-font: Segment7Standard.otf
   text-color: Lime
   text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 10 / floor 10 %
-  command: sim/transponder/transponder_tens_up
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/transponder/transponder_tens_up
 - index: 3
   name: SQUAWK3
   vibrate: SHORT
-  label: " D E"
+  label: ' D E'
   label-position: lt
   label-size: 10
   label-color: White
-  type: push
   text: ${formula}
-  text-format: "{:01.0f}"
+  text-format: '{:01.0f}'
   text-size: 50
-  text-font: Segment7Standard.otf  
+  text-font: Segment7Standard.otf
   text-color: Lime
   text-bg-color: Black
   formula: ${sim/cockpit/radios/transponder_code} 10 %
-  command: sim/transponder/transponder_ones_up
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/transponder/transponder_ones_up
 - index: 16
-  name: ON
-  type: push
+  name: true
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        led: bars
-        formula: ${sim/cockpit2/radios/actuators/transponder_mode} 2 eq
-      B1:
-        text: ON
-        text-size: 60
-        text-font: D-DIN-Bold.otf
-        formula: "1"
-  command: sim/transponder/transponder_on
+    - color: lime
+      led: bars
+      formula: ${sim/cockpit2/radios/actuators/transponder_mode} 2 eq
+    - text: true
+      text-size: 60
+      text-font: D-DIN-Bold.otf
+      formula: '1'
   vibrate: SHORT
-
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/transponder/transponder_on
 - index: 17
-  name: OFF
-  type: push
+  name: false
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        led: bars
-        formula: ${sim/cockpit2/radios/actuators/transponder_mode} 0 eq
-      B1:
-        text: OFF
-        text-size: 60
-        text-font: D-DIN-Bold.otf
-        formula: "1"
-  command: sim/transponder/transponder_off
+    - color: lime
+      led: bars
+      formula: ${sim/cockpit2/radios/actuators/transponder_mode} 0 eq
+    - text: false
+      text-size: 60
+      text-font: D-DIN-Bold.otf
+      formula: '1'
   vibrate: SHORT
-
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/transponder/transponder_off
 - index: 18
   name: STBY
-  type: push
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        led: bars
-        formula: ${sim/cockpit2/radios/actuators/transponder_mode} 1 eq
-      B1:
-        text: STBY
-        text-size: 60
-        text-font: D-DIN-Bold.otf
-        formula: "1"
-  command: sim/transponder/transponder_standby
+    - color: lime
+      led: bars
+      formula: ${sim/cockpit2/radios/actuators/transponder_mode} 1 eq
+    - text: STBY
+      text-size: 60
+      text-font: D-DIN-Bold.otf
+      formula: '1'
   vibrate: SHORT
-
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/transponder/transponder_standby
 - index: 19
   name: ALT
-  type: push
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        led: bars
-        formula: ${sim/cockpit2/radios/actuators/transponder_mode} 3 eq
-      B1:
-        text: ALT
-        text-size: 60
-        text-font: D-DIN-Bold.otf
-        formula: "1"
-  command: sim/transponder/transponder_alt
+    - color: lime
+      led: bars
+      formula: ${sim/cockpit2/radios/actuators/transponder_mode} 3 eq
+    - text: ALT
+      text-size: 60
+      text-font: D-DIN-Bold.otf
+      formula: '1'
   vibrate: SHORT
-
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/transponder/transponder_alt
 - index: 8
   name: IDENT
-  type: push
   vibrate: SHORT
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: yellow
-        led: bars
-        formula: ${sim/cockpit/radios/transponder_id}
-      B1:
-        text: IDENT
-        text-size: 60
-        text-font: D-DIN-Bold.otf
-        formula: "1"
-  command: sim/transponder/transponder_ident
-
-
+    - color: yellow
+      led: bars
+      formula: ${sim/cockpit/radios/transponder_id}
+    - text: IDENT
+      text-size: 60
+      text-font: D-DIN-Bold.otf
+      formula: '1'
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/transponder/transponder_ident
 - index: 9
   name: TEST
-  type: push
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        led: bars
-        formula: ${sim/cockpit2/radios/actuators/transponder_mode} 4 eq
-      B1:
-        text: TEST
-        text-size: 60
-        text-font: D-DIN-Bold.otf
-        formula: "1"
-  command: sim/transponder/transponder_test
+    - color: lime
+      led: bars
+      formula: ${sim/cockpit2/radios/actuators/transponder_mode} 4 eq
+    - text: TEST
+      text-size: 60
+      text-font: D-DIN-Bold.otf
+      formula: '1'
   vibrate: SHORT
-
-# - index: 10
-#   name: CLR
-#   type: push
-#   text: "CLR"
-#   text-color: Lime
-#   command: sim/transponder/transponder_CLR
-#   text-bg-color: Black
-
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/transponder/transponder_test
 - index: 10
   name: LIGHT
-  type: none
   annunciator:
     size: medium
     model: A
     parts:
-      A0:
-        color: Orange
-        led: dot
-        formula: ${sim/cockpit/radios/transponder_light}
-
+    - color: Orange
+      led: dot
+      formula: ${sim/cockpit/radios/transponder_light}
+  activation: none
+  representation: annunciator
 - index: 11
-  type: none
   size: medium
   label: MODE
   label-size: 9
@@ -215,130 +201,137 @@ buttons:
   text-color: Lime
   text-bg-color: Black
   multi-texts:
-      - text: "${sim/cockpit2/radios/actuators/transponder_code}\nOFF"
-        text-format: "{:0.0f}"
-        text-color: White
-        text-font: Segment7Standard.otf
-        text-size: 30
-        text-position: cm
-      - text: "${sim/cockpit2/radios/actuators/transponder_code}\nSTBY"
-        text-format: "{:0.0f}"
-        text-color: White
-        text-font: Segment7Standard.otf
-        text-size: 30
-        text-position: cm
-      - text: "${sim/cockpit2/radios/actuators/transponder_code}\nON"
-        text-format: "{:0.0f}"
-        text-color: Lime
-        text-font: Segment7Standard.otf
-        text-size: 30
-        text-position: cm
-      - text: "${sim/cockpit2/radios/actuators/transponder_code}\nALT"
-        text-format: "{:0.0f}"
-        text-color: Lime
-        text-font: Segment7Standard.otf
-        text-size: 30
-        text-position: cm
-      - text: "${sim/cockpit2/radios/actuators/transponder_code}\nTEST"
-        text-format: "{:0.0f}"
-        text-color: White
-        text-font: Segment7Standard.otf
-        text-size: 30
-        text-position: cm
+  - text: '${sim/cockpit2/radios/actuators/transponder_code}
+
+      OFF'
+    text-format: '{:0.0f}'
+    text-color: White
+    text-font: Segment7Standard.otf
+    text-size: 30
+    text-position: cm
+  - text: '${sim/cockpit2/radios/actuators/transponder_code}
+
+      STBY'
+    text-format: '{:0.0f}'
+    text-color: White
+    text-font: Segment7Standard.otf
+    text-size: 30
+    text-position: cm
+  - text: '${sim/cockpit2/radios/actuators/transponder_code}
+
+      ON'
+    text-format: '{:0.0f}'
+    text-color: Lime
+    text-font: Segment7Standard.otf
+    text-size: 30
+    text-position: cm
+  - text: '${sim/cockpit2/radios/actuators/transponder_code}
+
+      ALT'
+    text-format: '{:0.0f}'
+    text-color: Lime
+    text-font: Segment7Standard.otf
+    text-size: 30
+    text-position: cm
+  - text: '${sim/cockpit2/radios/actuators/transponder_code}
+
+      TEST'
+    text-format: '{:0.0f}'
+    text-color: White
+    text-font: Segment7Standard.otf
+    text-size: 30
+    text-position: cm
   formula: ${sim/cockpit2/radios/actuators/transponder_mode}
-
+  activation: none
+  representation: multi-texts
 - index: 5
-  type: push
-  command: sim/transponder/transponder_digit_0
-  text: "0"
+  text: '0'
   text-size: 26
   text-bg-color: Black
   text-font: D-DINCondensed.otf
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/transponder/transponder_digit_0
 - index: 6
-  type: push
-  command: sim/transponder/transponder_digit_1
-  text: "1"
+  text: '1'
   text-size: 26
   text-bg-color: Black
   text-font: D-DINCondensed.otf
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/transponder/transponder_digit_1
 - index: 7
-  type: push
-  command: sim/transponder/transponder_digit_2
-  text: "2"
+  text: '2'
   text-size: 26
   text-bg-color: Black
   text-font: D-DINCondensed.otf
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/transponder/transponder_digit_2
 - index: 13
-  type: push
-  command: sim/transponder/transponder_digit_3
-  text: "3"
+  text: '3'
   text-size: 26
   text-bg-color: Black
   text-font: D-DINCondensed.otf
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/transponder/transponder_digit_3
 - index: 14
-  type: push
-  command: sim/transponder/transponder_digit_4
-  text: "4"
+  text: '4'
   text-size: 26
   text-bg-color: Black
   text-font: D-DINCondensed.otf
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/transponder/transponder_digit_4
 - index: 15
-  type: push
-  command: sim/transponder/transponder_digit_5
-  text: "5"
+  text: '5'
   text-size: 26
   text-bg-color: Black
   text-font: D-DINCondensed.otf
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/transponder/transponder_digit_5
 - index: 21
-  type: push
-  command: sim/transponder/transponder_digit_6
-  text: "6"
+  text: '6'
   text-size: 26
   text-bg-color: Black
   text-font: D-DINCondensed.otf
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/transponder/transponder_digit_6
 - index: 22
-  type: push
-  command: sim/transponder/transponder_digit_7
-  text: "7"
+  text: '7'
   text-size: 26
   text-bg-color: Black
   text-font: D-DINCondensed.otf
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/transponder/transponder_digit_7
 - index: 23
-  type: push
-  command: sim/transponder/transponder_CLR
-  text: "CLR"
+  text: CLR
   text-size: 26
   text-bg-color: Black
   text-font: D-DINCondensed.otf
-
-
-# - index: 4
-#   type: line
-#   code: H
-# - index: 12
-#   type: line
-#   code: H
-# - index: 20
-#   type: line
-#   code: H
-
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/transponder/transponder_CLR
 - index: 4
-  type: none
   decor:
     type: line
     code: K
-
+  activation: none
+  representation: decor
 - index: 12
-  type: none
   label: XPDR
   label-position: cm
   label-size: 10
@@ -346,9 +339,11 @@ buttons:
   decor:
     type: segment
     code: BS
-
+  activation: none
+  representation: decor
 - index: 20
-  type: none
   decor:
     type: line
     code: L
+  activation: none
+  representation: decor

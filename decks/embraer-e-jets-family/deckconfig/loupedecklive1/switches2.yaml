@@ -1,11 +1,10 @@
 description: Switches 2
-includes: pager,encoders/encoders_lights
+includes:
+- pager
+- encoders/encoders_lights
 name: switches2
-
 buttons:
-
 - index: 0
-  type: page
   page: overhead_pressurization
   label: PRESSURIZATION
   label-color: Gold
@@ -17,9 +16,9 @@ buttons:
   text-font: fontawesome.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-
+  activation: page
+  representation: text
 - index: 1
-  type: page
   page: overhead_windshield_wiper
   label: WINDSHIELD WIPER
   label-color: Gold
@@ -31,9 +30,9 @@ buttons:
   text-font: fontawesome.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-
+  activation: page
+  representation: text
 - index: 11
-  type: page
   page: switches
   text: →
   text-color: khaki
@@ -41,3 +40,5 @@ buttons:
   text-font: fontawesome.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text

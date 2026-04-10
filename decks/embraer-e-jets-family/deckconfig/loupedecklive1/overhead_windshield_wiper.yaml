@@ -1,31 +1,29 @@
 name: overhead_windshield_wiper
 description: Windshield Wiper
-includes: pager,encoders/encoders_lights
+includes:
+- pager
+- encoders/encoders_lights
 default-icon-color: Black
-
 buttons:
 - index: 0
-  type: segment
   code: NSKL
-
+  activation: segment
 - index: 1
-  type: segment
   code: IJKL
-
+  activation: segment
 - index: 2
-  type: none
   icon: INOP.png
-
+  activation: none
+  representation: icon
 - index: 3
-  type: none
   icon: INOP.png
-
+  activation: none
+  representation: icon
 - index: 4
-  type: none
   icon: INOP.png
-
+  activation: none
+  representation: icon
 - index: 5
-  type: updown
   label: WINDSHIELD WIPER 1
   label-color: White
   label-position: cb
@@ -43,14 +41,13 @@ buttons:
     tick-label-size: 24
     options: invert
     tick-labels:
-      - "OFF"
-      - "LOW"
-      - "HIGH"
+    - 'OFF'
+    - LOW
+    - HIGH
   dataref: sim/cockpit2/switches/wiper_speed_switch[0]
   set-dataref: sim/cockpit2/switches/wiper_speed_switch[0]
-
+  activation: sweep
 - index: 6
-  type: updown
   label: WINDSHIELD WIPER 2
   label-color: White
   label-position: cb
@@ -68,29 +65,29 @@ buttons:
     tick-label-size: 24
     options: invert
     tick-labels:
-      - "OFF"
-      - "LOW"
-      - "HIGH"
+    - 'OFF'
+    - LOW
+    - HIGH
   dataref: sim/cockpit2/switches/wiper_speed_switch[1]
   set-dataref: sim/cockpit2/switches/wiper_speed_switch[1]
-
+  activation: sweep
 - index: 7
-  type: none
   icon: INOP.png
-
+  activation: none
+  representation: icon
 - index: 8
-  type: none
   icon: INOP.png
-
+  activation: none
+  representation: icon
 - index: 9
-  type: none
   icon: INOP.png
-
+  activation: none
+  representation: icon
 - index: 10
-  type: none
   icon: INOP.png
-
+  activation: none
+  representation: icon
 - index: 11
-  type: none
   icon: INOP.png
-
+  activation: none
+  representation: icon

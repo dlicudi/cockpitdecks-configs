@@ -1,166 +1,166 @@
 name: index
-includes: includes/pagerfull
-
+includes:
+- includes/pagerfull
 buttons:
-
-  - index: 0
-    type: page
-    page: engine
-    label: ENGINE
-    label-color: Gold
-    label-bg-color: Black
-    text: ⛽
-    text-color: khaki
-    text-size: 24
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 1
-    type: page
-    page: mfd
-    label: MFD
-    label-color: Gold
-    label-bg-color: Black
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 2
-    type: page
-    page: pfi
-    label: STATUS
-    label-color: Gold
-    label-size: 10
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 3
-    type: page
-    page: audiopanel
-    label: AUDIO
-    label-color: Gold
-    label-size: 10
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 4
-    type: page
-    page: transponder
-    label: XPDR
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 5
-    type: page
-    page: switches
-    label: SWITCHES
-    label-color: Gold
-    label-size: 10
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 6
-    type: page
-    page: weather
-    label: WEATHER
-    label-color: Gold
-    text: 🌦
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 7
-    type: page
-    page: views
-    label: VIEWS
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 8
-    type: page
-    page: g1000
-    label: G1000
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 30, 40)
-
-  - index: 9
-    type: page
-    page: trutrak_sorcerer
-    label: TS SORCERER
-    label-color: Gold
-    label-size: 9
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 10
-    type: page
-    page: radio
-    label: RADIO
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 11
-    type: page
-    page: fcu
-    label: FCU
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
-
-  - index: 12
-    type: page
-    page: pedestal
-    label: PEDESTAL
-    label-color: Gold
-    text: 
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
+- index: 0
+  page: engine
+  label: ENGINE
+  label-color: Gold
+  label-bg-color: Black
+  text: ⛽
+  text-color: khaki
+  text-size: 24
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 1
+  page: mfd
+  label: MFD
+  label-color: Gold
+  label-bg-color: Black
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 2
+  page: pfi
+  label: STATUS
+  label-color: Gold
+  label-size: 10
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 3
+  page: audiopanel
+  label: AUDIO
+  label-color: Gold
+  label-size: 10
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 4
+  page: transponder
+  label: XPDR
+  label-color: Gold
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 5
+  page: switches
+  label: SWITCHES
+  label-color: Gold
+  label-size: 10
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 6
+  page: weather
+  label: WEATHER
+  label-color: Gold
+  text: 🌦
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 7
+  page: views
+  label: VIEWS
+  label-color: Gold
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 8
+  page: g1000
+  label: G1000
+  label-color: Gold
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 30, 40)
+  activation: page
+  representation: text
+- index: 9
+  page: trutrak_sorcerer
+  label: TS SORCERER
+  label-color: Gold
+  label-size: 9
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 10
+  page: radio
+  label: RADIO
+  label-color: Gold
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 11
+  page: fcu
+  label: FCU
+  label-color: Gold
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text
+- index: 12
+  page: pedestal
+  label: PEDESTAL
+  label-color: Gold
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text

@@ -1,112 +1,103 @@
-
 buttons:
-
 - index: e0
   name: range_encoder
-  type: encoder
+  activation: encoder
   commands:
-  - sim/GPS/g430n1_zoom_in
-  - sim/GPS/g430n1_zoom_out
-
+    cw: sim/GPS/g430n1_zoom_out
+    ccw: sim/GPS/g430n1_zoom_in
 - index: e1
   name: comvloc_outer
-  type: encoder-push
+  activation: encoder-push
   commands:
-  - sim/GPS/g430n1_nav_com_tog
-  - sim/GPS/g430n1_coarse_down
-  - sim/GPS/g430n1_coarse_up
-
+    press: sim/GPS/g430n1_nav_com_tog
+    cw: sim/GPS/g430n1_coarse_up
+    ccw: sim/GPS/g430n1_coarse_down
 - index: e2
   name: comvloc_inner
-  type: encoder-push
+  activation: encoder-push
   commands:
-  - sim/GPS/g430n1_nav_com_tog
-  - sim/GPS/g430n1_fine_down
-  - sim/GPS/g430n1_fine_up
-
+    press: sim/GPS/g430n1_nav_com_tog
+    cw: sim/GPS/g430n1_fine_up
+    ccw: sim/GPS/g430n1_fine_down
 - index: e3
   name: volume_encoder
-  type: encoder-toggle
   commands:
-  - sim/GPS/g430n1_cvol_dn
-  - sim/GPS/g430n1_cvol_up
-  - sim/GPS/g430n1_vvol_dn
-  - sim/GPS/g430n1_vvol_up
-
+    ccw: sim/GPS/g430n1_cvol_dn
+    cw: sim/GPS/g430n1_cvol_up
+    ccw-off: sim/GPS/g430n1_vvol_dn
+    cw-off: sim/GPS/g430n1_vvol_up
+  activation: encoder-mode
 - index: e4
   name: fms_encoder_outer
-  type: encoder-push
+  activation: encoder-push
   commands:
-  - sim/GPS/g430n1_cursor
-  - sim/GPS/g430n1_chapter_dn
-  - sim/GPS/g430n1_chapter_up
-
+    press: sim/GPS/g430n1_cursor
+    cw: sim/GPS/g430n1_chapter_up
+    ccw: sim/GPS/g430n1_chapter_dn
 - index: e5
   name: fms_encoder_inner
-  type: encoder-push
+  activation: encoder-push
   commands:
-  - sim/GPS/g430n1_cursor
-  - sim/GPS/g430n1_page_dn
-  - sim/GPS/g430n1_page_up
-
+    press: sim/GPS/g430n1_cursor
+    cw: sim/GPS/g430n1_page_up
+    ccw: sim/GPS/g430n1_page_dn
 - index: left
   name: left_screen
-  type: none
   side:
     icon-color: Black
     labels:
-      - label: "RNG"
-        label-size: 14
-        label-font: B612-Bold
-        label-color: Gold
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text: "+/-"
-      - label: "COM/VLOC"
-        label-size: 10
-        label-font: B612-Bold
-        label-color: Gold
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text: "OUTER"
-      - label: "COM/VLOC"
-        label-size: 10
-        label-font: B612-Bold
-        label-color: Gold
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text: "INNER"
-
+    - label: RNG
+      label-size: 14
+      label-font: B612-Bold
+      label-color: Gold
+      text-size: 18
+      text-font: Seven Segment.ttf
+      text-color: White
+      text: +/-
+    - label: COM/VLOC
+      label-size: 10
+      label-font: B612-Bold
+      label-color: Gold
+      text-size: 18
+      text-font: Seven Segment.ttf
+      text-color: White
+      text: OUTER
+    - label: COM/VLOC
+      label-size: 10
+      label-font: B612-Bold
+      label-color: Gold
+      text-size: 18
+      text-font: Seven Segment.ttf
+      text-color: White
+      text: INNER
+  activation: none
 - index: right
   name: right_screen
-  type: none
   side:
     icon-color: Black
     labels:
-      - label: "VOLUME"
-        label-size: 14
-        label-font: B612-Bold
-        label-color: Gold
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text: "C/V"
-      - label: "GPS"
-        label-size: 14
-        label-font: B612-Bold
-        label-color: Gold
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text: "Outer"
-      - label: "GPS"
-        label-size: 14
-        label-font: B612-Bold
-        label-color: Gold
-        text-size: 18
-        text-font: Seven Segment.ttf
-        text-color: White
-        text: "Inner"
+    - label: VOLUME
+      label-size: 14
+      label-font: B612-Bold
+      label-color: Gold
+      text-size: 18
+      text-font: Seven Segment.ttf
+      text-color: White
+      text: C/V
+    - label: GPS
+      label-size: 14
+      label-font: B612-Bold
+      label-color: Gold
+      text-size: 18
+      text-font: Seven Segment.ttf
+      text-color: White
+      text: Outer
+    - label: GPS
+      label-size: 14
+      label-font: B612-Bold
+      label-color: Gold
+      text-size: 18
+      text-font: Seven Segment.ttf
+      text-color: White
+      text: Inner
+  activation: none

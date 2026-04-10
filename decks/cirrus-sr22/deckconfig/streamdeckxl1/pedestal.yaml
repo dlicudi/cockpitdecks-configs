@@ -1,11 +1,9 @@
 name: pedestal
-includes: includes/pagerfull
-
+includes:
+- includes/pagerfull
 buttons:
-
 - index: 0
   name: THROTTLE
-  type: none
   label: THROTTLE
   label-size: 9
   label-color: black
@@ -13,45 +11,44 @@ buttons:
     size: medium
     model: A
     parts:
-      A0:
-        color: lime
-        text-size: 38
-        formula: "${sim/flightmodel/engine/ENGN_thro[0]} 100 *"
-        text: "${formula}%"
-        text-font: Segment7Standard.otf
-        text-format: "{0:.0f}"
-
+    - color: lime
+      text-size: 38
+      formula: ${sim/flightmodel/engine/ENGN_thro[0]} 100 *
+      text: ${formula}%
+      text-font: Segment7Standard.otf
+      text-format: '{0:.0f}'
+  activation: none
+  representation: annunciator
 - index: 2
-  type: push
   vibrate: SHORT
-  label: "TOGGLE BRAKES"
+  label: TOGGLE BRAKES
   label-size: 8
-  command: sim/flight_controls/park_brake_valve_toggle
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit2/controls/park_brake_valve} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
-
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit2/controls/park_brake_valve} 0 eq
+    - text: 'ON'
+      color: deepskyblue
+      framed: true
+      formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/flight_controls/park_brake_valve_toggle
 - index: 3
-  type: push
   vibrate: SHORT
-  text: "UP"
+  text: UP
   text-color: Lime
-  command: sim/flight_controls/flaps_up
   text-bg-color: Black
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/flight_controls/flaps_up
 - index: 4
   name: MIXTURE
-  type: none
   label: MIXTURE
   label-size: 9
   label-color: black
@@ -59,16 +56,15 @@ buttons:
     size: medium
     model: A
     parts:
-      A0:
-        color: lime
-        text-size: 38
-        formula: "${sim/flightmodel/engine/ENGN_mixt[0]} 100 *"
-        text: "${formula}%"
-        text-font: Segment7Standard.otf
-        text-format: "{0:.0f}"
-
+    - color: lime
+      text-size: 38
+      formula: ${sim/flightmodel/engine/ENGN_mixt[0]} 100 *
+      text: ${formula}%
+      text-font: Segment7Standard.otf
+      text-format: '{0:.0f}'
+  activation: none
+  representation: annunciator
 - index: 7
-  type: none
   label: FLAPS RATIO
   label-color: black
   label-size: 9
@@ -76,20 +72,21 @@ buttons:
     model: B
     size: medium
     parts:
-      B0:
-        text: "DISAGREE"
-        color: darkorange
-        formula: ${sim/cockpit2/controls/flap_disagree} 1 eq
-      B1:
-        color: deepskyblue
-        framed: true
-        text: ${sim/cockpit2/controls/flap_ratio}
-        text-format: "{0:.2f}"
-        formula: "1"
-
+    - text: DISAGREE
+      color: darkorange
+      formula: ${sim/cockpit2/controls/flap_disagree} 1 eq
+    - color: deepskyblue
+      framed: true
+      text: ${sim/cockpit2/controls/flap_ratio}
+      text-format: '{0:.2f}'
+      formula: '1'
+  activation: none
+  representation: annunciator
 - index: 11
-  type: push
-  text: "DOWN"
+  text: DOWN
   text-color: Lime
-  command: sim/flight_controls/flaps_down
   text-bg-color: Black
+  activation: push
+  representation: text
+  commands:
+    press: sim/flight_controls/flaps_down

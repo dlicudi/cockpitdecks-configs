@@ -1,42 +1,38 @@
-
 buttons:
-
 - index: e0
   name: com1_coarse
-  type: encoder-push
+  activation: encoder-push
   commands:
-  - sim/GPS/g1000n1_com_ff
-  - sim/radios/stby_com1_coarse_up
-  - sim/radios/stby_com1_coarse_down
-
+    press: sim/GPS/g1000n1_com_ff
+    cw: sim/radios/stby_com1_coarse_down
+    ccw: sim/radios/stby_com1_coarse_up
 - index: e1
   name: com1_fine
-  type: encoder-push
+  activation: encoder-push
   commands:
-  - sim/GPS/g1000n1_com_ff
-  - sim/radios/stby_com1_fine_up
-  - sim/radios/stby_com1_fine_down
-
+    press: sim/GPS/g1000n1_com_ff
+    cw: sim/radios/stby_com1_fine_down
+    ccw: sim/radios/stby_com1_fine_up
 - index: left
   name: left_screen
-  type: none
   side:
     icon-color: Black
     labels:
-      - label: "COM1"
-        label-size: 20
-        label-font: D-DINCondensed.otf
-        label-color: Gold
-        text: "MHz"
-        text-size: 18
-        text-font: D-DINCondensed.otf
-        text-color: white
-      - label: "COM1"
-        label-size: 20
-        label-font: D-DINCondensed.otf
-        label-color: Gold
-        text: "kHz"
-        text-size: 18
-        text-font: D-DINCondensed.otf
-        text-color: white
-      - label: ""
+    - label: COM1
+      label-size: 20
+      label-font: D-DINCondensed.otf
+      label-color: Gold
+      text: MHz
+      text-size: 18
+      text-font: D-DINCondensed.otf
+      text-color: white
+    - label: COM1
+      label-size: 20
+      label-font: D-DINCondensed.otf
+      label-color: Gold
+      text: kHz
+      text-size: 18
+      text-font: D-DINCondensed.otf
+      text-color: white
+    - label: ''
+  activation: none

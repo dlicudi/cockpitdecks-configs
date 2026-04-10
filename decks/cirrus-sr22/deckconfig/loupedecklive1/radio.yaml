@@ -1,218 +1,203 @@
 name: radio
-includes: pager,encoders/radio
+includes:
+- pager
+- encoders/radio
 buttons:
-
-# ROW 1: COM1 (left) / NAV1 (right)
 - index: 0
   name: COM1_STDBY
-  label: "STDBY"
+  label: STDBY
   label-color: white
-  type: push
   vibrate: SHORT
-  command: sim/GPS/g1000n1_com_ff
   annunciator:
     size: medium
     model: D
     parts:
-      D0:
-        color: cyan
-        text-size: 30
-        text-font: D-DINCondensed.otf
-        formula: "${sim/cockpit2/radios/actuators/com1_standby_frequency_hz_833} 1000 /"
-        text: "${formula}"
-        text-format: "{0:.3f}"
-        # frame: True
-      D1:
-        color: cyan
-        led: dot
-        formula: ${data:com1_encoder-toggle} 0 eq
-      D2:
-        color: cyan
-        led: dot
-        formula: ${data:com1_encoder-toggle} 1 eq
-
-
-# ROW 1: COM1 (left) / COM2 (right)
+    - color: cyan
+      text-size: 30
+      text-font: D-DINCondensed.otf
+      formula: ${sim/cockpit2/radios/actuators/com1_standby_frequency_hz_833} 1000
+        /
+      text: ${formula}
+      text-format: '{0:.3f}'
+    - color: cyan
+      led: dot
+      formula: ${data:com1_encoder-toggle} 0 eq
+    - color: cyan
+      led: dot
+      formula: ${data:com1_encoder-toggle} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/GPS/g1000n1_com_ff
 - index: 1
   name: COM1_ACTIVE
-  label: "COM1"
+  label: COM1
   label-color: white
-  type: push
   vibrate: SHORT
-  command: sim/GPS/g1000n1_com_ff
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        text-size: 30
-        text-font: D-DINCondensed.otf
-        formula: "${sim/cockpit2/radios/actuators/com1_frequency_hz_833} 1000 /"
-        text: "${formula}"
-        text-format: "{0:.3f}"
-      B1:
-        color: darkgrey
-        text-size: 24
-        text-font: DejaVuSans.ttf
-        formula: "1"
-        text: "⇄"
-        # framed: true
-
+    - color: lime
+      text-size: 30
+      text-font: D-DINCondensed.otf
+      formula: ${sim/cockpit2/radios/actuators/com1_frequency_hz_833} 1000 /
+      text: ${formula}
+      text-format: '{0:.3f}'
+    - color: darkgrey
+      text-size: 24
+      text-font: DejaVuSans.ttf
+      formula: '1'
+      text: ⇄
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/GPS/g1000n1_com_ff
 - index: 8
   name: COM2_STDBY
-  label: "STDBY"
+  label: STDBY
   label-color: white
-  type: push
   vibrate: SHORT
-  command: sim/radios/com2_standy_flip
   annunciator:
     size: medium
     model: D
     parts:
-      D0:
-        color: cyan
-        text-size: 30
-        text-font: D-DINCondensed.otf
-        formula: "${sim/cockpit2/radios/actuators/com2_standby_frequency_hz_833} 1000 /"
-        text: "${formula}"
-        text-format: "{0:.3f}"
-      D1:
-        color: cyan
-        led: dot
-        formula: ${data:com2_encoder-toggle} 0 eq
-      D2:
-        color: cyan
-        led: dot
-        formula: ${data:com2_encoder-toggle} 1 eq
-
+    - color: cyan
+      text-size: 30
+      text-font: D-DINCondensed.otf
+      formula: ${sim/cockpit2/radios/actuators/com2_standby_frequency_hz_833} 1000
+        /
+      text: ${formula}
+      text-format: '{0:.3f}'
+    - color: cyan
+      led: dot
+      formula: ${data:com2_encoder-toggle} 0 eq
+    - color: cyan
+      led: dot
+      formula: ${data:com2_encoder-toggle} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/radios/com2_standy_flip
 - index: 9
   name: COM2_ACTIVE
-  label: "COM2"
+  label: COM2
   label-color: white
-  type: push
   vibrate: SHORT
-  command: sim/radios/com2_standy_flip
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        text-size: 30
-        text-font: D-DINCondensed.otf
-        formula: "${sim/cockpit2/radios/actuators/com2_frequency_hz_833} 1000 /"
-        text: "${formula}"
-        text-format: "{0:.3f}"
-      B1:
-        color: darkgrey
-        text-size: 24
-        text-font: DejaVuSans.ttf
-        formula: "1"
-        text: "⇄"
-
-# ROW 3: COM2 (left) / NAV2 (right)
+    - color: lime
+      text-size: 30
+      text-font: D-DINCondensed.otf
+      formula: ${sim/cockpit2/radios/actuators/com2_frequency_hz_833} 1000 /
+      text: ${formula}
+      text-format: '{0:.3f}'
+    - color: darkgrey
+      text-size: 24
+      text-font: DejaVuSans.ttf
+      formula: '1'
+      text: ⇄
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/radios/com2_standy_flip
 - index: 3
   name: NAV1_STDBY
-  label: "STDBY"
+  label: STDBY
   label-color: white
-  type: push
   vibrate: SHORT
-  command: sim/GPS/g1000n3_nav_ff
   annunciator:
     size: medium
     model: D
     parts:
-      D0:
-        color: cyan
-        text-size: 30
-        text-font: D-DINCondensed.otf
-        formula: "${sim/cockpit/radios/nav1_stdby_freq_hz} 100 /"
-        text: "${formula}"
-        text-format: "{0:.2f}"
-      D1:
-        color: cyan
-        led: dot
-        formula: ${data:nav1_encoder-toggle} 0 eq
-      D2:
-        color: cyan
-        led: dot
-        formula: ${data:nav1_encoder-toggle} 1 eq
-
+    - color: cyan
+      text-size: 30
+      text-font: D-DINCondensed.otf
+      formula: ${sim/cockpit/radios/nav1_stdby_freq_hz} 100 /
+      text: ${formula}
+      text-format: '{0:.2f}'
+    - color: cyan
+      led: dot
+      formula: ${data:nav1_encoder-toggle} 0 eq
+    - color: cyan
+      led: dot
+      formula: ${data:nav1_encoder-toggle} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/GPS/g1000n3_nav_ff
 - index: 2
   name: NAV1_ACTIVE
-  label: "NAV1"
+  label: NAV1
   label-color: white
-  type: push
   vibrate: SHORT
-  command: sim/GPS/g1000n3_nav_ff
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        text-size: 30
-        text-font: D-DINCondensed.otf
-        formula: "${sim/cockpit/radios/nav1_freq_hz} 100 /"
-        text: "${formula}"
-        text-format: "{0:.2f}"
-      B1:
-        color: darkgrey
-        text-size: 24
-        text-font: DejaVuSans.ttf
-        formula: "1"
-        text: "⇄"
-
+    - color: lime
+      text-size: 30
+      text-font: D-DINCondensed.otf
+      formula: ${sim/cockpit/radios/nav1_freq_hz} 100 /
+      text: ${formula}
+      text-format: '{0:.2f}'
+    - color: darkgrey
+      text-size: 24
+      text-font: DejaVuSans.ttf
+      formula: '1'
+      text: ⇄
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/GPS/g1000n3_nav_ff
 - index: 10
   name: NAV2_ACTIVE
-  label: "NAV2"
+  label: NAV2
   label-color: white
-  type: push
   vibrate: SHORT
-  command: sim/radios/nav2_standy_flip
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        text-size: 30
-        text-font: D-DINCondensed.otf
-        formula: "${sim/cockpit/radios/nav2_freq_hz} 100 /"
-        text: "${formula}"
-        text-format: "{0:.2f}"
-      B1:
-        color: darkgrey
-        text-size: 24
-        text-font: DejaVuSans.ttf
-        formula: "1"
-        text: "⇄"
-
+    - color: lime
+      text-size: 30
+      text-font: D-DINCondensed.otf
+      formula: ${sim/cockpit/radios/nav2_freq_hz} 100 /
+      text: ${formula}
+      text-format: '{0:.2f}'
+    - color: darkgrey
+      text-size: 24
+      text-font: DejaVuSans.ttf
+      formula: '1'
+      text: ⇄
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/radios/nav2_standy_flip
 - index: 11
   name: NAV2_STDBY
-  label: "STDBY"
+  label: STDBY
   label-color: white
-  type: push
   vibrate: SHORT
-  command: sim/radios/nav2_standy_flip
   annunciator:
     size: medium
     model: D
     parts:
-      D0:
-        color: cyan
-        text-size: 30
-        text-font: D-DINCondensed.otf
-        formula: "${sim/cockpit/radios/nav2_stdby_freq_hz} 100 /"
-        text: "${formula}"
-        text-format: "{0:.2f}"
-      D1:
-        color: cyan
-        led: dot
-        formula: ${data:nav2_encoder-toggle} 0 eq
-      D2:
-        color: cyan
-        led: dot
-        formula: ${data:nav2_encoder-toggle} 1 eq
-
+    - color: cyan
+      text-size: 30
+      text-font: D-DINCondensed.otf
+      formula: ${sim/cockpit/radios/nav2_stdby_freq_hz} 100 /
+      text: ${formula}
+      text-format: '{0:.2f}'
+    - color: cyan
+      led: dot
+      formula: ${data:nav2_encoder-toggle} 0 eq
+    - color: cyan
+      led: dot
+      formula: ${data:nav2_encoder-toggle} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/radios/nav2_standy_flip

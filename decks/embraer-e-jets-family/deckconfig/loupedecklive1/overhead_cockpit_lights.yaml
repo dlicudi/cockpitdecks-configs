@@ -1,12 +1,11 @@
 name: overhead_cockpit_lights
 description: Cockpit Lights
-includes: pager,encoders/encoders_lights
+includes:
+- pager
+- encoders/encoders_lights
 default-icon-color: Black
-
 buttons:
-
 - index: 0
-  type: updown
   label: MAIN PNL
   label-color: White
   label-size: 8
@@ -24,13 +23,12 @@ buttons:
     tick-label-size: 24
     options: invert
     tick-labels:
-      - "OFF"
-      - "BRT"
+    - 'OFF'
+    - BRT
   dataref: sim/cockpit2/switches/panel_brightness_ratio[1]
   set-dataref: sim/cockpit2/switches/panel_brightness_ratio[1]
-
+  activation: sweep
 - index: 1
-  type: updown
   label: OVHD PNL
   label-color: White
   label-size: 8
@@ -47,13 +45,12 @@ buttons:
     tick-label-size: 24
     options: invert
     tick-labels:
-      - "OFF"
-      - "BRT"
+    - 'OFF'
+    - BRT
   dataref: sim/cockpit2/switches/panel_brightness_ratio[3]
   set-dataref: sim/cockpit2/switches/panel_brightness_ratio[3]
-
+  activation: sweep
 - index: 2
-  type: updown
   label: PEDESTAL
   label-color: White
   label-size: 8
@@ -70,16 +67,15 @@ buttons:
     tick-label-size: 24
     options: invert
     tick-labels:
-      - "OFF"
-      - "BRT"
+    - 'OFF'
+    - BRT
   dataref: sim/cockpit2/switches/panel_brightness_ratio[2]
   set-dataref: sim/cockpit2/switches/panel_brightness_ratio[2]
-
+  activation: sweep
 - index: 3
   label: ANNUN TEST
   label-size: 8
   label-color: White
-  type: onoff
   stops: 2
   switch:
     switch-style: round
@@ -87,22 +83,20 @@ buttons:
     button-underline-width: 4
     button-underline-color: coral
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${XCrafts/ERJ/cockpit/annunciators_test}"
+  formula: ${XCrafts/ERJ/cockpit/annunciators_test}
   set-dataref: XCrafts/ERJ/cockpit/annunciators_test
-
-
+  activation: sweep
 - index: 4
   label: DOME
   label-size: 8
   label-color: White
-  type: onoff
   stops: 2
   switch:
     switch-style: round
@@ -110,20 +104,15 @@ buttons:
     button-underline-width: 4
     button-underline-color: coral
     tick-labels:
-      - "ON"
-      - "OFF"
+    - 'ON'
+    - 'OFF'
     tick-space: 10
     tick-color: white
     tick-label-size: 40
     tick-label-font: DIN Bold
     tick-label-color: White
-  formula: "${sim/cockpit/electrical/cockpit_lights}"
-  commands:
-    - XCrafts/Lights/cockpit_dome_toggle
-    - XCrafts/Lights/cockpit_dome_toggle
-
-
-# sim/cockpit2/electrical/panel_brightness_ratio
-
-# XCrafts/Lights/cockpit_dome_off
-# XCrafts/Lights/cockpit_dome_on
+  formula: ${sim/cockpit/electrical/cockpit_lights}
+  activation: sweep
+  positions:
+  - XCrafts/Lights/cockpit_dome_toggle
+  - XCrafts/Lights/cockpit_dome_toggle

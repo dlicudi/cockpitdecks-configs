@@ -1,130 +1,144 @@
 name: index
-includes: pager,encoders/fcu
+includes:
+- pager
+- encoders/fcu
 buttons:
 - index: 0
-  type: page
   vibrate: SHORT
   page: pfi
   label: PFI
   label-color: Gold
   label-bg-color: Black
-  text: "\uF3FD"
+  text: 
   text-color: khaki
   text-size: 38
   text-font: fontawesome.otf
   text-position: cm
   label-size: 12
+  activation: page
+  representation: text
 - index: 1
-  type: page
   vibrate: SHORT
   page: switches_master
   label: SWITCHES
   label-color: Gold
-  text: "\uF204"
+  text: 
   text-color: khaki
   text-size: 15
   text-font: fontawesome.otf
   text-position: cm
+  activation: page
+  representation: text
 - index: 2
-  type: page
   vibrate: SHORT
   page: switches_icing
   label: ICING
   label-color: Gold
-  text: "\uF2DC"
+  text: 
   text-color: khaki
   text-size: 15
   text-font: fontawesome.otf
   text-position: cm
+  activation: page
+  representation: text
 - index: 3
-  type: page
   vibrate: SHORT
   page: weather
   label: WEATHER
   label-color: Gold
-  text: "\uF0C2"
+  text: 
   text-color: khaki
   text-size: 15
   text-font: fontawesome.otf
   text-position: cm
+  activation: page
+  representation: text
 - index: 4
-  type: page
   vibrate: SHORT
   page: fcu
   label: FCU
   label-color: Gold
-  text: "\uE22D"
+  text: 
   text-color: khaki
   text-size: 15
   text-font: fontawesome.otf
   text-position: cm
+  activation: page
+  representation: text
 - index: 5
-  type: page
   vibrate: SHORT
   page: gcu479
   label: GCU-479
   label-color: Gold
-  text: "\uF2DB"
+  text: 
   text-color: khaki
   text-size: 15
   text-font: fontawesome.otf
   text-position: cm
+  activation: page
+  representation: text
 - index: 6
-  type: page
   vibrate: SHORT
   page: radio_com1
   label: RADIO
   label-color: Gold
-  text: "\uE585"
+  text: 
   text-color: khaki
   text-size: 15
   text-font: fontawesome.otf
   text-position: cm
+  activation: page
+  representation: text
 - index: 7
-  type: page
   vibrate: SHORT
   page: engine
   label: ENGINE
   label-color: Gold
-  text: "\uF085"
+  text: 
   text-color: khaki
   text-size: 15
   text-font: fontawesome.otf
   text-position: cm
+  activation: page
+  representation: text
 - index: 8
-  type: page
   vibrate: SHORT
   page: views
   label: VIEWS
   label-color: Gold
-  text: "\uF030"
+  text: 
   text-color: khaki
   text-size: 15
   text-font: fontawesome.otf
   text-position: cm
+  activation: page
+  representation: text
 - index: 9
-  type: page
   vibrate: SHORT
   page: transponder
   label: XPDR
   label-color: Gold
-  text: "\uF8D7"
+  text: 
   text-color: khaki
   text-size: 15
   text-font: fontawesome.otf
   text-position: cm
+  activation: page
+  representation: text
 - index: 10
-  type: page
   vibrate: SHORT
   page: fms_nav
   label: FMS
   label-color: Gold
-  text: "\uF279"
+  text: 
   text-color: khaki
   text-size: 15
   text-font: fontawesome.otf
   text-position: cm
+  activation: page
+  representation: text
 - index: 11
-  type: none
   label: ''
   text: ''
+  activation: none
+  representation: text

@@ -1,227 +1,229 @@
 description: FCU
-includes: pager,encoders/fcu
+includes:
+- pager
+- encoders/fcu
 name: fcu
 buttons:
 - index: 0
   name: AP
-  type: push
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        led: bars
-        formula: ${sim/cockpit2/autopilot/servos_on}
-      B1:
-        text: AP
-        text-size: 20
-        text-font: D-DINCondensed-Bold.otf
-        formula: '1'
-  command: sim/autopilot/servos_toggle
+    - color: lime
+      led: bars
+      formula: ${sim/cockpit2/autopilot/servos_on}
+    - text: AP
+      text-size: 20
+      text-font: D-DINCondensed-Bold.otf
+      formula: '1'
   vibrate: SHORT
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/servos_toggle
 - index: 1
   name: FD
-  type: push
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        led: bars
-        formula: ${sim/cockpit2/autopilot/flight_director_mode}
-      B1:
-        text: FD
-        text-size: 20
-        text-font: D-DINCondensed-Bold.otf
-        text-color: Turquoise
-        formula: '1'
-  command: sim/autopilot/fdir_toggle
+    - color: lime
+      led: bars
+      formula: ${sim/cockpit2/autopilot/flight_director_mode}
+    - text: FD
+      text-size: 20
+      text-font: D-DINCondensed-Bold.otf
+      text-color: Turquoise
+      formula: '1'
   vibrate: SHORT
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/fdir_toggle
 - index: 2
   name: HDG
-  type: push
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        led: bars
-        formula: ${sim/cockpit2/autopilot/heading_status}
-      B1:
-        text: HDG
-        text-size: 23
-        text-font: D-DINCondensed-Bold.otf
-        formula: '1'
-  command: sim/autopilot/heading
+    - color: lime
+      led: bars
+      formula: ${sim/cockpit2/autopilot/heading_status}
+    - text: HDG
+      text-size: 23
+      text-font: D-DINCondensed-Bold.otf
+      formula: '1'
   vibrate: SHORT
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/heading
 - index: 3
   name: ALT
-  type: push
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        led: bars
-        formula: ${sim/cockpit2/autopilot/altitude_hold_status}
-      B1:
-        text: ALT
-        text-size: 23
-        text-font: D-DINCondensed-Bold.otf
-        formula: '1'
-  command: sim/autopilot/altitude_hold
+    - color: lime
+      led: bars
+      formula: ${sim/cockpit2/autopilot/altitude_hold_status}
+    - text: ALT
+      text-size: 23
+      text-font: D-DINCondensed-Bold.otf
+      formula: '1'
   vibrate: SHORT
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/altitude_hold
 - index: 4
   name: NAV
-  type: push
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        led: bars
-        formula: ${laminar/sr22/annunciators/ap/nav}
-      B1:
-        text: NAV
-        text-size: 23
-        text-font: D-DINCondensed-Bold.otf
-        formula: '1'
-  command: sim/autopilot/NAV
+    - color: lime
+      led: bars
+      formula: ${laminar/sr22/annunciators/ap/nav}
+    - text: NAV
+      text-size: 23
+      text-font: D-DINCondensed-Bold.otf
+      formula: '1'
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/NAV
 - index: 5
   name: VNAV
-  type: push
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        led: bars
-        formula: ${sim/cockpit2/autopilot/vnav_armed}
-      B1:
-        text: VNAV
-        text-size: 23
-        text-font: D-DINCondensed-Bold.otf
-        text-color: Turquoise
-        formula: '1'
-  command: sim/autopilot/vnav
+    - color: lime
+      led: bars
+      formula: ${sim/cockpit2/autopilot/vnav_armed}
+    - text: VNAV
+      text-size: 23
+      text-font: D-DINCondensed-Bold.otf
+      text-color: Turquoise
+      formula: '1'
   vibrate: SHORT
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/vnav
 - index: 6
   name: APR
-  type: push
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        led: bars
-        formula: ${sim/cockpit2/autopilot/approach_status}
-      B1:
-        text: APR
-        text-size: 23
-        text-font: D-DINCondensed-Bold.otf
-        formula: '1'
-  command: sim/autopilot/approach
+    - color: lime
+      led: bars
+      formula: ${sim/cockpit2/autopilot/approach_status}
+    - text: APR
+      text-size: 23
+      text-font: D-DINCondensed-Bold.otf
+      formula: '1'
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/approach
 - index: 7
   name: REV
-  type: push
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        led: bars
-        formula: ${sim/cockpit2/autopilot/backcourse_status}
-      B1:
-        text: REV/BC
-        text-size: 19
-        text-font: D-DINCondensed-Bold.otf
-        formula: '1'
-  command: sim/autopilot/back_course
+    - color: lime
+      led: bars
+      formula: ${sim/cockpit2/autopilot/backcourse_status}
+    - text: REV/BC
+      text-size: 19
+      text-font: D-DINCondensed-Bold.otf
+      formula: '1'
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/back_course
 - index: 8
   name: VS
-  type: push
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        led: bars
-        formula: ${sim/cockpit2/autopilot/altitude_mode} 4 eq
-      B1:
-        text: VS
-        text-size: 23
-        text-font: D-DINCondensed-Bold.otf
-        formula: '1'
-  command: sim/autopilot/vertical_speed
+    - color: lime
+      led: bars
+      formula: ${sim/cockpit2/autopilot/altitude_mode} 4 eq
+    - text: VS
+      text-size: 23
+      text-font: D-DINCondensed-Bold.otf
+      formula: '1'
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/vertical_speed
 - index: 9
   name: FLC
-  type: push
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: lime
-        led: bars
-        formula: ${sim/cockpit2/autopilot/altitude_mode} 5 eq
-      B1:
-        text: FLC
-        text-size: 23
-        text-font: D-DINCondensed-Bold.otf
-        text-color: Turquoise
-        formula: '1'
-  command: sim/autopilot/level_change
+    - color: lime
+      led: bars
+      formula: ${sim/cockpit2/autopilot/altitude_mode} 5 eq
+    - text: FLC
+      text-size: 23
+      text-font: D-DINCondensed-Bold.otf
+      text-color: Turquoise
+      formula: '1'
   vibrate: SHORT
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/level_change
 - index: 10
   name: GPS
-  type: push
   label: HSI GPS
   label-size: 10
-  command: sim/autopilot/hsi_toggle_gps
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        text: GPS
-        text-color: yellow
-        text-font: D-DINCondensed-Bold.otf
-        text-size: 19
-        formula: ${sim/cockpit/switches/HSI_selector} 2 eq
-      B1:
-        text: GPS2
-        text-color: lime
-        text-font: D-DINCondensed-Bold.otf
-        text-size: 19
-        formula: ${sim/cockpit/switches/HSI_selector} 3 eq
+    - text: GPS
+      text-color: yellow
+      text-font: D-DINCondensed-Bold.otf
+      text-size: 19
+      formula: ${sim/cockpit/switches/HSI_selector} 2 eq
+    - text: GPS2
+      text-color: lime
+      text-font: D-DINCondensed-Bold.otf
+      text-size: 19
+      formula: ${sim/cockpit/switches/HSI_selector} 3 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/hsi_toggle_gps
 - index: 11
   name: VOR
-  type: push
   label: HSI NAV
   label-size: 10
-  command: sim/autopilot/hsi_toggle_nav
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        text: VOR1
-        text-color: yellow
-        text-font: D-DINCondensed-Bold.otf
-        text-size: 19
-        formula: ${sim/cockpit/switches/HSI_selector} 0 eq
-      B1:
-        text: VOR2
-        text-color: lime
-        text-font: D-DINCondensed-Bold.otf
-        text-size: 19
-        formula: ${sim/cockpit/switches/HSI_selector} 1 eq
+    - text: VOR1
+      text-color: yellow
+      text-font: D-DINCondensed-Bold.otf
+      text-size: 19
+      formula: ${sim/cockpit/switches/HSI_selector} 0 eq
+    - text: VOR2
+      text-color: lime
+      text-font: D-DINCondensed-Bold.otf
+      text-size: 19
+      formula: ${sim/cockpit/switches/HSI_selector} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/hsi_toggle_nav

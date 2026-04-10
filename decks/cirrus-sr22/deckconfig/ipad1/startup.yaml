@@ -2,7 +2,6 @@ name: startup
 fill-empty-keys: false
 buttons:
 - index: 0
-  type: page
   page: main
   label: HOME
   label-size: 16
@@ -10,62 +9,63 @@ buttons:
   text-size: 34
   text-font: D-DINCondensed-Bold.otf
   text-color: white
+  activation: page
+  representation: text
 - index: 1
-  type: push
-  command: sim/electrical/battery_1_toggle
   label: BAT 1
   label-size: 11
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        text: 'OFF'
-        color: darkorange
-        formula: ${sim/cockpit2/electrical/battery_on[0]} 0 eq
-      B1:
-        text: 'ON'
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit2/electrical/battery_on[0]} 0 eq
+    - text: 'ON'
+      color: deepskyblue
+      framed: true
+      formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/electrical/battery_1_toggle
 - index: 2
-  type: push
-  command: sim/electrical/generator_1_toggle
   label: ALT 1
   label-size: 16
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        text: 'OFF'
-        color: darkorange
-        formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
-      B1:
-        text: 'ON'
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
+    - text: 'ON'
+      color: deepskyblue
+      framed: true
+      formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/electrical/generator_1_toggle
 - index: 3
-  type: push
-  command: sim/systems/avionics_toggle
   label: AVIONICS
   label-size: 16
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        text: 'OFF'
-        color: darkorange
-        formula: ${sim/cockpit/electrical/avionics_on} 0 eq
-      B1:
-        text: 'ON'
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit/electrical/avionics_on} 1 eq
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit/electrical/avionics_on} 0 eq
+    - text: 'ON'
+      color: deepskyblue
+      framed: true
+      formula: ${sim/cockpit/electrical/avionics_on} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/systems/avionics_toggle
 - index: 4
-  type: onoff
   set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
   label: BOOST PUMP
   label-size: 16
@@ -73,37 +73,35 @@ buttons:
     model: B
     size: medium
     parts:
-      B0:
-        text: 'OFF'
-        color: darkorange
-        formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 0 eq
-      B1:
-        text: 'ON'
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 1 eq
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 0 eq
+    - text: 'ON'
+      color: deepskyblue
+      framed: true
+      formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 1 eq
+  activation: sweep
+  representation: annunciator
 - index: 5
-  type: push
-  command: sim/engines/mixture_max
   label: MIX FULL
   label-size: 16
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        text: LEAN
-        color: darkorange
-        formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 lt
-      B1:
-        text: RICH
-        color: lime
-        framed: true
-        formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 eq
+    - text: LEAN
+      color: darkorange
+      formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 lt
+    - text: RICH
+      color: lime
+      framed: true
+      formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/engines/mixture_max
 - index: 6
   name: STARTER
-  type: begin-end-command
-  command: sim/starters/engage_starter_1
   label: ENGINE START
   label-size: 16
   multi-texts:
@@ -118,8 +116,11 @@ buttons:
   - text: START
     text-color: red
   formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
+  activation: begin-end-command
+  representation: multi-texts
+  commands:
+    press: sim/starters/engage_starter_1
 - index: 7
-  type: page
   page: taxi
   label: NEXT
   label-size: 16
@@ -127,3 +128,5 @@ buttons:
   text-size: 34
   text-font: D-DINCondensed-Bold.otf
   text-color: gold
+  activation: page
+  representation: text

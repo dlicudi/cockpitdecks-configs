@@ -1,42 +1,38 @@
-
 buttons:
-
 - index: e0
   name: com2_coarse
-  type: encoder-push
+  activation: encoder-push
   commands:
-  - sim/radios/com2_standy_flip
-  - sim/radios/stby_com2_coarse_up
-  - sim/radios/stby_com2_coarse_down
-
+    press: sim/radios/com2_standy_flip
+    cw: sim/radios/stby_com2_coarse_down
+    ccw: sim/radios/stby_com2_coarse_up
 - index: e1
   name: com2_fine
-  type: encoder-push
+  activation: encoder-push
   commands:
-  - sim/radios/com2_standy_flip
-  - sim/radios/stby_com2_fine_up
-  - sim/radios/stby_com2_fine_down
-
+    press: sim/radios/com2_standy_flip
+    cw: sim/radios/stby_com2_fine_down
+    ccw: sim/radios/stby_com2_fine_up
 - index: left
   name: left_screen
-  type: none
   side:
     icon-color: Black
     labels:
-      - label: "COM2"
-        label-size: 20
-        label-font: D-DINCondensed.otf
-        label-color: Gold
-        text: "MHz"
-        text-size: 18
-        text-font: D-DINCondensed.otf
-        text-color: white
-      - label: "COM2"
-        label-size: 20
-        label-font: D-DINCondensed.otf
-        label-color: Gold
-        text: "kHz"
-        text-size: 18
-        text-font: D-DINCondensed.otf
-        text-color: white
-      - label: ""
+    - label: COM2
+      label-size: 20
+      label-font: D-DINCondensed.otf
+      label-color: Gold
+      text: MHz
+      text-size: 18
+      text-font: D-DINCondensed.otf
+      text-color: white
+    - label: COM2
+      label-size: 20
+      label-font: D-DINCondensed.otf
+      label-color: Gold
+      text: kHz
+      text-size: 18
+      text-font: D-DINCondensed.otf
+      text-color: white
+    - label: ''
+  activation: none

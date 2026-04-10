@@ -1,105 +1,105 @@
 buttons:
-
-  - index: 24
-    type: page
-    page: pfd
-    label: PFD
-    label-color: Gold
-    label-size: 10
-    text: 
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (25, 25, 25)
-
-  - index: 25
-    type: page
-    page: mfd
-    label: MFD
-    label-color: Gold
-    label-size: 10
-    text: 
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (25, 25, 25)
-
-  - index: 26
-    type: page
-    page: engine
-    label: ENGINE
-    label-color: Gold
-    label-size: 10
-    text: 
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (25, 25, 25)
-
-  - index: 27
-    type: page
-    page: fms
-    label: FMS
-    label-color: Gold
-    label-size: 10
-    text: 
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (25, 25, 25)
-
-  - index: 28
-    type: page
-    page: transponder
-    label: XPDR
-    label-color: Gold
-    label-size: 10
-    text: 
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (25, 25, 25)
-
-  - index: 29
-    type: page
-    page: switches
-    label: SWITCHES
-    label-color: Gold
-    label-size: 10
-    text: 
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (25, 25, 25)
-
-  - index: 30
-    type: page
-    page: weather
-    label: WEATHER
-    label-color: Gold
-    label-size: 10
-    text: 
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (25, 25, 25)
-
-  - index: 31
-    type: page
-    page: pedestal
-    label: PEDESTAL
-    label-color: Gold
-    label-size: 10
-    text: 
-    text-color: khaki
-    text-size: 15
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (25, 25, 25)
+- index: 24
+  page: pfd
+  label: PFD
+  label-color: Gold
+  label-size: 10
+  text: 
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (25, 25, 25)
+  activation: page
+  representation: text
+- index: 25
+  page: mfd
+  label: MFD
+  label-color: Gold
+  label-size: 10
+  text: 
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (25, 25, 25)
+  activation: page
+  representation: text
+- index: 26
+  page: engine
+  label: ENGINE
+  label-color: Gold
+  label-size: 10
+  text: 
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (25, 25, 25)
+  activation: page
+  representation: text
+- index: 27
+  page: fms
+  label: FMS
+  label-color: Gold
+  label-size: 10
+  text: 
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (25, 25, 25)
+  activation: page
+  representation: text
+- index: 28
+  page: transponder
+  label: XPDR
+  label-color: Gold
+  label-size: 10
+  text: 
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (25, 25, 25)
+  activation: page
+  representation: text
+- index: 29
+  page: switches
+  label: SWITCHES
+  label-color: Gold
+  label-size: 10
+  text: 
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (25, 25, 25)
+  activation: page
+  representation: text
+- index: 30
+  page: weather
+  label: WEATHER
+  label-color: Gold
+  label-size: 10
+  text: 
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (25, 25, 25)
+  activation: page
+  representation: text
+- index: 31
+  page: pedestal
+  label: PEDESTAL
+  label-color: Gold
+  label-size: 10
+  text: 
+  text-color: khaki
+  text-size: 15
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (25, 25, 25)
+  activation: page
+  representation: text

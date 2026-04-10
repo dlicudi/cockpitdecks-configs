@@ -1,68 +1,66 @@
 description: Ground Operations
-includes: pager,encoders/fcu
+includes:
+- pager
+- encoders/fcu
 name: switches_ground
-
 buttons:
-
 - index: 6
-  type: push
   vibrate: SHORT
-  command: laminar/sr22/fuel_sel_left_off
   label: FUEL OFF
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        led: bar
-        color: grey
-        formula: ${laminar/sr22/fuel_selector_pos} 1 eq ${laminar/sr22/fuel_selector_pos} 2 eq +
-      B1:
-        text: "OFF"
-        color: red
-        framed: true
-        formula: ${laminar/sr22/fuel_selector_pos} 0 eq ${laminar/sr22/fuel_selector_pos} 3 eq +
-
+    - led: bar
+      color: grey
+      formula: ${laminar/sr22/fuel_selector_pos} 1 eq ${laminar/sr22/fuel_selector_pos}
+        2 eq +
+    - text: 'OFF'
+      color: red
+      framed: true
+      formula: ${laminar/sr22/fuel_selector_pos} 0 eq ${laminar/sr22/fuel_selector_pos}
+        3 eq +
+  activation: push
+  representation: annunciator
+  commands:
+    press: laminar/sr22/fuel_sel_left_off
 - index: 0
-  type: push
   vibrate: SHORT
-  command: laminar/sr22/fuel_sel_left_select
   label: FUEL LEFT
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        led: bar
-        color: grey
-        formula: ${laminar/sr22/fuel_selector_pos} 1 eq not
-      B1:
-        text: "SELECTED"
-        color: deepskyblue
-        framed: true
-        formula: ${laminar/sr22/fuel_selector_pos} 1 eq
-
+    - led: bar
+      color: grey
+      formula: ${laminar/sr22/fuel_selector_pos} 1 eq not
+    - text: SELECTED
+      color: deepskyblue
+      framed: true
+      formula: ${laminar/sr22/fuel_selector_pos} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: laminar/sr22/fuel_sel_left_select
 - index: 1
-  type: push
   vibrate: SHORT
-  command: laminar/sr22/fuel_sel_right_select
   label: FUEL RIGHT
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        led: bar
-        color: grey
-        formula: ${laminar/sr22/fuel_selector_pos} 2 eq not
-      B1:
-        text: "SELECTED"
-        color: deepskyblue
-        framed: true
-        formula: ${laminar/sr22/fuel_selector_pos} 2 eq
-
+    - led: bar
+      color: grey
+      formula: ${laminar/sr22/fuel_selector_pos} 2 eq not
+    - text: SELECTED
+      color: deepskyblue
+      framed: true
+      formula: ${laminar/sr22/fuel_selector_pos} 2 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: laminar/sr22/fuel_sel_right_select
 - index: 5
-  type: onoff
   vibrate: SHORT
   set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
   label: BOOST PUMP
@@ -71,59 +69,54 @@ buttons:
     model: B
     size: medium
     parts:
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 0 eq
-      B1:
-        text: "ON"
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 1 eq
-
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 0 eq
+    - text: 'ON'
+      color: deepskyblue
+      framed: true
+      formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 1 eq
+  activation: sweep
+  representation: annunciator
 - index: 4
-  type: push
   vibrate: SHORT
-  command: sim/flight_controls/park_brake_valve_toggle
   label: PARK BRAKE
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit2/controls/park_brake_valve} 0 eq
-      B1:
-        text: "ON"
-        color: red
-        framed: true
-        formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
-
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit2/controls/park_brake_valve} 0 eq
+    - text: 'ON'
+      color: red
+      framed: true
+      formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/flight_controls/park_brake_valve_toggle
 - index: 2
-  type: push
   vibrate: SHORT
-  command: sim/engines/mixture_max
   label: MAX MIXTURE
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        text: "OFF"
-        color: darkorange
-        formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 lt
-      B1:
-        text: "ON"
-        color: green
-        framed: true
-        formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 eq
-
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 lt
+    - text: 'ON'
+      color: green
+      framed: true
+      formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/engines/mixture_max
 - index: 3
   name: ENGINE START
-  type: begin-end-command
   vibrate: LONG
-  command: sim/starters/engage_starter_1
   multi-icons:
   - ENGINE_START.png
   - ENGINE_START.png
@@ -131,10 +124,11 @@ buttons:
   - ENGINE_START.png
   - ENGINE_START_PRESSED.png
   formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
-
-  # Nav row
+  activation: begin-end-command
+  representation: multi-icons
+  commands:
+    press: sim/starters/engage_starter_1
 - index: 8
-  type: page
   page: switches_master
   vibrate: SHORT
   text: MASTER
@@ -143,9 +137,9 @@ buttons:
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 20)
-
+  activation: page
+  representation: text
 - index: 9
-  type: page
   page: switches_lights
   vibrate: SHORT
   text: LIGHTS
@@ -154,9 +148,9 @@ buttons:
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 20)
-
+  activation: page
+  representation: text
 - index: 10
-  type: page
   page: switches_icing
   vibrate: SHORT
   text: ICE
@@ -165,12 +159,14 @@ buttons:
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 20)
-
+  activation: page
+  representation: text
 - index: 11
-  type: none
   text: GROUND
   text-color: Gold
   text-size: 18
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (40, 35, 0)
+  activation: none
+  representation: text

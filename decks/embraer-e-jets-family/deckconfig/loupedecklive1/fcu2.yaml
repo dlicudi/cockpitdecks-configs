@@ -1,174 +1,164 @@
 description: FCU 2
-includes: pager,encoders/encoders_fcu
+includes:
+- pager
+- encoders/encoders_fcu
 default-icon-color: Black
 name: fcu2
-
 buttons:
 - index: 0
-  type: push
   annunciator:
     size: large
     model: B
     parts:
-      B0:
-        color: white
-        led: led
-        formula: ${sim/cockpit2/autopilot/flight_director_mode}
-      B1:
-        text: BANK
-        text-size: 60
-        text-font: DIN Bold
-        formula: "1"
-        framed: True
-  command: sim/autopilot/fdir_toggle
-
+    - color: white
+      led: led
+      formula: ${sim/cockpit2/autopilot/flight_director_mode}
+    - text: BANK
+      text-size: 60
+      text-font: DIN Bold
+      formula: '1'
+      framed: true
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/fdir_toggle
 - index: 1
-  type: push
   annunciator:
     size: large
     model: B
     parts:
-      B0:
-        color: white
-        led: led
-        formula: ${sim/cockpit2/autopilot/servos_on}
-      B1:
-        text: FMS
-        text-size: 60
-        text-font: DIN Bold
-        formula: "1"
-        framed: True
-  command: sim/autopilot/servos_toggle
-
+    - color: white
+      led: led
+      formula: ${sim/cockpit2/autopilot/servos_on}
+    - text: FMS
+      text-size: 60
+      text-font: DIN Bold
+      formula: '1'
+      framed: true
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/servos_toggle
 - index: 2
-  type: push
   annunciator:
     size: large
     model: B
     parts:
-      B0:
-        color: white
-        led: led
-        formula: ${sim/cockpit2/autopilot/heading_status}
-      B1:
-        text: HSI
-        text-size: 60
-        text-font: DIN Bold
-        formula: "1"
-        framed: True
-  command: sim/autopilot/heading
-
+    - color: white
+      led: led
+      formula: ${sim/cockpit2/autopilot/heading_status}
+    - text: HSI
+      text-size: 60
+      text-font: DIN Bold
+      formula: '1'
+      framed: true
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/heading
 - index: 3
-  type: push
   annunciator:
     size: large
     model: B
     parts:
-      B0:
-        color: white
-        led: led
-        formula: ${sim/cockpit2/autopilot/altitude_hold_status}
-      B1:
-        text: FPA
-        text-size: 60
-        text-font: DIN Bold
-        formula: "1"
-        framed: True
-  command: sim/autopilot/altitude_hold
-
+    - color: white
+      led: led
+      formula: ${sim/cockpit2/autopilot/altitude_hold_status}
+    - text: FPA
+      text-size: 60
+      text-font: DIN Bold
+      formula: '1'
+      framed: true
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/altitude_hold
 - index: 4
-  type: push
   annunciator:
     size: large
     model: B
     parts:
-      B0:
-        color: white
-        led: led
-        formula: ${sim/cockpit2/autopilot/gpss_status} 2 eq
-      B1:
-        text: PREV
-        text-size: 60
-        text-font: DIN Bold
-        formula: "1"
-        framed: True
-  command: sim/autopilot/gpss
-
+    - color: white
+      led: led
+      formula: ${sim/cockpit2/autopilot/gpss_status} 2 eq
+    - text: PREV
+      text-size: 60
+      text-font: DIN Bold
+      formula: '1'
+      framed: true
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/gpss
 - index: 5
-  type: push
   annunciator:
     size: large
     model: B
     parts:
-      B0:
-        color: white
-        led: led
-        formula: ${sim/cockpit2/autopilot/vnav_armed}
-      B1:
-        text: O
-        text-size: 60
-        text-font: DIN Bold
-        formula: "1"
-        framed: True
-  command: sim/autopilot/vnav
-
+    - color: white
+      led: led
+      formula: ${sim/cockpit2/autopilot/vnav_armed}
+    - text: O
+      text-size: 60
+      text-font: DIN Bold
+      formula: '1'
+      framed: true
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/vnav
 - index: 6
-  type: push
   annunciator:
     size: large
     model: B
     parts:
-      B0:
-        color: white
-        led: led
-        formula: ${sim/cockpit2/autopilot/approach_status}
-      B1:
-        text: SRC
-        text-size: 60
-        text-font: DIN Bold
-        formula: "1"
-        framed: True
-  command: sim/autopilot/approach
-
+    - color: white
+      led: led
+      formula: ${sim/cockpit2/autopilot/approach_status}
+    - text: SRC
+      text-size: 60
+      text-font: DIN Bold
+      formula: '1'
+      framed: true
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/approach
 - index: 7
-  type: push
   annunciator:
     size: large
     model: B
     parts:
-      B0:
-        color: white
-        led: led
-        formula: ${sim/cockpit2/autopilot/approach_status}
-      B1:
-        text: V/L
-        text-size: 60
-        text-font: DIN Bold
-        formula: "1"
-        framed: True
-  command: sim/autopilot/approach
-
+    - color: white
+      led: led
+      formula: ${sim/cockpit2/autopilot/approach_status}
+    - text: V/L
+      text-size: 60
+      text-font: DIN Bold
+      formula: '1'
+      framed: true
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/approach
 - index: 8
-  type: push
   annunciator:
     size: large
     model: B
     parts:
-      B0:
-        color: white
-        led: led
-        formula: ${sim/cockpit2/autopilot/vnav_armed}
-      B1:
-        text: O
-        text-size: 60
-        text-font: DIN Bold
-        formula: "1"
-        framed: True
-  command: sim/autopilot/vnav
-
-
+    - color: white
+      led: led
+      formula: ${sim/cockpit2/autopilot/vnav_armed}
+    - text: O
+      text-size: 60
+      text-font: DIN Bold
+      formula: '1'
+      framed: true
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/autopilot/vnav
 - index: 11
-  type: page
   page: fcu
   text: →
   text-color: khaki
@@ -176,4 +166,5 @@ buttons:
   text-font: fontawesome.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-
+  activation: page
+  representation: text

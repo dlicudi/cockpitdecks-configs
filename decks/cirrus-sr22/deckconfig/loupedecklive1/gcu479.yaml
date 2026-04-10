@@ -1,10 +1,9 @@
 name: gcu479
-includes: pager,encoders/gcu479
-
+includes:
+- pager
+- encoders/gcu479
 buttons:
-
 - index: 0
-  type: push
   name: DIRECT
   text: DIRECT
   text-color: white
@@ -12,10 +11,11 @@ buttons:
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 20)
-  command: sim/GPS/gcu478/direct
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/GPS/gcu478/direct
 - index: 1
-  type: push
   name: MENU
   text: MENU
   text-color: white
@@ -23,10 +23,11 @@ buttons:
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 20)
-  command: sim/GPS/gcu478/menu
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/GPS/gcu478/menu
 - index: 2
-  type: push
   name: FPL
   text: FPL
   text-color: white
@@ -34,10 +35,11 @@ buttons:
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 20)
-  command: sim/GPS/gcu478/fpl
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/GPS/gcu478/fpl
 - index: 3
-  type: push
   name: PROC
   text: PROC
   text-color: white
@@ -45,10 +47,11 @@ buttons:
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 20)
-  command: sim/GPS/gcu478/proc
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/GPS/gcu478/proc
 - index: 4
-  type: push
   name: CLR
   text: CLR
   text-color: white
@@ -56,10 +59,11 @@ buttons:
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 20)
-  command: sim/GPS/gcu478/clr
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/GPS/gcu478/clr
 - index: 5
-  type: push
   name: ENT
   text: ENT
   text-color: white
@@ -67,10 +71,11 @@ buttons:
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 20)
-  command: sim/GPS/gcu478/ent
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/GPS/gcu478/ent
 - index: 6
-  type: push
   name: HOME
   text: HOME
   text-color: white
@@ -78,10 +83,11 @@ buttons:
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 20)
-  command: sim/GPS/gcu479/home
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/GPS/gcu479/home
 - index: 7
-  type: push
   name: FF
   text: <->
   text-color: white
@@ -89,58 +95,60 @@ buttons:
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 20)
-  command: sim/GPS/gcu478/ff
-
-
+  activation: push
+  representation: text
+  commands:
+    press: sim/GPS/gcu478/ff
 - index: 8
-  type: push
-  command: sim/GPS/gcu478/com
   label: COM
   annunciator:
     model: A
     size: medium
     parts:
-      A0:
-        led: dot
-        color: deepskyblue
-        formula: ${sim/cockpit/g1000/gcu478_input_sel} 2 eq
-
+    - led: dot
+      color: deepskyblue
+      formula: ${sim/cockpit/g1000/gcu478_input_sel} 2 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/GPS/gcu478/com
 - index: 9
-  type: push
-  command: sim/GPS/gcu478/nav
   label: NAV
   annunciator:
     model: A
     size: medium
     parts:
-      A0:
-        led: dot
-        color: deepskyblue
-        formula: ${sim/cockpit/g1000/gcu478_input_sel} 3 eq
-
+    - led: dot
+      color: deepskyblue
+      formula: ${sim/cockpit/g1000/gcu478_input_sel} 3 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/GPS/gcu478/nav
 - index: 10
-  type: push
-  command: sim/GPS/gcu479/crs
   longpush: sim/autopilot/hsi_toggle_nav
   label: CRS
   annunciator:
     model: A
     size: medium
     parts:
-      A0:
-        led: dot
-        color: deepskyblue
-        formula: ${sim/cockpit/g1000/gcu478_input_sel} 4 eq
-
+    - led: dot
+      color: deepskyblue
+      formula: ${sim/cockpit/g1000/gcu478_input_sel} 4 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/GPS/gcu479/crs
 - index: 11
-  type: push
-  command: sim/GPS/gcu478/xpdr
   label: XPDR
   annunciator:
     model: A
     size: medium
     parts:
-      A0:
-        led: dot
-        color: deepskyblue
-        formula: ${sim/cockpit/g1000/gcu478_input_sel} 1 eq
+    - led: dot
+      color: deepskyblue
+      formula: ${sim/cockpit/g1000/gcu478_input_sel} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/GPS/gcu478/xpdr

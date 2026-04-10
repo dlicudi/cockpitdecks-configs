@@ -1,150 +1,154 @@
 description: Master Electrical
-includes: pager,encoders/fcu
+includes:
+- pager
+- encoders/fcu
 name: switches_master
 buttons:
 - index: 0
-  type: push
   vibrate: SHORT
-  command: sim/electrical/battery_2_toggle
   label: BAT 2
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        text: 'OFF'
-        color: darkorange
-        formula: ${sim/cockpit2/electrical/battery_on[1]} 0 eq
-      B1:
-        text: 'ON'
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/electrical/battery_on[1]} 1 eq
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit2/electrical/battery_on[1]} 0 eq
+    - text: 'ON'
+      color: deepskyblue
+      framed: true
+      formula: ${sim/cockpit2/electrical/battery_on[1]} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/electrical/battery_2_toggle
 - index: 1
-  type: push
   vibrate: SHORT
-  command: sim/electrical/battery_1_toggle
   label: BAT 1
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        text: 'OFF'
-        color: darkorange
-        formula: ${sim/cockpit2/electrical/battery_on[0]} 0 eq
-      B1:
-        text: 'ON'
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit2/electrical/battery_on[0]} 0 eq
+    - text: 'ON'
+      color: deepskyblue
+      framed: true
+      formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/electrical/battery_1_toggle
 - index: 2
-  type: push
   vibrate: SHORT
-  command: sim/electrical/generator_1_toggle
   label: ALT 1
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        text: 'OFF'
-        color: darkorange
-        formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
-      B1:
-        text: 'ON'
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
+    - text: 'ON'
+      color: deepskyblue
+      framed: true
+      formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/electrical/generator_1_toggle
 - index: 3
-  type: push
   vibrate: SHORT
-  command: sim/electrical/generator_2_toggle
   label: ALT 2
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        text: 'OFF'
-        color: darkorange
-        formula: ${sim/cockpit2/electrical/generator_on[1]} 0 eq
-      B1:
-        text: 'ON'
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit2/electrical/generator_on[1]} 0 eq
+    - text: 'ON'
+      color: deepskyblue
+      framed: true
+      formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/electrical/generator_2_toggle
 - index: 4
-  type: push
   vibrate: SHORT
-  command: sim/systems/avionics_toggle
   label: AVIONICS
   label-size: 10
   annunciator:
     model: B
     size: medium
     parts:
-      B0:
-        text: 'OFF'
-        color: darkorange
-        formula: ${sim/cockpit/electrical/avionics_on} 0 eq
-      B1:
-        text: 'ON'
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit/electrical/avionics_on} 1 eq
+    - text: 'OFF'
+      color: darkorange
+      formula: ${sim/cockpit/electrical/avionics_on} 0 eq
+    - text: 'ON'
+      color: deepskyblue
+      framed: true
+      formula: ${sim/cockpit/electrical/avionics_on} 1 eq
+  activation: push
+  representation: annunciator
+  commands:
+    press: sim/systems/avionics_toggle
 - index: 5
-  type: push
   vibrate: SHORT
   text: UP
   text-color: Lime
-  command: sim/flight_controls/flaps_up
   text-bg-color: Black
+  activation: push
+  representation: text
+  commands:
+    press: sim/flight_controls/flaps_up
 - index: 6
-  type: none
   label: FLAPS
   label-size: 8
   annunciator:
     model: F
     size: medium
     parts:
-      F0:
-        text: CRUISE
-        text-color: '#ffffff'
-        on-color: deepskyblue
-        off-color: '#000000'
-        text-size: 11
-        formula: ${laminar/sr22/annunciators/flaps_up} 1 eq
-      F1:
-        text: TAKE OFF
-        text-color: '#ffffff'
-        on-color: deepskyblue
-        off-color: '#000000'
-        text-size: 11
-        formula: ${laminar/sr22/annunciators/flaps_50} 1 eq
-      F2:
-        text: LANDING
-        text-color: '#ffffff'
-        on-color: deepskyblue
-        off-color: '#000000'
-        text-size: 11
-        formula: ${laminar/sr22/annunciators/flaps_100} 1 eq
+    - text: CRUISE
+      text-color: '#ffffff'
+      on-color: deepskyblue
+      off-color: '#000000'
+      text-size: 11
+      formula: ${laminar/sr22/annunciators/flaps_up} 1 eq
+    - text: TAKE OFF
+      text-color: '#ffffff'
+      on-color: deepskyblue
+      off-color: '#000000'
+      text-size: 11
+      formula: ${laminar/sr22/annunciators/flaps_50} 1 eq
+    - text: LANDING
+      text-color: '#ffffff'
+      on-color: deepskyblue
+      off-color: '#000000'
+      text-size: 11
+      formula: ${laminar/sr22/annunciators/flaps_100} 1 eq
+  activation: none
+  representation: annunciator
 - index: 7
-  type: push
   text: DOWN
   text-color: Lime
-  command: sim/flight_controls/flaps_down
   text-bg-color: Black
+  activation: push
+  representation: text
+  commands:
+    press: sim/flight_controls/flaps_down
 - index: 8
-  type: none
   text: MASTER
   text-color: Gold
   text-size: 18
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (40, 35, 0)
+  activation: none
+  representation: text
 - index: 9
-  type: page
   page: switches_lights
   vibrate: SHORT
   text: LIGHTS
@@ -153,8 +157,9 @@ buttons:
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 20)
+  activation: page
+  representation: text
 - index: 10
-  type: page
   page: switches_icing
   vibrate: SHORT
   text: ICE
@@ -163,8 +168,9 @@ buttons:
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 20)
+  activation: page
+  representation: text
 - index: 11
-  type: page
   page: switches_ground
   vibrate: SHORT
   text: GROUND
@@ -173,3 +179,5 @@ buttons:
   text-font: D-DINCondensed.otf
   text-position: cm
   text-bg-color: (20, 20, 20)
+  activation: page
+  representation: text

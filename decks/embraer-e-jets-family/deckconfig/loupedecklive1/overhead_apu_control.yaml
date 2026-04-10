@@ -1,12 +1,12 @@
 name: overhead_apu_control
 description: APU Control
-includes: pager,encoders/encoders_lights
+includes:
+- pager
+- encoders/encoders_lights
 default-icon-color: Black
 default-vibrate: SHORT
-
 buttons:
 - index: 0
-  type: updown
   label: MASTER
   label-color: White
   label-position: cb
@@ -24,18 +24,15 @@ buttons:
     tick-label-size: 24
     options: invert
     tick-labels:
-      - "OFF"
-      - "ON"
-      - "START"
+    - 'OFF'
+    - 'ON'
+    - START
   dataref: XCrafts/ERJ/APU_switch
-  commands:
-    - XCrafts/APU_CCW
-    - XCrafts/APU_CW
-
-
+  activation: sweep
+  positions:
+  - XCrafts/APU_CCW
+  - XCrafts/APU_CW
 - index: 1
-  type: long-press
-  command: XCrafts/APU_CW
   label: START APU
   label-size: 9
   label-color: White
@@ -43,20 +40,20 @@ buttons:
     size: medium
     model: B
     parts:
-      B0:
-        color: yellow
-        formula: "${XCrafts/ERJ/APU_flasher} 2 eq"
-        led: dot
-      B1:
-        color: lime
-        text-size: 60
-        formula: "1"
-        text: "${sim/cockpit2/electrical/APU_N1_percent}"
-        text-font: Seven Segment.ttf
-        text-format: "{0:.0f}%"
-
+    - color: yellow
+      formula: ${XCrafts/ERJ/APU_flasher} 2 eq
+      led: dot
+    - color: lime
+      text-size: 60
+      formula: '1'
+      text: ${sim/cockpit2/electrical/APU_N1_percent}
+      text-font: Seven Segment.ttf
+      text-format: '{0:.0f}%'
+  activation: long-press
+  representation: annunciator
+  commands:
+    press: XCrafts/APU_CW
 - index: 3
-  type: push
   label: EMER STOP
   label-color: White
   label-size: 10
@@ -65,5 +62,7 @@ buttons:
   text-size: 60
   text-font: fontawesome.otf
   text-position: cm
-  command: sim/electrical/APU_fire_shutoff
-  
+  activation: push
+  representation: text
+  commands:
+    press: sim/electrical/APU_fire_shutoff

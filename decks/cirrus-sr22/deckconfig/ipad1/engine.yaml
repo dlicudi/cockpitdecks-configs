@@ -2,118 +2,429 @@ name: engine
 fill-empty-keys: false
 buttons:
 - index: 0
-  type: page
   page: main
   label: HOME
-  label-size: 16
+  label-size: 14
+  label-color: white
   text: HOME
   text-size: 13
   text-font: D-DINCondensed-Bold.otf
   text-color: white
+  activation: page
+  representation: text
 - index: 1
+  span:
+  - 2
+  - 2
   name: RPM
-  type: none
-  label: RPM
-  label-size: 16
-  annunciator:
-    size: medium
-    model: A
-    parts:
-      A0:
-        color: lime
-        text-size: 32
-        formula: '1'
-        text: ${sim/cockpit2/engine/indicators/prop_speed_rpm[0]}
-        text-font: Seven Segment.ttf
-        text-format: '{0:.0f}'
-- index: 2
-  name: MP
-  type: none
-  label: MP INHG
-  label-size: 16
-  annunciator:
-    size: medium
-    model: A
-    parts:
-      A0:
-        color: lime
-        text-size: 32
-        formula: ${sim/cockpit2/engine/indicators/MPR_in_hg[0]}
-        text: ${formula}
-        text-font: Seven Segment.ttf
-        text-format: '{0:.1f}'
-- index: 3
-  name: FF
-  type: none
-  label: FF GPH
-  label-size: 16
-  annunciator:
-    size: medium
-    model: A
-    parts:
-      A0:
-        color: yellow
-        text-size: 29
-        formula: ${sim/flightmodel/engine/ENGN_FF_[0]} 0.69 / 0.264172 * 3600 *
-        text: ${formula}
-        text-font: Seven Segment.ttf
-        text-format: '{0:.1f}'
-- index: 4
-  name: OILP
-  type: none
-  label: OIL PSI
-  label-size: 16
-  annunciator:
-    size: medium
-    model: A
-    parts:
-      A0:
-        color: yellow
-        text-size: 32
-        formula: ${sim/cockpit2/engine/indicators/oil_pressure_psi[0]}
-        text: ${formula}
-        text-font: Seven Segment.ttf
-        text-format: '{0:.0f}'
-- index: 5
-  name: OILT
-  type: none
-  label: OIL TEMP
+  label: RPM ×100
   label-size: 11
-  annunciator:
-    size: medium
-    model: A
-    parts:
-      A0:
-        color: yellow
-        text-size: 20
-        formula: ${sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]} 9 * 5
-          / 32 +
-        text: ${formula}
-        text-font: Seven Segment.ttf
-        text-format: '{0:.0f}'
-- index: 6
+  label-color: white
+  formula: ${sim/cockpit2/engine/indicators/prop_speed_rpm[0]} 2700 / 9 *
+  gauge:
+    tick-from: -120
+    tick-to: 120
+    ticks: 9
+    gauge-offset: 20
+    needle-color: white
+    needle-width: 6
+    needle-length: 80
+    tick-color: white
+    tick-width: 3
+    tick-label-size: 18
+    tick-labels:
+    - '0'
+    - '3'
+    - '6'
+    - '9'
+    - '12'
+    - '15'
+    - '18'
+    - '21'
+    - '24'
+    - '27'
+  activation: none
+  representation: gauge
+- index: 3
+  span:
+  - 2
+  - 2
+  name: FF
+  label: FF GPH
+  label-size: 11
+  label-color: white
+  formula: ${sim/flightmodel/engine/ENGN_FF_[0]} 0.69 / 0.264172 * 3600 * 30 / 6 *
+  gauge:
+    tick-from: -120
+    tick-to: 120
+    ticks: 6
+    gauge-offset: 20
+    needle-color: yellow
+    needle-width: 6
+    needle-length: 80
+    tick-color: white
+    tick-width: 3
+    tick-label-size: 18
+    tick-labels:
+    - '0'
+    - '5'
+    - '10'
+    - '15'
+    - '20'
+    - '25'
+    - '30'
+  activation: none
+  representation: gauge
+- index: 5
+  span:
+  - 2
+  - 2
+  name: OILT
+  label: OIL °F
+  label-size: 11
+  label-color: white
+  formula: ${sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]} 9 * 5 / 32 +
+    250 / 5 *
+  gauge:
+    tick-from: -120
+    tick-to: 120
+    ticks: 5
+    gauge-offset: 20
+    needle-color: yellow
+    needle-width: 6
+    needle-length: 80
+    tick-color: white
+    tick-width: 3
+    tick-label-size: 18
+    tick-labels:
+    - '0'
+    - '50'
+    - '100'
+    - '150'
+    - '200'
+    - '250'
+  activation: none
+  representation: gauge
+- index: 7
+  span:
+  - 2
+  - 2
+  name: OILP
+  label: OIL PSI
+  label-size: 11
+  label-color: white
+  formula: ${sim/cockpit2/engine/indicators/oil_pressure_psi[0]} 10 /
+  gauge:
+    tick-from: -120
+    tick-to: 120
+    ticks: 10
+    gauge-offset: 20
+    needle-color: yellow
+    needle-width: 6
+    needle-length: 80
+    tick-color: white
+    tick-width: 3
+    tick-label-size: 18
+    tick-labels:
+    - '0'
+    - '10'
+    - '20'
+    - '30'
+    - '40'
+    - '50'
+    - '60'
+    - '70'
+    - '80'
+    - '90'
+    - '100'
+  activation: none
+  representation: gauge
+- index: 9
+  span:
+  - 3
+  - 3
+  name: MP
+  label: MAP inHg
+  label-size: 11
+  label-color: white
+  formula: ${sim/cockpit2/engine/indicators/MPR_in_hg[0]} 35 / 7 *
+  gauge:
+    tick-from: -120
+    tick-to: 120
+    ticks: 7
+    gauge-offset: 20
+    needle-color: white
+    needle-width: 6
+    needle-length: 80
+    tick-color: white
+    tick-width: 3
+    tick-label-size: 18
+    tick-labels:
+    - '0'
+    - '5'
+    - '10'
+    - '15'
+    - '20'
+    - '25'
+    - '30'
+    - '35'
+  activation: none
+  representation: gauge
+- index: 12
   name: FUELQ
-  type: none
   label: FUEL GAL
   label-size: 16
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: yellow
-        text-size: 15
-        formula: ${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn
-        text: L ${formula}
-        text-format: '{0:.1f}'
-      B1:
-        color: yellow
-        text-size: 15
-        formula: ${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn
-        text: R ${formula}
-        text-format: '{0:.1f}'
-- index: 7
-  type: page
+    - color: yellow
+      text-size: 15
+      formula: ${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn
+      text: L ${formula}
+      text-format: '{0:.1f}'
+    - color: yellow
+      text-size: 15
+      formula: ${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn
+      text: R ${formula}
+      text-format: '{0:.1f}'
+  activation: none
+  representation: annunciator
+- index: 24
+  label: CHT °F
+  label-size: 11
+  label-color: deepskyblue
+  annunciator:
+    size: large
+    model: A
+    parts:
+    - text: CHT
+      text-size: 28
+      text-font: D-DINCondensed-Bold.otf
+      color: deepskyblue
+      formula: 1
+  activation: none
+  representation: annunciator
+- index: 25
+  name: CHT-1
+  label: CYL 1
+  label-size: 9
+  label-color: white
+  annunciator:
+    size: large
+    model: A
+    parts:
+    - color: lime
+      text-size: 30
+      text-font: Seven Segment.ttf
+      formula: ${sim/cockpit2/engine/indicators/CHT_deg_C[0]} 9 * 5 / 32 +
+      text: ${formula}
+      text-format: '{0:.0f}'
+  activation: none
+  representation: annunciator
+- index: 26
+  name: CHT-2
+  label: CYL 2
+  label-size: 9
+  label-color: white
+  annunciator:
+    size: large
+    model: A
+    parts:
+    - color: lime
+      text-size: 30
+      text-font: Seven Segment.ttf
+      formula: ${sim/cockpit2/engine/indicators/CHT_deg_C[1]} 9 * 5 / 32 +
+      text: ${formula}
+      text-format: '{0:.0f}'
+  activation: none
+  representation: annunciator
+- index: 27
+  name: CHT-3
+  label: CYL 3
+  label-size: 9
+  label-color: white
+  annunciator:
+    size: large
+    model: A
+    parts:
+    - color: lime
+      text-size: 30
+      text-font: Seven Segment.ttf
+      formula: ${sim/cockpit2/engine/indicators/CHT_deg_C[2]} 9 * 5 / 32 +
+      text: ${formula}
+      text-format: '{0:.0f}'
+  activation: none
+  representation: annunciator
+- index: 28
+  name: CHT-4
+  label: CYL 4
+  label-size: 9
+  label-color: white
+  annunciator:
+    size: large
+    model: A
+    parts:
+    - color: lime
+      text-size: 30
+      text-font: Seven Segment.ttf
+      formula: ${sim/cockpit2/engine/indicators/CHT_deg_C[3]} 9 * 5 / 32 +
+      text: ${formula}
+      text-format: '{0:.0f}'
+  activation: none
+  representation: annunciator
+- index: 29
+  name: CHT-5
+  label: CYL 5
+  label-size: 9
+  label-color: white
+  annunciator:
+    size: large
+    model: A
+    parts:
+    - color: lime
+      text-size: 30
+      text-font: Seven Segment.ttf
+      formula: ${sim/cockpit2/engine/indicators/CHT_deg_C[4]} 9 * 5 / 32 +
+      text: ${formula}
+      text-format: '{0:.0f}'
+  activation: none
+  representation: annunciator
+- index: 30
+  name: CHT-6
+  label: CYL 6
+  label-size: 9
+  label-color: white
+  annunciator:
+    size: large
+    model: A
+    parts:
+    - color: lime
+      text-size: 30
+      text-font: Seven Segment.ttf
+      formula: ${sim/cockpit2/engine/indicators/CHT_deg_C[5]} 9 * 5 / 32 +
+      text: ${formula}
+      text-format: '{0:.0f}'
+  activation: none
+  representation: annunciator
+- index: 36
+  label: EGT °F
+  label-size: 11
+  label-color: orange
+  annunciator:
+    size: large
+    model: A
+    parts:
+    - text: EGT
+      text-size: 28
+      text-font: D-DINCondensed-Bold.otf
+      color: orange
+      formula: 1
+  activation: none
+  representation: annunciator
+- index: 37
+  name: EGT-1
+  label: CYL 1
+  label-size: 9
+  label-color: white
+  annunciator:
+    size: large
+    model: A
+    parts:
+    - color: orange
+      text-size: 28
+      text-font: Seven Segment.ttf
+      formula: ${sim/cockpit2/engine/indicators/EGT_deg_cel[0]} 9 * 5 / 32 +
+      text: ${formula}
+      text-format: '{0:.0f}'
+  activation: none
+  representation: annunciator
+- index: 38
+  name: EGT-2
+  label: CYL 2
+  label-size: 9
+  label-color: white
+  annunciator:
+    size: large
+    model: A
+    parts:
+    - color: orange
+      text-size: 28
+      text-font: Seven Segment.ttf
+      formula: ${sim/cockpit2/engine/indicators/EGT_deg_cel[1]} 9 * 5 / 32 +
+      text: ${formula}
+      text-format: '{0:.0f}'
+  activation: none
+  representation: annunciator
+- index: 39
+  name: EGT-3
+  label: CYL 3
+  label-size: 9
+  label-color: white
+  annunciator:
+    size: large
+    model: A
+    parts:
+    - color: orange
+      text-size: 28
+      text-font: Seven Segment.ttf
+      formula: ${sim/cockpit2/engine/indicators/EGT_deg_cel[2]} 9 * 5 / 32 +
+      text: ${formula}
+      text-format: '{0:.0f}'
+  activation: none
+  representation: annunciator
+- index: 40
+  name: EGT-4
+  label: CYL 4
+  label-size: 9
+  label-color: white
+  annunciator:
+    size: large
+    model: A
+    parts:
+    - color: orange
+      text-size: 28
+      text-font: Seven Segment.ttf
+      formula: ${sim/cockpit2/engine/indicators/EGT_deg_cel[3]} 9 * 5 / 32 +
+      text: ${formula}
+      text-format: '{0:.0f}'
+  activation: none
+  representation: annunciator
+- index: 41
+  name: EGT-5
+  label: CYL 5
+  label-size: 9
+  label-color: white
+  annunciator:
+    size: large
+    model: A
+    parts:
+    - color: orange
+      text-size: 28
+      text-font: Seven Segment.ttf
+      formula: ${sim/cockpit2/engine/indicators/EGT_deg_cel[4]} 9 * 5 / 32 +
+      text: ${formula}
+      text-format: '{0:.0f}'
+  activation: none
+  representation: annunciator
+- index: 42
+  name: EGT-6
+  label: CYL 6
+  label-size: 9
+  label-color: white
+  annunciator:
+    size: large
+    model: A
+    parts:
+    - color: orange
+      text-size: 28
+      text-font: Seven Segment.ttf
+      formula: ${sim/cockpit2/engine/indicators/EGT_deg_cel[5]} 9 * 5 / 32 +
+      text: ${formula}
+      text-format: '{0:.0f}'
+  activation: none
+  representation: annunciator
+- index: 105
   page: systems
   label: SYSTEMS
   label-size: 16
@@ -121,3 +432,5 @@ buttons:
   text-size: 12
   text-font: D-DINCondensed-Bold.otf
   text-color: orange
+  activation: page
+  representation: text

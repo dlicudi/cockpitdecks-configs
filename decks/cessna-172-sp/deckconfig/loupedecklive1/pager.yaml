@@ -1,49 +1,49 @@
 buttons:
-
-  - index: b0
-    name: P0
-    type: page
-    page: index
-    colored-led: orange
-
-  - index: b1
-    name: P1
-    type: page
-    page: pfi
-    colored-led: green
-
-  - index: b2
-    name: P2
-    type: page
-    page: switches
-    colored-led: blue
-
-  - index: b3
-    name: P3
-    type: page
-    page: fcu
-    colored-led: red
-
-  - index: b4
-    name: P4
-    type: page
-    page: radio
-    colored-led: yellow
-
-  - index: b5
-    name: P5
-    type: page
-    page: engine
-    colored-led: green
-
-  - index: b6
-    name: P6
-    type: page
-    page: weather
-    colored-led: red
-
-  - index: b7
-    name: P7
-    type: page
-    page: transponder
-    colored-led: orange
+- index: b0
+  name: P0
+  page: index
+  colored-led: orange
+  activation: page
+  representation: colored-led
+- index: b1
+  name: P1
+  page: pfi
+  colored-led: green
+  activation: page
+  representation: colored-led
+- index: b2
+  name: P2
+  page: switches
+  colored-led: blue
+  activation: page
+  representation: colored-led
+- index: b3
+  name: P3
+  page: fcu
+  colored-led: red
+  activation: page
+  representation: colored-led
+- index: b4
+  name: P4
+  page: radio
+  colored-led: yellow
+  activation: page
+  representation: colored-led
+- index: b5
+  name: P5
+  page: engine
+  colored-led: green
+  activation: page
+  representation: colored-led
+- index: b6
+  name: P6
+  page: weather
+  colored-led: red
+  activation: page
+  representation: colored-led
+- index: b7
+  name: P7
+  page: transponder
+  colored-led: orange
+  activation: page
+  representation: colored-led

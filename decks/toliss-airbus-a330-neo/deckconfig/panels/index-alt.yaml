@@ -1,133 +1,138 @@
----
 aircraft: ToLiss A339
 description: Alternate index page
 version: 1.0.0
 last-updated: 31-OCT-2024
-#
-# CHANGELOG
-#
-# 31-OCT-2024: 1.0.0: Initial release (adapted from ToLiss A321)
-#
-# PAGE
-#
 name: index-alt
 buttons:
-  # ### LINE 1 ###  0- 7 ######################################################
-  - index: 0
-    name: ovrhdfire
-    type: page
-    page: ovrhdfire
-    text:
-      text: FIRE
-      text-position: cm
-  - index: 1
-    name: ovrhdhyd
-    type: page
-    page: ovrhdhyd
-    text:
-      text: HYD
-      text-position: cm
-  - index: 2
-    name: ovrhdfuel
-    type: page
-    page: ovrhdfuel
-    text:
-      text: FUEL
-      text-position: cm
-  - index: 3
-    name: ovrhdelec
-    type: page
-    page: ovrhdelec
-    text:
-      text: ELEC
-      text-position: cm
-  - index: 4
-    name: ovrhdaircond
-    type: page
-    page: ovrhdaircond
-    text:
-      text: |-
-        AIR
-        COND
-      text-position: cm
-  - index: 5
-    name: ovrhdextlights
-    type: page
-    page: index
-    text:
-      text: |-
-        EXT.
-        LIGHTS
-      text-position: cm
-  - index: 6
-    name: intlights
-    type: page
-    page: intlights
-    text:
-      text: |-
-        CALL &
-        INT.
-        LIGHTS
-      text-position: cm
-  - index: 8
-    name: adirs
-    type: page
-    page: adirs
-    text:
-      text: ADIRS
-      text-position: cm
-  - index: 9
-    name: other
-    type: page
-    page: other
-    text:
-      text: OTHER
-      text-position: cm
-  - index: 13
-    name: XPNDR
-    type: page
-    page: XPNDR
-    text:
-      text: XPNDR
-      text-position: cm
-  - index: 14
-    name: radio
-    type: page
-    page: radio
-    text:
-      text: RADIO
-      text-position: cm
-  - index: 21
-    name: AIRCRAFT
-    label: Aircraft
-    type: none
-    string-datarefs:
-      - sim/aircraft/view/acf_ICAO
-      - sim/aircraft/view/acf_tailnum
-    set-dataref: data:_aircraft_icao
-    # Popups in pos. 16 to 28 in includes popups
+- index: 0
+  name: ovrhdfire
+  page: ovrhdfire
+  text:
+    text: FIRE
+    text-position: cm
+  activation: page
+  representation: text
+- index: 1
+  name: ovrhdhyd
+  page: ovrhdhyd
+  text:
+    text: HYD
+    text-position: cm
+  activation: page
+  representation: text
+- index: 2
+  name: ovrhdfuel
+  page: ovrhdfuel
+  text:
+    text: FUEL
+    text-position: cm
+  activation: page
+  representation: text
+- index: 3
+  name: ovrhdelec
+  page: ovrhdelec
+  text:
+    text: ELEC
+    text-position: cm
+  activation: page
+  representation: text
+- index: 4
+  name: ovrhdaircond
+  page: ovrhdaircond
+  text:
+    text: 'AIR
 
-    # ### LINE 4 ### 24-31 ######################################################
-    text:
-      text: |-
-        ${sim/aircraft/view/acf_ICAO}
-        ${sim/aircraft/view/acf_tailnum}
-      text-font: B612-Bold
-      text-size: 18
-  - index: 29
-    name: xplane
-    type: page
-    page: xplane
-    icon: XPLANE_DARK
-  - index: 30
-    name: ISCS
-    type: page
-    page: toliss
-    icon: TOLISS_BLUE
-  - index: 31
-    name: Index
-    type: page
-    page: index
-    icon: A339
+      COND'
+    text-position: cm
+  activation: page
+  representation: text
+- index: 5
+  name: ovrhdextlights
+  page: index
+  text:
+    text: 'EXT.
+
+      LIGHTS'
+    text-position: cm
+  activation: page
+  representation: text
+- index: 6
+  name: intlights
+  page: intlights
+  text:
+    text: 'CALL &
+
+      INT.
+
+      LIGHTS'
+    text-position: cm
+  activation: page
+  representation: text
+- index: 8
+  name: adirs
+  page: adirs
+  text:
+    text: ADIRS
+    text-position: cm
+  activation: page
+  representation: text
+- index: 9
+  name: other
+  page: other
+  text:
+    text: OTHER
+    text-position: cm
+  activation: page
+  representation: text
+- index: 13
+  name: XPNDR
+  page: XPNDR
+  text:
+    text: XPNDR
+    text-position: cm
+  activation: page
+  representation: text
+- index: 14
+  name: radio
+  page: radio
+  text:
+    text: RADIO
+    text-position: cm
+  activation: page
+  representation: text
+- index: 21
+  name: AIRCRAFT
+  label: Aircraft
+  string-datarefs:
+  - sim/aircraft/view/acf_ICAO
+  - sim/aircraft/view/acf_tailnum
+  set-dataref: data:_aircraft_icao
+  text:
+    text: '${sim/aircraft/view/acf_ICAO}
+
+      ${sim/aircraft/view/acf_tailnum}'
+    text-font: B612-Bold
+    text-size: 18
+  activation: none
+  representation: text
+- index: 29
+  name: xplane
+  page: xplane
+  icon: XPLANE_DARK
+  activation: page
+  representation: icon
+- index: 30
+  name: ISCS
+  page: toliss
+  icon: TOLISS_BLUE
+  activation: page
+  representation: icon
+- index: 31
+  name: Index
+  page: index
+  icon: A339
+  activation: page
+  representation: icon
 default-text-size: 20
-includes: popups
+includes:
+- popups

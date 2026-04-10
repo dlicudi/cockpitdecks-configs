@@ -1,13 +1,9 @@
-# Ejet Overhead Panel v1.0.0
 name: switches3
-includes: includes/pagerfull
+includes:
+- includes/pagerfull
 default-icon-color: DarkSlateGray
-
 buttons:
-
-
 - index: 23
-  type: page
   page: switches
   label: PAGE 1/3
   label-size: 10
@@ -16,3 +12,5 @@ buttons:
   text-font: fontawesome.otf
   text-size: 48
   text-color: Gold
+  activation: page
+  representation: text

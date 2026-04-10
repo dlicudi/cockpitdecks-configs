@@ -1,11 +1,11 @@
 description: Switch panel hub
-includes: pager,encoders/encoders_pfd
+includes:
+- pager
+- encoders/encoders_pfd
 name: switches
 default-text-size: 56
 buttons:
-
 - index: 0
-  type: page
   page: switches_prestart
   label: PRE-START
   label-color: Gold
@@ -16,9 +16,9 @@ buttons:
   text-font: fontawesome.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-
+  activation: page
+  representation: text
 - index: 1
-  type: page
   page: switches_pretaxi
   label: PRE-TAXI
   label-color: Gold
@@ -29,9 +29,9 @@ buttons:
   text-font: fontawesome.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-
+  activation: page
+  representation: text
 - index: 2
-  type: page
   page: switches_systems
   label: SYSTEMS
   label-color: Gold
@@ -42,9 +42,9 @@ buttons:
   text-font: fontawesome.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-
+  activation: page
+  representation: text
 - index: 3
-  type: page
   page: switches_lights
   label: LIGHTS
   label-color: Gold
@@ -55,9 +55,9 @@ buttons:
   text-font: fontawesome.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
-
+  activation: page
+  representation: text
 - index: 4
-  type: page
   page: switches_ice
   label: ICE
   label-color: Gold
@@ -68,3 +68,5 @@ buttons:
   text-font: fontawesome.otf
   text-position: cm
   text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text

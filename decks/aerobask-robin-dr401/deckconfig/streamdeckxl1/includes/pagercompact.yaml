@@ -1,15 +1,14 @@
-# Pager v1.0.0
 buttons:
-
-  - index: 24
-    type: page
-    page: index
-    label: HOME
-    label-color: Gold
-    label-bg-color: Black
-    text: ""
-    text-color: khaki
-    text-size: 40
-    text-font: fontawesome.otf
-    text-position: cm
-    text-bg-color: (40, 40, 40)
+- index: 24
+  page: index
+  label: HOME
+  label-color: Gold
+  label-bg-color: Black
+  text: 
+  text-color: khaki
+  text-size: 40
+  text-font: fontawesome.otf
+  text-position: cm
+  text-bg-color: (40, 40, 40)
+  activation: page
+  representation: text

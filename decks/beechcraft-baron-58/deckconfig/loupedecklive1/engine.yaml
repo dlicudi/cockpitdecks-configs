@@ -1,13 +1,11 @@
 description: Engine
-includes: pager,encoders/encoders_fcu
+includes:
+- pager
+- encoders/encoders_fcu
 name: engine
-
 buttons:
-
-
 - index: 0
   name: MANIFOLD_PRESSURE
-  type: none
   label: MAN PRESS
   label-color: Black
   label-size: 10
@@ -15,20 +13,18 @@ buttons:
     size: medium
     model: B
     parts:
-      B0:
-        color: green
-        text-size: 40
-        formula: "${sim/cockpit2/engine/indicators/MPR_in_hg[0]} round"
-        text: "${formula} inHg"
-      B1:
-        color: green
-        text-size: 40
-        formula: "${sim/cockpit2/engine/indicators/MPR_in_hg[1]} round"
-        text: "${formula} inHg"
-
+    - color: green
+      text-size: 40
+      formula: ${sim/cockpit2/engine/indicators/MPR_in_hg[0]} round
+      text: ${formula} inHg
+    - color: green
+      text-size: 40
+      formula: ${sim/cockpit2/engine/indicators/MPR_in_hg[1]} round
+      text: ${formula} inHg
+  activation: none
+  representation: annunciator
 - index: 1
   name: PROP_RPM
-  type: none
   label: PROP RPM
   label-color: Black
   label-size: 10
@@ -36,138 +32,127 @@ buttons:
     size: medium
     model: B
     parts:
-      B0:
-        color: green
-        text-size: 42
-        formula: "1"
-        text: "${sim/cockpit2/engine/indicators/engine_speed_rpm[0]}"
-        text-format: "{0:.0f}"
-      B1:
-        color: green
-        text-size: 42
-        formula: "1"
-        text: "${sim/cockpit2/engine/indicators/engine_speed_rpm[1]}"
-        text-format: "{0:.0f}"
-
+    - color: green
+      text-size: 42
+      formula: '1'
+      text: ${sim/cockpit2/engine/indicators/engine_speed_rpm[0]}
+      text-format: '{0:.0f}'
+    - color: green
+      text-size: 42
+      formula: '1'
+      text: ${sim/cockpit2/engine/indicators/engine_speed_rpm[1]}
+      text-format: '{0:.0f}'
+  activation: none
+  representation: annunciator
 - index: 2
   name: FUEL_FLOW
   label: FUEL FLOW
   label-color: Black
   label-size: 10
-  type: none
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: green
-        text-size: 42
-        formula: "${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3600 * 0.8 / 3.78541 / 2 roundn"
-        text: "${formula} GPH"
-        text-format: "{0:.2f}"
-      B1:
-        color: green
-        text-size: 42
-        formula: "${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[1]} 3600 * 0.8 / 3.78541 / 2 roundn"
-        text: "${formula} GPH"
-        text-format: "{0:.2f}"
-
+    - color: green
+      text-size: 42
+      formula: ${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3600 * 0.8 /
+        3.78541 / 2 roundn
+      text: ${formula} GPH
+      text-format: '{0:.2f}'
+    - color: green
+      text-size: 42
+      formula: ${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[1]} 3600 * 0.8 /
+        3.78541 / 2 roundn
+      text: ${formula} GPH
+      text-format: '{0:.2f}'
+  activation: none
+  representation: annunciator
 - index: 3
   name: TEMP_CHT
   label: TEMP CHT
   label-color: Black
   label-size: 10
-  type: none
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: green
-        text-size: 42
-        text: "${sim/cockpit2/engine/indicators/CHT_deg_C[0]}"
-        text-format: "{0:.0f}°C"
-        formula: "1"
-      B1:
-        color: green
-        text-size: 42
-        text: "${sim/cockpit2/engine/indicators/CHT_deg_C[1]}"
-        text-format: "{0:.0f}°C"
-        formula: "1"
-
+    - color: green
+      text-size: 42
+      text: ${sim/cockpit2/engine/indicators/CHT_deg_C[0]}
+      text-format: '{0:.0f}°C'
+      formula: '1'
+    - color: green
+      text-size: 42
+      text: ${sim/cockpit2/engine/indicators/CHT_deg_C[1]}
+      text-format: '{0:.0f}°C'
+      formula: '1'
+  activation: none
+  representation: annunciator
 - index: 4
   name: TEMP_EGT
   label: TEMP EGT
   label-color: Black
   label-size: 10
-  type: none
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: green
-        text-size: 42
-        text: "${sim/cockpit2/engine/indicators/EGT_deg_cel[0]}"
-        text-format: "{0:.0f}°C"
-        formula: "1"
-      B1:
-        color: green
-        text-size: 42
-        text: "${sim/cockpit2/engine/indicators/EGT_deg_cel[1]}"
-        text-format: "{0:.0f}°C"
-        formula: "1"
-
+    - color: green
+      text-size: 42
+      text: ${sim/cockpit2/engine/indicators/EGT_deg_cel[0]}
+      text-format: '{0:.0f}°C'
+      formula: '1'
+    - color: green
+      text-size: 42
+      text: ${sim/cockpit2/engine/indicators/EGT_deg_cel[1]}
+      text-format: '{0:.0f}°C'
+      formula: '1'
+  activation: none
+  representation: annunciator
 - index: 5
   name: OIL_TEMP
   label: OIL TEMP
   label-color: Black
   label-size: 10
-  type: none
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: green
-        text-size: 42
-        text: "${sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]}"
-        text-format: "{0:.0f}°C"
-        formula: "1"
-      B1:
-        color: green
-        text-size: 42
-        text: "${sim/cockpit2/engine/indicators/oil_temperature_deg_C[1]}"
-        text-format: "{0:.0f}°C"
-        formula: "1"
-
+    - color: green
+      text-size: 42
+      text: ${sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]}
+      text-format: '{0:.0f}°C'
+      formula: '1'
+    - color: green
+      text-size: 42
+      text: ${sim/cockpit2/engine/indicators/oil_temperature_deg_C[1]}
+      text-format: '{0:.0f}°C'
+      formula: '1'
+  activation: none
+  representation: annunciator
 - index: 6
   name: OIL_PRESS
   label: OIL PRESS
   label-color: Black
   label-size: 10
-  type: none
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: green
-        text-size: 42
-        text: "${sim/cockpit2/engine/indicators/oil_pressure_psi[0]}"
-        text-format: "{0:.0f} PSI"
-        formula: "1"
-      B1:
-        color: green
-        text-size: 42
-        text: "${sim/cockpit2/engine/indicators/oil_pressure_psi[1]}"
-        text-format: "{0:.0f} PSI"
-        formula: "1"
-
-
+    - color: green
+      text-size: 42
+      text: ${sim/cockpit2/engine/indicators/oil_pressure_psi[0]}
+      text-format: '{0:.0f} PSI'
+      formula: '1'
+    - color: green
+      text-size: 42
+      text: ${sim/cockpit2/engine/indicators/oil_pressure_psi[1]}
+      text-format: '{0:.0f} PSI'
+      formula: '1'
+  activation: none
+  representation: annunciator
 - index: 7
   name: FUEL
-  type: none
   label: FUEL QTY
   label-color: Black
   label-size: 10
@@ -175,63 +160,62 @@ buttons:
     size: medium
     model: B
     parts:
-      B0:
-        color: yellow
-        text-size: 32
-        formula: "${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn"
-        text: "L ${formula} gal"
-      B1:
-        color: yellow
-        text-size: 32
-        formula: "${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn"
-        text: "R ${formula} gal"
-
-
+    - color: yellow
+      text-size: 32
+      formula: ${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn
+      text: L ${formula} gal
+    - color: yellow
+      text-size: 32
+      formula: ${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn
+      text: R ${formula} gal
+  activation: none
+  representation: annunciator
 - index: 8
   name: FUEL_QTY_TOTAL
   label: FUEL QTY
   label-size: 10
   label-color: Lime
-  type: none
   data-bg-color: Black
   data:
-    icon: "fa:gas-pump"
+    icon: fa:gas-pump
     top-line-color: ivory
     top-line-width: 10
     icon-size: 60
     icon-color: white
     data: ${formula}
-    data-format: "{:3.0f}"
+    data-format: '{:3.0f}'
     data-font: DIN Condensed Light
     data-size: 50
     data-color: white
     data-progress: 141
     data-trend: 1
-    data-unit: "gal"
-    formula: "${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[1]} + 0.264172 * 2 roundn"
-    bottomline: "Gallons"
+    data-unit: gal
+    formula: ${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[1]}
+      + 0.264172 * 2 roundn
+    bottomline: Gallons
     bottomline-size: 30
     bottomline-color: ivory
     mark: ${fa:arrow-right}
     mark-size: 20
     mark-font: fontawesome.otf
     mark-color: red
-
-
+  activation: none
+  representation: data
 - index: 11
   name: FUEL EST
-  type: none
   annunciator:
     size: medium
     model: B
     parts:
-      B0:
-        color: green
-        text-size: 42
-        formula: "${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[1]} + ${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3 roundn 0.000001 + / 3600 / 1 roundn"
-        text: "${formula} hrs"
-      B1:
-        text: FUEL EST
-        text-size: 42
-        text-font: DIN Bold
-        formula: "1"
+    - color: green
+      text-size: 42
+      formula: ${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[1]}
+        + ${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3 roundn 0.000001
+        + / 3600 / 1 roundn
+      text: ${formula} hrs
+    - text: FUEL EST
+      text-size: 42
+      text-font: DIN Bold
+      formula: '1'
+  activation: none
+  representation: annunciator
