@@ -21,14 +21,13 @@ buttons:
     text-format: '{0:01.0f}%'
 - index: e1
   name: FCU Heading
-  commands: &id001
-    cw: sim/autopilot/heading_up
-    ccw: sim/autopilot/heading_down
-    press: sim/autopilot/heading_sync
-    long-press: sim/autopilot/servos_toggle
   activation:
     type: encoder-push
-    commands: *id001
+    commands:
+      cw: sim/autopilot/heading_up
+      ccw: sim/autopilot/heading_down
+      press: sim/autopilot/heading_sync
+      long-press: sim/autopilot/servos_toggle
   representation:
     type: side-display
     label: HDG
@@ -38,13 +37,12 @@ buttons:
     text-format: '{0:00.0f}'
 - index: e2
   name: FCU Baro
-  commands: &id002
-    cw: sim/instruments/barometer_up
-    ccw: sim/instruments/barometer_down
-    press: sim/instruments/barometer_std
   activation:
     type: encoder-push
-    commands: *id002
+    commands:
+      cw: sim/instruments/barometer_up
+      ccw: sim/instruments/barometer_down
+      press: sim/instruments/barometer_std
   representation:
     type: side-display
     label: QNH
@@ -55,11 +53,14 @@ buttons:
     text-format: '{0:01.2f}'
 - index: e3
   name: alt_encoder
-  commands: &id003
-    long-press: sim/autopilot/altitude_sync
   activation:
     type: encoder-mode
-    commands: *id003
+    commands:
+      cw: sim/autopilot/altitude_up
+      ccw: sim/autopilot/altitude_down
+      cw-off: sim/autopilot/altitude_up
+      ccw-off: sim/autopilot/altitude_down
+      long-press: sim/autopilot/altitude_sync
   representation:
     type: side-display
     label: ALT
@@ -71,13 +72,12 @@ buttons:
     text-format: '{0:04.0f}'
 - index: e4
   name: FCU V Speed
-  commands: &id004
-    cw: sim/autopilot/vertical_speed_up
-    ccw: sim/autopilot/vertical_speed_down
-    press: sim/autopilot/vertical_speed_sync
   activation:
     type: encoder-push
-    commands: *id004
+    commands:
+      cw: sim/autopilot/vertical_speed_up
+      ccw: sim/autopilot/vertical_speed_down
+      press: sim/autopilot/vertical_speed_sync
   representation:
     type: side-display
     label: VS
@@ -89,13 +89,12 @@ buttons:
     text-format: '{0:.0f}'
 - index: e5
   name: mixture_encoder
-  commands: &id005
-    cw: sim/engines/mixture_up
-    ccw: sim/engines/mixture_down
-    press: sim/engines/mixture_max
   activation:
     type: encoder-push
-    commands: *id005
+    commands:
+      cw: sim/engines/mixture_up
+      ccw: sim/engines/mixture_down
+      press: sim/engines/mixture_max
   representation:
     type: side-display
     label: MIX
