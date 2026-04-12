@@ -5,253 +5,283 @@ last-updated: 31-OCT-2024
 name: ecam
 buttons:
 - index: 31
-  page: back
-  icon: A339
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: back
+  representation:
+    type: icon
+    icon: A339
 - index: 0
   name: END
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      formula: ${AirbusFBW/SDENG}
-    - text: ENG
-      color: white
-      text-size: 48
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectEnginePage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        formula: ${AirbusFBW/SDENG}
+      - text: ENG
+        color: white
+        text-size: 48
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_3
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectEnginePage
 - index: 1
   name: BLEED
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      formula: ${AirbusFBW/SDBLEED}
-    - text: BLEED
-      color: white
-      text-size: 48
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectBleedPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        formula: ${AirbusFBW/SDBLEED}
+      - text: BLEED
+        color: white
+        text-size: 48
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_3
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectBleedPage
 - index: 2
   name: PRESS
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      formula: ${AirbusFBW/SDPRESS}
-    - text: PRESS
-      color: white
-      text-size: 48
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectPressPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        formula: ${AirbusFBW/SDPRESS}
+      - text: PRESS
+        color: white
+        text-size: 48
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_3
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectPressPage
 - index: 3
   name: ELEC
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      formula: ${AirbusFBW/SDELEC}
-    - text: ELEC
-      color: white
-      text-size: 48
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectElecACPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        formula: ${AirbusFBW/SDELEC}
+      - text: ELEC
+        color: white
+        text-size: 48
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_3
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectElecACPage
 - index: 4
   name: HYD
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      formula: ${AirbusFBW/SDHYD}
-    - text: HYD
-      color: white
-      text-size: 48
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectHydraulicPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        formula: ${AirbusFBW/SDHYD}
+      - text: HYD
+        color: white
+        text-size: 48
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_3
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectHydraulicPage
 - index: 5
   name: FUEL
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      formula: ${AirbusFBW/SDFUEL}
-    - text: FUEL
-      color: white
-      text-size: 48
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectFuelPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        formula: ${AirbusFBW/SDFUEL}
+      - text: FUEL
+        color: white
+        text-size: 48
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_3
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectFuelPage
 - index: 6
   name: APU
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      formula: ${AirbusFBW/SDAPU}
-    - text: APU
-      color: white
-      text-size: 48
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectAPUPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        formula: ${AirbusFBW/SDAPU}
+      - text: APU
+        color: white
+        text-size: 48
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_3
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectAPUPage
 - index: 7
   name: COND
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      formula: ${AirbusFBW/SDCOND}
-    - text: COND
-      color: white
-      text-size: 48
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectConditioningPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        formula: ${AirbusFBW/SDCOND}
+      - text: COND
+        color: white
+        text-size: 48
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_3
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectConditioningPage
 - index: 8
   name: DOOR
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      formula: ${AirbusFBW/SDDOOR}
-    - text: DOOR
-      color: white
-      text-size: 48
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectDoorOxyPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        formula: ${AirbusFBW/SDDOOR}
+      - text: DOOR
+        color: white
+        text-size: 48
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_3
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectDoorOxyPage
 - index: 9
   name: WHEEL
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      formula: ${AirbusFBW/SDWHEEL}
-    - text: WHEEL
-      color: white
-      text-size: 48
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectWheelPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        formula: ${AirbusFBW/SDWHEEL}
+      - text: WHEEL
+        color: white
+        text-size: 48
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_3
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectWheelPage
 - index: 10
   name: F/CTL
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      formula: ${AirbusFBW/SDFCTL}
-    - text: F/CTL
-      color: white
-      text-size: 48
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectFlightControlPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        formula: ${AirbusFBW/SDFCTL}
+      - text: F/CTL
+        color: white
+        text-size: 48
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_3
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectFlightControlPage
 - index: 11
   name: CLR
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      formula: ${AirbusFBW/CLRillum}
-    - text: CLR
-      color: white
-      text-size: 48
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/CaptainClear
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/CaptainClear
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        formula: ${AirbusFBW/CLRillum}
+      - text: CLR
+        color: white
+        text-size: 48
+        formula: '1'
 - index: 12
   name: STS
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      formula: ${AirbusFBW/SDSTATUS}
-    - text: STS
-      color: white
-      text-size: 48
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectStatusPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        formula: ${AirbusFBW/SDSTATUS}
+      - text: STS
+        color: white
+        text-size: 48
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_3
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectStatusPage
 - index: 13
   name: ALL
-  annunciator:
-    size: medium
-    text: ALL
-    color: white
-    font-text-size: 48
-    formula: '1'
-  options: nostate
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECAMAll
+  activation:
+    type: push
+    options: nostate
+    commands:
+      press: AirbusFBW/ECAMAll
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      text: ALL
+      color: white
+      font-text-size: 48
+      formula: '1'

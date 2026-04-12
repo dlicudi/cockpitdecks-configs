@@ -7,217 +7,241 @@ name: fcu
 buttons:
 - index: 0
   name: FD
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: white
-      led: led
-      formula: ${sim/cockpit/autopilot/autopilot_mode} 1 eq
-    - text: FD
-      text-size: 40
-      text-font: DIN Bold
-      formula: '1'
-      framed: true
+  activation:
+    type: push
+    commands:
+      press: XCrafts/ERJ/fdir_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: white
+        led: led
+        formula: ${sim/cockpit/autopilot/autopilot_mode} 1 eq
+      - text: FD
+        text-size: 40
+        text-font: DIN Bold
+        formula: '1'
+        framed: true
   vibrate: SHORT
-  activation: push
-  representation: annunciator
-  commands:
-    press: XCrafts/ERJ/fdir_toggle
 - index: 1
   name: AP
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: white
-      led: led
-      formula: ${sim/cockpit2/autopilot/servos_on}
-    - text: AP
-      text-size: 40
-      text-font: DIN Bold
-      formula: '1'
-      framed: true
+  activation:
+    type: push
+    commands:
+      press: XCrafts/APYD_Toggle
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: white
+        led: led
+        formula: ${sim/cockpit2/autopilot/servos_on}
+      - text: AP
+        text-size: 40
+        text-font: DIN Bold
+        formula: '1'
+        framed: true
   vibrate: SHORT
-  activation: push
-  representation: annunciator
-  commands:
-    press: XCrafts/APYD_Toggle
 - index: 2
   name: HDG
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: white
-      led: led
-      formula: ${sim/cockpit2/autopilot/heading_mode}
-    - text: HDG
-      text-size: 40
-      text-font: DIN Bold
-      formula: '1'
-      framed: true
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/heading
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: white
+        led: led
+        formula: ${sim/cockpit2/autopilot/heading_mode}
+      - text: HDG
+        text-size: 40
+        text-font: DIN Bold
+        formula: '1'
+        framed: true
   vibrate: SHORT
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/autopilot/heading
 - index: 3
   name: ALT
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: white
-      led: led
-      formula: ${sim/cockpit2/autopilot/altitude_hold_status}
-    - text: ALT
-      text-size: 40
-      text-font: DIN Bold
-      formula: '1'
-      framed: true
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/altitude_hold
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: white
+        led: led
+        formula: ${sim/cockpit2/autopilot/altitude_hold_status}
+      - text: ALT
+        text-size: 40
+        text-font: DIN Bold
+        formula: '1'
+        framed: true
   vibrate: SHORT
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/autopilot/altitude_hold
 - index: 4
   name: NAV
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: white
-      led: led
-      formula: ${sim/cockpit2/autopilot/nav_status} 2 eq
-    - text: NAV
-      text-size: 40
-      text-font: DIN Bold
-      formula: '1'
-      framed: true
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/NAV
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: white
+        led: led
+        formula: ${sim/cockpit2/autopilot/nav_status} 2 eq
+      - text: NAV
+        text-size: 40
+        text-font: DIN Bold
+        formula: '1'
+        framed: true
   vibrate: SHORT
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/autopilot/NAV
 - index: 5
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: white
-      led: led
-      formula: ${sim/cockpit/switches/yaw_damper_on}
-    - text: YD
-      text-size: 40
-      text-font: DIN Bold
-      formula: '1'
-      framed: true
+  activation:
+    type: push
+    commands:
+      press: sim/systems/yaw_damper_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: white
+        led: led
+        formula: ${sim/cockpit/switches/yaw_damper_on}
+      - text: YD
+        text-size: 40
+        text-font: DIN Bold
+        formula: '1'
+        framed: true
   vibrate: SHORT
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/systems/yaw_damper_toggle
 - index: 6
   name: APP
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: white
-      led: led
-      formula: ${sim/cockpit2/autopilot/approach_status} 2 eq
-    - text: APP
-      text-size: 40
-      text-font: DIN Bold
-      formula: '1'
-      framed: true
+  activation:
+    type: push
+    commands:
+      press: XCrafts/ERJ/APPCH
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: white
+        led: led
+        formula: ${sim/cockpit2/autopilot/approach_status} 2 eq
+      - text: APP
+        text-size: 40
+        text-font: DIN Bold
+        formula: '1'
+        framed: true
   vibrate: SHORT
-  activation: push
-  representation: annunciator
-  commands:
-    press: XCrafts/ERJ/APPCH
 - index: 7
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: white
-      led: led
-      formula: ${XCrafts/ERJ/VNAV_stat}
-    - text: O
-      text-size: 40
-      text-font: DIN Bold
-      formula: '1'
-      framed: true
+  activation:
+    type: push
+    commands:
+      press: XCrafts/ERJ/VNAV
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: white
+        led: led
+        formula: ${XCrafts/ERJ/VNAV_stat}
+      - text: O
+        text-size: 40
+        text-font: DIN Bold
+        formula: '1'
+        framed: true
   vibrate: SHORT
-  activation: push
-  representation: annunciator
-  commands:
-    press: XCrafts/ERJ/VNAV
 - index: 8
   name: VS
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: white
-      led: led
-      formula: ${sim/cockpit2/autopilot/altitude_mode} 4 eq
-    - text: VS
-      text-size: 40
-      text-font: DIN Bold
-      formula: '1'
-      framed: true
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/vertical_speed
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: white
+        led: led
+        formula: ${sim/cockpit2/autopilot/altitude_mode} 4 eq
+      - text: VS
+        text-size: 40
+        text-font: DIN Bold
+        formula: '1'
+        framed: true
   vibrate: SHORT
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/autopilot/vertical_speed
 - index: 9
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: white
-      led: led
-      formula: ${XCrafts/ERJ/autopilot/autothrottle_system_active}
-    - text: A/T
-      text-size: 40
-      text-font: DIN Bold
-      formula: '1'
-      framed: true
+  activation:
+    type: push
+    commands:
+      press: XCrafts/ERJ/AutoThrottle
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: white
+        led: led
+        formula: ${XCrafts/ERJ/autopilot/autothrottle_system_active}
+      - text: A/T
+        text-size: 40
+        text-font: DIN Bold
+        formula: '1'
+        framed: true
   vibrate: SHORT
-  activation: push
-  representation: annunciator
-  commands:
-    press: XCrafts/ERJ/AutoThrottle
 - index: 10
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: white
-      led: led
-      formula: ${sim/cockpit2/autopilot/altitude_mode} 4 eq
-    - text: FLCH
-      text-size: 40
-      text-font: DIN Bold
-      formula: '1'
-      framed: true
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/vertical_speed
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: white
+        led: led
+        formula: ${sim/cockpit2/autopilot/altitude_mode} 4 eq
+      - text: FLCH
+        text-size: 40
+        text-font: DIN Bold
+        formula: '1'
+        framed: true
   vibrate: SHORT
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/autopilot/vertical_speed
 - index: 11
-  page: fcu2
-  text: →
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
+  activation:
+    type: page
+    page: fcu2
+  representation:
+    type: text
+    text: →
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   vibrate: SHORT
-  activation: page
-  representation: text

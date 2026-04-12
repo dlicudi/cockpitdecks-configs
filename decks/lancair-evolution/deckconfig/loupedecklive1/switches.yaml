@@ -6,239 +6,271 @@ name: switches
 buttons:
 - index: 0
   name: GND PWR
-  label: GND PWR
-  label-font: D-DINCondensed.otf
-  switch:
-    switch-style: rect
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-label-size: 42
-    tick-label-font: D-DIN-Bold.otf
-    tick-underline: false
-  dataref: sim/cockpit/electrical/gpu_on
-  activation: sweep
-  positions:
-  - sim/electrical/GPU_on
-  - sim/electrical/GPU_off
+  activation:
+    type: sweep
+    dataref: sim/cockpit/electrical/gpu_on
+    positions:
+    - sim/electrical/GPU_on
+    - sim/electrical/GPU_off
+  representation:
+    type: switch
+    label: GND PWR
+    label-font: D-DINCondensed.otf
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-label-size: 42
+      tick-label-font: D-DIN-Bold.otf
+      tick-underline: false
 - index: 1
   name: BAT 1
-  label: BAT 1
-  label-font: D-DINCondensed.otf
-  switch:
-    switch-style: rect
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-label-size: 42
-    tick-label-font: D-DIN-Bold.otf
-    tick-underline: false
-  dataref: sim/cockpit2/electrical/battery_on[0]
-  activation: sweep
-  positions:
-  - sim/electrical/battery_1_on
-  - sim/electrical/battery_1_off
+  activation:
+    type: sweep
+    dataref: sim/cockpit2/electrical/battery_on[0]
+    positions:
+    - sim/electrical/battery_1_on
+    - sim/electrical/battery_1_off
+  representation:
+    type: switch
+    label: BAT 1
+    label-font: D-DINCondensed.otf
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-label-size: 42
+      tick-label-font: D-DIN-Bold.otf
+      tick-underline: false
 - index: 2
   name: BAT 2
-  label: BAT 2
-  label-font: D-DINCondensed.otf
-  switch:
-    switch-style: rect
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-label-size: 42
-    tick-label-font: D-DIN-Bold.otf
-    tick-underline: false
-  options: large
-  dataref: sim/cockpit2/electrical/battery_on[1]
-  activation: sweep
-  positions:
-  - sim/electrical/battery_2_on
-  - sim/electrical/battery_2_off
+  activation:
+    type: sweep
+    options: large
+    dataref: sim/cockpit2/electrical/battery_on[1]
+    positions:
+    - sim/electrical/battery_2_on
+    - sim/electrical/battery_2_off
+  representation:
+    type: switch
+    label: BAT 2
+    label-font: D-DINCondensed.otf
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-label-size: 42
+      tick-label-font: D-DIN-Bold.otf
+      tick-underline: false
 - index: 3
   name: GEN
-  label: GEN
-  label-font: D-DINCondensed.otf
-  switch:
-    switch-style: rect
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-label-size: 42
-    tick-label-font: D-DIN-Bold.otf
-    tick-underline: false
-  options: large
-  dataref: sim/cockpit2/electrical/generator_on[0]
-  activation: sweep
-  positions:
-  - sim/electrical/generator_1_on
-  - sim/electrical/generator_1_off
+  activation:
+    type: sweep
+    options: large
+    dataref: sim/cockpit2/electrical/generator_on[0]
+    positions:
+    - sim/electrical/generator_1_on
+    - sim/electrical/generator_1_off
+  representation:
+    type: switch
+    label: GEN
+    label-font: D-DINCondensed.otf
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-label-size: 42
+      tick-label-font: D-DIN-Bold.otf
+      tick-underline: false
 - index: 4
   name: ALT
-  label: ALT
-  label-font: D-DINCondensed.otf
-  switch:
-    switch-style: rect
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-label-size: 42
-    tick-label-font: D-DIN-Bold.otf
-    tick-underline: false
-  options: large
-  dataref: sim/cockpit2/electrical/generator_on[1]
-  activation: sweep
-  positions:
-  - sim/electrical/generator_2_on
-  - sim/electrical/generator_2_off
+  activation:
+    type: sweep
+    options: large
+    dataref: sim/cockpit2/electrical/generator_on[1]
+    positions:
+    - sim/electrical/generator_2_on
+    - sim/electrical/generator_2_off
+  representation:
+    type: switch
+    label: ALT
+    label-font: D-DINCondensed.otf
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-label-size: 42
+      tick-label-font: D-DIN-Bold.otf
+      tick-underline: false
 - index: 5
   name: DC PWR
-  label: DC PWR
-  label-font: D-DINCondensed.otf
-  switch:
-    switch-style: rect
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-label-size: 42
-    tick-label-font: D-DIN-Bold.otf
-    tick-underline: false
-  options: large
-  dataref: sim/cockpit2/electrical/cross_tie
-  activation: sweep
-  positions:
-  - sim/electrical/cross_tie_on
-  - sim/electrical/cross_tie_off
+  activation:
+    type: sweep
+    options: large
+    dataref: sim/cockpit2/electrical/cross_tie
+    positions:
+    - sim/electrical/cross_tie_on
+    - sim/electrical/cross_tie_off
+  representation:
+    type: switch
+    label: DC PWR
+    label-font: D-DINCondensed.otf
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-label-size: 42
+      tick-label-font: D-DIN-Bold.otf
+      tick-underline: false
 - index: 6
   name: IGN
-  label: IGN
-  label-font: D-DINCondensed.otf
-  switch:
-    switch-style: rect
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-label-size: 42
-    tick-label-font: D-DIN-Bold.otf
-    tick-underline: false
-  options: large
-  dataref: sim/cockpit/engine/igniters_on[0]
-  activation: sweep
-  positions:
-  - sim/igniters/igniter_contin_on_1
-  - sim/igniters/igniter_contin_off_1
+  activation:
+    type: sweep
+    options: large
+    dataref: sim/cockpit/engine/igniters_on[0]
+    positions:
+    - sim/igniters/igniter_contin_on_1
+    - sim/igniters/igniter_contin_off_1
+  representation:
+    type: switch
+    label: IGN
+    label-font: D-DINCondensed.otf
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-label-size: 42
+      tick-label-font: D-DIN-Bold.otf
+      tick-underline: false
 - index: 7
   name: FUEL PUMP
-  label: FUEL PUMP
-  label-font: D-DINCondensed.otf
-  switch:
-    switch-style: rect
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-label-size: 42
-    tick-label-font: D-DIN-Bold.otf
-    tick-underline: false
-  options: large
-  dataref: sim/cockpit/engine/fuel_pump_on[0]
-  activation: sweep
-  positions:
-  - sim/fuel/fuel_pump_1_on
-  - sim/fuel/fuel_pump_1_off
+  activation:
+    type: sweep
+    options: large
+    dataref: sim/cockpit/engine/fuel_pump_on[0]
+    positions:
+    - sim/fuel/fuel_pump_1_on
+    - sim/fuel/fuel_pump_1_off
+  representation:
+    type: switch
+    label: FUEL PUMP
+    label-font: D-DINCondensed.otf
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-label-size: 42
+      tick-label-font: D-DIN-Bold.otf
+      tick-underline: false
 - index: 8
+  activation:
+    type: long-press
+    commands:
+      press: sim/ignition/engage_starter_1
+  representation:
+    type: multi-texts
+    label: IGNITION
+    label-color: Black
+    text-bg-color: Red
+    multi-texts:
+    - text: 'OFF'
+      text-color: White
+    - text: R
+      text-color: Orange
+    - text: L
+      text-color: Orange
+    - text: BOTH
+      text-color: Orange
+    - text: START
+      text-color: White
+    formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
   vibrate: LONG
-  label: IGNITION
-  label-color: Black
-  text-bg-color: Red
-  multi-texts:
-  - text: 'OFF'
-    text-color: White
-  - text: R
-    text-color: Orange
-  - text: L
-    text-color: Orange
-  - text: BOTH
-    text-color: Orange
-  - text: START
-    text-color: White
-  formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
-  activation: long-press
-  representation: multi-texts
-  commands:
-    press: sim/ignition/engage_starter_1
 - index: 9
+  activation:
+    type: push
+    commands:
+      press: sim/fuel/fuel_selector_1
+  representation:
+    type: annunciator
+    label: FUEL LEFT
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: red
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 0 eq
+      B1:
+        text: SELECTED
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 1 eq
   vibrate: SHORT
-  label: FUEL LEFT
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: red
-      formula: ${sim/cockpit2/fuel/fuel_tank_selector} 0 eq
-    B1:
-      text: SELECTED
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/fuel/fuel_tank_selector} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/fuel/fuel_selector_1
 - index: 10
+  activation:
+    type: push
+    commands:
+      press: sim/fuel/fuel_selector_3
+  representation:
+    type: annunciator
+    label: FUEL RIGHT
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: red
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 6 eq
+      B1:
+        text: SELECTED
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 3 eq
   vibrate: SHORT
-  label: FUEL RIGHT
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: red
-      formula: ${sim/cockpit2/fuel/fuel_tank_selector} 6 eq
-    B1:
-      text: SELECTED
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/fuel/fuel_tank_selector} 3 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/fuel/fuel_selector_3
 - index: 11
   name: Switches2
-  page: switches2
-  text: →
-  text-font: fontawesome.otf
-  text-size: 48
-  text-color: Gold
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches2
+  representation:
+    type: text
+    text: →
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold

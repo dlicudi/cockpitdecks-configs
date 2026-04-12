@@ -5,166 +5,190 @@ includes:
 name: switches
 buttons:
 - index: 0
-  page: overhead_electric
-  label: ELECTRIC
-  label-color: Gold
+  activation:
+    type: page
+    page: overhead_electric
+  representation:
+    type: text
+    label: ELECTRIC
+    label-color: Gold
+    label-size: 8
+    text: 🔌
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   label-bg-color: Black
-  label-size: 8
-  text: 🔌
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 1
-  page: overhead_cockpit_lights
-  label: COCKPIT LIGHTS
-  label-color: Gold
+  activation:
+    type: page
+    page: overhead_cockpit_lights
+  representation:
+    type: text
+    label: COCKPIT LIGHTS
+    label-color: Gold
+    label-size: 8
+    text: 💡
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   label-bg-color: Black
-  label-size: 8
-  text: 💡
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 2
-  page: overhead_fuel
-  label: FUEL
-  label-color: Gold
+  activation:
+    type: page
+    page: overhead_fuel
+  representation:
+    type: text
+    label: FUEL
+    label-color: Gold
+    label-size: 8
+    text: ⛽
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   label-bg-color: Black
-  label-size: 8
-  text: ⛽
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 3
-  page: overhead_passenger_signs
-  label: PASSENGER SIGNS
-  label-color: Gold
+  activation:
+    type: page
+    page: overhead_passenger_signs
+  representation:
+    type: text
+    label: PASSENGER SIGNS
+    label-color: Gold
+    label-size: 8
+    text: 👥
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   label-bg-color: Black
-  label-size: 8
-  text: 👥
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 4
-  page: overhead_fire_extinguisher
-  label: FIRE EXT.
-  label-color: Gold
+  activation:
+    type: page
+    page: overhead_fire_extinguisher
+  representation:
+    type: text
+    label: FIRE EXT.
+    label-color: Gold
+    label-size: 8
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   label-bg-color: Black
-  label-size: 8
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 5
-  page: overhead_apu_control
-  label: APU CONTROL
-  label-color: Gold
+  activation:
+    type: page
+    page: overhead_apu_control
+  representation:
+    type: text
+    label: APU CONTROL
+    label-color: Gold
+    label-size: 8
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   label-bg-color: Black
-  label-size: 8
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 6
-  page: overhead_external_lights
-  label: EXT. LIGHTS
-  label-color: Gold
+  activation:
+    type: page
+    page: overhead_external_lights
+  representation:
+    type: text
+    label: EXT. LIGHTS
+    label-color: Gold
+    label-size: 8
+    text: 💡
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   label-bg-color: Black
-  label-size: 8
-  text: 💡
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 7
-  page: overhead_hydraulic
-  label: HYDRAULIC
-  label-color: Gold
+  activation:
+    type: page
+    page: overhead_hydraulic
+  representation:
+    type: text
+    label: HYDRAULIC
+    label-color: Gold
+    label-size: 8
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   label-bg-color: Black
-  label-size: 8
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 8
-  page: pedestal_powerplant
-  label: POWERPLANT
-  label-color: Gold
+  activation:
+    type: page
+    page: pedestal_powerplant
+  representation:
+    type: text
+    label: POWERPLANT
+    label-color: Gold
+    label-size: 8
+    text: ⚡
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   label-bg-color: Black
-  label-size: 8
-  text: ⚡
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 9
-  page: overhead_ice_protection
-  label: ICE PROTECTION
-  label-color: Gold
+  activation:
+    type: page
+    page: overhead_ice_protection
+  representation:
+    type: text
+    label: ICE PROTECTION
+    label-color: Gold
+    label-size: 8
+    text: ❄
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   label-bg-color: Black
-  label-size: 8
-  text: ❄
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 10
-  page: overhead_pneumatic
-  label: A/C/PNEUMATIC
-  label-color: Gold
+  activation:
+    type: page
+    page: overhead_pneumatic
+  representation:
+    type: text
+    label: A/C/PNEUMATIC
+    label-color: Gold
+    label-size: 8
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   label-bg-color: Black
-  label-size: 8
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 11
-  page: switches2
-  text: →
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches2
+  representation:
+    type: text
+    text: →
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

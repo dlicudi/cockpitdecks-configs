@@ -1,104 +1,120 @@
 buttons:
 - index: 24
-  page: index
-  label: HOME
-  label-color: Gold
+  activation:
+    type: page
+    page: index
+  representation:
+    type: text
+    label: HOME
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   label-bg-color: Black
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 25
-  page: pfd
-  label: PFD
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: red
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: pfd
+  representation:
+    type: text
+    label: PFD
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: red
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 26
-  page: mfd
-  label: MFD
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: green
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: mfd
+  representation:
+    type: text
+    label: MFD
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: green
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 27
-  page: switches
-  label: SWITCHES
-  label-color: Gold
-  label-size: 10
-  text: '2'
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches
+  representation:
+    type: text
+    label: SWITCHES
+    label-color: Gold
+    label-size: 10
+    text: '2'
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 28
-  page: fcu
-  label: FCU
-  label-color: Gold
-  label-size: 10
-  text: '3'
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: fcu
+  representation:
+    type: text
+    label: FCU
+    label-color: Gold
+    label-size: 10
+    text: '3'
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 29
-  page: radio
-  label: RADIO
-  label-color: Gold
-  label-size: 10
-  text: '4'
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: radio
+  representation:
+    type: text
+    label: RADIO
+    label-color: Gold
+    label-size: 10
+    text: '4'
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 30
-  page: weather
-  label: WEATHER
-  label-color: Gold
-  text: 🌦
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: weather
+  representation:
+    type: text
+    label: WEATHER
+    label-color: Gold
+    text: 🌦
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 31
-  page: transponder
-  label: XPDR
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: transponder
+  representation:
+    type: text
+    label: XPDR
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

@@ -5,87 +5,99 @@ includes:
 buttons:
 - index: 0
   name: THROTTLE
-  label: THROTTLE
-  label-size: 9
-  label-color: black
-  annunciator:
-    size: medium
-    model: A
-    parts:
-    - color: lime
-      text-size: 100
-      formula: ${sim/flightmodel/engine/ENGN_thro[0]} 100 *
-      text: ${formula}%
-      text-font: Segment7Standard.otf
-      text-format: '{0:.0f}'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: THROTTLE
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: lime
+        text-size: 100
+        formula: ${sim/flightmodel/engine/ENGN_thro[0]} 100 *
+        text: ${formula}%
+        text-font: Segment7Standard.otf
+        text-format: '{0:.0f}'
 - index: 4
   name: CONDITION
-  label: COND
-  label-size: 9
-  label-color: black
-  annunciator:
-    size: medium
-    model: A
-    parts:
-    - color: lime
-      text-size: 100
-      formula: ${sim/cockpit2/engine/actuators/condition_lever_ratio[0]} 100 *
-      text: ${formula}%
-      text-font: Segment7Standard.otf
-      text-format: '{0:.0f}'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: COND
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: lime
+        text-size: 100
+        formula: ${sim/cockpit2/engine/actuators/condition_lever_ratio[0]} 100 *
+        text: ${formula}%
+        text-font: Segment7Standard.otf
+        text-format: '{0:.0f}'
 - index: 2
+  activation:
+    type: push
+    commands:
+      press: sim/flight_controls/brakes_toggle_max
+  representation:
+    type: multi-texts
+    label: TOGGLE BRAKES
+    label-size: 8
+    label-color: White
+    text-bg-color: Black
+    multi-texts:
+    - text: 'OFF'
+      text-color: Lime
+    - text: 'ON'
+      text-color: Red
+    formula: ${sim/cockpit2/controls/parking_brake_ratio}
   vibrate: SHORT
-  label: TOGGLE BRAKES
-  label-size: 8
-  label-color: White
-  text-bg-color: Black
-  multi-texts:
-  - text: 'OFF'
-    text-color: Lime
-  - text: 'ON'
-    text-color: Red
-  formula: ${sim/cockpit2/controls/parking_brake_ratio}
-  activation: push
-  representation: multi-texts
-  commands:
-    press: sim/flight_controls/brakes_toggle_max
 - index: 3
+  activation:
+    type: push
+    commands:
+      press: sim/flight_controls/flaps_up
+  representation:
+    type: text
+    text: UP
+    text-color: Lime
+    text-bg-color: Black
   vibrate: SHORT
-  text: UP
-  text-color: Lime
-  text-bg-color: Black
-  activation: push
-  representation: text
-  commands:
-    press: sim/flight_controls/flaps_up
 - index: 11
-  text: DOWN
-  text-color: Lime
-  text-bg-color: Black
-  activation: push
-  representation: text
-  commands:
-    press: sim/flight_controls/flaps_down
+  activation:
+    type: push
+    commands:
+      press: sim/flight_controls/flaps_down
+  representation:
+    type: text
+    text: DOWN
+    text-color: Lime
+    text-bg-color: Black
 - index: 7
-  label: FLAPS RATIO
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: DISAGREE
-      color: darkorange
-      formula: ${sim/cockpit2/controls/flap_disagree} 1 eq
-    B1:
-      color: deepskyblue
-      framed: true
-      text: ${sim/cockpit2/controls/flap_ratio}
-      text-format: '{0:.2f}'
-      formula: '1'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: FLAPS RATIO
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: DISAGREE
+        color: darkorange
+        formula: ${sim/cockpit2/controls/flap_disagree} 1 eq
+      B1:
+        color: deepskyblue
+        framed: true
+        text: ${sim/cockpit2/controls/flap_ratio}
+        text-format: '{0:.2f}'
+        formula: '1'

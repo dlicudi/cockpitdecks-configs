@@ -1,31 +1,35 @@
 buttons:
 - index: 0
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: WARN
-      text-color: black
-      text-font: DIN Condensed Black.otf
-      text-size: 90
-      formula: ${sim/cockpit/warnings/annunciators/master_warning}
-      invert-color: firebrick
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/annunciator/clear_master_warning
+  activation:
+    type: push
+    commands:
+      press: sim/annunciator/clear_master_warning
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: WARN
+        text-color: black
+        text-font: DIN Condensed Black.otf
+        text-size: 90
+        formula: ${sim/cockpit/warnings/annunciators/master_warning}
+        invert-color: firebrick
 - index: 1
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: CAUT
-      text-color: Black
-      text-font: DIN Condensed Black.otf
-      text-size: 90
-      formula: ${sim/cockpit/warnings/annunciators/master_caution}
-      invert-color: darkorange
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/annunciator/clear_master_caution
+  activation:
+    type: push
+    commands:
+      press: sim/annunciator/clear_master_caution
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: CAUT
+        text-color: Black
+        text-font: DIN Condensed Black.otf
+        text-size: 90
+        formula: ${sim/cockpit/warnings/annunciators/master_caution}
+        invert-color: darkorange

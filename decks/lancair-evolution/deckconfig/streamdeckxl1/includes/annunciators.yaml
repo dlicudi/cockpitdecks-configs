@@ -1,121 +1,137 @@
 buttons:
 - index: 0
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: 'ENGINE
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: 'ENGINE
 
-        CAUTION'
-      text-color: black
-      text-font: D-DINCondensed.otf
-      text-size: 65
-      formula: ${sim/cockpit2/annunciators/oil_pressure_low[0]}
-      invert-color: darkorange
-  activation: none
-  representation: annunciator
+          CAUTION'
+        text-color: black
+        text-font: D-DINCondensed.otf
+        text-size: 65
+        formula: ${sim/cockpit2/annunciators/oil_pressure_low[0]}
+        invert-color: darkorange
 - index: 1
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: ALT
-      text-color: Black
-      text-font: D-DINCondensed.otf
-      text-size: 76
-      formula: ${sim/cockpit2/annunciators/generator_off[0]}
-      invert-color: firebrick
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: ALT
+        text-color: Black
+        text-font: D-DINCondensed.otf
+        text-size: 76
+        formula: ${sim/cockpit2/annunciators/generator_off[0]}
+        invert-color: firebrick
 - index: 2
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: 'FUEL
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: 'FUEL
 
-        LEVEL
+          LEVEL
 
-        LOW'
-      text-color: Black
-      text-font: D-DINCondensed.otf
-      text-size: 65
-      formula: ${sim/cockpit/warnings/annunciators/fuel_quantity}
-      invert-color: firebrick
-  activation: none
-  representation: annunciator
+          LOW'
+        text-color: Black
+        text-font: D-DINCondensed.otf
+        text-size: 65
+        formula: ${sim/cockpit/warnings/annunciators/fuel_quantity}
+        invert-color: firebrick
 - index: 3
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: 'PARK
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: 'PARK
 
-        BRK'
-      text-color: Black
-      text-font: D-DINCondensed.otf
-      text-size: 65
-      formula: ${sim/cockpit2/controls/park_brake_valve}
-      invert-color: firebrick
-  activation: none
-  representation: annunciator
+          BRK'
+        text-color: Black
+        text-font: D-DINCondensed.otf
+        text-size: 65
+        formula: ${sim/cockpit2/controls/park_brake_valve}
+        invert-color: firebrick
 - index: 4
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: 'FUEL
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: 'FUEL
 
-        PUMP'
-      text-color: Black
-      text-font: D-DINCondensed.otf
-      text-size: 65
-      formula: ${sim/cockpit/engine/fuel_pump_on[0]}
-      invert-color: firebrick
-  activation: none
-  representation: annunciator
+          PUMP'
+        text-color: Black
+        text-font: D-DINCondensed.otf
+        text-size: 65
+        formula: ${sim/cockpit/engine/fuel_pump_on[0]}
+        invert-color: firebrick
 - index: 5
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: 'FLAPS
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: 'FLAPS
 
-        DOWN'
-      text-color: Black
-      text-font: D-DINCondensed.otf
-      text-size: 65
-      formula: ${sim/cockpit2/controls/flap_ratio}
-      invert-color: darkorange
-  activation: none
-  representation: annunciator
+          DOWN'
+        text-color: Black
+        text-font: D-DINCondensed.otf
+        text-size: 65
+        formula: ${sim/cockpit2/controls/flap_ratio}
+        invert-color: darkorange
 - index: 6
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: 'PITOT
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: 'PITOT
 
-        HEATING'
-      text-color: Black
-      text-font: D-DINCondensed.otf
-      text-size: 65
-      formula: ${sim/cockpit/switches/pitot_heat_on}
-      invert-color: lime
-  activation: none
-  representation: annunciator
+          HEATING'
+        text-color: Black
+        text-font: D-DINCondensed.otf
+        text-size: 65
+        formula: ${sim/cockpit/switches/pitot_heat_on}
+        invert-color: lime
 - index: 7
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: 'OIL
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: 'OIL
 
-        TEMP'
-      text-color: Black
-      text-font: D-DINCondensed.otf
-      text-size: 65
-      formula: ${sim/cockpit2/annunciators/oil_temperature_high[0]}
-      invert-color: firebrick
-  activation: none
-  representation: annunciator
+          TEMP'
+        text-color: Black
+        text-font: D-DINCondensed.otf
+        text-size: 65
+        formula: ${sim/cockpit2/annunciators/oil_temperature_high[0]}
+        invert-color: firebrick

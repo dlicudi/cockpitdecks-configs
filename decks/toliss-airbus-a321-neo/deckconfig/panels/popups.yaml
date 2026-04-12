@@ -5,100 +5,124 @@ last-updated: 03-APR-2024
 buttons:
 - index: 16
   name: Popup ISI
-  label: ISI
-  dataref: AirbusFBW/PopUpStateArray[8]
-  icon: ISI
-  frame:
-    frame: FRAME.png
-    frame-size:
-    - 400
-    - 400
-    content-size:
-    - 222
-    - 222
-    content-offset:
-    - 90
-    - 125
-  activation: push
-  representation: icon
-  commands:
-    press: AirbusFBW/PopUpISI
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[8]
+    commands:
+      press: AirbusFBW/PopUpISI
+  representation:
+    type: icon
+    label: ISI
+    icon: ISI
+    frame:
+      frame: FRAME.png
+      frame-size:
+      - 400
+      - 400
+      content-size:
+      - 222
+      - 222
+      content-offset:
+      - 90
+      - 125
 - index: 17
   name: Popup FD1
-  dataref: AirbusFBW/PopUpStateArray[2]
-  icon: FD
-  activation: push
-  representation: icon
-  commands:
-    press: AirbusFBW/PopUpPFD1
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[2]
+    commands:
+      press: AirbusFBW/PopUpPFD1
+  representation:
+    type: icon
+    icon: FD
 - index: 18
   name: Popup ND1
-  dataref: AirbusFBW/PopUpStateArray[4]
-  icon: ND
-  activation: push
-  representation: icon
-  commands:
-    press: AirbusFBW/PopUpND1
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[4]
+    commands:
+      press: AirbusFBW/PopUpND1
+  representation:
+    type: icon
+    icon: ND
 - index: 19
   name: Popup EWD
-  dataref: AirbusFBW/PopUpStateArray[6]
-  icon: ECAM
-  activation: push
-  representation: icon
-  commands:
-    press: AirbusFBW/PopUpEWD
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[6]
+    commands:
+      press: AirbusFBW/PopUpEWD
+  representation:
+    type: icon
+    icon: ECAM
 - index: 20
   name: Popup SD
-  dataref: AirbusFBW/PopUpStateArray[7]
-  icon: ECAM_DOOR
-  activation: push
-  representation: icon
-  commands:
-    press: AirbusFBW/PopUpSD
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[7]
+    commands:
+      press: AirbusFBW/PopUpSD
+  representation:
+    type: icon
+    icon: ECAM_DOOR
 - index: 22
   name: Popup MCDU
-  dataref: AirbusFBW/PopUpStateArray[0]
-  icon: MCDU
-  activation: push
-  representation: icon
-  commands:
-    press: AirbusFBW/UndockMCDU1
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[0]
+    commands:
+      press: AirbusFBW/UndockMCDU1
+  representation:
+    type: icon
+    icon: MCDU
 - index: 23
   name: Popup MCDU COPILOT
-  dataref: AirbusFBW/PopUpStateArray[1]
-  icon: MCDU
-  activation: push
-  representation: icon
-  commands:
-    press: AirbusFBW/UndockMCDU2
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[1]
+    commands:
+      press: AirbusFBW/UndockMCDU2
+  representation:
+    type: icon
+    icon: MCDU
 - index: 24
   name: efis
-  page: efis
-  icon: EFIS
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: efis
+  representation:
+    type: icon
+    icon: EFIS
 - index: 25
   name: FCU
-  page: fcu
-  icon: FCU
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: fcu
+  representation:
+    type: icon
+    icon: FCU
 - index: 26
   name: Popup Pedestal1
-  page: piedestal
-  icon: PIEDESTAL_FRONT
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: piedestal
+  representation:
+    type: icon
+    icon: PIEDESTAL_FRONT
 - index: 27
   name: Popup Pedestal2
-  icon: PIEDESTAL_BACK
-  activation: push
-  representation: icon
-  commands:
-    press: AirbusFBW/PopUpPedestal2
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/PopUpPedestal2
+  representation:
+    type: icon
+    icon: PIEDESTAL_BACK
 - index: 28
   name: ECAM
-  page: ecam
-  icon: ECAM_SELECTOR.png
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: ecam
+  representation:
+    type: icon
+    icon: ECAM_SELECTOR.png

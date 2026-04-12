@@ -5,132 +5,149 @@ includes:
 buttons:
 - index: 0
   name: COM2_STDBY
-  label: STDBY
-  label-color: white
+  activation:
+    type: push
+    commands:
+      press: sim/radios/com2_standy_flip
+  representation:
+    type: annunciator
+    label: STDBY
+    label-color: white
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: cyan
+        text-size: 30
+        text-font: D-DINCondensed.otf
+        formula: ${sim/cockpit2/radios/actuators/com2_standby_frequency_hz_833} 1000 /
+        text: ${formula}
+        text-format: '{0:.3f}'
   vibrate: SHORT
   render-cooldown-ms: 50
-  annunciator:
-    size: medium
-    model: A
-    parts:
-    - color: cyan
-      text-size: 30
-      text-font: D-DINCondensed.otf
-      formula: ${sim/cockpit2/radios/actuators/com2_standby_frequency_hz_833} 1000
-        /
-      text: ${formula}
-      text-format: '{0:.3f}'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/radios/com2_standy_flip
 - index: 3
   name: COM2_AUDIO
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/select_audio_com2
+  representation:
+    type: annunciator
+    label: AUDIO
+    label-color: white
+    annunciator:
+      model: A
+      size: medium
+      parts:
+      - led: dot
+        color: deepskyblue
+        formula: ${laminar/sr22/annunciators/audio/com2}
   vibrate: SHORT
-  label: AUDIO
-  label-color: white
-  annunciator:
-    model: A
-    size: medium
-    parts:
-    - led: dot
-      color: deepskyblue
-      formula: ${laminar/sr22/annunciators/audio/com2}
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/select_audio_com2
 - index: 7
   name: COM2_MIC
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/transmit_audio_com2
+  representation:
+    type: annunciator
+    label: MIC2
+    label-color: white
+    annunciator:
+      model: A
+      size: medium
+      parts:
+      - led: dot
+        color: deepskyblue
+        formula: ${laminar/sr22/annunciators/audio/mic2}
   vibrate: SHORT
-  label: MIC2
-  label-color: white
-  annunciator:
-    model: A
-    size: medium
-    parts:
-    - led: dot
-      color: deepskyblue
-      formula: ${laminar/sr22/annunciators/audio/mic2}
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/transmit_audio_com2
 - index: 1
   name: COM2_FLIPFLOP
-  label: FLIP FLOP
-  label-color: white
+  activation:
+    type: push
+    commands:
+      press: sim/radios/com2_standy_flip
+  representation:
+    type: annunciator
+    label: FLIP FLOP
+    label-color: white
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: white
+        text-size: 91
+        text-font: DejaVuSans.ttf
+        formula: 1
+        text: ↔
+        frame: false
   vibrate: SHORT
-  annunciator:
-    size: medium
-    model: A
-    parts:
-    - color: white
-      text-size: 91
-      text-font: DejaVuSans.ttf
-      formula: 1
-      text: ↔
-      frame: false
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/radios/com2_standy_flip
 - index: 2
   name: COM2_ACTIVE
-  label: COM2
-  label-color: white
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: COM2
+    label-color: white
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: lime
+        text-size: 30
+        text-font: D-DINCondensed.otf
+        formula: ${sim/cockpit2/radios/actuators/com2_frequency_hz_833} 1000 /
+        text: ${formula}
+        text-format: '{0:.3f}'
   render-cooldown-ms: 50
-  annunciator:
-    size: medium
-    model: A
-    parts:
-    - color: lime
-      text-size: 30
-      text-font: D-DINCondensed.otf
-      formula: ${sim/cockpit2/radios/actuators/com2_frequency_hz_833} 1000 /
-      text: ${formula}
-      text-format: '{0:.3f}'
-  activation: none
-  representation: annunciator
 - index: 8
-  page: radio_com1
+  activation:
+    type: page
+    page: radio_com1
+  representation:
+    type: text
+    text: COM1
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
   vibrate: SHORT
-  text: COM1
-  text-color: khaki
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 20)
-  activation: page
-  representation: text
 - index: 9
-  text: COM2
-  text-color: Gold
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (40, 35, 0)
-  activation: none
-  representation: text
+  activation:
+    type: none
+  representation:
+    type: text
+    text: COM2
+    text-color: Gold
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (40, 35, 0)
 - index: 10
-  page: radio_nav1
+  activation:
+    type: page
+    page: radio_nav1
+  representation:
+    type: text
+    text: NAV1
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
   vibrate: SHORT
-  text: NAV1
-  text-color: khaki
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 20)
-  activation: page
-  representation: text
 - index: 11
-  page: radio_nav2
+  activation:
+    type: page
+    page: radio_nav2
+  representation:
+    type: text
+    text: NAV2
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
   vibrate: SHORT
-  text: NAV2
-  text-color: khaki
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 20)
-  activation: page
-  representation: text

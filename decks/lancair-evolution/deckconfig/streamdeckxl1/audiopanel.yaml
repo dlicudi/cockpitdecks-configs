@@ -3,146 +3,164 @@ includes:
 - includes/pagerfull
 buttons:
 - index: 0
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${sim/cockpit/switches/audio_panel_out} 6 eq
-    - text: COM MIC 1
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/transmit_audio_com1
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/transmit_audio_com1
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${sim/cockpit/switches/audio_panel_out} 6 eq
+      - text: COM MIC 1
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 1
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${sim/cockpit2/radios/actuators/audio_selection_com1}
-    - text: COM 1
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/monitor_audio_com1
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/monitor_audio_com1
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${sim/cockpit2/radios/actuators/audio_selection_com1}
+      - text: COM 1
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 16
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${sim/cockpit2/radios/actuators/audio_marker_enabled}
-    - text: MKR MUTE
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/monitor_audio_mkr
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/monitor_audio_mkr
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${sim/cockpit2/radios/actuators/audio_marker_enabled}
+      - text: MKR MUTE
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 4
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${sim/cockpit2/radios/actuators/audio_selection_nav1}
-    - text: NAV 1
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/select_audio_nav1
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/select_audio_nav1
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${sim/cockpit2/radios/actuators/audio_selection_nav1}
+      - text: NAV 1
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 8
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${sim/cockpit/switches/audio_panel_out} 7 eq
-    - text: COM MIC 2
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/transmit_audio_com2
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/transmit_audio_com2
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${sim/cockpit/switches/audio_panel_out} 7 eq
+      - text: COM MIC 2
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 9
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${sim/cockpit2/radios/actuators/audio_selection_com2}
-    - text: COM 2
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/monitor_audio_com2
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/monitor_audio_com2
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${sim/cockpit2/radios/actuators/audio_selection_com2}
+      - text: COM 2
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 11
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${sim/cockpit2/radios/actuators/audio_selection_adf1}
-    - text: ADF 1
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/select_audio_adf1
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/select_audio_adf1
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${sim/cockpit2/radios/actuators/audio_selection_adf1}
+      - text: ADF 1
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 12
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${sim/cockpit2/radios/actuators/audio_selection_nav2}
-    - text: NAV 2
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/select_audio_nav2
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/select_audio_nav2
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${sim/cockpit2/radios/actuators/audio_selection_nav2}
+      - text: NAV 2
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 3
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${sim/cockpit2/radios/actuators/audio_dme_enabled}
-    - text: DME
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/monitor_audio_dme
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/monitor_audio_dme
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${sim/cockpit2/radios/actuators/audio_dme_enabled}
+      - text: DME
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'

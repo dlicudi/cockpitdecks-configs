@@ -1,123 +1,147 @@
 buttons:
 - index: e0
   name: throttle_encoder
-  activation: encoder-push
-  commands:
-    press: sim/engines/throttle_max
-    cw: sim/engines/throttle_up
-    ccw: sim/engines/throttle_down
+  activation:
+    type: encoder-push
+    commands:
+      press: sim/engines/throttle_max
+      cw: sim/engines/throttle_up
+      ccw: sim/engines/throttle_down
+  representation:
+    type: none
 - index: e1
   name: mixture_encoder
-  activation: encoder-push
-  commands:
-    press: sim/engines/mixture_max
-    cw: sim/engines/mixture_up
-    ccw: sim/engines/mixture_down
+  activation:
+    type: encoder-push
+    commands:
+      press: sim/engines/mixture_max
+      cw: sim/engines/mixture_up
+      ccw: sim/engines/mixture_down
+  representation:
+    type: none
 - index: e2
   name: prop_encoder
-  activation: encoder-push
-  commands:
-    press: sim/engines/prop_up
-    cw: sim/engines/prop_up
-    ccw: sim/engines/prop_down
+  activation:
+    type: encoder-push
+    commands:
+      press: sim/engines/prop_up
+      cw: sim/engines/prop_up
+      ccw: sim/engines/prop_down
+  representation:
+    type: none
 - index: e3
-  dataref: sim/cockpit2/switches/instrument_brightness_ratio[1]
-  step: 0.1
-  value-min: 0
-  value-max: 1
-  initial-value: 0.75
-  set-dataref: sim/cockpit2/switches/instrument_brightness_ratio[1]
-  activation: encoder-value-extended
-  step-xl: 0.1
+  activation:
+    type: encoder-value-extended
+    dataref: sim/cockpit2/switches/instrument_brightness_ratio[1]
+    step: 0.1
+    value-min: 0
+    value-max: 1
+    initial-value: 0.75
+    set-dataref: sim/cockpit2/switches/instrument_brightness_ratio[1]
+    step-xl: 0.1
+  representation:
+    type: none
 - index: e4
-  dataref: sim/cockpit2/switches/panel_brightness_ratio[0]
-  step: 0.1
-  value-min: 0
-  value-max: 1
-  initial-value: 0.75
-  set-dataref: sim/cockpit2/switches/panel_brightness_ratio[0]
-  activation: encoder-value-extended
-  step-xl: 0.1
+  activation:
+    type: encoder-value-extended
+    dataref: sim/cockpit2/switches/panel_brightness_ratio[0]
+    step: 0.1
+    value-min: 0
+    value-max: 1
+    initial-value: 0.75
+    set-dataref: sim/cockpit2/switches/panel_brightness_ratio[0]
+    step-xl: 0.1
+  representation:
+    type: none
 - index: e5
-  dataref: sim/cockpit2/switches/generic_lights_switch[0]
-  step: 0.1
-  value-min: 0
-  value-max: 1
-  initial-value: 0.75
-  set-dataref: sim/cockpit2/switches/generic_lights_switch[0]
-  activation: encoder-value-extended
-  step-xl: 0.1
+  activation:
+    type: encoder-value-extended
+    dataref: sim/cockpit2/switches/generic_lights_switch[0]
+    step: 0.1
+    value-min: 0
+    value-max: 1
+    initial-value: 0.75
+    set-dataref: sim/cockpit2/switches/generic_lights_switch[0]
+    step-xl: 0.1
+  representation:
+    type: none
 - index: left
   name: left_screen
+  activation:
+    type: none
+  representation:
+    type: side-display
+    side:
+      icon-color: Black
+      labels:
+      - label: THR
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        formula: ${sim/cockpit2/engine/actuators/throttle_ratio_all} 100 *
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: '{0:01.0f}'
+        text: ${formula}%
+      - label: MIX
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        formula: ${sim/cockpit2/engine/actuators/mixture_ratio_all} 100 *
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: '{0:01.0f}'
+        text: ${formula}%
+      - label: PROP
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        formula: ${sim/cockpit2/engine/actuators/prop_ratio_all} 100 *
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: '{0:01.0f}'
+        text: ${formula}%
   render-cooldown-ms: 333
-  side:
-    icon-color: Black
-    labels:
-    - label: THR
-      label-size: 14
-      label-font: B612-Bold
-      label-color: Gold
-      formula: ${sim/cockpit2/engine/actuators/throttle_ratio_all} 100 *
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text-format: '{0:01.0f}'
-      text: ${formula}%
-    - label: MIX
-      label-size: 14
-      label-font: B612-Bold
-      label-color: Gold
-      formula: ${sim/cockpit2/engine/actuators/mixture_ratio_all} 100 *
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text-format: '{0:01.0f}'
-      text: ${formula}%
-    - label: PROP
-      label-size: 14
-      label-font: B612-Bold
-      label-color: Gold
-      formula: ${sim/cockpit2/engine/actuators/prop_ratio_all} 100 *
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text-format: '{0:01.0f}'
-      text: ${formula}%
-  activation: none
 - index: right
   name: right_screen
+  activation:
+    type: none
+  representation:
+    type: side-display
+    side:
+      icon-color: Black
+      labels:
+      - label: Instr.
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: ${data:sim/cockpit2/switches/instrument_brightness_ratio[1]} 100 *
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: '{0:.0f}'
+        text: ${formula}%
+      - label: Panel
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: ${data:sim/cockpit2/switches/panel_brightness_ratio[0]} 100 *
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: '{0:.0f}'
+        text: ${formula}%
+      - label: Ceiling
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: ${data:sim/cockpit2/switches/generic_lights_switch[0]} 100 *
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: '{0:.0f}'
+        text: ${formula}%
   render-cooldown-ms: 333
-  side:
-    icon-color: Black
-    labels:
-    - label: Instr.
-      label-size: 12
-      label-font: B612-Bold
-      label-color: Gold
-      formula: ${data:sim/cockpit2/switches/instrument_brightness_ratio[1]} 100 *
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text-format: '{0:.0f}'
-      text: ${formula}%
-    - label: Panel
-      label-size: 12
-      label-font: B612-Bold
-      label-color: Gold
-      formula: ${data:sim/cockpit2/switches/panel_brightness_ratio[0]} 100 *
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text-format: '{0:.0f}'
-      text: ${formula}%
-    - label: Ceiling
-      label-size: 12
-      label-font: B612-Bold
-      label-color: Gold
-      formula: ${data:sim/cockpit2/switches/generic_lights_switch[0]} 100 *
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text-format: '{0:.0f}'
-      text: ${formula}%
-  activation: none

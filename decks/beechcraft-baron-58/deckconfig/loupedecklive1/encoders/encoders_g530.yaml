@@ -1,103 +1,127 @@
 buttons:
 - index: e0
   name: range_encoder
-  activation: encoder
-  commands:
-    cw: sim/GPS/g430n1_zoom_out
-    ccw: sim/GPS/g430n1_zoom_in
+  activation:
+    type: encoder
+    commands:
+      cw: sim/GPS/g430n1_zoom_out
+      ccw: sim/GPS/g430n1_zoom_in
+  representation:
+    type: none
 - index: e1
   name: comvloc_outer
-  activation: encoder-push
-  commands:
-    press: sim/GPS/g430n1_nav_com_tog
-    cw: sim/GPS/g430n1_coarse_up
-    ccw: sim/GPS/g430n1_coarse_down
+  activation:
+    type: encoder-push
+    commands:
+      press: sim/GPS/g430n1_nav_com_tog
+      cw: sim/GPS/g430n1_coarse_up
+      ccw: sim/GPS/g430n1_coarse_down
+  representation:
+    type: none
 - index: e2
   name: comvloc_inner
-  activation: encoder-push
-  commands:
-    press: sim/GPS/g430n1_nav_com_tog
-    cw: sim/GPS/g430n1_fine_up
-    ccw: sim/GPS/g430n1_fine_down
+  activation:
+    type: encoder-push
+    commands:
+      press: sim/GPS/g430n1_nav_com_tog
+      cw: sim/GPS/g430n1_fine_up
+      ccw: sim/GPS/g430n1_fine_down
+  representation:
+    type: none
 - index: e3
   name: volume_encoder
-  commands:
-    ccw: sim/GPS/g430n1_cvol_dn
-    cw: sim/GPS/g430n1_cvol_up
-    ccw-off: sim/GPS/g430n1_vvol_dn
-    cw-off: sim/GPS/g430n1_vvol_up
-  activation: encoder-mode
+  activation:
+    type: encoder-mode
+    commands:
+      ccw: sim/GPS/g430n1_cvol_dn
+      cw: sim/GPS/g430n1_cvol_up
+      ccw-off: sim/GPS/g430n1_vvol_dn
+      cw-off: sim/GPS/g430n1_vvol_up
+  representation:
+    type: none
 - index: e4
   name: fms_encoder_outer
-  activation: encoder-push
-  commands:
-    press: sim/GPS/g430n1_cursor
-    cw: sim/GPS/g430n1_chapter_up
-    ccw: sim/GPS/g430n1_chapter_dn
+  activation:
+    type: encoder-push
+    commands:
+      press: sim/GPS/g430n1_cursor
+      cw: sim/GPS/g430n1_chapter_up
+      ccw: sim/GPS/g430n1_chapter_dn
+  representation:
+    type: none
 - index: e5
   name: fms_encoder_inner
-  activation: encoder-push
-  commands:
-    press: sim/GPS/g430n1_cursor
-    cw: sim/GPS/g430n1_page_up
-    ccw: sim/GPS/g430n1_page_dn
+  activation:
+    type: encoder-push
+    commands:
+      press: sim/GPS/g430n1_cursor
+      cw: sim/GPS/g430n1_page_up
+      ccw: sim/GPS/g430n1_page_dn
+  representation:
+    type: none
 - index: left
   name: left_screen
-  side:
-    icon-color: Black
-    labels:
-    - label: RNG
-      label-size: 14
-      label-font: B612-Bold
-      label-color: Gold
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text: +/-
-    - label: COM/VLOC
-      label-size: 10
-      label-font: B612-Bold
-      label-color: Gold
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text: OUTER
-    - label: COM/VLOC
-      label-size: 10
-      label-font: B612-Bold
-      label-color: Gold
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text: INNER
-  activation: none
+  activation:
+    type: none
+  representation:
+    type: side-display
+    side:
+      icon-color: Black
+      labels:
+      - label: RNG
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text: +/-
+      - label: COM/VLOC
+        label-size: 10
+        label-font: B612-Bold
+        label-color: Gold
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text: OUTER
+      - label: COM/VLOC
+        label-size: 10
+        label-font: B612-Bold
+        label-color: Gold
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text: INNER
 - index: right
   name: right_screen
-  side:
-    icon-color: Black
-    labels:
-    - label: VOLUME
-      label-size: 14
-      label-font: B612-Bold
-      label-color: Gold
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text: C/V
-    - label: GPS
-      label-size: 14
-      label-font: B612-Bold
-      label-color: Gold
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text: Outer
-    - label: GPS
-      label-size: 14
-      label-font: B612-Bold
-      label-color: Gold
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text: Inner
-  activation: none
+  activation:
+    type: none
+  representation:
+    type: side-display
+    side:
+      icon-color: Black
+      labels:
+      - label: VOLUME
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text: C/V
+      - label: GPS
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text: Outer
+      - label: GPS
+        label-size: 14
+        label-font: B612-Bold
+        label-color: Gold
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text: Inner

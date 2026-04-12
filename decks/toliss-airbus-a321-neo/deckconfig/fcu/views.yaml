@@ -5,97 +5,113 @@ last-updated: 03-APR-2024
 buttons:
 - index: b0
   name: View Circle Dot
+  activation:
+    type: push
+    commands:
+      press: SRS/X-Camera/Select_View_ID_8
+  representation:
+    type: colored-led
+    label: Pilot View
+    formula: 1
   colored-led:
   - 255
   - 0
   - 0
-  label: Pilot View
-  formula: 1
-  activation: push
-  representation: colored-led
-  commands:
-    press: SRS/X-Camera/Select_View_ID_8
 - index: b1
   name: View 1
+  activation:
+    type: push
+    commands:
+      press: SRS/X-Camera/Select_View_ID_1
+  representation:
+    type: colored-led
+    label: FD/ND
+    formula: 1
   colored-led:
   - 255
   - 128
   - 0
-  label: FD/ND
-  formula: 1
-  activation: push
-  representation: colored-led
-  commands:
-    press: SRS/X-Camera/Select_View_ID_1
 - index: b2
   name: View 2
+  activation:
+    type: push
+    commands:
+      press: SRS/X-Camera/Select_View_ID_2
+  representation:
+    type: colored-led
+    label: FCU
+    formula: 1
   colored-led:
   - 255
   - 255
   - 0
-  label: FCU
-  formula: 1
-  activation: push
-  representation: colored-led
-  commands:
-    press: SRS/X-Camera/Select_View_ID_2
 - index: b3
   name: View 3
+  activation:
+    type: push
+    commands:
+      press: SRS/X-Camera/Select_View_ID_3
+  representation:
+    type: colored-led
+    label: ECAM
+    formula: 1
   colored-led:
   - 0
   - 255
   - 0
-  label: ECAM
-  formula: 1
-  activation: push
-  representation: colored-led
-  commands:
-    press: SRS/X-Camera/Select_View_ID_3
 - index: b4
   name: View 4
+  activation:
+    type: push
+    commands:
+      press: SRS/X-Camera/Select_View_ID_4
+  representation:
+    type: colored-led
+    label: FMC
+    formula: 1
   colored-led:
   - 0
   - 255
   - 255
-  label: FMC
-  formula: 1
-  activation: push
-  representation: colored-led
-  commands:
-    press: SRS/X-Camera/Select_View_ID_4
 - index: b5
   name: View 5
+  activation:
+    type: push
+    commands:
+      press: SRS/X-Camera/Select_View_ID_5
+  representation:
+    type: colored-led
+    label: Piedestal
+    formula: 1
   colored-led:
   - 0
   - 0
   - 255
-  label: Piedestal
-  formula: 1
-  activation: push
-  representation: colored-led
-  commands:
-    press: SRS/X-Camera/Select_View_ID_5
 - index: b6
   name: View 6
+  activation:
+    type: push
+    commands:
+      press: SRS/X-Camera/Select_View_ID_6
+  representation:
+    type: colored-led
+    label: Radios
+    formula: 1
   colored-led:
   - 128
   - 0
   - 255
-  label: Radios
-  formula: 1
-  activation: push
-  representation: colored-led
-  commands:
-    press: SRS/X-Camera/Select_View_ID_6
 - index: b7
   name: View 7
-  label: Overhead Panel
+  activation:
+    type: push
+    commands:
+      press: SRS/X-Camera/Select_View_ID_7
+  representation:
+    type: colored-led
+    label: Overhead Panel
+    formula: 1
   colored-led:
   - 255
   - 0
   - 255
-  formula: 1
-  activation: push
-  representation: colored-led
-  commands:
-    press: SRS/X-Camera/Select_View_ID_7

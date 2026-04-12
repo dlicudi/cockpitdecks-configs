@@ -2,135 +2,150 @@ name: approach
 fill-empty-keys: false
 buttons:
 - index: 0
-  page: main
-  label: HOME
-  label-size: 10
-  text: HOME
-  text-size: 15
-  text-font: D-DINCondensed-Bold.otf
-  text-color: white
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: main
+  representation:
+    type: text
+    label: HOME
+    label-size: 10
+    text: HOME
+    text-size: 15
+    text-font: D-DINCondensed-Bold.otf
+    text-color: white
 - index: 1
   name: BARO
-  label: BARO
-  label-size: 10
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: gold
-      text-size: 16
-      formula: ${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}
-      text: ${formula} in
-      text-format: '{0:.2f}'
-    - color: white
-      text-size: 12
-      formula: ${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot} 33.8639
-        *
-      text: ${formula} hPa
-      text-format: '{0:.0f}'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: BARO
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: gold
+        text-size: 16
+        formula: ${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}
+        text: ${formula} in
+        text-format: '{0:.2f}'
+      - color: white
+        text-size: 12
+        formula: ${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot} 33.8639 *
+        text: ${formula} hPa
+        text-format: '{0:.0f}'
 - index: 2
   name: APR
-  label: APR
-  label-size: 10
-  annunciator:
-    annunciator-style: v
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${sim/cockpit2/autopilot/approach_status}
-    - text: APR
-      text-size: 18
-      text-font: D-DINCondensed-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/autopilot/approach
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/approach
+  representation:
+    type: annunciator
+    label: APR
+    label-size: 10
+    annunciator:
+      annunciator-style: v
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${sim/cockpit2/autopilot/approach_status}
+      - text: APR
+        text-size: 18
+        text-font: D-DINCondensed-Bold.otf
+        formula: '1'
 - index: 3
   name: NAV
-  label: NAV/GPS
-  label-size: 10
-  annunciator:
-    annunciator-style: v
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${sim/cockpit2/autopilot/gpss_status} 2 eq
-    - text: NAV
-      text-size: 18
-      text-font: D-DINCondensed-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/autopilot/gpss
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/gpss
+  representation:
+    type: annunciator
+    label: NAV/GPS
+    label-size: 10
+    annunciator:
+      annunciator-style: v
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${sim/cockpit2/autopilot/gpss_status} 2 eq
+      - text: NAV
+        text-size: 18
+        text-font: D-DINCondensed-Bold.otf
+        formula: '1'
 - index: 4
   name: ALT BUG
-  label: ALT SEL
-  label-size: 10
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      text-size: 18
-      formula: ${sim/cockpit2/autopilot/altitude_dial_ft}
-      text: ${formula}
-      text-font: Seven Segment.ttf
-      text-format: '{0:.0f}'
-    - color: white
-      text-size: 10
-      formula: ${sim/cockpit2/autopilot/altitude_hold_status}
-      text: HOLD ${formula}
-      text-format: '{0:.0f}'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ALT SEL
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        text-size: 18
+        formula: ${sim/cockpit2/autopilot/altitude_dial_ft}
+        text: ${formula}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+      - color: white
+        text-size: 10
+        formula: ${sim/cockpit2/autopilot/altitude_hold_status}
+        text: HOLD ${formula}
+        text-format: '{0:.0f}'
 - index: 5
   name: VS BUG
-  label: VS BUG
-  label-size: 10
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: yellow
-      text-size: 18
-      formula: ${sim/cockpit/autopilot/vertical_velocity} 100 /
-      text: ${formula}
-      text-font: Seven Segment.ttf
-      text-format: '{0:.0f}'
-    - color: white
-      text-size: 10
-      formula: ${sim/cockpit2/gauges/indicators/vvi_fpm_pilot}
-      text: ACT ${formula}
-      text-format: '{0:.0f}'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: VS BUG
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: yellow
+        text-size: 18
+        formula: ${sim/cockpit/autopilot/vertical_velocity} 100 /
+        text: ${formula}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+      - color: white
+        text-size: 10
+        formula: ${sim/cockpit2/gauges/indicators/vvi_fpm_pilot}
+        text: ACT ${formula}
+        text-format: '{0:.0f}'
 - index: 6
-  page: radio
-  label: COM/NAV
-  label-size: 10
-  text: RADIO
-  text-size: 14
-  text-font: D-DINCondensed-Bold.otf
-  text-color: gold
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: radio
+  representation:
+    type: text
+    label: COM/NAV
+    label-size: 10
+    text: RADIO
+    text-size: 14
+    text-font: D-DINCondensed-Bold.otf
+    text-color: gold
 - index: 7
-  page: autopilot
-  label: AP PANEL
-  label-size: 10
-  text: AP
-  text-size: 16
-  text-font: D-DINCondensed-Bold.otf
-  text-color: lime
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: autopilot
+  representation:
+    type: text
+    label: AP PANEL
+    label-size: 10
+    text: AP
+    text-size: 16
+    text-font: D-DINCondensed-Bold.otf
+    text-color: lime

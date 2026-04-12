@@ -6,182 +6,210 @@ version: 1.0.1
 last-updated: 31-OCT-2024
 buttons:
 - index: left
-  page: index
-  label: XPNDR
-  text:
-    text: ${fa:backward}
-    text-font: fontawesome.otf
-    text-size: 30
-    text-position: cm
-    text-color: coral
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: index
+  representation:
+    type: text
+    label: XPNDR
+    text:
+      text: ${fa:backward}
+      text-font: fontawesome.otf
+      text-size: 30
+      text-position: cm
+      text-color: coral
 - index: right
-  label: PAUSE
-  label-size: 12
-  label-color: red
-  text:
-    text: ${fa:pause}
-    text-font: fontawesome.otf
-    text-size: 30
-    text-position: cm
-    text-color: red
-  activation: push
-  representation: text
-  commands:
-    press: sim/operation/pause_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/operation/pause_toggle
+  representation:
+    type: text
+    label: PAUSE
+    label-size: 12
+    label-color: red
+    text:
+      text: ${fa:pause}
+      text-font: fontawesome.otf
+      text-size: 30
+      text-position: cm
+      text-color: red
 - index: 0
   name: POWER
-  label: EXT.POWER
-  annunciator:
-    model: B
-    B0:
-      text: AVAIL
-      color: lime
-      formula: ${AirbusFBW/EnableExternalPower} not
-    B1:
-      text: true
-      framed: true
-      color: deepskyblue
-      dataref: AirbusFBW/EnableExternalPower
-  set-dataref: AirbusFBW/EnableExternalPower
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/EnableExternalPower
+  representation:
+    type: annunciator
+    label: EXT.POWER
+    annunciator:
+      model: B
+      B0:
+        text: AVAIL
+        color: lime
+        formula: ${AirbusFBW/EnableExternalPower} not
+      B1:
+        text: true
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/EnableExternalPower
 - index: 1
   name: HP
-  label: HP AIR
-  annunciator:
-    model: B
-    B0:
-      text: AVAIL
-      color: lime
-      formula: ${AirbusFBW/GroundHPAir} not
-    B1:
-      text: true
-      framed: true
-      color: deepskyblue
-      dataref: AirbusFBW/GroundHPAir
-  set-dataref: AirbusFBW/GroundHPAir
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/GroundHPAir
+  representation:
+    type: annunciator
+    label: HP AIR
+    annunciator:
+      model: B
+      B0:
+        text: AVAIL
+        color: lime
+        formula: ${AirbusFBW/GroundHPAir} not
+      B1:
+        text: true
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/GroundHPAir
 - index: 2
   name: LP
-  label: LP AIR
-  annunciator:
-    model: B
-    B0:
-      text: AVAIL
-      color: lime
-      formula: ${AirbusFBW/GroundLPAir} not
-    B1:
-      text: true
-      framed: true
-      color: deepskyblue
-      dataref: AirbusFBW/GroundLPAir
-  set-dataref: AirbusFBW/GroundLPAir
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/GroundLPAir
+  representation:
+    type: annunciator
+    label: LP AIR
+    annunciator:
+      model: B
+      B0:
+        text: AVAIL
+        color: lime
+        formula: ${AirbusFBW/GroundLPAir} not
+      B1:
+        text: true
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/GroundLPAir
 - index: 3
   name: CHOCKS
-  label: CHOCKS
-  label-color: yellow
-  annunciator:
-    model: B
-    B0:
-      text: AVAIL
-      color: lime
-      formula: ${AirbusFBW/Chocks} not
-    B1:
-      text: true
-      framed: true
-      color: yellow
-      dataref: AirbusFBW/Chocks
-  set-dataref: AirbusFBW/Chocks
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/Chocks
+  representation:
+    type: annunciator
+    label: CHOCKS
+    label-color: yellow
+    annunciator:
+      model: B
+      B0:
+        text: AVAIL
+        color: lime
+        formula: ${AirbusFBW/Chocks} not
+      B1:
+        text: true
+        framed: true
+        color: yellow
+        dataref: AirbusFBW/Chocks
 - index: 7
   name: ISCS
-  multi-icons:
-  - ISCS_DARK
-  - ISCS_DARK
-  initial-value: 0
-  activation: push
-  representation: multi-icons
-  commands:
-    press: toliss_airbus/iscs_open
+  activation:
+    type: push
+    initial-value: 0
+    commands:
+      press: toliss_airbus/iscs_open
+  representation:
+    type: multi-icons
+    multi-icons:
+    - ISCS_DARK
+    - ISCS_DARK
 - index: 4
   name: Popup FD1
-  dataref: AirbusFBW/PopUpStateArray[2]
-  icon: FD
-  activation: push
-  representation: icon
-  commands:
-    press: AirbusFBW/PopUpPFD1
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[2]
+    commands:
+      press: AirbusFBW/PopUpPFD1
+  representation:
+    type: icon
+    icon: FD
 - index: 5
   name: Popup ND1
-  dataref: AirbusFBW/PopUpStateArray[4]
-  icon: ND
-  activation: push
-  representation: icon
-  commands:
-    press: AirbusFBW/PopUpND1
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[4]
+    commands:
+      press: AirbusFBW/PopUpND1
+  representation:
+    type: icon
+    icon: ND
 - index: 6
   name: Popup ISI
-  label: ISI
-  dataref: AirbusFBW/PopUpStateArray[8]
-  icon: ISI
-  frame:
-    frame: FRAME.png
-    frame-size:
-    - 400
-    - 400
-    content-size:
-    - 222
-    - 222
-    content-offset:
-    - 90
-    - 125
-  activation: push
-  representation: icon
-  commands:
-    press: AirbusFBW/PopUpISI
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[8]
+    commands:
+      press: AirbusFBW/PopUpISI
+  representation:
+    type: icon
+    label: ISI
+    icon: ISI
+    frame:
+      frame: FRAME.png
+      frame-size:
+      - 400
+      - 400
+      content-size:
+      - 222
+      - 222
+      content-offset:
+      - 90
+      - 125
 - index: 8
   name: Popup EWD
-  dataref: AirbusFBW/PopUpStateArray[6]
-  icon: ECAM
-  activation: push
-  representation: icon
-  commands:
-    press: AirbusFBW/PopUpEWD
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[6]
+    commands:
+      press: AirbusFBW/PopUpEWD
+  representation:
+    type: icon
+    icon: ECAM
 - index: 9
   name: Popup SD
-  dataref: AirbusFBW/PopUpStateArray[7]
-  icon: ECAM_DOOR
-  activation: push
-  representation: icon
-  commands:
-    press: AirbusFBW/PopUpSD
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[7]
+    commands:
+      press: AirbusFBW/PopUpSD
+  representation:
+    type: icon
+    icon: ECAM_DOOR
 - index: 10
   name: Popup MCDU
-  label: CAPT
-  label-color: lime
-  label-position: cm
-  dataref: AirbusFBW/PopUpStateArray[0]
-  icon: MCDU
-  activation: push
-  representation: icon
-  commands:
-    press: AirbusFBW/UndockMCDU1
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[0]
+    commands:
+      press: AirbusFBW/UndockMCDU1
+  representation:
+    type: icon
+    label: CAPT
+    label-color: lime
+    label-position: cm
+    icon: MCDU
 - index: 11
   name: Popup MCDU COPILOT
-  label: FO
-  label-color: lime
-  label-position: cm
-  dataref: AirbusFBW/PopUpStateArray[1]
-  icon: MCDU
-  activation: push
-  representation: icon
-  commands:
-    press: AirbusFBW/UndockMCDU2
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[1]
+    commands:
+      press: AirbusFBW/UndockMCDU2
+  representation:
+    type: icon
+    label: FO
+    label-color: lime
+    label-position: cm
+    icon: MCDU
 includes:
 - views

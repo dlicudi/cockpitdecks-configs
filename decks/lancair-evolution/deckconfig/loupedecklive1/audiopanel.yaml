@@ -4,162 +4,182 @@ includes:
 - encoders/encoders_radio
 buttons:
 - index: 0
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${laminar/n844x/audio/COM1MIC}
-    - text: COM MIC 1
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/transmit_audio_com1
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/transmit_audio_com1
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/n844x/audio/COM1MIC}
+      - text: COM MIC 1
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 1
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${laminar/n844x/audio/COM1}
-    - text: COM 1
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/monitor_audio_com1
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/monitor_audio_com1
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/n844x/audio/COM1}
+      - text: COM 1
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 2
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${laminar/n844x/audio/MKRMUTE}
-    - text: MKR MUTE
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/monitor_audio_mkr
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/monitor_audio_mkr
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/n844x/audio/MKRMUTE}
+      - text: MKR MUTE
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 7
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${laminar/n844x/audio/NAV1}
-    - text: NAV 1
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/select_audio_nav1
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/select_audio_nav1
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/n844x/audio/NAV1}
+      - text: NAV 1
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 4
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${laminar/n844x/audio/COM2MIC}
-    - text: COM MIC 2
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/transmit_audio_com2
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/transmit_audio_com2
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/n844x/audio/COM2MIC}
+      - text: COM MIC 2
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 5
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${laminar/n844x/audio/COM2}
-    - text: COM 2
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/monitor_audio_com2
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/monitor_audio_com2
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/n844x/audio/COM2}
+      - text: COM 2
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 10
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${laminar/n844x/audio/ADF}
-    - text: ADF 1
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/select_audio_adf1
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/select_audio_adf1
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/n844x/audio/ADF}
+      - text: ADF 1
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 11
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${laminar/n844x/audio/NAV2}
-    - text: NAV 2
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/select_audio_nav2
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/select_audio_nav2
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/n844x/audio/NAV2}
+      - text: NAV 2
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 6
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${laminar/n844x/audio/DME}
-    - text: DME
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/audio_panel/monitor_audio_dme
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/monitor_audio_dme
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/n844x/audio/DME}
+      - text: DME
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 3
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${laminar/n844x/audio/HISENS}
-    - text: HI SENS
-      text-size: 40
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/annunciator/marker_beacon_sens_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/annunciator/marker_beacon_sens_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/n844x/audio/HISENS}
+      - text: HI SENS
+        text-size: 40
+        text-font: D-DIN-Bold.otf
+        formula: '1'

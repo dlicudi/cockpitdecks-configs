@@ -8,133 +8,147 @@ default-annunciator-color: '#222222'
 buttons:
 - index: 0
   name: BAT 1
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: BATT 1
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/electrical/battery_1_toggle
-  - sim/electrical/battery_1_toggle
+  activation:
+    type: sweep
+    positions:
+    - sim/electrical/battery_1_toggle
+    - sim/electrical/battery_1_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: BATT 1
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
 - index: 1
   name: BAT 2
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: BATT 2
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${sim/cockpit2/electrical/battery_on[1]} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/electrical/battery_2_toggle
-  - sim/electrical/battery_2_toggle
+  activation:
+    type: sweep
+    positions:
+    - sim/electrical/battery_2_toggle
+    - sim/electrical/battery_2_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: BATT 2
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/battery_on[1]} 1 eq
 - index: 2
   name: AVIONICS
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'AVIONICS
+  activation:
+    type: sweep
+    dataref: sim/cockpit2/switches/avionics_power_on
+    positions:
+    - sim/systems/avionics_toggle
+    - sim/systems/avionics_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'AVIONICS
 
-        MASTER'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
-  dataref: sim/cockpit2/switches/avionics_power_on
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/systems/avionics_toggle
-  - sim/systems/avionics_toggle
+          MASTER'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
 - index: 3
   name: L FUEL PUMP
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'L FUEL
+  activation:
+    type: sweep
+    dataref: aerobask/pb_pump_L
+    positions:
+    - aerobask/pump_L_toggle
+    - aerobask/pump_L_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'L FUEL
 
-        PUMP'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_pump_L} 1 eq
-  dataref: aerobask/pb_pump_L
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/pump_L_toggle
-  - aerobask/pump_L_toggle
+          PUMP'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_pump_L} 1 eq
 - index: 4
   name: R FUEL PUMP
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'R FUEL
+  activation:
+    type: sweep
+    dataref: aerobask/pb_pump_R
+    positions:
+    - aerobask/pump_R_toggle
+    - aerobask/pump_R_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'R FUEL
 
-        PUMP'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_pump_R} 1 eq
-  dataref: aerobask/pb_pump_R
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/pump_R_toggle
-  - aerobask/pump_R_toggle
+          PUMP'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_pump_R} 1 eq
 - index: 5
   name: GEN
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'STARTER
+  activation:
+    type: sweep
+    dataref: sim/cockpit2/electrical/generator_on[0]
+    positions:
+    - sim/electrical/generator_1_toggle
+    - sim/electrical/generator_1_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'STARTER
 
-        GEN'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
-  dataref: sim/cockpit2/electrical/generator_on[0]
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/electrical/generator_1_toggle
-  - sim/electrical/generator_1_toggle
+          GEN'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
 - index: 11
   name: Next
-  page: switches_pretaxi
-  label: PRE-TAXI
-  label-color: Gold
-  label-size: 10
-  text: →
-  text-font: fontawesome.otf
-  text-size: 48
-  text-color: Gold
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches_pretaxi
+  representation:
+    type: text
+    label: PRE-TAXI
+    label-color: Gold
+    label-size: 10
+    text: →
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold

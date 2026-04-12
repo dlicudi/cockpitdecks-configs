@@ -5,159 +5,179 @@ includes:
 name: switches_icing
 buttons:
 - index: 0
+  activation:
+    type: push
+    commands:
+      press: sim/ice/pitot_heat0_tog
+  representation:
+    type: annunciator
+    label: PITOT
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/switches/pitot_heat_on} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
   vibrate: SHORT
-  label: PITOT
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/switches/pitot_heat_on} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/ice/pitot_heat0_tog
 - index: 1
+  activation:
+    type: sweep
+    initial-value: 0
+    positions:
+    - laminar/sr22/switch/ice_protect_off
+    - laminar/sr22/switch/ice_protect_on
+  representation:
+    type: annunciator
+    formula: ${laminar/sr22/switch/ice_protect}
+    label: ICE PROTECT
+    label-size: 10
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${laminar/sr22/switch/ice_protect} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${laminar/sr22/switch/ice_protect} 1 eq
   vibrate: SHORT
-  formula: ${laminar/sr22/switch/ice_protect}
-  label: ICE PROTECT
-  label-size: 10
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${laminar/sr22/switch/ice_protect} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${laminar/sr22/switch/ice_protect} 1 eq
-  initial-value: 0
-  activation: sweep
-  representation: annunciator
-  positions:
-  - laminar/sr22/switch/ice_protect_off
-  - laminar/sr22/switch/ice_protect_on
 - index: 2
+  activation:
+    type: sweep
+    positions:
+    - laminar/sr22/switch/ice_protect_norm
+    - laminar/sr22/switch/ice_protect_high
+  representation:
+    type: annunciator
+    formula: ${laminar/sr22/switch/ice_norm_high}
+    label: NORM/HIGH
+    label-size: 10
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: NORM
+        color: darkorange
+        formula: ${laminar/sr22/switch/ice_norm_high} 0 eq
+      - text: HIGH
+        color: deepskyblue
+        framed: true
+        formula: ${laminar/sr22/switch/ice_norm_high} 1 eq
   vibrate: SHORT
-  formula: ${laminar/sr22/switch/ice_norm_high}
-  label: NORM/HIGH
-  label-size: 10
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: NORM
-      color: darkorange
-      formula: ${laminar/sr22/switch/ice_norm_high} 0 eq
-    - text: HIGH
-      color: deepskyblue
-      framed: true
-      formula: ${laminar/sr22/switch/ice_norm_high} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - laminar/sr22/switch/ice_protect_norm
-  - laminar/sr22/switch/ice_protect_high
 - index: 3
+  activation:
+    type: begin-end-command
+    commands:
+      press: laminar/sr22/anti_ice_tks_max
+  representation:
+    type: annunciator
+    label: MAX
+    annunciator:
+      model: A
+      size: medium
+      parts:
+      - text: 'ON'
+        text-size: 47
+        text-font: D-DIN-Bold.otf
+        text-color: white
+        off-color: '#1a1a1a'
+        formula: ${laminar/sr22/switch/ice_max}
   vibrate: LONG
-  label: MAX
-  annunciator:
-    model: A
-    size: medium
-    parts:
-    - text: 'ON'
-      text-size: 47
-      text-font: D-DIN-Bold.otf
-      text-color: white
-      off-color: '#1a1a1a'
-      formula: ${laminar/sr22/switch/ice_max}
-  activation: begin-end-command
-  representation: annunciator
-  commands:
-    press: laminar/sr22/anti_ice_tks_max
 - index: 4
+  activation:
+    type: sweep
+    positions:
+    - sim/ice/tks_bkup_off
+    - sim/ice/tks_bkup_on
+  representation:
+    type: annunciator
+    label: PUMP BKUP
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/ice/tks_backup_pump} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/ice/tks_backup_pump} 1 eq
   vibrate: SHORT
-  label: PUMP BKUP
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/ice/tks_backup_pump} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/ice/tks_backup_pump} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/ice/tks_bkup_off
-  - sim/ice/tks_bkup_on
 - index: 5
+  activation:
+    type: push
+    commands:
+      press: sim/ice/window_heat_tog
+  representation:
+    type: annunciator
+    label: WSHLD
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/switches/anti_ice_window_heat} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/anti_ice_window_heat} 1 eq
   vibrate: SHORT
-  label: WSHLD
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/switches/anti_ice_window_heat} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/switches/anti_ice_window_heat} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/ice/window_heat_tog
 - index: 8
-  page: switches_master
+  activation:
+    type: page
+    page: switches_master
+  representation:
+    type: text
+    text: MASTER
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
   vibrate: SHORT
-  text: MASTER
-  text-color: khaki
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 20)
-  activation: page
-  representation: text
 - index: 9
-  page: switches_lights
+  activation:
+    type: page
+    page: switches_lights
+  representation:
+    type: text
+    text: LIGHTS
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
   vibrate: SHORT
-  text: LIGHTS
-  text-color: khaki
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 20)
-  activation: page
-  representation: text
 - index: 10
-  text: ICE
-  text-color: Gold
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (40, 35, 0)
-  activation: none
-  representation: text
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ICE
+    text-color: Gold
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (40, 35, 0)
 - index: 11
-  page: switches_ground
+  activation:
+    type: page
+    page: switches_ground
+  representation:
+    type: text
+    text: GROUND
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
   vibrate: SHORT
-  text: GROUND
-  text-color: khaki
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 20)
-  activation: page
-  representation: text

@@ -6,455 +6,508 @@ name: xplane
 buttons:
 - index: 0
   name: X-Plane Map
-  label: Map
-  annunciator:
-    model: B
-    size: large
-    B0:
-      formula: ${state:activation_count} 2 % 1 - abs
-      text: AVAIL
-      text-color: lime
-    B1:
-      formula: ${state:activation_count} 2 %
-      text: true
-      text-color: deepskyblue
-      framed: true
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/map/show_current
+  activation:
+    type: push
+    commands:
+      press: sim/map/show_current
+  representation:
+    type: annunciator
+    label: Map
+    annunciator:
+      model: B
+      size: large
+      B0:
+        formula: ${state:activation_count} 2 % 1 - abs
+        text: AVAIL
+        text-color: lime
+      B1:
+        formula: ${state:activation_count} 2 %
+        text: true
+        text-color: deepskyblue
+        framed: true
 - index: 1
   name: AVS Map
-  label: AVS
-  annunciator:
-    model: B
-    size: large
-    B0:
-      formula: ${state:activation_count} 2 % 1 - abs
-      text: AVAIL
-      text-color: lime
-    B1:
-      formula: ${state:activation_count} 2 %
-      text: true
-      text-color: deepskyblue
-      framed: true
-  activation: push
-  representation: annunciator
-  commands:
-    press: flightfactor/avs/toggle
+  activation:
+    type: push
+    commands:
+      press: flightfactor/avs/toggle
+  representation:
+    type: annunciator
+    label: AVS
+    annunciator:
+      model: B
+      size: large
+      B0:
+        formula: ${state:activation_count} 2 % 1 - abs
+        text: AVAIL
+        text-color: lime
+      B1:
+        formula: ${state:activation_count} 2 %
+        text: true
+        text-color: deepskyblue
+        framed: true
 - index: 2
   name: Airport Map
-  label: Airport
-  annunciator:
-    model: B
-    size: large
-    B0:
-      formula: ${state:activation_count} 2 % 1 - abs
-      text: AVAIL
-      text-color: lime
-    B1:
-      formula: ${state:activation_count} 2 %
-      text: true
-      text-color: deepskyblue
-      framed: true
-  activation: push
-  representation: annunciator
-  commands:
-    press: pikitanga/AptNav/ToggleMap
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/ToggleMap
+  representation:
+    type: annunciator
+    label: Airport
+    annunciator:
+      model: B
+      size: large
+      B0:
+        formula: ${state:activation_count} 2 % 1 - abs
+        text: AVAIL
+        text-color: lime
+      B1:
+        formula: ${state:activation_count} 2 %
+        text: true
+        text-color: deepskyblue
+        framed: true
 - index: 3
-  page: aptnav
-  label: 'APT
+  activation:
+    type: page
+    page: aptnav
+  representation:
+    type: icon
+    label: 'APT
 
-    NAV'
-  label-position: cm
-  icon: APT_NAV
-  activation: page
-  representation: icon
+      NAV'
+    label-position: cm
+    icon: APT_NAV
 - index: 4
   name: LiveTraffic
-  label: Live/T
-  annunciator:
-    model: B
-    size: large
-    B0:
-      formula: ${state:activation_count} 2 % 1 - abs
-      text: AVAIL
-      text-color: lime
-    B1:
-      formula: ${state:activation_count} 2 %
-      text: true
-      text-color: deepskyblue
-      framed: true
-  activation: push
-  representation: annunciator
-  commands:
-    press: LiveTraffic/Info_Staus_Wnd/Open
+  activation:
+    type: push
+    commands:
+      press: LiveTraffic/Info_Staus_Wnd/Open
+  representation:
+    type: annunciator
+    label: Live/T
+    annunciator:
+      model: B
+      size: large
+      B0:
+        formula: ${state:activation_count} 2 % 1 - abs
+        text: AVAIL
+        text-color: lime
+      B1:
+        formula: ${state:activation_count} 2 %
+        text: true
+        text-color: deepskyblue
+        framed: true
 - index: 6
   name: FTGCLEAR
-  text:
-    text: 'Clearance
+  activation:
+    type: push
+    commands:
+      press: XPPython3/followthegreens/send_clearance_ok
+  representation:
+    type: text
+    text:
+      text: 'Clearance
 
-      Received'
-    text-font: B612-Bold
-    text-size: 16
-    text-color: lime
-  activation: push
-  representation: text
-  commands:
-    press: XPPython3/followthegreens/send_clearance_ok
+        Received'
+      text-font: B612-Bold
+      text-size: 16
+      text-color: lime
 - index: 14
   name: FTGOK
-  text:
-    text: OK
-    text-font: B612-Bold
-    text-size: 32
-    text-color: lime
-  activation: push
-  representation: text
-  commands:
-    press: XPPython3/followthegreens/send_ok
+  activation:
+    type: push
+    commands:
+      press: XPPython3/followthegreens/send_ok
+  representation:
+    type: text
+    text:
+      text: OK
+      text-font: B612-Bold
+      text-size: 32
+      text-color: lime
 - index: 15
   name: FTGCANCEL
-  text:
-    text: Cancel
-    text-font: B612-Bold
-    text-size: 24
-    text-color: red
-  activation: push
-  representation: text
-  commands:
-    press: XPPython3/followthegreens/send_cancel
+  activation:
+    type: push
+    commands:
+      press: XPPython3/followthegreens/send_cancel
+  representation:
+    type: text
+    text:
+      text: Cancel
+      text-font: B612-Bold
+      text-size: 24
+      text-color: red
 - index: 7
   name: FollowTheGreensAnimation
-  ftg: true
+  activation:
+    type: sweep
+    dataref: XPPython3/followthegreens/is_running
+    initial-value: 0
+    positions:
+    - XPPython3/followthegreens/main_windown_toggle
+    - XPPython3/followthegreens/main_windown_toggle
+  representation:
+    type: ftg
+    ftg: true
   animation:
     speed: 0.2
-  dataref: XPPython3/followthegreens/is_running
-  initial-value: 0
-  activation: sweep
-  representation: ftg
-  positions:
-  - XPPython3/followthegreens/main_windown_toggle
-  - XPPython3/followthegreens/main_windown_toggle
 - index: 8
   name: AutoDGS
-  label: DGS
-  annunciator:
-    model: B
-    size: large
-    B0:
-      formula: ${AutoDGS/state}
-      text: AVAIL
-      text-color: lime
-    B1:
-      formula: ${AutoDGS/state} 1 -
-      text: true
-      text-color: deepskyblue
-      framed: true
-  initial-value: 0
-  activation: push
-  representation: annunciator
-  commands:
-    press: AutoDGS/toggle_ui
+  activation:
+    type: push
+    initial-value: 0
+    commands:
+      press: AutoDGS/toggle_ui
+  representation:
+    type: annunciator
+    label: DGS
+    annunciator:
+      model: B
+      size: large
+      B0:
+        formula: ${AutoDGS/state}
+        text: AVAIL
+        text-color: lime
+      B1:
+        formula: ${AutoDGS/state} 1 -
+        text: true
+        text-color: deepskyblue
+        framed: true
 - index: 9
   name: SimpleGroundEquipmentAndServices
-  label: SGES
-  annunciator:
-    model: B
-    size: large
-    B0:
-      formula: ${state:activation_count} 2 % 1 - abs
-      text: AVAIL
-      text-color: lime
-    B1:
-      formula: ${state:activation_count} 2 %
-      text: true
-      text-color: deepskyblue
-      framed: true
-  initial-value: 0
-  activation: push
-  representation: annunciator
-  commands:
-    press: Simple_Ground_Equipment_and_Services/Window/Toggle
+  activation:
+    type: push
+    initial-value: 0
+    commands:
+      press: Simple_Ground_Equipment_and_Services/Window/Toggle
+  representation:
+    type: annunciator
+    label: SGES
+    annunciator:
+      model: B
+      size: large
+      B0:
+        formula: ${state:activation_count} 2 % 1 - abs
+        text: AVAIL
+        text-color: lime
+      B1:
+        formula: ${state:activation_count} 2 %
+        text: true
+        text-color: deepskyblue
+        framed: true
 - index: 12
   name: XChatter
-  label: X-Chat
-  annunciator:
-    model: B
-    size: large
-    B0:
-      formula: ${state:activation_count} 2 % 1 - abs
-      text: AVAIL
-      text-color: lime
-    B1:
-      formula: ${state:activation_count} 2 %
-      text: true
-      text-color: deepskyblue
-      framed: true
-  initial-value: 0
-  activation: push
-  representation: annunciator
-  commands:
-    press: X-Chatter/Window/Toggle
+  activation:
+    type: push
+    initial-value: 0
+    commands:
+      press: X-Chatter/Window/Toggle
+  representation:
+    type: annunciator
+    label: X-Chat
+    annunciator:
+      model: B
+      size: large
+      B0:
+        formula: ${state:activation_count} 2 % 1 - abs
+        text: AVAIL
+        text-color: lime
+      B1:
+        formula: ${state:activation_count} 2 %
+        text: true
+        text-color: deepskyblue
+        framed: true
 - index: 16
   name: NEXT_LIVERY
-  label: Next Livery
-  icon: LIVERY_UP
-  activation: push
-  representation: icon
-  commands:
-    press: sim/operation/next_livery
+  activation:
+    type: push
+    commands:
+      press: sim/operation/next_livery
+  representation:
+    type: icon
+    label: Next Livery
+    icon: LIVERY_UP
 - index: 17
   name: PREV_LIVERY
-  label: Previous Livery
-  icon: LIVERY_DOWN
-  activation: push
-  representation: icon
-  commands:
-    press: sim/operation/prev_livery
+  activation:
+    type: push
+    commands:
+      press: sim/operation/prev_livery
+  representation:
+    type: icon
+    label: Previous Livery
+    icon: LIVERY_DOWN
 - index: 18
-  label: WEATHER SOURCE
-  label-size: 8
-  multi-texts:
-  - text: Preset
-    text-color: white
-    text-size: 14
-    text-font: D-DIN-Bold
-    text-position: cm
-  - text: Real Weather
-    text-size: 14
-    text-color: white
-    text-font: D-DIN-Bold
-    text-position: cm
-  - text: Control Pad
-    text-color: deepskyblue
-    text-size: 14
-    text-font: D-DIN-Bold
-    text-position: cm
-  - text: Plugin
-    text-color: red
-    text-size: 14
-    text-font: D-DIN-Bold
-    text-position: cm
-  dataref: sim/weather/region/weather_source
-  activation: none
-  representation: multi-texts
+  activation:
+    type: none
+    dataref: sim/weather/region/weather_source
+  representation:
+    type: multi-texts
+    label: WEATHER SOURCE
+    label-size: 8
+    multi-texts:
+    - text: Preset
+      text-color: white
+      text-size: 14
+      text-font: D-DIN-Bold
+      text-position: cm
+    - text: Real Weather
+      text-size: 14
+      text-color: white
+      text-font: D-DIN-Bold
+      text-position: cm
+    - text: Control Pad
+      text-color: deepskyblue
+      text-size: 14
+      text-font: D-DIN-Bold
+      text-position: cm
+    - text: Plugin
+      text-color: red
+      text-size: 14
+      text-font: D-DIN-Bold
+      text-position: cm
 - index: 19
-  label: FORECAST
-  label-size: 8
-  multi-texts:
-  - text: 'Rapidly
+  activation:
+    type: none
+    dataref: sim/weather/region/change_mode
+  representation:
+    type: multi-texts
+    label: FORECAST
+    label-size: 8
+    multi-texts:
+    - text: 'Rapidly
 
-      Improving'
-    text-color: lime
-    text-size: 14
-    text-font: D-DIN-Bold
-    text-position: cm
-  - text: Improving
-    text-size: 14
-    text-color: green
-    text-font: D-DIN-Bold
-    text-position: cm
-  - text: 'Gradually
+        Improving'
+      text-color: lime
+      text-size: 14
+      text-font: D-DIN-Bold
+      text-position: cm
+    - text: Improving
+      text-size: 14
+      text-color: green
+      text-font: D-DIN-Bold
+      text-position: cm
+    - text: 'Gradually
 
-      Improving'
-    text-color: green
-    text-size: 14
-    text-font: D-DIN-Bold
-    text-position: cm
-  - text: No change
-    text-color: green
-    text-size: 14
-    text-font: D-DIN-Bold
-    text-position: cm
-  - text: 'Gradually
+        Improving'
+      text-color: green
+      text-size: 14
+      text-font: D-DIN-Bold
+      text-position: cm
+    - text: No change
+      text-color: green
+      text-size: 14
+      text-font: D-DIN-Bold
+      text-position: cm
+    - text: 'Gradually
 
-      Deteriorating'
-    text-color: firebrick
-    text-size: 14
-    text-font: D-DIN-Bold
-    text-position: cm
-  - text: Deteriorating
-    text-color: firebrick
-    text-size: 14
-    text-font: D-DIN-Bold
-    text-position: cm
-  - text: 'Rapidly
+        Deteriorating'
+      text-color: firebrick
+      text-size: 14
+      text-font: D-DIN-Bold
+      text-position: cm
+    - text: Deteriorating
+      text-color: firebrick
+      text-size: 14
+      text-font: D-DIN-Bold
+      text-position: cm
+    - text: 'Rapidly
 
-      Deteriorating'
-    text-color: red
-    text-size: 14
-    text-font: D-DIN-Bold
-    text-position: cm
-  - text: Real Weather
-    text-color: deepskyblue
-    text-size: 14
-    text-font: D-DIN-Bold
-    text-position: cm
-  dataref: sim/weather/region/change_mode
-  activation: none
-  representation: multi-texts
+        Deteriorating'
+      text-color: red
+      text-size: 14
+      text-font: D-DIN-Bold
+      text-position: cm
+    - text: Real Weather
+      text-color: deepskyblue
+      text-size: 14
+      text-font: D-DIN-Bold
+      text-position: cm
 - index: 20
   name: RWYLIGHT
-  stops: 4
-  label: RWY LT
-  initial-value: 0
-  circular-switch:
-    switch-style: large
-    down: 40
-    left: 20
-    button-size: 48
-    tick-space: 36
-    tick-length: 24
-    tick-label-size: 30
-    tick-label-font: DIN Bold
-    tick-from: 210
-    tick-to: 330
-    tick-color: white
-    tick-width: 8
-    tick-underline-width: 8
-    tick-labels:
-    - 'OFF'
-    - LO
-    - MD
-    - HI
-  activation: sweep
-  positions:
-  - sim/operation/rwy_lights_off
-  - sim/operation/rwy_lights_lo
-  - sim/operation/rwy_lights_med
-  - sim/operation/rwy_lights_hi
+  activation:
+    type: sweep
+    stops: 4
+    initial-value: 0
+    positions:
+    - sim/operation/rwy_lights_off
+    - sim/operation/rwy_lights_lo
+    - sim/operation/rwy_lights_med
+    - sim/operation/rwy_lights_hi
+  representation:
+    type: circular-switch
+    label: RWY LT
+    circular-switch:
+      switch-style: large
+      down: 40
+      left: 20
+      button-size: 48
+      tick-space: 36
+      tick-length: 24
+      tick-label-size: 30
+      tick-label-font: DIN Bold
+      tick-from: 210
+      tick-to: 330
+      tick-color: white
+      tick-width: 8
+      tick-underline-width: 8
+      tick-labels:
+      - 'OFF'
+      - LO
+      - MD
+      - HI
 - index: 23
-  multi-texts:
-  - text: 'NOT
+  activation:
+    type: none
+  representation:
+    type: multi-texts
+    multi-texts:
+    - text: 'NOT
 
-      CONNECTED
-
-
-      '
-    text-color: red
-    text-size: 14
-    text-font: D-DIN-Bold
-    text-position: cb
-  - text: 'CONNECTING...
+        CONNECTED
 
 
-      '
-    text-size: 14
-    text-color: orange
-    text-font: D-DIN-Bold
-    text-position: cb
-  - text: 'CONNECTING...
+        '
+      text-color: red
+      text-size: 14
+      text-font: D-DIN-Bold
+      text-position: cb
+    - text: 'CONNECTING...
 
 
-      '
-    text-size: 14
-    text-color: orange
-    text-font: D-DIN-Bold
-    text-position: cb
-  - text: 'CONNECTING...
+        '
+      text-size: 14
+      text-color: orange
+      text-font: D-DIN-Bold
+      text-position: cb
+    - text: 'CONNECTING...
 
 
-      '
-    text-size: 14
-    text-color: orange
-    text-font: D-DIN-Bold
-    text-position: cb
-  - text: 'CONNECTED
+        '
+      text-size: 14
+      text-color: orange
+      text-font: D-DIN-Bold
+      text-position: cb
+    - text: 'CONNECTING...
 
 
-      '
-    text-color: lime
-    text-size: 14
-    text-font: D-DIN-Bold
-    text-position: cb
+        '
+      text-size: 14
+      text-color: orange
+      text-font: D-DIN-Bold
+      text-position: cb
+    - text: 'CONNECTED
+
+
+        '
+      text-color: lime
+      text-size: 14
+      text-font: D-DIN-Bold
+      text-position: cb
+    formula: ${data:_connection_status}
   text-bg-texture: xplane-empty.png
-  formula: ${data:_connection_status}
-  activation: none
-  representation: multi-texts
 - index: 24
   name: STOP_COCKPITDECKS
-  icon: stop
-  activation: stop
-  representation: icon
+  activation:
+    type: stop
+  representation:
+    type: icon
+    icon: stop
 - index: 25
   name: DASHBOARD
-  page: dashboard
-  icon: DASHBOARD
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: dashboard
+  representation:
+    type: icon
+    icon: DASHBOARD
 - index: 26
   name: Cockpitdecks
-  label: 'COCKPITDECKS
+  activation:
+    type: page
+    page: cockpitdecks
+  representation:
+    type: icon
+    label: 'COCKPITDECKS
 
-    INTERNALS'
-  label-position: cm
-  label-color: lime
-  label-font: D-DIN-Bold.otf
-  page: cockpitdecks
-  icon: COCKPITDECKS
-  activation: page
-  representation: icon
+      INTERNALS'
+    label-position: cm
+    label-color: lime
+    label-font: D-DIN-Bold.otf
+    icon: COCKPITDECKS
 - index: 27
   name: XPLANEDATA
-  icon: XPLANE_OUTPUT
-  formula: ${state:activation_count} 2 %
-  label: 'XPLANE
+  activation:
+    type: push
+    commands:
+      press: sim/operation/toggle_data_output_cockpit
+  representation:
+    type: icon
+    icon: XPLANE_OUTPUT
+    formula: ${state:activation_count} 2 %
+    label: 'XPLANE
 
-    COCKPIT
+      COCKPIT
 
-    DATA'
-  label-color: lime
-  label-font: D-DIN-Bold.otf
-  label-position: cm
-  activation: push
-  representation: icon
-  commands:
-    press: sim/operation/toggle_data_output_cockpit
+      DATA'
+    label-color: lime
+    label-font: D-DIN-Bold.otf
+    label-position: cm
 - index: 28
   name: XP PYTHON
-  label: XPPython3
-  text:
-    text: ${fa:rotate-right}
-    text-font: fontawesome.otf
-    text-size: 80
-    text-position: cm
-    text-color: lime
-    text-bg-texture: XP-PYTHON.png
-  activation: push
-  representation: text
-  commands:
-    press: XPPython3/reloadScripts
+  activation:
+    type: push
+    commands:
+      press: XPPython3/reloadScripts
+  representation:
+    type: text
+    label: XPPython3
+    text:
+      text: ${fa:rotate-right}
+      text-font: fontawesome.otf
+      text-size: 80
+      text-position: cm
+      text-color: lime
+      text-bg-texture: XP-PYTHON.png
 - index: 29
   name: DATAREFTOOL
-  label: DataRefTool
-  text:
-    text: ${fa:circle-plus}
-    text-font: fontawesome.otf
-    text-size: 32
-    text-position: rt
-    text-color: lime
-    text-bg-texture: DATAREFTOOL.png
-  activation: push
-  representation: text
-  commands:
-    press: leecbaker/datareftool/new_search_window
+  activation:
+    type: push
+    commands:
+      press: leecbaker/datareftool/new_search_window
+  representation:
+    type: text
+    label: DataRefTool
+    text:
+      text: ${fa:circle-plus}
+      text-font: fontawesome.otf
+      text-size: 32
+      text-position: rt
+      text-color: lime
+      text-bg-texture: DATAREFTOOL.png
 - index: 30
   name: RELOAD
-  label: RELOAD
-  label-size: 14
-  label-position: cm
-  text:
-    text: ${fa:rotate-right}
-    text-font: fontawesome.otf
-    text-size: 80
-    text-position: cm
-    text-color: lime
-  activation: reload
-  representation: text
+  activation:
+    type: reload
+  representation:
+    type: text
+    label: RELOAD
+    label-size: 14
+    label-position: cm
+    text:
+      text: ${fa:rotate-right}
+      text-font: fontawesome.otf
+      text-size: 80
+      text-position: cm
+      text-color: lime
 - index: 31
   name: Index
-  page: index-alt
-  icon: TOLISS-A21N
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: index-alt
+  representation:
+    type: icon
+    icon: TOLISS-A21N

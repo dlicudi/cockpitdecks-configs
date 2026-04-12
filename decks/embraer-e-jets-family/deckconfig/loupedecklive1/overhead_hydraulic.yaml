@@ -6,121 +6,136 @@ includes:
 default-icon-color: Black
 buttons:
 - index: 0
-  label: PTU
-  label-color: White
-  label-position: cb
-  label-size: 8
-  stops: 3
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 140
-    tick-to: 220
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - AUTO
-    - 'ON'
-  dataref: XCrafts/hydraulic/PTU_switch
-  set-dataref: XCrafts/hydraulic/PTU_switch
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    dataref: XCrafts/hydraulic/PTU_switch
+    set-dataref: XCrafts/hydraulic/PTU_switch
+  representation:
+    type: circular-switch
+    label: PTU
+    label-color: White
+    label-position: cb
+    label-size: 8
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 140
+      tick-to: 220
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - AUTO
+      - 'ON'
 - index: 1
-  label: ELEC PUMP 1
-  label-color: White
-  label-position: cb
-  label-size: 8
-  stops: 3
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 140
-    tick-to: 220
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - AUTO
-    - 'ON'
-  dataref: XCrafts/ERJ/Hydraulics1
-  set-dataref: XCrafts/ERJ/Hydraulics1
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    dataref: XCrafts/ERJ/Hydraulics1
+    set-dataref: XCrafts/ERJ/Hydraulics1
+  representation:
+    type: circular-switch
+    label: ELEC PUMP 1
+    label-color: White
+    label-position: cb
+    label-size: 8
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 140
+      tick-to: 220
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - AUTO
+      - 'ON'
 - index: 2
-  label: ELEC PUMP 2
-  label-color: White
-  label-position: cb
-  label-size: 8
-  stops: 3
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 140
-    tick-to: 220
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - AUTO
-    - 'ON'
-  dataref: XCrafts/ERJ/Hydraulics2
-  set-dataref: XCrafts/ERJ/Hydraulics2
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    dataref: XCrafts/ERJ/Hydraulics2
+    set-dataref: XCrafts/ERJ/Hydraulics2
+  representation:
+    type: circular-switch
+    label: ELEC PUMP 2
+    label-color: White
+    label-position: cb
+    label-size: 8
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 140
+      tick-to: 220
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - AUTO
+      - 'ON'
 - index: 3
-  label: ELEC PUMP A
-  label-color: White
-  label-position: cb
-  label-size: 8
-  stops: 2
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 120
-    tick-to: 180
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - 'ON'
-  dataref: XCrafts/hydraulic/sys3_elec_pump_a_switch
-  set-dataref: XCrafts/hydraulic/sys3_elec_pump_a_switch
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    dataref: XCrafts/hydraulic/sys3_elec_pump_a_switch
+    set-dataref: XCrafts/hydraulic/sys3_elec_pump_a_switch
+  representation:
+    type: circular-switch
+    label: ELEC PUMP A
+    label-color: White
+    label-position: cb
+    label-size: 8
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 120
+      tick-to: 180
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - 'ON'
 - index: 4
-  label: ELEC PUMP B
-  label-color: White
-  label-position: cb
-  label-size: 8
-  stops: 3
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 140
-    tick-to: 220
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - AUTO
-    - 'ON'
-  dataref: XCrafts/hydraulic/sys3_elec_pump_b_switch
-  set-dataref: XCrafts/hydraulic/sys3_elec_pump_b_switch
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    dataref: XCrafts/hydraulic/sys3_elec_pump_b_switch
+    set-dataref: XCrafts/hydraulic/sys3_elec_pump_b_switch
+  representation:
+    type: circular-switch
+    label: ELEC PUMP B
+    label-color: White
+    label-position: cb
+    label-size: 8
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 140
+      tick-to: 220
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - AUTO
+      - 'ON'

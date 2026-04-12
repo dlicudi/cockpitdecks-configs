@@ -5,121 +5,141 @@ includes:
 buttons:
 - index: 0
   name: COM MIC 1
-  text: COM MIC 1
-  text-color: khaki
-  text-size: 28
-  text-font: D-DIN-Bold.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: push
-  representation: text
-  commands:
-    press: sim/audio_panel/transmit_audio_com1
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/transmit_audio_com1
+  representation:
+    type: text
+    text: COM MIC 1
+    text-color: khaki
+    text-size: 28
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 1
   name: COM 1
-  text: COM 1
-  text-color: khaki
-  text-size: 36
-  text-font: D-DIN-Bold.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: push
-  representation: text
-  commands:
-    press: sim/audio_panel/monitor_audio_com1
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/monitor_audio_com1
+  representation:
+    type: text
+    text: COM 1
+    text-color: khaki
+    text-size: 36
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 2
   name: MKR MUTE
-  text: MKR MUTE
-  text-color: khaki
-  text-size: 28
-  text-font: D-DIN-Bold.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: push
-  representation: text
-  commands:
-    press: sim/audio_panel/monitor_audio_mkr
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/monitor_audio_mkr
+  representation:
+    type: text
+    text: MKR MUTE
+    text-color: khaki
+    text-size: 28
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 3
   name: HI SENS
-  text: HI SENS
-  text-color: khaki
-  text-size: 32
-  text-font: D-DIN-Bold.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: push
-  representation: text
-  commands:
-    press: sim/annunciator/marker_beacon_sens_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/annunciator/marker_beacon_sens_toggle
+  representation:
+    type: text
+    text: HI SENS
+    text-color: khaki
+    text-size: 32
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 4
   name: COM MIC 2
-  text: COM MIC 2
-  text-color: khaki
-  text-size: 28
-  text-font: D-DIN-Bold.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: push
-  representation: text
-  commands:
-    press: sim/audio_panel/transmit_audio_com2
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/transmit_audio_com2
+  representation:
+    type: text
+    text: COM MIC 2
+    text-color: khaki
+    text-size: 28
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 5
   name: COM 2
-  text: COM 2
-  text-color: khaki
-  text-size: 36
-  text-font: D-DIN-Bold.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: push
-  representation: text
-  commands:
-    press: sim/audio_panel/monitor_audio_com2
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/monitor_audio_com2
+  representation:
+    type: text
+    text: COM 2
+    text-color: khaki
+    text-size: 36
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 6
   name: DME
-  text: DME
-  text-color: khaki
-  text-size: 36
-  text-font: D-DIN-Bold.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: push
-  representation: text
-  commands:
-    press: sim/audio_panel/monitor_audio_dme
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/monitor_audio_dme
+  representation:
+    type: text
+    text: DME
+    text-color: khaki
+    text-size: 36
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 7
   name: NAV 1
-  text: NAV 1
-  text-color: khaki
-  text-size: 36
-  text-font: D-DIN-Bold.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: push
-  representation: text
-  commands:
-    press: sim/audio_panel/select_audio_nav1
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/select_audio_nav1
+  representation:
+    type: text
+    text: NAV 1
+    text-color: khaki
+    text-size: 36
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 10
   name: ADF 1
-  text: ADF 1
-  text-color: khaki
-  text-size: 36
-  text-font: D-DIN-Bold.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: push
-  representation: text
-  commands:
-    press: sim/audio_panel/select_audio_adf1
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/select_audio_adf1
+  representation:
+    type: text
+    text: ADF 1
+    text-color: khaki
+    text-size: 36
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 11
   name: NAV 2
-  text: NAV 2
-  text-color: khaki
-  text-size: 36
-  text-font: D-DIN-Bold.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: push
-  representation: text
-  commands:
-    press: sim/audio_panel/select_audio_nav2
+  activation:
+    type: push
+    commands:
+      press: sim/audio_panel/select_audio_nav2
+  representation:
+    type: text
+    text: NAV 2
+    text-color: khaki
+    text-size: 36
+    text-font: D-DIN-Bold.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

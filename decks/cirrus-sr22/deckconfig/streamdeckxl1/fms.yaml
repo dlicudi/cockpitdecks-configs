@@ -4,324 +4,362 @@ includes:
 buttons:
 - index: 0
   name: FMS_DEP
-  label: DEP
-  label-size: 9
-  label-color: Gold
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - text: ${cockpitdecks/fms_browser/fms_first_ident}
-      text-font: B612Mono-Regular.ttf
-      text-size: 21
-      color: deepskyblue
-      formula: '1'
-    - text: ${cockpitdecks/fms_browser/fms_first_altitude}ft
-      text-font: B612Mono-Regular.ttf
-      text-size: 13
-      color: darkorange
-      formula: '1'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: DEP
+    label-size: 9
+    label-color: Gold
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: ${cockpitdecks/fms_browser/fms_first_ident}
+        text-font: B612Mono-Regular.ttf
+        text-size: 21
+        color: deepskyblue
+        formula: '1'
+      - text: ${cockpitdecks/fms_browser/fms_first_altitude}ft
+        text-font: B612Mono-Regular.ttf
+        text-size: 13
+        color: darkorange
+        formula: '1'
 - index: 1
   name: FMS_ACTIVE
-  label: ACTIVE
-  label-size: 9
-  label-color: lime
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - text: ${cockpitdecks/fms_browser/fms_active_ident}
-      text-font: B612Mono-Regular.ttf
-      text-size: 15
-      color: lime
-      formula: '1'
-    - text: ${cockpitdecks/fms_browser/fms_active_altitude}ft
-      text-font: B612Mono-Regular.ttf
-      text-size: 13
-      color: darkorange
-      formula: '1'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ACTIVE
+    label-size: 9
+    label-color: lime
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: ${cockpitdecks/fms_browser/fms_active_ident}
+        text-font: B612Mono-Regular.ttf
+        text-size: 15
+        color: lime
+        formula: '1'
+      - text: ${cockpitdecks/fms_browser/fms_active_altitude}ft
+        text-font: B612Mono-Regular.ttf
+        text-size: 13
+        color: darkorange
+        formula: '1'
 - index: 2
   name: FMS_DEST
-  label: DEST
-  label-size: 9
-  label-color: Gold
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - text: ${cockpitdecks/fms_browser/fms_last_ident}
-      text-font: B612Mono-Regular.ttf
-      text-size: 21
-      color: deepskyblue
-      formula: '1'
-    - text: ${cockpitdecks/fms_browser/fms_last_altitude}ft
-      text-font: B612Mono-Regular.ttf
-      text-size: 13
-      color: darkorange
-      formula: '1'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: DEST
+    label-size: 9
+    label-color: Gold
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: ${cockpitdecks/fms_browser/fms_last_ident}
+        text-font: B612Mono-Regular.ttf
+        text-size: 21
+        color: deepskyblue
+        formula: '1'
+      - text: ${cockpitdecks/fms_browser/fms_last_altitude}ft
+        text-font: B612Mono-Regular.ttf
+        text-size: 13
+        color: darkorange
+        formula: '1'
 - index: 3
   name: SELECTED_WP
-  label: SELECTED
-  label-size: 9
-  label-color: Gold
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - text: ${cockpitdecks/fms_browser/fms_displayed_ident}
-      text-font: B612Mono-Regular.ttf
-      text-size: 15
-      color: white
-      formula: '1'
-    - text: ${cockpitdecks/fms_browser/fms_displayed_index}/${cockpitdecks/fms_browser/fms_entry_count}
-      text-font: B612Mono-Regular.ttf
-      text-size: 14
-      color: darkorange
-      formula: '1'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: SELECTED
+    label-size: 9
+    label-color: Gold
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: ${cockpitdecks/fms_browser/fms_displayed_ident}
+        text-font: B612Mono-Regular.ttf
+        text-size: 15
+        color: white
+        formula: '1'
+      - text: ${cockpitdecks/fms_browser/fms_displayed_index}/${cockpitdecks/fms_browser/fms_entry_count}
+        text-font: B612Mono-Regular.ttf
+        text-size: 14
+        color: darkorange
+        formula: '1'
 - index: 4
   name: PROGRESS
-  label: PROGRESS
-  label-size: 9
-  label-color: Gold
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - text: ${cockpitdecks/fms_browser/fms_active_index}/${cockpitdecks/fms_browser/fms_entry_count}
-      text-font: B612Mono-Regular.ttf
-      text-size: 17
-      color: white
-      formula: '1'
-    - text: ${cockpitdecks/fms_browser/plan_distance_nm}nm
-      text-font: B612Mono-Regular.ttf
-      text-size: 12
-      text-format: '{0:.0f}'
-      color: darkorange
-      formula: '1'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: PROGRESS
+    label-size: 9
+    label-color: Gold
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: ${cockpitdecks/fms_browser/fms_active_index}/${cockpitdecks/fms_browser/fms_entry_count}
+        text-font: B612Mono-Regular.ttf
+        text-size: 17
+        color: white
+        formula: '1'
+      - text: ${cockpitdecks/fms_browser/plan_distance_nm}nm
+        text-font: B612Mono-Regular.ttf
+        text-size: 12
+        text-format: '{0:.0f}'
+        color: darkorange
+        formula: '1'
 - index: 5
   name: DIST_ETE
-  label: DIST/ETE
-  label-size: 9
-  label-color: Gold
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - text: ${sim/cockpit2/radios/indicators/gps_dme_distance_nm}nm
-      text-format: '{0:.1f}'
-      text-font: B612Mono-Regular.ttf
-      text-size: 13
-      color: white
-      formula: '1'
-    - text: ${sim/cockpit2/radios/indicators/gps_dme_time_min}min
-      text-format: '{0:.0f}'
-      text-font: B612Mono-Regular.ttf
-      text-size: 13
-      color: darkorange
-      formula: '1'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: DIST/ETE
+    label-size: 9
+    label-color: Gold
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: ${sim/cockpit2/radios/indicators/gps_dme_distance_nm}nm
+        text-format: '{0:.1f}'
+        text-font: B612Mono-Regular.ttf
+        text-size: 13
+        color: white
+        formula: '1'
+      - text: ${sim/cockpit2/radios/indicators/gps_dme_time_min}min
+        text-format: '{0:.0f}'
+        text-font: B612Mono-Regular.ttf
+        text-size: 13
+        color: darkorange
+        formula: '1'
 - index: 6
   name: GS_DTK
-  label: GS/DTK
-  label-size: 9
-  label-color: Gold
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - text: ${sim/cockpit2/gauges/indicators/ground_speed_kt}kts
-      text-format: '{0:.0f}'
-      text-font: B612Mono-Regular.ttf
-      text-size: 13
-      color: white
-      formula: '1'
-    - text: ${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}
-      text-format: '{0:.0f}'
-      text-font: B612Mono-Regular.ttf
-      text-size: 13
-      color: darkorange
-      formula: '1'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: GS/DTK
+    label-size: 9
+    label-color: Gold
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: ${sim/cockpit2/gauges/indicators/ground_speed_kt}kts
+        text-format: '{0:.0f}'
+        text-font: B612Mono-Regular.ttf
+        text-size: 13
+        color: white
+        formula: '1'
+      - text: ${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}
+        text-format: '{0:.0f}'
+        text-font: B612Mono-Regular.ttf
+        text-size: 13
+        color: darkorange
+        formula: '1'
 - index: 7
   name: TOD
-  label: TOD
-  label-size: 9
-  label-color: Gold
-  text: '${sim/cockpit2/radios/indicators/fms_distance_to_tod_pilot}
+  activation:
+    type: none
+  representation:
+    type: text
+    label: TOD
+    label-size: 9
+    label-color: Gold
+    text: '${sim/cockpit2/radios/indicators/fms_distance_to_tod_pilot}
 
-    nm'
-  text-format: '{0:.1f}'
-  text-font: B612Mono-Regular.ttf
-  text-size: 10
-  text-color: white
-  activation: none
-  representation: text
+      nm'
+    text-format: '{0:.1f}'
+    text-font: B612Mono-Regular.ttf
+    text-size: 10
+    text-color: white
 - index: 8
   name: WP_PREV
-  label: WP
-  label-size: 9
-  label-color: Gold
-  text: 
-  text-font: fontawesome.otf
-  text-size: 12
-  text-color: white
-  activation: push
-  representation: text
-  commands:
-    press: cockpitdecks/fms_browser/wp_previous
+  activation:
+    type: push
+    commands:
+      press: cockpitdecks/fms_browser/wp_previous
+  representation:
+    type: text
+    label: WP
+    label-size: 9
+    label-color: Gold
+    text: 
+    text-font: fontawesome.otf
+    text-size: 12
+    text-color: white
 - index: 9
   name: WP_DIRECT
-  label: DIRECT
-  label-size: 9
-  label-color: lime
-  text: D→
-  text-font: B612Mono-Regular.ttf
-  text-size: 11
-  text-color: lime
-  activation: push
-  representation: text
-  commands:
-    press: cockpitdecks/fms_browser/wp_direct
+  activation:
+    type: push
+    commands:
+      press: cockpitdecks/fms_browser/wp_direct
+  representation:
+    type: text
+    label: DIRECT
+    label-size: 9
+    label-color: lime
+    text: D→
+    text-font: B612Mono-Regular.ttf
+    text-size: 11
+    text-color: lime
 - index: 10
   name: WP_NEXT
-  label: WP
-  label-size: 9
-  label-color: Gold
-  text: 
-  text-font: fontawesome.otf
-  text-size: 12
-  text-color: white
-  activation: push
-  representation: text
-  commands:
-    press: cockpitdecks/fms_browser/wp_next
+  activation:
+    type: push
+    commands:
+      press: cockpitdecks/fms_browser/wp_next
+  representation:
+    type: text
+    label: WP
+    label-size: 9
+    label-color: Gold
+    text: 
+    text-font: fontawesome.otf
+    text-size: 12
+    text-color: white
 - index: 11
   name: WP_CLR
-  label: CLR
-  label-size: 9
-  label-color: red
-  text: 
-  text-font: fontawesome.otf
-  text-size: 12
-  text-color: red
-  activation: push
-  representation: text
-  commands:
-    press: cockpitdecks/fms_browser/clear_fms_entry
+  activation:
+    type: push
+    commands:
+      press: cockpitdecks/fms_browser/clear_fms_entry
+  representation:
+    type: text
+    label: CLR
+    label-size: 9
+    label-color: red
+    text: 
+    text-font: fontawesome.otf
+    text-size: 12
+    text-color: red
 - index: 12
   name: ETA
-  label: ETA
-  label-size: 9
-  label-color: Gold
-  text: ${sim/cockpit2/radios/indicators/fms1_act_eta_hour}:${sim/cockpit2/radios/indicators/fms1_act_eta_minute}Z
-  text-font: B612Mono-Regular.ttf
-  text-size: 11
-  text-color: darkorange
-  activation: none
-  representation: text
+  activation:
+    type: none
+  representation:
+    type: text
+    label: ETA
+    label-size: 9
+    label-color: Gold
+    text: ${sim/cockpit2/radios/indicators/fms1_act_eta_hour}:${sim/cockpit2/radios/indicators/fms1_act_eta_minute}Z
+    text-font: B612Mono-Regular.ttf
+    text-size: 11
+    text-color: darkorange
 - index: 13
   name: SID_STAR
-  label: SID/STAR
-  label-size: 9
-  label-color: Gold
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - text: ${cockpitdecks/fms_browser/plan_sid}
-      text-font: B612Mono-Regular.ttf
-      text-size: 11
-      color: white
-      formula: '1'
-    - text: ${cockpitdecks/fms_browser/plan_star}
-      text-font: B612Mono-Regular.ttf
-      text-size: 11
-      color: darkorange
-      formula: '1'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: SID/STAR
+    label-size: 9
+    label-color: Gold
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: ${cockpitdecks/fms_browser/plan_sid}
+        text-font: B612Mono-Regular.ttf
+        text-size: 11
+        color: white
+        formula: '1'
+      - text: ${cockpitdecks/fms_browser/plan_star}
+        text-font: B612Mono-Regular.ttf
+        text-size: 11
+        color: darkorange
+        formula: '1'
 - index: 17
   name: PLAN_PREV
-  label: PLAN
-  label-size: 9
-  label-color: Gold
-  text: 
-  text-font: fontawesome.otf
-  text-size: 12
-  text-color: white
-  activation: push
-  representation: text
-  commands:
-    press: cockpitdecks/fms_browser/previous
+  activation:
+    type: push
+    commands:
+      press: cockpitdecks/fms_browser/previous
+  representation:
+    type: text
+    label: PLAN
+    label-size: 9
+    label-color: Gold
+    text: 
+    text-font: fontawesome.otf
+    text-size: 12
+    text-color: white
 - index: 18
   name: PLAN_FILE
-  label: PLAN FILE
-  label-size: 9
-  label-color: Gold
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - text: ${cockpitdecks/fms_browser/plan_filename}
-      text-font: B612Mono-Regular.ttf
-      text-size: 11
-      color: darkorange
-      formula: '1'
-    - text: ${cockpitdecks/fms_browser/index}/${cockpitdecks/fms_browser/count}
-      text-font: B612Mono-Regular.ttf
-      text-size: 15
-      color: white
-      formula: '1'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: PLAN FILE
+    label-size: 9
+    label-color: Gold
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: ${cockpitdecks/fms_browser/plan_filename}
+        text-font: B612Mono-Regular.ttf
+        text-size: 11
+        color: darkorange
+        formula: '1'
+      - text: ${cockpitdecks/fms_browser/index}/${cockpitdecks/fms_browser/count}
+        text-font: B612Mono-Regular.ttf
+        text-size: 15
+        color: white
+        formula: '1'
 - index: 19
   name: PLAN_NEXT
-  label: PLAN
-  label-size: 9
-  label-color: Gold
-  text: 
-  text-font: fontawesome.otf
-  text-size: 12
-  text-color: white
-  activation: push
-  representation: text
-  commands:
-    press: cockpitdecks/fms_browser/next
+  activation:
+    type: push
+    commands:
+      press: cockpitdecks/fms_browser/next
+  representation:
+    type: text
+    label: PLAN
+    label-size: 9
+    label-color: Gold
+    text: 
+    text-font: fontawesome.otf
+    text-size: 12
+    text-color: white
 - index: 20
   name: PLAN_LOAD
-  label: LOAD
-  label-size: 9
-  label-color: lime
-  text: 
-  text-font: fontawesome.otf
-  text-size: 11
-  text-color: lime
-  activation: push
-  representation: text
-  commands:
-    press: cockpitdecks/fms_browser/load
+  activation:
+    type: push
+    commands:
+      press: cockpitdecks/fms_browser/load
+  representation:
+    type: text
+    label: LOAD
+    label-size: 9
+    label-color: lime
+    text: 
+    text-font: fontawesome.otf
+    text-size: 11
+    text-color: lime
 - index: 21
   name: PLAN_REFRESH
-  label: REFRESH
-  label-size: 9
-  label-color: Gold
-  text: 
-  text-font: fontawesome.otf
-  text-size: 11
-  text-color: white
-  activation: push
-  representation: text
-  commands:
-    press: cockpitdecks/fms_browser/refresh
+  activation:
+    type: push
+    commands:
+      press: cockpitdecks/fms_browser/refresh
+  representation:
+    type: text
+    label: REFRESH
+    label-size: 9
+    label-color: Gold
+    text: 
+    text-font: fontawesome.otf
+    text-size: 11
+    text-color: white

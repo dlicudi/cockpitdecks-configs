@@ -4,157 +4,191 @@ version: 1.0.0
 last-updated: 31-OCT-2024
 buttons:
 - index: 1
-  text:
-    text: ${fa:arrow-up}
-    text-color: coral
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: push
-  representation: text
-  commands:
-    press: pikitanga/AptNav/MoveDown
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/MoveDown
+  representation:
+    type: text
+    text:
+      text: ${fa:arrow-up}
+      text-color: coral
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 2
-  text:
-    text: ${fa:plus}
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: push
-  representation: text
-  commands:
-    press: pikitanga/AptNav/ZoomIn
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/ZoomIn
+  representation:
+    type: text
+    text:
+      text: ${fa:plus}
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 8
-  text:
-    text: ${fa:arrow-left}
-    text-color: coral
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: push
-  representation: text
-  commands:
-    press: pikitanga/AptNav/MoveRight
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/MoveRight
+  representation:
+    type: text
+    text:
+      text: ${fa:arrow-left}
+      text-color: coral
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 9
-  text:
-    text: ${fa:arrows-to-dot}
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: push
-  representation: text
-  commands:
-    press: pikitanga/AptNav/ZoomReset
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/ZoomReset
+  representation:
+    type: text
+    text:
+      text: ${fa:arrows-to-dot}
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 10
-  text:
-    text: ${fa:arrow-right}
-    text-color: coral
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: push
-  representation: text
-  commands:
-    press: pikitanga/AptNav/MoveLeft
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/MoveLeft
+  representation:
+    type: text
+    text:
+      text: ${fa:arrow-right}
+      text-color: coral
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 16
-  text:
-    text: ${fa:location-crosshairs}
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: push
-  representation: text
-  commands:
-    press: pikitanga/AptNav/MoveCenter
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/MoveCenter
+  representation:
+    type: text
+    text:
+      text: ${fa:location-crosshairs}
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 17
-  text:
-    text: ${fa:arrow-down}
-    text-color: coral
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: push
-  representation: text
-  commands:
-    press: pikitanga/AptNav/MoveUp
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/MoveUp
+  representation:
+    type: text
+    text:
+      text: ${fa:arrow-down}
+      text-color: coral
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 18
-  text:
-    text: ${fa:minus}
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: push
-  representation: text
-  commands:
-    press: pikitanga/AptNav/ZoomOut
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/ZoomOut
+  representation:
+    type: text
+    text:
+      text: ${fa:minus}
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 4
-  text:
-    text: ${fa:square-parking}
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: push
-  representation: text
-  commands:
-    press: pikitanga/AptNav/ToggleRamp
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/ToggleRamp
+  representation:
+    type: text
+    text:
+      text: ${fa:square-parking}
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 12
-  text:
-    text: ${fa:plane-departure}
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: push
-  representation: text
-  commands:
-    press: pikitanga/AptNav/ToggleTaxi
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/ToggleTaxi
+  representation:
+    type: text
+    text:
+      text: ${fa:plane-departure}
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 20
-  text:
-    text: ${fa:location-dot}
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: push
-  representation: text
-  commands:
-    press: pikitanga/AptNav/ToggleTracking
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/ToggleTracking
+  representation:
+    type: text
+    text:
+      text: ${fa:location-dot}
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 6
-  text:
-    text: ${far:circle}
-    text-font: Font Awesome 6 Free-Regular-400.otf
-    text-size: 60
-  activation: push
-  representation: text
-  commands:
-    press: pikitanga/AptNav/BackgroundNone
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/BackgroundNone
+  representation:
+    type: text
+    text:
+      text: ${far:circle}
+      text-font: Font Awesome 6 Free-Regular-400.otf
+      text-size: 60
 - index: 14
-  text:
-    text: ${fa:circle-half-stroke}
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: push
-  representation: text
-  commands:
-    press: pikitanga/AptNav/BackgroundSemi
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/BackgroundSemi
+  representation:
+    type: text
+    text:
+      text: ${fa:circle-half-stroke}
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 22
-  text:
-    text: ${fa:circle}
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: push
-  representation: text
-  commands:
-    press: pikitanga/AptNav/BackgroundBlack
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/BackgroundBlack
+  representation:
+    type: text
+    text:
+      text: ${fa:circle}
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 15
-  text:
-    text: ${fa:radio}
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: push
-  representation: text
-  commands:
-    press: pikitanga/AptNav/ToggleComm
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/ToggleComm
+  representation:
+    type: text
+    text:
+      text: ${fa:radio}
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 7
-  text:
-    text: ${fa:map}
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: push
-  representation: text
-  commands:
-    press: pikitanga/AptNav/ToggleMap
+  activation:
+    type: push
+    commands:
+      press: pikitanga/AptNav/ToggleMap
+  representation:
+    type: text
+    text:
+      text: ${fa:map}
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 31
   name: BACK
-  page: back
-  icon: A339
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: back
+  representation:
+    type: icon
+    icon: A339
 default-text-size: 20

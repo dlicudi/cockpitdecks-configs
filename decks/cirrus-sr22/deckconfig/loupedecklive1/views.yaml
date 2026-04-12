@@ -5,173 +5,197 @@ includes:
 buttons:
 - index: 0
   name: QUICKLOOK0
-  label: QUICK LOOK
-  label-color: Gold
-  label-size: 10
-  text: '0'
-  text-color: khaki
-  text-size: 15
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  activation: push
-  representation: text
-  commands:
-    press: sim/view/quick_look_0
-    long-press: sim/view/quick_look_0_mem
+  activation:
+    type: push
+    commands:
+      press: sim/view/quick_look_0
+      long-press: sim/view/quick_look_0_mem
+  representation:
+    type: text
+    label: QUICK LOOK
+    label-color: Gold
+    label-size: 10
+    text: '0'
+    text-color: khaki
+    text-size: 15
+    text-font: D-DINCondensed.otf
+    text-position: cm
 - index: 1
   name: QUICKLOOK1
-  label: QUICK LOOK
-  label-color: Gold
-  label-size: 10
-  text: '1'
-  text-color: khaki
-  text-size: 15
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  activation: push
-  representation: text
-  commands:
-    press: sim/view/quick_look_1
-    long-press: sim/view/quick_look_1_mem
+  activation:
+    type: push
+    commands:
+      press: sim/view/quick_look_1
+      long-press: sim/view/quick_look_1_mem
+  representation:
+    type: text
+    label: QUICK LOOK
+    label-color: Gold
+    label-size: 10
+    text: '1'
+    text-color: khaki
+    text-size: 15
+    text-font: D-DINCondensed.otf
+    text-position: cm
 - index: 2
   name: QUICKLOOK2
-  label: QUICK LOOK
-  label-color: Gold
-  label-size: 10
-  text: '2'
-  text-color: khaki
-  text-size: 15
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  activation: push
-  representation: text
-  commands:
-    press: sim/view/quick_look_2
-    long-press: sim/view/quick_look_2_mem
+  activation:
+    type: push
+    commands:
+      press: sim/view/quick_look_2
+      long-press: sim/view/quick_look_2_mem
+  representation:
+    type: text
+    label: QUICK LOOK
+    label-color: Gold
+    label-size: 10
+    text: '2'
+    text-color: khaki
+    text-size: 15
+    text-font: D-DINCondensed.otf
+    text-position: cm
 - index: 3
   name: QUICKLOOK3
-  label: QUICK LOOK
-  label-color: Gold
-  label-size: 10
-  text: '3'
-  text-color: khaki
-  text-size: 15
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  activation: push
-  representation: text
-  commands:
-    press: sim/view/quick_look_3
-    long-press: sim/view/quick_look_3_mem
+  activation:
+    type: push
+    commands:
+      press: sim/view/quick_look_3
+      long-press: sim/view/quick_look_3_mem
+  representation:
+    type: text
+    label: QUICK LOOK
+    label-color: Gold
+    label-size: 10
+    text: '3'
+    text-color: khaki
+    text-size: 15
+    text-font: D-DINCondensed.otf
+    text-position: cm
 - index: 4
   name: QUICKLOOK4
-  label: QUICK LOOK
-  label-color: Gold
-  label-size: 10
-  text: '4'
-  text-color: khaki
-  text-size: 15
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  activation: push
-  representation: text
-  commands:
-    press: sim/view/quick_look_4
-    long-press: sim/view/quick_look_4_mem
+  activation:
+    type: push
+    commands:
+      press: sim/view/quick_look_4
+      long-press: sim/view/quick_look_4_mem
+  representation:
+    type: text
+    label: QUICK LOOK
+    label-color: Gold
+    label-size: 10
+    text: '4'
+    text-color: khaki
+    text-size: 15
+    text-font: D-DINCondensed.otf
+    text-position: cm
 - index: 5
   name: QUICKLOOK5
-  label: QUICK LOOK
-  label-color: Gold
-  label-size: 10
-  text: '5'
-  text-color: khaki
-  text-size: 15
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  activation: push
-  representation: text
-  commands:
-    press: sim/view/quick_look_5
-    long-press: sim/view/quick_look_5_mem
+  activation:
+    type: push
+    commands:
+      press: sim/view/quick_look_5
+      long-press: sim/view/quick_look_5_mem
+  representation:
+    type: text
+    label: QUICK LOOK
+    label-color: Gold
+    label-size: 10
+    text: '5'
+    text-color: khaki
+    text-size: 15
+    text-font: D-DINCondensed.otf
+    text-position: cm
 - index: 6
   name: QUICKLOOK6
-  label: QUICK LOOK
-  label-color: Gold
-  label-size: 10
-  text: '6'
-  text-color: khaki
-  text-size: 15
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  activation: push
-  representation: text
-  commands:
-    press: sim/view/quick_look_6
-    long-press: sim/view/quick_look_6_mem
+  activation:
+    type: push
+    commands:
+      press: sim/view/quick_look_6
+      long-press: sim/view/quick_look_6_mem
+  representation:
+    type: text
+    label: QUICK LOOK
+    label-color: Gold
+    label-size: 10
+    text: '6'
+    text-color: khaki
+    text-size: 15
+    text-font: D-DINCondensed.otf
+    text-position: cm
 - index: 7
   name: QUICKLOOK7
-  label: QUICK LOOK
-  label-color: Gold
-  label-size: 10
-  text: '7'
-  text-color: khaki
-  text-size: 15
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  activation: push
-  representation: text
-  commands:
-    press: sim/view/quick_look_7
-    long-press: sim/view/quick_look_7_mem
+  activation:
+    type: push
+    commands:
+      press: sim/view/quick_look_7
+      long-press: sim/view/quick_look_7_mem
+  representation:
+    type: text
+    label: QUICK LOOK
+    label-color: Gold
+    label-size: 10
+    text: '7'
+    text-color: khaki
+    text-size: 15
+    text-font: D-DINCondensed.otf
+    text-position: cm
 - index: 8
   name: COCKPIT
-  label: VIEW
-  label-color: Gold
-  text: 3D COCKPIT
-  text-color: khaki
-  text-size: 20
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  activation: push
-  representation: text
-  commands:
-    press: sim/view/3d_cockpit
+  activation:
+    type: push
+    commands:
+      press: sim/view/3d_cockpit
+  representation:
+    type: text
+    label: VIEW
+    label-color: Gold
+    text: 3D COCKPIT
+    text-color: khaki
+    text-size: 20
+    text-font: D-DINCondensed.otf
+    text-position: cm
 - index: 9
   name: CHASE
-  label: VIEW
-  label-color: Gold
-  text: CHASE
-  text-color: khaki
-  text-size: 20
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  activation: push
-  representation: text
-  commands:
-    press: sim/view/chase
+  activation:
+    type: push
+    commands:
+      press: sim/view/chase
+  representation:
+    type: text
+    label: VIEW
+    label-color: Gold
+    text: CHASE
+    text-color: khaki
+    text-size: 20
+    text-font: D-DINCondensed.otf
+    text-position: cm
 - index: 10
   name: FORWARD
-  label: VIEW
-  label-color: Gold
-  text: FORWARD
-  text-color: khaki
-  text-size: 20
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  activation: push
-  representation: text
-  commands:
-    press: sim/view/forward
+  activation:
+    type: push
+    commands:
+      press: sim/view/forward
+  representation:
+    type: text
+    label: VIEW
+    label-color: Gold
+    text: FORWARD
+    text-color: khaki
+    text-size: 20
+    text-font: D-DINCondensed.otf
+    text-position: cm
 - index: 11
   name: PHYSICS
-  label: VIEW
-  label-color: Gold
-  text: PHYSICS
-  text-color: khaki
-  text-size: 20
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  activation: push
-  representation: text
-  commands:
-    press: sim/view/show_physics_model
+  activation:
+    type: push
+    commands:
+      press: sim/view/show_physics_model
+  representation:
+    type: text
+    label: VIEW
+    label-color: Gold
+    text: PHYSICS
+    text-color: khaki
+    text-size: 20
+    text-font: D-DINCondensed.otf
+    text-position: cm

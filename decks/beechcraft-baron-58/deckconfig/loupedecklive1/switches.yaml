@@ -5,210 +5,232 @@ includes:
 name: switches
 buttons:
 - index: 0
-  label: BAT
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/electrical/battery_on[0]} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/electrical/battery_on[0]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/electrical/battery_1_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/electrical/battery_1_toggle
+  representation:
+    type: annunciator
+    label: BAT
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/electrical/battery_on[0]} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/battery_on[0]} 1 eq
 - index: 1
+  activation:
+    type: push
+    commands:
+      press: sim/electrical/generator_1_toggle
+  representation:
+    type: annunciator
+    label: L ALT
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
   vibrate: SHORT
-  label: L ALT
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/electrical/generator_1_toggle
 - index: 2
+  activation:
+    type: push
+    commands:
+      press: sim/electrical/generator_2_toggle
+  representation:
+    type: annunciator
+    label: R ALT
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/generator_on[1]} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
   vibrate: SHORT
-  label: R ALT
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/electrical/generator_on[1]} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/electrical/generator_2_toggle
 - index: 3
-  label: AVIONICS
-  label-color: black
-  label-size: 10
-  label-position: ct
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/avionics_power_on} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/systems/avionics_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/systems/avionics_toggle
+  representation:
+    type: annunciator
+    label: AVIONICS
+    label-color: black
+    label-size: 10
+    label-position: ct
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/avionics_power_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
 - index: 4
-  label: PROP SYNC
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/switches/prop_sync_on} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/switches/prop_sync_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/systems/prop_sync_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/systems/prop_sync_toggle
+  representation:
+    type: annunciator
+    label: PROP SYNC
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/switches/prop_sync_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/prop_sync_on} 1 eq
 - index: 5
-  label: FUEL PUMP L
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/engine/fuel_pump_on[0]} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/engine/fuel_pump_on[0]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/fuel/fuel_pump_1_tog
+  activation:
+    type: push
+    commands:
+      press: sim/fuel/fuel_pump_1_tog
+  representation:
+    type: annunciator
+    label: FUEL PUMP L
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/engine/fuel_pump_on[0]} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/engine/fuel_pump_on[0]} 1 eq
 - index: 6
-  label: FUEL PUMP R
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/engine/fuel_pump_on[1]} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/engine/fuel_pump_on[1]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/fuel/fuel_pump_2_tog
+  activation:
+    type: push
+    commands:
+      press: sim/fuel/fuel_pump_2_tog
+  representation:
+    type: annunciator
+    label: FUEL PUMP R
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/engine/fuel_pump_on[1]} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/engine/fuel_pump_on[1]} 1 eq
 - index: 7
-  page: g530
-  label: G530
-  label-color: Gold
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 30, 40)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: g530
+  representation:
+    type: text
+    label: G530
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 30, 40)
 - index: 8
+  activation:
+    type: long-press
+    commands:
+      press: sim/ignition/engage_starter_1
+  representation:
+    type: multi-texts
+    label: IGN 1
+    label-color: Lime
+    text-bg-color: Black
+    multi-texts:
+    - text: 'OFF'
+      text-color: White
+    - text: R
+      text-color: Orange
+    - text: L
+      text-color: Orange
+    - text: BOTH
+      text-color: Orange
+    - text: START
+      text-color: Red
+    formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
   vibrate: LONG
-  label: IGN 1
-  label-color: Lime
-  text-bg-color: Black
-  multi-texts:
-  - text: 'OFF'
-    text-color: White
-  - text: R
-    text-color: Orange
-  - text: L
-    text-color: Orange
-  - text: BOTH
-    text-color: Orange
-  - text: START
-    text-color: Red
-  formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
-  activation: long-press
-  representation: multi-texts
-  commands:
-    press: sim/ignition/engage_starter_1
 - index: 9
+  activation:
+    type: long-press
+    commands:
+      press: sim/ignition/engage_starter_2
+  representation:
+    type: multi-texts
+    label: IGN 2
+    label-color: Lime
+    text-bg-color: Black
+    multi-texts:
+    - text: 'OFF'
+      text-color: White
+    - text: R
+      text-color: Orange
+    - text: L
+      text-color: Orange
+    - text: BOTH
+      text-color: Orange
+    - text: START
+      text-color: Red
+    formula: ${sim/cockpit2/engine/actuators/ignition_key[1]}
   vibrate: LONG
-  label: IGN 2
-  label-color: Lime
-  text-bg-color: Black
-  multi-texts:
-  - text: 'OFF'
-    text-color: White
-  - text: R
-    text-color: Orange
-  - text: L
-    text-color: Orange
-  - text: BOTH
-    text-color: Orange
-  - text: START
-    text-color: Red
-  formula: ${sim/cockpit2/engine/actuators/ignition_key[1]}
-  activation: long-press
-  representation: multi-texts
-  commands:
-    press: sim/ignition/engage_starter_2
 - index: 11
-  label: LIGHTS
-  label-color: Gold
-  label-size: 10
-  page: lights
-  text: →
-  text-font: fontawesome.otf
-  text-size: 48
-  text-color: Gold
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: lights
+  representation:
+    type: text
+    label: LIGHTS
+    label-color: Gold
+    label-size: 10
+    text: →
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold

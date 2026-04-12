@@ -4,225 +4,262 @@ last-updated: 31-OCT-2024
 buttons:
 - index: e0
   name: HUD Brightness
-  commands:
-    toggle-on: AirbusFBW/StowHUD1
-    toggle-off: AirbusFBW/PullHUD1Down
-  step: 0.1
-  value: 0.8
-  value-min: 0
-  value-max: 1
-  set-dataref: AirbuFBW/HUDBrightnessRheo[0]
-  activation: encoder-value
+  activation:
+    type: encoder-value
+    commands:
+      toggle-on: AirbusFBW/StowHUD1
+      toggle-off: AirbusFBW/PullHUD1Down
+    step: 0.1
+    value: 0.8
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbuFBW/HUDBrightnessRheo[0]
+  representation:
+    type: none
 - index: e1
   name: ND MODE ENCODER
-  commands:
-    toggle-on: none
-    toggle-off: none
-    cw: sim/instruments/EFIS_mode_dn
-    ccw: sim/instruments/EFIS_mode_up
-  options: modulo
-  activation: encoder-toggle
+  activation:
+    type: encoder-toggle
+    commands:
+      toggle-on: none
+      toggle-off: none
+      cw: sim/instruments/EFIS_mode_dn
+      ccw: sim/instruments/EFIS_mode_up
+    options: modulo
+  representation:
+    type: none
 - index: e2
   name: ND RANGE ENCODER
-  commands:
-    toggle-on: none
-    toggle-off: none
-    cw: sim/instruments/map_zoom_in
-    ccw: sim/instruments/map_zoom_out
-  options: modulo
-  activation: encoder-toggle
+  activation:
+    type: encoder-toggle
+    commands:
+      toggle-on: none
+      toggle-off: none
+      cw: sim/instruments/map_zoom_in
+      ccw: sim/instruments/map_zoom_out
+    options: modulo
+  representation:
+    type: none
 - index: e3
   name: FCU Baro
-  commands:
-    toggle-on: toliss_airbus/capt_baro_push
-    toggle-off: toliss_airbus/capt_baro_pull
-    cw: sim/instruments/barometer_down
-    ccw: sim/instruments/barometer_up
-  options: modulo
-  activation: encoder-toggle
+  activation:
+    type: encoder-toggle
+    commands:
+      toggle-on: toliss_airbus/capt_baro_push
+      toggle-off: toliss_airbus/capt_baro_pull
+      cw: sim/instruments/barometer_down
+      ccw: sim/instruments/barometer_up
+    options: modulo
+  representation:
+    type: none
 - index: 0
-  label: DECLUTTER
-  label-size: 10
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/HUD1Declutter
+  representation:
+    type: push-switch
+    label: DECLUTTER
+    label-size: 10
+    push-switch:
+      button-size: 120
+      button-fill-color: black
+      button-stroke-width: 0
+      button-underline-color: coral
+      witness-size: 0
+      down: 36
   sound: sonar-ping.wav
-  push-switch:
-    button-size: 120
-    button-fill-color: black
-    button-stroke-width: 0
-    button-underline-color: coral
-    witness-size: 0
-    down: 36
-  activation: push
-  commands:
-    press: AirbusFBW/HUD1Declutter
 - index: 1
   name: ND MODE
-  stops: 5
-  initial-value: 2
-  circular-switch:
-    button-size: 50
-    switch-style: medium
-    down: 30
-    tick-from: 90
-    tick-to: 270
-    tick-space: 40
-    tick-underline-width: 8
-    tick-label-color: coral
-    tick-underline-color: coral
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    tick-labels:
-    - LS
-    - VOR
-    - NAV
-    - ARC
-    - PLAN
-  dataref: AirbusFBW/NDmodeCapt
-  activation: sweep
-  positions:
-  - sim/instruments/EFIS_mode_up
-  - sim/instruments/EFIS_mode_dn
+  activation:
+    type: sweep
+    stops: 5
+    initial-value: 2
+    dataref: AirbusFBW/NDmodeCapt
+    positions:
+    - sim/instruments/EFIS_mode_up
+    - sim/instruments/EFIS_mode_dn
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 50
+      switch-style: medium
+      down: 30
+      tick-from: 90
+      tick-to: 270
+      tick-space: 40
+      tick-underline-width: 8
+      tick-label-color: coral
+      tick-underline-color: coral
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      tick-labels:
+      - LS
+      - VOR
+      - NAV
+      - ARC
+      - PLAN
 - index: 2
   name: ND RANGE
-  stops: 6
-  initial-value: 2
-  circular-switch:
-    button-size: 50
-    switch-style: medium
-    down: 30
-    tick-from: 90
-    tick-to: 315
-    tick-space: 40
-    tick-underline-width: 8
-    tick-label-color: AIRBUS_BACKLIGHT
-    tick-underline-color: AIRBUS_BACKLIGHT
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    tick-labels:
-    - '10'
-    - '20'
-    - '40'
-    - '80'
-    - '160'
-    - '320'
-  dataref: AirbusFBW/NDrangeCapt
-  activation: sweep
-  positions:
-  - sim/instruments/map_zoom_out
-  - sim/instruments/map_zoom_in
+  activation:
+    type: sweep
+    stops: 6
+    initial-value: 2
+    dataref: AirbusFBW/NDrangeCapt
+    positions:
+    - sim/instruments/map_zoom_out
+    - sim/instruments/map_zoom_in
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 50
+      switch-style: medium
+      down: 30
+      tick-from: 90
+      tick-to: 315
+      tick-space: 40
+      tick-underline-width: 8
+      tick-label-color: AIRBUS_BACKLIGHT
+      tick-underline-color: AIRBUS_BACKLIGHT
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      tick-labels:
+      - '10'
+      - '20'
+      - '40'
+      - '80'
+      - '160'
+      - '320'
 - index: 3
   name: INORMB
-  stops: 2
-  circular-switch:
-    button-size: 100
-    switch-style: none
-    down: 30
-    tick-from: 140
-    tick-to: 220
-    tick-space: 10
-    tick-underline-width: 8
-    tick-label-color: coral
-    tick-underline-color: coral
-    needle-color: white
-    needle-length: 50
-    tick-label-size: 36
-    tick-label-font: D-DIN-Bold.otf
-    tick-labels:
-    - inHg
-    - hPa
-  set-dataref: AirbusFBW/BaroUnitCapt
-  dataref: AirbusFBW/BaroUnitCapt
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: AirbusFBW/BaroUnitCapt
+    dataref: AirbusFBW/BaroUnitCapt
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 100
+      switch-style: none
+      down: 30
+      tick-from: 140
+      tick-to: 220
+      tick-space: 10
+      tick-underline-width: 8
+      tick-label-color: coral
+      tick-underline-color: coral
+      needle-color: white
+      needle-length: 50
+      tick-label-size: 36
+      tick-label-font: D-DIN-Bold.otf
+      tick-labels:
+      - inHg
+      - hPa
 - index: 4
   name: HUD MODE
-  switch:
-    switch-width: 20
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - NORM
-    - X-WIND
-    tick-width: 0
-    tick-space: 10
-    tick-label-size: 30
-    tick-label-font: DIN Bold
-  options: hexa,invert
-  set-dataref: AirbusFBW/HUDModeSwitch[0]
-  activation: sweep
+  activation:
+    type: sweep
+    options: hexa,invert
+    set-dataref: AirbusFBW/HUDModeSwitch[0]
+  representation:
+    type: switch
+    switch:
+      switch-width: 20
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - NORM
+      - X-WIND
+      tick-width: 0
+      tick-space: 10
+      tick-label-size: 30
+      tick-label-font: DIN Bold
 - index: 5
   name: FD 1
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${AirbusFBW/FD1Engage}
-    - text: FD
-      color: white
-      text-size: 64
-      text-font: DIN Bold
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: toliss_airbus/fd1_push
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/fd1_push
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${AirbusFBW/FD1Engage}
+      - text: FD
+        color: white
+        text-size: 64
+        text-font: DIN Bold
+        formula: '1'
 - index: 6
   name: LS 1
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${AirbusFBW/ILSonCapt}
-    - text: LS
-      color: white
-      text-size: 64
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/dispcommands/CaptLSButtonPush
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${AirbusFBW/ILSonCapt}
+      - text: LS
+        color: white
+        text-size: 64
+        text-font: DIN Bold
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_1
-  activation: push
-  representation: annunciator
-  commands:
-    press: toliss_airbus/dispcommands/CaptLSButtonPush
 - index: 7
-  formula: ${AirbusFBW/BaroUnitCapt} ${AirbusFBW/BaroStdCapt} 2 * +
-  multi-texts:
-  - text: ${formula}
-    text-format: '{:4.2f}'
-    text-color: khaki
-    text-size: 48
-    text-font: Segment7Standard.otf
-    text-bg-color: (40, 40, 40)
-    formula: ${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}
-  - text: ${formula}
-    text-format: '{:4.0f}'
-    text-color: khaki
-    text-size: 48
-    text-font: Segment7Standard.otf
-    text-bg-color: (40, 40, 40)
-    formula: ${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot} 33.86389 * round
-  - text: Std
-    text-color: khaki
-    text-size: 48
-    text-font: Segment7Standard.otf
-    text-bg-color: (40, 40, 40)
-  - text: Std
-    text-color: khaki
-    text-size: 48
-    text-font: Segment7Standard.otf
-    text-bg-color: (40, 40, 40)
-  activation: sweep
-  representation: multi-texts
-  positions:
-  - toliss_airbus/capt_baro_push
-  - toliss_airbus/capt_baro_pull
+  activation:
+    type: sweep
+    positions:
+    - toliss_airbus/capt_baro_push
+    - toliss_airbus/capt_baro_pull
+  representation:
+    type: multi-texts
+    formula: ${AirbusFBW/BaroUnitCapt} ${AirbusFBW/BaroStdCapt} 2 * +
+    multi-texts:
+    - text: ${formula}
+      text-format: '{:4.2f}'
+      text-color: khaki
+      text-size: 48
+      text-font: Segment7Standard.otf
+      text-bg-color: (40, 40, 40)
+      formula: ${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}
+    - text: ${formula}
+      text-format: '{:4.0f}'
+      text-color: khaki
+      text-size: 48
+      text-font: Segment7Standard.otf
+      text-bg-color: (40, 40, 40)
+      formula: ${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot} 33.86389 * round
+    - text: Std
+      text-color: khaki
+      text-size: 48
+      text-font: Segment7Standard.otf
+      text-bg-color: (40, 40, 40)
+    - text: Std
+      text-color: khaki
+      text-size: 48
+      text-font: Segment7Standard.otf
+      text-bg-color: (40, 40, 40)
 - index: touchscreen
   name: FMA_DISPLAY
-  page: fcu
+  activation:
+    type: page
+    page: fcu
+  representation:
+    type: none
   string-datarefs:
   - AirbusFBW/FMA1w
   - AirbusFBW/FMA1g
@@ -246,4 +283,3 @@ buttons:
     label-mode: 0
     text-size: 60
     text-font: B612-Bold
-  activation: page

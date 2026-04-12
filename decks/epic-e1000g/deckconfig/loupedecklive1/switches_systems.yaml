@@ -8,143 +8,159 @@ default-annunciator-color: '#222222'
 buttons:
 - index: 0
   name: PRESS AIR
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'PRESS
+  activation:
+    type: sweep
+    positions:
+    - aerobask/press_air_toggle
+    - aerobask/press_air_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'PRESS
 
-        AIR'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_press_air} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/press_air_toggle
-  - aerobask/press_air_toggle
+          AIR'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_press_air} 1 eq
 - index: 1
   name: AUTOPILOT
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'AUTO
+  activation:
+    type: sweep
+    positions:
+    - aerobask/otto_pwr_toggle
+    - aerobask/otto_pwr_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'AUTO
 
-        PILOT'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_otto} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/otto_pwr_toggle
-  - aerobask/otto_pwr_toggle
+          PILOT'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_otto} 1 eq
 - index: 2
   name: TRIM
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: TRIM
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_trim} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/trim_toggle
-  - aerobask/trim_toggle
+  activation:
+    type: sweep
+    positions:
+    - aerobask/trim_toggle
+    - aerobask/trim_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: TRIM
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_trim} 1 eq
 - index: 4
   name: DUMP VALVE
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'DUMP
+  activation:
+    type: sweep
+    positions:
+    - aerobask/dump_valve_toggle
+    - aerobask/dump_valve_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'DUMP
 
-        VALVE'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_dump_valve} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/dump_valve_toggle
-  - aerobask/dump_valve_toggle
+          VALVE'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_dump_valve} 1 eq
 - index: 5
   name: EMERG OXYGEN
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'EMERG
+  activation:
+    type: sweep
+    positions:
+    - aerobask/emerg_oxygen_toggle
+    - aerobask/emerg_oxygen_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'EMERG
 
-        OXYGEN'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_emerg_oxygen} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/emerg_oxygen_toggle
-  - aerobask/emerg_oxygen_toggle
+          OXYGEN'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_emerg_oxygen} 1 eq
 - index: 6
   name: EMERG PRESS
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'EMERG
+  activation:
+    type: sweep
+    positions:
+    - aerobask/emerg_press
+    - aerobask/emerg_press
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'EMERG
 
-        PRESS'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_emerg_press} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/emerg_press
-  - aerobask/emerg_press
+          PRESS'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_emerg_press} 1 eq
 - index: 8
   name: Back
-  page: switches_pretaxi
-  label: PRE-TAXI
-  label-color: Gold
-  label-size: 10
-  text: ←
-  text-font: fontawesome.otf
-  text-size: 48
-  text-color: Gold
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches_pretaxi
+  representation:
+    type: text
+    label: PRE-TAXI
+    label-color: Gold
+    label-size: 10
+    text: ←
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold
 - index: 11
   name: Next
-  page: switches_lights
-  label: LIGHTS
-  label-color: Gold
-  label-size: 10
-  text: →
-  text-font: fontawesome.otf
-  text-size: 48
-  text-color: Gold
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches_lights
+  representation:
+    type: text
+    label: LIGHTS
+    label-color: Gold
+    label-size: 10
+    text: →
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold

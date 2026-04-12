@@ -1,129 +1,153 @@
 buttons:
 - index: e0
-  dataref: sim/operation/sound/master_volume_ratio
-  step: 0.1
-  value-min: 0
-  value-max: 1
-  initial-value: 0.5
-  set-dataref: sim/operation/sound/master_volume_ratio
-  activation: encoder-value-extended
-  step-xl: 0.1
+  activation:
+    type: encoder-value-extended
+    dataref: sim/operation/sound/master_volume_ratio
+    step: 0.1
+    value-min: 0
+    value-max: 1
+    initial-value: 0.5
+    set-dataref: sim/operation/sound/master_volume_ratio
+    step-xl: 0.1
+  representation:
+    type: none
 - index: e1
-  dataref: sim/operation/sound/exterior_volume_ratio
-  step: 0.1
-  value-min: 0
-  value-max: 1
-  initial-value: 0.5
-  set-dataref: sim/operation/sound/exterior_volume_ratio
-  activation: encoder-value-extended
-  step-xl: 0.1
+  activation:
+    type: encoder-value-extended
+    dataref: sim/operation/sound/exterior_volume_ratio
+    step: 0.1
+    value-min: 0
+    value-max: 1
+    initial-value: 0.5
+    set-dataref: sim/operation/sound/exterior_volume_ratio
+    step-xl: 0.1
+  representation:
+    type: none
 - index: e2
-  dataref: sim/operation/sound/interior_volume_ratio
-  step: 0.1
-  value-min: 0
-  value-max: 1
-  initial-value: 0.5
-  set-dataref: sim/operation/sound/interior_volume_ratio
-  activation: encoder-value-extended
-  step-xl: 0.1
+  activation:
+    type: encoder-value-extended
+    dataref: sim/operation/sound/interior_volume_ratio
+    step: 0.1
+    value-min: 0
+    value-max: 1
+    initial-value: 0.5
+    set-dataref: sim/operation/sound/interior_volume_ratio
+    step-xl: 0.1
+  representation:
+    type: none
 - index: e3
-  dataref: sim/operation/sound/pilot_volume_ratio
-  step: 0.1
-  value-min: 0
-  value-max: 1
-  initial-value: 0.5
-  set-dataref: sim/operation/sound/pilot_volume_ratio
-  activation: encoder-value-extended
-  step-xl: 0.1
+  activation:
+    type: encoder-value-extended
+    dataref: sim/operation/sound/pilot_volume_ratio
+    step: 0.1
+    value-min: 0
+    value-max: 1
+    initial-value: 0.5
+    set-dataref: sim/operation/sound/pilot_volume_ratio
+    step-xl: 0.1
+  representation:
+    type: none
 - index: e4
-  dataref: sim/operation/sound/copilot_volume_ratio
-  step: 0.1
-  value-min: 0
-  value-max: 1
-  initial-value: 0.5
-  set-dataref: sim/operation/sound/copilot_volume_ratio
-  activation: encoder-value-extended
-  step-xl: 0.1
+  activation:
+    type: encoder-value-extended
+    dataref: sim/operation/sound/copilot_volume_ratio
+    step: 0.1
+    value-min: 0
+    value-max: 1
+    initial-value: 0.5
+    set-dataref: sim/operation/sound/copilot_volume_ratio
+    step-xl: 0.1
+  representation:
+    type: none
 - index: e5
-  dataref: sim/operation/sound/radio_volume_ratio
-  step: 0.1
-  value-min: 0
-  value-max: 1
-  initial-value: 0.5
-  set-dataref: sim/operation/sound/radio_volume_ratio
-  activation: encoder-value-extended
-  step-xl: 0.1
+  activation:
+    type: encoder-value-extended
+    dataref: sim/operation/sound/radio_volume_ratio
+    step: 0.1
+    value-min: 0
+    value-max: 1
+    initial-value: 0.5
+    set-dataref: sim/operation/sound/radio_volume_ratio
+    step-xl: 0.1
+  representation:
+    type: none
 - index: left
   name: left_screen
+  activation:
+    type: none
+  representation:
+    type: side-display
+    side:
+      icon-color: Black
+      labels:
+      - label: Master
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: ${sim/operation/sound/master_volume_ratio} 100 *
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: '{0:.0f}'
+        text: ${formula}%
+      - label: Exterior
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: ${sim/operation/sound/exterior_volume_ratio} 100 *
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: '{0:.0f}'
+        text: ${formula}%
+      - label: Interior
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: ${sim/operation/sound/interior_volume_ratio} 100 *
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: '{0:.0f}'
+        text: ${formula}%
   render-cooldown-ms: 333
-  side:
-    icon-color: Black
-    labels:
-    - label: Master
-      label-size: 12
-      label-font: B612-Bold
-      label-color: Gold
-      formula: ${sim/operation/sound/master_volume_ratio} 100 *
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text-format: '{0:.0f}'
-      text: ${formula}%
-    - label: Exterior
-      label-size: 12
-      label-font: B612-Bold
-      label-color: Gold
-      formula: ${sim/operation/sound/exterior_volume_ratio} 100 *
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text-format: '{0:.0f}'
-      text: ${formula}%
-    - label: Interior
-      label-size: 12
-      label-font: B612-Bold
-      label-color: Gold
-      formula: ${sim/operation/sound/interior_volume_ratio} 100 *
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text-format: '{0:.0f}'
-      text: ${formula}%
-  activation: none
 - index: right
   name: right_screen
+  activation:
+    type: none
+  representation:
+    type: side-display
+    side:
+      icon-color: Black
+      labels:
+      - label: Pilot
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: ${sim/operation/sound/pilot_volume_ratio} 100 *
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: '{0:.0f}'
+        text: ${formula}%
+      - label: Copilot
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: ${sim/operation/sound/copilot_volume_ratio} 100 *
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: '{0:.0f}'
+        text: ${formula}%
+      - label: Radio
+        label-size: 12
+        label-font: B612-Bold
+        label-color: Gold
+        formula: ${sim/operation/sound/radio_volume_ratio} 100 *
+        text-size: 18
+        text-font: Seven Segment.ttf
+        text-color: White
+        text-format: '{0:.0f}'
+        text: ${formula}%
   render-cooldown-ms: 333
-  side:
-    icon-color: Black
-    labels:
-    - label: Pilot
-      label-size: 12
-      label-font: B612-Bold
-      label-color: Gold
-      formula: ${sim/operation/sound/pilot_volume_ratio} 100 *
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text-format: '{0:.0f}'
-      text: ${formula}%
-    - label: Copilot
-      label-size: 12
-      label-font: B612-Bold
-      label-color: Gold
-      formula: ${sim/operation/sound/copilot_volume_ratio} 100 *
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text-format: '{0:.0f}'
-      text: ${formula}%
-    - label: Radio
-      label-size: 12
-      label-font: B612-Bold
-      label-color: Gold
-      formula: ${sim/operation/sound/radio_volume_ratio} 100 *
-      text-size: 18
-      text-font: Seven Segment.ttf
-      text-color: White
-      text-format: '{0:.0f}'
-      text: ${formula}%
-  activation: none

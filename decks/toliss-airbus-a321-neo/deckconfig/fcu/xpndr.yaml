@@ -6,249 +6,292 @@ version: 1.0.0
 buttons:
 - index: 2
   name: RELOAD
-  text: ${fa:rotate-right}
-  text-font: fontawesome.otf
-  text-color: rgba(0,255,0,0)
-  text-size: 60
-  text-position: cm
-  activation: reload
-  representation: text
+  activation:
+    type: reload
+  representation:
+    type: text
+    text: ${fa:rotate-right}
+    text-font: fontawesome.otf
+    text-color: rgba(0,255,0,0)
+    text-size: 60
+    text-position: cm
 - index: 3
   name: BACK
-  page: back
-  text: BACK
-  text-font: DIN Bold
-  text-color: white
-  text-size: 24
-  text-position: cm
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: back
+  representation:
+    type: text
+    text: BACK
+    text-font: DIN Bold
+    text-color: white
+    text-size: 24
+    text-position: cm
 - index: 0
   name: ATCONOFF
-  stops: 2
-  circular-switch:
-    button-size: 50
-    switch-style: medium
-    down: 30
-    tick-from: 160
-    tick-to: 200
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    tick-labels:
-    - AUTO
-    - 'ON'
-    left: 10
-  dataref: AirbusFBW/XPDRTCASMode
-  set-dataref: AirbusFBW/XPDRTCASMode
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    dataref: AirbusFBW/XPDRTCASMode
+    set-dataref: AirbusFBW/XPDRTCASMode
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 50
+      switch-style: medium
+      down: 30
+      tick-from: 160
+      tick-to: 200
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      tick-labels:
+      - AUTO
+      - 'ON'
+      left: 10
 - index: 4
   name: ATCSYS
-  label: 'S
+  activation:
+    type: sweep
+    stops: 3
+    initial-value: 2
+    dataref: AirbusFBW/XPDRSystem
+    set-dataref: AirbusFBW/XPDRSystem
+  representation:
+    type: circular-switch
+    label: 'S
 
-    Y
+      Y
 
-    S'
-  label-size: 8
-  label-position: lm
-  stops: 3
-  initial-value: 2
-  circular-switch:
-    button-size: 50
-    switch-style: medium
-    down: 30
-    tick-from: 140
-    tick-to: 200
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    tick-labels:
-    - ' '
-    - '1'
-    - '2'
-    left: 10
-  dataref: AirbusFBW/XPDRSystem
-  set-dataref: AirbusFBW/XPDRSystem
-  activation: sweep
+      S'
+    label-size: 8
+    label-position: lm
+    circular-switch:
+      button-size: 50
+      switch-style: medium
+      down: 30
+      tick-from: 140
+      tick-to: 200
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      tick-labels:
+      - ' '
+      - '1'
+      - '2'
+      left: 10
 - index: 5
   name: SQUAWK00XX
-  text: ${formula}
-  text-format: '{:02.0f}'
-  text-color: khaki
-  text-size: 50
-  text-font: 7-segment-display-extended.otf
-  text-bg-color: (40, 40, 40)
-  text-position: rm
-  formula: ${sim/cockpit/radios/transponder_code} 100 / floor
-  activation: none
-  representation: text
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ${formula}
+    text-format: '{:02.0f}'
+    text-color: khaki
+    text-size: 50
+    text-font: 7-segment-display-extended.otf
+    text-bg-color: (40, 40, 40)
+    text-position: rm
+    formula: ${sim/cockpit/radios/transponder_code} 100 / floor
 - index: 6
   name: SQUAWKXX00
-  text: ${formula}
-  text-format: '{:02.0f}'
-  text-color: khaki
-  text-size: 50
-  text-font: 7-segment-display-extended.otf
-  text-bg-color: (40, 40, 40)
-  text-position: lm
-  formula: ${sim/cockpit/radios/transponder_code} ${sim/cockpit/radios/transponder_code}
-    100 / floor 100 * -
-  activation: none
-  representation: text
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ${formula}
+    text-format: '{:02.0f}'
+    text-color: khaki
+    text-size: 50
+    text-font: 7-segment-display-extended.otf
+    text-bg-color: (40, 40, 40)
+    text-position: lm
+    formula: ${sim/cockpit/radios/transponder_code} ${sim/cockpit/radios/transponder_code} 100 / floor 100 * -
 - index: 7
   name: TCASMODE
-  stops: 5
-  circular-switch:
-    button-size: 50
-    switch-style: medium
-    down: 30
-    tick-from: 200
-    tick-to: 340
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    tick-label-font: DIN Bold
-    tick-labels:
-    - STBY
-    - ALT RPTG OFF
-    - XPNDR
-    - TA ONLY
-    - TA/RA
-    up: 30
-    left: 55
-  dataref: AirbusFBW/XPDRPower
-  set-dataref: AirbusFBW/XPDRPower
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 5
+    dataref: AirbusFBW/XPDRPower
+    set-dataref: AirbusFBW/XPDRPower
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 50
+      switch-style: medium
+      down: 30
+      tick-from: 200
+      tick-to: 340
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      tick-label-font: DIN Bold
+      tick-labels:
+      - STBY
+      - ALT RPTG OFF
+      - XPNDR
+      - TA ONLY
+      - TA/RA
+      up: 30
+      left: 55
 - index: 8
   name: ATCMODE
-  stops: 3
-  initial-value: 2
-  circular-switch:
-    button-size: 50
-    switch-style: medium
-    down: 30
-    tick-from: 220
-    tick-to: 320
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    tick-labels:
-    - ABV
-    - N
-    - BLW
-    left: 30
-    up: 20
-  set-dataref: AirbusFBW/XPDRTCASAltSelect
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    initial-value: 2
+    set-dataref: AirbusFBW/XPDRTCASAltSelect
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 50
+      switch-style: medium
+      down: 30
+      tick-from: 220
+      tick-to: 320
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      tick-labels:
+      - ABV
+      - N
+      - BLW
+      left: 30
+      up: 20
 - index: 9
   name: ATCCLR
-  text: CLR
-  text-font: DIN Bold
-  text-color: white
-  text-size: 24
-  text-position: cm
-  activation: push
-  representation: text
-  commands:
-    press: AirbusFBW/ATCCodeKeyCLR
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKeyCLR
+  representation:
+    type: text
+    text: CLR
+    text-font: DIN Bold
+    text-color: white
+    text-size: 24
+    text-position: cm
 - index: 10
-  label: 'ATC
-
-
-
-
-    FAIL'
-  label-position: cm
-  label-size: 11
   name: ATCFAIL
-  push-switch:
-    button-size: 100
-    button-fill-color: black
-    button-stroke-width: 0
-    witness-size: 40
-    witness-fill-color: (64, 32, 0)
-    witness-stroke-color: (128, 64, 0)
-  activation: none
+  activation:
+    type: none
+  representation:
+    type: push-switch
+    label: 'ATC
+
+
+
+
+      FAIL'
+    label-position: cm
+    label-size: 11
+    push-switch:
+      button-size: 100
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 40
+      witness-fill-color: (64, 32, 0)
+      witness-stroke-color: (128, 64, 0)
 - index: 11
-  label: IDENT
   name: ATCIDENT
-  push-switch:
-    button-size: 100
-    button-fill-color: black
-    button-stroke-width: 0
-    witness-size: 0
-  activation: push
-  commands:
-    press: sim/transponder/transponder_ident
+  activation:
+    type: push
+    commands:
+      press: sim/transponder/transponder_ident
+  representation:
+    type: push-switch
+    label: IDENT
+    push-switch:
+      button-size: 100
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
 - index: b0
   name: ATC0
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey0
+  representation:
+    type: colored-led
+    formula: 1
   colored-led: (255, 128, 0)
-  formula: 1
-  activation: push
-  representation: colored-led
-  commands:
-    press: AirbusFBW/ATCCodeKey0
 - index: b1
   name: ATC1
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey1
+  representation:
+    type: colored-led
+    formula: 1
   colored-led: (255, 128, 0)
-  formula: 1
-  activation: push
-  representation: colored-led
-  commands:
-    press: AirbusFBW/ATCCodeKey1
 - index: b2
   name: ATC2
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey2
+  representation:
+    type: colored-led
+    formula: 1
   colored-led: (255, 128, 0)
-  formula: 1
-  activation: push
-  representation: colored-led
-  commands:
-    press: AirbusFBW/ATCCodeKey2
 - index: b3
   name: ATC3
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey3
+  representation:
+    type: colored-led
+    formula: 1
   colored-led: (255, 128, 0)
-  formula: 1
-  activation: push
-  representation: colored-led
-  commands:
-    press: AirbusFBW/ATCCodeKey3
 - index: b4
   name: ATC4
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey4
+  representation:
+    type: colored-led
+    formula: 1
   colored-led: (255, 128, 0)
-  formula: 1
-  activation: push
-  representation: colored-led
-  commands:
-    press: AirbusFBW/ATCCodeKey4
 - index: b5
   name: ATC5
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey5
+  representation:
+    type: colored-led
+    formula: 1
   colored-led: (255, 128, 0)
-  formula: 1
-  activation: push
-  representation: colored-led
-  commands:
-    press: AirbusFBW/ATCCodeKey5
 - index: b6
   name: ATC6
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey6
+  representation:
+    type: colored-led
+    formula: 1
   colored-led: (255, 128, 0)
-  formula: 1
-  activation: push
-  representation: colored-led
-  commands:
-    press: AirbusFBW/ATCCodeKey6
 - index: b7
   name: ATC7
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey7
+  representation:
+    type: colored-led
+    formula: 1
   colored-led: (255, 128, 0)
-  formula: 1
-  activation: push
-  representation: colored-led
-  commands:
-    press: AirbusFBW/ATCCodeKey7

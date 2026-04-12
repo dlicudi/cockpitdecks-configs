@@ -5,251 +5,292 @@ last-updated: 03-APR-2024
 buttons:
 - index: 1
   name: ATC ON
-  stops: 2
-  dataref: AirbusFBW/XPDRTCASMode
-  set-dataref: AirbusFBW/XPDRTCASMode
-  circular-switch:
-    switch-style: medium
-    left: 40
-    down: 40
-    button-size: 50
-    button-fill-color: (200, 200, 200)
-    button-stroke-color: white
-    handle-fill-color: (180, 180, 180)
-    tick-from: 160
-    tick-to: 200
-    tick-color: white
-    tick-space: 36
-    tick-width: 8
-    tick-length: 24
-    tick-labels:
-    - AUTO
-    - true
-    tick-label-font: DIN Bold
-    tick-label-size: 30
-    needle-underline-width: 8
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    dataref: AirbusFBW/XPDRTCASMode
+    set-dataref: AirbusFBW/XPDRTCASMode
+  representation:
+    type: circular-switch
+    circular-switch:
+      switch-style: medium
+      left: 40
+      down: 40
+      button-size: 50
+      button-fill-color: (200, 200, 200)
+      button-stroke-color: white
+      handle-fill-color: (180, 180, 180)
+      tick-from: 160
+      tick-to: 200
+      tick-color: white
+      tick-space: 36
+      tick-width: 8
+      tick-length: 24
+      tick-labels:
+      - AUTO
+      - true
+      tick-label-font: DIN Bold
+      tick-label-size: 30
+      needle-underline-width: 8
 - index: 2
   name: ATCCodeKey1
-  text:
-    text: '1'
-    text-size: 40
-    text-color: white
-    text-bg-color: (20, 20, 20)
-  activation: push
-  representation: text
-  commands:
-    press: AirbusFBW/ATCCodeKey1
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey1
+  representation:
+    type: text
+    text:
+      text: '1'
+      text-size: 40
+      text-color: white
+      text-bg-color: (20, 20, 20)
 - index: 3
   name: ATCCodeKey2
-  text:
-    text: '2'
-    text-size: 40
-    text-color: white
-    text-bg-color: (20, 20, 20)
-  activation: push
-  representation: text
-  commands:
-    press: AirbusFBW/ATCCodeKey2
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey2
+  representation:
+    type: text
+    text:
+      text: '2'
+      text-size: 40
+      text-color: white
+      text-bg-color: (20, 20, 20)
 - index: 4
   name: ATCCodeKey3
-  text:
-    text: '3'
-    text-size: 40
-    text-color: white
-    text-bg-color: (20, 20, 20)
-  activation: push
-  representation: text
-  commands:
-    press: AirbusFBW/ATCCodeKey3
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey3
+  representation:
+    type: text
+    text:
+      text: '3'
+      text-size: 40
+      text-color: white
+      text-bg-color: (20, 20, 20)
 - index: 8
   name: XPNDR
-  page: piedestal
-  label: PIEDESTAL
+  activation:
+    type: page
+    page: piedestal
+  representation:
+    type: text
+    label: PIEDESTAL
+    text:
+      text: ${fa:arrow-left}
+      text-font: fontawesome.otf
+      text-size: 60
+      text-position: cm
   text-bgcolor: (94, 111, 130)
-  text:
-    text: ${fa:arrow-left}
-    text-font: fontawesome.otf
-    text-size: 60
-    text-position: cm
-  activation: page
-  representation: text
 - index: 9
   name: ATC SYS
-  stops: 2
-  dataref: AirbusFBW/XPDRSystem
-  set-dataref: AirbusFBW/XPDRSystem
-  circular-switch:
-    switch-style: medium
-    left: 40
-    down: 40
-    button-size: 50
-    button-fill-color: (200, 200, 200)
-    button-stroke-color: white
-    handle-fill-color: (180, 180, 180)
-    tick-from: 160
-    tick-to: 200
-    tick-color: white
-    tick-space: 36
-    tick-width: 8
-    tick-length: 24
-    tick-labels:
-    - '1'
-    - '2'
-    tick-label-font: DIN Bold
-    tick-label-size: 30
-    needle-underline-width: 8
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    dataref: AirbusFBW/XPDRSystem
+    set-dataref: AirbusFBW/XPDRSystem
+  representation:
+    type: circular-switch
+    circular-switch:
+      switch-style: medium
+      left: 40
+      down: 40
+      button-size: 50
+      button-fill-color: (200, 200, 200)
+      button-stroke-color: white
+      handle-fill-color: (180, 180, 180)
+      tick-from: 160
+      tick-to: 200
+      tick-color: white
+      tick-space: 36
+      tick-width: 8
+      tick-length: 24
+      tick-labels:
+      - '1'
+      - '2'
+      tick-label-font: DIN Bold
+      tick-label-size: 30
+      needle-underline-width: 8
 - index: 10
   name: ATCCodeKey4
-  text:
-    text: '4'
-    text-size: 40
-    text-color: white
-    text-bg-color: (20, 20, 20)
-  activation: push
-  representation: text
-  commands:
-    press: AirbusFBW/ATCCodeKey4
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey4
+  representation:
+    type: text
+    text:
+      text: '4'
+      text-size: 40
+      text-color: white
+      text-bg-color: (20, 20, 20)
 - index: 11
   name: ATCCodeKey5
-  text:
-    text: '5'
-    text-size: 40
-    text-color: white
-    text-bg-color: (20, 20, 20)
-  activation: push
-  representation: text
-  commands:
-    press: AirbusFBW/ATCCodeKey5
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey5
+  representation:
+    type: text
+    text:
+      text: '5'
+      text-size: 40
+      text-color: white
+      text-bg-color: (20, 20, 20)
 - index: 12
   name: ATCCodeKey6
-  text:
-    text: '6'
-    text-size: 40
-    text-color: white
-    text-bg-color: (20, 20, 20)
-  activation: push
-  representation: text
-  commands:
-    press: AirbusFBW/ATCCodeKey6
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey6
+  representation:
+    type: text
+    text:
+      text: '6'
+      text-size: 40
+      text-color: white
+      text-bg-color: (20, 20, 20)
 - index: 14
   name: TRANSPONDER CODE
-  text-format: '{:4.0f}'
-  text:
-    text: ${sim/cockpit2/radios/actuators/transponder_code}
-    text-font: Seven Segment.ttf
-    text-size: 40
-    text-color: white
-    text-bg-color: (40, 40, 40)
-  activation: none
-  representation: text
+  activation:
+    type: none
+  representation:
+    type: text
+    text-format: '{:4.0f}'
+    text:
+      text: ${sim/cockpit2/radios/actuators/transponder_code}
+      text-font: Seven Segment.ttf
+      text-size: 40
+      text-color: white
+      text-bg-color: (40, 40, 40)
 - index: 15
   name: ATC IDENT
-  label: IDENT
-  push-switch:
-    size: 30
-  activation: push
-  commands:
-    press: sim/transponder/transponder_ident
+  activation:
+    type: push
+    commands:
+      press: sim/transponder/transponder_ident
+  representation:
+    type: push-switch
+    label: IDENT
+    push-switch:
+      size: 30
 - index: 17
   name: ATC ALT SELECT
-  stops: 3
-  dataref: AirbusFBW/XPDRTCASAltSelect
-  set-dataref: AirbusFBW/XPDRTCASAltSelect
-  circular-switch:
-    switch-style: medium
-    left: 40
-    button-size: 50
-    button-fill-color: (200, 200, 200)
-    button-stroke-color: white
-    handle-fill-color: (180, 180, 180)
-    tick-from: 240
-    tick-to: 300
-    tick-color: white
-    tick-space: 36
-    tick-width: 8
-    tick-length: 24
-    tick-labels:
-    - ABV
-    - M
-    - BLW
-    tick-label-font: DIN Bold
-    tick-label-size: 30
-    needle-underline-width: 8
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    dataref: AirbusFBW/XPDRTCASAltSelect
+    set-dataref: AirbusFBW/XPDRTCASAltSelect
+  representation:
+    type: circular-switch
+    circular-switch:
+      switch-style: medium
+      left: 40
+      button-size: 50
+      button-fill-color: (200, 200, 200)
+      button-stroke-color: white
+      handle-fill-color: (180, 180, 180)
+      tick-from: 240
+      tick-to: 300
+      tick-color: white
+      tick-space: 36
+      tick-width: 8
+      tick-length: 24
+      tick-labels:
+      - ABV
+      - M
+      - BLW
+      tick-label-font: DIN Bold
+      tick-label-size: 30
+      needle-underline-width: 8
 - index: 18
   name: ATCCodeKey7
-  text:
-    text: '7'
-    text-size: 40
-    text-color: white
-    text-bg-color: (20, 20, 20)
-  activation: push
-  representation: text
-  commands:
-    press: AirbusFBW/ATCCodeKey7
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey7
+  representation:
+    type: text
+    text:
+      text: '7'
+      text-size: 40
+      text-color: white
+      text-bg-color: (20, 20, 20)
 - index: 19
   name: ATCCodeKey0
-  text:
-    text: '0'
-    text-size: 40
-    text-color: white
-    text-bg-color: (20, 20, 20)
-  activation: push
-  representation: text
-  commands:
-    press: AirbusFBW/ATCCodeKey0
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey0
+  representation:
+    type: text
+    text:
+      text: '0'
+      text-size: 40
+      text-color: white
+      text-bg-color: (20, 20, 20)
 - index: 20
   name: ATCCodeKeyCLR
-  text:
-    text: CLR
-    text-size: 40
-    text-color: white
-    text-bg-color: (20, 20, 20)
-  activation: push
-  representation: text
-  commands:
-    press: AirbusFBW/ATCCodeKey7
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATCCodeKey7
+  representation:
+    type: text
+    text:
+      text: CLR
+      text-size: 40
+      text-color: white
+      text-bg-color: (20, 20, 20)
 - index: 21
   name: ATC OK
-  label: ATC
-  text:
-    text: FAIL
-    text-position: cb
-  activation: none
-  representation: text
+  activation:
+    type: none
+  representation:
+    type: text
+    label: ATC
+    text:
+      text: FAIL
+      text-position: cb
 - index: 22
   name: ATC
-  stops: 5
-  formula: 4 ${ckpt/transponder/mode/anim} -
-  circular-switch:
-    switch-style: small
-    left: 40
-    button-size: 120
-    button-fill-color: (20, 30, 40)
-    button-stroke-color: (180, 180, 180)
-    handle-fill-color: (180, 180, 180)
-    tick-from: 210
-    tick-to: 330
-    tick-color: white
-    tick-space: 10
-    tick-width: 8
-    tick-length: 24
-    tick-labels:
-    - STBY
-    - ALT RPTG OFF
-    - XPNDR
-    - TA ONLY
-    - TA/RA
-    tick-label-font: DIN Bold
-    tick-label-size: 30
-    needle-underline-width: 8
-    needle-length: 20
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 5
+  representation:
+    type: circular-switch
+    formula: 4 ${ckpt/transponder/mode/anim} -
+    circular-switch:
+      switch-style: small
+      left: 40
+      button-size: 120
+      button-fill-color: (20, 30, 40)
+      button-stroke-color: (180, 180, 180)
+      handle-fill-color: (180, 180, 180)
+      tick-from: 210
+      tick-to: 330
+      tick-color: white
+      tick-space: 10
+      tick-width: 8
+      tick-length: 24
+      tick-labels:
+      - STBY
+      - ALT RPTG OFF
+      - XPNDR
+      - TA ONLY
+      - TA/RA
+      tick-label-font: DIN Bold
+      tick-label-size: 30
+      needle-underline-width: 8
+      needle-length: 20
 - index: 31
   name: Index
-  page: index-alt
-  icon: TOLISS-A21N
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: index-alt
+  representation:
+    type: icon
+    icon: TOLISS-A21N

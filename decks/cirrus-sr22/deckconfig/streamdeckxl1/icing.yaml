@@ -4,131 +4,145 @@ includes:
 name: icing
 buttons:
 - index: 0
-  label: PITOT
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/switches/pitot_heat_on} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/ice/pitot_heat0_tog
+  activation:
+    type: push
+    commands:
+      press: sim/ice/pitot_heat0_tog
+  representation:
+    type: annunciator
+    label: PITOT
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/switches/pitot_heat_on} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
 - index: 1
-  label: ICE PROTECT
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${laminar/sr22/switch/ice_protect} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${laminar/sr22/switch/ice_protect} 1 eq
-  initial-value: 0
-  activation: sweep
-  representation: annunciator
-  positions:
-  - laminar/sr22/switch/ice_protect_off
-  - laminar/sr22/switch/ice_protect_on
+  activation:
+    type: sweep
+    initial-value: 0
+    positions:
+    - laminar/sr22/switch/ice_protect_off
+    - laminar/sr22/switch/ice_protect_on
+  representation:
+    type: annunciator
+    label: ICE PROTECT
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${laminar/sr22/switch/ice_protect} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${laminar/sr22/switch/ice_protect} 1 eq
 - index: 2
-  label: PUMP BKUP
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/ice/tks_backup_pump} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/ice/tks_backup_pump} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/ice/tks_bkup_off
-  - sim/ice/tks_bkup_on
+  activation:
+    type: sweep
+    positions:
+    - sim/ice/tks_bkup_off
+    - sim/ice/tks_bkup_on
+  representation:
+    type: annunciator
+    label: PUMP BKUP
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/ice/tks_backup_pump} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/ice/tks_backup_pump} 1 eq
 - index: 3
-  label: NORM/HIGH
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: NORM
-      color: darkorange
-      formula: ${laminar/sr22/switch/ice_norm_high} 0 eq
-    - text: HIGH
-      color: deepskyblue
-      framed: true
-      formula: ${laminar/sr22/switch/ice_norm_high} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - laminar/sr22/switch/ice_protect_norm
-  - laminar/sr22/switch/ice_protect_high
+  activation:
+    type: sweep
+    positions:
+    - laminar/sr22/switch/ice_protect_norm
+    - laminar/sr22/switch/ice_protect_high
+  representation:
+    type: annunciator
+    label: NORM/HIGH
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: NORM
+        color: darkorange
+        formula: ${laminar/sr22/switch/ice_norm_high} 0 eq
+      - text: HIGH
+        color: deepskyblue
+        framed: true
+        formula: ${laminar/sr22/switch/ice_norm_high} 1 eq
 - index: 4
-  label: PROP
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/switches/anti_ice_prop_heat} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/switches/anti_ice_prop_heat} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/ice/prop_heat_tog
+  activation:
+    type: push
+    commands:
+      press: sim/ice/prop_heat_tog
+  representation:
+    type: annunciator
+    label: PROP
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/switches/anti_ice_prop_heat} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/anti_ice_prop_heat} 1 eq
 - index: 5
-  label: WSHLD
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/switches/anti_ice_window_heat} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/switches/anti_ice_window_heat} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/ice/window_heat_tog
+  activation:
+    type: push
+    commands:
+      press: sim/ice/window_heat_tog
+  representation:
+    type: annunciator
+    label: WSHLD
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/switches/anti_ice_window_heat} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/anti_ice_window_heat} 1 eq
 - index: 11
   name: Switches
-  page: switches
-  label: SWITCHES
-  label-size: 12
-  text: 
-  text-font: fontawesome.otf
-  text-size: 12
-  text-color: Gold
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches
+  representation:
+    type: text
+    label: SWITCHES
+    label-size: 12
+    text: 
+    text-font: fontawesome.otf
+    text-size: 12
+    text-color: Gold

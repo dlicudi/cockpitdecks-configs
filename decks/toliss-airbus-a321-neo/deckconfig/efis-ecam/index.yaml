@@ -8,270 +8,300 @@ name: ECAM
 buttons:
 - index: 0
   name: ENG
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      dataref: AirbusFBW/OHPLightsATA31[30]
-    - text: ENG
-      text-size: 48
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectEnginePage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        dataref: AirbusFBW/OHPLightsATA31[30]
+      - text: ENG
+        text-size: 48
+        text-font: DIN Bold
+        formula: '1'
   view: AirbusFBW/PopUpSD
   view-if: ${AirbusFBW/PopUpStateArray[7]} not
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectEnginePage
 - index: 1
   name: BLEED
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      dataref: AirbusFBW/OHPLightsATA31[31]
-    - text: BLEED
-      text-size: 48
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectBleedPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        dataref: AirbusFBW/OHPLightsATA31[31]
+      - text: BLEED
+        text-size: 48
+        text-font: DIN Bold
+        formula: '1'
   view: AirbusFBW/PopUpSD
   view-if: ${AirbusFBW/PopUpStateArray[7]} not
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectBleedPage
 - index: 2
   name: PRESS
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      dataref: AirbusFBW/OHPLightsATA31[32]
-    - text: PRESS
-      text-size: 48
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectPressPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        dataref: AirbusFBW/OHPLightsATA31[32]
+      - text: PRESS
+        text-size: 48
+        text-font: DIN Bold
+        formula: '1'
   view: AirbusFBW/PopUpSD
   view-if: ${AirbusFBW/PopUpStateArray[7]} not
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectPressPage
 - index: 3
   name: ELEC
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      dataref: AirbusFBW/OHPLightsATA31[33]
-    - text: ELEC
-      text-size: 48
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectElecACPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        dataref: AirbusFBW/OHPLightsATA31[33]
+      - text: ELEC
+        text-size: 48
+        text-font: DIN Bold
+        formula: '1'
   view: AirbusFBW/PopUpSD
   view-if: ${AirbusFBW/PopUpStateArray[7]} not
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectElecACPage
 - index: 4
   name: HYD
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      dataref: AirbusFBW/OHPLightsATA31[34]
-    - text: HYD
-      text-size: 48
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectHydraulicPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        dataref: AirbusFBW/OHPLightsATA31[34]
+      - text: HYD
+        text-size: 48
+        text-font: DIN Bold
+        formula: '1'
   view: AirbusFBW/PopUpSD
   view-if: ${AirbusFBW/PopUpStateArray[7]} not
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectHydraulicPage
 - index: 5
   name: FUEL
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      dataref: AirbusFBW/OHPLightsATA31[35]
-    - text: FUEL
-      text-size: 48
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectFuelPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        dataref: AirbusFBW/OHPLightsATA31[35]
+      - text: FUEL
+        text-size: 48
+        text-font: DIN Bold
+        formula: '1'
   view: AirbusFBW/PopUpSD
   view-if: ${AirbusFBW/PopUpStateArray[7]} not
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectFuelPage
 - index: 6
   name: APU
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      dataref: AirbusFBW/OHPLightsATA31[36]
-    - text: APU
-      text-size: 48
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectAPUPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        dataref: AirbusFBW/OHPLightsATA31[36]
+      - text: APU
+        text-size: 48
+        text-font: DIN Bold
+        formula: '1'
   view: AirbusFBW/PopUpSD
   view-if: ${AirbusFBW/PopUpStateArray[7]} not
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectAPUPage
 - index: 7
   name: COND
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      dataref: AirbusFBW/OHPLightsATA31[37]
-    - text: COND
-      text-size: 48
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectConditioningPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        dataref: AirbusFBW/OHPLightsATA31[37]
+      - text: COND
+        text-size: 48
+        text-font: DIN Bold
+        formula: '1'
   view: AirbusFBW/PopUpSD
   view-if: ${AirbusFBW/PopUpStateArray[7]} not
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectConditioningPage
 - index: 8
   name: DOOR
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      dataref: AirbusFBW/OHPLightsATA31[38]
-    - text: DOOR
-      text-size: 48
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectDoorOxyPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        dataref: AirbusFBW/OHPLightsATA31[38]
+      - text: DOOR
+        text-size: 48
+        text-font: DIN Bold
+        formula: '1'
   view: AirbusFBW/PopUpSD
   view-if: ${AirbusFBW/PopUpStateArray[7]} not
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectDoorOxyPage
 - index: 9
   name: WHEEL
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      dataref: AirbusFBW/OHPLightsATA31[39]
-    - text: WHEEL
-      text-size: 48
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectWheelPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        dataref: AirbusFBW/OHPLightsATA31[39]
+      - text: WHEEL
+        text-size: 48
+        text-font: DIN Bold
+        formula: '1'
   view: AirbusFBW/PopUpSD
   view-if: ${AirbusFBW/PopUpStateArray[7]} not
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectWheelPage
 - index: 10
   name: F/CTL
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      dataref: AirbusFBW/OHPLightsATA31[40]
-    - text: F/CTL
-      text-size: 48
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectFlightControlPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        dataref: AirbusFBW/OHPLightsATA31[40]
+      - text: F/CTL
+        text-size: 48
+        text-font: DIN Bold
+        formula: '1'
   view: AirbusFBW/PopUpSD
   view-if: ${AirbusFBW/PopUpStateArray[7]} not
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectFlightControlPage
 - index: 11
   name: CLR
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      dataref: AirbusFBW/OHPLightsATA31[41]
-    - text: CLR
-      text-size: 48
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/CaptainClear
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        dataref: AirbusFBW/OHPLightsATA31[41]
+      - text: CLR
+        text-size: 48
+        text-font: DIN Bold
+        formula: '1'
   view: AirbusFBW/PopUpSD
   view-if: ${AirbusFBW/PopUpStateArray[7]} not
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/CaptainClear
 - index: 12
   name: STS
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: greenyellow
-      led: led
-      dataref: AirbusFBW/OHPLightsATA31[41]
-    - text: STS
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ECP/SelectStatusPage
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: greenyellow
+        led: led
+        dataref: AirbusFBW/OHPLightsATA31[41]
+      - text: STS
+        text-size: 48
+        text-font: DIN Bold
+        formula: '1'
+  view: AirbusFBW/PopUpSD
+  view-if: ${AirbusFBW/PopUpStateArray[7]} not
+- index: 13
+  name: ALL
+  activation:
+    type: push
+    options: nostate
+    commands:
+      press: AirbusFBW/ECAMAll
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      text: ALL
       text-size: 48
       text-font: DIN Bold
       formula: '1'
   view: AirbusFBW/PopUpSD
   view-if: ${AirbusFBW/PopUpStateArray[7]} not
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECP/SelectStatusPage
-- index: 13
-  name: ALL
-  annunciator:
-    size: medium
-    text: ALL
-    text-size: 48
-    text-font: DIN Bold
-    formula: '1'
-  options: nostate
-  view: AirbusFBW/PopUpSD
-  view-if: ${AirbusFBW/PopUpStateArray[7]} not
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ECAMAll
 - index: 14
   name: EFIS
-  page: efis
-  icon: TOLISS-A21N
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: efis
+  representation:
+    type: icon
+    icon: TOLISS-A21N
 default-text-color: gold

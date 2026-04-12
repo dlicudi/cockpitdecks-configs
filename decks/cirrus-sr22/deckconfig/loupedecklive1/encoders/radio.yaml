@@ -1,63 +1,53 @@
 buttons:
 - index: e0
   name: com1_encoder
+  activation:
+    type: encoder-mode
+    commands:
+      long-press: sim/GPS/g1000n1_com_ff
+  representation:
+    type: side-display
+    label: COM1
+    label-color: Gold
   toggle-labels:
   - 0
   - 1
-  commands:
-    long-press: sim/GPS/g1000n1_com_ff
-  activation: encoder-mode
 - index: e2
   name: com2_encoder
+  activation:
+    type: encoder-mode
+    commands:
+      long-press: sim/radios/com2_standy_flip
+  representation:
+    type: side-display
+    label: COM2
+    label-color: Gold
   toggle-labels:
   - 0
   - 1
-  commands:
-    long-press: sim/radios/com2_standy_flip
-  activation: encoder-mode
 - index: e3
   name: nav1_encoder
+  activation:
+    type: encoder-mode
+    commands:
+      long-press: sim/GPS/g1000n3_nav_ff
+  representation:
+    type: side-display
+    label: NAV1
+    label-color: Gold
   toggle-labels:
   - 0
   - 1
-  commands:
-    long-press: sim/GPS/g1000n3_nav_ff
-  activation: encoder-mode
 - index: e5
   name: nav2_encoder
+  activation:
+    type: encoder-mode
+    commands:
+      long-press: sim/radios/nav2_standy_flip
+  representation:
+    type: side-display
+    label: NAV2
+    label-color: Gold
   toggle-labels:
   - 0
   - 1
-  commands:
-    long-press: sim/radios/nav2_standy_flip
-  activation: encoder-mode
-- index: left
-  name: left_screen
-  side:
-    icon-color: Black
-    labels:
-    - label: COM1
-      label-size: 20
-      label-font: D-DINCondensed.otf
-      label-color: Gold
-    - label: ''
-    - label: COM2
-      label-size: 20
-      label-font: D-DINCondensed.otf
-      label-color: Gold
-  activation: none
-- index: right
-  name: right_screen
-  side:
-    icon-color: Black
-    labels:
-    - label: NAV1
-      label-size: 20
-      label-font: D-DINCondensed.otf
-      label-color: Gold
-    - label: ''
-    - label: NAV2
-      label-size: 20
-      label-font: D-DINCondensed.otf
-      label-color: Gold
-  activation: none

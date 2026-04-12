@@ -7,265 +7,315 @@ last-updated: 03-APR-2024
 buttons:
 - index: e0
   name: FCU Airspeed
-  activation: encoder-push
-  commands:
-    press: AirbusFBW/PushSPDSel
-    long-press: AirbusFBW/PullSPDSel
-    cw: sim/autopilot/airspeed_up
-    ccw: sim/autopilot/airspeed_down
+  activation:
+    type: encoder-push
+    commands:
+      press: AirbusFBW/PushSPDSel
+      long-press: AirbusFBW/PullSPDSel
+      cw: sim/autopilot/airspeed_up
+      ccw: sim/autopilot/airspeed_down
+  representation:
+    type: none
 - index: e1
   name: FCU Heading
-  activation: encoder-push
-  commands:
-    press: AirbusFBW/PushHDGSel
-    long-press: AirbusFBW/PullHDGSel
-    cw: sim/autopilot/heading_up
-    ccw: sim/autopilot/heading_down
+  activation:
+    type: encoder-push
+    commands:
+      press: AirbusFBW/PushHDGSel
+      long-press: AirbusFBW/PullHDGSel
+      cw: sim/autopilot/heading_up
+      ccw: sim/autopilot/heading_down
+  representation:
+    type: none
 - index: e2
   name: FCU Baro
-  commands:
-    toggle-on: toliss_airbus/capt_baro_push
-    toggle-off: toliss_airbus/capt_baro_pull
-    cw: sim/instruments/barometer_up
-    ccw: sim/instruments/barometer_down
-  options: modulo
-  activation: encoder-toggle
+  activation:
+    type: encoder-toggle
+    commands:
+      toggle-on: toliss_airbus/capt_baro_push
+      toggle-off: toliss_airbus/capt_baro_pull
+      cw: sim/instruments/barometer_up
+      ccw: sim/instruments/barometer_down
+    options: modulo
+  representation:
+    type: none
 - index: e3
   name: FCU Altitude
-  activation: encoder-push
-  commands:
-    press: AirbusFBW/PushAltitude
-    long-press: AirbusFBW/PullAltitude
-    cw: sim/autopilot/altitude_up
-    ccw: sim/autopilot/altitude_down
+  activation:
+    type: encoder-push
+    commands:
+      press: AirbusFBW/PushAltitude
+      long-press: AirbusFBW/PullAltitude
+      cw: sim/autopilot/altitude_up
+      ccw: sim/autopilot/altitude_down
+  representation:
+    type: none
 - index: e4
   name: FCU V Speed
-  dataref: sim/cockpit/autopilot/vertical_velocity
-  step: 100
-  value: 0
-  value-min: -6000
-  value-max: 6000
-  set-dataref: sim/cockpit/autopilot/vertical_velocity
-  commands:
-    toggle-on: AirbusFBW/PullVSSel
-    toggle-off: AirbusFBW/PushVSSel
-  activation: encoder-value
-  step-xl: 1000
+  activation:
+    type: encoder-value
+    dataref: sim/cockpit/autopilot/vertical_velocity
+    step: 100
+    value: 0
+    value-min: -6000
+    value-max: 6000
+    set-dataref: sim/cockpit/autopilot/vertical_velocity
+    commands:
+      toggle-on: AirbusFBW/PullVSSel
+      toggle-off: AirbusFBW/PushVSSel
+    step-xl: 1000
+  representation:
+    type: none
 - index: e5
   name: FCU Unused
-  options: nostate
-  activation: none
+  activation:
+    type: none
+    options: nostate
+  representation:
+    type: none
 - index: 0
   name: SPDMACH
-  label: 'SPD
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/ias_mach_button_push
+  representation:
+    type: push-switch
+    label: 'SPD
 
 
 
 
-    MACH'
-  label-position: cm
-  label-font: DIN Bold
-  label-size: 10
-  push-switch:
-    button-size: 100
-    button-fill-color: black
-    button-stroke-width: 0
-    witness-size: 0
-  activation: push
-  commands:
-    press: toliss_airbus/ias_mach_button_push
+      MACH'
+    label-position: cm
+    label-font: DIN Bold
+    label-size: 10
+    push-switch:
+      button-size: 100
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
 - index: 1
   name: MASTER CAUTION
-  annunciator:
-    text: 'MASTER
+  activation:
+    type: push
+    commands:
+      press: sim/annunciator/clear_master_caution
+  representation:
+    type: annunciator
+    annunciator:
+      text: 'MASTER
 
-      CAUT'
-    text-color: darkorange
-    text-font: DIN Condensed Black.otf
-    text-size: 72
-    dataref: AirbusFBW/MasterCaut
+        CAUT'
+      text-color: darkorange
+      text-font: DIN Condensed Black.otf
+      text-size: 72
+      dataref: AirbusFBW/MasterCaut
   vibrate: RUMBLE5
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/annunciator/clear_master_caution
 - index: 2
   name: MASTER WARNING
-  annunciator-animate:
-    text: 'MASTER
+  activation:
+    type: push
+    commands:
+      press: sim/annunciator/clear_master_warning
+  representation:
+    type: annunciator-animate
+    annunciator-animate:
+      text: 'MASTER
 
-      WARN'
-    text-color: firebrick
-    text-font: DIN Condensed Black.otf
-    text-size: 72
-    dataref: AirbusFBW/MasterWarn
-    animation-speed: 2.0
+        WARN'
+      text-color: firebrick
+      text-font: DIN Condensed Black.otf
+      text-size: 72
+      dataref: AirbusFBW/MasterWarn
+      animation-speed: 2.0
   vibrate: LONG
-  activation: push
-  representation: annunciator-animate
-  commands:
-    press: sim/annunciator/clear_master_warning
 - index: 3
   name: ALTSCALE
-  label: '1000
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/metric_alt_button_push
+  representation:
+    type: push-switch
+    label: '1000
 
 
 
 
-    100'
-  label-font: DIN Bold
-  label-size: 10
-  label-position: cm
-  push-switch:
-    button-size: 100
-    button-fill-color: black
-    button-stroke-width: 0
-    witness-size: 0
-  activation: push
-  commands:
-    press: toliss_airbus/metric_alt_button_push
+      100'
+    label-font: DIN Bold
+    label-size: 10
+    label-position: cm
+    push-switch:
+      button-size: 100
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
 - index: 4
   name: HDGTRACK
-  label: 'HDG TRK
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/hdgtrk_button_push
+  representation:
+    type: push-switch
+    label: 'HDG TRK
 
 
 
 
-    V/S FPA'
-  label-position: cm
-  label-font: DIN Bold
-  label-size: 10
-  push-switch:
-    button-size: 100
-    button-fill-color: black
-    button-stroke-width: 0
-    witness-size: 0
-  activation: push
-  commands:
-    press: toliss_airbus/hdgtrk_button_push
+      V/S FPA'
+    label-position: cm
+    label-font: DIN Bold
+    label-size: 10
+    push-switch:
+      button-size: 100
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
 - index: 5
   name: A/THR
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${AirbusFBW/ATHRmode}
-    - text: A/THR
-      text-size: 60
-      text-font: DIN Bold
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/ATHRbutton
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ATHRbutton
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${AirbusFBW/ATHRmode}
+      - text: A/THR
+        text-size: 60
+        text-font: DIN Bold
+        formula: '1'
 - index: 6
   name: AP1
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${AirbusFBW/AP1Engage}
-    - text: AP1
-      text-size: 60
-      text-font: DIN Bold
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: toliss_airbus/ap1_push
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/ap1_push
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${AirbusFBW/AP1Engage}
+      - text: AP1
+        text-size: 60
+        text-font: DIN Bold
+        formula: '1'
 - index: 8
   name: BAROMETRIC
-  label: 'inHg
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/BaroUnitCapt
+  representation:
+    type: push-switch
+    label: 'inHg
 
 
 
 
-    hPa'
-  label-position: cm
-  label-font: DIN Bold
-  label-size: 10
-  push-switch:
-    button-size: 100
-    button-fill-color: black
-    button-stroke-width: 0
-    witness-size: 0
-  set-dataref: AirbusFBW/BaroUnitCapt
-  activation: sweep
+      hPa'
+    label-position: cm
+    label-font: DIN Bold
+    label-size: 10
+    push-switch:
+      button-size: 100
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
 - index: 9
   name: LOC
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${AirbusFBW/LOCilluminated}
-    - text: LOC
-      text-size: 60
-      text-font: DIN Bold
-      formula: '1'
-  options: auto-repeat=3/3
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/LOCbutton
+  activation:
+    type: push
+    options: auto-repeat=3/3
+    commands:
+      press: AirbusFBW/LOCbutton
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${AirbusFBW/LOCilluminated}
+      - text: LOC
+        text-size: 60
+        text-font: DIN Bold
+        formula: '1'
 - index: 10
   name: APPR
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${AirbusFBW/APPRilluminated}
-    - text: APPR
-      text-size: 60
-      text-font: DIN Bold
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/APPRbutton
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/APPRbutton
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${AirbusFBW/APPRilluminated}
+      - text: APPR
+        text-size: 60
+        text-font: DIN Bold
+        formula: '1'
 - index: 11
   name: EXPED
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${AirbusFBW/EXPEDilluminated}
-    - text: EXPED
-      text-size: 60
-      text-font: DIN Bold
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: AirbusFBW/EXPEDbutton
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/EXPEDbutton
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${AirbusFBW/EXPEDilluminated}
+      - text: EXPED
+        text-size: 60
+        text-font: DIN Bold
+        formula: '1'
 - index: 7
   name: AP2
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      formula: ${AirbusFBW/AP2Engage}
-    - text: AP2
-      text-size: 60
-      text-font: DIN Bold
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: toliss_airbus/ap2_push
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/ap2_push
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${AirbusFBW/AP2Engage}
+      - text: AP2
+        text-size: 60
+        text-font: DIN Bold
+        formula: '1'
 - index: left
   name: FCU-L
+  activation:
+    type: none
+  representation:
+    type: none
   multi-datarefs:
   - sim/cockpit2/autopilot/airspeed_dial_kts_mach
   - sim/cockpit/autopilot/heading_mag
@@ -286,10 +336,13 @@ buttons:
     value-size: 48
     value-font: Segment7Standard
     value-color: white
-  activation: none
 - index: right
   name: FCU-R
-  page: index
+  activation:
+    type: page
+    page: index
+  representation:
+    type: none
   multi-datarefs:
   - sim/cockpit2/autopilot/altitude_dial_ft
   - sim/cockpit/autopilot/vertical_velocity
@@ -304,6 +357,5 @@ buttons:
     value-size: 48
     value-font: Segment7Standard
     value-color: white
-  activation: page
 includes:
 - views

@@ -6,20 +6,24 @@ includes:
 default-icon-color: Black
 buttons:
 - index: 0
-  icon: INOP.png
-  activation: none
-  representation: icon
+  activation:
+    type: none
+  representation:
+    type: icon
+    icon: INOP.png
 - index: 1
-  label: DUMP
-  label-size: 10
-  label-color: white
-  annunciator:
-    size: small
-    model: A
-    parts:
-    - text-color: white
-      led: led
-      formula: ${sim/cockpit/pressure/dump_to_alt}
-  set-dataref: sim/cockpit/pressure/dump_to_alt
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: sim/cockpit/pressure/dump_to_alt
+  representation:
+    type: annunciator
+    label: DUMP
+    label-size: 10
+    label-color: white
+    annunciator:
+      size: small
+      model: A
+      parts:
+      - text-color: white
+        led: led
+        formula: ${sim/cockpit/pressure/dump_to_alt}

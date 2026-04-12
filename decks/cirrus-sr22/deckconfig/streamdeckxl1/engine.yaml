@@ -5,511 +5,547 @@ includes:
 buttons:
 - index: 0
   name: ENGINE_RPM
-  label: RPM
-  label-size: 10
-  label-color: black
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: green
-      text-size: 16
-      formula: '1'
-      text: ${sim/cockpit2/engine/indicators/engine_speed_rpm[0]}
-      text-format: '{0:.0f}'
-    - text: ENG RPM
-      text-size: 14
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: RPM
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: green
+        text-size: 16
+        formula: '1'
+        text: ${sim/cockpit2/engine/indicators/engine_speed_rpm[0]}
+        text-format: '{0:.0f}'
+      - text: ENG RPM
+        text-size: 14
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 1
   name: MANIFOLD_PRESSURE
-  label: MAN PRESS
-  label-size: 10
-  label-color: black
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: green
-      text-size: 16
-      formula: ${sim/cockpit2/engine/indicators/MPR_in_hg[0]} round
-      text: ${formula}
-    - text: 'MANIFOLD
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: MAN PRESS
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: green
+        text-size: 16
+        formula: ${sim/cockpit2/engine/indicators/MPR_in_hg[0]} round
+        text: ${formula}
+      - text: 'MANIFOLD
 
-        PRESSURE'
-      text-size: 11
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: none
-  representation: annunciator
+          PRESSURE'
+        text-size: 11
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 2
   name: FUEL_FLOW
-  label: FUEL FLOW
-  label-size: 10
-  label-color: black
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: green
-      text-size: 16
-      formula: ${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3600 * 0.8 /
-        3.78541 / 2 roundn
-      text: ${formula}
-    - text: FUEL FLOW
-      text-size: 14
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: FUEL FLOW
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: green
+        text-size: 16
+        formula: ${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3600 * 0.8 / 3.78541 / 2 roundn
+        text: ${formula}
+      - text: FUEL FLOW
+        text-size: 14
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 3
   name: OIL
-  label: OIL
-  label-size: 10
-  label-color: black
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: green
-      text-size: 12
-      formula: ${sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]}
-      text: ${formula} C
-      text-format: '{0:.0f}'
-    - color: green
-      text-size: 12
-      formula: ${sim/cockpit2/engine/indicators/oil_pressure_psi[0]}
-      text: ${formula} PSI
-      text-format: '{0:.0f}'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: OIL
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: green
+        text-size: 12
+        formula: ${sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]}
+        text: ${formula} C
+        text-format: '{0:.0f}'
+      - color: green
+        text-size: 12
+        formula: ${sim/cockpit2/engine/indicators/oil_pressure_psi[0]}
+        text: ${formula} PSI
+        text-format: '{0:.0f}'
 - index: 4
   name: CHT
-  label: CHT
-  label-size: 10
-  label-color: black
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: green
-      text-size: 16
-      formula: ${sim/cockpit2/engine/indicators/CHT_deg_C[0]} round
-      text: ${formula}
-    - text: CHT C
-      text-size: 15
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: CHT
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: green
+        text-size: 16
+        formula: ${sim/cockpit2/engine/indicators/CHT_deg_C[0]} round
+        text: ${formula}
+      - text: CHT C
+        text-size: 15
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 5
   name: EGT
-  label: EGT
-  label-size: 10
-  label-color: black
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: yellow
-      text-size: 16
-      formula: ${sim/cockpit2/engine/indicators/EGT_deg_cel[0]} round
-      text: ${formula}
-    - text: EGT C
-      text-size: 15
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: EGT
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: yellow
+        text-size: 16
+        formula: ${sim/cockpit2/engine/indicators/EGT_deg_cel[0]} round
+        text: ${formula}
+      - text: EGT C
+        text-size: 15
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 6
   name: FUEL_EST
-  label: ENDURANCE
-  label-size: 10
-  label-color: black
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: green
-      text-size: 16
-      formula: ${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[1]}
-        + ${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3 roundn 0.000001
-        + / 3600 / 1 roundn
-      text: ${formula} hrs
-    - text: FUEL EST
-      text-size: 14
-      text-font: D-DIN-Bold.otf
-      formula: '1'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ENDURANCE
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: green
+        text-size: 16
+        formula: ${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[1]} + ${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3 roundn 0.000001 + / 3600 / 1 roundn
+        text: ${formula} hrs
+      - text: FUEL EST
+        text-size: 14
+        text-font: D-DIN-Bold.otf
+        formula: '1'
 - index: 7
   name: FUEL_QTY
-  label: FUEL QTY
-  label-size: 10
-  label-color: black
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: yellow
-      text-size: 12
-      formula: ${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn
-      text: L ${formula} gal
-    - color: yellow
-      text-size: 12
-      formula: ${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn
-      text: R ${formula} gal
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: FUEL QTY
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: yellow
+        text-size: 12
+        formula: ${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn
+        text: L ${formula} gal
+      - color: yellow
+        text-size: 12
+        formula: ${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn
+        text: R ${formula} gal
 - index: 8
   name: ELECTRICAL
-  label: ELECTRICAL
-  label-size: 10
-  label-color: black
-  annunciator:
-    size: medium
-    model: F
-    parts:
-    - color: Lime
-      text-size: 11
-      text: '${formula}
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ELECTRICAL
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: F
+      parts:
+      - color: Lime
+        text-size: 11
+        text: '${formula}
 
-        BAT A'
-      text-format: '{0:.1f}'
-      formula: ${sim/cockpit2/electrical/battery_amps[0]}
-    - color: deepskyblue
-      text-size: 11
-      text: ALT1
-      framed: true
-      formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
-    - color: deepskyblue
-      text-size: 11
-      text: ALT2
-      framed: true
-      formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
-    - color: deepskyblue
-      text-size: 11
-      text: AVNX
-      framed: true
-      formula: ${sim/cockpit/electrical/avionics_on} 1 eq
-  activation: none
-  representation: annunciator
+          BAT A'
+        text-format: '{0:.1f}'
+        formula: ${sim/cockpit2/electrical/battery_amps[0]}
+      - color: deepskyblue
+        text-size: 11
+        text: ALT1
+        framed: true
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
+      - color: deepskyblue
+        text-size: 11
+        text: ALT2
+        framed: true
+        formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
+      - color: deepskyblue
+        text-size: 11
+        text: AVNX
+        framed: true
+        formula: ${sim/cockpit/electrical/avionics_on} 1 eq
 - index: 9
   name: BATTERY
-  label: BATTERY
-  label-size: 10
-  label-color: black
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      text-size: 13
-      text: ${sim/cockpit/electrical/battery_charge_watt_hr[0]}
-      text-format: '{0:.1f}'
-      formula: '1'
-    - color: lime
-      text-size: 13
-      text: ${sim/cockpit2/electrical/battery_amps[0]}
-      text-format: '{0:.1f}'
-      formula: '1'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: BATTERY
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        text-size: 13
+        text: ${sim/cockpit/electrical/battery_charge_watt_hr[0]}
+        text-format: '{0:.1f}'
+        formula: '1'
+      - color: lime
+        text-size: 13
+        text: ${sim/cockpit2/electrical/battery_amps[0]}
+        text-format: '{0:.1f}'
+        formula: '1'
 - index: 10
   name: ICE_STATUS
-  label: ICE SYS
-  label-size: 10
-  label-color: black
-  annunciator:
-    size: medium
-    model: F
-    parts:
-    - color: deepskyblue
-      text-size: 9
-      text: PITOT
-      framed: true
-      formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
-    - color: deepskyblue
-      text-size: 9
-      text: TKS
-      framed: true
-      formula: ${laminar/sr22/switch/ice_protect} 1 eq
-    - color: deepskyblue
-      text-size: 9
-      text: PROP
-      framed: true
-      formula: ${sim/cockpit/switches/anti_ice_prop_heat} 1 eq
-    - color: deepskyblue
-      text-size: 9
-      text: WSHLD
-      framed: true
-      formula: ${sim/cockpit/switches/anti_ice_window_heat} 1 eq
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ICE SYS
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: F
+      parts:
+      - color: deepskyblue
+        text-size: 9
+        text: PITOT
+        framed: true
+        formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
+      - color: deepskyblue
+        text-size: 9
+        text: TKS
+        framed: true
+        formula: ${laminar/sr22/switch/ice_protect} 1 eq
+      - color: deepskyblue
+        text-size: 9
+        text: PROP
+        framed: true
+        formula: ${sim/cockpit/switches/anti_ice_prop_heat} 1 eq
+      - color: deepskyblue
+        text-size: 9
+        text: WSHLD
+        framed: true
+        formula: ${sim/cockpit/switches/anti_ice_window_heat} 1 eq
 - index: 11
   name: ALERTS
-  label: ALERTS
-  label-size: 10
-  label-color: black
-  annunciator:
-    size: medium
-    model: F
-    parts:
-    - text: OIL
-      text-color: firebrick
-      off-color: '#3f1414'
-      text-font: D-DINCondensed-Bold.otf
-      text-size: 17
-      formula: ${sim/cockpit/warnings/annunciators/oil_pressure}
-    - text: VOLTS
-      text-color: firebrick
-      off-color: '#3f1414'
-      text-font: D-DINCondensed-Bold.otf
-      text-size: 12
-      formula: ${sim/cockpit/warnings/annunciators/generator}
-    - text: FUEL
-      text-color: darkorange
-      off-color: '#3a2613'
-      text-font: D-DINCondensed-Bold.otf
-      text-size: 14
-      formula: ${sim/cockpit/warnings/annunciators/fuel_pressure}
-    - text: VAC
-      text-color: darkorange
-      off-color: '#3a2613'
-      text-font: D-DINCondensed-Bold.otf
-      text-size: 17
-      formula: ${sim/cockpit/warnings/annunciators/low_vacuum}
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ALERTS
+    label-size: 10
+    label-color: black
+    annunciator:
+      size: medium
+      model: F
+      parts:
+      - text: OIL
+        text-color: firebrick
+        off-color: '#3f1414'
+        text-font: D-DINCondensed-Bold.otf
+        text-size: 17
+        formula: ${sim/cockpit/warnings/annunciators/oil_pressure}
+      - text: VOLTS
+        text-color: firebrick
+        off-color: '#3f1414'
+        text-font: D-DINCondensed-Bold.otf
+        text-size: 12
+        formula: ${sim/cockpit/warnings/annunciators/generator}
+      - text: FUEL
+        text-color: darkorange
+        off-color: '#3a2613'
+        text-font: D-DINCondensed-Bold.otf
+        text-size: 14
+        formula: ${sim/cockpit/warnings/annunciators/fuel_pressure}
+      - text: VAC
+        text-color: darkorange
+        off-color: '#3a2613'
+        text-font: D-DINCondensed-Bold.otf
+        text-size: 17
+        formula: ${sim/cockpit/warnings/annunciators/low_vacuum}
 - index: 12
   name: FUEL_L
-  label: FUEL L
-  label-color: black
-  label-size: 10
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      text-size: 12
-      formula: ${laminar/sr22/fuel_selector_pos} 1 eq
-      led: bar
-    - color: yellow
-      text-size: 9
-      formula: ${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn
-      text: ${formula} g
-  activation: push
-  representation: annunciator
-  commands:
-    press: laminar/sr22/fuel_sel_left_select
+  activation:
+    type: push
+    commands:
+      press: laminar/sr22/fuel_sel_left_select
+  representation:
+    type: annunciator
+    label: FUEL L
+    label-color: black
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        text-size: 12
+        formula: ${laminar/sr22/fuel_selector_pos} 1 eq
+        led: bar
+      - color: yellow
+        text-size: 9
+        formula: ${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn
+        text: ${formula} g
 - index: 13
   name: FUEL_R
-  label: FUEL R
-  label-color: black
-  label-size: 10
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      text-size: 12
-      formula: ${laminar/sr22/fuel_selector_pos} 2 eq
-      led: bar
-    - color: yellow
-      text-size: 9
-      formula: ${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn
-      text: ${formula} g
-  activation: push
-  representation: annunciator
-  commands:
-    press: laminar/sr22/fuel_sel_right_select
+  activation:
+    type: push
+    commands:
+      press: laminar/sr22/fuel_sel_right_select
+  representation:
+    type: annunciator
+    label: FUEL R
+    label-color: black
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        text-size: 12
+        formula: ${laminar/sr22/fuel_selector_pos} 2 eq
+        led: bar
+      - color: yellow
+        text-size: 9
+        formula: ${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn
+        text: ${formula} g
 - index: 14
   name: THROTTLE
-  label: THROTTLE
-  label-size: 9
-  label-color: black
-  annunciator:
-    size: medium
-    model: A
-    parts:
-    - color: lime
-      text-size: 38
-      formula: ${sim/flightmodel/engine/ENGN_thro[0]} 100 *
-      text: ${formula}%
-      text-font: Segment7Standard.otf
-      text-format: '{0:.0f}'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: THROTTLE
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: lime
+        text-size: 38
+        formula: ${sim/flightmodel/engine/ENGN_thro[0]} 100 *
+        text: ${formula}%
+        text-font: Segment7Standard.otf
+        text-format: '{0:.0f}'
 - index: 15
   name: MIXTURE
-  label: MIXTURE
-  label-size: 9
-  label-color: black
-  annunciator:
-    size: medium
-    model: A
-    parts:
-    - color: lime
-      text-size: 38
-      formula: ${sim/flightmodel/engine/ENGN_mixt[0]} 100 *
-      text: ${formula}%
-      text-font: Segment7Standard.otf
-      text-format: '{0:.0f}'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: MIXTURE
+    label-size: 9
+    label-color: black
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: lime
+        text-size: 38
+        formula: ${sim/flightmodel/engine/ENGN_mixt[0]} 100 *
+        text: ${formula}%
+        text-font: Segment7Standard.otf
+        text-format: '{0:.0f}'
 - index: 16
   name: WAYPOINT
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: NEXT WAYPOINT
+    label-size: 8
+    label-color: black
+    annunciator:
+      size: medium
+      model: F
+      parts:
+      - text: ${sim/cockpit2/radios/indicators/gps_nav_id}
+        text-color: Lime
+        text-font: Seven Segment.ttf
+        text-size: 14
+        formula: '1'
+      - text: '${sim/cockpit2/radios/indicators/gps_dme_distance_nm}
+
+          DIS'
+        text-color: Lime
+        text-font: Seven Segment.ttf
+        text-size: 14
+        text-format: '{0:.1f}'
+        formula: '1'
+      - text: '${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}
+
+          DTK'
+        text-color: Lime
+        text-font: Seven Segment.ttf
+        text-size: 15
+        text-format: '{0:.0f}'
+        formula: '1'
+      - text: '${sim/cockpit2/radios/indicators/gps_dme_time_min} min
+
+          ETA'
+        text-color: Lime
+        text-font: Seven Segment.ttf
+        text-size: 15
+        text-format: '{0:.0f}'
+        formula: '1'
   render-cooldown-ms: 750
-  label: NEXT WAYPOINT
-  label-size: 8
-  label-color: black
   string-datarefs:
   - sim/cockpit2/radios/indicators/gps_nav_id
-  annunciator:
-    size: medium
-    model: F
-    parts:
-    - text: ${sim/cockpit2/radios/indicators/gps_nav_id}
-      text-color: Lime
-      text-font: Seven Segment.ttf
-      text-size: 14
-      formula: '1'
-    - text: '${sim/cockpit2/radios/indicators/gps_dme_distance_nm}
-
-        DIS'
-      text-color: Lime
-      text-font: Seven Segment.ttf
-      text-size: 14
-      text-format: '{0:.1f}'
-      formula: '1'
-    - text: '${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}
-
-        DTK'
-      text-color: Lime
-      text-font: Seven Segment.ttf
-      text-size: 15
-      text-format: '{0:.0f}'
-      formula: '1'
-    - text: '${sim/cockpit2/radios/indicators/gps_dme_time_min} min
-
-        ETA'
-      text-color: Lime
-      text-font: Seven Segment.ttf
-      text-size: 15
-      text-format: '{0:.0f}'
-      formula: '1'
-  activation: none
-  representation: annunciator
 - index: 17
   name: SELECTED
-  label: SELECTED
-  label-color: black
-  label-size: 10
-  annunciator:
-    size: medium
-    model: F
-    parts:
-    - color: Gold
-      text-size: 12
-      text: '${formula}
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: SELECTED
+    label-color: black
+    label-size: 10
+    annunciator:
+      size: medium
+      model: F
+      parts:
+      - color: Gold
+        text-size: 12
+        text: '${formula}
 
-        HDG'
-      text-format: '{0:.0f}'
-      formula: ${sim/cockpit/autopilot/heading_mag}
-    - color: Gold
-      text-size: 12
-      text: '${formula}
+          HDG'
+        text-format: '{0:.0f}'
+        formula: ${sim/cockpit/autopilot/heading_mag}
+      - color: Gold
+        text-size: 12
+        text: '${formula}
 
-        ALT'
-      text-format: '{0:.0f}'
-      formula: ${sim/cockpit2/autopilot/altitude_dial_ft}
-    - color: Gold
-      text-size: 12
-      text: '${formula}
+          ALT'
+        text-format: '{0:.0f}'
+        formula: ${sim/cockpit2/autopilot/altitude_dial_ft}
+      - color: Gold
+        text-size: 12
+        text: '${formula}
 
-        VS'
-      text-format: '{0:.0f}'
-      formula: ${sim/cockpit/autopilot/vertical_velocity} 100 /
-    - color: White
-      text-size: 11
-      text: AP
-      framed: true
-      formula: ${sim/cockpit2/autopilot/servos_on} 1 eq
-  activation: none
-  representation: annunciator
+          VS'
+        text-format: '{0:.0f}'
+        formula: ${sim/cockpit/autopilot/vertical_velocity} 100 /
+      - color: White
+        text-size: 11
+        text: AP
+        framed: true
+        formula: ${sim/cockpit2/autopilot/servos_on} 1 eq
 - index: 18
   name: AIR_DATA
-  label: AIR DATA
-  label-color: black
-  label-size: 10
-  annunciator:
-    size: medium
-    model: F
-    parts:
-    - color: Gold
-      text-size: 11
-      text: '${formula}
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: AIR DATA
+    label-color: black
+    label-size: 10
+    annunciator:
+      size: medium
+      model: F
+      parts:
+      - color: Gold
+        text-size: 11
+        text: '${formula}
 
-        OAT C'
-      text-format: '{0:.0f}'
-      formula: ${sim/weather/aircraft/temperature_ambient_deg_c}
-    - color: White
-      text-size: 11
-      text: '${formula}
+          OAT C'
+        text-format: '{0:.0f}'
+        formula: ${sim/weather/aircraft/temperature_ambient_deg_c}
+      - color: White
+        text-size: 11
+        text: '${formula}
 
-        ALT'
-      text-format: '{0:.0f}'
-      formula: ${sim/cockpit2/gauges/indicators/altitude_ft_pilot}
-    - color: White
-      text-size: 11
-      text: '${formula}
+          ALT'
+        text-format: '{0:.0f}'
+        formula: ${sim/cockpit2/gauges/indicators/altitude_ft_pilot}
+      - color: White
+        text-size: 11
+        text: '${formula}
 
-        QNH'
-      text-format: '{0:.2f}'
-      formula: ${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}
-    - color: White
-      text-size: 11
-      text: '${formula}
+          QNH'
+        text-format: '{0:.2f}'
+        formula: ${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}
+      - color: White
+        text-size: 11
+        text: '${formula}
 
-        hPa'
-      text-format: '{0:.0f}'
-      formula: ${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot} 33.8639
-        *
-  activation: none
-  representation: annunciator
+          hPa'
+        text-format: '{0:.0f}'
+        formula: ${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot} 33.8639 *
 - index: 19
   name: AIRCRAFT
-  label: AIRCRAFT
-  label-color: black
-  label-size: 10
-  annunciator:
-    size: medium
-    model: F
-    parts:
-    - color: White
-      text-size: 11
-      text: '${sim/cockpit2/clock_timer/hobbs_time_hours}:${sim/cockpit2/clock_timer/hobbs_time_minutes}
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: AIRCRAFT
+    label-color: black
+    label-size: 10
+    annunciator:
+      size: medium
+      model: F
+      parts:
+      - color: White
+        text-size: 11
+        text: '${sim/cockpit2/clock_timer/hobbs_time_hours}:${sim/cockpit2/clock_timer/hobbs_time_minutes}
 
-        HOBBS'
-      formula: '1'
-    - color: Turquoise
-      text-size: 11
-      text: '${sim/cockpit/radios/transponder_code}
+          HOBBS'
+        formula: '1'
+      - color: Turquoise
+        text-size: 11
+        text: '${sim/cockpit/radios/transponder_code}
 
-        XPDR'
-      text-format: '{:04.0f}'
-      formula: '1'
-    - color: deepskyblue
-      text-size: 9
-      text: LEFT
-      framed: true
-      formula: ${laminar/sr22/fuel_selector_pos} 1 eq
-    - color: deepskyblue
-      text-size: 9
-      text: RIGHT
-      framed: true
-      formula: ${laminar/sr22/fuel_selector_pos} 2 eq
-  activation: none
-  representation: annunciator
+          XPDR'
+        text-format: '{:04.0f}'
+        formula: '1'
+      - color: deepskyblue
+        text-size: 9
+        text: LEFT
+        framed: true
+        formula: ${laminar/sr22/fuel_selector_pos} 1 eq
+      - color: deepskyblue
+        text-size: 9
+        text: RIGHT
+        framed: true
+        formula: ${laminar/sr22/fuel_selector_pos} 2 eq

@@ -5,106 +5,127 @@ last-updated: 03-APR-2024
 buttons:
 - index: 1
   name: STATUS
-  icon: COCKPITDECKS
-  label: STATUS
-  label-color: red
-  label-position: cm
+  activation:
+    type: inspect
+  representation:
+    type: icon
+    icon: COCKPITDECKS
+    label: STATUS
+    label-color: red
+    label-position: cm
   what: status
-  activation: inspect
-  representation: icon
 - index: 2
   name: DESCRIBE
-  icon: COCKPITDECKS
-  label: DESCRIBE
-  label-color: red
-  label-position: cm
+  activation:
+    type: inspect
+  representation:
+    type: icon
+    icon: COCKPITDECKS
+    label: DESCRIBE
+    label-color: red
+    label-position: cm
   what: desc
-  activation: inspect
-  representation: icon
 - index: 3
   name: INSPECT
-  icon: COCKPITDECKS
-  label: INSPECT
-  label-color: red
-  label-position: cm
+  activation:
+    type: inspect
+  representation:
+    type: icon
+    icon: COCKPITDECKS
+    label: INSPECT
+    label-color: red
+    label-position: cm
   what: status
-  activation: inspect
-  representation: icon
 - index: 4
   name: DATAREF
-  icon: COCKPITDECKS
-  label: 'BUTTON
+  activation:
+    type: inspect
+  representation:
+    type: icon
+    icon: COCKPITDECKS
+    label: 'BUTTON
 
-    DATAREFS'
-  label-color: red
-  label-position: cm
+      DATAREFS'
+    label-color: red
+    label-position: cm
   what: dataref
-  activation: inspect
-  representation: icon
 - index: 5
   name: DREFVALUES
-  icon: COCKPITDECKS
-  label: DREFVALUES
-  label-color: red
-  label-position: cm
+  activation:
+    type: inspect
+  representation:
+    type: icon
+    icon: COCKPITDECKS
+    label: DREFVALUES
+    label-color: red
+    label-position: cm
   what: datarefs
-  activation: inspect
-  representation: icon
 - index: 6
   name: THREADS
-  icon: COCKPITDECKS
-  label: THREADS
-  label-color: red
-  label-position: cm
+  activation:
+    type: inspect
+  representation:
+    type: icon
+    icon: COCKPITDECKS
+    label: THREADS
+    label-color: red
+    label-position: cm
   what: threads
-  activation: inspect
-  representation: icon
 - index: 24
   name: STOP_COCKPITDECKS
-  icon: PANIC
-  activation: stop
-  representation: icon
+  activation:
+    type: stop
+  representation:
+    type: icon
+    icon: PANIC
 - index: 28
   name: ANNUNCIATOR LIGHTS
-  label: ANN LT
-  stops: 3
+  activation:
+    type: dimmer
+    stops: 3
+    options: 3way,invert,hexa
+    dataref: AirbusFBW/AnnunMode
+    set-dataref: AirbusFBW/AnnunMode
+  representation:
+    type: switch
+    label: ANN LT
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - TEST
+      - BRT
+      - DIM
+      tick-space: 10
+      tick-label-size: 30
+      tick-label-font: DIN Bold
   dimmer:
   - 100
   - 80
   - 30
-  switch:
-    switch-style: rect
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - TEST
-    - BRT
-    - DIM
-    tick-space: 10
-    tick-label-size: 30
-    tick-label-font: DIN Bold
-  options: 3way,invert,hexa
-  dataref: AirbusFBW/AnnunMode
-  set-dataref: AirbusFBW/AnnunMode
-  activation: dimmer
 - index: 30
   name: RELOAD
-  label: RELOAD
-  label-size: 14
-  label-position: cm
-  text:
-    text: ${fa:rotate-right}
-    text-font: fontawesome.otf
-    text-size: 80
-    text-position: cm
-    text-color: lime
-    text-bg-color: (94, 111, 130)
-  activation: reload
-  representation: text
+  activation:
+    type: reload
+  representation:
+    type: text
+    label: RELOAD
+    label-size: 14
+    label-position: cm
+    text:
+      text: ${fa:rotate-right}
+      text-font: fontawesome.otf
+      text-size: 80
+      text-position: cm
+      text-color: lime
+      text-bg-color: (94, 111, 130)
 - index: 31
   name: Index
-  page: index
-  icon: TOLISS-A21N
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: index
+  representation:
+    type: icon
+    icon: TOLISS-A21N

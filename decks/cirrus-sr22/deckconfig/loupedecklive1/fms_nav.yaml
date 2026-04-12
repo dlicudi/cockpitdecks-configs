@@ -6,168 +6,192 @@ label-font: D-DINCondensed.otf
 buttons:
 - index: 0
   name: NAV_DIS
+  activation:
+    type: none
+  representation:
+    type: text
+    label: DIS
+    label-color: Gold
+    text: ${sim/cockpit2/radios/indicators/gps_dme_distance_nm} nm
+    text-format: '{0:.1f}'
+    text-color: white
+    text-size: 20
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 24)
   render-cooldown-ms: 500
-  label: DIS
-  label-color: Gold
-  text: ${sim/cockpit2/radios/indicators/gps_dme_distance_nm} nm
-  text-format: '{0:.1f}'
-  text-color: white
-  text-size: 20
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-  activation: none
-  representation: text
 - index: 1
   name: NAV_ETE
-  render-cooldown-ms: 500
-  label: ETE
-  label-color: Gold
-  text: '${sim/cockpit2/radios/indicators/gps_dme_time_min}
+  activation:
+    type: none
+  representation:
+    type: text
+    label: ETE
+    label-color: Gold
+    text: '${sim/cockpit2/radios/indicators/gps_dme_time_min}
 
-    min'
-  text-format: '{0:.0f}'
-  text-color: darkorange
-  text-size: 20
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-  activation: none
-  representation: text
+      min'
+    text-format: '{0:.0f}'
+    text-color: darkorange
+    text-size: 20
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 24)
+  render-cooldown-ms: 500
 - index: 2
   name: NAV_GS
-  render-cooldown-ms: 500
-  label: GS
-  label-color: Gold
-  text: '${sim/cockpit2/gauges/indicators/ground_speed_kt}
+  activation:
+    type: none
+  representation:
+    type: text
+    label: GS
+    label-color: Gold
+    text: '${sim/cockpit2/gauges/indicators/ground_speed_kt}
 
-    kts'
-  text-format: '{0:.0f}'
-  text-color: white
-  text-size: 20
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-  activation: none
-  representation: text
+      kts'
+    text-format: '{0:.0f}'
+    text-color: white
+    text-size: 20
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 24)
+  render-cooldown-ms: 500
 - index: 3
   name: NAV_DTK
+  activation:
+    type: none
+  representation:
+    type: text
+    label: DTK
+    label-color: Gold
+    text: ${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}°
+    text-format: '{0:.0f}'
+    text-color: darkorange
+    text-size: 20
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 24)
   render-cooldown-ms: 500
-  label: DTK
-  label-color: Gold
-  text: ${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}°
-  text-format: '{0:.0f}'
-  text-color: darkorange
-  text-size: 20
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-  activation: none
-  representation: text
 - index: 4
   name: NAV_WPT
+  activation:
+    type: none
+  representation:
+    type: text
+    label: WPT
+    label-color: Gold
+    text: —
+    text-color: lime
+    text-size: 22
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 24)
   render-cooldown-ms: 500
-  label: WPT
-  label-color: Gold
-  text: —
-  text-color: lime
-  text-size: 22
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-  activation: none
-  representation: text
 - index: 5
   name: NAV_ETA
+  activation:
+    type: none
+  representation:
+    type: text
+    label: ETA
+    label-color: Gold
+    text: ${sim/cockpit2/radios/indicators/fms1_act_eta_hour}:${sim/cockpit2/radios/indicators/fms1_act_eta_minute}Z
+    text-color: darkorange
+    text-size: 20
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 24)
   render-cooldown-ms: 500
-  label: ETA
-  label-color: Gold
-  text: ${sim/cockpit2/radios/indicators/fms1_act_eta_hour}:${sim/cockpit2/radios/indicators/fms1_act_eta_minute}Z
-  text-color: darkorange
-  text-size: 20
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-  activation: none
-  representation: text
 - index: 6
   name: NAV_BRG
+  activation:
+    type: none
+  representation:
+    type: text
+    label: BRG
+    label-color: Gold
+    text: ${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}°
+    text-format: '{0:.0f}'
+    text-color: white
+    text-size: 20
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 24)
   render-cooldown-ms: 500
-  label: BRG
-  label-color: Gold
-  text: ${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}°
-  text-format: '{0:.0f}'
-  text-color: white
-  text-size: 20
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-  activation: none
-  representation: text
 - index: 7
   name: NAV_XTK
+  activation:
+    type: none
+  representation:
+    type: text
+    label: XTK
+    label-color: Gold
+    text: ${sim/cockpit/radios/gps_course_deviation} nm
+    text-format: '{0:.1f}'
+    text-color: white
+    text-size: 20
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 24)
   render-cooldown-ms: 500
-  label: XTK
-  label-color: Gold
-  text: ${sim/cockpit/radios/gps_course_deviation} nm
-  text-format: '{0:.1f}'
-  text-color: white
-  text-size: 20
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-  activation: none
-  representation: text
 - index: 8
   name: NAV_TRK
+  activation:
+    type: none
+  representation:
+    type: text
+    label: TRK
+    label-color: Gold
+    text: ${sim/cockpit2/gauges/indicators/ground_track_mag_pilot}°
+    text-format: '{0:.0f}'
+    text-color: white
+    text-size: 20
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 24)
   render-cooldown-ms: 500
-  label: TRK
-  label-color: Gold
-  text: ${sim/cockpit2/gauges/indicators/ground_track_mag_pilot}°
-  text-format: '{0:.0f}'
-  text-color: white
-  text-size: 20
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-  activation: none
-  representation: text
 - index: 9
   name: NAV_DEST
+  activation:
+    type: none
+  representation:
+    type: text
+    label: DEST
+    label-color: Gold
+    text: —
+    text-color: deepskyblue
+    text-size: 22
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 24)
   render-cooldown-ms: 500
-  label: DEST
-  label-color: Gold
-  text: —
-  text-color: deepskyblue
-  text-size: 22
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-  activation: none
-  representation: text
 - index: 10
   name: NAV_DTO
+  activation:
+    type: none
+  representation:
+    type: text
+    label: DTO
+    label-color: Gold
+    text: —
+    text-color: white
+    text-size: 20
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 24)
   render-cooldown-ms: 500
-  label: DTO
-  label-color: Gold
-  text: —
-  text-color: white
-  text-size: 20
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-  activation: none
-  representation: text
 - index: 11
   name: NAV_SRC
+  activation:
+    type: none
+  representation:
+    type: text
+    label: SRC
+    label-color: Gold
+    text: GPS
+    text-color: lime
+    text-size: 9
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 24)
   render-cooldown-ms: 500
-  label: SRC
-  label-color: Gold
-  text: GPS
-  text-color: lime
-  text-size: 9
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 24)
-  activation: none
-  representation: text

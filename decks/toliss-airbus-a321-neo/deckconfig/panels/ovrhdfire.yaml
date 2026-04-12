@@ -5,183 +5,218 @@ last-updated: 03-APR-2024
 name: ovrhdfire
 buttons:
 - index: 1
-  text:
-    text: ENG 1
-    text-font: DIN Bold
-    text-size: 30
-  activation: none
-  representation: text
+  activation:
+    type: none
+  representation:
+    type: text
+    text:
+      text: ENG 1
+      text-font: DIN Bold
+      text-size: 30
 - index: 3
-  text:
-    text: APU
-    text-font: DIN Bold
-    text-size: 30
-  activation: none
-  representation: text
+  activation:
+    type: none
+  representation:
+    type: text
+    text:
+      text: APU
+      text-font: DIN Bold
+      text-size: 30
 - index: 5
-  text:
-    text: ENG 2
-    text-font: DIN Bold
-    text-size: 30
-  activation: none
-  representation: text
+  activation:
+    type: none
+  representation:
+    type: text
+    text:
+      text: ENG 2
+      text-font: DIN Bold
+      text-size: 30
 - index: 8
   name: ENG1AGENT1
-  label: AGENT 1
-  annunciator:
-    model: B
-    B0:
-      text: SQUIB
-      text-color: darkorange
-    B1:
-      text: DISCH
-      framed: true
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: AGENT 1
+    annunciator:
+      model: B
+      B0:
+        text: SQUIB
+        text-color: darkorange
+      B1:
+        text: DISCH
+        framed: true
 - index: 9
   name: ENG1AGENT2
-  label: AGENT 2
-  annunciator:
-    model: B
-    B0:
-      text: SQUIB
-      text-color: darkorange
-    B1:
-      text: DISCH
-      framed: true
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: AGENT 2
+    annunciator:
+      model: B
+      B0:
+        text: SQUIB
+        text-color: darkorange
+      B1:
+        text: DISCH
+        framed: true
 - index: 11
   name: APUAGENT
-  label: AGENT
-  annunciator:
-    model: B
-    B0:
-      text: SQUIB
-      text-color: darkorange
-    B1:
-      text: DISCH
-      framed: true
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: AGENT
+    annunciator:
+      model: B
+      B0:
+        text: SQUIB
+        text-color: darkorange
+      B1:
+        text: DISCH
+        framed: true
 - index: 13
   name: ENG2AGENT1
-  label: AGENT 1
-  annunciator:
-    model: B
-    B0:
-      text: SQUIB
-      text-color: darkorange
-    B1:
-      text: DISCH
-      framed: true
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: AGENT 1
+    annunciator:
+      model: B
+      B0:
+        text: SQUIB
+        text-color: darkorange
+      B1:
+        text: DISCH
+        framed: true
 - index: 14
   name: ENG2AGENT2
-  label: AGENT 2
-  annunciator:
-    model: B
-    B0:
-      text: SQUIB
-      text-color: darkorange
-    B1:
-      text: DISCH
-      framed: true
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: AGENT 2
+    annunciator:
+      model: B
+      B0:
+        text: SQUIB
+        text-color: darkorange
+      B1:
+        text: DISCH
+        framed: true
 - index: 17
   name: ENG1FIRE
-  annunciator:
-    model: A
-    A0:
-      text: FIRE
-      text-color: black
-      text-bg-color: red
-      dataref: AirbusFBW/FireAgentSwitchAnim[10]
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      model: A
+      A0:
+        text: FIRE
+        text-color: black
+        text-bg-color: red
+        dataref: AirbusFBW/FireAgentSwitchAnim[10]
   guard:
     dataref: AirbusFBW/OHPGuardsAllATA[17]
     model: grid
-  activation: none
-  representation: annunciator
 - index: 19
   name: APUFIRE
-  annunciator:
-    model: A
-    A0:
-      text: FIRE
-      text-color: black
-      text-bg-color: red
-      dataref: AirbusFBW/FireAgentSwitchAnim[14]
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      model: A
+      A0:
+        text: FIRE
+        text-color: black
+        text-bg-color: red
+        dataref: AirbusFBW/FireAgentSwitchAnim[14]
   guard:
     dataref: AirbusFBW/OHPGuardsAllATA[19]
     model: grid
-  activation: none
-  representation: annunciator
 - index: 21
   name: ENG2FIRE
-  annunciator:
-    model: A
-    A0:
-      text: FIRE
-      text-color: black
-      text-bg-color: red
-      dataref: AirbusFBW/FireAgentSwitchAnim[11]
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      model: A
+      A0:
+        text: FIRE
+        text-color: black
+        text-bg-color: red
+        dataref: AirbusFBW/FireAgentSwitchAnim[11]
   guard:
     dataref: AirbusFBW/OHPGuardsAllATA[18]
     model: grid
-  activation: none
-  representation: annunciator
 - index: 23
   name: down
-  page: ovrhdhyd
-  label: HYD
-  label-size: 10
-  text:
-    text: ${fa:arrow-down}
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: ovrhdhyd
+  representation:
+    type: text
+    label: HYD
+    label-size: 10
+    text:
+      text: ${fa:arrow-down}
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 25
-  label: 'ENG 1
+  activation:
+    type: begin-end-command
+    commands:
+      press: AirbusFBW/FireTestENG1
+  representation:
+    type: push-switch
+    label: 'ENG 1
 
-    TEST'
-  push-switch:
-    button-size: 120
-    button-fill-color: black
-    button-stroke-width: 0
-    witness-size: 0
-  activation: begin-end-command
-  commands:
-    press: AirbusFBW/FireTestENG1
+      TEST'
+    push-switch:
+      button-size: 120
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
 - index: 27
-  label: 'APU
+  activation:
+    type: begin-end-command
+    commands:
+      press: AirbusFBW/FireTestAPU
+  representation:
+    type: push-switch
+    label: 'APU
 
-    TEST'
-  push-switch:
-    button-size: 120
-    button-fill-color: black
-    button-stroke-width: 0
-    witness-size: 0
-  formula: 1
-  activation: begin-end-command
-  commands:
-    press: AirbusFBW/FireTestAPU
+      TEST'
+    push-switch:
+      button-size: 120
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
+    formula: 1
 - index: 29
-  label: 'ENG 2
+  activation:
+    type: begin-end-command
+    commands:
+      press: AirbusFBW/FireTestENG2
+  representation:
+    type: push-switch
+    label: 'ENG 2
 
-    TEST'
-  push-switch:
-    button-size: 120
-    button-fill-color: black
-    button-stroke-width: 0
-    witness-size: 0
-  activation: begin-end-command
-  commands:
-    press: AirbusFBW/FireTestENG2
+      TEST'
+    push-switch:
+      button-size: 120
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
 - index: 31
   name: Index
-  icon: TOLISS-A21N
-  activation: page
-  representation: icon
+  activation:
+    type: page
+  representation:
+    type: icon
+    icon: TOLISS-A21N

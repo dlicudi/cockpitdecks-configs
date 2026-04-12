@@ -5,84 +5,108 @@ last-updated: 31-OCT-2024
 buttons:
 - index: 0
   name: View 0
-  led: true
-  activation: push
-  representation: led
-  commands:
-    press: SRS/X-Camera/Select_View_ID_8
+  activation:
+    type: push
+    commands:
+      press: SRS/X-Camera/Select_View_ID_8
+  representation:
+    type: led
+    led: true
 - index: 1
   name: View 1
-  led: true
-  activation: push
-  representation: led
-  commands:
-    press: SRS/X-Camera/Select_View_ID_1
+  activation:
+    type: push
+    commands:
+      press: SRS/X-Camera/Select_View_ID_1
+  representation:
+    type: led
+    led: true
 - index: 2
   name: View 2
-  led: true
-  activation: push
-  representation: led
-  commands:
-    press: SRS/X-Camera/Select_View_ID_2
+  activation:
+    type: push
+    commands:
+      press: SRS/X-Camera/Select_View_ID_2
+  representation:
+    type: led
+    led: true
 - index: 3
   name: View 3
-  led: true
-  activation: push
-  representation: led
-  commands:
-    press: SRS/X-Camera/Select_View_ID_3
+  activation:
+    type: push
+    commands:
+      press: SRS/X-Camera/Select_View_ID_3
+  representation:
+    type: led
+    led: true
 - index: 4
   name: View 4
-  led: true
-  activation: push
-  representation: led
-  commands:
-    press: SRS/X-Camera/Select_View_ID_4
+  activation:
+    type: push
+    commands:
+      press: SRS/X-Camera/Select_View_ID_4
+  representation:
+    type: led
+    led: true
 - index: 5
   name: View 5
-  led: true
-  activation: push
-  representation: led
-  commands:
-    press: SRS/X-Camera/Select_View_ID_5
+  activation:
+    type: push
+    commands:
+      press: SRS/X-Camera/Select_View_ID_5
+  representation:
+    type: led
+    led: true
 - index: 6
   name: View 6
-  led: true
-  activation: push
-  representation: led
-  commands:
-    press: SRS/X-Camera/Select_View_ID_6
+  activation:
+    type: push
+    commands:
+      press: SRS/X-Camera/Select_View_ID_6
+  representation:
+    type: led
+    led: true
 - index: 7
   name: View 7
-  led: true
-  activation: push
-  representation: led
-  commands:
-    press: SRS/X-Camera/Select_View_ID_7
+  activation:
+    type: push
+    commands:
+      press: SRS/X-Camera/Select_View_ID_7
+  representation:
+    type: led
+    led: true
 - index: 15
   name: RELOAD
-  led: true
-  formula: 1
-  activation: reload
-  representation: led
+  activation:
+    type: reload
+  representation:
+    type: led
+    led: true
+    formula: 1
 - index: slider
   name: SLIDER
-  set-dataref: data:noop
-  representation: none
-  activation: slider
+  activation:
+    type: slider
+    set-dataref: data:noop
+  representation:
+    type: none
 - index: a
   name: A
-  page: a
-  led: true
-  formula: 0
-  activation: page
-  representation: led
+  activation:
+    type: page
+    page: a
+  representation:
+    type: led
+    led: true
+    formula: 0
 - index: b
   name: B
-  page: b
-  led: true
-  formula: 1
-  activation: page
-  representation: led
+  activation:
+    type: page
+    page: b
+  representation:
+    type: led
+    led: true
+    formula: 1
 includes:
 - encoders

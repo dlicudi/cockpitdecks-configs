@@ -5,268 +5,300 @@ last-updated: 03-APR-2024
 buttons:
 - index: 6
   name: ISCS
-  multi-icons:
-  - ISCS_DARK
-  - ISCS_DARK
-  initial-value: 0
-  activation: push
-  representation: multi-icons
-  commands:
-    press: toliss_airbus/iscs_open
+  activation:
+    type: push
+    initial-value: 0
+    commands:
+      press: toliss_airbus/iscs_open
+  representation:
+    type: multi-icons
+    multi-icons:
+    - ISCS_DARK
+    - ISCS_DARK
 - index: 7
-  text: BACK
-  text-position: cm
-  page: back
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: back
+  representation:
+    type: text
+    text: BACK
+    text-position: cm
 - index: 10
   name: Close All Doors
-  label: Close All Doors
-  text:
-    text: ${fa:door-closed}
-    text-font: fontawesome.otf
-    text-size: 48
-  activation: push
-  representation: text
-  commands:
-    press: toliss_airbus/door_commands/all_to_mode_close
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/door_commands/all_to_mode_close
+  representation:
+    type: text
+    label: Close All Doors
+    text:
+      text: ${fa:door-closed}
+      text-font: fontawesome.otf
+      text-size: 48
 - index: 0
   name: PAX 1L
-  label: PAX 1L
-  annunciator:
-    model: B
-    B0:
-      text: CLOSED
-      text-size: 40
-      color: lime
-      formula: ${AirbusFBW/PaxDoorArray[0]} not
-    B1:
-      text: OPEN
-      text-size: 40
-      framed: true
-      color: deepskyblue
-      dataref: AirbusFBW/PaxDoorArray[0]
-  set-dataref: AirbusFBW/PaxDoorModeArray[0]
-  formula: ${AirbusFBW/PaxDoorArray[0]} not 2 *
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/PaxDoorModeArray[0]
+  representation:
+    type: annunciator
+    label: PAX 1L
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/PaxDoorArray[0]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/PaxDoorArray[0]
+    formula: ${AirbusFBW/PaxDoorArray[0]} not 2 *
 - index: 1
   name: PAX 1R
-  label: PAX 1R
-  annunciator:
-    model: B
-    B0:
-      text: CLOSED
-      text-size: 40
-      color: lime
-      formula: ${AirbusFBW/PaxDoorArray[1]} not
-    B1:
-      text: OPEN
-      text-size: 40
-      framed: true
-      color: deepskyblue
-      formula: ${AirbusFBW/PaxDoorArray[1]}
-  set-dataref: AirbusFBW/PaxDoorModeArray[1]
-  formula: ${AirbusFBW/PaxDoorArray[0]} not 2 *
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/PaxDoorModeArray[1]
+  representation:
+    type: annunciator
+    label: PAX 1R
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/PaxDoorArray[1]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        formula: ${AirbusFBW/PaxDoorArray[1]}
+    formula: ${AirbusFBW/PaxDoorArray[0]} not 2 *
 - index: 8
   name: PAX 2L
-  label: PAX 2L
-  annunciator:
-    model: B
-    B0:
-      text: CLOSED
-      text-size: 40
-      color: lime
-      formula: ${AirbusFBW/PaxDoorArray[2]} not
-    B1:
-      text: OPEN
-      text-size: 40
-      framed: true
-      color: deepskyblue
-      dataref: AirbusFBW/PaxDoorArray[2]
-  set-dataref: AirbusFBW/PaxDoorModeArray[2]
-  formula: ${AirbusFBW/PaxDoorArray[2]} not 2 *
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/PaxDoorModeArray[2]
+  representation:
+    type: annunciator
+    label: PAX 2L
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/PaxDoorArray[2]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/PaxDoorArray[2]
+    formula: ${AirbusFBW/PaxDoorArray[2]} not 2 *
 - index: 9
   name: PAX 2R
-  label: PAX 2R
-  annunciator:
-    model: B
-    B0:
-      text: CLOSED
-      text-size: 40
-      color: lime
-      formula: ${AirbusFBW/PaxDoorArray[3]} not
-    B1:
-      text: OPEN
-      text-size: 40
-      framed: true
-      color: deepskyblue
-      dataref: AirbusFBW/PaxDoorArray[3]
-  set-dataref: AirbusFBW/PaxDoorModeArray[3]
-  formula: ${AirbusFBW/PaxDoorArray[3]} not 2 *
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/PaxDoorModeArray[3]
+  representation:
+    type: annunciator
+    label: PAX 2R
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/PaxDoorArray[3]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/PaxDoorArray[3]
+    formula: ${AirbusFBW/PaxDoorArray[3]} not 2 *
 - index: 16
   name: PAX 3L
-  label: PAX 3L
-  annunciator:
-    model: B
-    B0:
-      text: CLOSED
-      text-size: 40
-      color: lime
-      formula: ${AirbusFBW/PaxDoorArray[4]} not
-    B1:
-      text: OPEN
-      text-size: 40
-      framed: true
-      color: deepskyblue
-      dataref: AirbusFBW/PaxDoorArray[4]
-  set-dataref: AirbusFBW/PaxDoorModeArray[4]
-  formula: ${AirbusFBW/PaxDoorArray[4]} not 2 *
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/PaxDoorModeArray[4]
+  representation:
+    type: annunciator
+    label: PAX 3L
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/PaxDoorArray[4]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/PaxDoorArray[4]
+    formula: ${AirbusFBW/PaxDoorArray[4]} not 2 *
 - index: 17
   name: PAX 3R
-  label: PAX 3R
-  annunciator:
-    model: B
-    B0:
-      text: CLOSED
-      text-size: 40
-      color: lime
-      formula: ${AirbusFBW/PaxDoorArray[5]} not
-    B1:
-      text: OPEN
-      text-size: 40
-      framed: true
-      color: deepskyblue
-      dataref: AirbusFBW/PaxDoorArray[5]
-  set-dataref: AirbusFBW/PaxDoorModeArray[5]
-  formula: ${AirbusFBW/PaxDoorArray[5]} not 2 *
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/PaxDoorModeArray[5]
+  representation:
+    type: annunciator
+    label: PAX 3R
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/PaxDoorArray[5]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/PaxDoorArray[5]
+    formula: ${AirbusFBW/PaxDoorArray[5]} not 2 *
 - index: 24
   name: PAX 4L
-  label: PAX 4L
-  annunciator:
-    model: B
-    B0:
-      text: CLOSED
-      text-size: 40
-      color: lime
-      formula: ${AirbusFBW/PaxDoorArray[6]} not
-    B1:
-      text: OPEN
-      text-size: 40
-      framed: true
-      color: deepskyblue
-      dataref: AirbusFBW/PaxDoorArray[6]
-  set-dataref: AirbusFBW/PaxDoorModeArray[6]
-  formula: ${AirbusFBW/PaxDoorArray[6]} not 2 *
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/PaxDoorModeArray[6]
+  representation:
+    type: annunciator
+    label: PAX 4L
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/PaxDoorArray[6]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/PaxDoorArray[6]
+    formula: ${AirbusFBW/PaxDoorArray[6]} not 2 *
 - index: 25
   name: PAX 4R
-  label: PAX 4R
-  annunciator:
-    model: B
-    B0:
-      text: CLOSED
-      text-size: 40
-      color: lime
-      formula: ${AirbusFBW/PaxDoorArray[7]} not
-    B1:
-      text: OPEN
-      text-size: 40
-      framed: true
-      color: deepskyblue
-      dataref: AirbusFBW/PaxDoorArray[7]
-  set-dataref: AirbusFBW/PaxDoorModeArray[7]
-  formula: ${AirbusFBW/PaxDoorArray[7]} not 2 *
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/PaxDoorModeArray[7]
+  representation:
+    type: annunciator
+    label: PAX 4R
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/PaxDoorArray[7]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/PaxDoorArray[7]
+    formula: ${AirbusFBW/PaxDoorArray[7]} not 2 *
 - index: 2
   name: CARGO FWD
-  label: CARGO FWD
-  annunciator:
-    model: B
-    B0:
-      text: CLOSED
-      text-size: 40
-      color: lime
-      formula: ${AirbusFBW/CargoDoorArray[0]} not
-    B1:
-      text: OPEN
-      text-size: 40
-      framed: true
-      color: deepskyblue
-      dataref: AirbusFBW/CargoDoorArray[0]
-  set-dataref: AirbusFBW/CargoDoorModeArray[0]
-  formula: ${AirbusFBW/CargoDoorArray[0]} not 2 *
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/CargoDoorModeArray[0]
+  representation:
+    type: annunciator
+    label: CARGO FWD
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/CargoDoorArray[0]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/CargoDoorArray[0]
+    formula: ${AirbusFBW/CargoDoorArray[0]} not 2 *
 - index: 18
   name: CARGO AFT
-  label: CARGO AFT
-  annunciator:
-    model: B
-    B0:
-      text: CLOSED
-      text-size: 40
-      color: lime
-      formula: ${AirbusFBW/CargoDoorArray[1]} not
-    B1:
-      text: OPEN
-      text-size: 40
-      framed: true
-      color: deepskyblue
-      dataref: AirbusFBW/CargoDoorArray[1]
-  set-dataref: AirbusFBW/CargoDoorModeArray[1]
-  formula: ${AirbusFBW/CargoDoorArray[1]} not 2 *
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/CargoDoorModeArray[1]
+  representation:
+    type: annunciator
+    label: CARGO AFT
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/CargoDoorArray[1]} not
+      B1:
+        text: OPEN
+        text-size: 40
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/CargoDoorArray[1]
+    formula: ${AirbusFBW/CargoDoorArray[1]} not 2 *
 - index: 26
   name: CARGO BULK
-  label: CARGO BULK
-  annunciator:
-    model: B
-    B0:
-      text: CLOSED
-      text-size: 40
-      color: lime
-      formula: ${AirbusFBW/CargoDoorArray[2]} not
-    B1:
-      text: OPEN
-      framed: true
-      text-size: 40
-      color: deepskyblue
-      dataref: AirbusFBW/CargoDoorArray[2]
-  set-dataref: AirbusFBW/CargoDoorModeArray[2]
-  formula: ${AirbusFBW/CargoDoorArray[2]} not 2 *
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/CargoDoorModeArray[2]
+  representation:
+    type: annunciator
+    label: CARGO BULK
+    annunciator:
+      model: B
+      B0:
+        text: CLOSED
+        text-size: 40
+        color: lime
+        formula: ${AirbusFBW/CargoDoorArray[2]} not
+      B1:
+        text: OPEN
+        framed: true
+        text-size: 40
+        color: deepskyblue
+        dataref: AirbusFBW/CargoDoorArray[2]
+    formula: ${AirbusFBW/CargoDoorArray[2]} not 2 *
 - index: 30
   name: RELOAD
-  label: RELOAD
-  label-size: 14
-  label-position: cm
-  text:
-    text: ${fa:rotate-right}
-    text-font: fontawesome.otf
-    text-size: 80
-    text-position: cm
-    text-color: lime
-    text-bg-color: (94, 111, 130)
-  activation: reload
-  representation: text
+  activation:
+    type: reload
+  representation:
+    type: text
+    label: RELOAD
+    label-size: 14
+    label-position: cm
+    text:
+      text: ${fa:rotate-right}
+      text-font: fontawesome.otf
+      text-size: 80
+      text-position: cm
+      text-color: lime
+      text-bg-color: (94, 111, 130)
 - index: 31
   name: Index
-  page: index-alt
-  icon: TOLISS-A21N
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: index-alt
+  representation:
+    type: icon
+    icon: TOLISS-A21N

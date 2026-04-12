@@ -5,192 +5,225 @@ last-updated: 31-OCT-2024
 buttons:
 - index: 31
   name: Old Index
-  page: index-alt
-  icon: A339
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: index-alt
+  representation:
+    type: icon
+    icon: A339
 - index: 6
   name: ISCS
-  multi-icons:
-  - ISCS_DARK
-  - ISCS_DARK
-  initial-value: 0
-  activation: push
-  representation: multi-icons
-  commands:
-    press: toliss_airbus/iscs_open
+  activation:
+    type: push
+    initial-value: 0
+    commands:
+      press: toliss_airbus/iscs_open
+  representation:
+    type: multi-icons
+    multi-icons:
+    - ISCS_DARK
+    - ISCS_DARK
 - index: 10
   name: Doors
-  label: DOORS
-  page: doors
-  text:
-    text: ${fa:door-closed}
-    text-font: fontawesome.otf
-    text-size: 48
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: doors
+  representation:
+    type: text
+    label: DOORS
+    text:
+      text: ${fa:door-closed}
+      text-font: fontawesome.otf
+      text-size: 48
 - index: 2
   name: POWER
-  label: EXT.POWER
-  annunciator:
-    model: B
-    B0:
-      text: AVAIL
-      color: lime
-      formula: ${AirbusFBW/EnableExternalPower} not
-    B1:
-      text: true
-      framed: true
-      color: deepskyblue
-      dataref: AirbusFBW/EnableExternalPower
-  set-dataref: AirbusFBW/EnableExternalPower
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/EnableExternalPower
+  representation:
+    type: annunciator
+    label: EXT.POWER
+    annunciator:
+      model: B
+      B0:
+        text: AVAIL
+        color: lime
+        formula: ${AirbusFBW/EnableExternalPower} not
+      B1:
+        text: true
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/EnableExternalPower
 - index: 3
   name: HP
-  label: HP AIR
-  annunciator:
-    model: B
-    B0:
-      text: AVAIL
-      color: lime
-      formula: ${AirbusFBW/GroundHPAir} not
-    B1:
-      text: true
-      framed: true
-      color: deepskyblue
-      dataref: AirbusFBW/GroundHPAir
-  set-dataref: AirbusFBW/GroundHPAir
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/GroundHPAir
+  representation:
+    type: annunciator
+    label: HP AIR
+    annunciator:
+      model: B
+      B0:
+        text: AVAIL
+        color: lime
+        formula: ${AirbusFBW/GroundHPAir} not
+      B1:
+        text: true
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/GroundHPAir
 - index: 4
   name: LP
-  label: LP AIR
-  annunciator:
-    model: B
-    B0:
-      text: AVAIL
-      color: lime
-      formula: ${AirbusFBW/GroundLPAir} not
-    B1:
-      text: true
-      framed: true
-      color: deepskyblue
-      dataref: AirbusFBW/GroundLPAir
-  set-dataref: AirbusFBW/GroundLPAir
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/GroundLPAir
+  representation:
+    type: annunciator
+    label: LP AIR
+    annunciator:
+      model: B
+      B0:
+        text: AVAIL
+        color: lime
+        formula: ${AirbusFBW/GroundLPAir} not
+      B1:
+        text: true
+        framed: true
+        color: deepskyblue
+        dataref: AirbusFBW/GroundLPAir
 - index: 5
   name: CHOCKS
-  label: CHOCKS
-  label-color: yellow
-  annunciator:
-    model: B
-    B0:
-      text: AVAIL
-      color: lime
-      formula: ${AirbusFBW/Chocks} not
-    B1:
-      text: true
-      framed: true
-      color: yellow
-      dataref: AirbusFBW/Chocks
-  set-dataref: AirbusFBW/Chocks
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/Chocks
+  representation:
+    type: annunciator
+    label: CHOCKS
+    label-color: yellow
+    annunciator:
+      model: B
+      B0:
+        text: AVAIL
+        color: lime
+        formula: ${AirbusFBW/Chocks} not
+      B1:
+        text: true
+        framed: true
+        color: yellow
+        dataref: AirbusFBW/Chocks
 - index: 8
   name: AviTab
-  label: AviTab
-  annunciator:
-    model: B
-    size: large
-    B0:
-      formula: ${state:activation_count} 2 % 1 - abs
-      text: AVAIL
-      text-color: lime
-    B1:
-      formula: ${state:activation_count} 2 %
-      text: true
-      text-color: deepskyblue
-      framed: true
-  activation: push
-  representation: annunciator
-  commands:
-    press: AviTab/toggle_tablet
+  activation:
+    type: push
+    commands:
+      press: AviTab/toggle_tablet
+  representation:
+    type: annunciator
+    label: AviTab
+    annunciator:
+      model: B
+      size: large
+      B0:
+        formula: ${state:activation_count} 2 % 1 - abs
+        text: AVAIL
+        text-color: lime
+      B1:
+        formula: ${state:activation_count} 2 %
+        text: true
+        text-color: deepskyblue
+        framed: true
 - index: 0
   name: Next Livery
-  label: Next Livery
-  text:
-    text: ${fa:plane-departure}
-    text-font: fontawesome.otf
-    text-size: 48
-  activation: push
-  representation: text
-  commands:
-    press: sim/operation/next_livery
+  activation:
+    type: push
+    commands:
+      press: sim/operation/next_livery
+  representation:
+    type: text
+    label: Next Livery
+    text:
+      text: ${fa:plane-departure}
+      text-font: fontawesome.otf
+      text-size: 48
 - index: 1
   name: Previous Livery
-  label: Prev Livery
-  text:
-    text: ${fa:plane-arrival}
-    text-font: fontawesome.otf
-    text-size: 48
-  activation: push
-  representation: text
-  commands:
-    press: sim/operation/prev_livery
+  activation:
+    type: push
+    commands:
+      press: sim/operation/prev_livery
+  representation:
+    type: text
+    label: Prev Livery
+    text:
+      text: ${fa:plane-arrival}
+      text-font: fontawesome.otf
+      text-size: 48
 - index: 7
   name: METAR_LOCAL
-  label: Weather
+  activation:
+    type: none
+  representation:
+    type: none
+    label: Weather
   weather-metar:
     weather-font: B612-Regular
     weather-size: 24
-  activation: none
 - index: 14
   name: METAR_DEP
-  label: FMC DEP
+  activation:
+    type: none
+  representation:
+    type: none
+    label: FMC DEP
   string-dataref: toliss_airbus/flightplan/departure_icao
   weather-metar:
     weather-font: B612-Regular
     weather-size: 24
-  activation: none
 - index: 15
   name: METAR_ARR
-  label: FMC DEST
+  activation:
+    type: none
+  representation:
+    type: none
+    label: FMC DEST
   string-dataref: toliss_airbus/flightplan/destination_icao
   weather-metar:
     weather-font: B612-Regular
     weather-size: 24
-  activation: none
 - index: 12
   name: Jump Next Waypoint
-  label: NEXT WPT
-  dataref: toliss_airbus/iscsinterface/jumpPossible
-  multi-texts:
-  - text: ${fa:forward}
-    text-font: fontawesome.otf
-    text-size: 48
-    text-color: grey
-  - text: ${fa:forward}
-    text-font: fontawesome.otf
-    text-size: 48
-    text-color: lime
-  activation: push
-  representation: multi-texts
-  commands:
-    press: toliss_airbus/iscsinterface/jumpToNextWaypoint
+  activation:
+    type: push
+    dataref: toliss_airbus/iscsinterface/jumpPossible
+    commands:
+      press: toliss_airbus/iscsinterface/jumpToNextWaypoint
+  representation:
+    type: multi-texts
+    label: NEXT WPT
+    multi-texts:
+    - text: ${fa:forward}
+      text-font: fontawesome.otf
+      text-size: 48
+      text-color: grey
+    - text: ${fa:forward}
+      text-font: fontawesome.otf
+      text-size: 48
+      text-color: lime
 - index: 30
   name: Save situation
-  label: SAVE SIT
-  label-color: lime
-  text:
-    text: ${fa:floppy-disk}
-    text-font: fontawesome.otf
-    text-size: 48
-    text-color: lime
-  activation: push
-  representation: text
-  commands:
-    press: toliss/save_situation_now
+  activation:
+    type: push
+    commands:
+      press: toliss/save_situation_now
+  representation:
+    type: text
+    label: SAVE SIT
+    label-color: lime
+    text:
+      text: ${fa:floppy-disk}
+      text-font: fontawesome.otf
+      text-size: 48
+      text-color: lime
 includes:
 - popups

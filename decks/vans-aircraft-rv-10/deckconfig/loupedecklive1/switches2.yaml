@@ -5,170 +5,187 @@ includes:
 name: switches2
 buttons:
 - index: 0
+  activation:
+    type: push
+    commands:
+      press: sim/lights/landing_lights_toggle
+  representation:
+    type: annunciator
+    label: LAND
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/electrical/landing_lights_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
   vibrate: SHORT
-  label: LAND
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/electrical/landing_lights_on} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/landing_lights_toggle
 - index: 1
+  activation:
+    type: push
+    commands:
+      press: sim/lights/taxi_lights_toggle
+  representation:
+    type: annunciator
+    label: TAXI
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/electrical/taxi_light_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/taxi_light_on} 1 eq
   vibrate: SHORT
-  label: TAXI
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/electrical/taxi_light_on} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/electrical/taxi_light_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/taxi_lights_toggle
 - index: 2
+  activation:
+    type: push
+    commands:
+      press: sim/lights/strobe_lights_toggle
+  representation:
+    type: annunciator
+    label: FLASH
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
   vibrate: SHORT
-  label: FLASH
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/strobe_lights_toggle
 - index: 3
+  activation:
+    type: push
+    commands:
+      press: sim/lights/nav_lights_toggle
+  representation:
+    type: annunciator
+    label: NAV
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
   vibrate: SHORT
-  label: NAV
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/nav_lights_toggle
 - index: 8
+  activation:
+    type: push
+    commands:
+      press: laminar/rv10/tank_sel_left
+  representation:
+    type: annunciator
+    label: FUEL LEFT
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: red
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 0 eq
+      B1:
+        text: SELECTED
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 1 eq
   vibrate: SHORT
-  label: FUEL LEFT
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: red
-      formula: ${sim/cockpit2/fuel/fuel_tank_selector} 0 eq
-    B1:
-      text: SELECTED
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/fuel/fuel_tank_selector} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: laminar/rv10/tank_sel_left
 - index: 9
+  activation:
+    type: sweep
+    stops: 4
+    dataref: laminar/rv10/switch/fuel_tank_pos
+    initial-value: 1
+    positions:
+    - laminar/rv10/tank_sel_left
+    - laminar/rv10/tank_sel_right
+  representation:
+    type: circular-switch
+    label: FUEL
+    label-color: black
+    label-size: 9
+    circular-switch:
+      switch-style: large
+      down: 50
+      button-size: 70
+      button-fill-color: (30, 40, 50)
+      button-stroke-color: black
+      handle-fill-color: (60, 70, 80)
+      tick-from: 90
+      tick-to: 270
+      tick-color: white
+      tick-space: 36
+      tick-width: 8
+      tick-length: 24
+      tick-labels:
+      - 'OFF'
+      - LEFT
+      - RIGHT
+      - 'OFF'
+      tick-label-font: DIN Bold
+      tick-label-size: 24
+      needle-underline-width: 8
   vibrate: SHORT
-  stops: 4
-  label: FUEL
-  label-color: black
-  label-size: 9
-  dataref: laminar/rv10/switch/fuel_tank_pos
-  initial-value: 1
-  circular-switch:
-    switch-style: large
-    down: 50
-    button-size: 70
-    button-fill-color: (30, 40, 50)
-    button-stroke-color: black
-    handle-fill-color: (60, 70, 80)
-    tick-from: 90
-    tick-to: 270
-    tick-color: white
-    tick-space: 36
-    tick-width: 8
-    tick-length: 24
-    tick-labels:
-    - 'OFF'
-    - LEFT
-    - RIGHT
-    - 'OFF'
-    tick-label-font: DIN Bold
-    tick-label-size: 24
-    needle-underline-width: 8
-  activation: sweep
-  positions:
-  - laminar/rv10/tank_sel_left
-  - laminar/rv10/tank_sel_right
 - index: 10
+  activation:
+    type: push
+    commands:
+      press: laminar/rv10/tank_sel_right
+  representation:
+    type: annunciator
+    label: FUEL RIGHT
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: red
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 6 eq
+      B1:
+        text: SELECTED
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 3 eq
   vibrate: SHORT
-  label: FUEL RIGHT
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: red
-      formula: ${sim/cockpit2/fuel/fuel_tank_selector} 6 eq
-    B1:
-      text: SELECTED
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/fuel/fuel_tank_selector} 3 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: laminar/rv10/tank_sel_right
 - index: 11
   name: Switches
-  page: switches
-  text: ←
-  text-font: fontawesome.otf
-  text-size: 48
-  text-color: Gold
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches
+  representation:
+    type: text
+    text: ←
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold

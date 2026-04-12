@@ -5,129 +5,146 @@ last-updated: 03-APR-2024
 buttons:
 - index: 0
   name: METAR
-  label: Weather
+  activation:
+    type: none
+  representation:
+    type: none
+    label: Weather
   weather-metar:
     weather-font: B612-Regular
-  activation: none
 - index: 1
   name: PRESSURE
-  data:
-    top-line-color: deepskyblue
-    top-line-width: 10
-    icon: fa:gauge
-    icon-size: 60
-    icon-color: deepskyblue
-    data: ${formula}
-    data-format: '{:04.0f}'
-    data-font: DIN Condensed Light
-    data-size: 80
-    data-color: white
-    formula: ${data:weather:pressure}
-    bottomline: hPa
-    bottomline-size: 30
-    bottomline-color: red
-    mark: ${fa:arrow-right}
-    mark-size: 20
-    mark-font: fontawesome.otf
-    mark-color: red
-  activation: none
-  representation: data
+  activation:
+    type: none
+  representation:
+    type: data
+    data:
+      top-line-color: deepskyblue
+      top-line-width: 10
+      icon: fa:gauge
+      icon-size: 60
+      icon-color: deepskyblue
+      data: ${formula}
+      data-format: '{:04.0f}'
+      data-font: DIN Condensed Light
+      data-size: 80
+      data-color: white
+      formula: ${data:weather:pressure}
+      bottomline: hPa
+      bottomline-size: 30
+      bottomline-color: red
+      mark: ${fa:arrow-right}
+      mark-size: 20
+      mark-font: fontawesome.otf
+      mark-color: red
 - index: 2
   name: TEMPERATURE
-  data:
-    top-line-color: gold
-    top-line-width: 10
-    icon: fa:temperature-half
-    icon-size: 60
-    icon-color: gold
-    data: ${formula}
-    data-format: '{:3.0f}'
-    data-font: DIN Condensed Light
-    data-size: 80
-    data-color: white
-    formula: ${data:weather:temperature}
-    bottomline: °C
-    bottomline-size: 30
-    bottomline-color: red
-    mark: ${fa:arrow-right}
-    mark-size: 20
-    mark-font: fontawesome.otf
-    mark-color: red
-  activation: none
-  representation: data
+  activation:
+    type: none
+  representation:
+    type: data
+    data:
+      top-line-color: gold
+      top-line-width: 10
+      icon: fa:temperature-half
+      icon-size: 60
+      icon-color: gold
+      data: ${formula}
+      data-format: '{:3.0f}'
+      data-font: DIN Condensed Light
+      data-size: 80
+      data-color: white
+      formula: ${data:weather:temperature}
+      bottomline: °C
+      bottomline-size: 30
+      bottomline-color: red
+      mark: ${fa:arrow-right}
+      mark-size: 20
+      mark-font: fontawesome.otf
+      mark-color: red
 - index: 3
   name: WIND
-  data:
-    top-line-color: darkorchid
-    top-line-width: 10
-    icon: fa:wind
-    icon-size: 60
-    icon-color: darkorchid
-    data: ${formula}
-    data-format: '{:4.1f}'
-    data-font: DIN Condensed Light
-    data-size: 80
-    data-color: white
-    formula: ${data:weather:wind}
-    bottomline: mph
-    bottomline-size: 30
-    bottomline-color: red
-    mark: ${fa:arrow-right}
-    mark-size: 20
-    mark-font: fontawesome.otf
-    mark-color: red
-  activation: none
-  representation: data
+  activation:
+    type: none
+  representation:
+    type: data
+    data:
+      top-line-color: darkorchid
+      top-line-width: 10
+      icon: fa:wind
+      icon-size: 60
+      icon-color: darkorchid
+      data: ${formula}
+      data-format: '{:4.1f}'
+      data-font: DIN Condensed Light
+      data-size: 80
+      data-color: white
+      formula: ${data:weather:wind}
+      bottomline: mph
+      bottomline-size: 30
+      bottomline-color: red
+      mark: ${fa:arrow-right}
+      mark-size: 20
+      mark-font: fontawesome.otf
+      mark-color: red
 - index: 4
   name: DEWPOINT
-  data:
-    top-line-color: ivory
-    top-line-width: 10
-    icon: fa:droplet
-    icon-size: 60
-    icon-color: ivory
-    data: ${formula}
-    data-format: '{:3.0f}'
-    data-font: DIN Condensed Light
-    data-size: 80
-    data-color: white
-    data-progress: 31
-    formula: ${data:weather:dew_point}
-    bottomline: °C
-    bottomline-size: 30
-    bottomline-color: red
-    mark: ${fa:arrow-right}
-    mark-size: 20
-    mark-font: fontawesome.otf
-    mark-color: red
-  activation: none
-  representation: data
+  activation:
+    type: none
+  representation:
+    type: data
+    data:
+      top-line-color: ivory
+      top-line-width: 10
+      icon: fa:droplet
+      icon-size: 60
+      icon-color: ivory
+      data: ${formula}
+      data-format: '{:3.0f}'
+      data-font: DIN Condensed Light
+      data-size: 80
+      data-color: white
+      data-progress: 31
+      formula: ${data:weather:dew_point}
+      bottomline: °C
+      bottomline-size: 30
+      bottomline-color: red
+      mark: ${fa:arrow-right}
+      mark-size: 20
+      mark-font: fontawesome.otf
+      mark-color: red
 - index: 8
   name: FOB
-  data:
-    top-line-color: red
-    top-line-width: 10
-    icon: fa:gas-pump
-    icon-size: 60
-    icon-color: darkorange
-    data: ${formula}
-    data-format: '{:03.1f}'
-    data-font: DIN Condensed Light
-    data-size: 80
-    data-color: white
-    data-unit: T
-    data-progress: 31
-    formula: ${sim/flightmodel/weight/m_fuel_total} 1000 /
-    bottomline: FOB
-    bottomline-size: 30
-    bottomline-color: lime
-    mark: ${fa:arrow-right}
-    mark-font: fontawesome.otf
-    mark-size: 20
-    mark-color: lime
-  activation: none
-  representation: data
+  activation:
+    type: none
+  representation:
+    type: data
+    data:
+      top-line-color: red
+      top-line-width: 10
+      icon: fa:gas-pump
+      icon-size: 60
+      icon-color: darkorange
+      data: ${formula}
+      data-format: '{:03.1f}'
+      data-font: DIN Condensed Light
+      data-size: 80
+      data-color: white
+      data-unit: T
+      data-progress: 31
+      formula: ${sim/flightmodel/weight/m_fuel_total} 1000 /
+      bottomline: FOB
+      bottomline-size: 30
+      bottomline-color: lime
+      mark: ${fa:arrow-right}
+      mark-font: fontawesome.otf
+      mark-size: 20
+      mark-color: lime
 - index: 16
+  activation:
+    type: none
+  representation:
+    type: chart
   chart:
     rule-height: 0
     charts:
@@ -141,9 +158,11 @@ buttons:
       value-max: 50
       value-min: 0
       dataref: data:Cockpitdecks/event_count_DatarefEvent
-  activation: none
-  representation: chart
 - index: 17
+  activation:
+    type: none
+  representation:
+    type: chart
   chart:
     rule-height: 0
     charts:
@@ -157,24 +176,26 @@ buttons:
       value-max: 400
       value-min: 0
       dataref: data:values_read
-  activation: none
-  representation: chart
 - index: 30
   name: RELOAD
-  label: RELOAD
-  label-size: 14
-  label-position: cm
-  text:
-    text: ${fa:rotate-right}
-    text-font: fontawesome.otf
-    text-size: 80
-    text-position: cm
-    text-color: lime
-  activation: reload
-  representation: text
+  activation:
+    type: reload
+  representation:
+    type: text
+    label: RELOAD
+    label-size: 14
+    label-position: cm
+    text:
+      text: ${fa:rotate-right}
+      text-font: fontawesome.otf
+      text-size: 80
+      text-position: cm
+      text-color: lime
 - index: 31
   name: Index
-  page: index-alt
-  icon: TOLISS-A21N
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: index-alt
+  representation:
+    type: icon
+    icon: TOLISS-A21N

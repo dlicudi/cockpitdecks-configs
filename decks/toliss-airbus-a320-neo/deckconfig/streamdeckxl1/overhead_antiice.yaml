@@ -6,81 +6,89 @@ name: overhead_antiice
 buttons:
 - index: 0
   name: WING
-  label: WING
-  label-color: White
-  label-size: 9
-  annunciator:
-    size: large
-    model: B
-    parts:
-    - text: FAULT
-      color: darkorange
-      formula: ${AirbusFBW/WAILights} 3 eq
-      text-size: 46
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${AirbusFBW/WAISwitch}
-  set-dataref: AirbusFBW/WAISwitch
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/WAISwitch
+  representation:
+    type: annunciator
+    label: WING
+    label-color: White
+    label-size: 9
+    annunciator:
+      size: large
+      model: B
+      parts:
+      - text: FAULT
+        color: darkorange
+        formula: ${AirbusFBW/WAILights} 3 eq
+        text-size: 46
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${AirbusFBW/WAISwitch}
 - index: 1
   name: ENG1
-  label: ENG 1
-  label-color: White
-  label-size: 9
-  annunciator:
-    size: large
-    model: B
-    parts:
-    - text: FAULT
-      color: darkorange
-      formula: ${AirbusFBW/ENG1AILights} 3 eq
-      text-size: 46
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${AirbusFBW/ENG1AISwitch}
-  set-dataref: AirbusFBW/ENG1AISwitch
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/ENG1AISwitch
+  representation:
+    type: annunciator
+    label: ENG 1
+    label-color: White
+    label-size: 9
+    annunciator:
+      size: large
+      model: B
+      parts:
+      - text: FAULT
+        color: darkorange
+        formula: ${AirbusFBW/ENG1AILights} 3 eq
+        text-size: 46
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${AirbusFBW/ENG1AISwitch}
 - index: 2
   name: ENG2
-  label: ENG 2
-  label-color: White
-  label-size: 9
-  annunciator:
-    size: large
-    model: B
-    parts:
-    - text: FAULT
-      color: darkorange
-      formula: ${AirbusFBW/ENG2AILights} 3 eq
-      text-size: 46
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${AirbusFBW/ENG2AISwitch}
-  set-dataref: AirbusFBW/ENG2AISwitch
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/ENG2AISwitch
+  representation:
+    type: annunciator
+    label: ENG 2
+    label-color: White
+    label-size: 9
+    annunciator:
+      size: large
+      model: B
+      parts:
+      - text: FAULT
+        color: darkorange
+        formula: ${AirbusFBW/ENG2AILights} 3 eq
+        text-size: 46
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${AirbusFBW/ENG2AISwitch}
 - index: 3
   name: PROBE_WINDOW_HEAT
-  label: PROBE/WINDOW HEAT
-  label-color: White
-  label-size: 8
-  annunciator:
-    size: large
-    model: B
-    parts:
-    - text: FAULT
-      color: darkorange
-      formula: ${AirbusFBW/PRobeHeatLights} 3 eq
-      text-size: 46
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${AirbusFBW/ProbeHeatSwitch}
-  set-dataref: AirbusFBW/ProbeHeatSwitch
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/ProbeHeatSwitch
+  representation:
+    type: annunciator
+    label: PROBE/WINDOW HEAT
+    label-color: White
+    label-size: 8
+    annunciator:
+      size: large
+      model: B
+      parts:
+      - text: FAULT
+        color: darkorange
+        formula: ${AirbusFBW/PRobeHeatLights} 3 eq
+        text-size: 46
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${AirbusFBW/ProbeHeatSwitch}

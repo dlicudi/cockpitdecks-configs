@@ -5,229 +5,273 @@ last-updated: 31-OCT-2024
 name: ovrhdhyd
 buttons:
 - index: 0
-  text:
-    text: GREEN
-    text-size: 24
-    text-color: '#00ff00'
-  activation: none
-  representation: text
+  activation:
+    type: none
+  representation:
+    type: text
+    text:
+      text: GREEN
+      text-size: 24
+      text-color: '#00ff00'
 - index: 2
-  text:
-    text: BLUE
-    text-size: 24
-    text-color: '#0000ff'
-  activation: none
-  representation: text
+  activation:
+    type: none
+  representation:
+    type: text
+    text:
+      text: BLUE
+      text-size: 24
+      text-color: '#0000ff'
 - index: 4
-  text:
-    text: YELLOW
-    text-size: 24
-    text-color: '#ffff00'
-  activation: none
-  representation: text
+  activation:
+    type: none
+  representation:
+    type: text
+    text:
+      text: YELLOW
+      text-size: 24
+      text-color: '#ffff00'
 - index: 7
   name: up
-  page: ovrhdfire
-  label: FIRE
-  label-size: 10
-  text:
-    text: ${fa:arrow-up}
-    text-color: coral
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: ovrhdfire
+  representation:
+    type: text
+    label: FIRE
+    label-size: 10
+    text:
+      text: ${fa:arrow-up}
+      text-color: coral
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 8
-  decor:
-    type: segment
-    code: BGKLNS
-    width: 10/20
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: segment
+      code: BGKLNS
+      width: 10/20
 - index: 16
-  decor:
-    type: segment
-    code: BGNS
-    width: 20
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: segment
+      code: BGNS
+      width: 20
 - index: 10
-  decor:
-    type: segment
-    code: BGIL0123LNS
-    width: 10/20
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: segment
+      code: BGIL0123LNS
+      width: 10/20
 - index: 18
-  decor:
-    type: segment
-    code: BGIJNS
-    width: 10/20
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: segment
+      code: BGIJNS
+      width: 10/20
 - index: 9
-  decor:
-    type: segment
-    code: IJKL
-    width: 10
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: segment
+      code: IJKL
+      width: 10
 - index: 11
-  decor:
-    type: segment
-    code: IJKL
-    width: 10
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: segment
+      code: IJKL
+      width: 10
 - index: 12
-  decor:
-    type: segment
-    code: BGIJKLNS
-    width: 10/20
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: segment
+      code: BGIJKLNS
+      width: 10/20
 - index: 13
-  decor:
-    type: segment
-    code: IJNS
-    width: 10
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: segment
+      code: IJNS
+      width: 10
 - index: 20
-  decor:
-    type: segment
-    code: BGNS
-    width: 20
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: segment
+      code: BGNS
+      width: 20
 - index: 24
   name: ENG1PUMP
-  label: ENG 1 PUMP
-  annunciator:
-    model: B
-    size: large
-    B0:
-      text: FAULT
-      color: darkorange
-    B1:
-      text: false
-      color: white
-      framed: true
-      formula: ${AirbusFBW/HydOHPArray[0]} not
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ENG 1 PUMP
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+      B1:
+        text: false
+        color: white
+        framed: true
+        formula: ${AirbusFBW/HydOHPArray[0]} not
 - index: 17
   name: RAT
-  label: RAT MAN ON
-  annunciator:
-    model: A
-    size: large
-    A0:
-      text: true
-      color: red
-      framed: true
+  activation:
+    type: none
+    commands:
+      press: toliss_airbus/hydcommands/PressRATReleaseButton
+  representation:
+    type: annunciator
+    label: RAT MAN ON
+    annunciator:
+      model: A
+      size: large
+      A0:
+        text: true
+        color: red
+        framed: true
   guard:
     dataref: AirbusFBW/OHPGuardsAllATA[2]
-  activation: none
-  representation: annunciator
-  commands:
-    press: toliss_airbus/hydcommands/PressRATReleaseButton
 - index: 26
   name: ELECPUMP1
-  label: ELEC PUMP/BLUE
-  annunciator:
-    model: B
-    size: large
-    B0:
-      text: FAULT
-      color: darkorange
-    B1:
-      text: false
-      color: white
-      framed: true
-      formula: ${AirbusFBW/HydOHPArray[2]} not
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ELEC PUMP/BLUE
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+      B1:
+        text: false
+        color: white
+        framed: true
+        formula: ${AirbusFBW/HydOHPArray[2]} not
   guard:
     dataref: AirbusFBW/OHPGuardsAllATA[1]
     model: grid
     color: (40,40,40)
-  activation: none
-  representation: annunciator
 - index: 19
   name: PTU
-  label: PTU
-  annunciator:
-    model: B
-    size: large
-    B0:
-      text: FAULT
-      color: darkorange
-    B1:
-      text: false
-      color: white
-      framed: true
-      formula: ${AirbusFBW/HydOHPArray[4]} not
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: PTU
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+      B1:
+        text: false
+        color: white
+        framed: true
+        formula: ${AirbusFBW/HydOHPArray[4]} not
 - index: 28
   name: ENG2PUMP
-  label: ENG 2 PUMP
-  annunciator:
-    model: B
-    size: large
-    B0:
-      text: FAULT
-      color: darkorange
-    B1:
-      text: false
-      color: white
-      framed: true
-      formula: ${AirbusFBW/HydOHPArray[1]} not
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ENG 2 PUMP
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+      B1:
+        text: false
+        color: white
+        framed: true
+        formula: ${AirbusFBW/HydOHPArray[1]} not
 - index: 21
   name: ELECPUMP
-  label: ELEC PUMP
-  annunciator:
-    model: B
-    size: large
-    B0:
-      text: FAULT
-      color: darkorange
-      formula: ${AirbusFBW/HydYElecMode} 2 eq
-    B1:
-      text: true
-      color: white
-      framed: true
-      dataref: AirbusFBW/fmod/sys/hydpumps[0]
-  set-dataref: AirbusFBW/fmod/sys/hydpumps[0]
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/fmod/sys/hydpumps[0]
+  representation:
+    type: annunciator
+    label: ELEC PUMP
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+        formula: ${AirbusFBW/HydYElecMode} 2 eq
+      B1:
+        text: true
+        color: white
+        framed: true
+        dataref: AirbusFBW/fmod/sys/hydpumps[0]
 - index: 15
   name: left
-  page: adirs
-  label: ADIRS
-  label-size: 10
-  text:
-    text: ${fa:arrow-left}
-    text-color: coral
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: adirs
+  representation:
+    type: text
+    label: ADIRS
+    label-size: 10
+    text:
+      text: ${fa:arrow-left}
+      text-color: coral
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 23
   name: down
-  page: ovrhdfuel
-  label: FUEL
-  label-size: 10
-  text:
-    text: ${fa:arrow-down}
-    text-color: coral
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: ovrhdfuel
+  representation:
+    type: text
+    label: FUEL
+    label-size: 10
+    text:
+      text: ${fa:arrow-down}
+      text-color: coral
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 31
   name: Index
-  icon: A339
-  activation: page
-  representation: icon
+  activation:
+    type: page
+  representation:
+    type: icon
+    icon: A339

@@ -5,229 +5,255 @@ includes:
 name: lights
 buttons:
 - index: 0
-  label: ICE
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/generic_01_light_tog
+  activation:
+    type: push
+    commands:
+      press: sim/lights/generic_01_light_tog
+  representation:
+    type: annunciator
+    label: ICE
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 1 eq
 - index: 1
-  label: STRB
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/strobe_lights_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/lights/strobe_lights_toggle
+  representation:
+    type: annunciator
+    label: STRB
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
 - index: 2
-  label: BCN
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/beacon_on} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/beacon_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/beacon_lights_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/lights/beacon_lights_toggle
+  representation:
+    type: annunciator
+    label: BCN
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/beacon_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/beacon_on} 1 eq
 - index: 3
-  label: NAV
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/nav_lights_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/lights/nav_lights_toggle
+  representation:
+    type: annunciator
+    label: NAV
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
 - index: 4
-  label: FLOOD LIGHTS
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${laminar/b58/flood_light_toggle/switch_pos} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${laminar/b58/flood_light_toggle/switch_pos} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: laminar/b58/lighting/flood_light_switch
+  activation:
+    type: push
+    commands:
+      press: laminar/b58/lighting/flood_light_switch
+  representation:
+    type: annunciator
+    label: FLOOD LIGHTS
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${laminar/b58/flood_light_toggle/switch_pos} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${laminar/b58/flood_light_toggle/switch_pos} 1 eq
 - index: 5
-  label: PANEL
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${laminar/b58/panel_light_toggle/switch_pos} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${laminar/b58/panel_light_toggle/switch_pos} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: laminar/b58/lighting/panel_light_switch
+  activation:
+    type: push
+    commands:
+      press: laminar/b58/lighting/panel_light_switch
+  representation:
+    type: annunciator
+    label: PANEL
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${laminar/b58/panel_light_toggle/switch_pos} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${laminar/b58/panel_light_toggle/switch_pos} 1 eq
 - index: 10
-  label: TAXI
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/electrical/taxi_light_on} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/electrical/taxi_light_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/taxi_lights_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/lights/taxi_lights_toggle
+  representation:
+    type: annunciator
+    label: TAXI
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/electrical/taxi_light_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/taxi_light_on} 1 eq
 - index: 8
-  label: LDG L
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/landing_01_light_tog
+  activation:
+    type: push
+    commands:
+      press: sim/lights/landing_01_light_tog
+  representation:
+    type: annunciator
+    label: LDG L
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq
 - index: 9
-  label: LDG R
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/landing_lights_switch[1]} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/landing_lights_switch[1]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/landing_02_light_tog
+  activation:
+    type: push
+    commands:
+      press: sim/lights/landing_02_light_tog
+  representation:
+    type: annunciator
+    label: LDG R
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/landing_lights_switch[1]} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/landing_lights_switch[1]} 1 eq
 - index: 6
   name: ROOF LIGHT L
-  label: ROOF L
-  label-font: DIN Condensed Regular
-  switch:
-    switch-style: rect
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-label-size: 42
-    tick-label-font: DIN Bold
-    tick-underline: false
-  dataref: laminar/b58/lighting/roof_L_on
-  set-dataref: laminar/b58/lighting/roof_L_on
-  activation: sweep
+  activation:
+    type: sweep
+    dataref: laminar/b58/lighting/roof_L_on
+    set-dataref: laminar/b58/lighting/roof_L_on
+  representation:
+    type: switch
+    label: ROOF L
+    label-font: DIN Condensed Regular
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
 - index: 7
   name: ROOF LIGHT R
-  label: ROOF R
-  label-font: DIN Condensed Regular
-  switch:
-    switch-style: rect
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-label-size: 42
-    tick-label-font: DIN Bold
-    tick-underline: false
-  dataref: laminar/b58/lighting/roof_R_on
-  set-dataref: laminar/b58/lighting/roof_R_on
-  activation: sweep
+  activation:
+    type: sweep
+    dataref: laminar/b58/lighting/roof_R_on
+    set-dataref: laminar/b58/lighting/roof_R_on
+  representation:
+    type: switch
+    label: ROOF R
+    label-font: DIN Condensed Regular
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-label-size: 42
+      tick-label-font: DIN Bold
+      tick-underline: false
 - index: 11
-  label: ICING
-  label-color: Gold
-  label-size: 10
-  page: icing
-  text: →
-  text-font: fontawesome.otf
-  text-size: 48
-  text-color: Gold
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: icing
+  representation:
+    type: text
+    label: ICING
+    label-color: Gold
+    label-size: 10
+    text: →
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold

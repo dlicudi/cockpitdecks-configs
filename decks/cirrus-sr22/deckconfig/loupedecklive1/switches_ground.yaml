@@ -5,168 +5,188 @@ includes:
 name: switches_ground
 buttons:
 - index: 6
+  activation:
+    type: push
+    commands:
+      press: laminar/sr22/fuel_sel_left_off
+  representation:
+    type: annunciator
+    label: FUEL OFF
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - led: bar
+        color: grey
+        formula: ${laminar/sr22/fuel_selector_pos} 1 eq ${laminar/sr22/fuel_selector_pos} 2 eq +
+      - text: 'OFF'
+        color: red
+        framed: true
+        formula: ${laminar/sr22/fuel_selector_pos} 0 eq ${laminar/sr22/fuel_selector_pos} 3 eq +
   vibrate: SHORT
-  label: FUEL OFF
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - led: bar
-      color: grey
-      formula: ${laminar/sr22/fuel_selector_pos} 1 eq ${laminar/sr22/fuel_selector_pos}
-        2 eq +
-    - text: 'OFF'
-      color: red
-      framed: true
-      formula: ${laminar/sr22/fuel_selector_pos} 0 eq ${laminar/sr22/fuel_selector_pos}
-        3 eq +
-  activation: push
-  representation: annunciator
-  commands:
-    press: laminar/sr22/fuel_sel_left_off
 - index: 0
+  activation:
+    type: push
+    commands:
+      press: laminar/sr22/fuel_sel_left_select
+  representation:
+    type: annunciator
+    label: FUEL LEFT
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - led: bar
+        color: grey
+        formula: ${laminar/sr22/fuel_selector_pos} 1 eq not
+      - text: SELECTED
+        color: deepskyblue
+        framed: true
+        formula: ${laminar/sr22/fuel_selector_pos} 1 eq
   vibrate: SHORT
-  label: FUEL LEFT
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - led: bar
-      color: grey
-      formula: ${laminar/sr22/fuel_selector_pos} 1 eq not
-    - text: SELECTED
-      color: deepskyblue
-      framed: true
-      formula: ${laminar/sr22/fuel_selector_pos} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: laminar/sr22/fuel_sel_left_select
 - index: 1
+  activation:
+    type: push
+    commands:
+      press: laminar/sr22/fuel_sel_right_select
+  representation:
+    type: annunciator
+    label: FUEL RIGHT
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - led: bar
+        color: grey
+        formula: ${laminar/sr22/fuel_selector_pos} 2 eq not
+      - text: SELECTED
+        color: deepskyblue
+        framed: true
+        formula: ${laminar/sr22/fuel_selector_pos} 2 eq
   vibrate: SHORT
-  label: FUEL RIGHT
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - led: bar
-      color: grey
-      formula: ${laminar/sr22/fuel_selector_pos} 2 eq not
-    - text: SELECTED
-      color: deepskyblue
-      framed: true
-      formula: ${laminar/sr22/fuel_selector_pos} 2 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: laminar/sr22/fuel_sel_right_select
 - index: 5
+  activation:
+    type: sweep
+    set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
+  representation:
+    type: annunciator
+    label: BOOST PUMP
+    label-size: 10
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 1 eq
   vibrate: SHORT
-  set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
-  label: BOOST PUMP
-  label-size: 10
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 1 eq
-  activation: sweep
-  representation: annunciator
 - index: 4
+  activation:
+    type: push
+    commands:
+      press: sim/flight_controls/park_brake_valve_toggle
+  representation:
+    type: annunciator
+    label: PARK BRAKE
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/controls/park_brake_valve} 0 eq
+      - text: 'ON'
+        color: red
+        framed: true
+        formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
   vibrate: SHORT
-  label: PARK BRAKE
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/controls/park_brake_valve} 0 eq
-    - text: 'ON'
-      color: red
-      framed: true
-      formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/flight_controls/park_brake_valve_toggle
 - index: 2
+  activation:
+    type: push
+    commands:
+      press: sim/engines/mixture_max
+  representation:
+    type: annunciator
+    label: MAX MIXTURE
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 lt
+      - text: 'ON'
+        color: green
+        framed: true
+        formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 eq
   vibrate: SHORT
-  label: MAX MIXTURE
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 lt
-    - text: 'ON'
-      color: green
-      framed: true
-      formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/engines/mixture_max
 - index: 3
   name: ENGINE START
+  activation:
+    type: begin-end-command
+    commands:
+      press: sim/starters/engage_starter_1
+  representation:
+    type: multi-icons
+    multi-icons:
+    - ENGINE_START.png
+    - ENGINE_START.png
+    - ENGINE_START.png
+    - ENGINE_START.png
+    - ENGINE_START_PRESSED.png
+    formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
   vibrate: LONG
-  multi-icons:
-  - ENGINE_START.png
-  - ENGINE_START.png
-  - ENGINE_START.png
-  - ENGINE_START.png
-  - ENGINE_START_PRESSED.png
-  formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
-  activation: begin-end-command
-  representation: multi-icons
-  commands:
-    press: sim/starters/engage_starter_1
 - index: 8
-  page: switches_master
+  activation:
+    type: page
+    page: switches_master
+  representation:
+    type: text
+    text: MASTER
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
   vibrate: SHORT
-  text: MASTER
-  text-color: khaki
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 20)
-  activation: page
-  representation: text
 - index: 9
-  page: switches_lights
+  activation:
+    type: page
+    page: switches_lights
+  representation:
+    type: text
+    text: LIGHTS
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
   vibrate: SHORT
-  text: LIGHTS
-  text-color: khaki
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 20)
-  activation: page
-  representation: text
 - index: 10
-  page: switches_icing
+  activation:
+    type: page
+    page: switches_icing
+  representation:
+    type: text
+    text: ICE
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
   vibrate: SHORT
-  text: ICE
-  text-color: khaki
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 20)
-  activation: page
-  representation: text
 - index: 11
-  text: GROUND
-  text-color: Gold
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (40, 35, 0)
-  activation: none
-  representation: text
+  activation:
+    type: none
+  representation:
+    type: text
+    text: GROUND
+    text-color: Gold
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (40, 35, 0)

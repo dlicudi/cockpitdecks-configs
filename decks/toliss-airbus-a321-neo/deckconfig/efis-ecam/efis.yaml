@@ -7,262 +7,297 @@ last-updated: 12-JUN-2024
 buttons:
 - index: 0
   name: CSTR
-  annunciator:
-    size: small
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      dataref: AirbusFBW/OHPLightsATA31[16]
-    - text: CSTR
-      text-size: 40
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/dispcommands/CaptCstrPushButton
+  representation:
+    type: annunciator
+    annunciator:
+      size: small
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        dataref: AirbusFBW/OHPLightsATA31[16]
+      - text: CSTR
+        text-size: 40
+        text-font: DIN Bold
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_1
-  activation: push
-  representation: annunciator
-  commands:
-    press: toliss_airbus/dispcommands/CaptCstrPushButton
 - index: 1
   name: WPT
-  annunciator:
-    size: small
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      dataref: AirbusFBW/OHPLightsATA31[17]
-    - text: WPT
-      text-size: 40
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/dispcommands/CaptWptPushButton
+  representation:
+    type: annunciator
+    annunciator:
+      size: small
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        dataref: AirbusFBW/OHPLightsATA31[17]
+      - text: WPT
+        text-size: 40
+        text-font: DIN Bold
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_1
-  activation: push
-  representation: annunciator
-  commands:
-    press: toliss_airbus/dispcommands/CaptWptPushButton
 - index: 2
   name: VOR.D
-  annunciator:
-    size: small
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      dataref: AirbusFBW/OHPLightsATA31[18]
-    - text: VOR.D
-      text-size: 40
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/dispcommands/CaptVorDPushButton
+  representation:
+    type: annunciator
+    annunciator:
+      size: small
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        dataref: AirbusFBW/OHPLightsATA31[18]
+      - text: VOR.D
+        text-size: 40
+        text-font: DIN Bold
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_1
-  activation: push
-  representation: annunciator
-  commands:
-    press: toliss_airbus/dispcommands/CaptVorDPushButton
 - index: 3
   name: NDB
-  annunciator:
-    size: small
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      dataref: AirbusFBW/OHPLightsATA31[19]
-    - text: NDB
-      text-size: 40
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/dispcommands/CaptNdbPushButton
+  representation:
+    type: annunciator
+    annunciator:
+      size: small
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        dataref: AirbusFBW/OHPLightsATA31[19]
+      - text: NDB
+        text-size: 40
+        text-font: DIN Bold
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_1
-  activation: push
-  representation: annunciator
-  commands:
-    press: toliss_airbus/dispcommands/CaptNdbPushButton
 - index: 4
   name: ARPT
-  annunciator:
-    size: small
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      dataref: AirbusFBW/OHPLightsATA31[20]
-    - text: ARPT
-      text-size: 40
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/dispcommands/CaptArptPushButton
+  representation:
+    type: annunciator
+    annunciator:
+      size: small
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        dataref: AirbusFBW/OHPLightsATA31[20]
+      - text: ARPT
+        text-size: 40
+        text-font: DIN Bold
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_1
-  activation: push
-  representation: annunciator
-  commands:
-    press: toliss_airbus/dispcommands/CaptArptPushButton
 - index: 5
   name: CHRONO
-  label: CHRONO
-  label-size: 10
-  push-switch:
-    button-size: 120
-    button-fill-color: black
-    button-stroke-width: 0
-    witness-size: 0
-  activation: push
-  commands:
-    press: AirbusFBW/CaptChronoButton
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/CaptChronoButton
+  representation:
+    type: push-switch
+    label: CHRONO
+    label-size: 10
+    push-switch:
+      button-size: 120
+      button-fill-color: black
+      button-stroke-width: 0
+      witness-size: 0
 - index: 7
   name: ND MODE
-  stops: 5
-  initial-value: 2
-  circular-switch:
-    button-size: 50
-    switch-style: medium
-    down: 30
-    tick-from: 90
-    tick-to: 270
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    tick-labels:
-    - LS
-    - VOR
-    - NAV
-    - ARC
-    - PLAN
-  dataref: AirbusFBW/NDmodeCapt
-  activation: sweep
-  positions:
-  - sim/instruments/EFIS_mode_up
-  - sim/instruments/EFIS_mode_dn
+  activation:
+    type: sweep
+    stops: 5
+    initial-value: 2
+    dataref: AirbusFBW/NDmodeCapt
+    positions:
+    - sim/instruments/EFIS_mode_up
+    - sim/instruments/EFIS_mode_dn
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 50
+      switch-style: medium
+      down: 30
+      tick-from: 90
+      tick-to: 270
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      tick-labels:
+      - LS
+      - VOR
+      - NAV
+      - ARC
+      - PLAN
 - index: 8
   name: ND RANGE
-  stops: 6
-  initial-value: 2
-  circular-switch:
-    button-size: 50
-    switch-style: medium
-    down: 30
-    tick-from: 90
-    tick-to: 315
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    tick-labels:
-    - '10'
-    - '20'
-    - '40'
-    - '80'
-    - '160'
-    - '320'
-  dataref: AirbusFBW/NDrangeCapt
-  activation: sweep
-  positions:
-  - sim/instruments/map_zoom_out
-  - sim/instruments/map_zoom_in
+  activation:
+    type: sweep
+    stops: 6
+    initial-value: 2
+    dataref: AirbusFBW/NDrangeCapt
+    positions:
+    - sim/instruments/map_zoom_out
+    - sim/instruments/map_zoom_in
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 50
+      switch-style: medium
+      down: 30
+      tick-from: 90
+      tick-to: 315
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      tick-labels:
+      - '10'
+      - '20'
+      - '40'
+      - '80'
+      - '160'
+      - '320'
 - index: 6
   name: TERRONND1
-  label: TERR ON ND
-  label-color: coral
-  label-font: DIN Bold
-  label-size: 12
-  annunciator:
-    size: large
-    model: B
-    parts:
-    - text: true
-      text-color: lime
-      text-size: 70
-      text-font: DIN Bold
-      dataref: AirbusFBW/OHPLightsATA34[24]
-      framed: true
-  options: square,seal
+  activation:
+    type: push
+    options: square,seal
+    commands:
+      press: toliss_airbus/dispcommands/TerrOnND1Toggle
+  representation:
+    type: annunciator
+    label: TERR ON ND
+    label-color: coral
+    label-font: DIN Bold
+    label-size: 12
+    annunciator:
+      size: large
+      model: B
+      parts:
+      - text: true
+        text-color: lime
+        text-size: 70
+        text-font: DIN Bold
+        dataref: AirbusFBW/OHPLightsATA34[24]
+        framed: true
   seal-color: coral
   seal-width: 4
-  activation: push
-  representation: annunciator
-  commands:
-    press: toliss_airbus/dispcommands/TerrOnND1Toggle
 - index: 9
   name: RELOAD
-  text:
-    text: ${fa:rotate-right}
-    text-font: fontawesome.otf
-    text-size: 60
-    text-position: cm
-    text-color: lime
-  activation: reload
-  representation: text
+  activation:
+    type: reload
+  representation:
+    type: text
+    text:
+      text: ${fa:rotate-right}
+      text-font: fontawesome.otf
+      text-size: 60
+      text-position: cm
+      text-color: lime
 - index: 10
   name: FD 1
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      dataref: AirbusFBW/OHPLightsATA31[26]
-    - text: FD
-      text-size: 64
-      text-font: DIN Bold
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: toliss_airbus/fd1_push
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/fd1_push
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        dataref: AirbusFBW/OHPLightsATA31[26]
+      - text: FD
+        text-size: 64
+        text-font: DIN Bold
+        formula: '1'
 - index: 11
   name: LS 1
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: lime
-      led: bars
-      dataref: AirbusFBW/OHPLightsATA31[28]
-    - text: LS
-      text-size: 64
-      text-font: DIN Bold
-      formula: '1'
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/dispcommands/CaptLSButtonPush
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        dataref: AirbusFBW/OHPLightsATA31[28]
+      - text: LS
+        text-size: 64
+        text-font: DIN Bold
+        formula: '1'
   view: SRS/X-Camera/Select_View_ID_1
-  activation: push
-  representation: annunciator
-  commands:
-    press: toliss_airbus/dispcommands/CaptLSButtonPush
 - index: 12
   name: ADFVOR1
-  stops: 3
-  switch:
-    base-underline-width: 6
-    switch-width: 22
-    tick-labels:
-    - ADF1
-    - false
-    - VOR1
-    tick-label-size: 30
-    tick-label-font: DIN Bold
-  options: 3way,horizontal
-  dataref: ckpt/fcu/adf1Left/anim
-  set-dataref: ckpt/fcu/adf1Left/anim
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    options: 3way,horizontal
+    dataref: ckpt/fcu/adf1Left/anim
+    set-dataref: ckpt/fcu/adf1Left/anim
+  representation:
+    type: switch
+    switch:
+      base-underline-width: 6
+      switch-width: 22
+      tick-labels:
+      - ADF1
+      - false
+      - VOR1
+      tick-label-size: 30
+      tick-label-font: DIN Bold
 - index: 13
   name: ADFVOR2
-  stops: 3
-  switch:
-    base-underline-width: 6
-    switch-width: 22
-    tick-labels:
-    - ADF2
-    - false
-    - VOR2
-    tick-label-size: 30
-    tick-label-font: DIN Bold
-  options: 3way,horizontal
-  dataref: ckpt/fcu/adf2Left/anim
-  set-dataref: ckpt/fcu/adf2Left/anim
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    options: 3way,horizontal
+    dataref: ckpt/fcu/adf2Left/anim
+    set-dataref: ckpt/fcu/adf2Left/anim
+  representation:
+    type: switch
+    switch:
+      base-underline-width: 6
+      switch-width: 22
+      tick-labels:
+      - ADF2
+      - false
+      - VOR2
+      tick-label-size: 30
+      tick-label-font: DIN Bold
 - index: 14
   name: ECAM
-  page: ECAM
-  icon: TOLISS-A21N
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: ECAM
+  representation:
+    type: icon
+    icon: TOLISS-A21N

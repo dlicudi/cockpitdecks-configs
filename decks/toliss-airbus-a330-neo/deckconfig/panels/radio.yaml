@@ -5,20 +5,24 @@ last-updated: 31-OCT-2024
 buttons:
 - index: 15
   name: XPNDR
-  page: piedestal
-  label: PIEDESTAL
+  activation:
+    type: page
+    page: piedestal
+  representation:
+    type: text
+    label: PIEDESTAL
+    text:
+      text: ${fa:arrow-right}
+      text-color: coral
+      text-font: fontawesome.otf
+      text-size: 60
+      text-position: cm
   text-bgcolor: (94, 111, 130)
-  text:
-    text: ${fa:arrow-right}
-    text-color: coral
-    text-font: fontawesome.otf
-    text-size: 60
-    text-position: cm
-  activation: page
-  representation: text
 - index: 31
   name: Index
-  page: index-alt
-  icon: A339
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: index-alt
+  representation:
+    type: icon
+    icon: A339

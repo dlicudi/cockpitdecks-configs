@@ -2,131 +2,147 @@ name: startup
 fill-empty-keys: false
 buttons:
 - index: 0
-  page: main
-  label: HOME
-  label-size: 16
-  text: HOME
-  text-size: 34
-  text-font: D-DINCondensed-Bold.otf
-  text-color: white
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: main
+  representation:
+    type: text
+    label: HOME
+    label-size: 16
+    text: HOME
+    text-size: 34
+    text-font: D-DINCondensed-Bold.otf
+    text-color: white
 - index: 1
-  label: BAT 1
-  label-size: 11
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/electrical/battery_on[0]} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/electrical/battery_1_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/electrical/battery_1_toggle
+  representation:
+    type: annunciator
+    label: BAT 1
+    label-size: 11
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/battery_on[0]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
 - index: 2
-  label: ALT 1
-  label-size: 16
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/electrical/generator_1_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/electrical/generator_1_toggle
+  representation:
+    type: annunciator
+    label: ALT 1
+    label-size: 16
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
 - index: 3
-  label: AVIONICS
-  label-size: 16
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/electrical/avionics_on} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/electrical/avionics_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/systems/avionics_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/systems/avionics_toggle
+  representation:
+    type: annunciator
+    label: AVIONICS
+    label-size: 16
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/electrical/avionics_on} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/avionics_on} 1 eq
 - index: 4
-  set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
-  label: BOOST PUMP
-  label-size: 16
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 1 eq
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
+  representation:
+    type: annunciator
+    label: BOOST PUMP
+    label-size: 16
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 1 eq
 - index: 5
-  label: MIX FULL
-  label-size: 16
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: LEAN
-      color: darkorange
-      formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 lt
-    - text: RICH
-      color: lime
-      framed: true
-      formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/engines/mixture_max
+  activation:
+    type: push
+    commands:
+      press: sim/engines/mixture_max
+  representation:
+    type: annunciator
+    label: MIX FULL
+    label-size: 16
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: LEAN
+        color: darkorange
+        formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 lt
+      - text: RICH
+        color: lime
+        framed: true
+        formula: ${sim/cockpit2/engine/actuators/mixture_ratio[0]} 1 eq
 - index: 6
   name: STARTER
-  label: ENGINE START
-  label-size: 16
-  multi-texts:
-  - text: 'OFF'
-    text-color: white
-  - text: R
-    text-color: orange
-  - text: L
-    text-color: orange
-  - text: BOTH
-    text-color: orange
-  - text: START
-    text-color: red
-  formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
-  activation: begin-end-command
-  representation: multi-texts
-  commands:
-    press: sim/starters/engage_starter_1
+  activation:
+    type: begin-end-command
+    commands:
+      press: sim/starters/engage_starter_1
+  representation:
+    type: multi-texts
+    label: ENGINE START
+    label-size: 16
+    multi-texts:
+    - text: 'OFF'
+      text-color: white
+    - text: R
+      text-color: orange
+    - text: L
+      text-color: orange
+    - text: BOTH
+      text-color: orange
+    - text: START
+      text-color: red
+    formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
 - index: 7
-  page: taxi
-  label: NEXT
-  label-size: 16
-  text: TAXI
-  text-size: 34
-  text-font: D-DINCondensed-Bold.otf
-  text-color: gold
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: taxi
+  representation:
+    type: text
+    label: NEXT
+    label-size: 16
+    text: TAXI
+    text-size: 34
+    text-font: D-DINCondensed-Bold.otf
+    text-color: gold

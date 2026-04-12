@@ -6,113 +6,128 @@ includes:
 default-icon-color: Black
 buttons:
 - index: 0
-  label: MAIN PNL
-  label-color: White
-  label-size: 8
-  stops: 2
-  initial-value: 1
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 45
-    tick-to: 310
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - BRT
-  dataref: sim/cockpit2/switches/panel_brightness_ratio[1]
-  set-dataref: sim/cockpit2/switches/panel_brightness_ratio[1]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    initial-value: 1
+    dataref: sim/cockpit2/switches/panel_brightness_ratio[1]
+    set-dataref: sim/cockpit2/switches/panel_brightness_ratio[1]
+  representation:
+    type: circular-switch
+    label: MAIN PNL
+    label-color: White
+    label-size: 8
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 45
+      tick-to: 310
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - BRT
 - index: 1
-  label: OVHD PNL
-  label-color: White
-  label-size: 8
-  stops: 2
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 45
-    tick-to: 310
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - BRT
-  dataref: sim/cockpit2/switches/panel_brightness_ratio[3]
-  set-dataref: sim/cockpit2/switches/panel_brightness_ratio[3]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    dataref: sim/cockpit2/switches/panel_brightness_ratio[3]
+    set-dataref: sim/cockpit2/switches/panel_brightness_ratio[3]
+  representation:
+    type: circular-switch
+    label: OVHD PNL
+    label-color: White
+    label-size: 8
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 45
+      tick-to: 310
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - BRT
 - index: 2
-  label: PEDESTAL
-  label-color: White
-  label-size: 8
-  stops: 2
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 45
-    tick-to: 310
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - BRT
-  dataref: sim/cockpit2/switches/panel_brightness_ratio[2]
-  set-dataref: sim/cockpit2/switches/panel_brightness_ratio[2]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    dataref: sim/cockpit2/switches/panel_brightness_ratio[2]
+    set-dataref: sim/cockpit2/switches/panel_brightness_ratio[2]
+  representation:
+    type: circular-switch
+    label: PEDESTAL
+    label-color: White
+    label-size: 8
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 45
+      tick-to: 310
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - BRT
 - index: 3
-  label: ANNUN TEST
-  label-size: 8
-  label-color: White
-  stops: 2
-  switch:
-    switch-style: round
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${XCrafts/ERJ/cockpit/annunciators_test}
-  set-dataref: XCrafts/ERJ/cockpit/annunciators_test
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: XCrafts/ERJ/cockpit/annunciators_test
+  representation:
+    type: switch
+    label: ANNUN TEST
+    label-size: 8
+    label-color: White
+    switch:
+      switch-style: round
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${XCrafts/ERJ/cockpit/annunciators_test}
 - index: 4
-  label: DOME
-  label-size: 8
-  label-color: White
-  stops: 2
-  switch:
-    switch-style: round
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${sim/cockpit/electrical/cockpit_lights}
-  activation: sweep
-  positions:
-  - XCrafts/Lights/cockpit_dome_toggle
-  - XCrafts/Lights/cockpit_dome_toggle
+  activation:
+    type: sweep
+    stops: 2
+    positions:
+    - XCrafts/Lights/cockpit_dome_toggle
+    - XCrafts/Lights/cockpit_dome_toggle
+  representation:
+    type: switch
+    label: DOME
+    label-size: 8
+    label-color: White
+    switch:
+      switch-style: round
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${sim/cockpit/electrical/cockpit_lights}

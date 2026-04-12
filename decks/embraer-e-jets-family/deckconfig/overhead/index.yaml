@@ -4,1326 +4,1515 @@ default-vibrate: SHORT
 background-color: Black
 buttons:
 - index: RELOAD
-  text: 🔁
-  text-color: Lime
-  text-size: 20
-  text-font: fontawesome.otf
-  activation: reload
-  representation: text
+  activation:
+    type: reload
+  representation:
+    type: text
+    text: 🔁
+    text-color: Lime
+    text-size: 20
+    text-font: fontawesome.otf
 - index: MASTER
-  label: MASTER
-  label-color: White
-  label-position: cb
-  label-size: 8
-  stops: 3
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 180
-    tick-to: 310
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 18
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - 'ON'
-    - START
-  dataref: XCrafts/ERJ/APU_switch
+  activation:
+    type: sweep
+    stops: 3
+    dataref: XCrafts/ERJ/APU_switch
+    positions:
+    - XCrafts/APU_CCW
+    - XCrafts/APU_CW
+  representation:
+    type: circular-switch
+    label: MASTER
+    label-color: White
+    label-position: cb
+    label-size: 8
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 180
+      tick-to: 310
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 18
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - 'ON'
+      - START
   long-press: XCrafts/APU_CW
-  activation: sweep
-  positions:
-  - XCrafts/APU_CCW
-  - XCrafts/APU_CW
 - index: START APU
-  annunciator:
-    size: medium
-    model: B
-    parts:
-    - color: yellow
-      formula: ${XCrafts/ERJ/APU_flasher} 2 eq
-      led: dot
-    - color: lime
-      text-size: 60
-      formula: '1'
-      text: ${sim/cockpit2/electrical/APU_N1_percent}
-      text-font: Seven Segment.ttf
-      text-format: '{0:.0f}%'
-  activation: long-press
-  representation: annunciator
-  commands:
-    press: XCrafts/APU_CW
+  activation:
+    type: long-press
+    commands:
+      press: XCrafts/APU_CW
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: yellow
+        formula: ${XCrafts/ERJ/APU_flasher} 2 eq
+        led: dot
+      - color: lime
+        text-size: 60
+        formula: '1'
+        text: ${sim/cockpit2/electrical/APU_N1_percent}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}%'
 - index: EMER STOP
-  text: ■
-  text-color: BrickRed
-  text-size: 60
-  text-font: fontawesome.otf
-  text-position: cm
   name: overhead_cockpit_lights
-  activation: push
-  representation: text
-  commands:
-    press: sim/electrical/APU_fire_shutoff
+  activation:
+    type: push
+    commands:
+      press: sim/electrical/APU_fire_shutoff
+  representation:
+    type: text
+    text: ■
+    text-color: BrickRed
+    text-size: 60
+    text-font: fontawesome.otf
+    text-position: cm
 - index: MAIN PNL
-  stops: 2
-  initial-value: 1
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 45
-    tick-to: 310
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - BRT
-  dataref: sim/cockpit2/switches/panel_brightness_ratio[1]
-  set-dataref: sim/cockpit2/switches/panel_brightness_ratio[1]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    initial-value: 1
+    dataref: sim/cockpit2/switches/panel_brightness_ratio[1]
+    set-dataref: sim/cockpit2/switches/panel_brightness_ratio[1]
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 45
+      tick-to: 310
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - BRT
 - index: OVHD PNL
-  stops: 2
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 45
-    tick-to: 310
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - BRT
-  dataref: sim/cockpit2/switches/panel_brightness_ratio[3]
-  set-dataref: sim/cockpit2/switches/panel_brightness_ratio[3]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    dataref: sim/cockpit2/switches/panel_brightness_ratio[3]
+    set-dataref: sim/cockpit2/switches/panel_brightness_ratio[3]
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 45
+      tick-to: 310
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - BRT
 - index: APU MASTER
-  label: PEDESTAL
-  label-color: White
-  label-size: 8
-  stops: 2
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 45
-    tick-to: 310
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - BRT
-  dataref: sim/cockpit2/switches/panel_brightness_ratio[2]
-  set-dataref: sim/cockpit2/switches/panel_brightness_ratio[2]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    dataref: sim/cockpit2/switches/panel_brightness_ratio[2]
+    set-dataref: sim/cockpit2/switches/panel_brightness_ratio[2]
+  representation:
+    type: circular-switch
+    label: PEDESTAL
+    label-color: White
+    label-size: 8
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 45
+      tick-to: 310
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - BRT
 - index: 3
-  label: ANNUN TEST
-  label-size: 8
-  label-color: White
-  stops: 2
-  switch:
-    switch-style: round
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${XCrafts/ERJ/cockpit/annunciators_test}
-  set-dataref: XCrafts/ERJ/cockpit/annunciators_test
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: XCrafts/ERJ/cockpit/annunciators_test
+  representation:
+    type: switch
+    label: ANNUN TEST
+    label-size: 8
+    label-color: White
+    switch:
+      switch-style: round
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${XCrafts/ERJ/cockpit/annunciators_test}
 - index: DOME
-  stops: 2
-  switch:
-    switch-style: round
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${sim/cockpit/electrical/cockpit_lights}
-  activation: sweep
-  positions:
-  - XCrafts/Lights/cockpit_dome_toggle
-  - XCrafts/Lights/cockpit_dome_toggle
+  activation:
+    type: sweep
+    stops: 2
+    positions:
+    - XCrafts/Lights/cockpit_dome_toggle
+    - XCrafts/Lights/cockpit_dome_toggle
+  representation:
+    type: switch
+    switch:
+      switch-style: round
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${sim/cockpit/electrical/cockpit_lights}
 - index: IDG 1
-  stops: 2
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 120
-    tick-to: 180
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - AUTO
-  dataref: sim/cockpit/electrical/generator_on[0]
-  set-dataref: sim/cockpit/electrical/generator_on[0]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    dataref: sim/cockpit/electrical/generator_on[0]
+    set-dataref: sim/cockpit/electrical/generator_on[0]
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 120
+      tick-to: 180
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - AUTO
 - index: 1
-  label: AC BUS TIES
-  label-color: White
-  label-position: cb
-  label-size: 8
-  stops: 3
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 140
-    tick-to: 220
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - '1
+  activation:
+    type: sweep
+    stops: 3
+    dataref: XCrafts/electrical/ac_bus_tie_switch
+    set-dataref: XCrafts/electrical/ac_bus_tie_switch
+  representation:
+    type: circular-switch
+    label: AC BUS TIES
+    label-color: White
+    label-position: cb
+    label-size: 8
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 140
+      tick-to: 220
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - '1
 
-      OPEN'
-    - AUTO
-    - '2
+        OPEN'
+      - AUTO
+      - '2
 
-      OPEN'
-  dataref: XCrafts/electrical/ac_bus_tie_switch
-  set-dataref: XCrafts/electrical/ac_bus_tie_switch
-  activation: sweep
+        OPEN'
 - index: IDG 2
-  color: White
-  label-position: cb
-  stops: 2
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 240
-    tick-to: 180
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - AUTO
-  dataref: sim/cockpit/electrical/generator_on[1]
-  set-dataref: sim/cockpit/electrical/generator_on[1]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    dataref: sim/cockpit/electrical/generator_on[1]
+    set-dataref: sim/cockpit/electrical/generator_on[1]
+  representation:
+    type: circular-switch
+    color: White
+    label-position: cb
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 240
+      tick-to: 180
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - AUTO
 - index: GPU
-  annunciator:
-    size: large
-    model: B
-    parts:
-    - text: AVAIL
-      text-size: 60
-      text-font: DIN Bold
-      text-color: white
-      formula: ${XCrafts/doors/GPU_OFF} ${sim/cockpit/electrical/gpu_on} -
-    - text: IN USE
-      text-size: 60
-      text-font: DIN Bold
-      text-color: white
-      formula: ${XCrafts/electric/GPU_sw}
-  set-dataref: XCrafts/electric/GPU_sw
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: XCrafts/electric/GPU_sw
+  representation:
+    type: annunciator
+    annunciator:
+      size: large
+      model: B
+      parts:
+      - text: AVAIL
+        text-size: 60
+        text-font: DIN Bold
+        text-color: white
+        formula: ${XCrafts/doors/GPU_OFF} ${sim/cockpit/electrical/gpu_on} -
+      - text: IN USE
+        text-size: 60
+        text-font: DIN Bold
+        text-color: white
+        formula: ${XCrafts/electric/GPU_sw}
 - index: APU GEN
-  annunciator:
-    size: small
-    model: A
-    parts:
-    - text-color: white
-      led: led
-      formula: ${sim/cockpit/electrical/generator_apu_on} 0 eq
-  set-dataref: sim/cockpit2/electrical/APU_generator_on
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: sim/cockpit2/electrical/APU_generator_on
+  representation:
+    type: annunciator
+    annunciator:
+      size: small
+      model: A
+      parts:
+      - text-color: white
+        led: led
+        formula: ${sim/cockpit/electrical/generator_apu_on} 0 eq
 - index: TRU 1
-  stops: 2
-  switch:
-    switch-style: round
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - AUTO
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${sim/cockpit/engine/inverter_on[0]}
-  activation: sweep
-  positions:
-  - sim/electrical/inverter_1_on
-  - sim/electrical/inverter_1_off
+  activation:
+    type: sweep
+    stops: 2
+    positions:
+    - sim/electrical/inverter_1_on
+    - sim/electrical/inverter_1_off
+  representation:
+    type: switch
+    switch:
+      switch-style: round
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - AUTO
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${sim/cockpit/engine/inverter_on[0]}
 - index: TRU ESS
-  stops: 2
-  switch:
-    switch-style: round
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - AUTO
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${XCrafts/electrical/TRU_ESS_switch}
-  set-dataref: XCrafts/electrical/TRU_ESS_switch
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: XCrafts/electrical/TRU_ESS_switch
+  representation:
+    type: switch
+    switch:
+      switch-style: round
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - AUTO
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${XCrafts/electrical/TRU_ESS_switch}
 - index: TRU 2
-  stops: 2
-  switch:
-    switch-style: round
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - AUTO
-    - 'OFF'
-    tick-space: 10
-    tick-color: White
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${sim/cockpit/engine/inverter_on[1]}
-  activation: sweep
-  positions:
-  - sim/electrical/inverter_2_on
-  - sim/electrical/inverter_2_off
+  activation:
+    type: sweep
+    stops: 2
+    positions:
+    - sim/electrical/inverter_2_on
+    - sim/electrical/inverter_2_off
+  representation:
+    type: switch
+    switch:
+      switch-style: round
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - AUTO
+      - 'OFF'
+      tick-space: 10
+      tick-color: White
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${sim/cockpit/engine/inverter_on[1]}
 - index: BATT 1
-  stops: 2
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 120
-    tick-to: 180
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - 'ON'
-  dataref: sim/cockpit2/electrical/battery_on[0]
-  set-dataref: sim/cockpit2/electrical/battery_on[0]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    dataref: sim/cockpit2/electrical/battery_on[0]
+    set-dataref: sim/cockpit2/electrical/battery_on[0]
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 120
+      tick-to: 180
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - 'ON'
 - index: BATT 2
-  stops: 2
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 120
-    tick-to: 180
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - AUTO
-  dataref: sim/cockpit2/electrical/battery_on[1]
-  set-dataref: sim/cockpit2/electrical/battery_on[1]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    dataref: sim/cockpit2/electrical/battery_on[1]
+    set-dataref: sim/cockpit2/electrical/battery_on[1]
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 120
+      tick-to: 180
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - AUTO
 - index: NAV
-  stops: 2
-  switch:
-    switch-style: round
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    options: invert
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${sim/cockpit/electrical/nav_lights_on}
-  set-dataref: sim/cockpit/electrical/nav_lights_on
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: sim/cockpit/electrical/nav_lights_on
+  representation:
+    type: switch
+    switch:
+      switch-style: round
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      options: invert
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${sim/cockpit/electrical/nav_lights_on}
 - index: STROBE
-  stops: 2
-  switch:
-    switch-style: rect
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    options: invert
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${sim/cockpit/electrical/strobe_lights_on}
-  set-dataref: sim/cockpit/electrical/strobe_lights_on
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: sim/cockpit/electrical/strobe_lights_on
+  representation:
+    type: switch
+    switch:
+      switch-style: rect
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      options: invert
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${sim/cockpit/electrical/strobe_lights_on}
 - index: RED BCN
-  stops: 2
-  switch:
-    switch-style: round
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    options: invert
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${sim/cockpit/electrical/beacon_lights_on}
-  set-dataref: sim/cockpit/electrical/beacon_lights_on
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: sim/cockpit/electrical/beacon_lights_on
+  representation:
+    type: switch
+    switch:
+      switch-style: round
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      options: invert
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${sim/cockpit/electrical/beacon_lights_on}
 - index: LOGO
-  stops: 2
-  switch:
-    switch-style: round
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    options: invert
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${XCrafts/light/logo_switch}
-  set-dataref: XCrafts/light/logo_switch
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: XCrafts/light/logo_switch
+  representation:
+    type: switch
+    switch:
+      switch-style: round
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      options: invert
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${XCrafts/light/logo_switch}
 - index: NOSE
-  stops: 2
-  switch:
-    switch-style: rect
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    options: invert
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${sim/cockpit2/switches/taxi_light_on}
-  set-dataref: sim/cockpit2/switches/taxi_light_on
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: sim/cockpit2/switches/taxi_light_on
+  representation:
+    type: switch
+    switch:
+      switch-style: rect
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      options: invert
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${sim/cockpit2/switches/taxi_light_on}
 - index: SIDE
-  stops: 2
-  switch:
-    switch-style: rect
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    options: invert
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${sim/cockpit2/switches/generic_lights_switch[21]}
-  set-dataref: sim/cockpit2/switches/generic_lights_switch[21]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: sim/cockpit2/switches/generic_lights_switch[21]
+  representation:
+    type: switch
+    switch:
+      switch-style: rect
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      options: invert
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${sim/cockpit2/switches/generic_lights_switch[21]}
 - index: INSP
-  stops: 2
-  switch:
-    switch-style: round
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    options: invert
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${XCrafts/light/inspection_switch}
-  set-dataref: XCrafts/light/inspection_switch
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: XCrafts/light/inspection_switch
+  representation:
+    type: switch
+    switch:
+      switch-style: round
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      options: invert
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${XCrafts/light/inspection_switch}
 - index: LEFT
-  stops: 2
-  switch:
-    switch-style: 3dot
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    options: invert
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${sim/cockpit2/switches/landing_lights_switch[1]}
-  set-dataref: sim/cockpit2/switches/landing_lights_switch[1]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: sim/cockpit2/switches/landing_lights_switch[1]
+  representation:
+    type: switch
+    switch:
+      switch-style: 3dot
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      options: invert
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${sim/cockpit2/switches/landing_lights_switch[1]}
 - index: NOSE
-  stops: 2
-  switch:
-    switch-style: 3dot
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    options: invert
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${sim/cockpit2/switches/landing_lights_switch[0]}
-  set-dataref: sim/cockpit2/switches/landing_lights_switch[0]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: sim/cockpit2/switches/landing_lights_switch[0]
+  representation:
+    type: switch
+    switch:
+      switch-style: 3dot
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      options: invert
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${sim/cockpit2/switches/landing_lights_switch[0]}
 - index: RIGHT
-  stops: 2
-  switch:
-    switch-style: 3dot
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    options: invert
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${sim/cockpit2/switches/landing_lights_switch[2]}
-  set-dataref: sim/cockpit2/switches/landing_lights_switch[2]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: sim/cockpit2/switches/landing_lights_switch[2]
+  representation:
+    type: switch
+    switch:
+      switch-style: 3dot
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      options: invert
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${sim/cockpit2/switches/landing_lights_switch[2]}
 - index: FIRE 1
-  stops: 2
-  switch:
-    switch-style: 3dot
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    options: invert
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${sim/cockpit2/engine/actuators/fire_extinguisher_on[0]}
-  set-dataref: sim/cockpit2/engine/actuators/fire_extinguisher_on[0]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: sim/cockpit2/engine/actuators/fire_extinguisher_on[0]
+  representation:
+    type: switch
+    switch:
+      switch-style: 3dot
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      options: invert
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${sim/cockpit2/engine/actuators/fire_extinguisher_on[0]}
 - index: FIRE 2
-  stops: 2
-  switch:
-    switch-style: 3dot
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    options: invert
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${sim/cockpit2/engine/actuators/fire_extinguisher_on[1]}
-  set-dataref: sim/cockpit2/engine/actuators/fire_extinguisher_on[1]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: sim/cockpit2/engine/actuators/fire_extinguisher_on[1]
+  representation:
+    type: switch
+    switch:
+      switch-style: 3dot
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      options: invert
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${sim/cockpit2/engine/actuators/fire_extinguisher_on[1]}
 - index: TEST
-  stops: 2
-  switch:
-    switch-style: rect
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    options: invert
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${XCrafts/ERJ/fire_test_on}
-  set-dataref: XCrafts/ERJ/fire_test_on
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: XCrafts/ERJ/fire_test_on
+  representation:
+    type: switch
+    switch:
+      switch-style: rect
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      options: invert
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${XCrafts/ERJ/fire_test_on}
 - index: XFEED
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      led: bars
-      color: white
-      formula: ${sim/cockpit/engine/fuel_tank_selector} 3 eq
-    B1:
-      text: LOW 1
-      color: white
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/fuel/fuel_selector_3
+  activation:
+    type: push
+    commands:
+      press: sim/fuel/fuel_selector_3
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        led: bars
+        color: white
+        formula: ${sim/cockpit/engine/fuel_tank_selector} 3 eq
+      B1:
+        text: LOW 1
+        color: white
+        formula: '1'
 - index: FUEL XFEED 1
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      led: bars
-      color: white
-      formula: ${sim/cockpit/engine/fuel_tank_selector} 4 eq
-    B1:
-      text: 'OFF'
-      color: white
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/fuel/left_fuel_selector_up
+  activation:
+    type: push
+    commands:
+      press: sim/fuel/left_fuel_selector_up
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        led: bars
+        color: white
+        formula: ${sim/cockpit/engine/fuel_tank_selector} 4 eq
+      B1:
+        text: 'OFF'
+        color: white
+        formula: '1'
 - index: FUEL XFEED 2
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      led: bars
-      color: white
-      formula: ${sim/cockpit/engine/fuel_tank_selector} 1 eq
-    B1:
-      text: LOW 2
-      color: white
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/fuel/fuel_selector_1
+  activation:
+    type: push
+    commands:
+      press: sim/fuel/fuel_selector_1
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        led: bars
+        color: white
+        formula: ${sim/cockpit/engine/fuel_tank_selector} 1 eq
+      B1:
+        text: LOW 2
+        color: white
+        formula: '1'
 - index: DC PUMP
-  stops: 2
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 120
-    tick-to: 180
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - AUTO
-  formula: ${XCrafts/fuel_DC_pump_switch}
-  set-dataref: XCrafts/fuel_DC_pump_switch
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: XCrafts/fuel_DC_pump_switch
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 120
+      tick-to: 180
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - AUTO
+    formula: ${XCrafts/fuel_DC_pump_switch}
 - index: AC PUMP 1
-  stops: 2
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 120
-    tick-to: 180
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - AUTO
-  formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]}
-  set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 120
+      tick-to: 180
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - AUTO
+    formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]}
 - index: AC PUMP 2
-  stops: 2
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 120
-    tick-to: 180
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - AUTO
-  formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[1]}
-  set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[1]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[1]
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 120
+      tick-to: 180
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - AUTO
+    formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[1]}
 - index: PTU
-  stops: 3
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 140
-    tick-to: 220
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - AUTO
-    - 'ON'
-  dataref: XCrafts/hydraulic/PTU_switch
-  set-dataref: XCrafts/hydraulic/PTU_switch
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    dataref: XCrafts/hydraulic/PTU_switch
+    set-dataref: XCrafts/hydraulic/PTU_switch
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 140
+      tick-to: 220
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - AUTO
+      - 'ON'
 - index: ELEC PUMP 1
-  stops: 3
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 140
-    tick-to: 220
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - AUTO
-    - 'ON'
-  dataref: XCrafts/ERJ/Hydraulics1
-  set-dataref: XCrafts/ERJ/Hydraulics1
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    dataref: XCrafts/ERJ/Hydraulics1
+    set-dataref: XCrafts/ERJ/Hydraulics1
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 140
+      tick-to: 220
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - AUTO
+      - 'ON'
 - index: ELEC PUMP 2
-  stops: 3
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 140
-    tick-to: 220
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - AUTO
-    - 'ON'
-  dataref: XCrafts/ERJ/Hydraulics2
-  set-dataref: XCrafts/ERJ/Hydraulics2
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    dataref: XCrafts/ERJ/Hydraulics2
+    set-dataref: XCrafts/ERJ/Hydraulics2
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 140
+      tick-to: 220
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - AUTO
+      - 'ON'
 - index: ELEC PUMP A
-  stops: 2
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 120
-    tick-to: 180
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - 'ON'
-  dataref: XCrafts/hydraulic/sys3_elec_pump_a_switch
-  set-dataref: XCrafts/hydraulic/sys3_elec_pump_a_switch
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    dataref: XCrafts/hydraulic/sys3_elec_pump_a_switch
+    set-dataref: XCrafts/hydraulic/sys3_elec_pump_a_switch
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 120
+      tick-to: 180
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - 'ON'
 - index: ELEC PUMP B
-  stops: 3
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 140
-    tick-to: 220
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - AUTO
-    - 'ON'
-  dataref: XCrafts/hydraulic/sys3_elec_pump_b_switch
-  set-dataref: XCrafts/hydraulic/sys3_elec_pump_b_switch
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    dataref: XCrafts/hydraulic/sys3_elec_pump_b_switch
+    set-dataref: XCrafts/hydraulic/sys3_elec_pump_b_switch
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 140
+      tick-to: 220
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - AUTO
+      - 'ON'
 - index: WINDSHIELD HEATING 1
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      led: bars
-      color: white
-      formula: ${sim/cockpit2/ice/ice_window_heat_on} 1 eq not
-    B1:
-      text: '1'
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/ice/window_heat_tog
+  activation:
+    type: push
+    commands:
+      press: sim/ice/window_heat_tog
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        led: bars
+        color: white
+        formula: ${sim/cockpit2/ice/ice_window_heat_on} 1 eq not
+      B1:
+        text: '1'
+        formula: '1'
 - index: WINDSHIELD HEATING 1
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      led: bars
-      color: white
-      formula: ${sim/cockpit2/ice/ice_window_heat_on} 1 eq not
-    B1:
-      text: '2'
-      formula: '1'
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/ice/window_heat_tog
+  activation:
+    type: push
+    commands:
+      press: sim/ice/window_heat_tog
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        led: bars
+        color: white
+        formula: ${sim/cockpit2/ice/ice_window_heat_on} 1 eq not
+      B1:
+        text: '2'
+        formula: '1'
 - index: ICE ENGINE 1
-  set-dataref: sim/cockpit2/ice/cowling_thermal_anti_ice_per_engine[0]
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      led: bars
-      color: white
-      formula: ${sim/cockpit2/ice/cowling_thermal_anti_ice_per_engine[0]} 1 eq not
-    B1:
-      text: ENG 1
-      formula: '1'
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: sim/cockpit2/ice/cowling_thermal_anti_ice_per_engine[0]
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        led: bars
+        color: white
+        formula: ${sim/cockpit2/ice/cowling_thermal_anti_ice_per_engine[0]} 1 eq not
+      B1:
+        text: ENG 1
+        formula: '1'
 - index: ICE WING
-  set-dataref: sim/cockpit2/ice/ice_surface_hot_bleed_air_on
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      led: bars
-      color: white
-      formula: ${sim/cockpit2/ice/ice_surface_hot_bleed_air_on} 1 eq not
-    B1:
-      text: WING
-      formula: '1'
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: sim/cockpit2/ice/ice_surface_hot_bleed_air_on
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        led: bars
+        color: white
+        formula: ${sim/cockpit2/ice/ice_surface_hot_bleed_air_on} 1 eq not
+      B1:
+        text: WING
+        formula: '1'
 - index: ICE ENGINE 2
-  set-dataref: sim/cockpit2/ice/cowling_thermal_anti_ice_per_engine[1]
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      led: bars
-      color: white
-      formula: ${sim/cockpit2/ice/cowling_thermal_anti_ice_per_engine[1]} 1 eq not
-    B1:
-      text: ENG 2
-      formula: '1'
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: sim/cockpit2/ice/cowling_thermal_anti_ice_per_engine[1]
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        led: bars
+        color: white
+        formula: ${sim/cockpit2/ice/cowling_thermal_anti_ice_per_engine[1]} 1 eq not
+      B1:
+        text: ENG 2
+        formula: '1'
 - index: EMER LT
-  stops: 3
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 120
-    tick-to: 240
-    tick-space: 40
-    tick-underline-width: 4
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 28
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - ARMED
-    - 'ON'
-  formula: ${XCrafts/light/emerg_switch}
-  set-dataref: XCrafts/light/emerg_switch
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    set-dataref: XCrafts/light/emerg_switch
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 120
+      tick-to: 240
+      tick-space: 40
+      tick-underline-width: 4
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 28
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - ARMED
+      - 'ON'
+    formula: ${XCrafts/light/emerg_switch}
 - index: NO SMKG
-  stops: 2
-  switch:
-    switch-style: round
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${sim/cockpit2/switches/no_smoking}
-  set-dataref: sim/cockpit2/switches/no_smoking
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: sim/cockpit2/switches/no_smoking
+  representation:
+    type: switch
+    switch:
+      switch-style: round
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${sim/cockpit2/switches/no_smoking}
 - index: FSTN BELTS
-  stops: 2
-  switch:
-    switch-style: round
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${sim/cockpit2/switches/fasten_seat_belts}
-  set-dataref: sim/cockpit2/switches/fasten_seat_belts
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: sim/cockpit2/switches/fasten_seat_belts
+  representation:
+    type: switch
+    switch:
+      switch-style: round
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${sim/cockpit2/switches/fasten_seat_belts}
 - index: STERILE
-  stops: 2
-  switch:
-    switch-style: round
-    button-fill-color: White
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 10
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: White
-  formula: ${XCrafts/light/sterile_switch}
-  set-dataref: XCrafts/light/sterile_switch
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: XCrafts/light/sterile_switch
+  representation:
+    type: switch
+    switch:
+      switch-style: round
+      button-fill-color: White
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: White
+    formula: ${XCrafts/light/sterile_switch}
 - index: CKPT
-  stops: 11
-  initial-value: 18
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 45
-    tick-to: 310
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - '18'
-    - '19'
-    - '20'
-    - '21'
-    - '22'
-    - '23'
-    - '24'
-    - '25'
-    - '26'
-    - '27'
-    - '28'
-  dataref: XCrafts/temp_cockpit_switch
-  set-dataref: XCrafts/temp_cockpit_switch
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 11
+    initial-value: 18
+    dataref: XCrafts/temp_cockpit_switch
+    set-dataref: XCrafts/temp_cockpit_switch
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 45
+      tick-to: 310
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - '18'
+      - '19'
+      - '20'
+      - '21'
+      - '22'
+      - '23'
+      - '24'
+      - '25'
+      - '26'
+      - '27'
+      - '28'
 - index: RECIRC
-  annunciator:
-    size: small
-    model: A
-    parts:
-    - text-color: white
-      led: led
-      formula: ${XCrafts/bleedair/recirc_switch} 0 eq
-  set-dataref: XCrafts/bleedair/recirc_switch
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: XCrafts/bleedair/recirc_switch
+  representation:
+    type: annunciator
+    annunciator:
+      size: small
+      model: A
+      parts:
+      - text-color: white
+        led: led
+        formula: ${XCrafts/bleedair/recirc_switch} 0 eq
 - index: PAX CABIN
-  stops: 11
-  initial-value: 18
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 45
-    tick-to: 310
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - '18'
-    - '19'
-    - '20'
-    - '21'
-    - '22'
-    - '23'
-    - '24'
-    - '25'
-    - '26'
-    - '27'
-    - '28'
-  dataref: XCrafts/temp_cabin_switch
-  set-dataref: XCrafts/temp_cabin_switch
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 11
+    initial-value: 18
+    dataref: XCrafts/temp_cabin_switch
+    set-dataref: XCrafts/temp_cabin_switch
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 45
+      tick-to: 310
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - '18'
+      - '19'
+      - '20'
+      - '21'
+      - '22'
+      - '23'
+      - '24'
+      - '25'
+      - '26'
+      - '27'
+      - '28'
 - index: 3
-  icon: INOP.png
-  activation: none
-  representation: icon
+  activation:
+    type: none
+  representation:
+    type: icon
+    icon: INOP.png
 - index: PACK 1
-  annunciator:
-    size: full
-    model: B
-    parts:
-    - text-color: white
-      led: led
-      formula: ${sim/cockpit2/bleedair/actuators/pack_left} 0 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/bleed_air/pack_left_toggle
-  - sim/bleed_air/pack_left_toggle
+  activation:
+    type: sweep
+    positions:
+    - sim/bleed_air/pack_left_toggle
+    - sim/bleed_air/pack_left_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: B
+      parts:
+      - text-color: white
+        led: led
+        formula: ${sim/cockpit2/bleedair/actuators/pack_left} 0 eq
 - index: XBLEED
-  annunciator:
-    size: full
-    model: B
-    parts:
-    - text-color: white
-      led: led
-      formula: ${sim/cockpit/warnings/annunciators/bleed_air_off[1]}
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/bleed_air/isolation_right_toggle
-  - sim/bleed_air/isolation_right_toggle
+  activation:
+    type: sweep
+    positions:
+    - sim/bleed_air/isolation_right_toggle
+    - sim/bleed_air/isolation_right_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: B
+      parts:
+      - text-color: white
+        led: led
+        formula: ${sim/cockpit/warnings/annunciators/bleed_air_off[1]}
 - index: PACK 2
-  annunciator:
-    size: full
-    model: B
-    parts:
-    - text-color: white
-      led: led
-      formula: ${sim/cockpit2/bleedair/actuators/pack_right} 0 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/bleed_air/pack_right_toggle
-  - sim/bleed_air/pack_right_toggle
+  activation:
+    type: sweep
+    positions:
+    - sim/bleed_air/pack_right_toggle
+    - sim/bleed_air/pack_right_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: B
+      parts:
+      - text-color: white
+        led: led
+        formula: ${sim/cockpit2/bleedair/actuators/pack_right} 0 eq
 - index: BLEED 1
-  annunciator:
-    size: small
-    model: A
-    parts:
-    - text-color: white
-      led: led
-      formula: ${sim/cockpit2/bleedair/actuators/engine_bleed_sov[0]} 0 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/bleed_air/engine_1_toggle
-  - sim/bleed_air/engine_1_toggle
+  activation:
+    type: sweep
+    positions:
+    - sim/bleed_air/engine_1_toggle
+    - sim/bleed_air/engine_1_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      size: small
+      model: A
+      parts:
+      - text-color: white
+        led: led
+        formula: ${sim/cockpit2/bleedair/actuators/engine_bleed_sov[0]} 0 eq
 - index: BLEED APU
-  annunciator:
-    size: small
-    model: A
-    parts:
-    - text-color: white
-      led: led
-      formula: ${sim/cockpit2/bleedair/actuators/apu_bleed} 0 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/bleed_air/apu_toggle
-  - sim/bleed_air/apu_toggle
+  activation:
+    type: sweep
+    positions:
+    - sim/bleed_air/apu_toggle
+    - sim/bleed_air/apu_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      size: small
+      model: A
+      parts:
+      - text-color: white
+        led: led
+        formula: ${sim/cockpit2/bleedair/actuators/apu_bleed} 0 eq
 - index: BLEED 2
-  annunciator:
-    size: small
-    model: A
-    parts:
-    - text-color: white
-      led: led
-      formula: ${sim/cockpit2/bleedair/actuators/engine_bleed_sov[1]} 0 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/bleed_air/engine_2_toggle
-  - sim/bleed_air/engine_2_toggle
+  activation:
+    type: sweep
+    positions:
+    - sim/bleed_air/engine_2_toggle
+    - sim/bleed_air/engine_2_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      size: small
+      model: A
+      parts:
+      - text-color: white
+        led: led
+        formula: ${sim/cockpit2/bleedair/actuators/engine_bleed_sov[1]} 0 eq
 - index: 1
-  label: DUMP
-  label-size: 10
-  label-color: white
-  annunciator:
-    size: small
-    model: A
-    parts:
-    - text-color: white
-      led: led
-      formula: ${sim/cockpit/pressure/dump_to_alt}
-  set-dataref: sim/cockpit/pressure/dump_to_alt
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: sim/cockpit/pressure/dump_to_alt
+  representation:
+    type: annunciator
+    label: DUMP
+    label-size: 10
+    label-color: white
+    annunciator:
+      size: small
+      model: A
+      parts:
+      - text-color: white
+        led: led
+        formula: ${sim/cockpit/pressure/dump_to_alt}
 - index: WINDSHIELD WIPER 1
-  stops: 3
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 180
-    tick-to: 310
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - LOW
-    - HIGH
-  dataref: sim/cockpit2/switches/wiper_speed_switch[0]
-  set-dataref: sim/cockpit2/switches/wiper_speed_switch[0]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    dataref: sim/cockpit2/switches/wiper_speed_switch[0]
+    set-dataref: sim/cockpit2/switches/wiper_speed_switch[0]
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 180
+      tick-to: 310
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - LOW
+      - HIGH
 - index: WINDSHIELD WIPER 2
-  stops: 3
-  circular-switch:
-    button-size: 60
-    switch-style: large
-    tick-from: 180
-    tick-to: 310
-    tick-space: 40
-    tick-underline-width: 8
-    needle-color: white
-    needle-length: 30
-    tick-label-size: 24
-    options: invert
-    tick-labels:
-    - 'OFF'
-    - LOW
-    - HIGH
-  dataref: sim/cockpit2/switches/wiper_speed_switch[1]
-  set-dataref: sim/cockpit2/switches/wiper_speed_switch[1]
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    dataref: sim/cockpit2/switches/wiper_speed_switch[1]
+    set-dataref: sim/cockpit2/switches/wiper_speed_switch[1]
+  representation:
+    type: circular-switch
+    circular-switch:
+      button-size: 60
+      switch-style: large
+      tick-from: 180
+      tick-to: 310
+      tick-space: 40
+      tick-underline-width: 8
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 24
+      options: invert
+      tick-labels:
+      - 'OFF'
+      - LOW
+      - HIGH
 - index: 0
-  label: ENGINE 1
-  label-size: 9
-  label-color: White
-  annunciator:
-    size: medium
-    model: F
-    parts:
-    - color: white
-      text-size: 40
-      formula: '1'
-      text: N1
-    - color: white
-      text-size: 40
-      formula: '1'
-      text: N2
-    - color: lime
-      text-size: 40
-      formula: ${sim/cockpit2/engine/indicators/N2_percent[0]}
-      text: ${formula}
-      text-format: '{0:.0f}%'
-    - color: lime
-      text-size: 40
-      formula: ${sim/cockpit2/engine/indicators/N1_percent[0]}
-      text: ${formula}
-      text-format: '{0:.0f}%'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ENGINE 1
+    label-size: 9
+    label-color: White
+    annunciator:
+      size: medium
+      model: F
+      parts:
+      - color: white
+        text-size: 40
+        formula: '1'
+        text: N1
+      - color: white
+        text-size: 40
+        formula: '1'
+        text: N2
+      - color: lime
+        text-size: 40
+        formula: ${sim/cockpit2/engine/indicators/N2_percent[0]}
+        text: ${formula}
+        text-format: '{0:.0f}%'
+      - color: lime
+        text-size: 40
+        formula: ${sim/cockpit2/engine/indicators/N1_percent[0]}
+        text: ${formula}
+        text-format: '{0:.0f}%'
 - index: 9
-  decor:
-    type: line
-    code: E
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: line
+      code: E
 - index: 10
-  decor:
-    type: line
-    code: D
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: line
+      code: D
 - index: 3
-  label: ENGINE 2
-  label-size: 9
-  label-color: White
-  annunciator:
-    size: medium
-    model: F
-    parts:
-    - color: white
-      text-size: 40
-      formula: '1'
-      text: N1
-    - color: white
-      text-size: 40
-      formula: '1'
-      text: N2
-    - color: lime
-      text-size: 40
-      formula: ${sim/cockpit2/engine/indicators/N2_percent[1]}
-      text: ${formula}
-      text-format: '{0:.0f}%'
-    - color: lime
-      text-size: 40
-      formula: ${sim/cockpit2/engine/indicators/N1_percent[1]}
-      text: ${formula}
-      text-format: '{0:.0f}%'
-  activation: none
-  representation: annunciator
-  commands:
-    press: XCrafts/Starter_Eng_2_up_CW
+  activation:
+    type: none
+    commands:
+      press: XCrafts/Starter_Eng_2_up_CW
+  representation:
+    type: annunciator
+    label: ENGINE 2
+    label-size: 9
+    label-color: White
+    annunciator:
+      size: medium
+      model: F
+      parts:
+      - color: white
+        text-size: 40
+        formula: '1'
+        text: N1
+      - color: white
+        text-size: 40
+        formula: '1'
+        text: N2
+      - color: lime
+        text-size: 40
+        formula: ${sim/cockpit2/engine/indicators/N2_percent[1]}
+        text: ${formula}
+        text-format: '{0:.0f}%'
+      - color: lime
+        text-size: 40
+        formula: ${sim/cockpit2/engine/indicators/N1_percent[1]}
+        text: ${formula}
+        text-format: '{0:.0f}%'
 - index: 4
-  label: STOP
-  label-color: White
-  label-size: 9
-  text-bg-color: Black
-  multi-texts:
-  - text: STOPPED
-    text-size: 12
-    text-color: Green
-  - text: 'PUSH
+  activation:
+    type: push
+    commands:
+      press: XCrafts/Starter_Eng_1_down_CCW
+  representation:
+    type: multi-texts
+    label: STOP
+    label-color: White
+    label-size: 9
+    text-bg-color: Black
+    multi-texts:
+    - text: STOPPED
+      text-size: 12
+      text-color: Green
+    - text: 'PUSH
 
-      TO STOP'
-    text-size: 12
-    text-color: Red
-  - text: STARTING
-    text-size: 12
-    text-color: Gold
-  formula: ${XCrafts/ERJ/engine1_starter_knob}
-  activation: push
-  representation: multi-texts
-  commands:
-    press: XCrafts/Starter_Eng_1_down_CCW
+        TO STOP'
+      text-size: 12
+      text-color: Red
+    - text: STARTING
+      text-size: 12
+      text-color: Gold
+    formula: ${XCrafts/ERJ/engine1_starter_knob}
 - index: 7
-  label: STOP
-  label-color: White
-  label-size: 9
-  text-bg-color: Black
-  multi-texts:
-  - text: STOPPED
-    text-size: 12
-    text-color: Green
-  - text: 'PUSH
+  activation:
+    type: push
+    commands:
+      press: XCrafts/Starter_Eng_2_down_CCW
+  representation:
+    type: multi-texts
+    label: STOP
+    label-color: White
+    label-size: 9
+    text-bg-color: Black
+    multi-texts:
+    - text: STOPPED
+      text-size: 12
+      text-color: Green
+    - text: 'PUSH
 
-      TO STOP'
-    text-size: 12
-    text-color: Red
-  - text: STARTING
-    text-size: 12
-    text-color: Gold
-  formula: ${XCrafts/ERJ/engine2_starter_knob}
-  activation: push
-  representation: multi-texts
-  commands:
-    press: XCrafts/Starter_Eng_2_down_CCW
+        TO STOP'
+      text-size: 12
+      text-color: Red
+    - text: STARTING
+      text-size: 12
+      text-color: Gold
+    formula: ${XCrafts/ERJ/engine2_starter_knob}
 - index: 8
+  activation:
+    type: long-press
+    commands:
+      press: XCrafts/Starter_Eng_1_up_CW
+  representation:
+    type: multi-texts
+    label: START
+    label-color: White
+    label-size: 9
+    text-bg-color: Black
+    multi-texts:
+    - text: 'PUSH
+
+        TO RUN'
+      text-size: 12
+      text-color: Green
+    - text: 'PUSH
+
+        TO START'
+      text-size: 12
+      text-color: Green
+    - text: STARTING
+      text-size: 12
+      text-color: Gold
+    formula: ${XCrafts/ERJ/engine1_starter_knob}
   vibrate: LONG
-  label: START
-  label-color: White
-  label-size: 9
-  text-bg-color: Black
-  multi-texts:
-  - text: 'PUSH
-
-      TO RUN'
-    text-size: 12
-    text-color: Green
-  - text: 'PUSH
-
-      TO START'
-    text-size: 12
-    text-color: Green
-  - text: STARTING
-    text-size: 12
-    text-color: Gold
-  formula: ${XCrafts/ERJ/engine1_starter_knob}
-  activation: long-press
-  representation: multi-texts
-  commands:
-    press: XCrafts/Starter_Eng_1_up_CW
 - index: 11
+  activation:
+    type: long-press
+    commands:
+      press: XCrafts/Starter_Eng_2_up_CW
+  representation:
+    type: multi-texts
+    label: START
+    label-color: White
+    label-size: 9
+    text-bg-color: Black
+    multi-texts:
+    - text: 'PUSH
+
+        TO RUN'
+      text-size: 12
+      text-color: Green
+    - text: 'PUSH
+
+        TO START'
+      text-size: 12
+      text-color: Green
+    - text: STARTING
+      text-size: 12
+      text-color: Gold
+    formula: ${XCrafts/ERJ/engine2_starter_knob}
   vibrate: LONG
-  label: START
-  label-color: White
-  label-size: 9
-  text-bg-color: Black
-  multi-texts:
-  - text: 'PUSH
-
-      TO RUN'
-    text-size: 12
-    text-color: Green
-  - text: 'PUSH
-
-      TO START'
-    text-size: 12
-    text-color: Green
-  - text: STARTING
-    text-size: 12
-    text-color: Gold
-  formula: ${XCrafts/ERJ/engine2_starter_knob}
-  activation: long-press
-  representation: multi-texts
-  commands:
-    press: XCrafts/Starter_Eng_2_up_CW

@@ -5,71 +5,87 @@ last-updated: 31-OCT-2024
 buttons:
 - index: b0
   name: Popup ISI
-  label: ISI
-  dataref: AirbusFBW/PopUpStateArray[8]
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[8]
+    commands:
+      press: AirbusFBW/PopUpISI
+  representation:
+    type: colored-led
+    label: ISI
   colored-led: (255, 0, 255)
-  activation: push
-  representation: colored-led
-  commands:
-    press: AirbusFBW/PopUpISI
 - index: b1
   name: Popup PFD1
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[2]
+    commands:
+      press: AirbusFBW/PopUpPFD1
+  representation:
+    type: colored-led
+    label: PFD1
   colored-led: (255, 0, 0)
-  label: PFD1
-  dataref: AirbusFBW/PopUpStateArray[2]
-  activation: push
-  representation: colored-led
-  commands:
-    press: AirbusFBW/PopUpPFD1
 - index: b2
   name: Popup ND1
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[4]
+    commands:
+      press: AirbusFBW/PopUpND1
+  representation:
+    type: colored-led
+    label: ND1
   colored-led: (255, 128, 0)
-  label: ND1
-  dataref: AirbusFBW/PopUpStateArray[4]
-  activation: push
-  representation: colored-led
-  commands:
-    press: AirbusFBW/PopUpND1
 - index: b3
   name: Popup EWD
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[6]
+    commands:
+      press: AirbusFBW/PopUpEWD
+  representation:
+    type: colored-led
+    label: EWD
   colored-led: (255, 255, 0)
-  label: EWD
-  dataref: AirbusFBW/PopUpStateArray[6]
-  activation: push
-  representation: colored-led
-  commands:
-    press: AirbusFBW/PopUpEWD
 - index: b4
   name: Popup SD
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[7]
+    commands:
+      press: AirbusFBW/PopUpSD
+  representation:
+    type: colored-led
+    label: SD
   colored-led: (0, 255, 0)
-  label: SD
-  dataref: AirbusFBW/PopUpStateArray[7]
-  activation: push
-  representation: colored-led
-  commands:
-    press: AirbusFBW/PopUpSD
 - index: b5
   name: Popup MCDU1
+  activation:
+    type: push
+    dataref: AirbusFBW/PopUpStateArray[0]
+    commands:
+      press: AirbusFBW/UndockMCDU1
+  representation:
+    type: colored-led
+    label: MCDU1
   colored-led: (0, 255, 255)
-  label: MCDU1
-  dataref: AirbusFBW/PopUpStateArray[0]
-  activation: push
-  representation: colored-led
-  commands:
-    press: AirbusFBW/UndockMCDU1
 - index: b6
   name: Popup Piedestal1
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/PopUpPedestal1
+  representation:
+    type: colored-led
+    label: Piedestal1
   colored-led: (0,0,255)
-  label: Piedestal1
-  activation: push
-  representation: colored-led
-  commands:
-    press: AirbusFBW/PopUpPedestal1
 - index: b7
   name: Popup Piedestal2
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/PopUpPedestal2
+  representation:
+    type: colored-led
+    label: Piedestal2
   colored-led: (128, 0, 255)
-  label: Piedestal2
-  activation: push
-  representation: colored-led
-  commands:
-    press: AirbusFBW/PopUpPedestal2

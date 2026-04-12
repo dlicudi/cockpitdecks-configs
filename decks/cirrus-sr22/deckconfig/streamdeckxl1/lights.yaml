@@ -4,89 +4,99 @@ includes:
 name: lights
 buttons:
 - index: 0
-  label: NAV
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/nav_lights_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/lights/nav_lights_toggle
+  representation:
+    type: annunciator
+    label: NAV
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
 - index: 1
-  label: STROBE
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/strobe_lights_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/lights/strobe_lights_toggle
+  representation:
+    type: annunciator
+    label: STROBE
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
 - index: 2
-  label: LAND
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/landing_01_light_tog
+  activation:
+    type: push
+    commands:
+      press: sim/lights/landing_01_light_tog
+  representation:
+    type: annunciator
+    label: LAND
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq
 - index: 3
-  label: ICE
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/generic_01_light_tog
+  activation:
+    type: push
+    commands:
+      press: sim/lights/generic_01_light_tog
+  representation:
+    type: annunciator
+    label: ICE
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[0]} 1 eq
 - index: 11
   name: Switches
-  page: switches
-  label: SWITCHES
-  label-size: 12
-  text: 
-  text-font: fontawesome.otf
-  text-size: 12
-  text-color: Gold
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches
+  representation:
+    type: text
+    label: SWITCHES
+    label-size: 12
+    text: 
+    text-font: fontawesome.otf
+    text-size: 12
+    text-color: Gold

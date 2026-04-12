@@ -6,234 +6,270 @@ name: intlights
 buttons:
 - index: 0
   name: PROBE/WINDOW HEAT
-  annunciator:
-    model: B
-    size: large
-    B0:
-      text: FAIL
-      color: darkorange
-      dataref: AirbusFBW/OHPLightsATA30[11]
-    B1:
-      text: true
-      color: deepskyblue
-      framed: true
-      formula: ${AirbusFBW/OHPLightsATA30[10]} 3 roundn
-  label: 'PROBE/WINDOW
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/ProbeHeatSwitch
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAIL
+        color: darkorange
+        dataref: AirbusFBW/OHPLightsATA30[11]
+      B1:
+        text: true
+        color: deepskyblue
+        framed: true
+        formula: ${AirbusFBW/OHPLightsATA30[10]} 3 roundn
+    label: 'PROBE/WINDOW
 
-    HEAT'
-  set-dataref: AirbusFBW/ProbeHeatSwitch
-  activation: sweep
-  representation: annunciator
+      HEAT'
 - index: 3
-  annunciator:
-    model: B
-    B1:
-      dataref: AirbusFBW/CabPressMode
-      text: MAN
-      text-color: white
-      framed: true
-  label: MODE SEL
-  set-dataref: AirbusFBW/CabPressMode
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/CabPressMode
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      B1:
+        dataref: AirbusFBW/CabPressMode
+        text: MAN
+        text-color: white
+        framed: true
+    label: MODE SEL
 - index: 5
-  annunciator:
-    model: B
-    B1:
-      dataref: AirbusFBW/OHPLightsATA21[13]
-      text: true
-      text-color: white
-      framed: true
-  label: DITCHING
-  set-dataref: AirbusFBW/OHPLightsATA21[13]
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/OHPLightsATA21[13]
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      B1:
+        dataref: AirbusFBW/OHPLightsATA21[13]
+        text: true
+        text-color: white
+        framed: true
+    label: DITCHING
   guard:
     dataref: AirbusFBW/OHPGuardsAllATA[4]
     model: grid
     color: (40, 40, 40)
-  activation: sweep
-  representation: annunciator
 - index: 15
   name: left
-  page: index
-  label: EXT.LIGHTS
-  label-size: 10
-  text:
-    text: ${fa:arrow-left}
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: index
+  representation:
+    type: text
+    label: EXT.LIGHTS
+    label-size: 10
+    text:
+      text: ${fa:arrow-left}
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 16
   name: APUMASTER
-  annunciator:
-    size: large
-    model: B
-    parts:
-    - text: true
-      color: deepskyblue
-      framed: true
-      size: 60
-      formula: ${AirbusFBW/APUMaster}
-  label: MASTER SW
-  activation: push
-  representation: annunciator
-  commands:
-    press: toliss_airbus/apucommands/MasterToggle
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/apucommands/MasterToggle
+  representation:
+    type: annunciator
+    annunciator:
+      size: large
+      model: B
+      parts:
+      - text: true
+        color: deepskyblue
+        framed: true
+        size: 60
+        formula: ${AirbusFBW/APUMaster}
+    label: MASTER SW
 - index: 19
   name: STBY COMPASS
-  label: STBY COMPASS
-  label-font: DIN Condensed Regular
-  switch:
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - true
-    - false
-    tick-space: 10
-    tick-label-size: 30
-    tick-label-font: DIN Bold
-  options: hexa,invert
-  dataref: AirbusFBW/StbyCompassLightLevel
-  activation: sweep
-  positions:
-  - toliss_airbus/lightcommands/CompassLightToggle
-  - toliss_airbus/lightcommands/CompassLightToggle
+  activation:
+    type: sweep
+    options: hexa,invert
+    dataref: AirbusFBW/StbyCompassLightLevel
+    positions:
+    - toliss_airbus/lightcommands/CompassLightToggle
+    - toliss_airbus/lightcommands/CompassLightToggle
+  representation:
+    type: switch
+    label: STBY COMPASS
+    label-font: DIN Condensed Regular
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - true
+      - false
+      tick-space: 10
+      tick-label-size: 30
+      tick-label-font: DIN Bold
 - index: 20
   name: DOME
-  label: DOME
-  stops: 3
-  switch:
-    switch-style: rect
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - BRT
-    - DIM
-    - false
-    tick-space: 10
-    tick-label-size: 30
-    tick-label-font: DIN Bold
-  options: 3way,invert,hexa
-  dataref: ckpt/oh/domeLight/anim
-  set-dataref: ckpt/oh/domeLight/anim
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    options: 3way,invert,hexa
+    dataref: ckpt/oh/domeLight/anim
+    set-dataref: ckpt/oh/domeLight/anim
+  representation:
+    type: switch
+    label: DOME
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - BRT
+      - DIM
+      - false
+      tick-space: 10
+      tick-label-size: 30
+      tick-label-font: DIN Bold
 - index: 21
   name: ANNUNCIATOR LIGHTS
-  label: ANN LT
-  stops: 3
-  switch:
-    switch-style: rect
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - TEST
-    - BRT
-    - DIM
-    tick-space: 10
-    tick-label-size: 30
-    tick-label-font: DIN Bold
-  options: 3way,hexa
-  dataref: AirbusFBW/AnnunMode
-  set-dataref: AirbusFBW/AnnunMode
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    options: 3way,hexa
+    dataref: AirbusFBW/AnnunMode
+    set-dataref: AirbusFBW/AnnunMode
+  representation:
+    type: switch
+    label: ANN LT
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - TEST
+      - BRT
+      - DIM
+      tick-space: 10
+      tick-label-size: 30
+      tick-label-font: DIN Bold
 - index: 23
   name: up
-  page: ovrhdaircond
-  icon-color: royalblue
-  activation: page
-  representation: icon-color
+  activation:
+    type: page
+    page: ovrhdaircond
+  representation:
+    type: icon-color
+    icon-color: royalblue
 - index: 24
   name: APUSTART
-  annunciator:
-    size: large
-    model: B
-    parts:
-    - text: AVAIL
-      color: lime
-      formula: ${AirbusFBW/APUAvail}
-    - text: true
-      color: deepskyblue
-      framed: true
-      size: 60
-      formula: ${AirbusFBW/APUStarter}
-  label: START
-  activation: push
-  representation: annunciator
-  commands:
-    press: toliss_airbus/apucommands/StarterToggle
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/apucommands/StarterToggle
+  representation:
+    type: annunciator
+    annunciator:
+      size: large
+      model: B
+      parts:
+      - text: AVAIL
+        color: lime
+        formula: ${AirbusFBW/APUAvail}
+      - text: true
+        color: deepskyblue
+        framed: true
+        size: 60
+        formula: ${AirbusFBW/APUStarter}
+    label: START
 - index: 26
   name: SEAT BELT
-  label: SEAT BELTS
-  switch:
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - true
-    - false
-    tick-space: 10
-    tick-label-size: 30
-    tick-label-font: DIN Bold
-  options: hexa,invert
-  dataref: ckpt/oh/seatbelts/anim
-  set-dataref: ckpt/oh/seatbelts/anim
-  activation: sweep
+  activation:
+    type: sweep
+    options: hexa,invert
+    dataref: ckpt/oh/seatbelts/anim
+    set-dataref: ckpt/oh/seatbelts/anim
+  representation:
+    type: switch
+    label: SEAT BELTS
+    switch:
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - true
+      - false
+      tick-space: 10
+      tick-label-size: 30
+      tick-label-font: DIN Bold
 - index: 27
   name: SMOKING
-  label: NO SMOKING
-  stops: 3
-  switch:
-    switch-style: rect
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - true
-    - AUTO
-    - false
-    tick-space: 10
-    tick-label-size: 30
-    tick-label-font: DIN Bold
-  options: 3way,invert,hexa
-  dataref: ckpt/oh/nosmoking/anim
-  set-dataref: ckpt/oh/nosmoking/anim
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    options: 3way,invert,hexa
+    dataref: ckpt/oh/nosmoking/anim
+    set-dataref: ckpt/oh/nosmoking/anim
+  representation:
+    type: switch
+    label: NO SMOKING
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - true
+      - AUTO
+      - false
+      tick-space: 10
+      tick-label-size: 30
+      tick-label-font: DIN Bold
 - index: 28
-  label: EMERGENCY
-  annunciator:
-    model: B
-    B1:
-      text: false
-      text-color: darkorange
-      formula: ${ckpt/oh/emerExitLight/anim} 0 eq
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: EMERGENCY
+    annunciator:
+      model: B
+      B1:
+        text: false
+        text-color: darkorange
+        formula: ${ckpt/oh/emerExitLight/anim} 0 eq
 - index: 29
   name: EMERGENCY EXITS
-  label: EXITS LT
-  stops: 3
-  switch:
-    switch-style: rect
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - true
-    - ARM
-    - false
-    tick-space: 10
-    tick-label-size: 30
-    tick-label-font: DIN Bold
-  options: 3way,invert,hexa
-  dataref: ckpt/oh/emerExitLight/anim
-  set-dataref: ckpt/oh/emerExitLight/anim
-  activation: sweep
+  activation:
+    type: sweep
+    stops: 3
+    options: 3way,invert,hexa
+    dataref: ckpt/oh/emerExitLight/anim
+    set-dataref: ckpt/oh/emerExitLight/anim
+  representation:
+    type: switch
+    label: EXITS LT
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - true
+      - ARM
+      - false
+      tick-space: 10
+      tick-label-size: 30
+      tick-label-font: DIN Bold
 - index: 31
   name: Index
-  page: index
-  icon: TOLISS-A21N
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: index
+  representation:
+    type: icon
+    icon: TOLISS-A21N

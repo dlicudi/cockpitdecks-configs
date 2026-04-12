@@ -5,89 +5,115 @@ last-updated: 03-APR-2024
 buttons:
 - index: 2
   name: BUTTON ON
-  led: single
-  options: counter
-  formula: 1
-  activation: push
-  representation: led
+  activation:
+    type: push
+    options: counter
+  representation:
+    type: led
+    led: single
+    formula: 1
 - index: 3
   name: INSPECT
-  led: single
-  formula: 1
-  activation: inspect
-  representation: led
+  activation:
+    type: inspect
+  representation:
+    type: led
+    led: single
+    formula: 1
 - index: 4
   name: BUTTON BLINK
-  formula: 1
-  options: blink
-  led: single
-  activation: push
-  representation: led
+  activation:
+    type: push
+    options: blink
+  representation:
+    type: led
+    formula: 1
+    led: single
 - index: 5
   name: RELOADSOFT
-  led: single
-  activation: reload
-  representation: led
+  activation:
+    type: reload
+  representation:
+    type: led
+    led: single
 - index: 6
   name: MASTERCAUT
-  dataref: AirbusFBW/MasterCaut
-  led: true
-  activation: push
-  representation: led
-  commands:
-    press: sim/annunciator/clear_master_caution
+  activation:
+    type: push
+    dataref: AirbusFBW/MasterCaut
+    commands:
+      press: sim/annunciator/clear_master_caution
+  representation:
+    type: led
+    led: true
 - index: 7
   name: MASTERWARN
-  dataref: AirbusFBW/MasterWarn
-  led: true
-  activation: push
-  representation: led
-  commands:
-    press: sim/annunciator/clear_master_warning
+  activation:
+    type: push
+    dataref: AirbusFBW/MasterWarn
+    commands:
+      press: sim/annunciator/clear_master_warning
+  representation:
+    type: led
+    led: true
 - index: 9
   name: ALLON
-  formula: 1
-  led: true
-  activation: push
-  representation: led
+  activation:
+    type: push
+  representation:
+    type: led
+    formula: 1
+    led: true
 - index: 10
   name: ALLOFF
-  formula: 0
-  led: true
-  activation: push
-  representation: led
+  activation:
+    type: push
+  representation:
+    type: led
+    formula: 0
+    led: true
 - index: 11
   name: ALLBLINK
-  formula: 1
-  options: blink
-  led: true
-  activation: push
-  representation: led
+  activation:
+    type: push
+    options: blink
+  representation:
+    type: led
+    formula: 1
+    led: true
 - index: 15
   name: RELOAD
-  led: true
-  formula: 1
-  activation: reload
-  representation: led
+  activation:
+    type: reload
+  representation:
+    type: led
+    led: true
+    formula: 1
 - index: slider
   name: SLIDER
-  set-dataref: data:xtmslider
-  representation: none
+  activation:
+    type: slider
+    set-dataref: data:xtmslider
+  representation:
+    type: none
   value-step: 10
-  activation: slider
 - index: a
   name: A
-  page: a
-  led: true
-  formula: 1
-  activation: page
-  representation: led
+  activation:
+    type: page
+    page: a
+  representation:
+    type: led
+    led: true
+    formula: 1
 - index: b
   name: B
-  page: b
-  led: true
-  formula: 0
-  activation: page
-  representation: led
+  activation:
+    type: page
+    page: b
+  representation:
+    type: led
+    led: true
+    formula: 0
 includes:
 - encoders

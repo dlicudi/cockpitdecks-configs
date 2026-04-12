@@ -5,153 +5,197 @@ last-updated: 24-OCT-2024
 buttons:
 - index: e0
   name: PFDND Left Brightness
-  step: 0.1
-  value: 0.8
-  value-min: 0
-  value-max: 1
-  set-dataref: AirbusFBW/DUBrightness[0]
-  encoder-leds: 0
-  activation: encoder-value
+  activation:
+    type: encoder-value
+    step: 0.1
+    value: 0.8
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbusFBW/DUBrightness[0]
+    encoder-leds: 0
+  representation:
+    type: none
 - index: 0
   name: RELOAD
-  led: single
-  formula: 1
-  activation: reload
-  representation: led
+  activation:
+    type: reload
+  representation:
+    type: led
+    led: single
+    formula: 1
 - index: e1
   name: PFDND Right Brightness
-  step: 0.1
-  value: 0.8
-  value-min: 0
-  value-max: 1
-  set-dataref: AirbusFBW/DUBrightness[1]
-  encoder-leds: 0
-  activation: encoder-value
+  activation:
+    type: encoder-value
+    step: 0.1
+    value: 0.8
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbusFBW/DUBrightness[1]
+    encoder-leds: 0
+  representation:
+    type: none
 - index: 1
   name: EFB Brightness Up
-  led: single
-  formula: 1
-  activation: push
-  representation: led
-  commands:
-    press: AirbusFBW/EFBBrightnessUp
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/EFBBrightnessUp
+  representation:
+    type: led
+    led: single
+    formula: 1
 - index: 9
   name: EFB Brightness Down
-  led: single
-  formula: 1
-  activation: push
-  representation: led
-  commands:
-    press: AirbusFBW/EFBBrightnessDown
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/EFBBrightnessDown
+  representation:
+    type: led
+    led: single
+    formula: 1
 - index: e2
   name: ECAM Top Brightness
-  step: 0.1
-  value: 0.8
-  value-min: 0
-  value-max: 1
-  set-dataref: AirbusFBW/DUBrightness[4]
-  encoder-leds: 0
-  activation: encoder-value
+  activation:
+    type: encoder-value
+    step: 0.1
+    value: 0.8
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbusFBW/DUBrightness[4]
+    encoder-leds: 0
+  representation:
+    type: none
 - index: 2
   name: CPDLC Brightness Up
-  led: single
-  formula: 1
-  activation: push
-  representation: led
-  commands:
-    press: AirbusFBW/CPDLC1/BrightnessUp
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/CPDLC1/BrightnessUp
+  representation:
+    type: led
+    led: single
+    formula: 1
 - index: 10
   name: CPDLC Brightness Down
-  led: single
-  formula: 1
-  activation: push
-  representation: led
-  commands:
-    press: AirbusFBW/CPDLC1/BrightnessDown
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/CPDLC1/BrightnessDown
+  representation:
+    type: led
+    led: single
+    formula: 1
 - index: e3
   name: ECAM Bottom Brightness
-  step: 0.1
-  value: 0.8
-  value-min: 0
-  value-max: 1
-  set-dataref: AirbusFBW/DUBrightness[5]
-  encoder-leds: 0
-  activation: encoder-value
+  activation:
+    type: encoder-value
+    step: 0.1
+    value: 0.8
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbusFBW/DUBrightness[5]
+    encoder-leds: 0
+  representation:
+    type: none
 - index: 3
   name: MDCU Brightness Up
-  led: single
-  formula: 1
-  activation: push
-  representation: led
-  commands:
-    press: AirbusFBW/MCDU1KeyBright
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/MCDU1KeyBright
+  representation:
+    type: led
+    led: single
+    formula: 1
 - index: 11
   name: MDCU Brightness Down
-  led: single
-  formula: 1
-  activation: push
-  representation: led
-  commands:
-    press: AirbusFBW/MCDU1KeyDim
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/MCDU1KeyDim
+  representation:
+    type: led
+    led: single
+    formula: 1
 - index: e4
   name: ISI Brightness
-  value-min: 0
-  value-max: 6
-  encoder-leds: 0
-  activation: encoder
-  commands:
-    cw: AirbusFBW/ISIBrightnessUp
-    ccw: AirbusFBW/ISIBrightnessDown
+  activation:
+    type: encoder
+    value-min: 0
+    value-max: 6
+    encoder-leds: 0
+    commands:
+      cw: AirbusFBW/ISIBrightnessUp
+      ccw: AirbusFBW/ISIBrightnessDown
+  representation:
+    type: none
 - index: e5
   name: Overhead Panel Brightness
-  step: 0.1
-  value: 0.8
-  value-min: 0
-  value-max: 1
-  set-dataref: AirbusFBW/PanelFloodBrightnessLevel
-  encoder-leds: 0
-  activation: encoder-value
+  activation:
+    type: encoder-value
+    step: 0.1
+    value: 0.8
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbusFBW/PanelFloodBrightnessLevel
+    encoder-leds: 0
+  representation:
+    type: none
 - index: e6
   name: Pedestal Flood Light
-  step: 0.1
-  value: 0.8
-  value-min: 0
-  value-max: 1
-  set-dataref: AirbusFBW/PedestalFloodBrightnessLevel
-  encoder-leds: 0
-  activation: encoder-value
+  activation:
+    type: encoder-value
+    step: 0.1
+    value: 0.8
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbusFBW/PedestalFloodBrightnessLevel
+    encoder-leds: 0
+  representation:
+    type: none
 - index: e7
   name: FCU Back Light
-  step: 0.1
-  value: 0.8
-  value-min: 0
-  value-max: 1
-  set-dataref: AirbusFBW/SupplLightLevelRehostats[0]
-  encoder-leds: 0
-  activation: encoder-value
+  activation:
+    type: encoder-value
+    step: 0.1
+    value: 0.8
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbusFBW/SupplLightLevelRehostats[0]
+    encoder-leds: 0
+  representation:
+    type: none
 - index: 7
   name: Dome Flood Light
-  stops: 3
-  set-dataref: ckpt/oh/domeLight/anim
-  dataref: ckpt/oh/domeLight/anim
-  led: single
-  activation: sweep
-  representation: led
-  positions:
-  - toliss_airbus/lightcommands/DomeLightUp
-  - toliss_airbus/lightcommands/DomeLightDown
+  activation:
+    type: sweep
+    stops: 3
+    set-dataref: ckpt/oh/domeLight/anim
+    dataref: ckpt/oh/domeLight/anim
+    positions:
+    - toliss_airbus/lightcommands/DomeLightUp
+    - toliss_airbus/lightcommands/DomeLightDown
+  representation:
+    type: led
+    led: single
 - index: 15
   name: Annunciation Brightness
-  stops: 3
-  set-dataref: AirbusFBW/AnnunMode
-  dataref: AirbusFBW/AnnunMode
-  led: single
-  activation: sweep
-  representation: led
+  activation:
+    type: sweep
+    stops: 3
+    set-dataref: AirbusFBW/AnnunMode
+    dataref: AirbusFBW/AnnunMode
+  representation:
+    type: led
+    led: single
 - index: slider
   name: TESTESTESTEST
-  value-min: 0
-  value-max: 1
-  set-dataref: AirbusFBW/PanelBrightnessLevel
-  representation: none
-  activation: slider
+  activation:
+    type: slider
+    value-min: 0
+    value-max: 1
+    set-dataref: AirbusFBW/PanelBrightnessLevel
+  representation:
+    type: none

@@ -1,56 +1,78 @@
 buttons:
 - index: e0
   name: FCU Airspeed
-  activation: encoder-push
-  commands:
-    press: AirbusFBW/PushSPDSel
-    long-press: AirbusFBW/PullSPDSel
-    cw: sim/autopilot/airspeed_up
-    ccw: sim/autopilot/airspeed_down
+  activation:
+    type: encoder-push
+    commands:
+      press: AirbusFBW/PushSPDSel
+      long-press: AirbusFBW/PullSPDSel
+      cw: sim/autopilot/airspeed_up
+      ccw: sim/autopilot/airspeed_down
+  representation:
+    type: none
 - index: e1
   name: FCU Heading
-  activation: encoder-push
-  commands:
-    press: AirbusFBW/PushHDGSel
-    long-press: AirbusFBW/PullHDGSel
-    cw: sim/autopilot/heading_up
-    ccw: sim/autopilot/heading_down
+  activation:
+    type: encoder-push
+    commands:
+      press: AirbusFBW/PushHDGSel
+      long-press: AirbusFBW/PullHDGSel
+      cw: sim/autopilot/heading_up
+      ccw: sim/autopilot/heading_down
+  representation:
+    type: none
 - index: e2
   name: FCU Baro
-  commands:
-    toggle-on: toliss_airbus/capt_baro_push
-    toggle-off: toliss_airbus/capt_baro_pull
-    cw: sim/instruments/barometer_down
-    ccw: sim/instruments/barometer_up
-  options: modulo
-  activation: encoder-toggle
+  activation:
+    type: encoder-toggle
+    commands:
+      toggle-on: toliss_airbus/capt_baro_push
+      toggle-off: toliss_airbus/capt_baro_pull
+      cw: sim/instruments/barometer_down
+      ccw: sim/instruments/barometer_up
+    options: modulo
+  representation:
+    type: none
 - index: e3
   name: FCU Altitude
-  activation: encoder-push
-  commands:
-    press: AirbusFBW/PushAltitude
-    long-press: AirbusFBW/PullAltitude
-    cw: sim/autopilot/altitude_up
-    ccw: sim/autopilot/altitude_down
+  activation:
+    type: encoder-push
+    commands:
+      press: AirbusFBW/PushAltitude
+      long-press: AirbusFBW/PullAltitude
+      cw: sim/autopilot/altitude_up
+      ccw: sim/autopilot/altitude_down
+  representation:
+    type: none
 - index: e4
   name: FCU V Speed
-  dataref: sim/cockpit/autopilot/vertical_velocity
-  step: 100
-  value: 0
-  value-min: -6000
-  value-max: 6000
-  set-dataref: sim/cockpit/autopilot/vertical_velocity
-  commands:
-    toggle-on: AirbusFBW/PullVSSel
-    toggle-off: AirbusFBW/PushVSSel
-  activation: encoder-value
-  step-xl: 1000
+  activation:
+    type: encoder-value
+    dataref: sim/cockpit/autopilot/vertical_velocity
+    step: 100
+    value: 0
+    value-min: -6000
+    value-max: 6000
+    set-dataref: sim/cockpit/autopilot/vertical_velocity
+    commands:
+      toggle-on: AirbusFBW/PullVSSel
+      toggle-off: AirbusFBW/PushVSSel
+    step-xl: 1000
+  representation:
+    type: none
 - index: e5
   name: FCU Unused
-  options: nostate
-  activation: none
+  activation:
+    type: none
+    options: nostate
+  representation:
+    type: none
 - index: left
   name: FCU-L
+  activation:
+    type: none
+  representation:
+    type: none
   multi-datarefs:
   - sim/cockpit2/autopilot/airspeed_dial_kts_mach
   - sim/cockpit/autopilot/heading_mag
@@ -71,9 +93,12 @@ buttons:
     value-size: 48
     value-font: Segment7Standard
     value-color: white
-  activation: none
 - index: right
   name: FCU-R
+  activation:
+    type: none
+  representation:
+    type: none
   multi-datarefs:
   - sim/cockpit2/autopilot/altitude_dial_ft
   - sim/cockpit/autopilot/vertical_velocity
@@ -88,4 +113,3 @@ buttons:
     value-size: 48
     value-font: Segment7Standard
     value-color: white
-  activation: none

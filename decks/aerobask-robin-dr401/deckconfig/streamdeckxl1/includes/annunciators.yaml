@@ -1,121 +1,137 @@
 buttons:
 - index: 0
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: 'ENGINE
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: 'ENGINE
 
-        CAUTION'
-      text-color: black
-      text-font: DIN Condensed Black.otf
-      text-size: 65
-      formula: ${sim/cockpit2/annunciators/oil_pressure_low[0]}
-      invert-color: darkorange
-  activation: none
-  representation: annunciator
+          CAUTION'
+        text-color: black
+        text-font: DIN Condensed Black.otf
+        text-size: 65
+        formula: ${sim/cockpit2/annunciators/oil_pressure_low[0]}
+        invert-color: darkorange
 - index: 1
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: ALT
-      text-color: Black
-      text-font: DIN Condensed Black.otf
-      text-size: 76
-      formula: ${sim/cockpit2/annunciators/generator_off[0]}
-      invert-color: firebrick
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: ALT
+        text-color: Black
+        text-font: DIN Condensed Black.otf
+        text-size: 76
+        formula: ${sim/cockpit2/annunciators/generator_off[0]}
+        invert-color: firebrick
 - index: 2
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: 'FUEL
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: 'FUEL
 
-        LEVEL
+          LEVEL
 
-        LOW'
-      text-color: Black
-      text-font: DIN Condensed Black.otf
-      text-size: 65
-      formula: ${sim/cockpit/warnings/annunciators/fuel_quantity}
-      invert-color: firebrick
-  activation: none
-  representation: annunciator
+          LOW'
+        text-color: Black
+        text-font: DIN Condensed Black.otf
+        text-size: 65
+        formula: ${sim/cockpit/warnings/annunciators/fuel_quantity}
+        invert-color: firebrick
 - index: 3
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: 'FADEC
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: 'FADEC
 
-        A'
-      text-color: Black
-      text-font: DIN Condensed Black.otf
-      text-size: 65
-      formula: ${aerobask/dr401/annun_fadecA}
-      invert-color: firebrick
-  activation: none
-  representation: annunciator
+          A'
+        text-color: Black
+        text-font: DIN Condensed Black.otf
+        text-size: 65
+        formula: ${aerobask/dr401/annun_fadecA}
+        invert-color: firebrick
 - index: 4
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: 'FADEC
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: 'FADEC
 
-        B'
-      text-color: Black
-      text-font: DIN Condensed Black.otf
-      text-size: 65
-      formula: ${aerobask/dr401/annun_fadecA}
-      invert-color: firebrick
-  activation: none
-  representation: annunciator
+          B'
+        text-color: Black
+        text-font: DIN Condensed Black.otf
+        text-size: 65
+        formula: ${aerobask/dr401/annun_fadecA}
+        invert-color: firebrick
 - index: 5
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: 'FLAPS
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: 'FLAPS
 
-        DOWN'
-      text-color: Black
-      text-font: DIN Condensed Black.otf
-      text-size: 65
-      formula: ${aerobask/dr401/annun_flaps}
-      invert-color: darkorange
-  activation: none
-  representation: annunciator
+          DOWN'
+        text-color: Black
+        text-font: DIN Condensed Black.otf
+        text-size: 65
+        formula: ${aerobask/dr401/annun_flaps}
+        invert-color: darkorange
 - index: 6
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: 'PITOT
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: 'PITOT
 
-        HEATING'
-      text-color: Black
-      text-font: DIN Condensed Black.otf
-      text-size: 65
-      formula: ${aerobask/dr401/annun_pitot}
-      invert-color: lime
-  activation: none
-  representation: annunciator
+          HEATING'
+        text-color: Black
+        text-font: DIN Condensed Black.otf
+        text-size: 65
+        formula: ${aerobask/dr401/annun_pitot}
+        invert-color: lime
 - index: 7
-  annunciator:
-    size: full
-    model: A
-    parts:
-    - text: 'COOLANT
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: A
+      parts:
+      - text: 'COOLANT
 
-        LEVEL'
-      text-color: Black
-      text-font: DIN Condensed Black.otf
-      text-size: 65
-      formula: ${sim/cockpit2/annunciators/oil_temperature_high[0]}
-      invert-color: firebrick
-  activation: none
-  representation: annunciator
+          LEVEL'
+        text-color: Black
+        text-font: DIN Condensed Black.otf
+        text-size: 65
+        formula: ${sim/cockpit2/annunciators/oil_temperature_high[0]}
+        invert-color: firebrick

@@ -5,242 +5,268 @@ includes:
 name: switches
 buttons:
 - index: 0
-  label: BATTERY
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/electrical/battery_on[0]} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/electrical/battery_on[0]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/electrical/battery_1_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/electrical/battery_1_toggle
+  representation:
+    type: annunciator
+    label: BATTERY
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/electrical/battery_on[0]} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/battery_on[0]} 1 eq
 - index: 1
-  label: MASTER ENGN
-  label-color: black
-  label-size: 8
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${aerobask/dr401/engine_master} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${aerobask/dr401/engine_master} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: aerobask/dr401/engine_master_to
+  activation:
+    type: push
+    commands:
+      press: aerobask/dr401/engine_master_to
+  representation:
+    type: annunciator
+    label: MASTER ENGN
+    label-color: black
+    label-size: 8
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${aerobask/dr401/engine_master} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${aerobask/dr401/engine_master} 1 eq
 - index: 2
-  label: AVIONICS
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/avionics_power_on} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/systems/avionics_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/systems/avionics_toggle
+  representation:
+    type: annunciator
+    label: AVIONICS
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/avionics_power_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
 - index: 3
-  label: ALTERNATOR
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/electrical/generator_1_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/electrical/generator_1_toggle
+  representation:
+    type: annunciator
+    label: ALTERNATOR
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
 - index: 4
-  label: LAND
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/electrical/landing_lights_on} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/landing_lights_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/lights/landing_lights_toggle
+  representation:
+    type: annunciator
+    label: LAND
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/electrical/landing_lights_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
 - index: 5
-  label: TAXI
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/electrical/taxi_light_on} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/electrical/taxi_light_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/taxi_lights_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/lights/taxi_lights_toggle
+  representation:
+    type: annunciator
+    label: TAXI
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/electrical/taxi_light_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/taxi_light_on} 1 eq
 - index: 6
-  label: FLASH
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/strobe_lights_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/lights/strobe_lights_toggle
+  representation:
+    type: annunciator
+    label: FLASH
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
 - index: 7
-  label: NAV
-  label-color: black
-  label-size: 9
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/nav_lights_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/lights/nav_lights_toggle
+  representation:
+    type: annunciator
+    label: NAV
+    label-color: black
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
 - index: 8
   name: FLAPS
-  label: FLAPS
-  label-size: 9
-  label-color: black
-  stops: 3
-  switch:
-    switch-style: large
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - UP
-    - '25'
-    - '50'
-    tick-space: 24
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: black
-  options: 3way,invert
-  dataref: sim/cockpit2/controls/flap_ratio
-  formula: ${sim/cockpit2/controls/flap_ratio} 2 *
-  activation: sweep
-  positions:
-  - sim/flight_controls/flaps_down
-  - sim/flight_controls/flaps_up
+  activation:
+    type: sweep
+    stops: 3
+    options: 3way,invert
+    dataref: sim/cockpit2/controls/flap_ratio
+    positions:
+    - sim/flight_controls/flaps_down
+    - sim/flight_controls/flaps_up
+  representation:
+    type: switch
+    label: FLAPS
+    label-size: 9
+    label-color: black
+    switch:
+      switch-style: large
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - UP
+      - '25'
+      - '50'
+      tick-space: 24
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: black
+    formula: ${sim/cockpit2/controls/flap_ratio} 2 *
 - index: 9
-  label: PITOT HT
-  label-color: black
-  label-size: 8
-  annunciator:
-    model: B
-    size: medium
-    B0:
-      text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit/switches/pitot_heat_on} 0 eq
-    B1:
-      text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/ice/pitot_heat0_tog
+  activation:
+    type: push
+    commands:
+      press: sim/ice/pitot_heat0_tog
+  representation:
+    type: annunciator
+    label: PITOT HT
+    label-color: black
+    label-size: 8
+    annunciator:
+      model: B
+      size: medium
+      B0:
+        text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/switches/pitot_heat_on} 0 eq
+      B1:
+        text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
 - index: 10
   name: PARKING BRAKE
-  label: PARKING BRAKE
-  label-size: 8
-  label-color: black
-  stops: 2
-  switch:
-    switch-style: rect
-    button-fill-color: black
-    button-underline-width: 4
-    button-underline-color: coral
-    tick-labels:
-    - 'ON'
-    - 'OFF'
-    tick-space: 24
-    tick-color: white
-    tick-label-size: 40
-    tick-label-font: DIN Bold
-    tick-label-color: black
-  formula: ${sim/cockpit2/controls/parking_brake_ratio}
-  activation: sweep
-  positions:
-  - sim/flight_controls/brakes_toggle_regular
-  - sim/flight_controls/brakes_toggle_regular
+  activation:
+    type: sweep
+    stops: 2
+    positions:
+    - sim/flight_controls/brakes_toggle_regular
+    - sim/flight_controls/brakes_toggle_regular
+  representation:
+    type: switch
+    label: PARKING BRAKE
+    label-size: 8
+    label-color: black
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - 'OFF'
+      tick-space: 24
+      tick-color: white
+      tick-label-size: 40
+      tick-label-font: DIN Bold
+      tick-label-color: black
+    formula: ${sim/cockpit2/controls/parking_brake_ratio}
 - index: 11
   name: Switches2
-  page: switches2
-  text: →
-  text-font: fontawesome.otf
-  text-size: 48
-  text-color: Gold
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches2
+  representation:
+    type: text
+    text: →
+    text-font: fontawesome.otf
+    text-size: 48
+    text-color: Gold

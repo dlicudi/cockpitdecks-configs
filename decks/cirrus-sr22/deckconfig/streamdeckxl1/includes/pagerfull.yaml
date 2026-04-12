@@ -1,105 +1,121 @@
 buttons:
 - index: 24
-  page: pfd
-  label: PFD
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 15
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (25, 25, 25)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: pfd
+  representation:
+    type: text
+    label: PFD
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 15
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (25, 25, 25)
 - index: 25
-  page: mfd
-  label: MFD
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 15
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (25, 25, 25)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: mfd
+  representation:
+    type: text
+    label: MFD
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 15
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (25, 25, 25)
 - index: 26
-  page: engine
-  label: ENGINE
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 15
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (25, 25, 25)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: engine
+  representation:
+    type: text
+    label: ENGINE
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 15
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (25, 25, 25)
 - index: 27
-  page: fms
-  label: FMS
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 15
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (25, 25, 25)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: fms
+  representation:
+    type: text
+    label: FMS
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 15
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (25, 25, 25)
 - index: 28
-  page: transponder
-  label: XPDR
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 15
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (25, 25, 25)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: transponder
+  representation:
+    type: text
+    label: XPDR
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 15
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (25, 25, 25)
 - index: 29
-  page: switches
-  label: SWITCHES
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 15
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (25, 25, 25)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches
+  representation:
+    type: text
+    label: SWITCHES
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 15
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (25, 25, 25)
 - index: 30
-  page: weather
-  label: WEATHER
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 15
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (25, 25, 25)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: weather
+  representation:
+    type: text
+    label: WEATHER
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 15
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (25, 25, 25)
 - index: 31
-  page: pedestal
-  label: PEDESTAL
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 15
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (25, 25, 25)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: pedestal
+  representation:
+    type: text
+    label: PEDESTAL
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 15
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (25, 25, 25)

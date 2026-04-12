@@ -6,199 +6,225 @@ includes:
 default-icon-color: Black
 buttons:
 - index: 1
-  decor:
-    type: line
-    code: C
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: line
+      code: C
 - index: 2
-  decor:
-    type: line
-    code: A
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: line
+      code: A
 - index: 3
-  label: ENGINE 2
-  label-size: 10
-  label-color: White
-  decor:
-    type: segment
-    code: '1265'
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    label: ENGINE 2
+    label-size: 10
+    label-color: White
+    decor:
+      type: segment
+      code: '1265'
 - index: 5
-  decor:
-    type: line
-    code: F
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: line
+      code: F
 - index: 6
-  decor:
-    type: line
-    code: F
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: line
+      code: F
 - index: 0
-  label: ENGINE 1
-  label-size: 9
-  label-color: White
-  annunciator:
-    size: medium
-    model: F
-    parts:
-    - color: white
-      text-size: 40
-      formula: '1'
-      text: N1
-    - color: white
-      text-size: 40
-      formula: '1'
-      text: N2
-    - color: lime
-      text-size: 40
-      formula: ${sim/cockpit2/engine/indicators/N2_percent[0]}
-      text: ${formula}
-      text-format: '{0:.0f}%'
-    - color: lime
-      text-size: 40
-      formula: ${sim/cockpit2/engine/indicators/N1_percent[0]}
-      text: ${formula}
-      text-format: '{0:.0f}%'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ENGINE 1
+    label-size: 9
+    label-color: White
+    annunciator:
+      size: medium
+      model: F
+      parts:
+      - color: white
+        text-size: 40
+        formula: '1'
+        text: N1
+      - color: white
+        text-size: 40
+        formula: '1'
+        text: N2
+      - color: lime
+        text-size: 40
+        formula: ${sim/cockpit2/engine/indicators/N2_percent[0]}
+        text: ${formula}
+        text-format: '{0:.0f}%'
+      - color: lime
+        text-size: 40
+        formula: ${sim/cockpit2/engine/indicators/N1_percent[0]}
+        text: ${formula}
+        text-format: '{0:.0f}%'
 - index: 9
-  decor:
-    type: line
-    code: E
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: line
+      code: E
 - index: 10
-  decor:
-    type: line
-    code: D
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: line
+      code: D
 - index: 3
-  label: ENGINE 2
-  label-size: 9
-  label-color: White
-  annunciator:
-    size: medium
-    model: F
-    parts:
-    - color: white
-      text-size: 40
-      formula: '1'
-      text: N1
-    - color: white
-      text-size: 40
-      formula: '1'
-      text: N2
-    - color: lime
-      text-size: 40
-      formula: ${sim/cockpit2/engine/indicators/N2_percent[1]}
-      text: ${formula}
-      text-format: '{0:.0f}%'
-    - color: lime
-      text-size: 40
-      formula: ${sim/cockpit2/engine/indicators/N1_percent[1]}
-      text: ${formula}
-      text-format: '{0:.0f}%'
-  activation: none
-  representation: annunciator
-  commands:
-    press: XCrafts/Starter_Eng_2_up_CW
+  activation:
+    type: none
+    commands:
+      press: XCrafts/Starter_Eng_2_up_CW
+  representation:
+    type: annunciator
+    label: ENGINE 2
+    label-size: 9
+    label-color: White
+    annunciator:
+      size: medium
+      model: F
+      parts:
+      - color: white
+        text-size: 40
+        formula: '1'
+        text: N1
+      - color: white
+        text-size: 40
+        formula: '1'
+        text: N2
+      - color: lime
+        text-size: 40
+        formula: ${sim/cockpit2/engine/indicators/N2_percent[1]}
+        text: ${formula}
+        text-format: '{0:.0f}%'
+      - color: lime
+        text-size: 40
+        formula: ${sim/cockpit2/engine/indicators/N1_percent[1]}
+        text: ${formula}
+        text-format: '{0:.0f}%'
 - index: 4
-  label: STOP
-  label-color: White
-  label-size: 9
-  text-bg-color: Black
-  multi-texts:
-  - text: STOPPED
-    text-size: 12
-    text-color: Green
-  - text: 'PUSH
+  activation:
+    type: push
+    commands:
+      press: XCrafts/Starter_Eng_1_down_CCW
+  representation:
+    type: multi-texts
+    label: STOP
+    label-color: White
+    label-size: 9
+    text-bg-color: Black
+    multi-texts:
+    - text: STOPPED
+      text-size: 12
+      text-color: Green
+    - text: 'PUSH
 
-      TO STOP'
-    text-size: 12
-    text-color: Red
-  - text: STARTING
-    text-size: 12
-    text-color: Gold
-  formula: ${XCrafts/ERJ/engine1_starter_knob}
-  activation: push
-  representation: multi-texts
-  commands:
-    press: XCrafts/Starter_Eng_1_down_CCW
+        TO STOP'
+      text-size: 12
+      text-color: Red
+    - text: STARTING
+      text-size: 12
+      text-color: Gold
+    formula: ${XCrafts/ERJ/engine1_starter_knob}
 - index: 7
-  label: STOP
-  label-color: White
-  label-size: 9
-  text-bg-color: Black
-  multi-texts:
-  - text: STOPPED
-    text-size: 12
-    text-color: Green
-  - text: 'PUSH
+  activation:
+    type: push
+    commands:
+      press: XCrafts/Starter_Eng_2_down_CCW
+  representation:
+    type: multi-texts
+    label: STOP
+    label-color: White
+    label-size: 9
+    text-bg-color: Black
+    multi-texts:
+    - text: STOPPED
+      text-size: 12
+      text-color: Green
+    - text: 'PUSH
 
-      TO STOP'
-    text-size: 12
-    text-color: Red
-  - text: STARTING
-    text-size: 12
-    text-color: Gold
-  formula: ${XCrafts/ERJ/engine2_starter_knob}
-  activation: push
-  representation: multi-texts
-  commands:
-    press: XCrafts/Starter_Eng_2_down_CCW
+        TO STOP'
+      text-size: 12
+      text-color: Red
+    - text: STARTING
+      text-size: 12
+      text-color: Gold
+    formula: ${XCrafts/ERJ/engine2_starter_knob}
 - index: 8
+  activation:
+    type: long-press
+    commands:
+      press: XCrafts/Starter_Eng_1_up_CW
+  representation:
+    type: multi-texts
+    label: START
+    label-color: White
+    label-size: 9
+    text-bg-color: Black
+    multi-texts:
+    - text: 'PUSH
+
+        TO RUN'
+      text-size: 12
+      text-color: Green
+    - text: 'PUSH
+
+        TO START'
+      text-size: 12
+      text-color: Green
+    - text: STARTING
+      text-size: 12
+      text-color: Gold
+    formula: ${XCrafts/ERJ/engine1_starter_knob}
   vibrate: LONG
-  label: START
-  label-color: White
-  label-size: 9
-  text-bg-color: Black
-  multi-texts:
-  - text: 'PUSH
-
-      TO RUN'
-    text-size: 12
-    text-color: Green
-  - text: 'PUSH
-
-      TO START'
-    text-size: 12
-    text-color: Green
-  - text: STARTING
-    text-size: 12
-    text-color: Gold
-  formula: ${XCrafts/ERJ/engine1_starter_knob}
-  activation: long-press
-  representation: multi-texts
-  commands:
-    press: XCrafts/Starter_Eng_1_up_CW
 - index: 11
+  activation:
+    type: long-press
+    commands:
+      press: XCrafts/Starter_Eng_2_up_CW
+  representation:
+    type: multi-texts
+    label: START
+    label-color: White
+    label-size: 9
+    text-bg-color: Black
+    multi-texts:
+    - text: 'PUSH
+
+        TO RUN'
+      text-size: 12
+      text-color: Green
+    - text: 'PUSH
+
+        TO START'
+      text-size: 12
+      text-color: Green
+    - text: STARTING
+      text-size: 12
+      text-color: Gold
+    formula: ${XCrafts/ERJ/engine2_starter_knob}
   vibrate: LONG
-  label: START
-  label-color: White
-  label-size: 9
-  text-bg-color: Black
-  multi-texts:
-  - text: 'PUSH
-
-      TO RUN'
-    text-size: 12
-    text-color: Green
-  - text: 'PUSH
-
-      TO START'
-    text-size: 12
-    text-color: Green
-  - text: STARTING
-    text-size: 12
-    text-color: Gold
-  formula: ${XCrafts/ERJ/engine2_starter_knob}
-  activation: long-press
-  representation: multi-texts
-  commands:
-    press: XCrafts/Starter_Eng_2_up_CW

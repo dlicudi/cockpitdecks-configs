@@ -1,31 +1,34 @@
 buttons:
 - index: left
   name: left_screen
-  side:
-    icon-color: Black
-    labels:
-    - label: ''
-      label-size: 14
-      label-font: D-DINCondensed.otf
-      label-color: Gold
-      text-size: 16
-      text-font: D-DINCondensed.otf
-      text-color: White
-      text: ''
-    - label: ''
-      label-size: 14
-      label-font: D-DINCondensed.otf
-      label-color: Gold
-      text-size: 16
-      text-font: D-DINCondensed.otf
-      text-color: White
-      text: ''
-    - label: NAV
-      label-size: 14
-      label-font: D-DINCondensed.otf
-      label-color: Gold
-      text-size: 16
-      text-font: D-DINCondensed.otf
-      text-color: White
-      text: ''
-  activation: none
+  activation:
+    type: none
+  representation:
+    type: side-display
+    side:
+      icon-color: Black
+      labels:
+      - label: ''
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DINCondensed.otf
+        text-color: White
+        text: ''
+      - label: ''
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DINCondensed.otf
+        text-color: White
+        text: ''
+      - label: NAV
+        label-size: 14
+        label-font: D-DINCondensed.otf
+        label-color: Gold
+        text-size: 16
+        text-font: D-DINCondensed.otf
+        text-color: White
+        text: ''

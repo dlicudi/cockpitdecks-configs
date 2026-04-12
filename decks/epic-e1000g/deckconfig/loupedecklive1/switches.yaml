@@ -6,67 +6,77 @@ name: switches
 default-text-size: 56
 buttons:
 - index: 0
-  page: switches_prestart
-  label: PRE-START
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches_prestart
+  representation:
+    type: text
+    label: PRE-START
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 1
-  page: switches_pretaxi
-  label: PRE-TAXI
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches_pretaxi
+  representation:
+    type: text
+    label: PRE-TAXI
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 2
-  page: switches_systems
-  label: SYSTEMS
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches_systems
+  representation:
+    type: text
+    label: SYSTEMS
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 3
-  page: switches_lights
-  label: LIGHTS
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches_lights
+  representation:
+    type: text
+    label: LIGHTS
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
 - index: 4
-  page: switches_ice
-  label: ICE
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches_ice
+  representation:
+    type: text
+    label: ICE
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

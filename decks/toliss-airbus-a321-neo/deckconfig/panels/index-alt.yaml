@@ -6,133 +6,163 @@ name: index-alt
 buttons:
 - index: 0
   name: ovrhdfire
-  page: ovrhdfire
-  text:
-    text: FIRE
-    text-position: cm
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: ovrhdfire
+  representation:
+    type: text
+    text:
+      text: FIRE
+      text-position: cm
 - index: 1
   name: ovrhdhyd
-  page: ovrhdhyd
-  text:
-    text: HYD
-    text-position: cm
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: ovrhdhyd
+  representation:
+    type: text
+    text:
+      text: HYD
+      text-position: cm
 - index: 2
   name: ovrhdfuel
-  page: ovrhdfuel
-  text:
-    text: FUEL
-    text-position: cm
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: ovrhdfuel
+  representation:
+    type: text
+    text:
+      text: FUEL
+      text-position: cm
 - index: 3
   name: ovrhdelec
-  page: ovrhdelec
-  text:
-    text: ELEC
-    text-position: cm
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: ovrhdelec
+  representation:
+    type: text
+    text:
+      text: ELEC
+      text-position: cm
 - index: 4
   name: ovrhdaircond
-  page: ovrhdaircond
-  text:
-    text: 'AIR
+  activation:
+    type: page
+    page: ovrhdaircond
+  representation:
+    type: text
+    text:
+      text: 'AIR
 
-      COND'
-    text-position: cm
-  activation: page
-  representation: text
+        COND'
+      text-position: cm
 - index: 5
   name: ovrhdextlights
-  page: index
-  text:
-    text: 'EXT.
+  activation:
+    type: page
+    page: index
+  representation:
+    type: text
+    text:
+      text: 'EXT.
 
-      LIGHTS'
-    text-position: cm
-  activation: page
-  representation: text
+        LIGHTS'
+      text-position: cm
 - index: 6
   name: intlights
-  page: intlights
-  text:
-    text: 'CALL &
+  activation:
+    type: page
+    page: intlights
+  representation:
+    type: text
+    text:
+      text: 'CALL &
 
-      INT.
+        INT.
 
-      LIGHTS'
-    text-position: cm
-  activation: page
-  representation: text
+        LIGHTS'
+      text-position: cm
 - index: 8
   name: adirs
-  page: adirs
-  text:
-    text: ADIRS
-    text-position: cm
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: adirs
+  representation:
+    type: text
+    text:
+      text: ADIRS
+      text-position: cm
 - index: 9
   name: other
-  page: other
-  text:
-    text: OTHER
-    text-position: cm
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: other
+  representation:
+    type: text
+    text:
+      text: OTHER
+      text-position: cm
 - index: 13
   name: XPNDR
-  page: XPNDR
-  text:
-    text: XPNDR
-    text-position: cm
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: XPNDR
+  representation:
+    type: text
+    text:
+      text: XPNDR
+      text-position: cm
 - index: 14
   name: radio
-  page: radio
-  text:
-    text: RADIO
-    text-position: cm
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: radio
+  representation:
+    type: text
+    text:
+      text: RADIO
+      text-position: cm
 - index: 21
   name: AIRCRAFT
-  label: Aircraft
+  activation:
+    type: none
+    set-dataref: data:_aircraft_icao
+  representation:
+    type: text
+    label: Aircraft
+    text:
+      text: '${sim/aircraft/view/acf_ICAO}
+
+        ${sim/aircraft/view/acf_tailnum}'
+      text-font: B612-Bold
+      text-size: 18
   string-datarefs:
   - sim/aircraft/view/acf_ICAO
   - sim/aircraft/view/acf_tailnum
-  set-dataref: data:_aircraft_icao
-  text:
-    text: '${sim/aircraft/view/acf_ICAO}
-
-      ${sim/aircraft/view/acf_tailnum}'
-    text-font: B612-Bold
-    text-size: 18
-  activation: none
-  representation: text
 - index: 29
   name: xplane
-  page: xplane
-  icon: XPLANE_DARK
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: xplane
+  representation:
+    type: icon
+    icon: XPLANE_DARK
 - index: 30
   name: ISCS
-  page: toliss
-  icon: TOLISS_BLUE
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: toliss
+  representation:
+    type: icon
+    icon: TOLISS_BLUE
 - index: 31
   name: Index
-  page: index
-  icon: TOLISS-A21N
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: index
+  representation:
+    type: icon
+    icon: TOLISS-A21N
 default-text-size: 20
 includes:
 - popups

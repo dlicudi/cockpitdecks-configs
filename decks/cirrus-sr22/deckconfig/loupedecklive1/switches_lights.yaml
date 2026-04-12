@@ -5,188 +5,212 @@ includes:
 name: switches_lights
 buttons:
 - index: 0
+  activation:
+    type: push
+    commands:
+      press: sim/lights/nav_lights_toggle
+  representation:
+    type: annunciator
+    label: NAV
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
   vibrate: SHORT
-  label: NAV
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/nav_lights_toggle
 - index: 1
+  activation:
+    type: push
+    commands:
+      press: sim/lights/strobe_lights_toggle
+  representation:
+    type: annunciator
+    label: STROBE
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
   vibrate: SHORT
-  label: STROBE
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/strobe_lights_toggle
 - index: 2
+  activation:
+    type: push
+    commands:
+      press: sim/lights/landing_01_light_tog
+  representation:
+    type: annunciator
+    label: LAND
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq
   vibrate: SHORT
-  label: LAND
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/landing_01_light_tog
 - index: 3
+  activation:
+    type: push
+    commands:
+      press: sim/lights/generic_13_light_tog
+  representation:
+    type: annunciator
+    label: ICE
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[12]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[12]} 1 eq
   vibrate: SHORT
-  label: ICE
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/generic_lights_switch[12]} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/generic_lights_switch[12]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/generic_13_light_tog
 - index: 4
+  activation:
+    type: push
+    commands:
+      press: sim/lights/generic_05_light_tog
+  representation:
+    type: annunciator
+    label: DOME
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[4]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[4]} 1 eq
   vibrate: SHORT
-  label: DOME
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/generic_lights_switch[4]} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/generic_lights_switch[4]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/generic_05_light_tog
 - index: 5
+  activation:
+    type: push
+    commands:
+      press: sim/lights/generic_07_light_tog
+  representation:
+    type: annunciator
+    label: FLOOD
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[6]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[6]} 1 eq
   vibrate: SHORT
-  label: FLOOD
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/generic_lights_switch[6]} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/generic_lights_switch[6]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/generic_07_light_tog
 - index: 6
+  activation:
+    type: push
+    commands:
+      press: sim/lights/generic_02_light_tog
+  representation:
+    type: annunciator
+    label: READ 1
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[1]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[1]} 1 eq
   vibrate: SHORT
-  label: READ 1
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/generic_lights_switch[1]} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/generic_lights_switch[1]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/generic_02_light_tog
 - index: 7
+  activation:
+    type: push
+    commands:
+      press: sim/lights/generic_11_light_tog
+  representation:
+    type: annunciator
+    label: EDGE
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[10]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[10]} 1 eq
   vibrate: SHORT
-  label: EDGE
-  annunciator:
-    model: B
-    size: medium
-    parts:
-    - text: 'OFF'
-      color: darkorange
-      formula: ${sim/cockpit2/switches/generic_lights_switch[10]} 0 eq
-    - text: 'ON'
-      color: deepskyblue
-      framed: true
-      formula: ${sim/cockpit2/switches/generic_lights_switch[10]} 1 eq
-  activation: push
-  representation: annunciator
-  commands:
-    press: sim/lights/generic_11_light_tog
 - index: 8
-  page: switches_master
+  activation:
+    type: page
+    page: switches_master
+  representation:
+    type: text
+    text: MASTER
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
   vibrate: SHORT
-  text: MASTER
-  text-color: khaki
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 20)
-  activation: page
-  representation: text
 - index: 9
-  text: LIGHTS
-  text-color: Gold
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (40, 35, 0)
-  activation: none
-  representation: text
+  activation:
+    type: none
+  representation:
+    type: text
+    text: LIGHTS
+    text-color: Gold
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (40, 35, 0)
 - index: 10
-  page: switches_icing
+  activation:
+    type: page
+    page: switches_icing
+  representation:
+    type: text
+    text: ICE
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
   vibrate: SHORT
-  text: ICE
-  text-color: khaki
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 20)
-  activation: page
-  representation: text
 - index: 11
-  page: switches_ground
+  activation:
+    type: page
+    page: switches_ground
+  representation:
+    type: text
+    text: GROUND
+    text-color: khaki
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (20, 20, 20)
   vibrate: SHORT
-  text: GROUND
-  text-color: khaki
-  text-size: 18
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: (20, 20, 20)
-  activation: page
-  representation: text

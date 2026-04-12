@@ -4,346 +4,394 @@ includes:
 name: fcu
 buttons:
 - index: 0
-  annunciator:
-    size: full
-    model: E
-    parts:
-    - color: lime
-      text-size: 60
-      formula: ${laminar/n844x/autopilot_knob_mode} 0 eq
-      text: TRK
-    - led: dot
-      color: lime
-      formula: ${laminar/n844x/autopilot_knob_mode} 0 eq
-    - color: lime
-      text-size: 80
-      formula: '1'
-      text: ${sim/cockpit/autopilot/heading_mag}
-      text-format: '{0:03.0f}'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: E
+      parts:
+      - color: lime
+        text-size: 60
+        formula: ${laminar/n844x/autopilot_knob_mode} 0 eq
+        text: TRK
+      - led: dot
+        color: lime
+        formula: ${laminar/n844x/autopilot_knob_mode} 0 eq
+      - color: lime
+        text-size: 80
+        formula: '1'
+        text: ${sim/cockpit/autopilot/heading_mag}
+        text-format: '{0:03.0f}'
 - index: 1
-  annunciator:
-    size: full
-    model: E
-    parts:
-    - color: lime
-      text-size: 60
-      formula: ${laminar/n844x/autopilot_knob_mode} 1 eq
-      text: SEL
-    - led: dot
-      color: lime
-      formula: ${laminar/n844x/autopilot_knob_mode} 1 eq
-    - color: lime
-      text-size: 60
-      formula: '1'
-      text: ${sim/cockpit2/autopilot/altitude_dial_ft}
-      text-format: '{0:.0f}'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: E
+      parts:
+      - color: lime
+        text-size: 60
+        formula: ${laminar/n844x/autopilot_knob_mode} 1 eq
+        text: SEL
+      - led: dot
+        color: lime
+        formula: ${laminar/n844x/autopilot_knob_mode} 1 eq
+      - color: lime
+        text-size: 60
+        formula: '1'
+        text: ${sim/cockpit2/autopilot/altitude_dial_ft}
+        text-format: '{0:.0f}'
 - index: 2
-  annunciator:
-    size: full
-    model: E
-    parts:
-    - color: lime
-      text-size: 60
-      formula: ${laminar/n844x/autopilot_knob_mode} 2 eq
-      text: OBS
-    - led: dot
-      color: lime
-      formula: ${laminar/n844x/autopilot_knob_mode} 2 eq
-    - color: lime
-      text-size: 60
-      formula: '1'
-      text: ${sim/cockpit2/radios/actuators/hsi_obs_deg_mag_pilot}
-      text-format: '{0:03.0f}'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: E
+      parts:
+      - color: lime
+        text-size: 60
+        formula: ${laminar/n844x/autopilot_knob_mode} 2 eq
+        text: OBS
+      - led: dot
+        color: lime
+        formula: ${laminar/n844x/autopilot_knob_mode} 2 eq
+      - color: lime
+        text-size: 60
+        formula: '1'
+        text: ${sim/cockpit2/radios/actuators/hsi_obs_deg_mag_pilot}
+        text-format: '{0:03.0f}'
 - index: 3
-  options: auto-repeat=1/0.05
-  multi-texts:
-  - text: 'TRK
+  activation:
+    type: push
+    options: auto-repeat=1/0.05
+    commands:
+      press: laminar/n844x/ap_knob_right
+  representation:
+    type: multi-texts
+    multi-texts:
+    - text: 'TRK
 
-      UP'
-    text-color: white
-    text-size: 50
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: black
-  - text: 'SEL
+        UP'
+      text-color: white
+      text-size: 50
+      text-font: D-DINCondensed.otf
+      text-position: cm
+      text-bg-color: black
+    - text: 'SEL
 
-      UP'
-    text-color: white
-    text-size: 50
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: black
-  - text: 'OBS
+        UP'
+      text-color: white
+      text-size: 50
+      text-font: D-DINCondensed.otf
+      text-position: cm
+      text-bg-color: black
+    - text: 'OBS
 
-      UP'
-    text-color: white
-    text-size: 50
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: black
-  formula: ${laminar/n844x/autopilot_knob_mode}
-  activation: push
-  representation: multi-texts
-  commands:
-    press: laminar/n844x/ap_knob_right
+        UP'
+      text-color: white
+      text-size: 50
+      text-font: D-DINCondensed.otf
+      text-position: cm
+      text-bg-color: black
+    formula: ${laminar/n844x/autopilot_knob_mode}
 - index: 4
-  text: TRK
-  text-color: white
-  text-size: 40
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: black
-  activation: push
-  representation: text
-  commands:
-    press: sim/autopilot/track
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/track
+  representation:
+    type: text
+    text: TRK
+    text-color: white
+    text-size: 40
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: black
 - index: 5
   name: NAV
-  text-bg-color: black
-  multi-texts:
-  - text: NAV
-    text-color: White
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  - text: NAV
-    text-color: White
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  - text: NAV
-    text-color: Lime
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  formula: ${sim/cockpit2/autopilot/nav_status}
-  activation: push
-  representation: multi-texts
-  commands:
-    press: laminar/n844x/ap_button_nav
+  activation:
+    type: push
+    commands:
+      press: laminar/n844x/ap_button_nav
+  representation:
+    type: multi-texts
+    text-bg-color: black
+    multi-texts:
+    - text: NAV
+      text-color: White
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    - text: NAV
+      text-color: White
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    - text: NAV
+      text-color: Lime
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    formula: ${sim/cockpit2/autopilot/nav_status}
 - index: 6
-  text: REV
-  text-color: white
-  text-size: 40
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: black
-  activation: push
-  representation: text
-  commands:
-    press: sim/autopilot/back_course
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/back_course
+  representation:
+    type: text
+    text: REV
+    text-color: white
+    text-size: 40
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: black
 - index: 7
-  text: DN
-  text-color: white
-  text-size: 40
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: black
-  options: auto-repeat=1/0.05
-  activation: push
-  representation: text
-  commands:
-    press: sim/autopilot/nose_down
+  activation:
+    type: push
+    options: auto-repeat=1/0.05
+    commands:
+      press: sim/autopilot/nose_down
+  representation:
+    type: text
+    text: DN
+    text-color: white
+    text-size: 40
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: black
 - index: 8
-  annunciator:
-    size: full
-    model: B
-    parts:
-    - color: lime
-      text-size: 60
-      formula: ${sim/cockpit2/autopilot/gpss_status}
-      text: +
-    - color: lime
-      text-size: 60
-      formula: ${sim/cockpit2/autopilot/gpss_status}
-      text: GPSS
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: B
+      parts:
+      - color: lime
+        text-size: 60
+        formula: ${sim/cockpit2/autopilot/gpss_status}
+        text: +
+      - color: lime
+        text-size: 60
+        formula: ${sim/cockpit2/autopilot/gpss_status}
+        text: GPSS
 - index: 9
-  annunciator:
-    size: full
-    model: E
-    parts:
-    - color: lime
-      text-size: 60
-      formula: '1'
-      text: SVS
-    - led: dot
-      color: lime
-      formula: ${sim/cockpit2/autopilot/vvi_status}
-    - color: lime
-      text-size: 60
-      formula: '1'
-      text: ${sim/cockpit/autopilot/vertical_velocity}
-      text-format: '{0:.0f}'
-  activation: none
-  representation: annunciator
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    annunciator:
+      size: full
+      model: E
+      parts:
+      - color: lime
+        text-size: 60
+        formula: '1'
+        text: SVS
+      - led: dot
+        color: lime
+        formula: ${sim/cockpit2/autopilot/vvi_status}
+      - color: lime
+        text-size: 60
+        formula: '1'
+        text: ${sim/cockpit/autopilot/vertical_velocity}
+        text-format: '{0:.0f}'
 - index: 10
-  icon: INOP.png
-  activation: none
-  representation: icon
+  activation:
+    type: none
+  representation:
+    type: icon
+    icon: INOP.png
 - index: 11
-  icon: INOP.png
-  activation: none
-  representation: icon
+  activation:
+    type: none
+  representation:
+    type: icon
+    icon: INOP.png
 - index: 12
-  text: ALT
-  text-color: white
-  text-size: 40
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: black
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/altitude_hold
+  representation:
+    type: text
+    text: ALT
+    text-color: white
+    text-size: 40
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: black
   vibrate: SHORT
-  activation: push
-  representation: text
-  commands:
-    press: sim/autopilot/altitude_hold
 - index: 13
   name: SEL
-  text-bg-color: black
-  multi-texts:
-  - text: SEL
-    text-color: White
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  - text: SEL
-    text-color: White
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  - text: SEL
-    text-color: Lime
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  formula: ${sim/cockpit2/autopilot/vvi_status}
-  activation: push
-  representation: multi-texts
-  commands:
-    press: sim/autopilot/alt_vs
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/alt_vs
+  representation:
+    type: multi-texts
+    text-bg-color: black
+    multi-texts:
+    - text: SEL
+      text-color: White
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    - text: SEL
+      text-color: White
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    - text: SEL
+      text-color: Lime
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    formula: ${sim/cockpit2/autopilot/vvi_status}
 - index: 14
-  text: VNAV
-  text-color: white
-  text-size: 40
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: black
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/vnav
+  representation:
+    type: text
+    text: VNAV
+    text-color: white
+    text-size: 40
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: black
   vibrate: SHORT
-  activation: push
-  representation: text
-  commands:
-    press: sim/autopilot/vnav
 - index: 15
-  icon: INOP.png
-  activation: none
-  representation: icon
+  activation:
+    type: none
+  representation:
+    type: icon
+    icon: INOP.png
 - index: 16
-  icon: INOP.png
-  activation: none
-  representation: icon
+  activation:
+    type: none
+  representation:
+    type: icon
+    icon: INOP.png
 - index: 17
-  icon: INOP.png
-  activation: none
-  representation: icon
+  activation:
+    type: none
+  representation:
+    type: icon
+    icon: INOP.png
 - index: 18
-  icon: INOP.png
-  activation: none
-  representation: icon
+  activation:
+    type: none
+  representation:
+    type: icon
+    icon: INOP.png
 - index: 19
-  options: auto-repeat=1/0.05
-  multi-texts:
-  - text: 'TRK
+  activation:
+    type: push
+    options: auto-repeat=1/0.05
+    commands:
+      press: laminar/n844x/ap_knob_left
+  representation:
+    type: multi-texts
+    multi-texts:
+    - text: 'TRK
 
-      DN'
-    text-color: white
-    text-size: 50
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: black
-  - text: 'SEL
+        DN'
+      text-color: white
+      text-size: 50
+      text-font: D-DINCondensed.otf
+      text-position: cm
+      text-bg-color: black
+    - text: 'SEL
 
-      DN'
-    text-color: white
-    text-size: 50
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: black
-  - text: 'OBS
+        DN'
+      text-color: white
+      text-size: 50
+      text-font: D-DINCondensed.otf
+      text-position: cm
+      text-bg-color: black
+    - text: 'OBS
 
-      DN'
-    text-color: white
-    text-size: 50
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: black
-  formula: ${laminar/n844x/autopilot_knob_mode}
-  activation: push
-  representation: multi-texts
-  commands:
-    press: laminar/n844x/ap_knob_left
+        DN'
+      text-color: white
+      text-size: 50
+      text-font: D-DINCondensed.otf
+      text-position: cm
+      text-bg-color: black
+    formula: ${laminar/n844x/autopilot_knob_mode}
 - index: 20
   name: AP
-  text-bg-color: black
-  multi-texts:
-  - text: AP
-    text-color: White
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  - text: AP
-    text-color: White
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  - text: AP
-    text-color: Lime
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  formula: ${sim/cockpit2/autopilot/servos_on}
-  activation: push
-  representation: multi-texts
-  commands:
-    press: sim/autopilot/servos_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/servos_toggle
+  representation:
+    type: multi-texts
+    text-bg-color: black
+    multi-texts:
+    - text: AP
+      text-color: White
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    - text: AP
+      text-color: White
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    - text: AP
+      text-color: Lime
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    formula: ${sim/cockpit2/autopilot/servos_on}
 - index: 21
   name: GPSS
-  text-bg-color: black
-  multi-texts:
-  - text: GPSS
-    text-color: White
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  - text: GPSS
-    text-color: White
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  - text: GPSS
-    text-color: Lime
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  formula: ${sim/cockpit2/autopilot/gpss_status}
-  activation: push
-  representation: multi-texts
-  commands:
-    press: sim/autopilot/gpss
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/gpss
+  representation:
+    type: multi-texts
+    text-bg-color: black
+    multi-texts:
+    - text: GPSS
+      text-color: White
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    - text: GPSS
+      text-color: White
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    - text: GPSS
+      text-color: Lime
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    formula: ${sim/cockpit2/autopilot/gpss_status}
 - index: 22
-  text: EXT
-  text-color: white
-  text-size: 40
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: black
-  activation: push
-  representation: text
-  commands:
-    press: sim/autopilot/heading
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/heading
+  representation:
+    type: text
+    text: EXT
+    text-color: white
+    text-size: 40
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: black
 - index: 23
-  text: UP
-  text-color: white
-  text-size: 40
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: black
-  options: auto-repeat=1/0.05
-  activation: push
-  representation: text
-  commands:
-    press: sim/autopilot/nose_up
+  activation:
+    type: push
+    options: auto-repeat=1/0.05
+    commands:
+      press: sim/autopilot/nose_up
+  representation:
+    type: text
+    text: UP
+    text-color: white
+    text-size: 40
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: black

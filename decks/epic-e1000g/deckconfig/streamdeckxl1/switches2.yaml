@@ -5,204 +5,226 @@ cockpit-color: '#3a3a3a'
 buttons:
 - index: 0
   name: STROBE
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: STROBE
-      color: white
-      formula: 1
-    - text: true
-      color: cyan
-      framed: false
-      formula: ${sim/cockpit/electrical/strobe_lights_on} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/lights/strobe_lights_toggle
-  - sim/lights/strobe_lights_toggle
+  activation:
+    type: sweep
+    positions:
+    - sim/lights/strobe_lights_toggle
+    - sim/lights/strobe_lights_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: STROBE
+        color: white
+        formula: 1
+      - text: true
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit/electrical/strobe_lights_on} 1 eq
 - index: 2
   name: NAV
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: NAV
-      color: white
-      formula: 1
-    - text: true
-      color: cyan
-      framed: false
-      formula: ${sim/cockpit/electrical/nav_lights_on} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/lights/nav_lights_toggle
-  - sim/lights/nav_lights_toggle
+  activation:
+    type: sweep
+    positions:
+    - sim/lights/nav_lights_toggle
+    - sim/lights/nav_lights_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: NAV
+        color: white
+        formula: 1
+      - text: true
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit/electrical/nav_lights_on} 1 eq
 - index: 6
   name: ICE LT
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: ICE
-      color: white
-      formula: 1
-    - text: true
-      color: cyan
-      framed: false
-      formula: ${sim/cockpit2/switches/spot_light_on} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/lights/spot_lights_toggle
-  - sim/lights/spot_lights_toggle
+  activation:
+    type: sweep
+    positions:
+    - sim/lights/spot_lights_toggle
+    - sim/lights/spot_lights_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: ICE
+        color: white
+        formula: 1
+      - text: true
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/switches/spot_light_on} 1 eq
 - index: 8
   name: TAXI
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: TAXI
-      color: white
-      formula: 1
-    - text: true
-      color: cyan
-      framed: false
-      formula: ${sim/cockpit2/switches/taxi_light_on} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/lights/taxi_lights_toggle
-  - sim/lights/taxi_lights_toggle
+  activation:
+    type: sweep
+    positions:
+    - sim/lights/taxi_lights_toggle
+    - sim/lights/taxi_lights_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: TAXI
+        color: white
+        formula: 1
+      - text: true
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/switches/taxi_light_on} 1 eq
 - index: 12
   name: LANDING
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: LAND
-      color: white
-      formula: 1
-    - text: true
-      color: cyan
-      framed: false
-      formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/lights/landing_lights_toggle
-  - sim/lights/landing_lights_toggle
+  activation:
+    type: sweep
+    positions:
+    - sim/lights/landing_lights_toggle
+    - sim/lights/landing_lights_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: LAND
+        color: white
+        formula: 1
+      - text: true
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
 - index: 16
   name: DE-ICE
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'DE-ICE
+  activation:
+    type: sweep
+    positions:
+    - aerobask/deice_boots_toggle
+    - aerobask/deice_boots_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'DE-ICE
 
-        BOOTS'
-      color: white
-      formula: 1
-    - text: true
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_deice_boots} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/deice_boots_toggle
-  - aerobask/deice_boots_toggle
+          BOOTS'
+        color: white
+        formula: 1
+      - text: true
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_deice_boots} 1 eq
 - index: 17
   name: PROP HEAT
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'PROP
+  activation:
+    type: sweep
+    positions:
+    - sim/ice/prop_heat_tog
+    - sim/ice/prop_heat_tog
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'PROP
 
-        HEAT'
-      color: white
-      formula: 1
-    - text: true
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_prop_heat} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/ice/prop_heat_tog
-  - sim/ice/prop_heat_tog
+          HEAT'
+        color: white
+        formula: 1
+      - text: true
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_prop_heat} 1 eq
 - index: 18
   name: WNDSH HEAT
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'WNDSH
+  activation:
+    type: sweep
+    positions:
+    - sim/ice/window_heat_tog
+    - sim/ice/window_heat_tog
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'WNDSH
 
-        HEAT'
-      color: white
-      formula: 1
-    - text: true
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_windsh_heat} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/ice/window_heat_tog
-  - sim/ice/window_heat_tog
+          HEAT'
+        color: white
+        formula: 1
+      - text: true
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_windsh_heat} 1 eq
 - index: 19
   name: INERT SEP
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'INERT
+  activation:
+    type: sweep
+    positions:
+    - aerobask/ins_sep_tog
+    - aerobask/ins_sep_tog
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'INERT
 
-        SEP'
-      color: white
-      formula: 1
-    - text: true
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_inert_sep} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/ins_sep_tog
-  - aerobask/ins_sep_tog
+          SEP'
+        color: white
+        formula: 1
+      - text: true
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_inert_sep} 1 eq
 - index: 20
   name: PITOT STALL HT
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'PITOT
+  activation:
+    type: sweep
+    positions:
+    - sim/ice/pitot_heat0_tog
+    - sim/ice/pitot_heat0_tog
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'PITOT
 
-        STALL HT'
-      color: white
-      formula: 1
-    - text: true
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_pitot_stall} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/ice/pitot_heat0_tog
-  - sim/ice/pitot_heat0_tog
+          STALL HT'
+        color: white
+        formula: 1
+      - text: true
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_pitot_stall} 1 eq
 - index: 31
   name: SWITCHES
-  page: switches
-  label: SWITCHES
-  label-color: Gold
-  label-size: 11
-  text: <
-  text-size: 48
-  text-color: Gold
-  text-position: cm
-  text-bg-color: '#3a3a3a'
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches
+  representation:
+    type: text
+    label: SWITCHES
+    label-color: Gold
+    label-size: 11
+    text: <
+    text-size: 48
+    text-color: Gold
+    text-position: cm
+    text-bg-color: '#3a3a3a'

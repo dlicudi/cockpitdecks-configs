@@ -5,40 +5,46 @@ includes:
 name: switches2
 buttons:
 - index: 0
-  page: overhead_pressurization
-  label: PRESSURIZATION
-  label-color: Gold
+  activation:
+    type: page
+    page: overhead_pressurization
+  representation:
+    type: text
+    label: PRESSURIZATION
+    label-color: Gold
+    label-size: 8
+    text: 🛫🧻
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   label-bg-color: Black
-  label-size: 8
-  text: 🛫🧻
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 1
-  page: overhead_windshield_wiper
-  label: WINDSHIELD WIPER
-  label-color: Gold
+  activation:
+    type: page
+    page: overhead_windshield_wiper
+  representation:
+    type: text
+    label: WINDSHIELD WIPER
+    label-color: Gold
+    label-size: 8
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   label-bg-color: Black
-  label-size: 8
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 11
-  page: switches
-  text: →
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches
+  representation:
+    type: text
+    text: →
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

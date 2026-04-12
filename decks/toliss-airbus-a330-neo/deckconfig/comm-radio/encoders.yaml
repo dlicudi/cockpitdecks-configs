@@ -1,54 +1,68 @@
 aircraft: ToLiss A339
-description: Encoders for X-Touch mini (common to page A and B, included in these
-  pages)
+description: Encoders for X-Touch mini (common to page A and B, included in these pages)
 version: 1.0.1
 last-updated: 31-OCT-2024
 buttons:
 - index: mc
+  activation:
+    type: none
+  representation:
+    type: none
+    formula: 1
   virtual-xtm-mcled: true
-  formula: 1
-  activation: none
 - index: e0
   name: encoder0
-  step: 1
-  value: 0
-  value-min: 0
-  value-max: 13
-  dataref: data:_enc0
-  set-dataref: data:_enc0
-  formula: ${data:_enc0}
-  encoder-leds: 0
-  activation: encoder-value
+  activation:
+    type: encoder-value
+    step: 1
+    value: 0
+    value-min: 0
+    value-max: 13
+    dataref: data:_enc0
+    set-dataref: data:_enc0
+    encoder-leds: 0
+  representation:
+    type: none
+    formula: ${data:_enc0}
 - index: e1
   name: encoder1
-  step: 1
-  value: 0
-  value-min: 0
-  value-max: 13
-  dataref: data:_enc0
-  set-dataref: data:_enc0
-  formula: ${data:_enc0}
-  encoder-leds: 1
-  activation: encoder-value
+  activation:
+    type: encoder-value
+    step: 1
+    value: 0
+    value-min: 0
+    value-max: 13
+    dataref: data:_enc0
+    set-dataref: data:_enc0
+    encoder-leds: 1
+  representation:
+    type: none
+    formula: ${data:_enc0}
 - index: e2
   name: encoder2
-  step: 1
-  value: 0
-  value-min: 0
-  value-max: 13
-  dataref: data:_enc0
-  set-dataref: data:_enc0
-  formula: ${data:_enc0}
-  encoder-leds: 2
-  activation: encoder-value
+  activation:
+    type: encoder-value
+    step: 1
+    value: 0
+    value-min: 0
+    value-max: 13
+    dataref: data:_enc0
+    set-dataref: data:_enc0
+    encoder-leds: 2
+  representation:
+    type: none
+    formula: ${data:_enc0}
 - index: e3
   name: encoder3
-  step: 1
-  value: 0
-  value-min: 0
-  value-max: 6
-  dataref: data:_enc0
-  set-dataref: data:_enc0
-  formula: ${data:_enc0}
-  encoder-leds: 3
-  activation: encoder-value
+  activation:
+    type: encoder-value
+    step: 1
+    value: 0
+    value-min: 0
+    value-max: 6
+    dataref: data:_enc0
+    set-dataref: data:_enc0
+    encoder-leds: 3
+  representation:
+    type: none
+    formula: ${data:_enc0}

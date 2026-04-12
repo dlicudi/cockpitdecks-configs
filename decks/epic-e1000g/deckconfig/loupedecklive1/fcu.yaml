@@ -6,135 +6,151 @@ name: fcu
 buttons:
 - index: 0
   name: TRK
-  text: TRK
-  text-color: white
-  text-size: 40
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: black
-  activation: push
-  representation: text
-  commands:
-    press: sim/autopilot/track
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/track
+  representation:
+    type: text
+    text: TRK
+    text-color: white
+    text-size: 40
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: black
 - index: 1
   name: NAV
-  text-bg-color: black
-  multi-texts:
-  - text: NAV
-    text-color: White
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  - text: NAV
-    text-color: White
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  - text: NAV
-    text-color: Lime
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  formula: ${sim/cockpit2/autopilot/nav_status}
-  activation: push
-  representation: multi-texts
-  commands:
-    press: sim/autopilot/gpss
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/gpss
+  representation:
+    type: multi-texts
+    text-bg-color: black
+    multi-texts:
+    - text: NAV
+      text-color: White
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    - text: NAV
+      text-color: White
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    - text: NAV
+      text-color: Lime
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    formula: ${sim/cockpit2/autopilot/nav_status}
 - index: 2
   name: REV
-  text: REV
-  text-color: white
-  text-size: 40
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: black
-  activation: push
-  representation: text
-  commands:
-    press: sim/autopilot/back_course
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/back_course
+  representation:
+    type: text
+    text: REV
+    text-color: white
+    text-size: 40
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: black
 - index: 3
   name: ALT
-  text: ALT
-  text-color: white
-  text-size: 40
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: black
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/altitude_hold
+  representation:
+    type: text
+    text: ALT
+    text-color: white
+    text-size: 40
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: black
   vibrate: SHORT
-  activation: push
-  representation: text
-  commands:
-    press: sim/autopilot/altitude_hold
 - index: 4
   name: SEL
-  text-bg-color: black
-  multi-texts:
-  - text: SEL
-    text-color: White
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  - text: SEL
-    text-color: White
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  - text: SEL
-    text-color: Lime
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  formula: ${sim/cockpit2/autopilot/vvi_status}
-  activation: push
-  representation: multi-texts
-  commands:
-    press: sim/autopilot/alt_vs
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/alt_vs
+  representation:
+    type: multi-texts
+    text-bg-color: black
+    multi-texts:
+    - text: SEL
+      text-color: White
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    - text: SEL
+      text-color: White
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    - text: SEL
+      text-color: Lime
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    formula: ${sim/cockpit2/autopilot/vvi_status}
 - index: 5
   name: VNAV
-  text: VNAV
-  text-color: white
-  text-size: 40
-  text-font: D-DINCondensed.otf
-  text-position: cm
-  text-bg-color: black
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/vnav
+  representation:
+    type: text
+    text: VNAV
+    text-color: white
+    text-size: 40
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: black
   vibrate: SHORT
-  activation: push
-  representation: text
-  commands:
-    press: sim/autopilot/vnav
 - index: 6
   name: AP
-  text-bg-color: black
-  multi-texts:
-  - text: AP
-    text-color: White
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  - text: AP
-    text-color: White
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  - text: AP
-    text-color: Lime
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  formula: ${sim/cockpit/autopilot/autopilot_mode}
-  activation: push
-  representation: multi-texts
-  commands:
-    press: sim/autopilot/servos_toggle
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/servos_toggle
+  representation:
+    type: multi-texts
+    text-bg-color: black
+    multi-texts:
+    - text: AP
+      text-color: White
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    - text: AP
+      text-color: White
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    - text: AP
+      text-color: Lime
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    formula: ${sim/cockpit/autopilot/autopilot_mode}
 - index: 7
   name: GPSS
-  text-bg-color: black
-  multi-texts:
-  - text: GPSS
-    text-color: White
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  - text: GPSS
-    text-color: White
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  - text: GPSS
-    text-color: Lime
-    text-size: 40
-    text-font: D-DINCondensed.otf
-  formula: ${sim/cockpit2/autopilot/gpss_status}
-  activation: push
-  representation: multi-texts
-  commands:
-    press: sim/autopilot/gpss
+  activation:
+    type: push
+    commands:
+      press: sim/autopilot/gpss
+  representation:
+    type: multi-texts
+    text-bg-color: black
+    multi-texts:
+    - text: GPSS
+      text-color: White
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    - text: GPSS
+      text-color: White
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    - text: GPSS
+      text-color: Lime
+      text-size: 40
+      text-font: D-DINCondensed.otf
+    formula: ${sim/cockpit2/autopilot/gpss_status}

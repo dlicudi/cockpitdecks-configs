@@ -4,162 +4,186 @@ includes:
 - encoders/encoders_fcu
 buttons:
 - index: 0
+  activation:
+    type: page
+    page: pfi
+  representation:
+    type: text
+    label: PFI
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   vibrate: SHORT
-  page: pfi
-  label: PFI
-  label-color: Gold
   label-bg-color: Black
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 1
+  activation:
+    type: page
+    page: switches
+  representation:
+    type: text
+    label: SWITCHES 1
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   vibrate: SHORT
-  page: switches
-  label: SWITCHES 1
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 2
+  activation:
+    type: page
+    page: switches2
+  representation:
+    type: text
+    label: SWITCHES 2
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   vibrate: SHORT
-  page: switches2
-  label: SWITCHES 2
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 3
+  activation:
+    type: page
+    page: audiopanel
+  representation:
+    type: text
+    label: AUDIO
+    label-color: Gold
+    label-size: 10
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   vibrate: SHORT
-  page: audiopanel
-  label: AUDIO
-  label-color: Gold
-  label-size: 10
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 4
+  activation:
+    type: page
+    page: fcu
+  representation:
+    type: text
+    label: FCU
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   vibrate: SHORT
-  page: fcu
-  label: FCU
-  label-color: Gold
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 5
+  activation:
+    type: page
+    page: g1000
+  representation:
+    type: text
+    label: G1000
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 30, 40)
   vibrate: SHORT
-  page: g1000
-  label: G1000
-  label-color: Gold
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 30, 40)
-  activation: page
-  representation: text
 - index: 6
+  activation:
+    type: page
+    page: radio
+  representation:
+    type: text
+    label: RADIO
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   vibrate: SHORT
-  page: radio
-  label: RADIO
-  label-color: Gold
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 7
+  activation:
+    type: page
+    page: engine
+  representation:
+    type: text
+    label: ENGINE
+    label-color: Gold
+    text: ⛽
+    text-color: khaki
+    text-size: 24
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   vibrate: SHORT
-  page: engine
-  label: ENGINE
-  label-color: Gold
-  text: ⛽
-  text-color: khaki
-  text-size: 24
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 8
+  activation:
+    type: page
+    page: pedestal
+  representation:
+    type: text
+    label: PEDESTAL
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   vibrate: SHORT
-  page: pedestal
-  label: PEDESTAL
-  label-color: Gold
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 9
+  activation:
+    type: page
+    page: transponder
+  representation:
+    type: text
+    label: XPDR
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   vibrate: SHORT
-  page: transponder
-  label: XPDR
-  label-color: Gold
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 10
+  activation:
+    type: page
+    page: weather
+  representation:
+    type: text
+    label: WEATHER
+    label-color: Gold
+    text: 🌦
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   vibrate: SHORT
-  page: weather
-  label: WEATHER
-  label-color: Gold
-  text: 🌦
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text
 - index: 11
+  activation:
+    type: page
+    page: views
+  representation:
+    type: text
+    label: VIEWS
+    label-color: Gold
+    text: 
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
   vibrate: SHORT
-  page: views
-  label: VIEWS
-  label-color: Gold
-  text: 
-  text-color: khaki
-  text-size: 40
-  text-font: fontawesome.otf
-  text-position: cm
-  text-bg-color: (40, 40, 40)
-  activation: page
-  representation: text

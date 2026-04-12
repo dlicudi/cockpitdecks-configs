@@ -5,284 +5,334 @@ last-updated: 03-APR-2024
 name: ovrhdfuel
 buttons:
 - index: 0
-  label: ENG 1
-  decor:
-    type: segment
-    code: GNSKL
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    label: ENG 1
+    decor:
+      type: segment
+      code: GNSKL
 - index: 1
-  decor:
-    type: segment
-    code: IJKL
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: segment
+      code: IJKL
 - index: 2
-  label: APU
-  decor:
-    type: segment
-    code: GIJKL
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    label: APU
+    decor:
+      type: segment
+      code: GIJKL
 - index: 4
-  decor:
-    type: segment
-    code: IJKL
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: segment
+      code: IJKL
 - index: 5
-  decor:
-    type: segment
-    code: IJKL
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: segment
+      code: IJKL
 - index: 8
-  label: L TK
-  label-position: rb
-  label-size: 9
-  decor:
-    type: segment
-    code: BGKLNS
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    label: L TK
+    label-position: rb
+    label-size: 9
+    decor:
+      type: segment
+      code: BGKLNS
 - index: 9
-  label: PUMPS
-  label-position: lb
-  label-size: 9
-  decor:
-    type: segment
-    code: IJNS
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    label: PUMPS
+    label-position: lb
+    label-size: 9
+    decor:
+      type: segment
+      code: IJNS
 - index: 18
-  decor:
-    type: segment
-    code: BGIJKL
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: segment
+      code: BGIJKL
 - index: 21
-  decor:
-    type: segment
-    code: IJKL
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    decor:
+      type: segment
+      code: IJKL
 - index: 10
-  label: ACT
-  annunciator:
-    model: B
-    size: large
-    B0:
-      text: FAULT
-      color: darkorange
-    B1:
-      text: FWD
-      color: deepskyblue
-      framed: true
-      dataref: AirbusFBW/FuelOHPArray[9]
-  set-dataref: AirbusFBW/FuelOHPArray[9]
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelOHPArray[9]
+  representation:
+    type: annunciator
+    label: ACT
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+      B1:
+        text: FWD
+        color: deepskyblue
+        framed: true
+        dataref: AirbusFBW/FuelOHPArray[9]
 - index: 3
-  annunciator:
-    model: B
-    size: large
-    B0:
-      text: OPEN
-      color: lime
-      dataref: AirbusFBW/FuelOHPArray[7]
-    B1:
-      text: true
-      color: white
-      framed: true
-      dataref: AirbusFBW/FuelOHPArray[7]
-  set-dataref: AirbusFBW/FuelOHPArray[7]
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelOHPArray[7]
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: OPEN
+        color: lime
+        dataref: AirbusFBW/FuelOHPArray[7]
+      B1:
+        text: true
+        color: white
+        framed: true
+        dataref: AirbusFBW/FuelOHPArray[7]
 - index: 11
-  label: CTR TK
-  label-size: 9
-  label-position: rb
-  decor:
-    type: segment
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    label: CTR TK
+    label-size: 9
+    label-position: rb
+    decor:
+      type: segment
 - index: 6
-  label: ENG 2
-  decor:
-    type: segment
-    code: GNSIJ
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    label: ENG 2
+    decor:
+      type: segment
+      code: GNSIJ
 - index: 7
   name: up
-  page: ovrhdhyd
-  label: HYD
-  label-size: 10
-  text:
-    text: ${fa:arrow-up}
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: ovrhdhyd
+  representation:
+    type: text
+    label: HYD
+    label-size: 10
+    text:
+      text: ${fa:arrow-up}
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 14
-  label: R TK
-  label-position: rb
-  label-size: 9
-  decor:
-    type: segment
-    code: BGKLNS
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    label: R TK
+    label-position: rb
+    label-size: 9
+    decor:
+      type: segment
+      code: BGKLNS
 - index: 15
-  label: PUMPS
-  label-position: lb
-  label-size: 9
-  decor:
-    type: segment
-    code: IJNS
-  activation: none
-  representation: decor
+  activation:
+    type: none
+  representation:
+    type: decor
+    label: PUMPS
+    label-position: lb
+    label-size: 9
+    decor:
+      type: segment
+      code: IJNS
 - index: 16
   name: L TK PUMP 1
-  label: '1'
-  annunciator:
-    model: B
-    size: large
-    B0:
-      text: FAULT
-      color: darkorange
-      dataref: AirbusFBW/FuelTVSDArray[0]
-    B1:
-      text: false
-      color: white
-      framed: true
-      formula: ${AirbusFBW/FuelOHPArray[0]} not
-  set-dataref: AirbusFBW/FuelOHPArray[0]
-  initial-value: 0
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelOHPArray[0]
+    initial-value: 0
+  representation:
+    type: annunciator
+    label: '1'
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+        dataref: AirbusFBW/FuelTVSDArray[0]
+      B1:
+        text: false
+        color: white
+        framed: true
+        formula: ${AirbusFBW/FuelOHPArray[0]} not
 - index: 17
   name: L TK PUMP 2
-  label: '2'
-  annunciator:
-    model: B
-    size: large
-    B0:
-      text: FAULT
-      color: darkorange
-    B1:
-      text: false
-      color: white
-      framed: true
-      formula: ${AirbusFBW/FuelOHPArray[1]} not
-  set-dataref: AirbusFBW/FuelOHPArray[1]
-  initial-value: 0
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelOHPArray[1]
+    initial-value: 0
+  representation:
+    type: annunciator
+    label: '2'
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+      B1:
+        text: false
+        color: white
+        framed: true
+        formula: ${AirbusFBW/FuelOHPArray[1]} not
 - index: 19
   name: C TK L XFR
-  label: L XFR
-  annunciator:
-    model: B
-    size: large
-    B0:
-      text: FAULT
-      color: darkorange
-    B1:
-      text: false
-      color: white
-      framed: true
-      formula: ${AirbusFBW/FuelOHPArray[2]} not
-  set-dataref: AirbusFBW/FuelOHPArray[2]
-  initial-value: 0
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelOHPArray[2]
+    initial-value: 0
+  representation:
+    type: annunciator
+    label: L XFR
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+      B1:
+        text: false
+        color: white
+        framed: true
+        formula: ${AirbusFBW/FuelOHPArray[2]} not
 - index: 12
   name: C TK MODE SEL
-  label: MODE SEL
-  annunciator:
-    model: B
-    size: large
-    B0:
-      text: FAULT
-      color: darkorange
-    B1:
-      text: MAN
-      color: white
-      framed: true
-      formula: ${AirbusFBW/FuelOHPArray[6]} not
-  set-dataref: AirbusFBW/FuelOHPArray[6]
-  initial-value: 0
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelOHPArray[6]
+    initial-value: 0
+  representation:
+    type: annunciator
+    label: MODE SEL
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+      B1:
+        text: MAN
+        color: white
+        framed: true
+        formula: ${AirbusFBW/FuelOHPArray[6]} not
 - index: 20
   name: C TK R XFR
-  label: R XFR
-  annunciator:
-    model: B
-    size: large
-    B0:
-      text: FAULT
-      color: darkorange
-    B1:
-      text: false
-      color: white
-      framed: true
-      formula: ${AirbusFBW/FuelOHPArray[3]} not
-  set-dataref: AirbusFBW/FuelOHPArray[3]
-  initial-value: 0
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelOHPArray[3]
+    initial-value: 0
+  representation:
+    type: annunciator
+    label: R XFR
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+      B1:
+        text: false
+        color: white
+        framed: true
+        formula: ${AirbusFBW/FuelOHPArray[3]} not
 - index: 22
   name: R TK 1
-  label: '1'
-  annunciator:
-    model: B
-    size: large
-    B0:
-      text: FAULT
-      color: darkorange
-    B1:
-      text: false
-      color: white
-      framed: true
-      formula: ${AirbusFBW/FuelOHPArray[4]} not
-  set-dataref: AirbusFBW/FuelOHPArray[4]
-  initial-value: 0
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelOHPArray[4]
+    initial-value: 0
+  representation:
+    type: annunciator
+    label: '1'
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+      B1:
+        text: false
+        color: white
+        framed: true
+        formula: ${AirbusFBW/FuelOHPArray[4]} not
 - index: 23
   name: R TK 2
-  label: '2'
-  annunciator:
-    model: B
-    size: large
-    B0:
-      text: FAULT
-      color: darkorange
-    B1:
-      text: false
-      color: white
-      framed: true
-      formula: ${AirbusFBW/FuelOHPArray[5]} not
-  set-dataref: AirbusFBW/FuelOHPArray[5]
-  initial-value: 0
-  activation: sweep
-  representation: annunciator
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelOHPArray[5]
+    initial-value: 0
+  representation:
+    type: annunciator
+    label: '2'
+    annunciator:
+      model: B
+      size: large
+      B0:
+        text: FAULT
+        color: darkorange
+      B1:
+        text: false
+        color: white
+        framed: true
+        formula: ${AirbusFBW/FuelOHPArray[5]} not
 - index: 30
   name: down
-  page: ovrhdelec
-  label: ELEC
-  label-size: 10
-  text:
-    text: ${fa:arrow-down}
-    text-font: fontawesome.otf
-    text-size: 60
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: ovrhdelec
+  representation:
+    type: text
+    label: ELEC
+    label-size: 10
+    text:
+      text: ${fa:arrow-down}
+      text-font: fontawesome.otf
+      text-size: 60
 - index: 31
   name: Index
-  page: index
-  icon: TOLISS-A21N
-  activation: page
-  representation: icon
+  activation:
+    type: page
+    page: index
+  representation:
+    type: icon
+    icon: TOLISS-A21N

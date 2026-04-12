@@ -4,328 +4,362 @@ default-text-size: 56
 buttons:
 - index: 0
   name: BATT 1
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: BATT 1
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/electrical/battery_1_toggle
-  - sim/electrical/battery_1_toggle
+  activation:
+    type: sweep
+    positions:
+    - sim/electrical/battery_1_toggle
+    - sim/electrical/battery_1_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: BATT 1
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
 - index: 1
   name: BATT 2
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: BATT 2
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${sim/cockpit2/electrical/battery_on[1]} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/electrical/battery_2_toggle
-  - sim/electrical/battery_2_toggle
+  activation:
+    type: sweep
+    positions:
+    - sim/electrical/battery_2_toggle
+    - sim/electrical/battery_2_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: BATT 2
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/battery_on[1]} 1 eq
 - index: 2
   name: AVIONICS
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'AVIONICS
+  activation:
+    type: sweep
+    dataref: sim/cockpit2/switches/avionics_power_on
+    positions:
+    - sim/systems/avionics_toggle
+    - sim/systems/avionics_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'AVIONICS
 
-        MASTER'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
-  dataref: sim/cockpit2/switches/avionics_power_on
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/systems/avionics_toggle
-  - sim/systems/avionics_toggle
+          MASTER'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
 - index: 3
   name: L FUEL PUMP
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'L FUEL
+  activation:
+    type: sweep
+    dataref: aerobask/pb_pump_L
+    positions:
+    - aerobask/pump_L_toggle
+    - aerobask/pump_L_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'L FUEL
 
-        PUMP'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_pump_L} 1 eq
-  dataref: aerobask/pb_pump_L
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/pump_L_toggle
-  - aerobask/pump_L_toggle
+          PUMP'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_pump_L} 1 eq
 - index: 4
   name: R FUEL PUMP
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'R FUEL
+  activation:
+    type: sweep
+    dataref: aerobask/pb_pump_R
+    positions:
+    - aerobask/pump_R_toggle
+    - aerobask/pump_R_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'R FUEL
 
-        PUMP'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_pump_R} 1 eq
-  dataref: aerobask/pb_pump_R
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/pump_R_toggle
-  - aerobask/pump_R_toggle
+          PUMP'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_pump_R} 1 eq
 - index: 5
   name: GEN
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'STARTER
+  activation:
+    type: sweep
+    dataref: sim/cockpit2/electrical/generator_on[0]
+    positions:
+    - sim/electrical/generator_1_toggle
+    - sim/electrical/generator_1_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'STARTER
 
-        GEN'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
-  dataref: sim/cockpit2/electrical/generator_on[0]
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/electrical/generator_1_toggle
-  - sim/electrical/generator_1_toggle
+          GEN'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
 - index: 8
   name: IGNITER
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: IGNITER
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${sim/cockpit/engine/igniters_on[0]} 1 eq
-  dataref: sim/cockpit/engine/igniters_on[0]
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/igniter_toggle
-  - aerobask/igniter_toggle
+  activation:
+    type: sweep
+    dataref: sim/cockpit/engine/igniters_on[0]
+    positions:
+    - aerobask/igniter_toggle
+    - aerobask/igniter_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: IGNITER
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit/engine/igniters_on[0]} 1 eq
 - index: 9
   name: START
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: START
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${sim/cockpit2/engine/actuators/ignition_key[0]} 4 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - sim/starters/engage_starter_1
-  - sim/starters/engage_starter_1
+  activation:
+    type: sweep
+    positions:
+    - sim/starters/engage_starter_1
+    - sim/starters/engage_starter_1
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: START
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/engine/actuators/ignition_key[0]} 4 eq
 - index: 11
   name: FUEL AUTO
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'FUEL
+  activation:
+    type: sweep
+    positions:
+    - aerobask/fuel_auto_toggle
+    - aerobask/fuel_auto_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'FUEL
 
-        AUTO SEL'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_fuel_auto} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/fuel_auto_toggle
-  - aerobask/fuel_auto_toggle
+          AUTO SEL'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_fuel_auto} 1 eq
 - index: 12
   name: PUSHER
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: PUSHER
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_pusher} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/pusher_toggle
-  - aerobask/pusher_toggle
+  activation:
+    type: sweep
+    positions:
+    - aerobask/pusher_toggle
+    - aerobask/pusher_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: PUSHER
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_pusher} 1 eq
 - index: 16
   name: PRESS AIR
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'PRESS
+  activation:
+    type: sweep
+    positions:
+    - aerobask/press_air_toggle
+    - aerobask/press_air_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'PRESS
 
-        AIR'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_press_air} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/press_air_toggle
-  - aerobask/press_air_toggle
+          AIR'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_press_air} 1 eq
 - index: 17
   name: AUTOPILOT
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'AUTO
+  activation:
+    type: sweep
+    positions:
+    - aerobask/otto_pwr_toggle
+    - aerobask/otto_pwr_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'AUTO
 
-        PILOT'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_otto} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/otto_pwr_toggle
-  - aerobask/otto_pwr_toggle
+          PILOT'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_otto} 1 eq
 - index: 18
   name: TRIM
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: TRIM
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_trim} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/trim_toggle
-  - aerobask/trim_toggle
+  activation:
+    type: sweep
+    positions:
+    - aerobask/trim_toggle
+    - aerobask/trim_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: TRIM
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_trim} 1 eq
 - index: 19
   name: DUMP VALVE
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'DUMP
+  activation:
+    type: sweep
+    positions:
+    - aerobask/dump_valve_toggle
+    - aerobask/dump_valve_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'DUMP
 
-        VALVE'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_dump_valve} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/dump_valve_toggle
-  - aerobask/dump_valve_toggle
+          VALVE'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_dump_valve} 1 eq
 - index: 20
   name: EMERG OXYGEN
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'EMERG
+  activation:
+    type: sweep
+    positions:
+    - aerobask/emerg_oxygen_toggle
+    - aerobask/emerg_oxygen_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'EMERG
 
-        OXYGEN'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_emerg_oxygen} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/emerg_oxygen_toggle
-  - aerobask/emerg_oxygen_toggle
+          OXYGEN'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_emerg_oxygen} 1 eq
 - index: 21
   name: EMERG PRESS
-  annunciator:
-    model: B
-    size: full
-    parts:
-    - text: 'EMERG
+  activation:
+    type: sweep
+    positions:
+    - aerobask/emerg_press
+    - aerobask/emerg_press
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'EMERG
 
-        PRESS'
-      color: white
-      formula: 1
-    - text: 'ON'
-      color: cyan
-      framed: false
-      formula: ${aerobask/lt_emerg_press} 1 eq
-  activation: sweep
-  representation: annunciator
-  positions:
-  - aerobask/emerg_press
-  - aerobask/emerg_press
+          PRESS'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${aerobask/lt_emerg_press} 1 eq
 - index: 31
   name: LIGHTS ICE
-  page: switches2
-  label: LIGHTS/ICE
-  label-color: Gold
-  label-size: 11
-  text: '>'
-  text-size: 48
-  text-color: Gold
-  text-position: cm
-  text-bg-color: '#3a3a3a'
-  activation: page
-  representation: text
+  activation:
+    type: page
+    page: switches2
+  representation:
+    type: text
+    label: LIGHTS/ICE
+    label-color: Gold
+    label-size: 11
+    text: '>'
+    text-size: 48
+    text-color: Gold
+    text-position: cm
+    text-bg-color: '#3a3a3a'
 cockpit-color: '#3a3a3a'
