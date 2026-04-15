@@ -8,7 +8,6 @@ buttons:
   name: PACKFLOW
   activation:
     type: sweep
-    stops: 3
     dataref: AirbusFBW/AirCondSwitchAnims[13]
     initial-value: 0
     positions:
@@ -25,11 +24,11 @@ buttons:
       tick-length: 24
       tick-label-size: 30
       tick-label-font: DIN Bold
-      tick-from: 120
-      tick-to: 240
+      angle-start: 300
+      angle-end: 60
       tick-width: 8
       tick-underline-width: 8
-      tick-labels:
+      ticks:
       - LO
       - NORM
       - HI
@@ -37,7 +36,6 @@ buttons:
   name: ACCOCKPIT
   activation:
     type: sweep
-    stops: 7
     initial-value: 3
     dataref: AirbusFBW/AirCondSwitchAnims[12]
     positions:
@@ -55,11 +53,11 @@ buttons:
       tick-length: 24
       tick-label-size: 30
       tick-label-font: DIN Bold
-      tick-from: 45
-      tick-to: 315
+      angle-start: 225
+      angle-end: 135
       tick-width: 8
       tick-underline-width: 8
-      tick-labels:
+      ticks:
       - COLD
       - ''
       - ''
@@ -71,7 +69,6 @@ buttons:
   name: ACFWDCABIN
   activation:
     type: sweep
-    stops: 7
     initial-value: 3
     dataref: AirbusFBW/AirCondSwitchAnims[11]
     positions:
@@ -89,11 +86,11 @@ buttons:
       tick-length: 24
       tick-label-size: 30
       tick-label-font: DIN Bold
-      tick-from: 45
-      tick-to: 315
+      angle-start: 225
+      angle-end: 135
       tick-width: 8
       tick-underline-width: 8
-      tick-labels:
+      ticks:
       - COLD
       - ''
       - ''
@@ -105,7 +102,6 @@ buttons:
   name: ACAFTCABIN
   activation:
     type: sweep
-    stops: 7
     initial-value: 3
     dataref: AirbusFBW/AftCabinTemp
     positions:
@@ -123,11 +119,11 @@ buttons:
       tick-length: 24
       tick-label-size: 30
       tick-label-font: DIN Bold
-      tick-from: 45
-      tick-to: 315
+      angle-start: 225
+      angle-end: 135
       tick-width: 8
       tick-underline-width: 8
-      tick-labels:
+      ticks:
       - COLD
       - ''
       - ''
@@ -347,7 +343,6 @@ buttons:
   name: XBLEED
   activation:
     type: sweep
-    stops: 3
     dataref: AirbusFBW/XBleedSwitch
     set-dataref: AirbusFBW/XBleedSwitch
     initial-value: 1
@@ -365,11 +360,11 @@ buttons:
       tick-length: 24
       tick-label-size: 30
       tick-label-font: DIN Bold
-      tick-from: 120
-      tick-to: 240
+      angle-start: 300
+      angle-end: 60
       tick-width: 8
       tick-underline-width: 8
-      tick-labels:
+      ticks:
       - SHUT
       - AUTO
       - OPEN

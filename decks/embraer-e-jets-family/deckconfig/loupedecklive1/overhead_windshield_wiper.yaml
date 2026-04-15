@@ -38,7 +38,6 @@ buttons:
 - index: 5
   activation:
     type: sweep
-    stops: 3
     dataref: sim/cockpit2/switches/wiper_speed_switch[0]
     set-dataref: sim/cockpit2/switches/wiper_speed_switch[0]
   representation:
@@ -50,22 +49,21 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 180
-      tick-to: 310
+      angle-start: 0
+      angle-end: 130
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - LOW
       - HIGH
 - index: 6
   activation:
     type: sweep
-    stops: 3
     dataref: sim/cockpit2/switches/wiper_speed_switch[1]
     set-dataref: sim/cockpit2/switches/wiper_speed_switch[1]
   representation:
@@ -77,15 +75,15 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 180
-      tick-to: 310
+      angle-start: 0
+      angle-end: 130
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - LOW
       - HIGH

@@ -9,7 +9,6 @@ buttons:
 - index: 0
   activation:
     type: sweep
-    stops: 3
     dataref: XCrafts/ERJ/APU_switch
     positions:
     - XCrafts/APU_CCW
@@ -23,15 +22,15 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 180
-      tick-to: 310
+      angle-start: 0
+      angle-end: 130
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - 'ON'
       - START

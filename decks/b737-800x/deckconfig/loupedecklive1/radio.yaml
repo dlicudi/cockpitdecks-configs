@@ -1,0 +1,233 @@
+name: radio
+description: Radio tuning — COM1, COM2, NAV1, NAV2
+includes:
+- includes/pager
+- encoders/encoders_radio
+buttons:
+# Row 0 — COM1
+- index: 0
+  name: COM1_ACTIVE
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: COM1 ACT
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: lime
+        text-size: 22
+        formula: '1'
+        text: ${sim/cockpit2/radios/actuators/com1_frequency_hz}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.3f}'
+
+- index: 1
+  name: COM1_STANDBY
+  activation:
+    type: push
+    commands:
+      press: sim/radios/com1_standy_flip
+  representation:
+    type: annunciator
+    label: COM1 SBY
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: white
+        text-size: 22
+        formula: '1'
+        text: ${sim/cockpit2/radios/actuators/com1_standby_frequency_hz}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.3f}'
+
+- index: 2
+  name: NAV1_ACTIVE
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: NAV1 ACT
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: cyan
+        text-size: 22
+        formula: '1'
+        text: ${sim/cockpit2/radios/actuators/nav1_frequency_hz}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.2f}'
+
+# Row 1 — COM2
+- index: 3
+  name: COM2_ACTIVE
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: COM2 ACT
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: lime
+        text-size: 22
+        formula: '1'
+        text: ${sim/cockpit2/radios/actuators/com2_frequency_hz}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.3f}'
+
+- index: 4
+  name: COM2_STANDBY
+  activation:
+    type: push
+    commands:
+      press: sim/radios/com2_standy_flip
+  representation:
+    type: annunciator
+    label: COM2 SBY
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: white
+        text-size: 22
+        formula: '1'
+        text: ${sim/cockpit2/radios/actuators/com2_standby_frequency_hz}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.3f}'
+
+- index: 5
+  name: NAV2_ACTIVE
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: NAV2 ACT
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: cyan
+        text-size: 22
+        formula: '1'
+        text: ${sim/cockpit2/radios/actuators/nav2_frequency_hz}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.2f}'
+
+# Row 2 — Transponder
+- index: 6
+  name: XPDR_CODE
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: XPDR
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: lime
+        text-size: 26
+        formula: '1'
+        text: ${sim/cockpit/radios/transponder_code}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 7
+  name: XPDR_MODE_DN
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/knob/transponder_mode_dn
+  representation:
+    type: text
+    text: MODE-
+    text-color: white
+    text-size: 20
+    text-font: DIN Bold
+    text-bg-color: (30, 30, 50)
+    text-position: cm
+
+- index: 8
+  name: XPDR_IDENT
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/push_button/transponder_ident_dn
+  representation:
+    type: text
+    text: IDENT
+    text-color: yellow
+    text-size: 22
+    text-font: DIN Bold
+    text-bg-color: (30, 30, 50)
+    text-position: cm
+  vibrate: SHORT
+
+# Row 3 — NAV swap + display
+- index: 9
+  name: NAV1_SWAP
+  activation:
+    type: push
+    commands:
+      press: sim/radios/nav1_standy_flip
+  representation:
+    type: annunciator
+    label: NAV1 SBY
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: white
+        text-size: 22
+        formula: '1'
+        text: ${sim/cockpit2/radios/actuators/nav1_standby_frequency_hz}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.2f}'
+
+- index: 10
+  name: NAV2_SWAP
+  activation:
+    type: push
+    commands:
+      press: sim/radios/nav2_standy_flip
+  representation:
+    type: annunciator
+    label: NAV2 SBY
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: white
+        text-size: 22
+        formula: '1'
+        text: ${sim/cockpit2/radios/actuators/nav2_standby_frequency_hz}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.2f}'
+
+- index: 11
+  name: XPDR_MODE_UP
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/knob/transponder_mode_up
+  representation:
+    type: text
+    text: MODE+
+    text-color: white
+    text-size: 20
+    text-font: DIN Bold
+    text-bg-color: (30, 30, 50)
+    text-position: cm

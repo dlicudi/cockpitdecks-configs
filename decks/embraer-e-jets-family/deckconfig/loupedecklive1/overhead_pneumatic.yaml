@@ -8,7 +8,6 @@ buttons:
 - index: 0
   activation:
     type: sweep
-    stops: 11
     initial-value: 18
     dataref: XCrafts/temp_cockpit_switch
     set-dataref: XCrafts/temp_cockpit_switch
@@ -21,15 +20,15 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 45
-      tick-to: 310
+      angle-start: 225
+      angle-end: 130
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - '18'
       - '19'
       - '20'
@@ -61,7 +60,6 @@ buttons:
 - index: 2
   activation:
     type: sweep
-    stops: 11
     initial-value: 18
     dataref: XCrafts/temp_cabin_switch
     set-dataref: XCrafts/temp_cabin_switch
@@ -74,15 +72,15 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 45
-      tick-to: 310
+      angle-start: 225
+      angle-end: 130
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - '18'
       - '19'
       - '20'

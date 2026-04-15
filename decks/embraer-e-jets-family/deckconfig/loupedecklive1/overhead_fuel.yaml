@@ -71,7 +71,6 @@ buttons:
 - index: 4
   activation:
     type: sweep
-    stops: 2
     set-dataref: XCrafts/fuel_DC_pump_switch
   representation:
     type: circular-switch
@@ -81,22 +80,21 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 120
-      tick-to: 180
+      angle-start: 300
+      angle-end: 0
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - AUTO
     formula: ${XCrafts/fuel_DC_pump_switch}
 - index: 6
   activation:
     type: sweep
-    stops: 2
     set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
   representation:
     type: circular-switch
@@ -106,22 +104,21 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 120
-      tick-to: 180
+      angle-start: 300
+      angle-end: 0
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - AUTO
     formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]}
 - index: 7
   activation:
     type: sweep
-    stops: 2
     set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[1]
   representation:
     type: circular-switch
@@ -131,15 +128,15 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 120
-      tick-to: 180
+      angle-start: 300
+      angle-end: 0
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - AUTO
     formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[1]}

@@ -1,0 +1,1087 @@
+name: index
+description: B737-800X FMC/CDU — Boeing 737 flight management computer
+string-datarefs:
+- laminar/B738/fmc1/Line00_S
+- laminar/B738/fmc1/Line00_L
+- laminar/B738/fmc1/Line01_L
+- laminar/B738/fmc1/Line01_S
+- laminar/B738/fmc1/Line02_L
+- laminar/B738/fmc1/Line02_S
+- laminar/B738/fmc1/Line03_L
+- laminar/B738/fmc1/Line03_S
+- laminar/B738/fmc1/Line04_L
+- laminar/B738/fmc1/Line04_S
+- laminar/B738/fmc1/Line05_L
+- laminar/B738/fmc1/Line05_S
+- laminar/B738/fmc1/Line06_L
+- laminar/B738/fmc1/Line06_S
+- laminar/B738/fmc1/Line_entry
+buttons:
+# === Display area ===
+- index: title
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ${laminar/B738/fmc1/Line00_S}
+    text-color: white
+    text-size: 18
+    text-font: CourierPrime-Bold.ttf
+    text-position: cm
+    text-bg-color: (0, 0, 0)
+
+- index: lsk1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_1L
+  representation:
+    type: text
+    text: '<'
+    text-color: white
+    text-size: 22
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: label01
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ${laminar/B738/fmc1/Line01_L}
+    text-color: (0, 220, 0)
+    text-size: 11
+    text-font: CourierPrime-Bold.ttf
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: data01
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ${laminar/B738/fmc1/Line01_S}
+    text-color: white
+    text-size: 16
+    text-font: CourierPrime-Bold.ttf
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: rsk1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_1R
+  representation:
+    type: text
+    text: '>'
+    text-color: white
+    text-size: 22
+    text-position: mr
+    text-bg-color: (0, 0, 0)
+
+- index: lsk2
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_2L
+  representation:
+    type: text
+    text: '<'
+    text-color: white
+    text-size: 22
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: label02
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ${laminar/B738/fmc1/Line02_L}
+    text-color: (0, 220, 0)
+    text-size: 11
+    text-font: CourierPrime-Bold.ttf
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: data02
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ${laminar/B738/fmc1/Line02_S}
+    text-color: white
+    text-size: 16
+    text-font: CourierPrime-Bold.ttf
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: rsk2
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_2R
+  representation:
+    type: text
+    text: '>'
+    text-color: white
+    text-size: 22
+    text-position: mr
+    text-bg-color: (0, 0, 0)
+
+- index: lsk3
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_3L
+  representation:
+    type: text
+    text: '<'
+    text-color: white
+    text-size: 22
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: label03
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ${laminar/B738/fmc1/Line03_L}
+    text-color: (0, 220, 0)
+    text-size: 11
+    text-font: CourierPrime-Bold.ttf
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: data03
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ${laminar/B738/fmc1/Line03_S}
+    text-color: white
+    text-size: 16
+    text-font: CourierPrime-Bold.ttf
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: rsk3
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_3R
+  representation:
+    type: text
+    text: '>'
+    text-color: white
+    text-size: 22
+    text-position: mr
+    text-bg-color: (0, 0, 0)
+
+- index: lsk4
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_4L
+  representation:
+    type: text
+    text: '<'
+    text-color: white
+    text-size: 22
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: label04
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ${laminar/B738/fmc1/Line04_L}
+    text-color: (0, 220, 0)
+    text-size: 11
+    text-font: CourierPrime-Bold.ttf
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: data04
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ${laminar/B738/fmc1/Line04_S}
+    text-color: white
+    text-size: 16
+    text-font: CourierPrime-Bold.ttf
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: rsk4
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_4R
+  representation:
+    type: text
+    text: '>'
+    text-color: white
+    text-size: 22
+    text-position: mr
+    text-bg-color: (0, 0, 0)
+
+- index: lsk5
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_5L
+  representation:
+    type: text
+    text: '<'
+    text-color: white
+    text-size: 22
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: label05
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ${laminar/B738/fmc1/Line05_L}
+    text-color: (0, 220, 0)
+    text-size: 11
+    text-font: CourierPrime-Bold.ttf
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: data05
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ${laminar/B738/fmc1/Line05_S}
+    text-color: white
+    text-size: 16
+    text-font: CourierPrime-Bold.ttf
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: rsk5
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_5R
+  representation:
+    type: text
+    text: '>'
+    text-color: white
+    text-size: 22
+    text-position: mr
+    text-bg-color: (0, 0, 0)
+
+- index: lsk6
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_6L
+  representation:
+    type: text
+    text: '<'
+    text-color: white
+    text-size: 22
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: label06
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ${laminar/B738/fmc1/Line06_L}
+    text-color: (0, 220, 0)
+    text-size: 11
+    text-font: CourierPrime-Bold.ttf
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: data06
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ${laminar/B738/fmc1/Line06_S}
+    text-color: white
+    text-size: 16
+    text-font: CourierPrime-Bold.ttf
+    text-position: ml
+    text-bg-color: (0, 0, 0)
+
+- index: rsk6
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_6R
+  representation:
+    type: text
+    text: '>'
+    text-color: white
+    text-size: 22
+    text-position: mr
+    text-bg-color: (0, 0, 0)
+
+- index: entry
+  activation:
+    type: none
+  representation:
+    type: text
+    text: ${laminar/B738/fmc1/Line_entry}
+    text-color: (0, 220, 220)
+    text-size: 16
+    text-font: CourierPrime-Bold.ttf
+    text-position: ml
+    text-bg-color: (0, 0, 30)
+
+# === Navigation keys ===
+- index: init_ref
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_init_ref
+  representation:
+    type: text
+    text: INIT REF
+    text-color: white
+    text-size: 12
+    text-position: cm
+    text-bg-color: (30, 30, 30)
+
+- index: rte
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_rte
+  representation:
+    type: text
+    text: RTE
+    text-color: white
+    text-size: 14
+    text-position: cm
+    text-bg-color: (30, 30, 30)
+
+- index: clb
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_clb
+  representation:
+    type: text
+    text: CLB
+    text-color: white
+    text-size: 14
+    text-position: cm
+    text-bg-color: (30, 30, 30)
+
+- index: crz
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_crz
+  representation:
+    type: text
+    text: CRZ
+    text-color: white
+    text-size: 14
+    text-position: cm
+    text-bg-color: (30, 30, 30)
+
+- index: des
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_des
+  representation:
+    type: text
+    text: DES
+    text-color: white
+    text-size: 14
+    text-position: cm
+    text-bg-color: (30, 30, 30)
+
+- index: menu
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_menu
+  representation:
+    type: text
+    text: MENU
+    text-color: white
+    text-size: 14
+    text-position: cm
+    text-bg-color: (30, 30, 30)
+
+- index: legs
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_legs
+  representation:
+    type: text
+    text: LEGS
+    text-color: white
+    text-size: 14
+    text-position: cm
+    text-bg-color: (30, 30, 30)
+
+- index: dep_app
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_dep_app
+  representation:
+    type: text
+    text: DEP APP
+    text-color: white
+    text-size: 12
+    text-position: cm
+    text-bg-color: (30, 30, 30)
+
+- index: hold
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_hold
+  representation:
+    type: text
+    text: HOLD
+    text-color: white
+    text-size: 14
+    text-position: cm
+    text-bg-color: (30, 30, 30)
+
+- index: prog
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_prog
+  representation:
+    type: text
+    text: PROG
+    text-color: white
+    text-size: 14
+    text-position: cm
+    text-bg-color: (30, 30, 30)
+
+- index: n1_lim
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_n1_lim
+  representation:
+    type: text
+    text: N1 LIM
+    text-color: white
+    text-size: 12
+    text-position: cm
+    text-bg-color: (30, 30, 30)
+
+- index: fix
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_fix
+  representation:
+    type: text
+    text: FIX
+    text-color: white
+    text-size: 14
+    text-position: cm
+    text-bg-color: (30, 30, 30)
+
+- index: exec
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_exec
+  representation:
+    type: text
+    text: EXEC
+    text-color: lime
+    text-size: 14
+    text-position: cm
+    text-bg-color: (0, 40, 0)
+
+- index: prev_page
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_prev_page
+  representation:
+    type: text
+    text: PREV
+    text-color: white
+    text-size: 14
+    text-position: cm
+    text-bg-color: (30, 30, 30)
+
+- index: next_page
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_next_page
+  representation:
+    type: text
+    text: NEXT
+    text-color: white
+    text-size: 14
+    text-position: cm
+    text-bg-color: (30, 30, 30)
+
+# === Numeric keypad ===
+- index: k1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_1
+  representation:
+    type: text
+    text: '1'
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: k2
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_2
+  representation:
+    type: text
+    text: '2'
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: k3
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_3
+  representation:
+    type: text
+    text: '3'
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: k4
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_4
+  representation:
+    type: text
+    text: '4'
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: k5
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_5
+  representation:
+    type: text
+    text: '5'
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: k6
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_6
+  representation:
+    type: text
+    text: '6'
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: k7
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_7
+  representation:
+    type: text
+    text: '7'
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: k8
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_8
+  representation:
+    type: text
+    text: '8'
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: k9
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_9
+  representation:
+    type: text
+    text: '9'
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: k0
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_0
+  representation:
+    type: text
+    text: '0'
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: period
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_period
+  representation:
+    type: text
+    text: '.'
+    text-color: white
+    text-size: 22
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: slash
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_slash
+  representation:
+    type: text
+    text: '/'
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: minus
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_minus
+  representation:
+    type: text
+    text: '+/-'
+    text-color: white
+    text-size: 14
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: del
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_del
+  representation:
+    type: text
+    text: DEL
+    text-color: cyan
+    text-size: 14
+    text-position: cm
+    text-bg-color: (20, 20, 35)
+
+- index: sp
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_SP
+  representation:
+    type: text
+    text: SP
+    text-color: white
+    text-size: 14
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: clr
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_clr
+  representation:
+    type: text
+    text: CLR
+    text-color: amber
+    text-size: 14
+    text-position: cm
+    text-bg-color: (35, 25, 10)
+
+# === Alpha keypad ===
+- index: kA
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_A
+  representation:
+    type: text
+    text: A
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kB
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_B
+  representation:
+    type: text
+    text: B
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kC
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_C
+  representation:
+    type: text
+    text: C
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kD
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_D
+  representation:
+    type: text
+    text: D
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kE
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_E
+  representation:
+    type: text
+    text: E
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kF
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_F
+  representation:
+    type: text
+    text: F
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kG
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_G
+  representation:
+    type: text
+    text: G
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kH
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_H
+  representation:
+    type: text
+    text: H
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kI
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_I
+  representation:
+    type: text
+    text: I
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kJ
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_J
+  representation:
+    type: text
+    text: J
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kK
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_K
+  representation:
+    type: text
+    text: K
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kL
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_L
+  representation:
+    type: text
+    text: L
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kM
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_M
+  representation:
+    type: text
+    text: M
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kN
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_N
+  representation:
+    type: text
+    text: N
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kO
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_O
+  representation:
+    type: text
+    text: O
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kP
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_P
+  representation:
+    type: text
+    text: P
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kQ
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_Q
+  representation:
+    type: text
+    text: Q
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kR
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_R
+  representation:
+    type: text
+    text: R
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kS
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_S
+  representation:
+    type: text
+    text: S
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kT
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_T
+  representation:
+    type: text
+    text: T
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kU
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_U
+  representation:
+    type: text
+    text: U
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kV
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_V
+  representation:
+    type: text
+    text: V
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kW
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_W
+  representation:
+    type: text
+    text: W
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kX
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_X
+  representation:
+    type: text
+    text: X
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kY
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_Y
+  representation:
+    type: text
+    text: Y
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)
+
+- index: kZ
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/button/fmc1_Z
+  representation:
+    type: text
+    text: Z
+    text-color: white
+    text-size: 18
+    text-position: cm
+    text-bg-color: (25, 25, 25)

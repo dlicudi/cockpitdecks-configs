@@ -1,0 +1,11 @@
+default-label-color: white
+default-label-font: D-DIN.otf
+default-label-size: 9
+default-text-size: 9
+default-label-position: ct
+home-page-name: index
+default-vibrate: SHORT
+default-icon-color: (30, 40, 55)
+default-annunciator-style: k
+default-light-off-intensity: 8
+cockpit-color: (20, 25, 35)

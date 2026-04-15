@@ -8,7 +8,6 @@ buttons:
 - index: 0
   activation:
     type: sweep
-    stops: 2
     initial-value: 1
     dataref: sim/cockpit2/switches/panel_brightness_ratio[1]
     set-dataref: sim/cockpit2/switches/panel_brightness_ratio[1]
@@ -20,21 +19,20 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 45
-      tick-to: 310
+      angle-start: 225
+      angle-end: 130
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - BRT
 - index: 1
   activation:
     type: sweep
-    stops: 2
     dataref: sim/cockpit2/switches/panel_brightness_ratio[3]
     set-dataref: sim/cockpit2/switches/panel_brightness_ratio[3]
   representation:
@@ -45,21 +43,20 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 45
-      tick-to: 310
+      angle-start: 225
+      angle-end: 130
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - BRT
 - index: 2
   activation:
     type: sweep
-    stops: 2
     dataref: sim/cockpit2/switches/panel_brightness_ratio[2]
     set-dataref: sim/cockpit2/switches/panel_brightness_ratio[2]
   representation:
@@ -70,15 +67,15 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 45
-      tick-to: 310
+      angle-start: 225
+      angle-end: 130
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - BRT
 - index: 3

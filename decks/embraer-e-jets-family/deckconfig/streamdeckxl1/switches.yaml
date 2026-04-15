@@ -6,7 +6,6 @@ buttons:
 - index: 0
   activation:
     type: sweep
-    stops: 2
     dataref: sim/cockpit/electrical/generator_on[0]
     set-dataref: sim/cockpit/electrical/generator_on[0]
   representation:
@@ -17,22 +16,21 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 120
-      tick-to: 180
+      angle-start: 300
+      angle-end: 0
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - AUTO
   bgcolor: White
 - index: 1
   activation:
     type: sweep
-    stops: 3
     dataref: XCrafts/electrical/ac_bus_tie_switch
     set-dataref: XCrafts/electrical/ac_bus_tie_switch
   representation:
@@ -44,15 +42,15 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 140
-      tick-to: 220
+      angle-start: 320
+      angle-end: 40
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - '1
 
         OPEN'
@@ -63,7 +61,6 @@ buttons:
 - index: 2
   activation:
     type: sweep
-    stops: 2
     dataref: sim/cockpit/electrical/generator_on[1]
     set-dataref: sim/cockpit/electrical/generator_on[1]
   representation:
@@ -75,15 +72,15 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 240
-      tick-to: 180
+      angle-start: 60
+      angle-end: 0
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - AUTO
 - index: 3
@@ -317,7 +314,6 @@ buttons:
 - index: 16
   activation:
     type: sweep
-    stops: 2
     dataref: sim/cockpit2/electrical/battery_on[0]
     set-dataref: sim/cockpit2/electrical/battery_on[0]
   representation:
@@ -328,15 +324,15 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 120
-      tick-to: 180
+      angle-start: 300
+      angle-end: 0
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - 'ON'
 - index: 17
@@ -366,7 +362,6 @@ buttons:
 - index: 18
   activation:
     type: sweep
-    stops: 2
     dataref: sim/cockpit2/electrical/battery_on[1]
     set-dataref: sim/cockpit2/electrical/battery_on[1]
   representation:
@@ -377,21 +372,20 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 120
-      tick-to: 180
+      angle-start: 300
+      angle-end: 0
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - 'ON'
 - index: 14
   activation:
     type: sweep
-    stops: 2
     set-dataref: XCrafts/fuel_DC_pump_switch
   representation:
     type: circular-switch
@@ -401,22 +395,21 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 120
-      tick-to: 180
+      angle-start: 300
+      angle-end: 0
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - AUTO
     formula: ${XCrafts/fuel_DC_pump_switch}
 - index: 19
   activation:
     type: sweep
-    stops: 3
     set-dataref: XCrafts/light/emerg_switch
   representation:
     type: circular-switch
@@ -427,15 +420,15 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 120
-      tick-to: 240
+      angle-start: 300
+      angle-end: 60
       tick-space: 40
       tick-underline-width: 4
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - ARMED
       - 'ON'
@@ -443,7 +436,6 @@ buttons:
 - index: 13
   activation:
     type: sweep
-    stops: 2
     set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
   representation:
     type: circular-switch
@@ -453,22 +445,21 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 120
-      tick-to: 180
+      angle-start: 300
+      angle-end: 0
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - AUTO
     formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]}
 - index: 15
   activation:
     type: sweep
-    stops: 2
     set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[1]
   representation:
     type: circular-switch
@@ -478,15 +469,15 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 120
-      tick-to: 180
+      angle-start: 300
+      angle-end: 0
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - AUTO
     formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[1]}

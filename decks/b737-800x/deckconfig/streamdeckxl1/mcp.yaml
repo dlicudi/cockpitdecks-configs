@@ -1,0 +1,591 @@
+name: mcp
+description: MCP — Mode Control Panel
+includes:
+- includes/pagercompact
+buttons:
+# Row 0 (0-7) — AP modes: N1, SPD, LVL CHG, VNAV, LNAV, VOR LOC, APP, HDG SEL
+- index: 0
+  name: N1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/n1_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/n1_status}
+      - text: N1
+        text-size: 64
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 1
+  name: SPD
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/speed_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/speed_status1}
+      - text: SPD
+        text-size: 60
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 2
+  name: LVL_CHG
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/lvl_chg_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/lvl_chg_status}
+      - text: 'LVL CHG'
+        text-size: 46
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 3
+  name: VNAV
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/vnav_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/vnav_status1}
+      - text: VNAV
+        text-size: 56
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 4
+  name: LNAV
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/lnav_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/lnav_status}
+      - text: LNAV
+        text-size: 56
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 5
+  name: VOR_LOC
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/vorloc_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/vorloc_status}
+      - text: 'VOR LOC'
+        text-size: 44
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 6
+  name: APP
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/app_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/app_status}
+      - text: APP
+        text-size: 60
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 7
+  name: HDG_SEL
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/hdg_sel_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/hdg_sel_status}
+      - text: 'HDG SEL'
+        text-size: 46
+        text-font: DIN Bold
+        formula: '1'
+
+# Row 1 (8-15) — ALT HLD, VS, CMD A, CMD B, CWS A/B, F/D, A/T, C/O
+- index: 8
+  name: ALT_HLD
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/alt_hld_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/alt_hld_status}
+      - text: 'ALT HLD'
+        text-size: 46
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 9
+  name: VS
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/vs_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/vs_status}
+      - text: V/S
+        text-size: 60
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 10
+  name: CMD_A
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/cmd_a_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/cmd_a_status}
+      - text: CMD A
+        text-size: 52
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 11
+  name: CMD_B
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/cmd_b_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/cmd_b_status}
+      - text: CMD B
+        text-size: 52
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 12
+  name: CWS_A
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/cws_a_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/cws_a_status}
+      - text: CWS A
+        text-size: 52
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 13
+  name: FD_CAPT
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/flight_director_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/switches/autopilot/fd_ca}
+      - text: F/D
+        text-size: 60
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 14
+  name: AT_ARM
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/autothrottle_arm_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/autothrottle_status}
+      - text: A/T ARM
+        text-size: 46
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 15
+  name: IAS_MACH_CO
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/change_over_press
+  representation:
+    type: text
+    text: IAS/MACH
+    text-color: white
+    text-size: 18
+    text-font: DIN Bold
+    text-bg-color: (30, 30, 50)
+    text-position: cm
+
+# Row 2 (16-23) — MCP setpoint displays
+- index: 16
+  name: IAS_DISPLAY
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: IAS (kts)
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: cyan
+        text-size: 34
+        formula: '1'
+        text: ${sim/cockpit2/autopilot/airspeed_dial_kts_mach}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 17
+  name: HDG_DISPLAY
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: HDG (mag)
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: cyan
+        text-size: 34
+        formula: '1'
+        text: ${laminar/B738/autopilot/mcp_hdg_dial}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 18
+  name: ALT_DISPLAY
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ALT (ft)
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: cyan
+        text-size: 26
+        formula: '1'
+        text: ${laminar/B738/autopilot/mcp_alt_dial}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 19
+  name: VS_DISPLAY
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: V/S (fpm)
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: cyan
+        text-size: 28
+        formula: '1'
+        text: ${sim/cockpit2/autopilot/vvi_dial_fpm}
+        text-font: Seven Segment.ttf
+        text-format: '{0:+.0f}'
+
+- index: 20
+  name: CRS_PILOT_DISPLAY
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: CRS PILOT
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: cyan
+        text-size: 34
+        formula: '1'
+        text: ${laminar/B738/autopilot/course_pilot}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 21
+  name: CRS_COPILOT_DISPLAY
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: CRS F/O
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: cyan
+        text-size: 34
+        formula: '1'
+        text: ${laminar/B738/autopilot/course_copilot}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 22
+  name: BARO_DISPLAY
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/EFIS_control/capt/push_button/std_press
+  representation:
+    type: annunciator
+    label: BARO (set STD)
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/EFIS/baro_set_std_pilot}
+      - color: white
+        text-size: 16
+        formula: '1'
+        text: ${laminar/B738/EFIS/baro_sel_in_hg_pilot} inHg
+        text-format: '{0:.2f}'
+      - color: white
+        text-size: 16
+        formula: ${laminar/B738/EFIS/baro_sel_in_hg_pilot} 33.8639 *
+        text: '${formula} hPa'
+        text-format: '{0:.0f}'
+
+- index: 23
+  name: BANK_ANGLE
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: BANK ANGLE
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: white
+        text-size: 26
+        formula: '1'
+        text: ${laminar/B738/rotary/autopilot/bank_angle}
+        text-format: '{0:.0f}'
+
+# Row 3 (24-31) — pager (24-30) + home
+- index: 24
+  activation:
+    type: page
+    page: index
+  representation:
+    type: text
+    label: HOME
+    label-color: Gold
+    text:
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+- index: 25
+  activation:
+    type: page
+    page: mcp
+  representation:
+    type: text
+    label: MCP
+    text: MCP
+    text-color: cyan
+    text-size: 28
+    text-position: cm
+    text-bg-color: (20, 30, 50)
+
+- index: 26
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: OVERHEAD
+    text: OHD
+    text-color: yellow
+    text-size: 28
+    text-position: cm
+    text-bg-color: (30, 30, 20)
+
+- index: 27
+  activation:
+    type: page
+    page: radio
+  representation:
+    type: text
+    label: RADIO
+    text: RADIO
+    text-color: lime
+    text-size: 24
+    text-position: cm
+    text-bg-color: (20, 40, 20)
+
+- index: 28
+  activation:
+    type: page
+    page: engine
+  representation:
+    type: text
+    label: ENGINE
+    text: ENG
+    text-color: lime
+    text-size: 28
+    text-position: cm
+    text-bg-color: (20, 40, 20)
+
+- index: 29
+  activation:
+    type: page
+    page: lights
+  representation:
+    type: text
+    label: LIGHTS
+    text: LTS
+    text-color: white
+    text-size: 28
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+- index: 30
+  activation:
+    type: page
+    page: antiice
+  representation:
+    type: text
+    label: ANTI-ICE
+    text: A/ICE
+    text-color: cyan
+    text-size: 22
+    text-position: cm
+    text-bg-color: (20, 40, 50)
+
+- index: 31
+  activation:
+    type: page
+    page: index
+  representation:
+    type: text
+    label: HOME
+    label-color: Gold
+    text:
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

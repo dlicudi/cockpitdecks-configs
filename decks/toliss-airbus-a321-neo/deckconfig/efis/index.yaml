@@ -60,7 +60,6 @@ buttons:
   name: ND MODE
   activation:
     type: sweep
-    stops: 5
     initial-value: 2
     dataref: AirbusFBW/NDmodeCapt
     positions:
@@ -72,14 +71,14 @@ buttons:
       button-size: 50
       switch-style: medium
       down: 30
-      tick-from: 90
-      tick-to: 270
+      angle-start: 270
+      angle-end: 90
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
-      tick-labels:
+      ticks:
       - LS
       - VOR
       - NAV
@@ -89,7 +88,6 @@ buttons:
   name: ND RANGE
   activation:
     type: sweep
-    stops: 6
     initial-value: 2
     dataref: AirbusFBW/NDrangeCapt
     positions:
@@ -101,14 +99,14 @@ buttons:
       button-size: 50
       switch-style: medium
       down: 30
-      tick-from: 90
-      tick-to: 315
+      angle-start: 270
+      angle-end: 135
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
-      tick-labels:
+      ticks:
       - '10'
       - '20'
       - '40'
@@ -119,7 +117,6 @@ buttons:
   name: INORMB
   activation:
     type: sweep
-    stops: 2
     set-dataref: AirbusFBW/BaroUnitCapt
     dataref: AirbusFBW/BaroUnitCapt
   representation:
@@ -128,15 +125,15 @@ buttons:
       button-size: 100
       switch-style: none
       down: 30
-      tick-from: 140
-      tick-to: 220
+      angle-start: 320
+      angle-end: 40
       tick-space: 10
       tick-underline-width: 8
       needle-color: white
       needle-length: 50
       tick-label-size: 36
       tick-label-font: D-DIN-Bold.otf
-      tick-labels:
+      ticks:
       - inHg
       - hPa
 - index: 4

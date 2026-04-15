@@ -1,0 +1,9 @@
+default-label-color: white
+default-label-font: DIN Medium.ttf
+default-label-size: 11
+default-text-size: 22
+default-label-position: ct
+default-homepage-name: index
+default-vibrate: SHORT
+default-icon-color: (30, 40, 55)
+default-annunciator-style: k

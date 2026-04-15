@@ -7,7 +7,6 @@ buttons:
   name: ATC ON
   activation:
     type: sweep
-    stops: 2
     dataref: AirbusFBW/XPDRTCASMode
     set-dataref: AirbusFBW/XPDRTCASMode
   representation:
@@ -20,12 +19,12 @@ buttons:
       button-fill-color: (200, 200, 200)
       button-stroke-color: white
       handle-fill-color: (180, 180, 180)
-      tick-from: 160
-      tick-to: 200
+      angle-start: 340
+      angle-end: 20
       tick-space: 36
       tick-width: 8
       tick-length: 24
-      tick-labels:
+      ticks:
       - AUTO
       - true
       tick-label-font: DIN Bold
@@ -89,7 +88,6 @@ buttons:
   name: ATC SYS
   activation:
     type: sweep
-    stops: 2
     dataref: AirbusFBW/XPDRSystem
     set-dataref: AirbusFBW/XPDRSystem
   representation:
@@ -102,12 +100,12 @@ buttons:
       button-fill-color: (200, 200, 200)
       button-stroke-color: white
       handle-fill-color: (180, 180, 180)
-      tick-from: 160
-      tick-to: 200
+      angle-start: 340
+      angle-end: 20
       tick-space: 36
       tick-width: 8
       tick-length: 24
-      tick-labels:
+      ticks:
       - '1'
       - '2'
       tick-label-font: DIN Bold
@@ -180,7 +178,6 @@ buttons:
   name: ATC ALT SELECT
   activation:
     type: sweep
-    stops: 3
     dataref: AirbusFBW/XPDRTCASAltSelect
     set-dataref: AirbusFBW/XPDRTCASAltSelect
   representation:
@@ -192,12 +189,12 @@ buttons:
       button-fill-color: (200, 200, 200)
       button-stroke-color: white
       handle-fill-color: (180, 180, 180)
-      tick-from: 240
-      tick-to: 300
+      angle-start: 60
+      angle-end: 120
       tick-space: 36
       tick-width: 8
       tick-length: 24
-      tick-labels:
+      ticks:
       - ABV
       - M
       - BLW
@@ -257,7 +254,6 @@ buttons:
   name: ATC
   activation:
     type: sweep
-    stops: 5
   representation:
     type: circular-switch
     formula: 4 ${ckpt/transponder/mode/anim} -
@@ -268,12 +264,12 @@ buttons:
       button-fill-color: (20, 30, 40)
       button-stroke-color: (180, 180, 180)
       handle-fill-color: (180, 180, 180)
-      tick-from: 210
-      tick-to: 330
+      angle-start: 30
+      angle-end: 150
       tick-space: 10
       tick-width: 8
       tick-length: 24
-      tick-labels:
+      ticks:
       - STBY
       - ALT RPTG OFF
       - XPNDR

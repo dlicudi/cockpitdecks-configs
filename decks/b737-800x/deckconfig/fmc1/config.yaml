@@ -1,0 +1,7 @@
+default-label-color: green
+default-label-font: D-DIN.otf
+default-label-size: 9
+default-text-size: 14
+default-label-position: ct
+home-page-name: index
+cockpit-color: (10, 10, 10)

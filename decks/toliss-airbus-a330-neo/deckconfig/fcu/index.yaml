@@ -80,7 +80,6 @@ buttons:
   name: ATCONOFF
   activation:
     type: sweep
-    stops: 2
     dataref: AirbusFBW/XPDRTCASMode
     set-dataref: AirbusFBW/XPDRTCASMode
   representation:
@@ -89,8 +88,8 @@ buttons:
       button-size: 50
       switch-style: medium
       down: 30
-      tick-from: 160
-      tick-to: 200
+      angle-start: 340
+      angle-end: 20
       tick-space: 40
       tick-underline-width: 8
       tick-label-color: coral
@@ -98,7 +97,7 @@ buttons:
       needle-color: white
       needle-length: 30
       tick-label-size: 28
-      tick-labels:
+      ticks:
       - AUTO
       - true
       left: 10
@@ -106,7 +105,6 @@ buttons:
   name: ATCSYS
   activation:
     type: sweep
-    stops: 3
     initial-value: 2
     dataref: AirbusFBW/XPDRSystem
     set-dataref: AirbusFBW/XPDRSystem
@@ -123,8 +121,8 @@ buttons:
       button-size: 50
       switch-style: medium
       down: 30
-      tick-from: 140
-      tick-to: 200
+      angle-start: 320
+      angle-end: 20
       tick-space: 40
       tick-underline-width: 8
       tick-label-color: coral
@@ -132,7 +130,7 @@ buttons:
       needle-color: white
       needle-length: 30
       tick-label-size: 28
-      tick-labels:
+      ticks:
       - ' '
       - '1'
       - '2'
@@ -171,7 +169,6 @@ buttons:
   name: TCASMODE
   activation:
     type: sweep
-    stops: 5
     dataref: AirbusFBW/XPDRPower
     set-dataref: AirbusFBW/XPDRPower
   representation:
@@ -180,8 +177,8 @@ buttons:
       button-size: 50
       switch-style: medium
       down: 30
-      tick-from: 200
-      tick-to: 340
+      angle-start: 20
+      angle-end: 160
       tick-space: 40
       tick-underline-width: 8
       tick-label-color: coral
@@ -190,7 +187,7 @@ buttons:
       needle-length: 30
       tick-label-size: 24
       tick-label-font: DIN Bold
-      tick-labels:
+      ticks:
       - STBY
       - ALT RPTG OFF
       - XPNDR
@@ -202,7 +199,6 @@ buttons:
   name: ATCMODE
   activation:
     type: sweep
-    stops: 3
     initial-value: 2
     set-dataref: AirbusFBW/XPDRTCASAltSelect
   representation:
@@ -211,8 +207,8 @@ buttons:
       button-size: 50
       switch-style: medium
       down: 30
-      tick-from: 220
-      tick-to: 320
+      angle-start: 40
+      angle-end: 140
       tick-space: 40
       tick-underline-width: 8
       tick-label-color: coral
@@ -220,7 +216,7 @@ buttons:
       needle-color: white
       needle-length: 30
       tick-label-size: 28
-      tick-labels:
+      ticks:
       - ABV
       - N
       - BLW

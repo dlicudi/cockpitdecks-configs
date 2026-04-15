@@ -330,7 +330,6 @@ buttons:
   name: RWYLIGHT
   activation:
     type: sweep
-    stops: 4
     initial-value: 0
     positions:
     - sim/operation/rwy_lights_off
@@ -349,12 +348,12 @@ buttons:
       tick-length: 24
       tick-label-size: 30
       tick-label-font: DIN Bold
-      tick-from: 210
-      tick-to: 330
+      angle-start: 30
+      angle-end: 150
       tick-color: white
       tick-width: 8
       tick-underline-width: 8
-      tick-labels:
+      ticks:
       - 'OFF'
       - LO
       - MD

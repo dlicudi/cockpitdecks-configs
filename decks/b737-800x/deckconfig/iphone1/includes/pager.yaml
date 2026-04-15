@@ -1,0 +1,55 @@
+name: pager
+fill-empty-keys: false
+buttons:
+- index: 7
+  activation:
+    type: page
+    page: index
+  representation:
+    type: text
+    label: HOME
+    text:
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+- index: 15
+  activation:
+    type: page
+    page: mcp
+  representation:
+    type: text
+    label: MCP
+    text: MCP
+    text-color: cyan
+    text-size: 22
+    text-position: cm
+    text-bg-color: (20, 30, 50)
+
+- index: 23
+  activation:
+    type: page
+    page: engine
+  representation:
+    type: text
+    label: ENGINE
+    text: ENG
+    text-color: lime
+    text-size: 22
+    text-position: cm
+    text-bg-color: (20, 40, 20)
+
+- index: 31
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: OVERHEAD
+    text: OHD
+    text-color: yellow
+    text-size: 22
+    text-position: cm
+    text-bg-color: (30, 30, 20)

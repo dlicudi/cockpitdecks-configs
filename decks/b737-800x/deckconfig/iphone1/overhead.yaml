@@ -1,0 +1,717 @@
+name: overhead
+description: Overhead panel — power, fuel, hydraulics, bleed air
+includes:
+- includes/pager
+buttons:
+# Row 0 (0-6) — Electrical
+- index: 0
+  name: APU_START
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/apu_start_pos
+  representation:
+    type: annunciator
+    label: APU START
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/electric/apu_gen_on}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/electric/apu_gen_on}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/electric/apu_gen_on} not
+        text-size: 46
+
+- index: 1
+  name: APU_GEN1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/electric/apu_gen1_pos
+  representation:
+    type: annunciator
+    label: APU GEN1
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/electric/apu_gen1_status}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/electric/apu_gen1_status}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/electric/apu_gen1_status} not
+        text-size: 46
+
+- index: 2
+  name: GEN1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/electric/gen1_pos
+  representation:
+    type: annunciator
+    label: GEN 1
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/gen_off_bus1}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/electric/gen1_status}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/electric/gen1_status} not
+        text-size: 46
+
+- index: 3
+  name: GEN2
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/electric/gen2_pos
+  representation:
+    type: annunciator
+    label: GEN 2
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/gen_off_bus2}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/electric/gen2_status}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/electric/gen2_status} not
+        text-size: 46
+
+- index: 4
+  name: STBY_PWR
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/electric/battery_pos
+  representation:
+    type: annunciator
+    label: STBY PWR
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/standby_pwr_off}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/electric/battery_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/electric/battery_pos} not
+        text-size: 46
+
+- index: 5
+  name: YAW_DAMPER
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/yaw_dumper_pos
+  representation:
+    type: annunciator
+    label: YAW DMPR
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/toggle_switch/yaw_dumper_pos}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/toggle_switch/yaw_dumper_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/toggle_switch/yaw_dumper_pos} not
+        text-size: 46
+
+- index: 6
+  name: GPU
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/electric/gpu_pos
+  representation:
+    type: annunciator
+    label: GPU
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/electric/gpu_status}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/electric/gpu_status}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/electric/gpu_status} not
+        text-size: 46
+
+# Row 1 (8-14) — Fuel pumps
+- index: 8
+  name: FUEL_PUMP_L1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/fuel/fuel_tank_pos_lft1
+  representation:
+    type: annunciator
+    label: FUEL L1
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/low_fuel_pressure_1}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/fuel/fuel_tank_pos_lft1}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/fuel/fuel_tank_pos_lft1} not
+        text-size: 46
+
+- index: 9
+  name: FUEL_PUMP_L2
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/fuel/fuel_tank_pos_lft2
+  representation:
+    type: annunciator
+    label: FUEL L2
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/fuel/fuel_tank_pos_lft2}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/fuel/fuel_tank_pos_lft2} not
+        text-size: 46
+
+- index: 10
+  name: FUEL_PUMP_CTR1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/fuel/fuel_tank_pos_ctr1
+  representation:
+    type: annunciator
+    label: FUEL C1
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/fuel/fuel_tank_pos_ctr1}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/fuel/fuel_tank_pos_ctr1} not
+        text-size: 46
+
+- index: 11
+  name: FUEL_PUMP_CTR2
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/fuel/fuel_tank_pos_ctr2
+  representation:
+    type: annunciator
+    label: FUEL C2
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/fuel/fuel_tank_pos_ctr2}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/fuel/fuel_tank_pos_ctr2} not
+        text-size: 46
+
+- index: 12
+  name: FUEL_PUMP_R1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/fuel/fuel_tank_pos_rgt1
+  representation:
+    type: annunciator
+    label: FUEL R1
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/low_fuel_pressure_2}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/fuel/fuel_tank_pos_rgt1}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/fuel/fuel_tank_pos_rgt1} not
+        text-size: 46
+
+- index: 13
+  name: FUEL_PUMP_R2
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/fuel/fuel_tank_pos_rgt2
+  representation:
+    type: annunciator
+    label: FUEL R2
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/fuel/fuel_tank_pos_rgt2}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/fuel/fuel_tank_pos_rgt2} not
+        text-size: 46
+
+- index: 14
+  name: CROSSFEED
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/fuel/cross_feed_pos
+  representation:
+    type: annunciator
+    label: XFEED
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: amber
+        framed: true
+        formula: ${laminar/B738/fuel/cross_feed_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: (60, 60, 60)
+        formula: ${laminar/B738/fuel/cross_feed_pos} not
+        text-size: 46
+
+# Row 2 (16-22) — Hydraulics + bleed
+- index: 16
+  name: HYD_ENG1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/hyd_eng1_pump_pos
+  representation:
+    type: annunciator
+    label: HYD ENG1
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/hyd_sys_a}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/toggle_switch/hyd_eng1_pump_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/toggle_switch/hyd_eng1_pump_pos} not
+        text-size: 46
+
+- index: 17
+  name: HYD_ENG2
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/hyd_eng2_pump_pos
+  representation:
+    type: annunciator
+    label: HYD ENG2
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/hyd_sys_b}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/toggle_switch/hyd_eng2_pump_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/toggle_switch/hyd_eng2_pump_pos} not
+        text-size: 46
+
+- index: 18
+  name: ELEC_HYD_A
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/hyd_elec_pump_a_pos
+  representation:
+    type: annunciator
+    label: ELEC A
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/toggle_switch/hyd_elec_pump_a_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/toggle_switch/hyd_elec_pump_a_pos} not
+        text-size: 46
+
+- index: 19
+  name: ELEC_HYD_B
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/hyd_elec_pump_b_pos
+  representation:
+    type: annunciator
+    label: ELEC B
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/toggle_switch/hyd_elec_pump_b_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/toggle_switch/hyd_elec_pump_b_pos} not
+        text-size: 46
+
+- index: 20
+  name: BLEED_1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/bleed_air_1
+  representation:
+    type: annunciator
+    label: BLEED 1
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/bleed_trip_1}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/toggle_switch/bleed_air_1_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/toggle_switch/bleed_air_1_pos} not
+        text-size: 46
+
+- index: 21
+  name: BLEED_2
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/bleed_air_2
+  representation:
+    type: annunciator
+    label: BLEED 2
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/bleed_trip_2}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/toggle_switch/bleed_air_2_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/toggle_switch/bleed_air_2_pos} not
+        text-size: 46
+
+- index: 22
+  name: BLEED_APU
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/bleed_air_apu
+  representation:
+    type: annunciator
+    label: BLEED APU
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/toggle_switch/bleed_air_apu_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/toggle_switch/bleed_air_apu_pos} not
+        text-size: 46
+
+# Row 3 (24-30) — Anti-ice overview
+- index: 24
+  name: WING_ANTI_ICE
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/wing_heat
+  representation:
+    type: annunciator
+    label: WING A/ICE
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/annunciator/wing_ice_on_L}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/ice/wing_heat_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/ice/wing_heat_pos} not
+        text-size: 46
+
+- index: 25
+  name: ENG1_ANTI_ICE
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/eng1_heat
+  representation:
+    type: annunciator
+    label: ENG1 A/ICE
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/annunciator/cowl_ice_on_0}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/ice/eng1_heat_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/ice/eng1_heat_pos} not
+        text-size: 46
+
+- index: 26
+  name: ENG2_ANTI_ICE
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/eng2_heat
+  representation:
+    type: annunciator
+    label: ENG2 A/ICE
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/annunciator/cowl_ice_on_1}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/ice/eng2_heat_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/ice/eng2_heat_pos} not
+        text-size: 46
+
+- index: 27
+  name: WDOW_L_FWD
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/window_heat_l_fwd
+  representation:
+    type: annunciator
+    label: WDOW L FWD
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/window_heat_ovht_lf}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/ice/window_heat_l_fwd_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/ice/window_heat_l_fwd_pos} not
+        text-size: 46
+
+- index: 28
+  name: WDOW_R_FWD
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/window_heat_r_fwd
+  representation:
+    type: annunciator
+    label: WDOW R FWD
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/ice/window_heat_r_fwd_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/ice/window_heat_r_fwd_pos} not
+        text-size: 46
+
+- index: 29
+  name: BLEED_TRIP_RESET
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/push_button/bleed_trip_reset
+  representation:
+    type: annunciator
+    label: BLEED TRIP
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/bleed_trip_1} ${laminar/B738/annunciator/bleed_trip_2} +
+      - text: RESET
+        text-color: white
+        text-size: 32
+        formula: '1'
+
+- index: 30
+  name: DUAL_BLEED
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: DUAL BLEED
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/dual_bleed}

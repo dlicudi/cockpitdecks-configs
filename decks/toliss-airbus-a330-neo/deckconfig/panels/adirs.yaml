@@ -108,7 +108,6 @@ buttons:
   name: ADIRS1
   activation:
     type: sweep
-    stops: 3
     dataref: AirbusFBW/ADIRUSwitchArray[0]
     initial-value: 0
     positions:
@@ -124,12 +123,12 @@ buttons:
       button-fill-color: (30, 40, 50)
       button-stroke-color: black
       handle-fill-color: (60, 70, 80)
-      tick-from: 140
-      tick-to: 220
+      angle-start: 320
+      angle-end: 40
       tick-space: 36
       tick-width: 8
       tick-length: 24
-      tick-labels:
+      ticks:
       - false
       - NAV
       - ATT
@@ -140,7 +139,6 @@ buttons:
   name: ADIRS3
   activation:
     type: sweep
-    stops: 3
     dataref: AirbusFBW/ADIRUSwitchArray[2]
     initial-value: 0
     positions:
@@ -156,12 +154,12 @@ buttons:
       button-fill-color: (30, 40, 50)
       button-stroke-color: black
       handle-fill-color: (60, 70, 80)
-      tick-from: 140
-      tick-to: 220
+      angle-start: 320
+      angle-end: 40
       tick-space: 36
       tick-width: 8
       tick-length: 24
-      tick-labels:
+      ticks:
       - false
       - NAV
       - ATT
@@ -172,7 +170,6 @@ buttons:
   name: ADIRS2
   activation:
     type: sweep
-    stops: 3
     dataref: AirbusFBW/ADIRUSwitchArray[1]
     initial-value: 0
     positions:
@@ -188,12 +185,12 @@ buttons:
       button-fill-color: (30, 40, 50)
       button-stroke-color: black
       handle-fill-color: (60, 70, 80)
-      tick-from: 140
-      tick-to: 220
+      angle-start: 320
+      angle-end: 40
       tick-space: 36
       tick-width: 8
       tick-length: 24
-      tick-labels:
+      ticks:
       - false
       - NAV
       - ATT

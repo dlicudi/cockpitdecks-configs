@@ -6,7 +6,6 @@ buttons:
 - index: 0
   activation:
     type: sweep
-    stops: 3
     dataref: XCrafts/ERJ/APU_switch
     set-dataref: XCrafts/ERJ/APU_switch
   representation:
@@ -18,22 +17,21 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 180
-      tick-to: 310
+      angle-start: 0
+      angle-end: 130
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - 'ON'
       - START
 - index: 1
   activation:
     type: sweep
-    stops: 3
     dataref: sim/cockpit2/switches/wiper_speed_switch[0]
     set-dataref: sim/cockpit2/switches/wiper_speed_switch[0]
   representation:
@@ -45,22 +43,21 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 180
-      tick-to: 310
+      angle-start: 0
+      angle-end: 130
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - LOW
       - HIGH
 - index: 2
   activation:
     type: sweep
-    stops: 3
     dataref: sim/cockpit2/switches/wiper_speed_switch[1]
     set-dataref: sim/cockpit2/switches/wiper_speed_switch[1]
   representation:
@@ -72,15 +69,15 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 180
-      tick-to: 310
+      angle-start: 0
+      angle-end: 130
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - LOW
       - HIGH
@@ -337,7 +334,6 @@ buttons:
 - index: 16
   activation:
     type: sweep
-    stops: 3
     dataref: XCrafts/ERJ/Hydraulics1
     set-dataref: XCrafts/ERJ/Hydraulics1
   representation:
@@ -349,22 +345,21 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 140
-      tick-to: 220
+      angle-start: 320
+      angle-end: 40
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - AUTO
       - 'ON'
 - index: 17
   activation:
     type: sweep
-    stops: 3
     dataref: XCrafts/hydraulic/PTU_switch
     set-dataref: XCrafts/hydraulic/PTU_switch
   representation:
@@ -376,22 +371,21 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 140
-      tick-to: 220
+      angle-start: 320
+      angle-end: 40
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - AUTO
       - 'ON'
 - index: 18
   activation:
     type: sweep
-    stops: 3
     dataref: XCrafts/ERJ/Hydraulics2
     set-dataref: XCrafts/ERJ/Hydraulics2
   representation:
@@ -403,22 +397,21 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 140
-      tick-to: 220
+      angle-start: 320
+      angle-end: 40
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - AUTO
       - 'ON'
 - index: 19
   activation:
     type: sweep
-    stops: 2
     dataref: XCrafts/hydraulic/sys3_elec_pump_a_switch
     set-dataref: XCrafts/hydraulic/sys3_elec_pump_a_switch
   representation:
@@ -430,21 +423,20 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 120
-      tick-to: 180
+      angle-start: 300
+      angle-end: 0
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - 'ON'
 - index: 20
   activation:
     type: sweep
-    stops: 3
     dataref: XCrafts/hydraulic/sys3_elec_pump_b_switch
     set-dataref: XCrafts/hydraulic/sys3_elec_pump_b_switch
   representation:
@@ -456,15 +448,15 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 140
-      tick-to: 220
+      angle-start: 320
+      angle-end: 40
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - AUTO
       - 'ON'

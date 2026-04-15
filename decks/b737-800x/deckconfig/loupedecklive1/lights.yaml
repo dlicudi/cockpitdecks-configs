@@ -1,0 +1,292 @@
+name: lights
+description: Exterior and cabin lights
+includes:
+- includes/pager
+buttons:
+# Row 0 — Landing lights
+- index: 0
+  name: LAND_LIGHT_L
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/land_lights_ret_left_up
+  representation:
+    type: annunciator
+    label: LAND L
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} not
+        text-size: 52
+  vibrate: SHORT
+
+- index: 1
+  name: LAND_LIGHT_R
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/land_lights_ret_right_up
+  representation:
+    type: annunciator
+    label: LAND R
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/landing_lights_switch[1]}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/landing_lights_switch[1]} not
+        text-size: 52
+  vibrate: SHORT
+
+- index: 2
+  name: STROBE
+  activation:
+    type: push
+    commands:
+      press: sim/lights/strobe_lights_toggle
+  representation:
+    type: annunciator
+    label: STROBE
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/strobe_lights_on}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/strobe_lights_on} not
+        text-size: 52
+  vibrate: SHORT
+
+# Row 1 — Nav / Beacon / Taxi
+- index: 3
+  name: NAV_LIGHTS
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/position_light_up
+  representation:
+    type: annunciator
+    label: NAV
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/navigation_lights_on}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/navigation_lights_on} not
+        text-size: 52
+  vibrate: SHORT
+
+- index: 4
+  name: BEACON
+  activation:
+    type: push
+    commands:
+      press: sim/lights/beacon_lights_toggle
+  representation:
+    type: annunciator
+    label: BEACON
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/beacon_on}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/beacon_on} not
+        text-size: 52
+  vibrate: SHORT
+
+- index: 5
+  name: LOGO_LIGHT
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/logo_light_on
+  representation:
+    type: annunciator
+    label: LOGO
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[8]}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[8]} not
+        text-size: 52
+
+# Row 2 — Runway / Wing / Wheel
+- index: 6
+  name: RWY_LIGHT_L
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/rwy_light_left_on
+  representation:
+    type: annunciator
+    label: RWY L
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[3]}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[3]} not
+        text-size: 52
+
+- index: 7
+  name: RWY_LIGHT_R
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/rwy_light_right_on
+  representation:
+    type: annunciator
+    label: RWY R
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[4]}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[4]} not
+        text-size: 52
+
+- index: 8
+  name: WING_LIGHT
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/wing_light_on
+  representation:
+    type: annunciator
+    label: WING
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[5]}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[5]} not
+        text-size: 52
+
+# Row 3 — Cabin signs
+- index: 9
+  name: SEATBELT
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/seatbelt_sign_up
+  representation:
+    type: annunciator
+    label: SEAT BELT
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/fasten_seat_belts}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/fasten_seat_belts} not
+        text-size: 52
+
+- index: 10
+  name: NO_SMOKING
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/no_smoking_up
+  representation:
+    type: annunciator
+    label: NO SMOKE
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/no_smoking}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/no_smoking} not
+        text-size: 52
+
+- index: 11
+  name: WHEEL_LIGHT
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/wheel_light_on
+  representation:
+    type: annunciator
+    label: WHEEL WELL
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[6]}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[6]} not
+        text-size: 52

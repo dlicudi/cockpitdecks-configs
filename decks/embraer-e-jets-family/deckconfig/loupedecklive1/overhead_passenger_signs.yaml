@@ -8,7 +8,6 @@ buttons:
 - index: 0
   activation:
     type: sweep
-    stops: 3
     set-dataref: XCrafts/light/emerg_switch
   representation:
     type: circular-switch
@@ -19,15 +18,15 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 120
-      tick-to: 240
+      angle-start: 300
+      angle-end: 60
       tick-space: 40
       tick-underline-width: 4
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - ARMED
       - 'ON'

@@ -1,0 +1,249 @@
+name: mcp
+description: MCP - Mode Control Panel
+includes:
+- includes/pager
+- encoders/encoders_mcp
+buttons:
+# Row 0 — Lateral / Vertical modes
+- index: 0
+  name: N1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/n1_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/n1_status}
+      - text: N1
+        text-size: 64
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 1
+  name: SPD
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/speed_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/speed_status1}
+      - text: SPD
+        text-size: 60
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 2
+  name: LVL_CHG
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/lvl_chg_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/lvl_chg_status}
+      - text: 'LVL CHG'
+        text-size: 46
+        text-font: DIN Bold
+        formula: '1'
+
+# Row 1
+- index: 3
+  name: VNAV
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/vnav_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/vnav_status1}
+      - text: VNAV
+        text-size: 56
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 4
+  name: LNAV
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/lnav_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/lnav_status}
+      - text: LNAV
+        text-size: 56
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 5
+  name: VOR_LOC
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/vorloc_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/vorloc_status}
+      - text: 'VOR LOC'
+        text-size: 44
+        text-font: DIN Bold
+        formula: '1'
+
+# Row 2
+- index: 6
+  name: APP
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/app_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/app_status}
+      - text: APP
+        text-size: 60
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 7
+  name: HDG_SEL
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/hdg_sel_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/hdg_sel_status}
+      - text: 'HDG SEL'
+        text-size: 46
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 8
+  name: ALT_HLD
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/alt_hld_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/alt_hld_status}
+      - text: 'ALT HLD'
+        text-size: 46
+        text-font: DIN Bold
+        formula: '1'
+
+# Row 3 — Engagement
+- index: 9
+  name: VS
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/vs_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/vs_status}
+      - text: V/S
+        text-size: 60
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 10
+  name: CMD_A
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/cmd_a_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/cmd_a_status}
+      - text: CMD A
+        text-size: 52
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 11
+  name: CMD_B
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/cmd_b_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/cmd_b_status}
+      - text: CMD B
+        text-size: 52
+        text-font: DIN Bold
+        formula: '1'

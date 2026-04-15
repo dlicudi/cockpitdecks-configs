@@ -1,0 +1,64 @@
+buttons:
+- index: b0
+  name: PAGE_INDEX
+  activation:
+    type: page
+    page: index
+  representation:
+    type: colored-led
+  colored-led: orange
+- index: b1
+  name: PAGE_MCP
+  activation:
+    type: page
+    page: mcp
+  representation:
+    type: colored-led
+  colored-led: green
+- index: b2
+  name: PAGE_OVERHEAD
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: colored-led
+  colored-led: blue
+- index: b3
+  name: PAGE_RADIO
+  activation:
+    type: page
+    page: radio
+  representation:
+    type: colored-led
+  colored-led: yellow
+- index: b4
+  name: PAGE_ENGINE
+  activation:
+    type: page
+    page: engine
+  representation:
+    type: colored-led
+  colored-led: green
+- index: b5
+  name: PAGE_LIGHTS
+  activation:
+    type: page
+    page: lights
+  representation:
+    type: colored-led
+  colored-led: white
+- index: b6
+  name: PAGE_ANTIICE
+  activation:
+    type: page
+    page: antiice
+  representation:
+    type: colored-led
+  colored-led: cyan
+- index: b7
+  name: PAGE_BLANK
+  activation:
+    type: none
+  representation:
+    type: colored-led
+  colored-led: (20, 20, 20)

@@ -1,0 +1,74 @@
+buttons:
+- index: e0
+  name: MCP_IAS
+  activation:
+    type: encoder-push
+    commands:
+      cw: sim/autopilot/airspeed_up
+      ccw: sim/autopilot/airspeed_down
+      press: laminar/B738/autopilot/change_over_press
+  representation:
+    type: none
+
+- index: e1
+  name: MCP_HDG
+  activation:
+    type: encoder
+    commands:
+      cw: laminar/B738/autopilot/heading_up
+      ccw: laminar/B738/autopilot/heading_dn
+  representation:
+    type: none
+
+- index: e2
+  name: MCP_ALT
+  activation:
+    type: encoder
+    commands:
+      cw: laminar/B738/autopilot/altitude_up
+      ccw: laminar/B738/autopilot/altitude_dn
+  representation:
+    type: none
+
+- index: e3
+  name: MCP_VS
+  activation:
+    type: encoder
+    commands:
+      cw: sim/autopilot/vertical_speed_up
+      ccw: sim/autopilot/vertical_speed_dn
+  representation:
+    type: none
+
+- index: e4
+  name: MCP_CRS
+  activation:
+    type: encoder
+    commands:
+      cw: laminar/B738/autopilot/course_pilot_up
+      ccw: laminar/B738/autopilot/course_pilot_dn
+  representation:
+    type: none
+
+- index: e5
+  name: BARO
+  activation:
+    type: encoder-push
+    commands:
+      cw: laminar/B738/pilot/barometer_up
+      ccw: laminar/B738/pilot/barometer_down
+      press: laminar/B738/EFIS_control/capt/push_button/std_press
+  representation:
+    type: none
+
+- index: left
+  name: MCP_DISPLAYS
+  activation:
+    type: none
+  representation:
+    type: none
+  multi-datarefs:
+  - sim/cockpit2/autopilot/airspeed_dial_kts_mach
+  - laminar/B738/autopilot/mcp_hdg_dial
+  - laminar/B738/autopilot/mcp_alt_dial
+  - sim/cockpit2/autopilot/vvi_dial_fpm

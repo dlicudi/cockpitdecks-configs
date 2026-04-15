@@ -1,0 +1,447 @@
+name: antiice
+description: Anti-ice — wing, engines, windows, probes, bleed air
+includes:
+- includes/pagercompact
+buttons:
+# Row 0 (0-7) — Wing, engine anti-ice, window heat
+- index: 0
+  name: WING_ANTI_ICE
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/wing_heat
+  representation:
+    type: annunciator
+    label: WING A/ICE
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/annunciator/wing_ice_on_L}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/ice/wing_heat_pos}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/ice/wing_heat_pos} not
+        text-size: 52
+
+- index: 1
+  name: ENG1_ANTI_ICE
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/eng1_heat
+  representation:
+    type: annunciator
+    label: ENG1 A/ICE
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/annunciator/cowl_ice_on_0}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/ice/eng1_heat_pos}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/ice/eng1_heat_pos} not
+        text-size: 52
+
+- index: 2
+  name: ENG2_ANTI_ICE
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/eng2_heat
+  representation:
+    type: annunciator
+    label: ENG2 A/ICE
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/annunciator/cowl_ice_on_1}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/ice/eng2_heat_pos}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/ice/eng2_heat_pos} not
+        text-size: 52
+
+- index: 3
+  name: WDOW_L_FWD
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/window_heat_l_fwd
+  representation:
+    type: annunciator
+    label: WDOW L FWD
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/window_heat_ovht_lf}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/ice/window_heat_l_fwd_pos}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/ice/window_heat_l_fwd_pos} not
+        text-size: 52
+
+- index: 4
+  name: WDOW_L_SIDE
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/window_heat_l_side
+  representation:
+    type: annunciator
+    label: WDOW L SIDE
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/ice/window_heat_l_side_pos}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/ice/window_heat_l_side_pos} not
+        text-size: 52
+
+- index: 5
+  name: WDOW_R_FWD
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/window_heat_r_fwd
+  representation:
+    type: annunciator
+    label: WDOW R FWD
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/ice/window_heat_r_fwd_pos}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/ice/window_heat_r_fwd_pos} not
+        text-size: 52
+
+- index: 6
+  name: WDOW_R_SIDE
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/window_heat_r_side
+  representation:
+    type: annunciator
+    label: WDOW R SIDE
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/ice/window_heat_r_side_pos}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/ice/window_heat_r_side_pos} not
+        text-size: 52
+
+- index: 7
+  name: BLEED_TRIP_RESET
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/push_button/bleed_trip_reset
+  representation:
+    type: annunciator
+    label: BLEED TRIP
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/bleed_trip_1} ${laminar/B738/annunciator/bleed_trip_2} +
+      - text: RESET
+        text-color: white
+        text-size: 46
+        formula: '1'
+
+# Row 1 (8-15) — Probes + bleed air
+- index: 8
+  name: PROBES_CAPT
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/capt_probes_pos
+  representation:
+    type: annunciator
+    label: PROBES CAPT
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/capt_pitot_off}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/toggle_switch/capt_probes_pos}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/toggle_switch/capt_probes_pos} not
+        text-size: 52
+
+- index: 9
+  name: PROBES_FO
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/fo_probes_pos
+  representation:
+    type: annunciator
+    label: PROBES F/O
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/fo_pitot_off}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/toggle_switch/fo_probes_pos}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/toggle_switch/fo_probes_pos} not
+        text-size: 52
+
+- index: 10
+  name: BLEED_1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/bleed_air_1
+  representation:
+    type: annunciator
+    label: BLEED 1
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/bleed_trip_1}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/toggle_switch/bleed_air_1_pos}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/toggle_switch/bleed_air_1_pos} not
+        text-size: 52
+
+- index: 11
+  name: BLEED_2
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/bleed_air_2
+  representation:
+    type: annunciator
+    label: BLEED 2
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/bleed_trip_2}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/toggle_switch/bleed_air_2_pos}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/toggle_switch/bleed_air_2_pos} not
+        text-size: 52
+
+- index: 12
+  name: BLEED_APU
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/bleed_air_apu
+  representation:
+    type: annunciator
+    label: BLEED APU
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/toggle_switch/bleed_air_apu_pos}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/toggle_switch/bleed_air_apu_pos} not
+        text-size: 52
+
+# Row 3 (24-31) — pager
+- index: 24
+  activation:
+    type: page
+    page: index
+  representation:
+    type: text
+    label: HOME
+    label-color: Gold
+    text:
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+- index: 25
+  activation:
+    type: page
+    page: mcp
+  representation:
+    type: text
+    label: MCP
+    text: MCP
+    text-color: cyan
+    text-size: 28
+    text-position: cm
+    text-bg-color: (20, 30, 50)
+
+- index: 26
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: OVERHEAD
+    text: OHD
+    text-color: yellow
+    text-size: 28
+    text-position: cm
+    text-bg-color: (30, 30, 20)
+
+- index: 27
+  activation:
+    type: page
+    page: radio
+  representation:
+    type: text
+    label: RADIO
+    text: RADIO
+    text-color: lime
+    text-size: 24
+    text-position: cm
+    text-bg-color: (20, 40, 20)
+
+- index: 28
+  activation:
+    type: page
+    page: engine
+  representation:
+    type: text
+    label: ENGINE
+    text: ENG
+    text-color: lime
+    text-size: 28
+    text-position: cm
+    text-bg-color: (20, 40, 20)
+
+- index: 29
+  activation:
+    type: page
+    page: lights
+  representation:
+    type: text
+    label: LIGHTS
+    text: LTS
+    text-color: white
+    text-size: 28
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+- index: 30
+  activation:
+    type: page
+    page: antiice
+  representation:
+    type: text
+    label: ANTI-ICE
+    text: A/ICE
+    text-color: cyan
+    text-size: 22
+    text-position: cm
+    text-bg-color: (20, 40, 50)
+
+- index: 31
+  activation:
+    type: page
+    page: index
+  representation:
+    type: text
+    label: HOME
+    label-color: Gold
+    text:
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

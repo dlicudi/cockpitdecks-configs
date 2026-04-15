@@ -1,0 +1,433 @@
+name: engine
+description: Engine monitoring — N1, EGT, FF, oil, fuel quantity
+includes:
+- includes/pagercompact
+buttons:
+# Row 0 (0-7) — Engine primary
+- index: 0
+  name: N1_ENG1
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: N1 ENG 1
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: lime
+        text-size: 34
+        formula: '1'
+        text: ${sim/cockpit2/engine/indicators/N1_percent[0]}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.1f}'
+
+- index: 1
+  name: N1_ENG2
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: N1 ENG 2
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: lime
+        text-size: 34
+        formula: '1'
+        text: ${sim/cockpit2/engine/indicators/N1_percent[1]}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.1f}'
+
+- index: 2
+  name: EGT_ENG1
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: EGT ENG 1
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: yellow
+        text-size: 30
+        formula: '1'
+        text: ${sim/cockpit2/engine/indicators/EGT_deg_cel[0]}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 3
+  name: EGT_ENG2
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: EGT ENG 2
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: yellow
+        text-size: 30
+        formula: '1'
+        text: ${sim/cockpit2/engine/indicators/EGT_deg_cel[1]}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 4
+  name: FF_ENG1
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: FF E1 (PPH)
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: cyan
+        text-size: 28
+        formula: ${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 7936.64 *
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 5
+  name: FF_ENG2
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: FF E2 (PPH)
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: cyan
+        text-size: 28
+        formula: ${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[1]} 7936.64 *
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 6
+  name: N2_ENG1
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: N2 ENG 1
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: white
+        text-size: 30
+        formula: '1'
+        text: ${sim/cockpit2/engine/indicators/N2_percent[0]}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.1f}'
+
+- index: 7
+  name: N2_ENG2
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: N2 ENG 2
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: white
+        text-size: 30
+        formula: '1'
+        text: ${sim/cockpit2/engine/indicators/N2_percent[1]}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.1f}'
+
+# Row 1 (8-15) — Oil + fuel quantity
+- index: 8
+  name: OIL_PRESS_E1
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: OIL PSI E1
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: white
+        text-size: 28
+        formula: '1'
+        text: ${sim/cockpit2/engine/indicators/oil_pressure_psi[0]}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 9
+  name: OIL_PRESS_E2
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: OIL PSI E2
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: white
+        text-size: 28
+        formula: '1'
+        text: ${sim/cockpit2/engine/indicators/oil_pressure_psi[1]}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 10
+  name: FUEL_QTY_LEFT
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: FUEL L (lbs)
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: yellow
+        text-size: 28
+        formula: ${sim/cockpit2/fuel/fuel_quantity[0]} 2.20462 *
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 11
+  name: FUEL_QTY_CTR
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: FUEL C (lbs)
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: yellow
+        text-size: 28
+        formula: ${sim/cockpit2/fuel/fuel_quantity[2]} 2.20462 *
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 12
+  name: FUEL_QTY_RIGHT
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: FUEL R (lbs)
+    label-size: 10
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: yellow
+        text-size: 28
+        formula: ${sim/cockpit2/fuel/fuel_quantity[1]} 2.20462 *
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 13
+  name: MIX_ENG1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/engine/mixture1_toggle
+  representation:
+    type: annunciator
+    label: MIX ENG1
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'CUTOFF'
+        text-color: red
+        framed: true
+        formula: ${laminar/B738/engine/mixture_ratio1} 0 eq
+        text-size: 40
+      - text: 'RUN'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/engine/mixture_ratio1} 0 gt
+        text-size: 52
+  vibrate: LONG
+
+- index: 14
+  name: MIX_ENG2
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/engine/mixture2_toggle
+  representation:
+    type: annunciator
+    label: MIX ENG2
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'CUTOFF'
+        text-color: red
+        framed: true
+        formula: ${laminar/B738/engine/mixture_ratio2} 0 eq
+        text-size: 40
+      - text: 'RUN'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/engine/mixture_ratio2} 0 gt
+        text-size: 52
+  vibrate: LONG
+
+- index: 15
+  name: PARKING_BRAKE
+  activation:
+    type: push
+    commands:
+      press: sim/flight_controls/park_brake_valve_toggle
+  representation:
+    type: annunciator
+    label: PARK BRK
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: red
+        framed: true
+        formula: ${laminar/B738/annunciator/parking_brake}
+        text-size: 52
+      - text: 'OFF'
+        text-color: green
+        formula: ${laminar/B738/annunciator/parking_brake} not
+        text-size: 52
+
+# Row 3 (24-31) — pager
+- index: 24
+  activation:
+    type: page
+    page: index
+  representation:
+    type: text
+    label: HOME
+    label-color: Gold
+    text:
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+- index: 25
+  activation:
+    type: page
+    page: mcp
+  representation:
+    type: text
+    label: MCP
+    text: MCP
+    text-color: cyan
+    text-size: 28
+    text-position: cm
+    text-bg-color: (20, 30, 50)
+
+- index: 26
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: OVERHEAD
+    text: OHD
+    text-color: yellow
+    text-size: 28
+    text-position: cm
+    text-bg-color: (30, 30, 20)
+
+- index: 27
+  activation:
+    type: page
+    page: radio
+  representation:
+    type: text
+    label: RADIO
+    text: RADIO
+    text-color: lime
+    text-size: 24
+    text-position: cm
+    text-bg-color: (20, 40, 20)
+
+- index: 28
+  activation:
+    type: page
+    page: engine
+  representation:
+    type: text
+    label: ENGINE
+    text: ENG
+    text-color: lime
+    text-size: 28
+    text-position: cm
+    text-bg-color: (20, 40, 20)
+
+- index: 29
+  activation:
+    type: page
+    page: lights
+  representation:
+    type: text
+    label: LIGHTS
+    text: LTS
+    text-color: white
+    text-size: 28
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+- index: 30
+  activation:
+    type: page
+    page: antiice
+  representation:
+    type: text
+    label: ANTI-ICE
+    text: A/ICE
+    text-color: cyan
+    text-size: 22
+    text-position: cm
+    text-bg-color: (20, 40, 50)
+
+- index: 31
+  activation:
+    type: page
+    page: index
+  representation:
+    type: text
+    label: HOME
+    label-color: Gold
+    text:
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

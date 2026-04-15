@@ -1,0 +1,322 @@
+name: overhead
+description: Overhead - Electrical, APU, Fuel
+includes:
+- includes/pager
+buttons:
+# Row 0 — Electrical / APU
+- index: 0
+  name: APU_START
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/spring_toggle_switch/APU_start_pos_up
+  representation:
+    type: annunciator
+    label: APU
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'FAULT'
+        text-color: amber
+        off-color: '#1a0e00'
+        text-font: DIN Condensed Black.otf
+        text-size: 50
+        formula: ${laminar/B738/annunciator/apu_fault}
+      - text: 'START'
+        text-color: deepskyblue
+        text-size: 50
+        formula: ${laminar/B738/switches/apu_start} 2 eq
+  vibrate: SHORT
+
+- index: 1
+  name: APU_GEN1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/apu_gen1_up
+  representation:
+    type: annunciator
+    label: APU GEN 1
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'OFF BUS'
+        text-color: amber
+        off-color: '#1a0e00'
+        text-font: DIN Condensed Black.otf
+        text-size: 42
+        formula: ${laminar/B738/annunciator/apu_gen_off_bus}
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        formula: ${laminar/B738/annunciator/apu_gen_off_bus} not
+        text-size: 50
+  vibrate: SHORT
+
+- index: 2
+  name: GPU
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/gpu_up
+  representation:
+    type: annunciator
+    label: GPU
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'AVAIL'
+        text-color: lime
+        text-size: 52
+        formula: ${laminar/B738/annunciator/ground_power_avail}
+      - text: 'OFF'
+        text-color: darkorange
+        text-size: 52
+        formula: ${laminar/B738/annunciator/ground_power_avail} not
+
+# Row 1 — Generators
+- index: 3
+  name: GEN1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/gen1_up
+  representation:
+    type: annunciator
+    label: GEN 1
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'OFF BUS'
+        text-color: amber
+        off-color: '#1a0e00'
+        text-font: DIN Condensed Black.otf
+        text-size: 42
+        formula: ${laminar/B738/annunciator/gen_off_bus1}
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        formula: ${laminar/B738/annunciator/gen_off_bus1} not
+        text-size: 50
+  vibrate: SHORT
+
+- index: 4
+  name: GEN2
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/gen2_up
+  representation:
+    type: annunciator
+    label: GEN 2
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'OFF BUS'
+        text-color: amber
+        off-color: '#1a0e00'
+        text-font: DIN Condensed Black.otf
+        text-size: 42
+        formula: ${laminar/B738/annunciator/gen_off_bus2}
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        formula: ${laminar/B738/annunciator/gen_off_bus2} not
+        text-size: 50
+  vibrate: SHORT
+
+- index: 5
+  name: YAW_DAMPER
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/yaw_dumper
+  representation:
+    type: annunciator
+    label: YAW DMPR
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'FAULT'
+        text-color: amber
+        off-color: '#1a0e00'
+        text-font: DIN Condensed Black.otf
+        text-size: 48
+        formula: ${laminar/B738/annunciator/yaw_damp}
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        formula: ${laminar/B738/annunciator/yaw_damp} not
+        text-size: 50
+
+# Row 2 — Fuel Pumps L
+- index: 6
+  name: FUEL_PUMP_L1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/fuel_pump_lft1
+  representation:
+    type: annunciator
+    label: FUEL L1
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'LOW PR'
+        text-color: amber
+        off-color: '#1a0e00'
+        text-size: 44
+        formula: ${laminar/B738/annunciator/low_fuel_press_l1}
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        formula: ${laminar/B738/fuel/fuel_tank_pos_lft1}
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/fuel/fuel_tank_pos_lft1} not
+
+- index: 7
+  name: FUEL_PUMP_L2
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/fuel_pump_lft2
+  representation:
+    type: annunciator
+    label: FUEL L2
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'LOW PR'
+        text-color: amber
+        off-color: '#1a0e00'
+        text-size: 44
+        formula: ${laminar/B738/annunciator/low_fuel_press_l2}
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        formula: ${laminar/B738/fuel/fuel_tank_pos_lft2}
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/fuel/fuel_tank_pos_lft2} not
+
+- index: 8
+  name: FUEL_PUMP_CTR1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/fuel_pump_ctr1
+  representation:
+    type: annunciator
+    label: FUEL CTR1
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'LOW PR'
+        text-color: amber
+        off-color: '#1a0e00'
+        text-size: 44
+        formula: ${laminar/B738/annunciator/low_fuel_press_c1}
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        formula: ${laminar/B738/fuel/fuel_tank_pos_ctr1}
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/fuel/fuel_tank_pos_ctr1} not
+
+# Row 3 — Fuel Pumps R
+- index: 9
+  name: FUEL_PUMP_CTR2
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/fuel_pump_ctr2
+  representation:
+    type: annunciator
+    label: FUEL CTR2
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'LOW PR'
+        text-color: amber
+        off-color: '#1a0e00'
+        text-size: 44
+        formula: ${laminar/B738/annunciator/low_fuel_press_c2}
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        formula: ${laminar/B738/fuel/fuel_tank_pos_ctr2}
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/fuel/fuel_tank_pos_ctr2} not
+
+- index: 10
+  name: FUEL_PUMP_R1
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/fuel_pump_rgt1
+  representation:
+    type: annunciator
+    label: FUEL R1
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'LOW PR'
+        text-color: amber
+        off-color: '#1a0e00'
+        text-size: 44
+        formula: ${laminar/B738/annunciator/low_fuel_press_r1}
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        formula: ${laminar/B738/fuel/fuel_tank_pos_rgt1}
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/fuel/fuel_tank_pos_rgt1} not
+
+- index: 11
+  name: FUEL_PUMP_R2
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/fuel_pump_rgt2
+  representation:
+    type: annunciator
+    label: FUEL R2
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'LOW PR'
+        text-color: amber
+        off-color: '#1a0e00'
+        text-size: 44
+        formula: ${laminar/B738/annunciator/low_fuel_press_r2}
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        formula: ${laminar/B738/fuel/fuel_tank_pos_rgt2}
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/fuel/fuel_tank_pos_rgt2} not

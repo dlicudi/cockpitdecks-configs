@@ -27,7 +27,6 @@ buttons:
   name: ND MODE
   activation:
     type: sweep
-    stops: 5
     initial-value: 2
     dataref: AirbusFBW/NDmodeCapt
     positions:
@@ -39,8 +38,8 @@ buttons:
       button-size: 50
       switch-style: medium
       down: 30
-      tick-from: 90
-      tick-to: 270
+      angle-start: 270
+      angle-end: 90
       tick-space: 40
       tick-underline-width: 8
       tick-label-color: coral
@@ -48,7 +47,7 @@ buttons:
       needle-color: white
       needle-length: 30
       tick-label-size: 28
-      tick-labels:
+      ticks:
       - LS
       - VOR
       - NAV
@@ -58,7 +57,6 @@ buttons:
   name: ND RANGE
   activation:
     type: sweep
-    stops: 6
     initial-value: 2
     dataref: AirbusFBW/NDrangeCapt
     positions:
@@ -70,8 +68,8 @@ buttons:
       button-size: 50
       switch-style: medium
       down: 30
-      tick-from: 90
-      tick-to: 315
+      angle-start: 270
+      angle-end: 135
       tick-space: 40
       tick-underline-width: 8
       tick-label-color: coral
@@ -79,7 +77,7 @@ buttons:
       needle-color: white
       needle-length: 30
       tick-label-size: 28
-      tick-labels:
+      ticks:
       - '10'
       - '20'
       - '40'

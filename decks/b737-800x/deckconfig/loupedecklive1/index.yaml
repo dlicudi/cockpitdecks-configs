@@ -1,0 +1,244 @@
+name: index
+includes:
+- includes/pager
+- encoders/encoders_mcp
+buttons:
+# Row 0
+- index: 0
+  name: MASTER_CAUTION
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/push_button/master_caution1
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: darkorange
+        led: bars
+        formula: ${laminar/B738/annunciator/master_caution_light}
+      - text: 'MASTER CAUT'
+        text-size: 48
+        text-font: DIN Condensed Black.otf
+        text-color: darkorange
+        formula: '1'
+  vibrate: SHORT
+
+- index: 1
+  name: FIRE_WARNING
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/push_button/fire_bell_light1
+  representation:
+    type: annunciator-animate
+    annunciator-animate:
+      size: medium
+      model: B
+      parts:
+      - color: firebrick
+        led: bars
+        formula: ${laminar/B738/annunciator/fire_bell_annun}
+      - text: 'FIRE WARN'
+        text-size: 52
+        text-font: DIN Condensed Black.otf
+        text-color: firebrick
+        formula: '1'
+      animation-speed: 1.5
+
+- index: 2
+  name: CMD_A
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/cmd_a_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/cmd_a_status}
+      - text: CMD A
+        text-size: 56
+        text-font: DIN Bold
+        formula: '1'
+
+# Row 1
+- index: 3
+  name: IAS_DISPLAY
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: IAS
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: cyan
+        text-size: 34
+        formula: '1'
+        text: ${sim/cockpit2/autopilot/airspeed_dial_kts_mach}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 4
+  name: HDG_DISPLAY
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: HDG
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: cyan
+        text-size: 34
+        formula: '1'
+        text: ${laminar/B738/autopilot/mcp_hdg_dial}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 5
+  name: CMD_B
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/cmd_b_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/cmd_b_status}
+      - text: CMD B
+        text-size: 56
+        text-font: DIN Bold
+        formula: '1'
+
+# Row 2
+- index: 6
+  name: ALT_DISPLAY
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ALT
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: cyan
+        text-size: 26
+        formula: '1'
+        text: ${laminar/B738/autopilot/mcp_alt_dial}
+        text-font: Seven Segment.ttf
+        text-format: '{0:.0f}'
+
+- index: 7
+  name: VS_DISPLAY
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: V/S
+    annunciator:
+      size: medium
+      model: A
+      parts:
+      - color: cyan
+        text-size: 28
+        formula: '1'
+        text: ${sim/cockpit2/autopilot/vvi_dial_fpm}
+        text-font: Seven Segment.ttf
+        text-format: '{0:+.0f}'
+
+- index: 8
+  name: AT_ARM
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/autothrottle_arm_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/autothrottle_status}
+      - text: A/T ARM
+        text-size: 46
+        text-font: DIN Bold
+        formula: '1'
+
+# Row 3
+- index: 9
+  name: VNAV
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/vnav_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/vnav_status1}
+      - text: VNAV
+        text-size: 56
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 10
+  name: LNAV
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/lnav_press
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/lnav_status}
+      - text: LNAV
+        text-size: 56
+        text-font: DIN Bold
+        formula: '1'
+
+- index: 11
+  name: FD_CAPTAIN
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/flight_director_toggle
+  representation:
+    type: annunciator
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/switches/autopilot/fd_ca}
+      - text: F/D
+        text-size: 60
+        text-font: DIN Bold
+        formula: '1'

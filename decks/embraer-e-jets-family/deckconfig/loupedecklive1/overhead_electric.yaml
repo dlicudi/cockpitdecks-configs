@@ -8,7 +8,6 @@ buttons:
 - index: 0
   activation:
     type: sweep
-    stops: 2
     dataref: sim/cockpit/electrical/generator_on[0]
     set-dataref: sim/cockpit/electrical/generator_on[0]
   representation:
@@ -19,22 +18,21 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 120
-      tick-to: 180
+      angle-start: 300
+      angle-end: 0
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - AUTO
   bgcolor: White
 - index: 1
   activation:
     type: sweep
-    stops: 3
     dataref: XCrafts/electrical/ac_bus_tie_switch
     set-dataref: XCrafts/electrical/ac_bus_tie_switch
   representation:
@@ -46,15 +44,15 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 140
-      tick-to: 220
+      angle-start: 320
+      angle-end: 40
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 24
       options: invert
-      tick-labels:
+      ticks:
       - '1
 
         OPEN'
@@ -65,7 +63,6 @@ buttons:
 - index: 2
   activation:
     type: sweep
-    stops: 2
     dataref: sim/cockpit/electrical/generator_on[1]
     set-dataref: sim/cockpit/electrical/generator_on[1]
   representation:
@@ -77,15 +74,15 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 240
-      tick-to: 180
+      angle-start: 60
+      angle-end: 0
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - AUTO
 - index: 3
@@ -206,7 +203,6 @@ buttons:
 - index: 8
   activation:
     type: sweep
-    stops: 2
     dataref: sim/cockpit2/electrical/battery_on[0]
     set-dataref: sim/cockpit2/electrical/battery_on[0]
   representation:
@@ -217,21 +213,20 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 120
-      tick-to: 180
+      angle-start: 300
+      angle-end: 0
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - 'ON'
 - index: 9
   activation:
     type: sweep
-    stops: 2
     dataref: sim/cockpit2/electrical/battery_on[1]
     set-dataref: sim/cockpit2/electrical/battery_on[1]
   representation:
@@ -242,14 +237,14 @@ buttons:
     circular-switch:
       button-size: 60
       switch-style: large
-      tick-from: 120
-      tick-to: 180
+      angle-start: 300
+      angle-end: 0
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
       options: invert
-      tick-labels:
+      ticks:
       - 'OFF'
       - 'ON'

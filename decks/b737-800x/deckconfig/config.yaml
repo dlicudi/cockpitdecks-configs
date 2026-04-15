@@ -1,0 +1,60 @@
+# Boeing 737-800X (Zibo)
+# Version 1.0.0
+aircraft: Boeing 737-800X
+icao: B738
+model: Zibo Boeing 737-800X
+
+decks:
+  - name: b738-loupedeck
+    type: LoupedeckLive
+    layout: loupedecklive1
+    brightness: 70
+  - name: b738-streamdeck
+    type: Stream Deck XL
+    layout: streamdeckxl1
+    brightness: 70
+  - name: b738-ipad
+    type: iPad
+    layout: ipad1
+  - name: b738-iphone
+    type: iPhone
+    layout: iphone1
+  - name: b738-fmc
+    type: b738.fmc
+    layout: fmc1
+
+description: Decks for Zibo Boeing 737-800X
+
+web-deck-defaults:
+    highlight: "#ffffff10"
+    flash: "#0f80ffb0"
+    flash_duration: 100
+
+dataref-roundings:
+    sim/cockpit2/autopilot/airspeed_dial_kts_mach: 0
+    sim/cockpit2/autopilot/vvi_dial_fpm: 0
+    laminar/B738/autopilot/mcp_hdg_dial: 0
+    laminar/B738/autopilot/mcp_alt_dial: 0
+    laminar/B738/autopilot/course_pilot: 0
+    laminar/B738/autopilot/course_copilot: 0
+    laminar/B738/EFIS/baro_sel_in_hg_pilot: 2
+    laminar/B738/EFIS/baro_sel_in_hg_copilot: 2
+    sim/cockpit2/gauges/indicators/airspeed_kts_pilot: 0
+    sim/cockpit2/gauges/indicators/altitude_ft_pilot: 0
+    sim/cockpit2/gauges/indicators/vvi_fpm_pilot: 0
+    sim/cockpit2/gauges/indicators/compass_heading_deg_mag: 0
+    sim/cockpit2/engine/indicators/N1_percent[0]: 1
+    sim/cockpit2/engine/indicators/N1_percent[1]: 1
+    sim/cockpit2/engine/indicators/EGT_deg_cel[0]: 0
+    sim/cockpit2/engine/indicators/EGT_deg_cel[1]: 0
+    sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]: 4
+    sim/cockpit2/engine/indicators/fuel_flow_kg_sec[1]: 4
+    sim/cockpit2/fuel/fuel_quantity[0]: 0
+    sim/cockpit2/fuel/fuel_quantity[1]: 0
+    sim/cockpit2/fuel/fuel_quantity[2]: 0
+    sim/cockpit2/radios/actuators/com1_frequency_hz: 0
+    sim/cockpit2/radios/actuators/com1_standby_frequency_hz: 0
+    sim/cockpit2/radios/actuators/com2_frequency_hz: 0
+    sim/cockpit2/radios/actuators/com2_standby_frequency_hz: 0
+    sim/cockpit2/radios/actuators/nav1_frequency_hz: 0
+    sim/cockpit2/radios/actuators/nav2_frequency_hz: 0

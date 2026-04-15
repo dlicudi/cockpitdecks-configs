@@ -168,7 +168,6 @@ buttons:
 - index: 9
   activation:
     type: sweep
-    stops: 5
     dataref: AirbusFBW/NDmodeCapt
     set-dataref: AirbusFBW/NDmodeCapt
     initial-value: 0
@@ -184,13 +183,13 @@ buttons:
       button-fill-color: (30, 40, 50)
       button-stroke-color: black
       handle-fill-color: (60, 70, 80)
-      tick-from: 90
-      tick-to: 270
+      angle-start: 270
+      angle-end: 90
       tick-color: white
       tick-space: 36
       tick-width: 8
       tick-length: 24
-      tick-labels:
+      ticks:
       - LS
       - VOR
       - NAV
@@ -202,7 +201,6 @@ buttons:
 - index: 10
   activation:
     type: sweep
-    stops: 6
     dataref: AirbusFBW/NDrangeCapt
     set-dataref: AirbusFBW/NDrangeCapt
     initial-value: 0
@@ -218,13 +216,13 @@ buttons:
       button-fill-color: (30, 40, 50)
       button-stroke-color: black
       handle-fill-color: (60, 70, 80)
-      tick-from: 90
-      tick-to: 300
+      angle-start: 270
+      angle-end: 120
       tick-color: white
       tick-space: 36
       tick-width: 8
       tick-length: 24
-      tick-labels:
+      ticks:
       - '10'
       - '20'
       - '40'

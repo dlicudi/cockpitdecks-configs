@@ -1,0 +1,652 @@
+name: index
+description: B737-800X overview — warnings, lights, anti-ice, cabin signs
+includes:
+- includes/pager
+buttons:
+# Row 0 (0-6) — Warnings + AP engagement
+- index: 0
+  name: MASTER_CAUTION
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/push_button/master_caution1_pos
+  representation:
+    type: annunciator
+    label: MASTER CAUT
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/master_caution_light}
+      - text: CAUT
+        text-color: amber
+        framed: true
+        formula: ${laminar/B738/annunciator/master_caution_light}
+        text-size: 42
+      - text: CAUT
+        text-color: (80, 80, 80)
+        formula: ${laminar/B738/annunciator/master_caution_light} not
+        text-size: 42
+
+- index: 1
+  name: FIRE_WARN
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/push_button/fire_bell_annun_pos
+  representation:
+    type: annunciator
+    label: FIRE WARN
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: red
+        led: bars
+        formula: ${laminar/B738/annunciator/fire_bell_annun}
+      - text: FIRE
+        text-color: red
+        framed: true
+        formula: ${laminar/B738/annunciator/fire_bell_annun}
+        text-size: 46
+      - text: FIRE
+        text-color: (60, 60, 60)
+        formula: ${laminar/B738/annunciator/fire_bell_annun} not
+        text-size: 46
+
+- index: 2
+  name: CMD_A
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/cmd_a_press
+  representation:
+    type: annunciator
+    label: CMD A
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/cmd_a_status}
+      - text: A
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/autopilot/cmd_a_status}
+        text-size: 52
+      - text: A
+        text-color: (60, 60, 60)
+        formula: ${laminar/B738/autopilot/cmd_a_status} not
+        text-size: 52
+
+- index: 3
+  name: CMD_B
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/cmd_b_press
+  representation:
+    type: annunciator
+    label: CMD B
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/cmd_b_status}
+      - text: B
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/autopilot/cmd_b_status}
+        text-size: 52
+      - text: B
+        text-color: (60, 60, 60)
+        formula: ${laminar/B738/autopilot/cmd_b_status} not
+        text-size: 52
+
+- index: 4
+  name: AT_ARM
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/autopilot/autothrottle_arm_pos
+  representation:
+    type: annunciator
+    label: A/T ARM
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/autopilot/autothrottle_status1}
+      - text: ARM
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/autopilot/autothrottle_status1}
+        text-size: 42
+      - text: OFF
+        text-color: darkorange
+        formula: ${laminar/B738/autopilot/autothrottle_status1} not
+        text-size: 42
+
+- index: 5
+  name: PARKING_BRAKE
+  activation:
+    type: push
+    commands:
+      press: sim/flight_controls/park_brake_valve_toggle
+  representation:
+    type: annunciator
+    label: PARK BRK
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: red
+        framed: true
+        formula: ${laminar/B738/annunciator/parking_brake}
+        text-size: 46
+      - text: 'OFF'
+        text-color: green
+        formula: ${laminar/B738/annunciator/parking_brake} not
+        text-size: 46
+
+- index: 6
+  name: YAW_DAMPER
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/yaw_dumper_pos
+  representation:
+    type: annunciator
+    label: YAW DMPR
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/toggle_switch/yaw_dumper_pos}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/toggle_switch/yaw_dumper_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/toggle_switch/yaw_dumper_pos} not
+        text-size: 46
+
+# Row 1 (8-14) — Exterior lights
+- index: 8
+  name: LAND_L
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/land_lights_ret_left_up
+  representation:
+    type: annunciator
+    label: LAND L
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} not
+        text-size: 46
+
+- index: 9
+  name: LAND_R
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/land_lights_ret_right_up
+  representation:
+    type: annunciator
+    label: LAND R
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/landing_lights_switch[1]}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/landing_lights_switch[1]} not
+        text-size: 46
+
+- index: 10
+  name: STROBE
+  activation:
+    type: push
+    commands:
+      press: sim/lights/strobe_lights_toggle
+  representation:
+    type: annunciator
+    label: STROBE
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/strobe_lights_on}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/strobe_lights_on} not
+        text-size: 46
+
+- index: 11
+  name: BEACON
+  activation:
+    type: push
+    commands:
+      press: sim/lights/beacon_lights_toggle
+  representation:
+    type: annunciator
+    label: BEACON
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/beacon_on}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/beacon_on} not
+        text-size: 46
+
+- index: 12
+  name: NAV
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/position_light_up
+  representation:
+    type: annunciator
+    label: NAV
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/navigation_lights_on}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/navigation_lights_on} not
+        text-size: 46
+
+- index: 13
+  name: TAXI
+  activation:
+    type: push
+    commands:
+      press: sim/lights/taxi_lights_toggle
+  representation:
+    type: annunciator
+    label: TAXI
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/taxi_light_on}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/taxi_light_on} not
+        text-size: 46
+
+- index: 14
+  name: SEATBELT
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/seatbelt_sign_up
+  representation:
+    type: annunciator
+    label: SEAT BELT
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/fasten_seat_belts}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/fasten_seat_belts} not
+        text-size: 46
+
+# Row 2 (16-22) — Anti-ice
+- index: 16
+  name: WING_ANTI_ICE
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/wing_heat
+  representation:
+    type: annunciator
+    label: WING A/ICE
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/annunciator/wing_ice_on_L}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/ice/wing_heat_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/ice/wing_heat_pos} not
+        text-size: 46
+
+- index: 17
+  name: ENG1_ANTI_ICE
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/eng1_heat
+  representation:
+    type: annunciator
+    label: ENG1 A/ICE
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/annunciator/cowl_ice_on_0}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/ice/eng1_heat_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/ice/eng1_heat_pos} not
+        text-size: 46
+
+- index: 18
+  name: ENG2_ANTI_ICE
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/eng2_heat
+  representation:
+    type: annunciator
+    label: ENG2 A/ICE
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/annunciator/cowl_ice_on_1}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/ice/eng2_heat_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/ice/eng2_heat_pos} not
+        text-size: 46
+
+- index: 19
+  name: PROBES_CAPT
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/capt_probes_pos
+  representation:
+    type: annunciator
+    label: PROBES CPT
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/capt_pitot_off}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/toggle_switch/capt_probes_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/toggle_switch/capt_probes_pos} not
+        text-size: 46
+
+- index: 20
+  name: PROBES_FO
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/fo_probes_pos
+  representation:
+    type: annunciator
+    label: PROBES F/O
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/fo_pitot_off}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/toggle_switch/fo_probes_pos}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/toggle_switch/fo_probes_pos} not
+        text-size: 46
+
+- index: 21
+  name: NO_SMOKING
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/no_smoking_up
+  representation:
+    type: annunciator
+    label: NO SMOKE
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/no_smoking}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/no_smoking} not
+        text-size: 46
+
+- index: 22
+  name: BLEED_TRIP_RESET
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/push_button/bleed_trip_reset
+  representation:
+    type: annunciator
+    label: BLEED TRIP
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/bleed_trip_1} ${laminar/B738/annunciator/bleed_trip_2} +
+      - text: RESET
+        text-color: white
+        text-size: 38
+        formula: '1'
+
+# Row 3 (24-30) — Six-pack warning annunciators
+- index: 24
+  name: ANNUN_FUEL
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: FUEL
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/low_fuel_pressure_1} ${laminar/B738/annunciator/low_fuel_pressure_2} +
+
+- index: 25
+  name: ANNUN_FIRE
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: FIRE
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: red
+        led: bars
+        formula: ${laminar/B738/annunciator/fire_bell_annun}
+
+- index: 26
+  name: ANNUN_APU
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/apu_start_pos
+  representation:
+    type: annunciator
+    label: APU START
+    label-size: 8
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: lime
+        led: bars
+        formula: ${laminar/B738/electric/apu_gen_on}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${laminar/B738/electric/apu_gen_on}
+        text-size: 46
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${laminar/B738/electric/apu_gen_on} not
+        text-size: 46
+
+- index: 27
+  name: ANNUN_HYD
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: HYD
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/hyd_sys_a} ${laminar/B738/annunciator/hyd_sys_b} +
+
+- index: 28
+  name: ANNUN_ELEC
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ELEC
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/gen_off_bus1} ${laminar/B738/annunciator/gen_off_bus2} +
+
+- index: 29
+  name: ANNUN_DOORS
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: DOORS
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/doors}
+
+- index: 30
+  name: ANNUN_ICE
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ICE
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - color: amber
+        led: bars
+        formula: ${laminar/B738/annunciator/wing_ice_on_L} ${laminar/B738/annunciator/cowl_ice_on_0} + ${laminar/B738/annunciator/cowl_ice_on_1} +

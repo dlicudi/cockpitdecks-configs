@@ -1,0 +1,419 @@
+name: lights
+description: Exterior and cabin lights
+includes:
+- includes/pagercompact
+buttons:
+# Row 0 (0-7) — Landing / Runway / Taxi
+- index: 0
+  name: LAND_L
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/land_lights_ret_left_up
+  representation:
+    type: annunciator
+    label: LAND L
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} not
+        text-size: 52
+
+- index: 1
+  name: LAND_R
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/land_lights_ret_right_up
+  representation:
+    type: annunciator
+    label: LAND R
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/landing_lights_switch[1]}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/landing_lights_switch[1]} not
+        text-size: 52
+
+- index: 2
+  name: RWY_L
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/rwy_light_left_on
+  representation:
+    type: annunciator
+    label: RUNWAY L
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[3]}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[3]} not
+        text-size: 52
+
+- index: 3
+  name: RWY_R
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/rwy_light_right_on
+  representation:
+    type: annunciator
+    label: RUNWAY R
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[4]}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[4]} not
+        text-size: 52
+
+- index: 4
+  name: TAXI
+  activation:
+    type: push
+    commands:
+      press: sim/lights/taxi_lights_toggle
+  representation:
+    type: annunciator
+    label: TAXI
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/taxi_light_on}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/taxi_light_on} not
+        text-size: 52
+
+- index: 5
+  name: STROBE
+  activation:
+    type: push
+    commands:
+      press: sim/lights/strobe_lights_toggle
+  representation:
+    type: annunciator
+    label: STROBE
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/strobe_lights_on}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/strobe_lights_on} not
+        text-size: 52
+
+- index: 6
+  name: NAV
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/position_light_up
+  representation:
+    type: annunciator
+    label: NAV
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/navigation_lights_on}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/navigation_lights_on} not
+        text-size: 52
+
+- index: 7
+  name: BEACON
+  activation:
+    type: push
+    commands:
+      press: sim/lights/beacon_lights_toggle
+  representation:
+    type: annunciator
+    label: BEACON
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/beacon_on}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/beacon_on} not
+        text-size: 52
+
+# Row 1 (8-15) — Logo, Wing, Wheel + cabin signs
+- index: 8
+  name: LOGO
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/logo_light_on
+  representation:
+    type: annunciator
+    label: LOGO
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[8]}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[8]} not
+        text-size: 52
+
+- index: 9
+  name: WING
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/wing_light_on
+  representation:
+    type: annunciator
+    label: WING
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[5]}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[5]} not
+        text-size: 52
+
+- index: 10
+  name: WHEEL_WELL
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/switch/wheel_light_on
+  representation:
+    type: annunciator
+    label: WHEEL WELL
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[6]}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[6]} not
+        text-size: 52
+
+- index: 11
+  name: SEATBELT
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/seatbelt_sign_up
+  representation:
+    type: annunciator
+    label: SEAT BELT
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/fasten_seat_belts}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/fasten_seat_belts} not
+        text-size: 52
+
+- index: 12
+  name: NO_SMOKING
+  activation:
+    type: push
+    commands:
+      press: laminar/B738/toggle_switch/no_smoking_up
+  representation:
+    type: annunciator
+    label: NO SMOKE
+    label-size: 10
+    annunciator:
+      size: medium
+      model: B
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        formula: ${sim/cockpit2/switches/no_smoking}
+        text-size: 52
+      - text: 'OFF'
+        text-color: darkorange
+        formula: ${sim/cockpit2/switches/no_smoking} not
+        text-size: 52
+
+# Row 3 (24-31) — pager
+- index: 24
+  activation:
+    type: page
+    page: index
+  representation:
+    type: text
+    label: HOME
+    label-color: Gold
+    text:
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+- index: 25
+  activation:
+    type: page
+    page: mcp
+  representation:
+    type: text
+    label: MCP
+    text: MCP
+    text-color: cyan
+    text-size: 28
+    text-position: cm
+    text-bg-color: (20, 30, 50)
+
+- index: 26
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: OVERHEAD
+    text: OHD
+    text-color: yellow
+    text-size: 28
+    text-position: cm
+    text-bg-color: (30, 30, 20)
+
+- index: 27
+  activation:
+    type: page
+    page: radio
+  representation:
+    type: text
+    label: RADIO
+    text: RADIO
+    text-color: lime
+    text-size: 24
+    text-position: cm
+    text-bg-color: (20, 40, 20)
+
+- index: 28
+  activation:
+    type: page
+    page: engine
+  representation:
+    type: text
+    label: ENGINE
+    text: ENG
+    text-color: lime
+    text-size: 28
+    text-position: cm
+    text-bg-color: (20, 40, 20)
+
+- index: 29
+  activation:
+    type: page
+    page: lights
+  representation:
+    type: text
+    label: LIGHTS
+    text: LTS
+    text-color: white
+    text-size: 28
+    text-position: cm
+    text-bg-color: (40, 40, 40)
+
+- index: 30
+  activation:
+    type: page
+    page: antiice
+  representation:
+    type: text
+    label: ANTI-ICE
+    text: A/ICE
+    text-color: cyan
+    text-size: 22
+    text-position: cm
+    text-bg-color: (20, 40, 50)
+
+- index: 31
+  activation:
+    type: page
+    page: index
+  representation:
+    type: text
+    label: HOME
+    label-color: Gold
+    text:
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

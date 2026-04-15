@@ -213,7 +213,6 @@ buttons:
 - index: 11
   activation:
     type: sweep
-    stops: 3
     dataref: sim/cockpit/switches/HSI_selector
     set-dataref: sim/cockpit/switches/HSI_selector
   representation:
@@ -222,14 +221,14 @@ buttons:
       button-size: 50
       switch-style: medium
       down: 30
-      tick-from: 200
-      tick-to: 340
+      angle-start: 20
+      angle-end: 160
       tick-space: 40
       tick-underline-width: 8
       needle-color: white
       needle-length: 30
       tick-label-size: 28
-      tick-labels:
+      ticks:
       - LOC1
       - LOC2
       - GPS
