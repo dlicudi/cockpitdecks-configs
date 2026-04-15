@@ -1,0 +1,529 @@
+name: b738.fmc
+driver: virtualdeck
+background:
+  color: "#0a0a0a"
+  alt_color: "#0a0a0a"
+zoom: false
+# B737-800X FMC/CDU — 460×874px
+# Layout: title | 6×(LSK+label+data+RSK) | scratchpad | nav keys | keypad | alpha
+buttons:
+# === Display area ===
+- name: title
+  action: [push]
+  feedback: image
+  dimension: [460, 34]
+  layout:
+    offset: [0, 0]
+
+- name: lsk1
+  action: [push]
+  feedback: image
+  dimension: [62, 54]
+  layout:
+    offset: [0, 36]
+- name: label01
+  action: [push]
+  feedback: image
+  dimension: [325, 24]
+  layout:
+    offset: [66, 36]
+- name: data01
+  action: [push]
+  feedback: image
+  dimension: [325, 30]
+  layout:
+    offset: [66, 60]
+- name: rsk1
+  action: [push]
+  feedback: image
+  dimension: [62, 54]
+  layout:
+    offset: [396, 36]
+
+- name: lsk2
+  action: [push]
+  feedback: image
+  dimension: [62, 54]
+  layout:
+    offset: [0, 92]
+- name: label02
+  action: [push]
+  feedback: image
+  dimension: [325, 24]
+  layout:
+    offset: [66, 92]
+- name: data02
+  action: [push]
+  feedback: image
+  dimension: [325, 30]
+  layout:
+    offset: [66, 116]
+- name: rsk2
+  action: [push]
+  feedback: image
+  dimension: [62, 54]
+  layout:
+    offset: [396, 92]
+
+- name: lsk3
+  action: [push]
+  feedback: image
+  dimension: [62, 54]
+  layout:
+    offset: [0, 148]
+- name: label03
+  action: [push]
+  feedback: image
+  dimension: [325, 24]
+  layout:
+    offset: [66, 148]
+- name: data03
+  action: [push]
+  feedback: image
+  dimension: [325, 30]
+  layout:
+    offset: [66, 172]
+- name: rsk3
+  action: [push]
+  feedback: image
+  dimension: [62, 54]
+  layout:
+    offset: [396, 148]
+
+- name: lsk4
+  action: [push]
+  feedback: image
+  dimension: [62, 54]
+  layout:
+    offset: [0, 204]
+- name: label04
+  action: [push]
+  feedback: image
+  dimension: [325, 24]
+  layout:
+    offset: [66, 204]
+- name: data04
+  action: [push]
+  feedback: image
+  dimension: [325, 30]
+  layout:
+    offset: [66, 228]
+- name: rsk4
+  action: [push]
+  feedback: image
+  dimension: [62, 54]
+  layout:
+    offset: [396, 204]
+
+- name: lsk5
+  action: [push]
+  feedback: image
+  dimension: [62, 54]
+  layout:
+    offset: [0, 260]
+- name: label05
+  action: [push]
+  feedback: image
+  dimension: [325, 24]
+  layout:
+    offset: [66, 260]
+- name: data05
+  action: [push]
+  feedback: image
+  dimension: [325, 30]
+  layout:
+    offset: [66, 284]
+- name: rsk5
+  action: [push]
+  feedback: image
+  dimension: [62, 54]
+  layout:
+    offset: [396, 260]
+
+- name: lsk6
+  action: [push]
+  feedback: image
+  dimension: [62, 54]
+  layout:
+    offset: [0, 316]
+- name: label06
+  action: [push]
+  feedback: image
+  dimension: [325, 24]
+  layout:
+    offset: [66, 316]
+- name: data06
+  action: [push]
+  feedback: image
+  dimension: [325, 30]
+  layout:
+    offset: [66, 340]
+- name: rsk6
+  action: [push]
+  feedback: image
+  dimension: [62, 54]
+  layout:
+    offset: [396, 316]
+
+- name: entry
+  action: [push]
+  feedback: image
+  dimension: [460, 34]
+  layout:
+    offset: [0, 372]
+
+# === Navigation keys (5 wide, 88px each with 4px gaps) ===
+- name: init_ref
+  action: [push]
+  feedback: image
+  dimension: [88, 38]
+  layout:
+    offset: [0, 412]
+- name: rte
+  action: [push]
+  feedback: image
+  dimension: [88, 38]
+  layout:
+    offset: [92, 412]
+- name: clb
+  action: [push]
+  feedback: image
+  dimension: [88, 38]
+  layout:
+    offset: [184, 412]
+- name: crz
+  action: [push]
+  feedback: image
+  dimension: [88, 38]
+  layout:
+    offset: [276, 412]
+- name: des
+  action: [push]
+  feedback: image
+  dimension: [88, 38]
+  layout:
+    offset: [368, 412]
+
+- name: menu
+  action: [push]
+  feedback: image
+  dimension: [88, 38]
+  layout:
+    offset: [0, 454]
+- name: legs
+  action: [push]
+  feedback: image
+  dimension: [88, 38]
+  layout:
+    offset: [92, 454]
+- name: dep_app
+  action: [push]
+  feedback: image
+  dimension: [88, 38]
+  layout:
+    offset: [184, 454]
+- name: hold
+  action: [push]
+  feedback: image
+  dimension: [88, 38]
+  layout:
+    offset: [276, 454]
+- name: prog
+  action: [push]
+  feedback: image
+  dimension: [88, 38]
+  layout:
+    offset: [368, 454]
+
+- name: n1_lim
+  action: [push]
+  feedback: image
+  dimension: [88, 38]
+  layout:
+    offset: [0, 496]
+- name: fix
+  action: [push]
+  feedback: image
+  dimension: [88, 38]
+  layout:
+    offset: [92, 496]
+- name: exec
+  action: [push]
+  feedback: image
+  dimension: [88, 38]
+  layout:
+    offset: [184, 496]
+- name: prev_page
+  action: [push]
+  feedback: image
+  dimension: [88, 38]
+  layout:
+    offset: [276, 496]
+- name: next_page
+  action: [push]
+  feedback: image
+  dimension: [88, 38]
+  layout:
+    offset: [368, 496]
+
+# === Numeric keypad (6 wide, 73px each with 4px gaps) ===
+- name: k1
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [0, 540]
+- name: k2
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [77, 540]
+- name: k3
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [154, 540]
+- name: k4
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [231, 540]
+- name: k5
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [308, 540]
+- name: k6
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [385, 540]
+
+- name: k7
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [0, 582]
+- name: k8
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [77, 582]
+- name: k9
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [154, 582]
+- name: k0
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [231, 582]
+- name: period
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [308, 582]
+- name: slash
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [385, 582]
+
+- name: minus
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [0, 624]
+- name: del
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [77, 624]
+- name: sp
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [154, 624]
+- name: clr
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [231, 624]
+
+# === Alpha keypad (6 wide) ===
+- name: kA
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [0, 668]
+- name: kB
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [77, 668]
+- name: kC
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [154, 668]
+- name: kD
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [231, 668]
+- name: kE
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [308, 668]
+- name: kF
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [385, 668]
+
+- name: kG
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [0, 710]
+- name: kH
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [77, 710]
+- name: kI
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [154, 710]
+- name: kJ
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [231, 710]
+- name: kK
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [308, 710]
+- name: kL
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [385, 710]
+
+- name: kM
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [0, 752]
+- name: kN
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [77, 752]
+- name: kO
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [154, 752]
+- name: kP
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [231, 752]
+- name: kQ
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [308, 752]
+- name: kR
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [385, 752]
+
+- name: kS
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [0, 794]
+- name: kT
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [77, 794]
+- name: kU
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [154, 794]
+- name: kV
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [231, 794]
+- name: kW
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [308, 794]
+- name: kX
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [385, 794]
+
+- name: kY
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [0, 836]
+- name: kZ
+  action: [push]
+  feedback: image
+  dimension: [73, 38]
+  layout:
+    offset: [77, 836]

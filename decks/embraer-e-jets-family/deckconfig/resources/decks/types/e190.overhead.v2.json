@@ -1,0 +1,40 @@
+{
+  "attrs": {
+    "width": 2794,
+    "height": 1500
+  },
+  "className": "Stage",
+  "children": [
+    {
+      "attrs": {
+        "name": "background"
+      },
+      "className": "Layer",
+      "children": [
+        {
+          "attrs": {
+            "width": 2794,
+            "height": 1500,
+            "name": "background"
+          },
+          "className": "Rect"
+        }
+      ]
+    },
+    {
+      "attrs": {
+        "name": "interaction"
+      },
+      "className": "Layer",
+      "children": [
+        {
+          "attrs": {
+            "rotateEnabled": false,
+            "ignoreStroke": true
+          },
+          "className": "Transformer"
+        }
+      ]
+    }
+  ]
+}
