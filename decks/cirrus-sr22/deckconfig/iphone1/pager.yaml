@@ -1,0 +1,54 @@
+name: pager
+fill-empty-keys: false
+buttons:
+- index: 7
+  vibrate: SHORT
+  activation:
+    type: page
+    page: home
+  representation:
+    text-bg-color: (20, 20, 20)
+    type: text
+    text: HOME
+    text-font: D-DINCondensed.otf
+    text-size: 18
+    text-color: khaki
+    text-position: cm
+- index: 15
+  vibrate: SHORT
+  activation:
+    type: page
+    page: switches
+  representation:
+    text-bg-color: (20, 20, 20)
+    type: text
+    text: SWITCHES
+    text-font: D-DINCondensed.otf
+    text-size: 18
+    text-color: khaki
+    text-position: cm
+- index: 23
+  activation:
+    type: page
+    page: fcu
+  representation:
+    text-bg-color: (20, 20, 20)
+    type: text
+    text: FCU
+    text-font: D-DINCondensed.otf
+    text-size: 18
+    text-color: khaki
+    text-position: cm
+- index: 31
+  vibrate: SHORT
+  activation:
+    type: page
+    page: engine
+  representation:
+    text-bg-color: (20, 20, 20)
+    type: text
+    text: ENGINE
+    text-font: D-DINCondensed.otf
+    text-size: 18
+    text-color: khaki
+    text-position: cm

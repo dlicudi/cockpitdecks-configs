@@ -1,0 +1,296 @@
+name: switches
+fill-empty-keys: false
+buttons:
+- index: 0
+  activation:
+    type: push
+    commands:
+      press: sim/electrical/battery_2_toggle
+  representation:
+    type: annunciator
+    label: BAT 2
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/battery_on[1]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/battery_on[1]} 1 eq
+  vibrate: SHORT
+- index: 1
+  activation:
+    type: push
+    commands:
+      press: sim/electrical/battery_1_toggle
+  representation:
+    type: annunciator
+    label: BAT 1
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/battery_on[0]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
+  vibrate: SHORT
+- index: 2
+  activation:
+    type: push
+    commands:
+      press: sim/electrical/generator_1_toggle
+  representation:
+    type: annunciator
+    label: ALT 1
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
+  vibrate: SHORT
+- index: 3
+  activation:
+    type: push
+    commands:
+      press: sim/lights/nav_lights_toggle
+  representation:
+    type: annunciator
+    label: NAV
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
+  vibrate: SHORT
+- index: 4
+  activation:
+    type: push
+    commands:
+      press: sim/lights/generic_13_light_tog
+  representation:
+    type: annunciator
+    label: ICE
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/generic_lights_switch[12]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/generic_lights_switch[12]} 1 eq
+  vibrate: SHORT
+- index: 5
+  activation:
+    type: push
+    commands:
+      press: sim/lights/strobe_lights_toggle
+  representation:
+    type: annunciator
+    label: STROBE
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
+  vibrate: SHORT
+- index: 6
+  activation:
+    type: push
+    commands:
+      press: sim/systems/avionics_toggle
+  representation:
+    type: annunciator
+    label: AVIONICS
+    label-size: 10
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/electrical/avionics_on} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/electrical/avionics_on} 1 eq
+  vibrate: SHORT
+- index: 7
+  vibrate: SHORT
+  activation:
+    type: page
+    page: home
+  representation:
+    text-bg-color: (20, 20, 20)
+    type: text
+    text: HOME
+    text-font: D-DINCondensed.otf
+    text-size: 18
+    text-color: khaki
+    text-position: cm
+- index: 8
+  activation:
+    type: push
+    commands:
+      press: sim/ice/pitot_heat0_tog
+  representation:
+    type: annunciator
+    label: PITOT
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/switches/pitot_heat_on} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
+  vibrate: SHORT
+- index: 9
+  activation:
+    type: push
+    commands:
+      press: sim/electrical/generator_2_toggle
+  representation:
+    type: annunciator
+    label: ALT 2
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/electrical/generator_on[1]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
+  vibrate: SHORT
+- index: 10
+  activation:
+    type: push
+    commands:
+      press: sim/lights/landing_01_light_tog
+  representation:
+    type: annunciator
+    label: LAND
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq
+  vibrate: SHORT
+- index: 11
+  activation:
+    type: push
+    commands:
+      press: sim/ice/window_heat_tog
+  representation:
+    type: annunciator
+    label: WSHLD
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/switches/anti_ice_window_heat} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/anti_ice_window_heat} 1 eq
+  vibrate: SHORT
+- index: 12
+  activation:
+    type: sweep
+    positions:
+    - sim/ice/tks_bkup_off
+    - sim/ice/tks_bkup_on
+  representation:
+    type: annunciator
+    label: PUMP BKUP
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/ice/tks_backup_pump} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/ice/tks_backup_pump} 1 eq
+  vibrate: SHORT
+- index: 15
+  vibrate: SHORT
+  activation:
+    type: page
+    page: switches
+  representation:
+    text-bg-color: (20, 20, 20)
+    type: text
+    text: SWITCHES
+    text-font: D-DINCondensed.otf
+    text-size: 18
+    text-color: khaki
+    text-position: cm
+- index: 23
+  activation:
+    type: page
+    page: fcu
+  representation:
+    text-bg-color: (20, 20, 20)
+    type: text
+    text: FCU
+    text-font: D-DINCondensed.otf
+    text-size: 18
+    text-color: khaki
+    text-position: cm
+- index: 31
+  vibrate: SHORT
+  activation:
+    type: page
+    page: engine
+  representation:
+    text-bg-color: (20, 20, 20)
+    type: text
+    text: ENGINE
+    text-font: D-DINCondensed.otf
+    text-size: 18
+    text-color: khaki
+    text-position: cm

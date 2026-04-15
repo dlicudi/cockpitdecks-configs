@@ -23,7 +23,7 @@ buttons:
     type: none
   representation:
     type: gauge
-    label: "RPM ×100"
+    label: "RPM \xD7100"
     label-size: 7
     label-color: white
     formula: ${sim/cockpit2/engine/indicators/prop_speed_rpm[0]} 2700 / 9 *
@@ -61,7 +61,8 @@ buttons:
     label: FF GPH
     label-size: 7
     label-color: white
-    formula: ${sim/flightmodel/engine/ENGN_FF_[0]} 0.69 / 0.264172 * 3600 * 30 / 6 *
+    formula: ${sim/flightmodel/engine/ENGN_FF_[0]} 0.69 / 0.264172 * 3600 * 30 / 6
+      *
     gauge:
       tick-from: -120
       tick-to: 120
@@ -90,10 +91,11 @@ buttons:
     type: none
   representation:
     type: gauge
-    label: "OIL °F"
+    label: "OIL \xB0F"
     label-size: 9
     label-color: white
-    formula: ${sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]} 9 * 5 / 32 + 250 / 5 *
+    formula: ${sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]} 9 * 5 / 32
+      + 250 / 5 *
     gauge:
       tick-from: -120
       tick-to: 120
@@ -208,7 +210,7 @@ buttons:
     type: none
   representation:
     type: annunciator
-    label: "CHT °F"
+    label: "CHT \xB0F"
     label-size: 11
     label-color: deepskyblue
     annunciator:
@@ -338,7 +340,7 @@ buttons:
     type: none
   representation:
     type: annunciator
-    label: "EGT °F"
+    label: "EGT \xB0F"
     label-size: 11
     label-color: orange
     annunciator:

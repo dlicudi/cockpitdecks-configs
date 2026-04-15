@@ -4,26 +4,6 @@ includes:
 - encoders/fcu
 name: switches_ground
 buttons:
-- index: 6
-  activation:
-    type: push
-    commands:
-      press: laminar/sr22/fuel_sel_left_off
-  representation:
-    type: annunciator
-    label: FUEL OFF
-    annunciator:
-      model: B
-      size: medium
-      parts:
-      - led: bar
-        color: grey
-        formula: ${laminar/sr22/fuel_selector_pos} 1 eq ${laminar/sr22/fuel_selector_pos} 2 eq +
-      - text: 'OFF'
-        color: red
-        framed: true
-        formula: ${laminar/sr22/fuel_selector_pos} 0 eq ${laminar/sr22/fuel_selector_pos} 3 eq +
-  vibrate: SHORT
 - index: 0
   activation:
     type: push
@@ -64,46 +44,6 @@ buttons:
         framed: true
         formula: ${laminar/sr22/fuel_selector_pos} 2 eq
   vibrate: SHORT
-- index: 5
-  activation:
-    type: sweep
-    set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
-  representation:
-    type: annunciator
-    label: BOOST PUMP
-    label-size: 10
-    annunciator:
-      model: B
-      size: medium
-      parts:
-      - text: 'OFF'
-        color: darkorange
-        formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 0 eq
-      - text: 'ON'
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 1 eq
-  vibrate: SHORT
-- index: 4
-  activation:
-    type: push
-    commands:
-      press: sim/flight_controls/park_brake_valve_toggle
-  representation:
-    type: annunciator
-    label: PARK BRAKE
-    annunciator:
-      model: B
-      size: medium
-      parts:
-      - text: 'OFF'
-        color: darkorange
-        formula: ${sim/cockpit2/controls/park_brake_valve} 0 eq
-      - text: 'ON'
-        color: red
-        framed: true
-        formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
-  vibrate: SHORT
 - index: 2
   activation:
     type: push
@@ -140,6 +80,98 @@ buttons:
     - ENGINE_START_PRESSED.png
     formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
   vibrate: LONG
+- index: 4
+  activation:
+    type: push
+    commands:
+      press: sim/flight_controls/park_brake_valve_toggle
+  representation:
+    type: annunciator
+    label: PARK BRAKE
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/controls/park_brake_valve} 0 eq
+      - text: 'ON'
+        color: red
+        framed: true
+        formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
+  vibrate: SHORT
+- index: 5
+  activation:
+    type: sweep
+    set-dataref: sim/cockpit2/engine/actuators/fuel_pump_on[0]
+  representation:
+    type: annunciator
+    label: BOOST PUMP
+    label-size: 10
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/engine/actuators/fuel_pump_on[0]} 1 eq
+  vibrate: SHORT
+- index: 6
+  activation:
+    type: push
+    commands:
+      press: laminar/sr22/fuel_sel_left_off
+  representation:
+    type: annunciator
+    label: FUEL OFF
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - led: bar
+        color: grey
+        formula: ${laminar/sr22/fuel_selector_pos} 1 eq ${laminar/sr22/fuel_selector_pos}
+          2 eq +
+      - text: 'OFF'
+        color: red
+        framed: true
+        formula: ${laminar/sr22/fuel_selector_pos} 0 eq ${laminar/sr22/fuel_selector_pos}
+          3 eq +
+  vibrate: SHORT
+- index: 7
+  name: NEW 16
+  activation:
+    type: sweep
+    positions:
+    - laminar/sr22/fuel_sel_left_select
+    - laminar/sr22/fuel_sel_right_select
+  representation:
+    label: FUEL TANKS
+    type: annunciator
+    annunciator:
+      model: F
+      size: medium
+      parts:
+      - text: ${formula} g
+        text-size: 11
+        color: yellow
+        formula: ${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn
+      - text: ${formula} g
+        text-size: 11
+        color: yellow
+        formula: ${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn
+      - text-size: 12
+        color: lime
+        formula: ${laminar/sr22/fuel_selector_pos} 1 eq
+        led: dot
+      - text-size: 12
+        color: lime
+        formula: ${laminar/sr22/fuel_selector_pos} 2 eq
+        led: dot
 - index: 8
   activation:
     type: page

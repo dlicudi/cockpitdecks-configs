@@ -18,8 +18,11 @@ decks:
   #   type: Virtual LoupedeckLive
   #   layout: loupedecklive1
   - name: sr22-ipad
-    type: SR22 iPad
+    type: iPad
     layout: ipad1
+  - name: sr22-iphone
+    type: iPhone
+    layout: iphone1
 description: Decks for Cirrus SR22
 
 web-deck-defaults:
