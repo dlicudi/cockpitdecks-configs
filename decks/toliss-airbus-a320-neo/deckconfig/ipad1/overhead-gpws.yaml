@@ -1,0 +1,115 @@
+name: overhead-gpws
+description: "A320 Overhead — GPWS (terr, sys, g/s mode, flap mode, ldg flap 3)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+- index: 0
+  name: GPWS_TERR
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/GPWSTerrSwitch
+  representation:
+    type: annunciator
+    label: TERR
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/GPWSTerrSwitch}
+  vibrate: SHORT
+- index: 1
+  name: GPWS_SYS
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/GPWSSysSwitch
+  representation:
+    type: annunciator
+    label: SYS
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/GPWSSysSwitch}
+  vibrate: SHORT
+- index: 2
+  name: GPWS_GS_MODE
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/GPWSGsModeSwitch
+  representation:
+    type: annunciator
+    label: G/S MODE
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/GPWSGsModeSwitch}
+  vibrate: SHORT
+- index: 3
+  name: GPWS_FLAP_MODE
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/GPWSFlapModeSwitch
+  representation:
+    type: annunciator
+    label: FLAP MODE
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/GPWSFlapModeSwitch}
+  vibrate: SHORT
+- index: 4
+  name: GPWS_LDG_FLAP3
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/GPWSLdgFlap3Switch
+  representation:
+    type: annunciator
+    label: LDG FLAP 3
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/GPWSLdgFlap3Switch}
+  vibrate: SHORT
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

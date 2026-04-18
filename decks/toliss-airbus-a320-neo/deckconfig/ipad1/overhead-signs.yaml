@@ -1,0 +1,206 @@
+name: overhead-signs
+description: "A320 Overhead — SIGNS / MISC (seat belts, no smoke, emer exit, ditching, wipers)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+- index: 0
+  name: SEAT_BELTS
+  activation:
+    type: sweep
+    stops: 3
+    dataref: AirbusFBW/SeatBeltSignsOn
+    set-dataref: AirbusFBW/SeatBeltSignsOn
+    initial-value: 1
+  representation:
+    type: switch
+    label: SEAT BELTS
+    label-size: 9
+    switch:
+      switch-style: round
+      button-fill-color: white
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'OFF'
+      - AUTO
+      - 'ON'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 26
+      tick-label-font: DIN Bold
+      tick-label-color: white
+    formula: ${AirbusFBW/SeatBeltSignsOn}
+  vibrate: SHORT
+- index: 1
+  name: NO_SMOKING
+  activation:
+    type: sweep
+    stops: 3
+    dataref: AirbusFBW/NoSmokingSignsOn
+    set-dataref: AirbusFBW/NoSmokingSignsOn
+    initial-value: 1
+  representation:
+    type: switch
+    label: NO SMOKE
+    label-size: 9
+    switch:
+      switch-style: round
+      button-fill-color: white
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'OFF'
+      - AUTO
+      - 'ON'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 26
+      tick-label-font: DIN Bold
+      tick-label-color: white
+    formula: ${AirbusFBW/NoSmokingSignsOn}
+  vibrate: SHORT
+- index: 2
+  name: EMER_EXIT
+  activation:
+    type: sweep
+    stops: 3
+    dataref: ckpt/oh/emerExitLight/anim
+    set-dataref: ckpt/oh/emerExitLight/anim
+    initial-value: 1
+  representation:
+    type: switch
+    label: EMER EXIT
+    label-size: 9
+    switch:
+      switch-style: round
+      button-fill-color: white
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'OFF'
+      - ARM
+      - 'ON'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 26
+      tick-label-font: DIN Bold
+      tick-label-color: white
+    formula: ${ckpt/oh/emerExitLight/anim}
+  vibrate: SHORT
+- index: 3
+  name: DITCHING
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/DitchSwitch
+  representation:
+    type: annunciator
+    label: DITCHING
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/DitchSwitchLights}
+  vibrate: SHORT
+- index: 12
+  name: WIPER_LEFT
+  activation:
+    dataref: AirbusFBW/LeftWiperSwitch
+    type: sweep
+    positions: []
+  representation:
+    type: circular-switch
+    circular-switch:
+      switch-style: medium
+      button-size: 40
+      down: 30
+      angle-start: 0
+      angle-end: 150
+      tick-space: 40
+      tick-underline-width: 6
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 22
+      tick-label-font: DIN Bold
+      ticks:
+      - 'OFF'
+      - SLOW
+      - FAST
+      left: 60
+      tick-label-space: 12
+      tick-length: 10
+    label: Wipers
+    label-color: Cyan
+    label-font: B612-Bold.ttf
+    label-size: 8
+- index: 13
+  name: WIPER_RIGHT
+  activation:
+    type: sweep
+    dataref: AirbusFBW/RightWiperSwitch
+    set-dataref: AirbusFBW/RightWiperSwitch
+    stops: 3
+  representation:
+    type: circular-switch
+    circular-switch:
+      switch-style: medium
+      button-size: 40
+      down: 30
+      angle-start: 0
+      angle-end: 150
+      tick-space: 40
+      tick-underline-width: 6
+      needle-color: white
+      needle-length: 30
+      tick-label-size: 22
+      tick-label-font: DIN Bold
+      ticks:
+      - 'OFF'
+      - SLOW
+      - FAST
+      left: 60
+      tick-label-space: 12
+      tick-length: 10
+    label: Wipers R
+    label-color: Cyan
+    label-font: B612-Bold.ttf
+    label-size: 8
+- index: 14
+  name: RAIN_REPEL
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/misccommands/RainRepelToggle
+  representation:
+    type: annunciator
+    label: RAIN RPLNT
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/RainRepelSwitch}
+  vibrate: SHORT
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

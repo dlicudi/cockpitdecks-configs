@@ -1,0 +1,231 @@
+name: overhead-fuel
+description: "A320 Overhead — FUEL (pumps L/CTR/R, mode sel, X-feed, fuel qty)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+- index: 0
+  name: FUEL_L1
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelOHPArray[0]
+  representation:
+    type: annunciator
+    label: FUEL L1
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/FuelOHPArray[0]} not
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/FuelOHPArray[0]} not
+  vibrate: SHORT
+- index: 1
+  name: FUEL_L2
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelOHPArray[1]
+  representation:
+    type: annunciator
+    label: FUEL L2
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/FuelOHPArray[1]} not
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/FuelOHPArray[1]} not
+  vibrate: SHORT
+- index: 2
+  name: FUEL_CTR_L
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelOHPArray[2]
+  representation:
+    type: annunciator
+    label: CTR L XFR
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/FuelOHPArray[2]} not
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/FuelOHPArray[2]} not
+  vibrate: SHORT
+- index: 3
+  name: FUEL_CTR_R
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelOHPArray[3]
+  representation:
+    type: annunciator
+    label: CTR R XFR
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/FuelOHPArray[3]} not
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/FuelOHPArray[3]} not
+  vibrate: SHORT
+- index: 4
+  name: FUEL_R1
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelOHPArray[4]
+  representation:
+    type: annunciator
+    label: FUEL R1
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/FuelOHPArray[4]} not
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/FuelOHPArray[4]} not
+  vibrate: SHORT
+- index: 5
+  name: FUEL_R2
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelOHPArray[5]
+  representation:
+    type: annunciator
+    label: FUEL R2
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/FuelOHPArray[5]} not
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/FuelOHPArray[5]} not
+  vibrate: SHORT
+- index: 6
+  name: FUEL_MODE_SEL
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelOHPArray[6]
+  representation:
+    type: annunciator
+    label: MODE SEL
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/FuelOHPArray[6]} not
+      - text: MAN
+        text-color: white
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/FuelOHPArray[6]} not
+  vibrate: SHORT
+- index: 7
+  name: X_FEED
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FuelXFVOHPArray[0]
+  representation:
+    type: annunciator
+    label: X FEED
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: OPEN
+        text-color: lime
+        text-size: 18
+        formula: ${AirbusFBW/FuelXFVOHPArray[0]} not
+      - text: 'ON'
+        text-color: white
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/FuelXFVOHPArray[0]} not
+  vibrate: SHORT
+- index: 8
+  name: FUEL_QTY
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: FUEL QTY
+    label-size: 9
+    annunciator:
+      model: D
+      size: medium
+      parts:
+      - text-color: yellow
+        text-size: 11
+        formula: ${sim/cockpit2/fuel/fuel_quantity[0]}
+        text: L ${formula} kg
+        text-format: '{0:.0f}'
+      - text-color: yellow
+        text-size: 11
+        formula: ${sim/cockpit2/fuel/fuel_quantity[2]}
+        text: C ${formula} kg
+        text-format: '{0:.0f}'
+      - text-color: yellow
+        text-size: 11
+        formula: ${sim/cockpit2/fuel/fuel_quantity[1]}
+        text: R ${formula} kg
+        text-format: '{0:.0f}'
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

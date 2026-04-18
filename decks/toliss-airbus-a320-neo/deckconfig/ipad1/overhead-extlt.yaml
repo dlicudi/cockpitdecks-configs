@@ -1,0 +1,216 @@
+name: overhead-extlt
+description: "A320 Overhead — EXT LT (strobe, beacon, wing, nav/logo, nose/taxi, landing, rwy turn off)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+# ── Row 0: main lights ───────────────────────────────────────────────────────
+- index: 0
+  name: STROBE
+  activation:
+    type: sweep
+    stops: 3
+    options: 3way,hexa
+    dataref: ckpt/oh/strobeLight/anim
+    set-dataref: ckpt/oh/strobeLight/anim
+  representation:
+    type: switch
+    label: STROBE
+    label-size: 9
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - 'ON'
+      - AUTO
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 22
+      tick-label-font: DIN Bold
+  vibrate: SHORT
+- index: 1
+  name: BEACON
+  activation:
+    type: sweep
+    options: hexa
+    dataref: ckpt/oh/beaconLight/anim
+    set-dataref: ckpt/oh/beaconLight/anim
+  representation:
+    type: annunciator
+    label: BEACON
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${ckpt/oh/beaconLight/anim}
+  vibrate: SHORT
+- index: 2
+  name: WING
+  activation:
+    type: sweep
+    options: hexa
+    dataref: ckpt/oh/wingLight/anim
+    set-dataref: ckpt/oh/wingLight/anim
+  representation:
+    type: annunciator
+    label: WING
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${ckpt/oh/wingLight/anim}
+  vibrate: SHORT
+- index: 3
+  name: NAV_LOGO
+  activation:
+    type: sweep
+    stops: 3
+    options: 3way,hexa
+    dataref: ckpt/oh/navLight/anim
+    set-dataref: ckpt/oh/navLight/anim
+  representation:
+    type: switch
+    label: NAV & LOGO
+    label-size: 9
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - '2'
+      - '1'
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 22
+      tick-label-font: DIN Bold
+  vibrate: SHORT
+- index: 4
+  name: NOSE_TAXI
+  activation:
+    type: sweep
+    stops: 3
+    options: 3way,hexa
+    dataref: ckpt/oh/taxiLight/anim
+    set-dataref: ckpt/oh/taxiLight/anim
+  representation:
+    type: switch
+    label: NOSE/TAXI
+    label-size: 9
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - T.O.
+      - TAXI
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 22
+      tick-label-font: DIN Bold
+  vibrate: SHORT
+- index: 5
+  name: RWY_TURN_OFF
+  activation:
+    type: sweep
+    options: hexa
+    dataref: ckpt/oh/rwyTurnOff/anim
+    set-dataref: ckpt/oh/rwyTurnOff/anim
+  representation:
+    type: annunciator
+    label: RWY TURN OFF
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${ckpt/oh/rwyTurnOff/anim}
+  vibrate: SHORT
+# ── Row 1: landing lights ────────────────────────────────────────────────────
+- index: 12
+  name: LAND_L
+  activation:
+    type: sweep
+    stops: 3
+    options: 3way,hexa
+    dataref: ckpt/oh/ladningLightLeft/anim
+    set-dataref: ckpt/oh/ladningLightLeft/anim
+  representation:
+    type: switch
+    label: LAND L
+    label-size: 9
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - LAND
+      - 'OFF'
+      - RETRACT
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 18
+      tick-label-font: DIN Bold
+  vibrate: SHORT
+- index: 13
+  name: LAND_R
+  activation:
+    type: sweep
+    stops: 3
+    options: 3way,hexa
+    dataref: ckpt/oh/ladningLightRight/anim
+    set-dataref: ckpt/oh/ladningLightRight/anim
+  representation:
+    type: switch
+    label: LAND R
+    label-size: 9
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - LAND
+      - 'OFF'
+      - RETRACT
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 18
+      tick-label-font: DIN Bold
+  vibrate: SHORT
+# ── HOME ───────────────────────────────────────────────────────────────────
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

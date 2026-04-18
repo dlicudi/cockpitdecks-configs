@@ -1,0 +1,76 @@
+name: overhead-oxygen
+description: "A320 Overhead — OXYGEN (mask man on, passenger, crew supply)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+- index: 0
+  name: OXY_MASK_MAN_ON
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/oxygencommands/MaskManOnToggle
+  representation:
+    type: annunciator
+    label: MASK MAN ON
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: MAN ON
+        text-color: deepskyblue
+        framed: true
+        text-size: 16
+        formula: ${AirbusFBW/OxyMaskManOn}
+  vibrate: SHORT
+- index: 1
+  name: OXY_PASSENGER
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: PASSENGER
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/PassengerOxySW}
+- index: 2
+  name: CREW_SUPPLY
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/CrewOxySwitch
+  representation:
+    type: annunciator
+    label: CREW SUPPLY
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 100%
+        text-color: deepskyblue
+        framed: true
+        text-size: 16
+        formula: ${AirbusFBW/CrewOxySwitch}
+  vibrate: SHORT
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

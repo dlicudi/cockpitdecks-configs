@@ -1,0 +1,68 @@
+name: overhead-probe-heat
+description: "A320 Overhead — PROBE/WINDOW HEAT"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+# ── PROBE / WINDOW HEAT ─────────────────────────────────────────────────────
+- index: 0
+  name: PROBE_WINDOW_HEAT
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/ProbeHeatSwitch
+  representation:
+    type: annunciator
+    label: PROBE/WINDOW HEAT
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 14
+        formula: ${AirbusFBW/OHPLightsATA30[11]}
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/OHPLightsATA30[10]} 3 roundn
+  vibrate: SHORT
+# ── STATUS DISPLAY ──────────────────────────────────────────────────────────
+- index: 1
+  name: PROBE_HEAT_STATUS
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: HEAT STATUS
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: AUTO
+        text-color: lime
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/ProbeHeatSwitch} 0 eq
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/ProbeHeatSwitch} 1 eq
+# ── HOME ───────────────────────────────────────────────────────────────────
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

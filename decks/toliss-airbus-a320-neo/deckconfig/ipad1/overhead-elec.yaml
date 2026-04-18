@@ -1,0 +1,316 @@
+name: overhead-elec
+description: "A320 Overhead \u2014 ELEC (GEN 1/2, APU GEN, EXT PWR, IDG, BAT, BUS\
+  \ TIE)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+- index: 0
+  name: GEN1
+  activation:
+    type: push-value
+    set-dataref: AirbusFBW/ElecOHPArray[0]
+    value-min: 0.0
+    value-max: 1.0
+  representation:
+    label: GEN 1
+    label-size: 9
+    type: annunciator
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        formula: ${AirbusFBW/EngGenOHPArray[0]} 3 eq
+        text-size: 10
+        color: orange
+      - text: 'OFF'
+        formula: ${AirbusFBW/EngGenOHPArray[0]} 2 eq
+        text-size: 14
+        framed: true
+- index: 1
+  name: APU_GEN
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: APU GEN
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/APUGenOHPArray[0]} not
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/APUGenOHPArray[0]} not
+- index: 2
+  name: GEN2
+  activation:
+    type: push-value
+    set-dataref: AirbusFBW/ElecOHPArray[1]
+    value-min: 0.0
+    value-max: 1.0
+  representation:
+    label: GEN 2
+    label-size: 9
+    type: annunciator
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        formula: ${AirbusFBW/EngGenOHPArray[1]} 3 eq
+        text-size: 10
+        color: orange
+      - text: 'OFF'
+        formula: ${AirbusFBW/EngGenOHPArray[1]} 2 eq
+        text-size: 14
+        framed: true
+- index: 3
+  name: EXT_PWR
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/eleccommands/ExtPowToggle
+  representation:
+    type: annunciator
+    label: EXT PWR
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: AVAIL
+        text-color: lime
+        text-size: 16
+        formula: ${AirbusFBW/ExtPowOHPArray[0]} 2 eq
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/ExtPowOHPArray[0]} 1 eq
+- index: 4
+  name: BUS_TIE
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: BUS TIE
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: 0
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/BusCrossTie} not
+- index: 5
+  name: AC_ESS_FEED
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: AC ESS FEED
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: ALTN
+        text-color: deepskyblue
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/AcEssAltn}
+- index: 6
+  name: GALLEY
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: GALLEY
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        text-color: darkorange
+        text-size: 18
+        formula: ${AirbusFBW/GalleyPBLight}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/GalleyPBLight} not
+- index: 12
+  name: IDG1_DISC
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/eleccommands/IDG1PressAndHold
+  representation:
+    type: annunciator
+    label: IDG 1
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: DISC
+        text-color: darkorange
+        text-size: 16
+  guard:
+    dataref: AirbusFBW/OHPGuardsAllATA[5]
+    model: grid
+    color: (255, 0, 0, 100)
+  vibrate: SHORT
+- index: 13
+  name: IDG2_DISC
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/eleccommands/IDG2PressAndHold
+  representation:
+    type: annunciator
+    label: IDG 2
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: DISC
+        text-color: darkorange
+        text-size: 16
+  guard:
+    dataref: AirbusFBW/OHPGuardsAllATA[6]
+    model: grid
+    color: (255, 0, 0, 100)
+  vibrate: SHORT
+- index: 14
+  name: BAT1
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/eleccommands/Bat1Toggle
+  representation:
+    type: annunciator
+    label: BAT 1
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/BatOHPArray[0]} not
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/BatOHPArray[0]} not
+- index: 15
+  name: BAT2
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/eleccommands/Bat2Toggle
+  representation:
+    type: annunciator
+    label: BAT 2
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/BatOHPArray[1]} not
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/BatOHPArray[1]} not
+- index: 24
+  name: BAT1_AMP
+  activation:
+    type: none
+  representation:
+    type: text
+    label: BAT 1A
+    label-size: 9
+    text: ${AirbusFBW/BatAmps[0]}
+    text-format: '{:2.1f}'
+    text-font: Seven Segment.ttf
+    text-size: 36
+    text-color: lime
+    text-bg-color: (40, 40, 40)
+- index: 25
+  name: BAT2_AMP
+  activation:
+    type: none
+  representation:
+    type: text
+    label: BAT 2A
+    label-size: 9
+    text: ${AirbusFBW/BatAmps[1]}
+    text-format: '{:2.1f}'
+    text-font: Seven Segment.ttf
+    text-size: 36
+    text-color: lime
+    text-bg-color: (40, 40, 40)
+- index: 26
+  name: BAT1_VOLT
+  activation:
+    type: none
+  representation:
+    type: text
+    label: BAT 1V
+    label-size: 9
+    text: ${AirbusFBW/BatVolts[0]}
+    text-format: '{:2.1f}'
+    text-font: Seven Segment.ttf
+    text-size: 36
+    text-color: lime
+    text-bg-color: (40, 40, 40)
+- index: 27
+  name: BAT2_VOLT
+  activation:
+    type: none
+  representation:
+    type: text
+    label: BAT 2V
+    label-size: 9
+    text: ${AirbusFBW/BatVolts[1]}
+    text-format: '{:2.1f}'
+    text-font: Seven Segment.ttf
+    text-size: 36
+    text-color: lime
+    text-bg-color: (40, 40, 40)
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

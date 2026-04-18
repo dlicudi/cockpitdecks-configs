@@ -1,0 +1,111 @@
+name: overhead-apu
+description: "A320 Overhead — APU (master, start, EGT, N%, bleed)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+- index: 0
+  name: APU_MASTER
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/apucommands/MasterToggle
+  representation:
+    type: annunciator
+    label: APU MST
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/APUMaster}
+  vibrate: SHORT
+- index: 1
+  name: APU_START
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/apucommands/StarterToggle
+  representation:
+    type: annunciator
+    label: APU START
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: AVAIL
+        text-color: lime
+        text-size: 16
+        formula: ${AirbusFBW/APUAvail}
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/APUStarter}
+  vibrate: SHORT
+- index: 2
+  name: BLEED_APU
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/apucommands/BleedToggle
+  representation:
+    type: annunciator
+    label: APU BLEED
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/APUBleedInd}
+- index: 12
+  name: APU_EGT
+  activation:
+    type: none
+  representation:
+    type: text
+    label: APU EGT
+    label-size: 9
+    text: ${AirbusFBW/APUEGT}
+    text-format: '{:.0f}'
+    text-font: Seven Segment.ttf
+    text-size: 36
+    text-color: lime
+    text-bg-color: (40, 40, 40)
+- index: 13
+  name: APU_N_PCT
+  activation:
+    type: none
+  representation:
+    type: text
+    label: APU N%
+    label-size: 9
+    text: ${AirbusFBW/APUN}
+    text-format: '{:.0f}'
+    text-font: Seven Segment.ttf
+    text-size: 36
+    text-color: lime
+    text-bg-color: (40, 40, 40)
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

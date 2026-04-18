@@ -1,0 +1,294 @@
+name: overhead-adiru
+description: "A320 Overhead \u2014 ADIRU (IR 1/2/3, ADR 1/2/3, alignment)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+- index: 1
+  name: ADIRS_ON_BAT
+  activation:
+    type: none
+  representation:
+    label: ADIRS
+    label-size: 9
+    type: annunciator
+    annunciator:
+      model: A
+      size: small
+      parts:
+      - text: ON BAT
+        formula: ${AirbusFBW/ADIRUOnBat}
+        text-size: 16
+    annunciator-style: v
+- index: 7
+  name: ADIRS_FAST_ALIGN
+  activation:
+    type: push
+    commands:
+      press: AirbusFBW/ADIRU_fast_align
+  representation:
+    type: annunciator
+    label: F/ALIGN
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAST
+        text-color: deepskyblue
+        text-size: 20
+        formula: ${AirbusFBW/AlignADIRUPossible}
+- index: 12
+  name: IR1_ALIGN
+  activation:
+    type: push-value
+    set-dataref: AirbusFBW/IRSwitchArray[0]
+    value-min: 0.0
+    value-max: 1.0
+    step: 1.0
+  representation:
+    label: IR1 ALGN
+    label-size: 9
+    type: annunciator
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        formula: ${AirbusFBW/IRSwitchArray[0]} 2 eq
+        text-size: 10
+        color: oragenred
+      - text: 'OFF'
+        formula: ${AirbusFBW/IRSwitchArray[0]} 0 eq
+        text-size: 12
+        framed: true
+- index: 13
+  name: IR3_ALIGN
+  activation:
+    type: push-value
+    set-dataref: AirbusFBW/IRSwitchArray[2]
+    value-min: 0.0
+    value-max: 1.0
+    step: 1.0
+  representation:
+    label: IR3 ALGN
+    label-size: 9
+    type: annunciator
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        formula: ${AirbusFBW/IRSwitchArray[2]} 2 eq
+        text-size: 10
+        color: oragenred
+      - text: 'OFF'
+        formula: ${AirbusFBW/IRSwitchArray[2]} 0 eq
+        text-size: 12
+        framed: true
+- index: 14
+  name: IR2_ALIGN
+  activation:
+    type: push-value
+    set-dataref: AirbusFBW/IRSwitchArray[1]
+    value-min: 0.0
+    value-max: 1.0
+    step: 1.0
+  representation:
+    label: IR2 ALGN
+    label-size: 9
+    type: annunciator
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        formula: ${AirbusFBW/IRSwitchArray[1]} 2 eq
+        text-size: 10
+        color: oragenred
+      - text: 'OFF'
+        formula: ${AirbusFBW/IRSwitchArray[1]} 0 eq
+        text-size: 12
+        framed: true
+- index: 24
+  name: IR1
+  activation:
+    type: sweep
+    stops: 3
+    dataref: AirbusFBW/ADIRUSwitchArray[0]
+    set-dataref: AirbusFBW/ADIRUSwitchArray[0]
+    initial-value: 0
+  representation:
+    type: circular-switch
+    label: IR 1
+    label-size: 9
+    circular-switch:
+      switch-style: large
+      down: 50
+      button-size: 62
+      button-fill-color: (30, 40, 50)
+      button-stroke-color: black
+      handle-fill-color: (60, 70, 80)
+      angle-start: 320
+      angle-end: 40
+      tick-color: white
+      tick-space: 36
+      tick-width: 6
+      tick-length: 20
+      ticks:
+      - 'OFF'
+      - NAV
+      - ATT
+      tick-label-font: DIN Bold
+      tick-label-size: 26
+      needle-underline-width: 6
+    formula: ${AirbusFBW/ADIRUSwitchArray[0]}
+  vibrate: SHORT
+- index: 25
+  name: IR3
+  activation:
+    type: sweep
+    stops: 3
+    dataref: AirbusFBW/ADIRUSwitchArray[2]
+    set-dataref: AirbusFBW/ADIRUSwitchArray[2]
+    initial-value: 0
+  representation:
+    type: circular-switch
+    label: IR 3
+    label-size: 9
+    circular-switch:
+      switch-style: large
+      down: 50
+      button-size: 62
+      button-fill-color: (30, 40, 50)
+      button-stroke-color: black
+      handle-fill-color: (60, 70, 80)
+      angle-start: 320
+      angle-end: 40
+      tick-color: white
+      tick-space: 36
+      tick-width: 6
+      tick-length: 20
+      ticks:
+      - 'OFF'
+      - NAV
+      - ATT
+      tick-label-font: DIN Bold
+      tick-label-size: 26
+      needle-underline-width: 6
+    formula: ${AirbusFBW/ADIRUSwitchArray[2]}
+  vibrate: SHORT
+- index: 26
+  name: IR2
+  activation:
+    type: sweep
+    stops: 3
+    dataref: AirbusFBW/ADIRUSwitchArray[1]
+    set-dataref: AirbusFBW/ADIRUSwitchArray[1]
+    initial-value: 0
+  representation:
+    type: circular-switch
+    label: IR 2
+    label-size: 9
+    circular-switch:
+      switch-style: large
+      down: 50
+      button-size: 62
+      button-fill-color: (30, 40, 50)
+      button-stroke-color: black
+      handle-fill-color: (60, 70, 80)
+      angle-start: 320
+      angle-end: 40
+      tick-color: white
+      tick-space: 36
+      tick-width: 6
+      tick-length: 20
+      ticks:
+      - 'OFF'
+      - NAV
+      - ATT
+      tick-label-font: DIN Bold
+      tick-label-size: 26
+      needle-underline-width: 6
+    formula: ${AirbusFBW/ADIRUSwitchArray[1]}
+  vibrate: SHORT
+- index: 36
+  name: ADR1_OFF
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/ADRSwitchArray[0]
+  representation:
+    type: annunciator
+    label: ADR 1
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/OHPLightsATA34[1]}
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/ADRLights[0]} not
+- index: 37
+  name: ADR3_OFF
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/ADRSwitchArray[2]
+  representation:
+    type: annunciator
+    label: ADR 3
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/OHPLightsATA34[5]}
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/ADRLights[2]} not
+- index: 38
+  name: ADR2_OFF
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/ADRSwitchArray[1]
+  representation:
+    type: annunciator
+    label: ADR 2
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/OHPLightsATA34[3]}
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/ADRLights[1]} not
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

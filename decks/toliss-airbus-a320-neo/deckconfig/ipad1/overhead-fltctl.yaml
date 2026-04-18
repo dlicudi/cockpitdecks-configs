@@ -1,0 +1,174 @@
+name: overhead-fltctl
+description: "A320 Overhead — FLT CTL (ELAC 1/2, SEC 1/2/3, FAC 1/2)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+- index: 0
+  name: ELAC1
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FCCSwitchArray[0]
+  representation:
+    type: annunciator
+    label: ELAC 1
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/FCCSwitchArray[0]} ${AirbusFBW/FCCAvailArray[0]} 0 eq and
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/FCCSwitchArray[0]} not
+- index: 1
+  name: SEC1
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FCCSwitchArray[2]
+  representation:
+    type: annunciator
+    label: SEC 1
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/FCCSwitchArray[2]} ${AirbusFBW/FCCAvailArray[1]} 0 eq and
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/FCCSwitchArray[2]} not
+- index: 2
+  name: FAC1
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FCCSwitchArray[5]
+  representation:
+    type: annunciator
+    label: FAC 1
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/FCCSwitchArray[5]} ${AirbusFBW/FCCAvailArray[5]} 0 eq and
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/FCCSwitchArray[5]} not
+- index: 3
+  name: SEC2
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FCCSwitchArray[3]
+  representation:
+    type: annunciator
+    label: SEC 2
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/FCCSwitchArray[3]} ${AirbusFBW/FCCAvailArray[2]} 0 eq and
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/FCCSwitchArray[3]} not
+- index: 4
+  name: SEC3
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FCCSwitchArray[4]
+  representation:
+    type: annunciator
+    label: SEC 3
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/FCCSwitchArray[4]} ${AirbusFBW/FCCAvailArray[3]} 0 eq and
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/FCCSwitchArray[4]} not
+- index: 25
+  name: ELAC2
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FCCSwitchArray[1]
+  representation:
+    type: annunciator
+    label: ELAC 2
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/FCCSwitchArray[1]} ${AirbusFBW/FCCAvailArray[4]} 0 eq and
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/FCCSwitchArray[1]} not
+- index: 26
+  name: FAC2
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FCCSwitchArray[6]
+  representation:
+    type: annunciator
+    label: FAC 2
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/FCCSwitchArray[6]} ${AirbusFBW/FCCAvailArray[6]} 0 eq and
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/FCCSwitchArray[6]} not
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

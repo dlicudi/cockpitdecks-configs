@@ -1,0 +1,239 @@
+name: overhead-fire
+description: "A320 Overhead — FIRE (ENG 1, APU, ENG 2 detection, test & agent discharge)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+# ── ENG 1 ──────────────────────────────────────────────────────────────────
+- index: 0
+  name: ENG1_FIRE
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ENG 1
+    label-size: 9
+    annunciator:
+      model: A
+      size: medium
+      parts:
+      - text: FIRE
+        text-color: black
+        text-bg-color: red
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/FireAgentSwitchAnim[10]}
+  guard:
+    dataref: AirbusFBW/OHPGuardsAllATA[17]
+    model: grid
+- index: 1
+  name: ENG1_TEST
+  activation:
+    type: begin-end-command
+    commands:
+      press: AirbusFBW/FireTestENG1
+  representation:
+    type: annunciator
+    label: ENG1 TEST
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: TEST
+        text-color: white
+        text-size: 16
+        formula: 1
+  vibrate: SHORT
+- index: 12
+  name: ENG1_AGENT1
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ENG1 AGT 1
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: SQUIB
+        text-color: darkorange
+        text-size: 14
+      - text: DISCH
+        text-color: white
+        framed: true
+        text-size: 16
+- index: 13
+  name: ENG1_AGENT2
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ENG1 AGT 2
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: SQUIB
+        text-color: darkorange
+        text-size: 14
+      - text: DISCH
+        text-color: white
+        framed: true
+        text-size: 16
+# ── APU ────────────────────────────────────────────────────────────────────
+- index: 3
+  name: APU_FIRE
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: APU
+    label-size: 9
+    annunciator:
+      model: A
+      size: medium
+      parts:
+      - text: FIRE
+        text-color: black
+        text-bg-color: red
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/FireAgentSwitchAnim[14]}
+  guard:
+    dataref: AirbusFBW/OHPGuardsAllATA[19]
+    model: grid
+- index: 4
+  name: APU_TEST
+  activation:
+    type: begin-end-command
+    commands:
+      press: AirbusFBW/FireTestAPU
+  representation:
+    type: annunciator
+    label: APU TEST
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: TEST
+        text-color: white
+        text-size: 16
+        formula: 1
+  vibrate: SHORT
+- index: 15
+  name: APU_AGENT
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: APU AGT
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: SQUIB
+        text-color: darkorange
+        text-size: 14
+      - text: DISCH
+        text-color: white
+        framed: true
+        text-size: 16
+# ── ENG 2 ──────────────────────────────────────────────────────────────────
+- index: 6
+  name: ENG2_FIRE
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ENG 2
+    label-size: 9
+    annunciator:
+      model: A
+      size: medium
+      parts:
+      - text: FIRE
+        text-color: black
+        text-bg-color: red
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/FireAgentSwitchAnim[11]}
+  guard:
+    dataref: AirbusFBW/OHPGuardsAllATA[18]
+    model: grid
+- index: 7
+  name: ENG2_TEST
+  activation:
+    type: begin-end-command
+    commands:
+      press: AirbusFBW/FireTestENG2
+  representation:
+    type: annunciator
+    label: ENG2 TEST
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: TEST
+        text-color: white
+        text-size: 16
+        formula: 1
+  vibrate: SHORT
+- index: 18
+  name: ENG2_AGENT1
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ENG2 AGT 1
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: SQUIB
+        text-color: darkorange
+        text-size: 14
+      - text: DISCH
+        text-color: white
+        framed: true
+        text-size: 16
+- index: 19
+  name: ENG2_AGENT2
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: ENG2 AGT 2
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: SQUIB
+        text-color: darkorange
+        text-size: 14
+      - text: DISCH
+        text-color: white
+        framed: true
+        text-size: 16
+# ── HOME ───────────────────────────────────────────────────────────────────
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

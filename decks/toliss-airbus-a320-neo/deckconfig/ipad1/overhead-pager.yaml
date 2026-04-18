@@ -1,0 +1,312 @@
+name: overhead-pager
+description: "Persistent sidebar navigation for all overhead pages (cols 9-11)"
+fill-empty-keys: false
+buttons:
+# ── Row 0 ──────────────────────────────────────────────────────────────────
+- index: 9
+  activation:
+    type: page
+    page: overhead-fire
+  representation:
+    type: text
+    label: FIRE
+    label-color: white
+    text: FIRE
+    text-color: deepskyblue
+    text-size: 16
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+- index: 10
+  activation:
+    type: page
+    page: overhead-adiru
+  representation:
+    type: text
+    label: ADIRU
+    label-color: white
+    text: ADIRU
+    text-color: deepskyblue
+    text-size: 16
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+- index: 11
+  activation:
+    type: page
+    page: overhead-elec
+  representation:
+    type: text
+    label: ELEC
+    label-color: white
+    text: ELEC
+    text-color: deepskyblue
+    text-size: 16
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+# ── Row 1 ──────────────────────────────────────────────────────────────────
+- index: 21
+  activation:
+    type: page
+    page: overhead-eng-start
+  representation:
+    type: text
+    label: ENG START
+    label-color: white
+    text: ENG
+    text-color: deepskyblue
+    text-size: 16
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+- index: 22
+  activation:
+    type: page
+    page: overhead-apu
+  representation:
+    type: text
+    label: APU
+    label-color: white
+    text: APU
+    text-color: deepskyblue
+    text-size: 16
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+- index: 23
+  activation:
+    type: page
+    page: overhead-fuel
+  representation:
+    type: text
+    label: FUEL
+    label-color: white
+    text: FUEL
+    text-color: deepskyblue
+    text-size: 16
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+# ── Row 2 ──────────────────────────────────────────────────────────────────
+- index: 33
+  activation:
+    type: page
+    page: overhead-probe-heat
+  representation:
+    type: text
+    label: PROBE HEAT
+    label-color: white
+    text: PROBE
+    text-color: deepskyblue
+    text-size: 14
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+- index: 34
+  activation:
+    type: page
+    page: overhead-hyd
+  representation:
+    type: text
+    label: HYD
+    label-color: white
+    text: HYD
+    text-color: deepskyblue
+    text-size: 16
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+- index: 35
+  activation:
+    type: page
+    page: overhead-bleed-packs-press
+  representation:
+    type: text
+    label: BLEED
+    label-color: white
+    text: BLD
+    text-color: deepskyblue
+    text-size: 16
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+# ── Row 3 ──────────────────────────────────────────────────────────────────
+- index: 45
+  activation:
+    type: page
+    page: overhead-extlt
+  representation:
+    type: text
+    label: EXT LT
+    label-color: white
+    text: EXT LT
+    text-color: deepskyblue
+    text-size: 14
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+- index: 46
+  activation:
+    type: page
+    page: overhead-aice-eng
+  representation:
+    type: text
+    label: A-ICE
+    label-color: white
+    text: ICE
+    text-color: deepskyblue
+    text-size: 16
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+- index: 47
+  activation:
+    type: page
+    page: overhead-signs
+  representation:
+    type: text
+    label: SIGNS
+    label-color: white
+    text: SIGNS
+    text-color: deepskyblue
+    text-size: 14
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+# ── Row 4 ──────────────────────────────────────────────────────────────────
+- index: 57
+  activation:
+    type: page
+    page: overhead-intlt
+  representation:
+    type: text
+    label: INT LT
+    label-color: white
+    text: INT LT
+    text-color: deepskyblue
+    text-size: 14
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+- index: 58
+  activation:
+    type: page
+    page: overhead-fltctl
+  representation:
+    type: text
+    label: FLT CTL
+    label-color: white
+    text: FLT CTL
+    text-color: deepskyblue
+    text-size: 14
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+- index: 59
+  activation:
+    type: page
+    page: overhead-evac
+  representation:
+    type: text
+    label: EVAC
+    label-color: white
+    text: EVAC
+    text-color: deepskyblue
+    text-size: 16
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+# ── Row 5 ──────────────────────────────────────────────────────────────────
+- index: 69
+  activation:
+    type: page
+    page: overhead-cargo-smoke
+  representation:
+    type: text
+    label: CARGO SMOKE
+    label-color: white
+    text: CARGO
+    text-color: deepskyblue
+    text-size: 14
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+- index: 70
+  activation:
+    type: page
+    page: overhead-emer-elec
+  representation:
+    type: text
+    label: EMER ELEC
+    label-color: white
+    text: EMER
+    text-color: deepskyblue
+    text-size: 14
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+- index: 71
+  activation:
+    type: page
+    page: overhead-gpws
+  representation:
+    type: text
+    label: GPWS
+    label-color: white
+    text: GPWS
+    text-color: deepskyblue
+    text-size: 16
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+# ── Row 6 ──────────────────────────────────────────────────────────────────
+- index: 81
+  activation:
+    type: page
+    page: overhead-ventilation
+  representation:
+    type: text
+    label: VENTILATION
+    label-color: white
+    text: VENT
+    text-color: deepskyblue
+    text-size: 14
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+- index: 82
+  activation:
+    type: page
+    page: overhead-rcdr
+  representation:
+    type: text
+    label: RCDR
+    label-color: white
+    text: RCDR
+    text-color: deepskyblue
+    text-size: 16
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+- index: 83
+  activation:
+    type: page
+    page: overhead-oxygen
+  representation:
+    type: text
+    label: OXYGEN
+    label-color: white
+    text: OXY
+    text-color: deepskyblue
+    text-size: 16
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+# ── Row 7 ──────────────────────────────────────────────────────────────────
+- index: 94
+  activation:
+    type: page
+    page: overhead-calls
+  representation:
+    type: text
+    label: CALLS
+    label-color: white
+    text: CALLS
+    text-color: deepskyblue
+    text-size: 14
+    text-position: cm
+    text-bg-color: (20, 30, 45)
+- index: 95
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: OHD HUB
+    label-color: gold
+    text: "\uF0CA"
+    text-color: khaki
+    text-size: 32
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

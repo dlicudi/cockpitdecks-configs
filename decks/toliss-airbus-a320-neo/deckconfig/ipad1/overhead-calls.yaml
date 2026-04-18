@@ -1,0 +1,100 @@
+name: overhead-calls
+description: "A320 Overhead — CALLS (mech, fwd, aft, emer)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+- index: 0
+  name: CALL_MECH
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/cabincommands/MechCallToggle
+  representation:
+    type: annunciator
+    label: MECH
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/MechCallSwitch}
+  vibrate: SHORT
+- index: 1
+  name: CALL_FWD
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/cabincommands/FwdCallToggle
+  representation:
+    type: annunciator
+    label: FWD
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/FwdCallSwitch}
+  vibrate: SHORT
+- index: 2
+  name: CALL_AFT
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/cabincommands/AftCallToggle
+  representation:
+    type: annunciator
+    label: AFT
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/AftCallSwitch}
+  vibrate: SHORT
+- index: 3
+  name: CALL_EMER
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/cabincommands/EmerCallToggle
+  representation:
+    type: annunciator
+    label: EMER
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: red
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/EmerCallSwitch}
+  vibrate: SHORT
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

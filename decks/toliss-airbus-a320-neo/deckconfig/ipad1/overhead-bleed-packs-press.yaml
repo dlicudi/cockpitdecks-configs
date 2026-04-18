@@ -1,0 +1,357 @@
+name: overhead-bleed-packs-press
+description: "A320 Overhead — BLEED / PACKS / PRESS (ENG 1/2, HP BLD, X-BLEED, PACK 1/2, hot/ram air, cabin press)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+# ── BLEED ──────────────────────────────────────────────────────────────────
+- index: 0
+  name: BLEED_ENG1
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/ENG1BleedSwitch
+  representation:
+    type: annunciator
+    label: ENG1 BLD
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/ENG1BleedInd} not
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/ENG1BleedSwitch} not
+- index: 1
+  name: X_BLEED_IND
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: X BLEED
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: AUTO
+        text-color: lime
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/XBleedSwitch} 1 eq
+      - text: OPEN
+        text-color: deepskyblue
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/XBleedSwitch} 2 eq
+- index: 2
+  name: BLEED_ENG2
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/ENG2BleedSwitch
+  representation:
+    type: annunciator
+    label: ENG2 BLD
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/ENG2BleedInd} not
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/ENG2BleedSwitch} not
+- index: 3
+  name: HP_BLEED_1
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: HP BLD 1
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/ENG1HPBleedInd}
+- index: 4
+  name: HP_BLEED_2
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: HP BLD 2
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/ENG2HPBleedInd}
+- index: 5
+  name: X_BLEED_SEL
+  activation:
+    type: sweep
+    stops: 3
+    dataref: AirbusFBW/XBleedSwitch
+    set-dataref: AirbusFBW/XBleedSwitch
+    initial-value: 1
+  representation:
+    type: switch
+    label: X BLEED
+    label-size: 9
+    switch:
+      switch-style: round
+      button-fill-color: white
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - SHUT
+      - AUTO
+      - OPEN
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 28
+      tick-label-font: DIN Bold
+      tick-label-color: white
+    formula: ${AirbusFBW/XBleedSwitch}
+  vibrate: SHORT
+# ── PACKS ──────────────────────────────────────────────────────────────────
+- index: 12
+  name: PACK_1
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/Pack1Switch
+  representation:
+    type: annunciator
+    label: PACK 1
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/Pack1SwitchIllum} ${AirbusFBW/Pack1FCVInd} - abs
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/Pack1SwitchIllum} not
+  vibrate: SHORT
+- index: 13
+  name: PACK_FLOW
+  activation:
+    type: sweep
+    stops: 3
+    dataref: AirbusFBW/PackFlowSel
+    set-dataref: AirbusFBW/PackFlowSel
+    initial-value: 1
+  representation:
+    type: switch
+    label: PACK FLOW
+    label-size: 9
+    switch:
+      switch-style: round
+      button-fill-color: white
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - LO
+      - NORM
+      - HI
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 28
+      tick-label-font: DIN Bold
+      tick-label-color: white
+    formula: ${AirbusFBW/PackFlowSel}
+  vibrate: SHORT
+- index: 14
+  name: PACK_2
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/Pack2Switch
+  representation:
+    type: annunciator
+    label: PACK 2
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 14
+        formula: ${AirbusFBW/Pack2SwitchIllum} ${AirbusFBW/Pack2FCVInd} - abs
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 14
+        formula: ${AirbusFBW/Pack2SwitchIllum} not
+  vibrate: SHORT
+- index: 15
+  name: HOT_AIR
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/HotAirSwitch
+  representation:
+    type: annunciator
+    label: HOT AIR
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        # VERIFY: switch illuminated (1) but valve closed (0) → fault; needs sim check
+        formula: ${AirbusFBW/HotAirSwitchIllum} ${AirbusFBW/HotAirValve} - abs
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/HotAirSwitch} not
+  vibrate: SHORT
+- index: 16
+  name: RAM_AIR
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/RamAirSwitch
+  representation:
+    type: annunciator
+    label: RAM AIR
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/RamAirSwitch}
+  vibrate: SHORT
+# ── PRESS ──────────────────────────────────────────────────────────────────
+- index: 24
+  name: CAB_PRESS_MODE
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/CabPressMode
+  representation:
+    type: annunciator
+    label: MODE SEL
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: MAN
+        text-color: deepskyblue
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/CabPressModeLights}
+  vibrate: SHORT
+- index: 25
+  name: LDG_ELEV
+  activation:
+    type: none
+  representation:
+    type: text
+    label: LDG ELEV
+    label-size: 9
+    text: ${AirbusFBW/LandElev}
+    text-format: '{:.0f}'
+    text-font: Seven Segment.ttf
+    text-size: 32
+    text-color: lime
+    text-bg-color: (40, 40, 40)
+- index: 26
+  name: CAB_ALT
+  activation:
+    type: none
+  representation:
+    type: text
+    label: CAB ALT
+    label-size: 9
+    text: ${AirbusFBW/CabinAlt}
+    text-format: '{:.0f}'
+    text-font: Seven Segment.ttf
+    text-size: 32
+    text-color: lime
+    text-bg-color: (40, 40, 40)
+- index: 27
+  name: DELTA_P
+  activation:
+    type: none
+  representation:
+    type: text
+    label: DELTA P
+    label-size: 9
+    text: ${AirbusFBW/CabinDeltaP}
+    text-format: '{:.2f}'
+    text-font: Seven Segment.ttf
+    text-size: 32
+    text-color: lime
+    text-bg-color: (40, 40, 40)
+- index: 28
+  name: CAB_VS
+  activation:
+    type: none
+  representation:
+    type: text
+    label: CAB V/S
+    label-size: 9
+    text: ${AirbusFBW/CabinVS}
+    text-format: '{:.0f}'
+    text-font: Seven Segment.ttf
+    text-size: 32
+    text-color: lime
+    text-bg-color: (40, 40, 40)
+- index: 29
+  name: OFV_POS
+  activation:
+    type: none
+  representation:
+    type: text
+    label: OFV POS
+    label-size: 9
+    text: ${AirbusFBW/OutflowValve}
+    text-format: '{:.0f}'
+    text-font: Seven Segment.ttf
+    text-size: 32
+    text-color: lime
+    text-bg-color: (40, 40, 40)
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

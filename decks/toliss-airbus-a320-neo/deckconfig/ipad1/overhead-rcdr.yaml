@@ -1,0 +1,79 @@
+name: overhead-rcdr
+description: "A320 Overhead — RCDR (gnd ctl, cvr erase, cvr test)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+- index: 0
+  name: RCDR_GND_CTL
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/RecorderGndCtlSwitch
+  representation:
+    type: annunciator
+    label: GND CTL
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/RecorderGndCtlSwitch}
+  vibrate: SHORT
+- index: 1
+  name: CVR_ERASE
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/recordercommands/CVREraseToggle
+  representation:
+    type: annunciator
+    label: CVR ERASE
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: ERASE
+        text-color: darkorange
+        framed: true
+        text-size: 16
+        formula: ${AirbusFBW/CVREraseSwitch}
+  vibrate: SHORT
+- index: 2
+  name: CVR_TEST
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/recordercommands/CVRTestToggle
+  representation:
+    type: annunciator
+    label: CVR TEST
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: TEST
+        text-color: deepskyblue
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/CVRTestSwitch}
+  vibrate: SHORT
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

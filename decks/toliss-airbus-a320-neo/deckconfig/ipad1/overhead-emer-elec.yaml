@@ -1,0 +1,106 @@
+name: overhead-emer-elec
+description: "A320 Overhead — EMER ELEC PWR (emer gen test, gen 1 line, rat & emer gen, man on)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+- index: 0
+  name: EMER_GEN_TEST
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/EmerGenTestSwitch
+  representation:
+    type: annunciator
+    label: EMER GEN TEST
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: TEST
+        text-color: deepskyblue
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/EmerGenTestSwitch}
+  vibrate: SHORT
+- index: 1
+  name: GEN1_LINE
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/Gen1LineSwitch
+  representation:
+    type: annunciator
+    label: GEN 1 LINE
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/Gen1LineFaultLight}
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/Gen1LineSwitch}
+  vibrate: SHORT
+- index: 2
+  name: RAT_EMER_GEN
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/eleccommands/RatDeployToggle
+  representation:
+    type: annunciator
+    label: RAT & EMER GEN
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/RatEmerGenFaultLight}
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/RatDeploySwitch}
+  vibrate: SHORT
+- index: 3
+  name: EMER_ELEC_MAN_ON
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/eleccommands/EmerElecManOnToggle
+  representation:
+    type: annunciator
+    label: MAN ON
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: MAN ON
+        text-color: deepskyblue
+        framed: true
+        text-size: 16
+        formula: ${AirbusFBW/EmerElecManOnSwitch}
+  vibrate: SHORT
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

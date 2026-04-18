@@ -1,0 +1,232 @@
+name: overhead-aice-eng
+description: "A320 Overhead — A-ICE / ENG (wing, eng 1/2, probe/win heat, mode sel, master 1/2, man start 1/2)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+# ── A-ICE ──────────────────────────────────────────────────────────────────
+- index: 0
+  name: WING_AI
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/WAISwitch
+  representation:
+    type: annunciator
+    label: WING A/ICE
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/WAILights} 3 eq
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/WAISwitch}
+- index: 1
+  name: ENG1_AI
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/ENG1AISwitch
+  representation:
+    type: annunciator
+    label: ENG1 A/ICE
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/ENG1AILights} 3 eq
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/ENG1AISwitch}
+- index: 2
+  name: ENG2_AI
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/ENG2AISwitch
+  representation:
+    type: annunciator
+    label: ENG2 A/ICE
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/ENG2AILights} 3 eq
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/ENG2AISwitch}
+- index: 3
+  name: PROBE_WIN_HEAT
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/ProbeHeatSwitch
+  representation:
+    type: annunciator
+    label: PRB/WIN HT
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/PRobeHeatLights} 3 eq
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/ProbeHeatSwitch}
+# ── ENG ────────────────────────────────────────────────────────────────────
+- index: 12
+  name: ENG_MODE_SEL
+  activation:
+    type: sweep
+    stops: 3
+    dataref: AirbusFBW/ENGModeSwitch
+    set-dataref: AirbusFBW/ENGModeSwitch
+    initial-value: 1
+  representation:
+    type: switch
+    label: ENG MODE
+    label-size: 9
+    switch:
+      switch-style: round
+      button-fill-color: white
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - CRNK
+      - NORM
+      - IGN
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 26
+      tick-label-font: DIN Bold
+      tick-label-color: white
+    formula: ${AirbusFBW/ENGModeSwitch}
+  vibrate: SHORT
+- index: 13
+  name: ENG_MASTER_1
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/engcommands/Master1Toggle
+  representation:
+    type: annunciator
+    label: ENG MST 1
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/ENG1MasterSwitch}
+      - text: 'OFF'
+        text-color: darkorange
+        text-size: 20
+        formula: ${AirbusFBW/ENG1MasterSwitch} not
+  vibrate: SHORT
+- index: 14
+  name: ENG_MASTER_2
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/engcommands/Master2Toggle
+  representation:
+    type: annunciator
+    label: ENG MST 2
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/ENG2MasterSwitch}
+      - text: 'OFF'
+        text-color: darkorange
+        text-size: 20
+        formula: ${AirbusFBW/ENG2MasterSwitch} not
+  vibrate: SHORT
+- index: 15
+  name: MAN_START_1
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/ManStartSwitchArray[0]
+  representation:
+    type: annunciator
+    label: MAN START 1
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/ManStartLightsArray[0]}
+  guard:
+    dataref: ckpt/engManStart1/cover
+    model: grid
+    color: (255, 0, 0, 100)
+  vibrate: SHORT
+- index: 16
+  name: MAN_START_2
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/ManStartSwitchArray[1]
+  representation:
+    type: annunciator
+    label: MAN START 2
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/ManStartLightsArray[1]}
+  guard:
+    dataref: ckpt/engManStart2/cover
+    model: grid
+    color: (255, 0, 0, 100)
+  vibrate: SHORT
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

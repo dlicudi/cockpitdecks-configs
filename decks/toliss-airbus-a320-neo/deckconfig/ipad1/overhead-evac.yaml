@@ -1,0 +1,84 @@
+name: overhead-evac
+description: "A320 Overhead — EVAC (command, horn shut off, capt & purs)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+- index: 0
+  name: EVAC_COMMAND
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/EvacCommandSwitch
+  representation:
+    type: annunciator
+    label: COMMAND
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/EvacCommandSwitch}
+  vibrate: SHORT
+- index: 1
+  name: EVAC_HORN_SHUT_OFF
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/cabincommands/EvacHornShutOff
+  representation:
+    type: annunciator
+    label: HORN SHUT OFF
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/EvacHornShutOff}
+  vibrate: SHORT
+- index: 2
+  name: EVAC_MODE
+  activation:
+    type: sweep
+    stops: 2
+    set-dataref: AirbusFBW/EvacModeSW
+  representation:
+    type: switch
+    label: CAPT & PURS
+    label-size: 9
+    switch:
+      switch-style: round
+      button-fill-color: white
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - CAPT
+      - CAPT & PURS
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 18
+      tick-label-font: DIN Bold
+      tick-label-color: white
+    formula: ${AirbusFBW/EvacModeSW}
+  vibrate: SHORT
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

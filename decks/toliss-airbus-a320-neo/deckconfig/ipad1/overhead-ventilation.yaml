@@ -1,0 +1,162 @@
+name: overhead-ventilation
+description: "A320 Overhead — VENTILATION (blower, extract, cab fans)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+# ── BLOWER ──────────────────────────────────────────────────────────────────
+- index: 0
+  name: BLOWER
+  activation:
+    type: sweep
+    stops: 3
+    options: 3way,hexa
+    dataref: AirbusFBW/BlowerSwitch
+    set-dataref: AirbusFBW/BlowerSwitch
+  representation:
+    type: switch
+    label: BLOWER
+    label-size: 9
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - OVRD
+      - AUTO
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 22
+      tick-label-font: DIN Bold
+  vibrate: SHORT
+- index: 1
+  name: BLOWER_STATUS
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: BLOWER
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 14
+        formula: ${AirbusFBW/BlowerSwitchLights[1]}
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/BlowerSwitchLights[0]}
+# ── EXTRACT ─────────────────────────────────────────────────────────────────
+- index: 2
+  name: EXTRACT
+  activation:
+    type: sweep
+    stops: 3
+    options: 3way,hexa
+    dataref: AirbusFBW/ExtractSwitch
+    set-dataref: AirbusFBW/ExtractSwitch
+  representation:
+    type: switch
+    label: EXTRACT
+    label-size: 9
+    switch:
+      switch-style: rect
+      button-fill-color: black
+      button-underline-width: 4
+      button-underline-color: coral
+      tick-labels:
+      - OVRD
+      - AUTO
+      - 'OFF'
+      tick-space: 10
+      tick-color: white
+      tick-label-size: 22
+      tick-label-font: DIN Bold
+  vibrate: SHORT
+- index: 3
+  name: EXTRACT_STATUS
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: EXTRACT
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 14
+        formula: ${AirbusFBW/ExtractSwitchLights[1]}
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/ExtractSwitchLights[0]}
+# ── CAB FANS ────────────────────────────────────────────────────────────────
+- index: 4
+  name: CAB_FANS
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/CabinFanSwitch
+  representation:
+    type: annunciator
+    label: CAB FANS
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/CabinFanSwitch}
+      - text: 'OFF'
+        text-color: darkorange
+        text-size: 20
+        formula: ${AirbusFBW/CabinFanSwitch} not
+  vibrate: SHORT
+- index: 5
+  name: CAB_FANS_STATUS
+  activation:
+    type: none
+  representation:
+    type: annunciator
+    label: FANS STATUS
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 14
+        formula: ${AirbusFBW/CabinFanSwitchLights[1]}
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/CabinFanSwitchLights[0]}
+# ── HOME ───────────────────────────────────────────────────────────────────
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

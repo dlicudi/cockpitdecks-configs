@@ -1,0 +1,150 @@
+name: overhead-hyd
+description: "A320 Overhead — HYD (ENG 1/2 pumps, ELEC BLUE/YLW, PTU, RAT)"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+- index: 0
+  name: HYD_ENG1
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/HydOHPArray[0]
+  representation:
+    type: annunciator
+    label: HYD ENG1
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/HydOHPArray[0]} not
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/HydOHPArray[0]} not
+- index: 1
+  name: ELEC_HYD_BLUE
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/HydOHPArray[2]
+  representation:
+    type: annunciator
+    label: ELEC BLUE
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/HydOHPArray[2]} not
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/HydOHPArray[2]} not
+- index: 2
+  name: PTU
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/HydPTUOHP
+  representation:
+    type: annunciator
+    label: PTU
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/HydOHPArray[4]} not
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 18
+        formula: ${AirbusFBW/HydOHPArray[4]} not
+- index: 3
+  name: RAT
+  activation:
+    type: push
+    commands:
+      press: toliss_airbus/hydcommands/PressRATReleaseButton
+  representation:
+    type: annunciator
+    label: RAT MAN ON
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: deepskyblue
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/RATDeployed}
+  vibrate: SHORT
+- index: 4
+  name: HYD_ENG2
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/HydOHPArray[1]
+  representation:
+    type: annunciator
+    label: HYD ENG2
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/HydOHPArray[1]} not
+      - text: 'OFF'
+        text-color: white
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/HydOHPArray[1]} not
+- index: 5
+  name: ELEC_HYD_YELLOW
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/fmod/sys/hydpumps[0]
+  representation:
+    type: annunciator
+    label: ELEC YLW
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: FAULT
+        text-color: darkorange
+        text-size: 16
+        formula: ${AirbusFBW/HydYElecMode} 2 eq
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/fmod/sys/hydpumps[0]}
+- index: 96
+  activation:
+    type: page
+    page: overhead
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)

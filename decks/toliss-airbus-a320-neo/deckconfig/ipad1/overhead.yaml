@@ -1,0 +1,85 @@
+name: overhead
+description: "A320 Overhead — navigation hub"
+includes:
+- overhead-pager
+fill-empty-keys: false
+buttons:
+- index: 0
+  name: CREW_OXY
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/CrewOxySwitch
+  representation:
+    type: annunciator
+    label: CREW OXY
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 100%
+        text-color: deepskyblue
+        framed: true
+        text-size: 16
+        formula: ${AirbusFBW/CrewOxySwitch}
+  vibrate: SHORT
+- index: 1
+  name: CARGO_FWD
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/FwdCargo
+  representation:
+    type: annunciator
+    label: CARGO FWD
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/FwdCargo}
+      - text: 'OFF'
+        text-color: darkorange
+        text-size: 20
+        formula: ${AirbusFBW/FwdCargo} not
+  vibrate: SHORT
+- index: 2
+  name: CARGO_AFT
+  activation:
+    type: sweep
+    set-dataref: AirbusFBW/AftCargo
+  representation:
+    type: annunciator
+    label: CARGO AFT
+    label-size: 9
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'ON'
+        text-color: lime
+        framed: true
+        text-size: 20
+        formula: ${AirbusFBW/AftCargo}
+      - text: 'OFF'
+        text-color: darkorange
+        text-size: 20
+        formula: ${AirbusFBW/AftCargo} not
+  vibrate: SHORT
+- index: 96
+  activation:
+    type: page
+    page: main
+  representation:
+    type: text
+    label: HOME
+    label-color: gold
+    text: "\uF015"
+    text-color: khaki
+    text-size: 40
+    text-font: fontawesome.otf
+    text-position: cm
+    text-bg-color: (40, 40, 40)
