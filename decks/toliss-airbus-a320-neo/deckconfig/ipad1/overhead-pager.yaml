@@ -49,7 +49,7 @@ buttons:
     page: overhead-eng-start
   representation:
     type: text
-    label: ENG START
+    label: ENG
     label-color: white
     text: ENG
     text-color: deepskyblue
@@ -89,9 +89,9 @@ buttons:
     page: overhead-probe-heat
   representation:
     type: text
-    label: PROBE HEAT
+    label: PRB/WIN
     label-color: white
-    text: PROBE
+    text: PRB/WIN
     text-color: deepskyblue
     text-size: 14
     text-position: cm
@@ -115,9 +115,9 @@ buttons:
     page: overhead-bleed-packs-press
   representation:
     type: text
-    label: BLEED
+    label: AIR COND
     label-color: white
-    text: BLD
+    text: COND
     text-color: deepskyblue
     text-size: 16
     text-position: cm
@@ -142,7 +142,7 @@ buttons:
     page: overhead-aice-eng
   representation:
     type: text
-    label: A-ICE
+    label: ANTI ICE
     label-color: white
     text: ICE
     text-color: deepskyblue
@@ -209,7 +209,7 @@ buttons:
     page: overhead-cargo-smoke
   representation:
     type: text
-    label: CARGO SMOKE
+    label: CARGO VENT
     label-color: white
     text: CARGO
     text-color: deepskyblue
