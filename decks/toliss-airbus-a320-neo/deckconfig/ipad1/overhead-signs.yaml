@@ -28,7 +28,7 @@ buttons:
       tick-space: 10
       tick-color: white
       tick-label-size: 26
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-label-color: white
     formula: ${AirbusFBW/SeatBeltSignsOn}
   vibrate: SHORT
@@ -56,7 +56,7 @@ buttons:
       tick-space: 10
       tick-color: white
       tick-label-size: 26
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-label-color: white
     formula: ${AirbusFBW/NoSmokingSignsOn}
   vibrate: SHORT
@@ -84,7 +84,7 @@ buttons:
       tick-space: 10
       tick-color: white
       tick-label-size: 26
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-label-color: white
     formula: ${ckpt/oh/emerExitLight/anim}
   vibrate: SHORT
@@ -126,7 +126,7 @@ buttons:
       needle-color: white
       needle-length: 30
       tick-label-size: 22
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       ticks:
       - 'OFF'
       - SLOW
@@ -158,7 +158,7 @@ buttons:
       needle-color: white
       needle-length: 30
       tick-label-size: 22
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       ticks:
       - 'OFF'
       - SLOW

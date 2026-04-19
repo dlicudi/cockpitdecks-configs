@@ -20,8 +20,8 @@ buttons:
         led: bars
         formula: ${sim/cockpit2/autopilot/servos_on}
       - text: AP
-        text-size: 60
-        text-font: DIN Bold
+        text-size: 30
+        text-font: D-DIN-Bold.otf
         formula: '1'
   vibrate: SHORT
 - index: 1
@@ -40,8 +40,8 @@ buttons:
         led: bars
         formula: ${sim/cockpit2/autopilot/flight_director_mode}
       - text: FD
-        text-size: 60
-        text-font: DIN Bold
+        text-size: 30
+        text-font: D-DIN-Bold.otf
         text-color: Turquoise
         formula: '1'
   vibrate: SHORT
@@ -61,8 +61,8 @@ buttons:
         led: bars
         formula: ${sim/cockpit2/autopilot/heading_status}
       - text: HDG
-        text-size: 60
-        text-font: DIN Bold
+        text-size: 30
+        text-font: D-DIN-Bold.otf
         formula: '1'
   vibrate: SHORT
 - index: 3
@@ -81,8 +81,8 @@ buttons:
         led: bars
         formula: ${sim/cockpit2/autopilot/altitude_hold_status}
       - text: ALT
-        text-size: 60
-        text-font: DIN Bold
+        text-size: 30
+        text-font: D-DIN-Bold.otf
         formula: '1'
   vibrate: SHORT
 - index: 4
@@ -101,8 +101,8 @@ buttons:
         led: bars
         formula: ${sim/cockpit2/autopilot/gpss_status} 2 eq
       - text: NAV
-        text-size: 60
-        text-font: DIN Bold
+        text-size: 30
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 5
   name: VNAV
@@ -120,8 +120,8 @@ buttons:
         led: bars
         formula: ${sim/cockpit2/autopilot/vnav_armed}
       - text: VNAV
-        text-size: 60
-        text-font: DIN Bold
+        text-size: 30
+        text-font: D-DIN-Bold.otf
         text-color: Turquoise
         formula: '1'
   vibrate: SHORT
@@ -141,8 +141,8 @@ buttons:
         led: bars
         formula: ${sim/cockpit2/autopilot/approach_status}
       - text: APR
-        text-size: 60
-        text-font: DIN Bold
+        text-size: 30
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 7
   name: REV
@@ -160,8 +160,8 @@ buttons:
         led: bars
         formula: ${sim/cockpit2/autopilot/backcourse_status}
       - text: REV/BC
-        text-size: 50
-        text-font: DIN Bold
+        text-size: 26
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 8
   name: VS
@@ -179,8 +179,8 @@ buttons:
         led: bars
         formula: ${sim/cockpit2/autopilot/altitude_mode} 4 eq
       - text: VS
-        text-size: 60
-        text-font: DIN Bold
+        text-size: 30
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 9
   activation:
@@ -212,8 +212,8 @@ buttons:
         led: bars
         formula: ${sim/cockpit2/autopilot/altitude_mode} 5 eq
       - text: FLC
-        text-size: 60
-        text-font: DIN Bold
+        text-size: 30
+        text-font: D-DIN-Bold.otf
         text-color: Turquoise
         formula: '1'
   vibrate: SHORT
@@ -234,11 +234,11 @@ buttons:
       parts:
       - text: NAV
         text-color: yellow
-        text-font: DIN Condensed Black.otf
-        text-size: 50
+        text-font: D-DINCondensed-Bold.otf
+        text-size: 26
         formula: ${sim/cockpit/switches/HSI_selector} 0 eq
       - text: GPS
         text-color: lime
-        text-font: DIN Condensed Black.otf
-        text-size: 50
+        text-font: D-DINCondensed-Bold.otf
+        text-size: 26
         formula: ${sim/cockpit/switches/HSI_selector} 2 eq

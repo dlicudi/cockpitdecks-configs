@@ -29,7 +29,7 @@ buttons:
       tick-space: 10
       tick-color: white
       tick-label-size: 18
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
   vibrate: SHORT
 # ── ENG MODE STATUS ─────────────────────────────────────────────────────────
 - index: 1

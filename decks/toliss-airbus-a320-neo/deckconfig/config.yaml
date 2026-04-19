@@ -12,5 +12,12 @@ decks:
     type: Stream Deck XL
     layout: streamdeckxl1
     brightness: 70
+  - name: a320-ipad
+    type: iPad
+    layout: ipad1
+  - name: a320-iphone
+    type: iPhone
+    layout: iphone1
+
 description: Decks for Toliss Airbus A320neo
 # print-page-dir: screendumps/toliss-a220neo

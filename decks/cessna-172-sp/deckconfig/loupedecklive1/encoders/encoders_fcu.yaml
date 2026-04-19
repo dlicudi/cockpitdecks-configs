@@ -71,7 +71,7 @@ buttons:
       labels:
       - label: THR
         label-size: 14
-        label-font: B612-Bold
+        label-font: B612-Bold.ttf
         label-color: Gold
         formula: ${sim/flightmodel/engine/ENGN_thro[0]} 100 *
         text-size: 18
@@ -81,7 +81,7 @@ buttons:
         text: ${formula}%
       - label: HDG
         label-size: 14
-        label-font: B612-Bold
+        label-font: B612-Bold.ttf
         label-color: Gold
         formula: ${sim/cockpit/autopilot/heading_mag}
         text-size: 18
@@ -91,7 +91,7 @@ buttons:
         text: ${formula}
       - label: QNH
         label-size: 14
-        label-font: B612-Bold
+        label-font: B612-Bold.ttf
         label-color: Gold
         formula: ${sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot}
         text-size: 18
@@ -110,7 +110,7 @@ buttons:
       labels:
       - label: ALT
         label-size: 16
-        label-font: B612-Bold
+        label-font: B612-Bold.ttf
         label-color: Gold
         formula: ${sim/cockpit2/autopilot/altitude_dial_ft}
         text-size: 16
@@ -120,7 +120,7 @@ buttons:
         text: ${formula}
       - label: VS
         label-size: 14
-        label-font: B612-Bold
+        label-font: B612-Bold.ttf
         label-color: Gold
         formula: ${sim/cockpit/autopilot/vertical_velocity} 100 /
         text-size: 18
@@ -130,7 +130,7 @@ buttons:
         text: ${formula}
       - label: MIX
         label-size: 14
-        label-font: B612-Bold
+        label-font: B612-Bold.ttf
         label-color: Gold
         formula: ${sim/flightmodel/engine/ENGN_mixt[0]} 100 *
         text-size: 18

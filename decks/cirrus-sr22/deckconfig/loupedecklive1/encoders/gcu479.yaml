@@ -10,7 +10,7 @@ buttons:
   representation:
     type: side-display
     label: RNG
-    label-color: Gold
+
     text: +/-
 - index: e1
   name: range_leftright
@@ -23,7 +23,7 @@ buttons:
   representation:
     type: side-display
     label: PAN
-    label-color: Gold
+
     text: L/R
 - index: e2
   name: range_updown
@@ -36,7 +36,7 @@ buttons:
   representation:
     type: side-display
     label: PAN
-    label-color: Gold
+
     text: U/D
 - index: e3
   name: fms_encoder_outer
@@ -49,7 +49,7 @@ buttons:
   representation:
     type: side-display
     label: FMS
-    label-color: Gold
+
     text: Outer
 - index: e4
   name: fms_encoder_inner
@@ -62,7 +62,7 @@ buttons:
   representation:
     type: side-display
     label: FMS
-    label-color: Gold
+
     text: Inner
 - index: e5
   name: gcu479_encoder
@@ -73,5 +73,5 @@ buttons:
   representation:
     type: side-display
     label: GCU479
-    label-color: Gold
+
     text: COMBO

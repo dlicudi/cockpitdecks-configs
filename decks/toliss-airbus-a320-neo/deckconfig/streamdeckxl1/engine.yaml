@@ -20,7 +20,7 @@ buttons:
         text: ${formula}
       - text: MAN IN HG
         text-size: 32
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 1
   name: RPM
@@ -39,7 +39,7 @@ buttons:
         text-format: '{0:.0f}'
       - text: RPM
         text-size: 42
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 2
   name: FUEL
@@ -79,7 +79,7 @@ buttons:
         text-format: '{0:.0f} °C'
       - text: TIT
         text-size: 42
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 7
   name: CHT
@@ -98,7 +98,7 @@ buttons:
         text-format: '{0:.0f} °C'
       - text: CHT
         text-size: 42
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 4
   name: OIL

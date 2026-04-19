@@ -10,7 +10,7 @@ buttons:
   representation:
     type: side-display
     label: NAV2
-    label-color: Gold
+
     text: MHz
 - index: e1
   name: nav2_fine
@@ -23,5 +23,5 @@ buttons:
   representation:
     type: side-display
     label: NAV2
-    label-color: Gold
+
     text: kHz

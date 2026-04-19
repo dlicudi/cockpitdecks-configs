@@ -29,7 +29,7 @@ buttons:
       tick-space: 10
       tick-color: white
       tick-label-size: 22
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
   vibrate: SHORT
 - index: 1
   name: BEACON
@@ -97,7 +97,7 @@ buttons:
       tick-space: 10
       tick-color: white
       tick-label-size: 22
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
   vibrate: SHORT
 - index: 4
   name: NOSE_TAXI
@@ -123,7 +123,7 @@ buttons:
       tick-space: 10
       tick-color: white
       tick-label-size: 22
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
   vibrate: SHORT
 - index: 5
   name: RWY_TURN_OFF
@@ -171,7 +171,7 @@ buttons:
       tick-space: 10
       tick-color: white
       tick-label-size: 18
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
   vibrate: SHORT
 - index: 13
   name: LAND_R
@@ -197,7 +197,7 @@ buttons:
       tick-space: 10
       tick-color: white
       tick-label-size: 18
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
   vibrate: SHORT
 # ── HOME ───────────────────────────────────────────────────────────────────
 - index: 96

@@ -1,6 +1,6 @@
 # Layout config
 default-label-color: blue
-default-label-font: DIN Medium.ttf
+default-label-font: D-DIN.otf
 default-label-size: 13
 default-text-size: 24
 default-label-position: ct

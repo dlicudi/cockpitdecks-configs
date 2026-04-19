@@ -139,7 +139,7 @@ buttons:
       - 'OFF'
       - NAV
       - ATT
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-label-size: 26
       needle-underline-width: 6
     formula: ${AirbusFBW/ADIRUSwitchArray[0]}
@@ -173,7 +173,7 @@ buttons:
       - 'OFF'
       - NAV
       - ATT
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-label-size: 26
       needle-underline-width: 6
     formula: ${AirbusFBW/ADIRUSwitchArray[2]}
@@ -207,7 +207,7 @@ buttons:
       - 'OFF'
       - NAV
       - ATT
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-label-size: 26
       needle-underline-width: 6
     formula: ${AirbusFBW/ADIRUSwitchArray[1]}

@@ -19,7 +19,7 @@ buttons:
         formula: ${AirbusFBW/FD1Engage}
       - text: FD
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 1
   activation:
@@ -37,7 +37,7 @@ buttons:
         formula: ${AirbusFBW/ILSonCapt}
       - text: LS
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 2
   activation:
@@ -55,7 +55,7 @@ buttons:
         formula: ${AirbusFBW/AP1Engage}
       - text: AP1
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 3
   activation:
@@ -73,7 +73,7 @@ buttons:
         formula: ${AirbusFBW/AP2Engage}
       - text: AP2
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 4
   activation:
@@ -91,7 +91,7 @@ buttons:
         formula: ${AirbusFBW/NDShowCSTRCapt}
       - text: CSTR
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 5
   activation:
@@ -109,7 +109,7 @@ buttons:
         formula: ${AirbusFBW/NDShowWPTCapt}
       - text: WPT
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 6
   activation:
@@ -127,7 +127,7 @@ buttons:
         formula: ${AirbusFBW/NDShowVORDCapt}
       - text: VOR,D
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 7
   activation:
@@ -145,7 +145,7 @@ buttons:
         formula: ${AirbusFBW/NDShowNDBCapt}
       - text: NDB
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 8
   activation:
@@ -163,7 +163,7 @@ buttons:
         formula: ${AirbusFBW/NDShowARPTCapt}
       - text: ARPT
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 9
   activation:
@@ -195,7 +195,7 @@ buttons:
       - NAV
       - ARC
       - PLAN
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-label-size: 30
       needle-underline-width: 8
 - index: 10
@@ -229,6 +229,6 @@ buttons:
       - '80'
       - '160'
       - '320'
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-label-size: 30
       needle-underline-width: 8

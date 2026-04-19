@@ -10,13 +10,11 @@ buttons:
   representation:
     type: text
     label: PFI
-    label-color: Gold
     text: "\uF3FD"
     text-color: khaki
-    text-size: 38
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
-    label-size: 12
   vibrate: SHORT
   label-bg-color: Black
 - index: 1
@@ -26,10 +24,9 @@ buttons:
   representation:
     type: text
     label: SWITCHES
-    label-color: Gold
     text: "\uF204"
     text-color: khaki
-    text-size: 38
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
   vibrate: SHORT
@@ -40,10 +37,9 @@ buttons:
   representation:
     type: text
     label: ICING
-    label-color: Gold
     text: "\uF2DC"
     text-color: khaki
-    text-size: 38
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
   vibrate: SHORT
@@ -54,28 +50,25 @@ buttons:
   representation:
     type: text
     label: WEATHER
-    label-color: Gold
     text: "\uF0C2"
     text-color: khaki
-    text-size: 38
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
   vibrate: SHORT
 - index: 4
-  vibrate: SHORT
   activation:
     type: page
     page: fcu
   representation:
+    type: text
+    label: FCU
+    text: "\uE22D"
+    text-color: khaki
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
-    label: FCU
-    label-size: 19
-    label-color: Gold
-    text: "\uE22D"
-    text-size: 30
-    text-color: khaki
-    type: text
+  vibrate: SHORT
 - index: 5
   activation:
     type: page
@@ -83,10 +76,9 @@ buttons:
   representation:
     type: text
     label: GCU-479
-    label-color: Gold
     text: "\uF2DB"
     text-color: khaki
-    text-size: 15
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
   vibrate: SHORT
@@ -97,10 +89,9 @@ buttons:
   representation:
     type: text
     label: RADIO
-    label-color: Gold
     text: "\uE585"
     text-color: khaki
-    text-size: 15
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
   vibrate: SHORT
@@ -111,10 +102,9 @@ buttons:
   representation:
     type: text
     label: ENGINE
-    label-color: Gold
     text: "\uF085"
     text-color: khaki
-    text-size: 15
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
   vibrate: SHORT
@@ -125,10 +115,9 @@ buttons:
   representation:
     type: text
     label: VIEWS
-    label-color: Gold
     text: "\uF030"
     text-color: khaki
-    text-size: 15
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
   vibrate: SHORT
@@ -139,10 +128,9 @@ buttons:
   representation:
     type: text
     label: XPDR
-    label-color: Gold
     text: "\uF8D7"
     text-color: khaki
-    text-size: 15
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
   vibrate: SHORT
@@ -153,10 +141,9 @@ buttons:
   representation:
     type: text
     label: FMS
-    label-color: Gold
     text: "\uF279"
     text-color: khaki
-    text-size: 15
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
   vibrate: SHORT

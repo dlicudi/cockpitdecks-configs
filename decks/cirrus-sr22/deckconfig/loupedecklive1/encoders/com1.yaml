@@ -10,7 +10,6 @@ buttons:
   representation:
     type: side-display
     label: COM1
-    label-color: Gold
     text: MHz
 - index: e1
   name: com1_fine
@@ -23,5 +22,4 @@ buttons:
   representation:
     type: side-display
     label: COM1
-    label-color: Gold
     text: kHz

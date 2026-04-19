@@ -19,7 +19,7 @@ buttons:
         formula: ${laminar/n844x/audio/COM1MIC}
       - text: COM MIC 1
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 1
   activation:
@@ -37,7 +37,7 @@ buttons:
         formula: ${laminar/n844x/audio/COM1}
       - text: COM 1
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 2
   activation:
@@ -55,7 +55,7 @@ buttons:
         formula: ${laminar/n844x/audio/MKRMUTE}
       - text: MKR MUTE
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 7
   activation:
@@ -73,7 +73,7 @@ buttons:
         formula: ${laminar/n844x/audio/NAV1}
       - text: NAV 1
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 4
   activation:
@@ -91,7 +91,7 @@ buttons:
         formula: ${laminar/n844x/audio/COM2MIC}
       - text: COM MIC 2
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 5
   activation:
@@ -109,7 +109,7 @@ buttons:
         formula: ${laminar/n844x/audio/COM2}
       - text: COM 2
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 10
   activation:
@@ -127,7 +127,7 @@ buttons:
         formula: ${laminar/n844x/audio/ADF}
       - text: ADF 1
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 11
   activation:
@@ -145,7 +145,7 @@ buttons:
         formula: ${laminar/n844x/audio/NAV2}
       - text: NAV 2
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 6
   activation:
@@ -163,7 +163,7 @@ buttons:
         formula: ${laminar/n844x/audio/DME}
       - text: DME
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 3
   activation:
@@ -181,5 +181,5 @@ buttons:
         formula: ${laminar/n844x/audio/HISENS}
       - text: HI SENS
         text-size: 40
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'

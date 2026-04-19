@@ -17,7 +17,7 @@ buttons:
       model: A
       parts:
       - color: lime
-        text-size: 100
+        text-size: 52
         formula: ${sim/flightmodel/engine/ENGN_thro[0]} 100 *
         text: ${formula}%
         text-font: Seven Segment.ttf
@@ -36,7 +36,7 @@ buttons:
       model: A
       parts:
       - color: lime
-        text-size: 100
+        text-size: 52
         formula: ${sim/flightmodel/engine/ENGN_mixt[0]} 100 *
         text: ${formula}%
         text-font: Seven Segment.ttf

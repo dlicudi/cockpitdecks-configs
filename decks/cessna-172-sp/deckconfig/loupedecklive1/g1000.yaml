@@ -14,7 +14,7 @@ buttons:
     text: DIRECT
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 1
@@ -28,7 +28,7 @@ buttons:
     text: MENU
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 2
@@ -42,7 +42,7 @@ buttons:
     text: FPL
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 3
@@ -56,7 +56,7 @@ buttons:
     text: PROC
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 4
@@ -70,7 +70,7 @@ buttons:
     text: CLR
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 5
@@ -84,7 +84,7 @@ buttons:
     text: ENT
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 6
@@ -98,7 +98,7 @@ buttons:
     text: HOME
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 7
@@ -112,7 +112,7 @@ buttons:
     text: < COM >
     text-color: khaki
     text-size: 24
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 8

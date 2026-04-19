@@ -207,7 +207,7 @@ buttons:
       tick-space: 24
       tick-color: white
       tick-label-size: 40
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-label-color: black
     formula: ${sim/cockpit2/controls/flap_ratio} 2 *
 - index: 23

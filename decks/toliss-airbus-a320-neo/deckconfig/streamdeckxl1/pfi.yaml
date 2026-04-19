@@ -168,7 +168,7 @@ buttons:
         text: ${formula}
       - text: FUEL FLOW
         text-size: 36
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 15
   name: FUEL_DURATION
@@ -187,7 +187,7 @@ buttons:
       icon-color: Gold
       data: ${formula}
       data-format: '{:02.0f}'
-      data-font: DIN Condensed Light
+      data-font: D-DINCondensed.otf
       data-color: White
       data-size: 70
       data-unit: hrs
@@ -228,7 +228,7 @@ buttons:
   representation:
     type: switch
     label: TEST
-    label-font: DIN Condensed Regular
+    label-font: D-DINCondensed.otf
     switch:
       switch-style: rect
       button-fill-color: black
@@ -238,7 +238,7 @@ buttons:
       - 'OFF'
       - 'ON'
       tick-label-size: 42
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
       tick-underline: false
 - index: 18
   name: WAYPOINT
@@ -295,7 +295,7 @@ buttons:
 
           CAUTION'
         text-color: Black
-        text-font: DIN Condensed Black.otf
+        text-font: D-DINCondensed-Bold.otf
         text-size: 65
         formula: ${sim/cockpit2/annunciators/oil_pressure_low[0]}
         invert-color: darkorange
@@ -310,7 +310,7 @@ buttons:
       parts:
       - text: ALT
         text-color: Black
-        text-font: DIN Condensed Black.otf
+        text-font: D-DINCondensed-Bold.otf
         text-size: 76
         formula: ${sim/cockpit2/annunciators/generator_off[0]}
         invert-color: firebrick
@@ -329,7 +329,7 @@ buttons:
 
           LOW'
         text-color: Black
-        text-font: DIN Condensed Black.otf
+        text-font: D-DINCondensed-Bold.otf
         text-size: 65
         formula: ${sim/cockpit/warnings/annunciators/fuel_quantity}
         invert-color: firebrick
@@ -346,7 +346,7 @@ buttons:
 
           A'
         text-color: Black
-        text-font: DIN Condensed Black.otf
+        text-font: D-DINCondensed-Bold.otf
         text-size: 65
         formula: ${aerobask/dr401/annun_fadecA}
         invert-color: firebrick
@@ -363,7 +363,7 @@ buttons:
 
           B'
         text-color: Black
-        text-font: DIN Condensed Black.otf
+        text-font: D-DINCondensed-Bold.otf
         text-size: 65
         formula: ${aerobask/dr401/annun_fadecA}
         invert-color: firebrick
@@ -380,7 +380,7 @@ buttons:
 
           DOWN'
         text-color: Black
-        text-font: DIN Condensed Black.otf
+        text-font: D-DINCondensed-Bold.otf
         text-size: 65
         formula: ${aerobask/dr401/annun_flaps}
         invert-color: darkorange
@@ -397,7 +397,7 @@ buttons:
 
           HEATING'
         text-color: Black
-        text-font: DIN Condensed Black.otf
+        text-font: D-DINCondensed-Bold.otf
         text-size: 65
         formula: ${aerobask/dr401/annun_pitot}
         invert-color: lime
@@ -414,7 +414,7 @@ buttons:
 
           LEVEL'
         text-color: Black
-        text-font: DIN Condensed Black.otf
+        text-font: D-DINCondensed-Bold.otf
         text-size: 65
         formula: ${sim/cockpit2/annunciators/oil_temperature_high[0]}
         invert-color: firebrick

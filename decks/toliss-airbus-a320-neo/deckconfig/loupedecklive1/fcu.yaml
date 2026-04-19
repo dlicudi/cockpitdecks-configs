@@ -22,7 +22,7 @@ buttons:
 
       MACH'
     label-position: cm
-    label-font: DIN Bold
+    label-font: D-DIN-Bold.otf
     label-size: 10
     push-switch:
       button-size: 100
@@ -42,7 +42,7 @@ buttons:
 
         CAUT'
       text-color: darkorange
-      text-font: DIN Condensed Black.otf
+      text-font: D-DINCondensed-Bold.otf
       text-size: 72
       dataref: AirbusFBW/MasterCaut
   vibrate: RUMBLE5
@@ -59,7 +59,7 @@ buttons:
 
         WARN'
       text-color: firebrick
-      text-font: DIN Condensed Black.otf
+      text-font: D-DINCondensed-Bold.otf
       text-size: 72
       dataref: AirbusFBW/MasterWarn
       animation-speed: 2.0
@@ -78,7 +78,7 @@ buttons:
 
 
       100'
-    label-font: DIN Bold
+    label-font: D-DIN-Bold.otf
     label-size: 10
     label-position: cm
     push-switch:
@@ -101,7 +101,7 @@ buttons:
 
       V/S FPA'
     label-position: cm
-    label-font: DIN Bold
+    label-font: D-DIN-Bold.otf
     label-size: 10
     push-switch:
       button-size: 100
@@ -125,7 +125,7 @@ buttons:
         formula: ${AirbusFBW/ATHRmode}
       - text: A/THR
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 5
   name: AP1
@@ -144,7 +144,7 @@ buttons:
         formula: ${AirbusFBW/AP1Engage}
       - text: AP1
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 8
   name: BAROMETRIC
@@ -160,7 +160,7 @@ buttons:
 
       hPa'
     label-position: cm
-    label-font: DIN Bold
+    label-font: D-DIN-Bold.otf
     label-size: 10
     push-switch:
       button-size: 100
@@ -185,7 +185,7 @@ buttons:
         formula: ${AirbusFBW/LOCilluminated}
       - text: LOC
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 11
   name: APPR
@@ -204,7 +204,7 @@ buttons:
         formula: ${AirbusFBW/APPRilluminated}
       - text: APPR
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 10
   name: EXPED
@@ -223,7 +223,7 @@ buttons:
         formula: ${AirbusFBW/EXPEDilluminated}
       - text: EXPED
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 6
   name: AP2
@@ -242,5 +242,5 @@ buttons:
         formula: ${AirbusFBW/AP2Engage}
       - text: AP2
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'

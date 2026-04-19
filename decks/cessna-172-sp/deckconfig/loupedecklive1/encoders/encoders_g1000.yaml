@@ -68,7 +68,7 @@ buttons:
       labels:
       - label: RNG
         label-size: 14
-        label-font: B612-Bold
+        label-font: B612-Bold.ttf
         label-color: Gold
         text-size: 18
         text-font: Seven Segment.ttf
@@ -76,7 +76,7 @@ buttons:
         text: +/-
       - label: PAN
         label-size: 14
-        label-font: B612-Bold
+        label-font: B612-Bold.ttf
         label-color: Gold
         text-size: 18
         text-font: Seven Segment.ttf
@@ -84,7 +84,7 @@ buttons:
         text: L/R
       - label: PAN
         label-size: 14
-        label-font: B612-Bold
+        label-font: B612-Bold.ttf
         label-color: Gold
         text-size: 18
         text-font: Seven Segment.ttf
@@ -101,7 +101,7 @@ buttons:
       labels:
       - label: FMS
         label-size: 14
-        label-font: B612-Bold
+        label-font: B612-Bold.ttf
         label-color: Gold
         text-size: 18
         text-font: Seven Segment.ttf
@@ -109,7 +109,7 @@ buttons:
         text: Outer
       - label: FMS
         label-size: 14
-        label-font: B612-Bold
+        label-font: B612-Bold.ttf
         label-color: Gold
         text-size: 18
         text-font: Seven Segment.ttf
@@ -117,7 +117,7 @@ buttons:
         text: Inner
       - label: GCU478
         label-size: 14
-        label-font: B612-Bold
+        label-font: B612-Bold.ttf
         label-color: Gold
         text-size: 18
         text-font: Seven Segment.ttf

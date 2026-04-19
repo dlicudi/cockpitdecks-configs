@@ -1,0 +1,30 @@
+name: iPad
+driver: virtualdeck
+background:
+  color: "#11161d"
+  alt_color: "#11161d"
+zoom: false
+buttons:
+- name: 0
+  activation:
+    type: none
+    options: corner_radius=10
+  representation:
+    type: none
+  action:
+  - push
+  - swipe
+  feedback: image
+  dimension:
+  - 192
+  - 192
+  layout:
+    offset:
+    - 18
+    - 15
+    spacing:
+    - 12
+    - 12
+  repeat:
+  - 12
+  - 9

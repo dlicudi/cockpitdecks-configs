@@ -14,10 +14,9 @@ buttons:
   representation:
     type: side-display
     label: THR
-    label-size: 25
-    label-color: Gold
+    label-size: 20
     text: ${sim/flightmodel/engine/ENGN_thro[0]} 100 *
-    text-color: yellow
+    text-size: 18
     text-format: '{0:01.0f}%'
 - index: e1
   name: FCU Heading
@@ -31,9 +30,9 @@ buttons:
   representation:
     type: side-display
     label: HDG
-    label-size: 24
-    label-color: Gold
+    label-size: 20
     text: ${sim/cockpit/autopilot/heading_mag}
+    text-size: 18
     text-format: '{0:00.0f}'
 - index: e2
   name: FCU Baro
@@ -46,10 +45,9 @@ buttons:
   representation:
     type: side-display
     label: QNH
-    label-size: 15
-    label-color: Gold
+    label-size: 20
     text: ${sim/cockpit/misc/barometer_setting}
-    text-size: 19
+    text-size: 18
     text-format: '{0:01.2f}'
 - index: e3
   name: alt_encoder
@@ -64,11 +62,9 @@ buttons:
   representation:
     type: side-display
     label: ALT
-    label-size: 24
-    label-color: Gold
+    label-size: 20
     text: ${sim/cockpit2/autopilot/altitude_dial_ft}
     text-size: 18
-    text-color: white
     text-format: '{0:04.0f}'
 - index: e4
   name: FCU V Speed
@@ -81,11 +77,9 @@ buttons:
   representation:
     type: side-display
     label: VS
-    label-size: 29
-    label-color: Gold
+    label-size: 20
     text: ${sim/cockpit/autopilot/vertical_velocity} 100 /
-    text-size: 20
-    text-color: lime
+    text-size: 18
     text-format: '{0:.0f}'
 - index: e5
   name: mixture_encoder
@@ -98,9 +92,7 @@ buttons:
   representation:
     type: side-display
     label: MIX
-    label-size: 17
-    label-color: Gold
+    label-size: 20
     text: ${sim/flightmodel/engine/ENGN_mixt[0]} 100 *
-    text-size: 17
-    text-color: lime
+    text-size: 18
     text-format: '{0:01.0f}%'

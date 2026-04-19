@@ -18,7 +18,7 @@ buttons:
     text: '0'
     text-color: khaki
     text-size: 40
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 1
@@ -36,7 +36,7 @@ buttons:
     text: '1'
     text-color: khaki
     text-size: 40
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 2
@@ -54,7 +54,7 @@ buttons:
     text: '2'
     text-color: khaki
     text-size: 40
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 3
@@ -72,7 +72,7 @@ buttons:
     text: '3'
     text-color: khaki
     text-size: 40
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 4
@@ -90,7 +90,7 @@ buttons:
     text: '4'
     text-color: khaki
     text-size: 40
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 5
@@ -108,7 +108,7 @@ buttons:
     text: '5'
     text-color: khaki
     text-size: 40
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 6
@@ -126,7 +126,7 @@ buttons:
     text: '6'
     text-color: khaki
     text-size: 40
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 7
@@ -144,7 +144,7 @@ buttons:
     text: '7'
     text-color: khaki
     text-size: 40
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 8
@@ -160,7 +160,7 @@ buttons:
     text: 3D COCKPIT
     text-color: khaki
     text-size: 20
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 9
@@ -176,7 +176,7 @@ buttons:
     text: CHASE
     text-color: khaki
     text-size: 20
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 10
@@ -192,7 +192,7 @@ buttons:
     text: FORWARD
     text-color: khaki
     text-size: 20
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
 - index: 11
@@ -208,6 +208,6 @@ buttons:
     text: PHYSICS
     text-color: khaki
     text-size: 20
-    text-font: DIN Condensed Light
+    text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (40, 40, 40)

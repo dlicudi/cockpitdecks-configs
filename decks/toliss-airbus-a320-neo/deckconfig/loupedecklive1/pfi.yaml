@@ -167,7 +167,7 @@ buttons:
         text: ${formula}
       - text: FUEL FLOW
         text-size: 36
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
 - index: 7
   name: FUEL_DURATION
@@ -186,7 +186,7 @@ buttons:
       icon-color: Gold
       data: ${formula}
       data-format: '{:02.0f}'
-      data-font: DIN Condensed Light
+      data-font: D-DINCondensed.otf
       data-color: White
       data-size: 70
       data-unit: hrs
@@ -233,12 +233,12 @@ buttons:
 
           CAUTION'
         text-color: darkorange
-        text-font: DIN Condensed Black.otf
+        text-font: D-DINCondensed-Bold.otf
         text-size: 26
         formula: ${sim/cockpit2/annunciators/oil_pressure_low[0]}
       - text: ALT
         text-color: firebrick
-        text-font: DIN Condensed Black.otf
+        text-font: D-DINCondensed-Bold.otf
         text-size: 34
         formula: ${sim/cockpit2/annunciators/generator_off[0]}
       - text: 'FUEL
@@ -247,14 +247,14 @@ buttons:
 
           LEVEL'
         text-color: firebrick
-        text-font: DIN Condensed Black.otf
+        text-font: D-DINCondensed-Bold.otf
         text-size: 28
         formula: ${sim/cockpit/warnings/annunciators/fuel_quantity}
       - text: 'FADEC
 
           A'
         text-color: firebrick
-        text-font: DIN Condensed Black.otf
+        text-font: D-DINCondensed-Bold.otf
         text-size: 32
         formula: ${aerobask/dr401/annun_fadecA}
 - index: 10
@@ -273,28 +273,28 @@ buttons:
 
           B'
         text-color: firebrick
-        text-font: DIN Condensed Black.otf
+        text-font: D-DINCondensed-Bold.otf
         text-size: 32
         formula: ${aerobask/dr401/annun_fadecB}
       - text: 'FLAPS
 
           DOWN'
         text-color: darkorange
-        text-font: DIN Condensed Black.otf
+        text-font: D-DINCondensed-Bold.otf
         text-size: 26
         formula: ${aerobask/dr401/annun_flaps}
       - text: 'PITOT
 
           HEATING'
         text-color: lime
-        text-font: DIN Condensed Black.otf
+        text-font: D-DINCondensed-Bold.otf
         text-size: 30
         formula: ${aerobask/dr401/annun_pitot}
       - text: 'COOLANT
 
           LEVEL'
         text-color: firebrick
-        text-font: DIN Condensed Black.otf
+        text-font: D-DINCondensed-Bold.otf
         text-size: 26
         formula: ${sim/cockpit2/annunciators/oil_temperature_high[0]}
 - index: 11

@@ -29,7 +29,7 @@ buttons:
       tick-space: 10
       tick-color: white
       tick-label-size: 22
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
   vibrate: SHORT
 # ── ANN LT ──────────────────────────────────────────────────────────────────
 - index: 1
@@ -56,7 +56,7 @@ buttons:
       tick-space: 10
       tick-color: white
       tick-label-size: 22
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
   vibrate: SHORT
 # ── STBY COMPASS ────────────────────────────────────────────────────────────
 - index: 2
@@ -82,7 +82,7 @@ buttons:
       tick-space: 10
       tick-color: white
       tick-label-size: 22
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
   vibrate: SHORT
 # ── STBY COMPASS LIGHT (ckpt anim) ──────────────────────────────────────────
 - index: 3

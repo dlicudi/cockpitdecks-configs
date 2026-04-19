@@ -29,7 +29,7 @@ buttons:
       tick-space: 10
       tick-color: white
       tick-label-size: 22
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
   vibrate: SHORT
 - index: 1
   name: BLOWER_STATUS
@@ -77,7 +77,7 @@ buttons:
       tick-space: 10
       tick-color: white
       tick-label-size: 22
-      tick-label-font: DIN Bold
+      tick-label-font: D-DIN-Bold.otf
   vibrate: SHORT
 - index: 3
   name: EXTRACT_STATUS

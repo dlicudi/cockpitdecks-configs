@@ -1042,8 +1042,8 @@ buttons:
       switch-style: medium
       button-size: 40
       down: 20
-      angle-start: 120
-      angle-end: 240
+      angle-start: 320
+      angle-end: 80
       tick-space: 40
       tick-underline-width: 6
       needle-color: white

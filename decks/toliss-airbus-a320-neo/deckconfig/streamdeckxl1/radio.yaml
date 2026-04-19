@@ -126,7 +126,7 @@ buttons:
         formula: ${sim/cockpit/radios/transponder_id}
       - text: IDENT
         text-size: 60
-        text-font: DIN Bold
+        text-font: D-DIN-Bold.otf
         formula: '1'
   vibrate: LONG
 - index: 7

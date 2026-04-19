@@ -99,8 +99,8 @@ buttons:
         led: bars
         formula: ${sim/cockpit2/radios/actuators/transponder_mode} 2 eq
       - text: true
-        text-size: 60
-        text-font: DIN Bold
+        text-size: 30
+        text-font: D-DIN-Bold.otf
         formula: '1'
   vibrate: SHORT
 - index: 5
@@ -119,8 +119,8 @@ buttons:
         led: bars
         formula: ${sim/cockpit2/radios/actuators/transponder_mode} 0 eq
       - text: false
-        text-size: 60
-        text-font: DIN Bold
+        text-size: 30
+        text-font: D-DIN-Bold.otf
         formula: '1'
   vibrate: SHORT
 - index: 6
@@ -139,8 +139,8 @@ buttons:
         led: bars
         formula: ${sim/cockpit2/radios/actuators/transponder_mode} 1 eq
       - text: STBY
-        text-size: 60
-        text-font: DIN Bold
+        text-size: 30
+        text-font: D-DIN-Bold.otf
         formula: '1'
   vibrate: SHORT
 - index: 7
@@ -159,8 +159,8 @@ buttons:
         led: bars
         formula: ${sim/cockpit2/radios/actuators/transponder_mode} 3 eq
       - text: ALT
-        text-size: 60
-        text-font: DIN Bold
+        text-size: 30
+        text-font: D-DIN-Bold.otf
         formula: '1'
   vibrate: SHORT
 - index: 8
@@ -179,8 +179,8 @@ buttons:
         led: bars
         formula: ${sim/cockpit/radios/transponder_id}
       - text: IDENT
-        text-size: 60
-        text-font: DIN Bold
+        text-size: 30
+        text-font: D-DIN-Bold.otf
         formula: '1'
   vibrate: SHORT
 - index: 9
@@ -199,8 +199,8 @@ buttons:
         led: bars
         formula: ${sim/cockpit2/radios/actuators/transponder_mode} 4 eq
       - text: TEST
-        text-size: 60
-        text-font: DIN Bold
+        text-size: 30
+        text-font: D-DIN-Bold.otf
         formula: '1'
   vibrate: SHORT
 - index: 10
