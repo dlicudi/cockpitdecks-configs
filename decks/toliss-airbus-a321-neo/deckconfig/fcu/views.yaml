@@ -13,10 +13,10 @@ buttons:
     type: colored-led
     label: Pilot View
     formula: 1
-  colored-led:
-  - 255
-  - 0
-  - 0
+    color:
+    - 255
+    - 0
+    - 0
 - index: b1
   name: View 1
   activation:
@@ -27,10 +27,10 @@ buttons:
     type: colored-led
     label: FD/ND
     formula: 1
-  colored-led:
-  - 255
-  - 128
-  - 0
+    color:
+    - 255
+    - 128
+    - 0
 - index: b2
   name: View 2
   activation:
@@ -41,10 +41,10 @@ buttons:
     type: colored-led
     label: FCU
     formula: 1
-  colored-led:
-  - 255
-  - 255
-  - 0
+    color:
+    - 255
+    - 255
+    - 0
 - index: b3
   name: View 3
   activation:
@@ -55,10 +55,10 @@ buttons:
     type: colored-led
     label: ECAM
     formula: 1
-  colored-led:
-  - 0
-  - 255
-  - 0
+    color:
+    - 0
+    - 255
+    - 0
 - index: b4
   name: View 4
   activation:
@@ -69,10 +69,10 @@ buttons:
     type: colored-led
     label: FMC
     formula: 1
-  colored-led:
-  - 0
-  - 255
-  - 255
+    color:
+    - 0
+    - 255
+    - 255
 - index: b5
   name: View 5
   activation:
@@ -83,10 +83,10 @@ buttons:
     type: colored-led
     label: Piedestal
     formula: 1
-  colored-led:
-  - 0
-  - 0
-  - 255
+    color:
+    - 0
+    - 0
+    - 255
 - index: b6
   name: View 6
   activation:
@@ -97,10 +97,10 @@ buttons:
     type: colored-led
     label: Radios
     formula: 1
-  colored-led:
-  - 128
-  - 0
-  - 255
+    color:
+    - 128
+    - 0
+    - 255
 - index: b7
   name: View 7
   activation:
@@ -111,7 +111,7 @@ buttons:
     type: colored-led
     label: Overhead Panel
     formula: 1
-  colored-led:
-  - 255
-  - 0
-  - 255
+    color:
+    - 255
+    - 0
+    - 255

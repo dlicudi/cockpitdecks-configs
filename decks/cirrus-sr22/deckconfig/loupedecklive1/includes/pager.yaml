@@ -6,7 +6,7 @@ buttons:
     page: index
   representation:
     type: colored-led
-  colored-led: orange
+    color: orange
 - index: b1
   name: P1
   activation:
@@ -14,7 +14,7 @@ buttons:
     page: pfi
   representation:
     type: colored-led
-  colored-led: green
+    color: green
 - index: b2
   name: P2
   activation:
@@ -22,7 +22,7 @@ buttons:
     page: switches_master
   representation:
     type: colored-led
-  colored-led: blue
+    color: blue
 - index: b3
   name: P3
   activation:
@@ -30,7 +30,7 @@ buttons:
     page: fcu
   representation:
     type: colored-led
-  colored-led: red
+    color: red
 - index: b4
   name: P4
   activation:
@@ -38,7 +38,7 @@ buttons:
     page: radio_com1
   representation:
     type: colored-led
-  colored-led: yellow
+    color: yellow
 - index: b5
   name: P5
   activation:
@@ -46,7 +46,7 @@ buttons:
     page: engine
   representation:
     type: colored-led
-  colored-led: green
+    color: green
 - index: b6
   name: P6
   activation:
@@ -54,7 +54,7 @@ buttons:
     page: fms_nav
   representation:
     type: colored-led
-  colored-led: red
+    color: red
 - index: b7
   name: P7
   activation:
@@ -62,4 +62,4 @@ buttons:
     page: transponder
   representation:
     type: colored-led
-  colored-led: orange
+    color: orange

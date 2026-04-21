@@ -1,7 +1,7 @@
 name: transponder
 includes:
-- pager
-- encoders/transponder
+- includes/pager
+- includes/encoder_transponder
 buttons:
 - index: 0
   name: SQUAWK0

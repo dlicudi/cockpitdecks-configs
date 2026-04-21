@@ -1,7 +1,7 @@
 name: gcu479
 includes:
-- pager
-- encoders/gcu479
+- includes/pager
+- includes/encoder_gcu479
 buttons:
 - index: 0
   name: DIRECT

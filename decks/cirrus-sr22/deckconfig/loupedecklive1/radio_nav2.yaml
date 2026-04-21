@@ -1,7 +1,7 @@
 name: radio_nav2
 includes:
-- pager
-- encoders/nav2
+- includes/pager
+- includes/encoder_nav2
 buttons:
 - index: 0
   name: NAV2_STDBY

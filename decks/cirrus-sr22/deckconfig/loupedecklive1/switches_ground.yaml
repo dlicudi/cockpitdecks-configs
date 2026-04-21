@@ -1,7 +1,7 @@
 description: Ground Operations
 includes:
-- pager
-- encoders/fcu
+- includes/pager
+- includes/encoder_fcu
 name: switches_ground
 buttons:
 - index: 0

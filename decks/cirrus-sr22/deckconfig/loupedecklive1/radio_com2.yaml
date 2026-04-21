@@ -1,7 +1,7 @@
 name: radio_com2
 includes:
-- pager
-- encoders/com2
+- includes/pager
+- includes/encoder_com2
 buttons:
 - index: 0
   name: COM2_STDBY

@@ -1,7 +1,7 @@
 name: views
 includes:
-- pager
-- encoders/fcu
+- includes/pager
+- includes/encoder_fcu
 buttons:
 - index: 0
   name: QUICKLOOK0

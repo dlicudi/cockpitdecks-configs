@@ -107,10 +107,10 @@ buttons:
 - index: 31
   activation:
     type: page
-    page: pedestal
+    page: index
   representation:
     type: text
-    label: PEDESTAL
+    label: INDEX
     label-color: Gold
     label-size: 10
     text: 

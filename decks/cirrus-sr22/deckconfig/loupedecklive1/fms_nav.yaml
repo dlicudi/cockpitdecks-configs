@@ -1,7 +1,7 @@
 name: fms_nav
 includes:
-- pager
-- encoders/fms_nav
+- includes/pager
+- includes/encoder_fms_nav
 label-font: D-DINCondensed.otf
 buttons:
 - index: 0

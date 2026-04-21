@@ -6,7 +6,7 @@ buttons:
     page: index
   representation:
     type: colored-led
-  colored-led: orange
+    color: orange
 - index: b1
   name: PAGE_MCP
   activation:
@@ -14,7 +14,7 @@ buttons:
     page: mcp
   representation:
     type: colored-led
-  colored-led: green
+    color: green
 - index: b2
   name: PAGE_OVERHEAD
   activation:
@@ -22,7 +22,7 @@ buttons:
     page: overhead
   representation:
     type: colored-led
-  colored-led: blue
+    color: blue
 - index: b3
   name: PAGE_RADIO
   activation:
@@ -30,7 +30,7 @@ buttons:
     page: radio
   representation:
     type: colored-led
-  colored-led: yellow
+    color: yellow
 - index: b4
   name: PAGE_ENGINE
   activation:
@@ -38,7 +38,7 @@ buttons:
     page: engine
   representation:
     type: colored-led
-  colored-led: green
+    color: green
 - index: b5
   name: PAGE_LIGHTS
   activation:
@@ -46,7 +46,7 @@ buttons:
     page: lights
   representation:
     type: colored-led
-  colored-led: white
+    color: white
 - index: b6
   name: PAGE_ANTIICE
   activation:
@@ -54,11 +54,11 @@ buttons:
     page: antiice
   representation:
     type: colored-led
-  colored-led: cyan
+    color: cyan
 - index: b7
   name: PAGE_BLANK
   activation:
     type: none
   representation:
     type: colored-led
-  colored-led: (20, 20, 20)
+    color: (20, 20, 20)

@@ -220,7 +220,7 @@ buttons:
   representation:
     type: colored-led
     formula: 1
-  colored-led: (255, 128, 0)
+    color: (255, 128, 0)
 - index: b1
   name: ATC1
   activation:
@@ -230,7 +230,7 @@ buttons:
   representation:
     type: colored-led
     formula: 1
-  colored-led: (255, 128, 0)
+    color: (255, 128, 0)
 - index: b2
   name: ATC2
   activation:
@@ -240,7 +240,7 @@ buttons:
   representation:
     type: colored-led
     formula: 1
-  colored-led: (255, 128, 0)
+    color: (255, 128, 0)
 - index: b3
   name: ATC3
   activation:
@@ -250,7 +250,7 @@ buttons:
   representation:
     type: colored-led
     formula: 1
-  colored-led: (255, 128, 0)
+    color: (255, 128, 0)
 - index: b4
   name: ATC4
   activation:
@@ -260,7 +260,7 @@ buttons:
   representation:
     type: colored-led
     formula: 1
-  colored-led: (255, 128, 0)
+    color: (255, 128, 0)
 - index: b5
   name: ATC5
   activation:
@@ -270,7 +270,7 @@ buttons:
   representation:
     type: colored-led
     formula: 1
-  colored-led: (255, 128, 0)
+    color: (255, 128, 0)
 - index: b6
   name: ATC6
   activation:
@@ -280,7 +280,7 @@ buttons:
   representation:
     type: colored-led
     formula: 1
-  colored-led: (255, 128, 0)
+    color: (255, 128, 0)
 - index: b7
   name: ATC7
   activation:
@@ -290,4 +290,4 @@ buttons:
   representation:
     type: colored-led
     formula: 1
-  colored-led: (255, 128, 0)
+    color: (255, 128, 0)

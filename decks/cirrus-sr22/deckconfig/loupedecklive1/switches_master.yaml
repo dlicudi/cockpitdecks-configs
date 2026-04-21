@@ -1,7 +1,7 @@
 description: Master Electrical
 includes:
-- pager
-- encoders/fcu
+- includes/pager
+- includes/encoder_fcu
 name: switches_master
 buttons:
 - index: 0

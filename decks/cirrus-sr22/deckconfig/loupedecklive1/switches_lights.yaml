@@ -1,7 +1,7 @@
 description: Lights
 includes:
-- pager
-- encoders/fcu
+- includes/pager
+- includes/encoder_fcu
 name: switches_lights
 buttons:
 - index: 0

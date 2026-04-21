@@ -13,7 +13,7 @@ buttons:
   representation:
     type: colored-led
     label: ISI
-  colored-led: (255, 0, 255)
+    color: (255, 0, 255)
 - index: b1
   name: Popup PFD1
   activation:
@@ -24,7 +24,7 @@ buttons:
   representation:
     type: colored-led
     label: PFD1
-  colored-led: (255, 0, 0)
+    color: (255, 0, 0)
 - index: b2
   name: Popup ND1
   activation:
@@ -35,7 +35,7 @@ buttons:
   representation:
     type: colored-led
     label: ND1
-  colored-led: (255, 128, 0)
+    color: (255, 128, 0)
 - index: b3
   name: Popup EWD
   activation:
@@ -46,7 +46,7 @@ buttons:
   representation:
     type: colored-led
     label: EWD
-  colored-led: (255, 255, 0)
+    color: (255, 255, 0)
 - index: b4
   name: Popup SD
   activation:
@@ -57,7 +57,7 @@ buttons:
   representation:
     type: colored-led
     label: SD
-  colored-led: (0, 255, 0)
+    color: (0, 255, 0)
 - index: b5
   name: Popup MCDU1
   activation:
@@ -68,7 +68,7 @@ buttons:
   representation:
     type: colored-led
     label: MCDU1
-  colored-led: (0, 255, 255)
+    color: (0, 255, 255)
 - index: b6
   name: Popup Piedestal1
   activation:
@@ -78,7 +78,7 @@ buttons:
   representation:
     type: colored-led
     label: Piedestal1
-  colored-led: (0,0,255)
+    color: (0,0,255)
 - index: b7
   name: Popup Piedestal2
   activation:
@@ -88,4 +88,4 @@ buttons:
   representation:
     type: colored-led
     label: Piedestal2
-  colored-led: (128, 0, 255)
+    color: (128, 0, 255)

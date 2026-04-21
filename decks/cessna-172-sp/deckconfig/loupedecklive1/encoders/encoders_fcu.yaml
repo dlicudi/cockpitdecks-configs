@@ -34,9 +34,12 @@ buttons:
 - index: e3
   name: alt_encoder
   activation:
-    type: encoder-mode
+    type: encoder-push
     commands:
+      press: sim/autopilot/altitude_sync
       long-press: sim/autopilot/altitude_sync
+      cw: sim/autopilot/altitude_up
+      ccw: sim/autopilot/altitude_down
   representation:
     type: none
 - index: e4

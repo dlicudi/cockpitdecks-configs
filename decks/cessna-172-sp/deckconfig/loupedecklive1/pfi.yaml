@@ -17,7 +17,6 @@ buttons:
       model: A
       parts:
       - color: lime
-        text-size: 52
         formula: '1'
         text: ${sim/cockpit2/gauges/indicators/airspeed_kts_pilot}
         text-font: Seven Segment.ttf
@@ -27,20 +26,18 @@ buttons:
   activation:
     type: none
   representation:
-    type: annunciator
     label: HDG
     label-size: 9
     label-color: black
+    type: annunciator
     annunciator:
       size: medium
       model: A
       parts:
-      - color: lime
-        text-size: 52
+      - text: ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag}
         formula: '1'
-        text: ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag}
-        text-font: Seven Segment.ttf
         text-format: '{0:.0f}'
+        color: lime
 - index: 2
   name: ALT
   activation:
@@ -129,27 +126,31 @@ buttons:
       parts:
       - color: yellow
         text-size: 16
-        formula: ${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag} - cos ${sim/cockpit2/gauges/indicators/wind_speed_kts} *
+        formula: ${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag}
+          - cos ${sim/cockpit2/gauges/indicators/wind_speed_kts} *
         text-font: fontawesome.otf
-        text: ↓ ${formula}
+        text: "\u2193 ${formula}"
         text-format: '{0:.0f}'
       - color: yellow
         text-size: 16
-        formula: ${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} 180 + ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag} - cos ${sim/cockpit2/gauges/indicators/wind_speed_kts} *
+        formula: ${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} 180 + ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag}
+          - cos ${sim/cockpit2/gauges/indicators/wind_speed_kts} *
         text-font: fontawesome.otf
-        text: ↑ ${formula}
+        text: "\u2191 ${formula}"
         text-format: '{0:.0f}'
       - color: yellow
         text-size: 16
-        formula: ${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} 180 + ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag} - sin ${sim/cockpit2/gauges/indicators/wind_speed_kts} *
+        formula: ${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} 180 + ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag}
+          - sin ${sim/cockpit2/gauges/indicators/wind_speed_kts} *
         text-font: fontawesome.otf
-        text: → ${formula}
+        text: "\u2192 ${formula}"
         text-format: '{0:.0f}'
       - color: yellow
         text-size: 16
-        formula: ${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag} - sin ${sim/cockpit2/gauges/indicators/wind_speed_kts} *
+        formula: ${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag}
+          - sin ${sim/cockpit2/gauges/indicators/wind_speed_kts} *
         text-font: fontawesome.otf
-        text: ← ${formula}
+        text: "\u2190 ${formula}"
         text-format: '{0:.0f}'
 - index: 6
   name: FLAPS
@@ -197,7 +198,7 @@ buttons:
         text-size: 46
         formula: '1'
         text: ${sim/cockpit2/temperature/outside_air_temp_degc}
-        text-format: '{0:.0f} °C'
+        text-format: "{0:.0f} \xB0C"
 - index: 8
   activation:
     type: none

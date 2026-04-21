@@ -1,7 +1,7 @@
 description: Engine
 includes:
-- pager
-- encoders/fcu
+- includes/pager
+- includes/encoder_fcu
 name: engine
 buttons:
 - index: 0
