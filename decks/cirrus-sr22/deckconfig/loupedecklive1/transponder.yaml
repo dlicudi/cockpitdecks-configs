@@ -104,7 +104,7 @@ buttons:
         formula: '1'
   vibrate: SHORT
 - index: 5
-  name: false
+  name: 'false'
   activation:
     type: push
     commands:

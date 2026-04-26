@@ -1,10 +1,9 @@
-# This is at layout level
 cockpit-color: (40, 40, 40)
 default-label-color: Gold
 default-label-font: D-DIN.otf
 default-label-size: 9
 default-text-color: cyan
-default-text-font: Seven Segment.ttf
+default-text-font: D-DINCondensed.otf
 default-text-size: 9
 default-label-position: ct
 home-page-name: index
