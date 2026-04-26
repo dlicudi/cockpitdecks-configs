@@ -1,9 +1,9 @@
 description: ICE
 includes:
-- pager
-- encoders/encoders_pfd
+- includes/pager
+- includes/encoders_pfd
 name: switches_ice
-default-text-size: 56
+default-text-size: 14
 default-annunciator-color: '#222222'
 buttons:
 - index: 0
@@ -24,7 +24,7 @@ buttons:
           SEP'
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${aerobask/lt_inert_sep} 1 eq
@@ -46,7 +46,7 @@ buttons:
           STALL HT'
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${aerobask/lt_pitot_stall} 1 eq
@@ -68,7 +68,7 @@ buttons:
           HEAT'
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${aerobask/lt_prop_heat} 1 eq
@@ -90,7 +90,7 @@ buttons:
           HEAT'
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${aerobask/lt_windsh_heat} 1 eq
@@ -112,7 +112,7 @@ buttons:
           BOOTS'
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${aerobask/lt_deice_boots} 1 eq
@@ -128,5 +128,5 @@ buttons:
     label-size: 10
     text: ←
     text-font: fontawesome.otf
-    text-size: 48
+    text-size: 36
     text-color: Gold

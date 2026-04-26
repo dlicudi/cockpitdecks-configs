@@ -1,14 +1,14 @@
-name: radio
+name: radio_com2
 includes:
 - includes/pager
 - includes/encoders_radio
 buttons:
 - index: 0
-  name: COM1_STDBY
+  name: COM2_STDBY
   activation:
     type: push
     commands:
-      press: sim/radios/com1_standy_flip
+      press: sim/radios/com2_standy_flip
   representation:
     type: annunciator
     label: STDBY
@@ -20,17 +20,17 @@ buttons:
       - color: cyan
         text-size: 30
         text-font: D-DINCondensed.otf
-        formula: ${sim/cockpit2/radios/actuators/com1_standby_frequency_hz_833} 1000 /
+        formula: ${sim/cockpit2/radios/actuators/com2_standby_frequency_hz_833} 1000 /
         text: ${formula}
         text-format: '{0:.3f}'
   vibrate: SHORT
   render-cooldown-ms: 50
 - index: 1
-  name: COM1_FLIP
+  name: COM2_FLIP
   activation:
     type: push
     commands:
-      press: sim/radios/com1_standy_flip
+      press: sim/radios/com2_standy_flip
   representation:
     type: annunciator
     label: FLIP FLOP
@@ -47,12 +47,12 @@ buttons:
         frame: false
   vibrate: SHORT
 - index: 2
-  name: COM1_ACTIVE
+  name: COM2_ACTIVE
   activation:
     type: none
   representation:
     type: annunciator
-    label: COM1
+    label: COM2
     label-color: white
     annunciator:
       size: medium
@@ -61,34 +61,34 @@ buttons:
       - color: lime
         text-size: 30
         text-font: D-DINCondensed.otf
-        formula: ${sim/cockpit2/radios/actuators/com1_frequency_hz_833} 1000 /
+        formula: ${sim/cockpit2/radios/actuators/com2_frequency_hz_833} 1000 /
         text: ${formula}
         text-format: '{0:.3f}'
   render-cooldown-ms: 50
 - index: 8
   activation:
-    type: none
+    type: page
+    page: radio
   representation:
     type: text
     text: COM1
-    text-color: Gold
-    text-size: 18
-    text-font: D-DINCondensed.otf
-    text-position: cm
-    text-bg-color: (40, 35, 0)
-- index: 9
-  activation:
-    type: page
-    page: radio_com2
-  representation:
-    type: text
-    text: COM2
     text-color: khaki
     text-size: 18
     text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: (20, 20, 20)
   vibrate: SHORT
+- index: 9
+  activation:
+    type: none
+  representation:
+    type: text
+    text: COM2
+    text-color: Gold
+    text-size: 18
+    text-font: D-DINCondensed.otf
+    text-position: cm
+    text-bg-color: (40, 35, 0)
 - index: 10
   activation:
     type: page

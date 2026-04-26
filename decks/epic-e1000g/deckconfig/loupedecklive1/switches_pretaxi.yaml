@@ -1,9 +1,9 @@
 description: PRE-TAXI
 includes:
-- pager
-- encoders/encoders_pfd
+- includes/pager
+- includes/encoders_pfd
 name: switches_pretaxi
-default-text-size: 56
+default-text-size: 14
 default-annunciator-color: '#222222'
 buttons:
 - index: 0
@@ -101,7 +101,7 @@ buttons:
     label-size: 10
     text: ←
     text-font: fontawesome.otf
-    text-size: 48
+    text-size: 36
     text-color: Gold
 - index: 11
   name: Next
@@ -115,5 +115,5 @@ buttons:
     label-size: 10
     text: →
     text-font: fontawesome.otf
-    text-size: 48
+    text-size: 36
     text-color: Gold

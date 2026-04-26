@@ -1,9 +1,8 @@
 description: Switch panel hub
 includes:
-- pager
-- encoders/encoders_pfd
+- includes/pager
+- includes/encoders_pfd
 name: switches
-default-text-size: 56
 buttons:
 - index: 0
   activation:
@@ -16,7 +15,7 @@ buttons:
     label-size: 10
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -31,7 +30,7 @@ buttons:
     label-size: 10
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -46,7 +45,7 @@ buttons:
     label-size: 10
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -61,7 +60,7 @@ buttons:
     label-size: 10
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -76,7 +75,7 @@ buttons:
     label-size: 10
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)

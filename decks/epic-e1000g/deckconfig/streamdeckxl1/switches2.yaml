@@ -1,6 +1,5 @@
 description: Lights and Ice
 name: switches2
-default-text-size: 56
 cockpit-color: '#3a3a3a'
 buttons:
 - index: 0
@@ -19,7 +18,7 @@ buttons:
       - text: STROBE
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${sim/cockpit/electrical/strobe_lights_on} 1 eq
@@ -39,7 +38,7 @@ buttons:
       - text: NAV
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${sim/cockpit/electrical/nav_lights_on} 1 eq
@@ -59,7 +58,7 @@ buttons:
       - text: ICE
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${sim/cockpit2/switches/spot_light_on} 1 eq
@@ -79,7 +78,7 @@ buttons:
       - text: TAXI
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${sim/cockpit2/switches/taxi_light_on} 1 eq
@@ -99,7 +98,7 @@ buttons:
       - text: LAND
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
@@ -121,7 +120,7 @@ buttons:
           BOOTS'
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${aerobask/lt_deice_boots} 1 eq
@@ -143,7 +142,7 @@ buttons:
           HEAT'
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${aerobask/lt_prop_heat} 1 eq
@@ -165,7 +164,7 @@ buttons:
           HEAT'
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${aerobask/lt_windsh_heat} 1 eq
@@ -187,7 +186,7 @@ buttons:
           SEP'
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${aerobask/lt_inert_sep} 1 eq
@@ -209,7 +208,7 @@ buttons:
           STALL HT'
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${aerobask/lt_pitot_stall} 1 eq
@@ -224,7 +223,7 @@ buttons:
     label-color: Gold
     label-size: 11
     text: <
-    text-size: 48
+    text-size: 36
     text-color: Gold
     text-position: cm
     text-bg-color: '#3a3a3a'

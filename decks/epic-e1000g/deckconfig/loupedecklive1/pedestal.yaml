@@ -1,7 +1,7 @@
 name: pedestal
 includes:
-- pager
-- encoders/encoders_pedestal
+- includes/pager
+- includes/encoders_pedestal
 buttons:
 - index: 0
   name: THROTTLE

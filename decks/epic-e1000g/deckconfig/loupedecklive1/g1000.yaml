@@ -1,7 +1,7 @@
 name: g1000
 includes:
-- pager
-- encoders/encoders_g1000
+- includes/pager
+- includes/encoders_g1000
 buttons:
 - index: 0
   name: DIRECT

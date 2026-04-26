@@ -1,7 +1,7 @@
 description: Engine
 includes:
-- pager
-- encoders/encoders_pfd
+- includes/pager
+- includes/encoders_pfd
 name: engine
 buttons:
 - index: 0
@@ -18,12 +18,12 @@ buttons:
       model: B
       parts:
       - color: Lime
-        text-size: 60
+        text-size: 20
         formula: ${sim/cockpit2/engine/indicators/torque_n_mtr[0]} 0.737562 *
         text: ${formula}
         text-format: '{0:.0f}'
       - color: White
-        text-size: 42
+        text-size: 22
         formula: '1'
         text: FT-LB
 - index: 1
@@ -40,12 +40,12 @@ buttons:
       model: B
       parts:
       - color: Lime
-        text-size: 60
+        text-size: 20
         text: ${sim/cockpit2/engine/indicators/ITT_deg_C[0]}
         text-format: '{0:.0f}'
         formula: '1'
       - color: White
-        text-size: 42
+        text-size: 22
         text: °C
         formula: '1'
 - index: 2
@@ -62,12 +62,12 @@ buttons:
       model: B
       parts:
       - color: lime
-        text-size: 42
+        text-size: 22
         text: ${sim/cockpit2/engine/indicators/engine_speed_rpm[0]}
         text-format: '{0:.0f}'
         formula: '1'
       - color: White
-        text-size: 42
+        text-size: 22
         text: RPM
         formula: '1'
 - index: 3
@@ -84,12 +84,12 @@ buttons:
       model: B
       parts:
       - color: lime
-        text-size: 60
+        text-size: 20
         text: ${sim/cockpit2/engine/indicators/N1_percent[0]}
         text-format: '{0:.0f}'
         formula: '1'
       - color: White
-        text-size: 42
+        text-size: 22
         text: '%'
         formula: '1'
 - index: 4
@@ -106,12 +106,12 @@ buttons:
       model: B
       parts:
       - color: lime
-        text-size: 42
+        text-size: 22
         text: ${sim/cockpit2/engine/indicators/oil_pressure_psi[0]}
         text-format: '{0:.0f} PSI'
         formula: '1'
       - color: lime
-        text-size: 42
+        text-size: 22
         text: ${sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]}
         text-format: '{0:.0f} °C'
         formula: '1'
@@ -129,12 +129,12 @@ buttons:
       model: B
       parts:
       - color: Lime
-        text-size: 42
+        text-size: 22
         text: ${sim/cockpit2/electrical/bus_load_amps[0]}
         text-format: '{0:.0f}'
         formula: '1'
       - color: Lime
-        text-size: 42
+        text-size: 22
         text: ${sim/cockpit2/electrical/bus_load_amps[1]}
         text-format: '{0:.0f}'
         formula: '1'
@@ -152,12 +152,12 @@ buttons:
       model: B
       parts:
       - color: lime
-        text-size: 42
+        text-size: 22
         text: ${sim/cockpit2/electrical/bus_volts[0]}
         text-format: '{0:.0f}'
         formula: '1'
       - color: lime
-        text-size: 42
+        text-size: 22
         text: ${sim/cockpit2/electrical/bus_volts[1]}
         text-format: '{0:.0f}'
         formula: '1'
@@ -175,12 +175,12 @@ buttons:
       model: B
       parts:
       - color: lime
-        text-size: 42
+        text-size: 22
         text-format: '{0:.0f}'
         text: ${formula} gal
         formula: ${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn
       - color: lime
-        text-size: 42
+        text-size: 22
         text-format: '{0:.0f}'
         text: ${formula} gal
         formula: ${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn
@@ -198,12 +198,12 @@ buttons:
       model: B
       parts:
       - color: Lime
-        text-size: 42
+        text-size: 22
         text-format: '{0:.0f}'
         text: ${formula} GPH
         formula: ${sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]} 3600 * 0.8 / 3.78541 / 2 roundn
       - color: Lime
-        text-size: 42
+        text-size: 22
         text-format: '{0:.0f}'
         text: ${sim/cockpit2/engine/indicators/fuel_pressure_psi[0]} PSI
         formula: '1'
@@ -221,21 +221,21 @@ buttons:
       model: F
       parts:
       - color: Lime
-        text-size: 36
+        text-size: 20
         text-format: '{0:.1f}'
         formula: ${sim/cockpit2/fuel/fuel_quantity[0]} ${sim/cockpit2/fuel/fuel_quantity[1]} + 0.264172 * 2 roundn
         text: ${formula} g
       - color: Lime
-        text-size: 36
+        text-size: 20
         text-format: '{0:.1f}'
         formula: ${sim/cockpit2/fuel/fuel_totalizer_sum_kg} 0.264172 * 2 roundn
         text: ${formula} g
       - color: White
-        text-size: 36
+        text-size: 20
         text: REM
         formula: '1'
       - color: White
-        text-size: 36
+        text-size: 20
         text: USED
         formula: '1'
 - index: 10
@@ -252,21 +252,21 @@ buttons:
       model: F
       parts:
       - color: Lime
-        text-size: 36
+        text-size: 20
         text-format: '{0:.1f}'
         text: ${sim/cockpit2/electrical/generator_amps[0]} A
         formula: '1'
       - color: Lime
-        text-size: 36
+        text-size: 20
         text-format: '{0:.1f}'
         text: ${sim/cockpit2/electrical/generator_amps[1]} A
         formula: '1'
       - color: White
-        text-size: 36
+        text-size: 20
         text: GEN
         formula: '1'
       - color: White
-        text-size: 36
+        text-size: 20
         text: ALT
         formula: '1'
 - index: 11
@@ -282,13 +282,13 @@ buttons:
     data-bg-color: Black
     data:
       icon: fa:gas-pump
-      icon-size: 60
+      icon-size: 40
       icon-color: Gold
       data: ${formula}
       data-format: '{:02.0f}'
       data-font: D-DINCondensed.otf
       data-color: White
-      data-size: 70
+      data-size: 40
       data-unit: hrs
       data-progress: 20
       data-trend: 1

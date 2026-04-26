@@ -1,7 +1,7 @@
 name: home
 includes:
-- pager
-- encoders/encoders_pfd
+- includes/pager
+- includes/encoders_pfd
 buttons:
 - index: 0
   activation:
@@ -13,7 +13,7 @@ buttons:
     label-color: Gold
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -29,7 +29,7 @@ buttons:
     label-size: 10
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -44,7 +44,7 @@ buttons:
     label-size: 10
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -58,7 +58,7 @@ buttons:
     label-color: Gold
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -72,7 +72,7 @@ buttons:
     label-color: Gold
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 30, 40)
@@ -86,7 +86,7 @@ buttons:
     label-color: Gold
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -114,7 +114,7 @@ buttons:
     label-color: Gold
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -128,7 +128,7 @@ buttons:
     label-color: Gold
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -142,7 +142,7 @@ buttons:
     label-color: Gold
     text: 🌦
     text-color: khaki
-    text-size: 40
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -156,7 +156,7 @@ buttons:
     label-color: Gold
     text: 
     text-color: khaki
-    text-size: 40
+    text-size: 28
     text-font: fontawesome.otf
     text-position: cm
     text-bg-color: (40, 40, 40)

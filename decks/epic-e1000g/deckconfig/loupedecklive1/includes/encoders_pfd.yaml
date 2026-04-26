@@ -36,6 +36,10 @@ buttons:
   activation:
     type: encoder-mode
     commands:
+      cw: sim/autopilot/altitude_up
+      ccw: sim/autopilot/altitude_down
+      cw-off: sim/autopilot/altitude_up
+      ccw-off: sim/autopilot/altitude_down
       long-press: sim/autopilot/altitude_sync
   representation:
     type: none

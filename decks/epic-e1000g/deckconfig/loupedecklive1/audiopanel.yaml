@@ -1,7 +1,7 @@
 name: audiopanel
 includes:
-- pager
-- encoders/encoders_radio
+- includes/pager
+- includes/encoders_radio
 buttons:
 - index: 0
   name: COM MIC 1
@@ -13,7 +13,7 @@ buttons:
     type: text
     text: COM MIC 1
     text-color: khaki
-    text-size: 28
+    text-size: 14
     text-font: D-DIN-Bold.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -27,7 +27,7 @@ buttons:
     type: text
     text: COM 1
     text-color: khaki
-    text-size: 36
+    text-size: 18
     text-font: D-DIN-Bold.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -41,7 +41,7 @@ buttons:
     type: text
     text: MKR MUTE
     text-color: khaki
-    text-size: 28
+    text-size: 14
     text-font: D-DIN-Bold.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -55,7 +55,7 @@ buttons:
     type: text
     text: HI SENS
     text-color: khaki
-    text-size: 32
+    text-size: 18
     text-font: D-DIN-Bold.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -69,7 +69,7 @@ buttons:
     type: text
     text: COM MIC 2
     text-color: khaki
-    text-size: 28
+    text-size: 14
     text-font: D-DIN-Bold.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -83,7 +83,7 @@ buttons:
     type: text
     text: COM 2
     text-color: khaki
-    text-size: 36
+    text-size: 18
     text-font: D-DIN-Bold.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -97,7 +97,7 @@ buttons:
     type: text
     text: DME
     text-color: khaki
-    text-size: 36
+    text-size: 18
     text-font: D-DIN-Bold.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -111,7 +111,7 @@ buttons:
     type: text
     text: NAV 1
     text-color: khaki
-    text-size: 36
+    text-size: 18
     text-font: D-DIN-Bold.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -125,7 +125,7 @@ buttons:
     type: text
     text: ADF 1
     text-color: khaki
-    text-size: 36
+    text-size: 18
     text-font: D-DIN-Bold.otf
     text-position: cm
     text-bg-color: (40, 40, 40)
@@ -139,7 +139,7 @@ buttons:
     type: text
     text: NAV 2
     text-color: khaki
-    text-size: 36
+    text-size: 18
     text-font: D-DIN-Bold.otf
     text-position: cm
     text-bg-color: (40, 40, 40)

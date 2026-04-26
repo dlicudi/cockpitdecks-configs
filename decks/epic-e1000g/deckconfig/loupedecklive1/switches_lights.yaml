@@ -1,9 +1,9 @@
 description: LIGHTS
 includes:
-- pager
-- encoders/encoders_pfd
+- includes/pager
+- includes/encoders_pfd
 name: switches_lights
-default-text-size: 56
+default-text-size: 14
 default-annunciator-color: '#222222'
 buttons:
 - index: 0
@@ -22,7 +22,7 @@ buttons:
       - text: STROBE
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${sim/cockpit/electrical/strobe_lights_on} 1 eq
@@ -42,7 +42,7 @@ buttons:
       - text: NAV
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${sim/cockpit/electrical/nav_lights_on} 1 eq
@@ -62,7 +62,7 @@ buttons:
       - text: TAXI
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${sim/cockpit2/switches/taxi_light_on} 1 eq
@@ -82,7 +82,7 @@ buttons:
       - text: LAND
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
@@ -100,7 +100,7 @@ buttons:
       - text: BEACON
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${sim/cockpit/electrical/beacon_lights_on} 1 eq
@@ -120,7 +120,7 @@ buttons:
       - text: ICE
         color: white
         formula: 1
-      - text: true
+      - text: 'true'
         color: cyan
         framed: false
         formula: ${sim/cockpit2/switches/spot_light_on} 1 eq
@@ -136,7 +136,7 @@ buttons:
     label-size: 10
     text: ←
     text-font: fontawesome.otf
-    text-size: 48
+    text-size: 36
     text-color: Gold
 - index: 11
   name: Next
@@ -150,5 +150,5 @@ buttons:
     label-size: 10
     text: →
     text-font: fontawesome.otf
-    text-size: 48
+    text-size: 36
     text-color: Gold

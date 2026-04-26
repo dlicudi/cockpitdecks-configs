@@ -1,6 +1,5 @@
 description: Switch Panel
 name: switches
-default-text-size: 56
 buttons:
 - index: 0
   name: BATT 1
@@ -358,7 +357,7 @@ buttons:
     label-color: Gold
     label-size: 11
     text: '>'
-    text-size: 48
+    text-size: 36
     text-color: Gold
     text-position: cm
     text-bg-color: '#3a3a3a'
