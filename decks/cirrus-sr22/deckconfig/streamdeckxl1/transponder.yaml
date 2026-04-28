@@ -16,7 +16,7 @@ buttons:
     label-color: White
     text: ${formula}
     text-format: '{:01.0f}'
-    text-size: 19
+    text-size: 60
     text-font: Seven Segment.ttf
     text-color: Lime
     text-bg-color: Black
@@ -36,7 +36,7 @@ buttons:
     label-color: White
     text: ${formula}
     text-format: '{:01.0f}'
-    text-size: 19
+    text-size: 60
     text-font: Seven Segment.ttf
     text-color: Lime
     text-bg-color: Black
@@ -56,7 +56,7 @@ buttons:
     label-color: White
     text: ${formula}
     text-format: '{:01.0f}'
-    text-size: 19
+    text-size: 60
     text-font: Seven Segment.ttf
     text-color: Lime
     text-bg-color: Black
@@ -76,7 +76,7 @@ buttons:
     label-color: White
     text: ${formula}
     text-format: '{:01.0f}'
-    text-size: 19
+    text-size: 60
     text-font: Seven Segment.ttf
     text-color: Lime
     text-bg-color: Black
@@ -98,7 +98,7 @@ buttons:
   representation:
     type: text
     text: '0'
-    text-size: 10
+    text-size: 60
     text-bg-color: Black
     text-font: D-DINCondensed-Bold.otf
 - index: 6
@@ -109,7 +109,7 @@ buttons:
   representation:
     type: text
     text: '1'
-    text-size: 10
+    text-size: 60
     text-bg-color: Black
     text-font: D-DINCondensed-Bold.otf
 - index: 7
@@ -120,7 +120,7 @@ buttons:
   representation:
     type: text
     text: '2'
-    text-size: 10
+    text-size: 60
     text-bg-color: Black
     text-font: D-DINCondensed-Bold.otf
 - index: 8
@@ -251,7 +251,7 @@ buttons:
   representation:
     type: text
     text: '3'
-    text-size: 10
+    text-size: 60
     text-bg-color: Black
     text-font: D-DINCondensed-Bold.otf
 - index: 14
@@ -262,7 +262,7 @@ buttons:
   representation:
     type: text
     text: '4'
-    text-size: 10
+    text-size: 60
     text-bg-color: Black
     text-font: D-DINCondensed-Bold.otf
 - index: 15
@@ -273,7 +273,7 @@ buttons:
   representation:
     type: text
     text: '5'
-    text-size: 10
+    text-size: 60
     text-bg-color: Black
     text-font: D-DINCondensed-Bold.otf
 - index: 16
@@ -380,7 +380,7 @@ buttons:
   representation:
     type: text
     text: '6'
-    text-size: 10
+    text-size: 60
     text-bg-color: Black
     text-font: D-DINCondensed-Bold.otf
 - index: 22
@@ -391,7 +391,7 @@ buttons:
   representation:
     type: text
     text: '7'
-    text-size: 10
+    text-size: 60
     text-bg-color: Black
     text-font: D-DINCondensed-Bold.otf
 - index: 23
@@ -402,6 +402,6 @@ buttons:
   representation:
     type: text
     text: CLR
-    text-size: 10
+    text-size: 50
     text-bg-color: Black
     text-font: D-DINCondensed-Bold.otf
