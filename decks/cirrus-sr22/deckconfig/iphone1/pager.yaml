@@ -1,7 +1,7 @@
 name: pager
 fill-empty-keys: false
 buttons:
-- index: 7
+- index: 45
   vibrate: SHORT
   activation:
     type: page
@@ -14,7 +14,7 @@ buttons:
     text-size: 18
     text-color: khaki
     text-position: cm
-- index: 15
+- index: 46
   vibrate: SHORT
   activation:
     type: page
@@ -27,7 +27,7 @@ buttons:
     text-size: 18
     text-color: khaki
     text-position: cm
-- index: 23
+- index: 47
   activation:
     type: page
     page: fcu
@@ -39,7 +39,7 @@ buttons:
     text-size: 18
     text-color: khaki
     text-position: cm
-- index: 31
+- index: 48
   vibrate: SHORT
   activation:
     type: page

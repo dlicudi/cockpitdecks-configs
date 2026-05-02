@@ -90,44 +90,6 @@ buttons:
         formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
   vibrate: SHORT
 - index: 7
-  vibrate: SHORT
-  activation:
-    type: page
-    page: home
-  representation:
-    text-bg-color: (20, 20, 20)
-    type: text
-    text: HOME
-    text-font: D-DINCondensed.otf
-    text-size: 18
-    text-color: khaki
-    text-position: cm
-- index: 8
-  vibrate: SHORT
-  activation:
-    type: page
-    page: engine
-  representation:
-    text-bg-color: (20, 20, 20)
-    type: text
-    text: ENGINE
-    text-font: D-DINCondensed.otf
-    text-size: 18
-    text-color: khaki
-    text-position: cm
-- index: 9
-  activation:
-    type: page
-    page: fcu
-  representation:
-    text-bg-color: (20, 20, 20)
-    type: text
-    text: FCU
-    text-font: D-DINCondensed.otf
-    text-size: 18
-    text-color: khaki
-    text-position: cm
-- index: 10
   name: ENGINE START
   activation:
     type: begin-end-command
@@ -143,7 +105,7 @@ buttons:
     - ENGINE_START_PRESSED.png
     formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
   vibrate: LONG
-- index: 11
+- index: 8
   activation:
     type: push
     commands:
@@ -165,7 +127,20 @@ buttons:
         formula: ${laminar/sr22/fuel_selector_pos} 0 eq ${laminar/sr22/fuel_selector_pos}
           3 eq +
   vibrate: SHORT
-- index: 15
+- index: 45
+  vibrate: SHORT
+  activation:
+    type: page
+    page: home
+  representation:
+    text-bg-color: (20, 20, 20)
+    type: text
+    text: HOME
+    text-font: D-DINCondensed.otf
+    text-size: 18
+    text-color: khaki
+    text-position: cm
+- index: 46
   vibrate: SHORT
   activation:
     type: page
@@ -178,7 +153,7 @@ buttons:
     text-size: 18
     text-color: khaki
     text-position: cm
-- index: 23
+- index: 47
   activation:
     type: page
     page: fcu
@@ -190,7 +165,7 @@ buttons:
     text-size: 18
     text-color: khaki
     text-position: cm
-- index: 31
+- index: 48
   vibrate: SHORT
   activation:
     type: page

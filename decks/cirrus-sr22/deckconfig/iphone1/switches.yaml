@@ -65,63 +65,23 @@ buttons:
   activation:
     type: push
     commands:
-      press: sim/lights/nav_lights_toggle
+      press: sim/electrical/generator_2_toggle
   representation:
     type: annunciator
-    label: NAV
+    label: ALT 2
     annunciator:
       model: B
       size: medium
       parts:
       - text: 'OFF'
         color: darkorange
-        formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+        formula: ${sim/cockpit2/electrical/generator_on[1]} 0 eq
       - text: 'ON'
         color: deepskyblue
         framed: true
-        formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
+        formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
   vibrate: SHORT
 - index: 4
-  activation:
-    type: push
-    commands:
-      press: sim/lights/generic_13_light_tog
-  representation:
-    type: annunciator
-    label: ICE
-    annunciator:
-      model: B
-      size: medium
-      parts:
-      - text: 'OFF'
-        color: darkorange
-        formula: ${sim/cockpit2/switches/generic_lights_switch[12]} 0 eq
-      - text: 'ON'
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/switches/generic_lights_switch[12]} 1 eq
-  vibrate: SHORT
-- index: 5
-  activation:
-    type: push
-    commands:
-      press: sim/lights/strobe_lights_toggle
-  representation:
-    type: annunciator
-    label: STROBE
-    annunciator:
-      model: B
-      size: medium
-      parts:
-      - text: 'OFF'
-        color: darkorange
-        formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
-      - text: 'ON'
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
-  vibrate: SHORT
-- index: 6
   activation:
     type: push
     commands:
@@ -142,60 +102,47 @@ buttons:
         framed: true
         formula: ${sim/cockpit/electrical/avionics_on} 1 eq
   vibrate: SHORT
+- index: 5
+  activation:
+    type: push
+    commands:
+      press: sim/lights/nav_lights_toggle
+  representation:
+    type: annunciator
+    label: NAV
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/navigation_lights_on} 1 eq
+  vibrate: SHORT
+- index: 6
+  activation:
+    type: push
+    commands:
+      press: sim/lights/strobe_lights_toggle
+  representation:
+    type: annunciator
+    label: STROBE
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit2/switches/strobe_lights_on} 1 eq
+  vibrate: SHORT
 - index: 7
-  vibrate: SHORT
-  activation:
-    type: page
-    page: home
-  representation:
-    text-bg-color: (20, 20, 20)
-    type: text
-    text: HOME
-    text-font: D-DINCondensed.otf
-    text-size: 18
-    text-color: khaki
-    text-position: cm
-- index: 8
-  activation:
-    type: push
-    commands:
-      press: sim/ice/pitot_heat0_tog
-  representation:
-    type: annunciator
-    label: PITOT
-    annunciator:
-      model: B
-      size: medium
-      parts:
-      - text: 'OFF'
-        color: darkorange
-        formula: ${sim/cockpit/switches/pitot_heat_on} 0 eq
-      - text: 'ON'
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
-  vibrate: SHORT
-- index: 9
-  activation:
-    type: push
-    commands:
-      press: sim/electrical/generator_2_toggle
-  representation:
-    type: annunciator
-    label: ALT 2
-    annunciator:
-      model: B
-      size: medium
-      parts:
-      - text: 'OFF'
-        color: darkorange
-        formula: ${sim/cockpit2/electrical/generator_on[1]} 0 eq
-      - text: 'ON'
-        color: deepskyblue
-        framed: true
-        formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
-  vibrate: SHORT
-- index: 10
   activation:
     type: push
     commands:
@@ -215,27 +162,117 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/switches/landing_lights_switch[0]} 1 eq
   vibrate: SHORT
-- index: 11
+- index: 8
   activation:
     type: push
     commands:
-      press: sim/ice/window_heat_tog
+      press: sim/lights/generic_13_light_tog
   representation:
     type: annunciator
-    label: WSHLD
+    label: ICE
     annunciator:
       model: B
       size: medium
       parts:
       - text: 'OFF'
         color: darkorange
-        formula: ${sim/cockpit/switches/anti_ice_window_heat} 0 eq
+        formula: ${sim/cockpit2/switches/generic_lights_switch[12]} 0 eq
       - text: 'ON'
         color: deepskyblue
         framed: true
-        formula: ${sim/cockpit/switches/anti_ice_window_heat} 1 eq
+        formula: ${sim/cockpit2/switches/generic_lights_switch[12]} 1 eq
+  vibrate: SHORT
+- index: 9
+  activation:
+    type: push
+    commands:
+      press: sim/ice/pitot_heat0_tog
+  representation:
+    type: annunciator
+    label: PITOT
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/switches/pitot_heat_on} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
+  vibrate: SHORT
+- index: 10
+  activation:
+    type: sweep
+    initial-value: 0
+    positions:
+    - laminar/sr22/switch/ice_protect_off
+    - laminar/sr22/switch/ice_protect_on
+  representation:
+    type: annunciator
+    formula: ${laminar/sr22/switch/ice_protect}
+    label: ICE PROTECT
+    label-size: 10
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${laminar/sr22/switch/ice_protect} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${laminar/sr22/switch/ice_protect} 1 eq
+  vibrate: SHORT
+- index: 11
+  activation:
+    type: sweep
+    positions:
+    - laminar/sr22/switch/ice_protect_norm
+    - laminar/sr22/switch/ice_protect_high
+  representation:
+    type: annunciator
+    formula: ${laminar/sr22/switch/ice_norm_high}
+    label: NORM/HIGH
+    label-size: 10
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: NORM
+        color: darkorange
+        formula: ${laminar/sr22/switch/ice_norm_high} 0 eq
+      - text: HIGH
+        color: deepskyblue
+        framed: true
+        formula: ${laminar/sr22/switch/ice_norm_high} 1 eq
   vibrate: SHORT
 - index: 12
+  vibrate: SHORT
+  activation:
+    initial-value: 0
+    type: begin-end-command
+    commands:
+      press: laminar/sr22/anti_ice_tks_max
+  representation:
+    formula: ${laminar/sr22/switch/ice_protect}
+    label: MAX
+    label-size: 10
+    type: annunciator
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        formula: ${laminar/sr22/switch/ice_max} 0 eq
+        color: darkorange
+      - text: 'ON'
+        formula: ${laminar/sr22/switch/ice_max} 1 eq
+        color: deepskyblue
+        framed: true
+- index: 13
   activation:
     type: sweep
     positions:
@@ -256,7 +293,169 @@ buttons:
         framed: true
         formula: ${sim/cockpit2/ice/tks_backup_pump} 1 eq
   vibrate: SHORT
+- index: 14
+  activation:
+    type: push
+    commands:
+      press: sim/ice/window_heat_tog
+  representation:
+    type: annunciator
+    label: WSHLD
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: darkorange
+        formula: ${sim/cockpit/switches/anti_ice_window_heat} 0 eq
+      - text: 'ON'
+        color: deepskyblue
+        framed: true
+        formula: ${sim/cockpit/switches/anti_ice_window_heat} 1 eq
+  vibrate: SHORT
 - index: 15
+  activation:
+    type: push
+    commands:
+      press: sim/flight_controls/park_brake_valve_toggle
+  representation:
+    type: annunciator
+    label: PARK BRAKE
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - text: 'OFF'
+        color: green
+        formula: ${sim/cockpit2/controls/park_brake_valve} 0 eq
+        text-size: 14
+      - text: 'ON'
+        color: red
+        framed: true
+        formula: ${sim/cockpit2/controls/park_brake_valve} 1 eq
+        text-size: 14
+      annunciator-style: v
+  vibrate: SHORT
+- index: 18
+  name: throttle_slider
+  span:
+  - 1
+  - 3
+  activation:
+    type: slider
+    set-dataref: sim/flightmodel/engine/ENGN_thro[0]
+    value-min: 0
+    value-max: 1
+  representation:
+    type: slider-icon
+    slider-icon:
+      dataref: sim/flightmodel/engine/ENGN_thro[0]
+      value-min: 0
+      value-max: 1
+      label: POWER
+      fill-color: cyan
+      orientation: vertical
+- index: 19
+  name: mixture_slider
+  span:
+  - 1
+  - 3
+  activation:
+    type: slider
+    set-dataref: sim/flightmodel/engine/ENGN_mixt[0]
+    value-min: 0
+    value-max: 1
+  representation:
+    type: slider-icon
+    slider-icon:
+      dataref: sim/flightmodel/engine/ENGN_mixt[0]
+      value-min: 0
+      value-max: 1
+      label: MIXTURE
+      fill-color: '#ff8c00'
+      orientation: vertical
+- index: 20
+  name: NEW 16
+  activation:
+    type: sweep
+    positions:
+    - laminar/sr22/fuel_sel_left_select
+    - laminar/sr22/fuel_sel_right_select
+  representation:
+    label: FUEL TANKS
+    type: annunciator
+    annunciator:
+      model: F
+      size: medium
+      parts:
+      - text: ${formula} g
+        text-size: 11
+        color: yellow
+        formula: ${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn
+      - text: ${formula} g
+        text-size: 11
+        color: yellow
+        formula: ${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn
+      - text-size: 12
+        color: lime
+        formula: ${laminar/sr22/fuel_selector_pos} 1 eq
+        led: dot
+      - text-size: 12
+        color: lime
+        formula: ${laminar/sr22/fuel_selector_pos} 2 eq
+        led: dot
+- index: 21
+  name: ENGINE START
+  activation:
+    type: begin-end-command
+    commands:
+      press: sim/starters/engage_starter_1
+  representation:
+    type: multi-icons
+    multi-icons:
+    - ENGINE_START.png
+    - ENGINE_START.png
+    - ENGINE_START.png
+    - ENGINE_START.png
+    - ENGINE_START_PRESSED.png
+    formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
+  vibrate: LONG
+- index: 25
+  activation:
+    type: push
+    commands:
+      press: laminar/sr22/fuel_sel_left_off
+  representation:
+    type: annunciator
+    label: FUEL OFF
+    annunciator:
+      model: B
+      size: medium
+      parts:
+      - led: bar
+        color: grey
+        formula: ${laminar/sr22/fuel_selector_pos} 1 eq ${laminar/sr22/fuel_selector_pos}
+          2 eq +
+      - text: 'OFF'
+        color: red
+        framed: true
+        formula: ${laminar/sr22/fuel_selector_pos} 0 eq ${laminar/sr22/fuel_selector_pos}
+          3 eq +
+  vibrate: SHORT
+- index: 45
+  vibrate: SHORT
+  activation:
+    type: page
+    page: home
+  representation:
+    text-bg-color: (20, 20, 20)
+    type: text
+    text: HOME
+    text-font: D-DINCondensed.otf
+    text-size: 18
+    text-color: khaki
+    text-position: cm
+- index: 46
   vibrate: SHORT
   activation:
     type: page
@@ -269,7 +468,7 @@ buttons:
     text-size: 18
     text-color: khaki
     text-position: cm
-- index: 23
+- index: 47
   activation:
     type: page
     page: fcu
@@ -281,7 +480,7 @@ buttons:
     text-size: 18
     text-color: khaki
     text-position: cm
-- index: 31
+- index: 48
   vibrate: SHORT
   activation:
     type: page

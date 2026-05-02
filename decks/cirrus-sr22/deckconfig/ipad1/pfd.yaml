@@ -71,7 +71,7 @@ buttons:
         text-format: '{0:.0f}'
       - color: deepskyblue
         text-size: 12
-        formula: ${sim/cockpit2/gauges/indicators/flight_path_angle_deg}
+        formula: '0'
         text: FPA ${formula}
         text-format: '{0:0.1f}°'
 - index: 4

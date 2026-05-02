@@ -3,7 +3,7 @@ driver: virtualdeck
 background:
   color: "#11161d"
   alt_color: "#11161d"
-zoom: false
+zoom: true
 buttons:
 - name: 0
   index: 0
@@ -13,65 +13,20 @@ buttons:
   representation:
     type: none
   action:
+  - cursor
   - push
   - swipe
   feedback: image
   dimension:
-  - 300
-  - 300
+  - 128
+  - 128
   layout:
     offset:
-    - 156
-    - 27
+    - 4
+    - 4
     spacing:
     - 12
     - 12
   repeat:
-  - 8
-  - 4
-# Slider-capable overrides for buttons 0 and 1: include push and swipe
-# so these buttons retain full action capability alongside cursor/slider.
-- name: 0
-  index: 0
-  activation:
-    type: none
-    options: corner_radius=10
-  representation:
-    type: none
-  action:
-  - cursor
-  - push
-  - swipe
-  feedback: image
-  dimension:
-  - 300
-  - 300
-  layout:
-    offset:
-    - 156
-    - 27
-    spacing:
-    - 12
-    - 12
-- name: 1
-  index: 1
-  activation:
-    type: none
-    options: corner_radius=10
-  representation:
-    type: none
-  action:
-  - cursor
-  - push
-  - swipe
-  feedback: image
-  dimension:
-  - 300
-  - 300
-  layout:
-    offset:
-    - 468
-    - 27
-    spacing:
-    - 12
-    - 12
+  - 5
+  - 10

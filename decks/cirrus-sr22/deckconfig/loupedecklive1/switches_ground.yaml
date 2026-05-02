@@ -159,11 +159,11 @@ buttons:
       - text: ${formula} g
         text-size: 11
         color: yellow
-        formula: ${sim/cockpit2/fuel/fuel_quantity[0]} 0.264172 * 2 roundn
+        formula: ${sim/cockpit2/fuel/fuel_quantity[0]} 2.72 / 2 roundn
       - text: ${formula} g
         text-size: 11
         color: yellow
-        formula: ${sim/cockpit2/fuel/fuel_quantity[1]} 0.264172 * 2 roundn
+        formula: ${sim/cockpit2/fuel/fuel_quantity[1]} 2.72 / 2 roundn
       - text-size: 12
         color: lime
         formula: ${laminar/sr22/fuel_selector_pos} 1 eq
