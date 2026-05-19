@@ -1,6 +1,7 @@
 aircraft: Epic E1000G
 icao: E100
 model:  Epic E1000G
+render-flush-delay-ms: 50
 decks:
   - name: XPLive
     type: LoupedeckLive

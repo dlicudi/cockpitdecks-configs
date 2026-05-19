@@ -123,28 +123,28 @@ buttons:
       model: F
       parts:
       - color: yellow
-        text-size: 28
+        text-size: 12
         formula: ${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag}
           - cos ${sim/cockpit2/gauges/indicators/wind_speed_kts} *
         text-font: fontawesome.otf
         text: "\u2193 ${formula}"
         text-format: '{0:.0f}'
       - color: yellow
-        text-size: 28
+        text-size: 12
         formula: ${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} 180 + ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag}
           - cos ${sim/cockpit2/gauges/indicators/wind_speed_kts} *
         text-font: fontawesome.otf
         text: "\u2191 ${formula}"
         text-format: '{0:.0f}'
       - color: yellow
-        text-size: 28
+        text-size: 12
         formula: ${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} 180 + ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag}
           - sin ${sim/cockpit2/gauges/indicators/wind_speed_kts} *
         text-font: fontawesome.otf
         text: "\u2192 ${formula}"
         text-format: '{0:.0f}'
       - color: yellow
-        text-size: 28
+        text-size: 12
         formula: ${sim/cockpit2/gauges/indicators/wind_heading_deg_mag} ${sim/cockpit2/gauges/indicators/compass_heading_deg_mag}
           - sin ${sim/cockpit2/gauges/indicators/wind_speed_kts} *
         text-font: fontawesome.otf
@@ -164,7 +164,7 @@ buttons:
       model: A
       parts:
       - color: lime
-        text-size: 50
+        text-size: 38
         formula: '1'
         text: ${sim/cockpit2/gauges/indicators/ground_track_mag_pilot}
         text-font: Segment7Standard.otf
@@ -209,7 +209,7 @@ buttons:
     label-size: 9
     label-color: black
     switch:
-      switch-style: large
+      switch-style: medium
       button-fill-color: black
       button-underline-width: 4
       button-underline-color: coral
@@ -237,7 +237,7 @@ buttons:
       model: A
       parts:
       - color: lime
-        text-size: 40
+        text-size: 20
         formula: '1'
         text: "${sim/cockpit2/temperature/outside_air_temp_degc}\xB0C"
         text-font: D-DIN-Bold.otf
@@ -256,7 +256,7 @@ buttons:
       model: A
       parts:
       - color: white
-        text-size: 40
+        text-size: 20
         formula: ${sim/cockpit2/temperature/outside_air_temp_degc} 15 ${sim/cockpit2/gauges/indicators/altitude_ft_pilot}
           0.00198 * - -
         text: ${formula}
@@ -276,7 +276,7 @@ buttons:
       model: B
       parts:
       - color: lime
-        text-size: 24
+        text-size: 16
         formula: '1'
         text: ${sim/cockpit2/clock_timer/local_time_hours}:${sim/cockpit2/clock_timer/local_time_minutes}
         text-font: D-DINCondensed-Bold.otf
@@ -284,7 +284,7 @@ buttons:
           sim/cockpit2/clock_timer/local_time_hours: '{:02.0f}'
           sim/cockpit2/clock_timer/local_time_minutes: '{:02.0f}'
       - color: white
-        text-size: 18
+        text-size: 12
         formula: '1'
         text: ${sim/cockpit2/clock_timer/hobbs_time_hours}:${sim/cockpit2/clock_timer/hobbs_time_minutes}:${sim/cockpit2/clock_timer/hobbs_time_seconds}
         text-font: D-DINCondensed-Bold.otf
@@ -308,14 +308,14 @@ buttons:
       - text: ${sim/cockpit2/radios/indicators/gps_nav_id}
         text-color: Lime
         text-font: D-DINCondensed-Bold.otf
-        text-size: 22
+        text-size: 12
         formula: '1'
       - text: '${sim/cockpit2/radios/indicators/gps_dme_distance_nm}
 
           DIS'
         text-color: Lime
         text-font: D-DINCondensed-Bold.otf
-        text-size: 22
+        text-size: 12
         text-format: '{0:.1f}'
         formula: '1'
       - text: '${sim/cockpit2/radios/indicators/gps_bearing_deg_mag}
@@ -323,7 +323,7 @@ buttons:
           DTK'
         text-color: Lime
         text-font: D-DINCondensed-Bold.otf
-        text-size: 28
+        text-size: 12
         text-format: '{0:.0f}'
         formula: '1'
       - text: '${sim/cockpit2/radios/indicators/gps_dme_time_min} min
@@ -331,7 +331,7 @@ buttons:
           ETA'
         text-color: Lime
         text-font: D-DINCondensed-Bold.otf
-        text-size: 28
+        text-size: 12
         text-format: '{0:.0f}'
         formula: '1'
   string-datarefs:
