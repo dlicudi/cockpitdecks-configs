@@ -22,7 +22,7 @@ buttons:
       - text: STROBE
         color: white
         formula: 1
-      - text: 'true'
+      - text: 'ON'
         color: cyan
         framed: false
         formula: ${sim/cockpit/electrical/strobe_lights_on} 1 eq
@@ -42,7 +42,7 @@ buttons:
       - text: NAV
         color: white
         formula: 1
-      - text: 'true'
+      - text: 'ON'
         color: cyan
         framed: false
         formula: ${sim/cockpit/electrical/nav_lights_on} 1 eq
@@ -62,7 +62,7 @@ buttons:
       - text: TAXI
         color: white
         formula: 1
-      - text: 'true'
+      - text: 'ON'
         color: cyan
         framed: false
         formula: ${sim/cockpit2/switches/taxi_light_on} 1 eq
@@ -82,7 +82,7 @@ buttons:
       - text: LAND
         color: white
         formula: 1
-      - text: 'true'
+      - text: 'ON'
         color: cyan
         framed: false
         formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
@@ -100,7 +100,7 @@ buttons:
       - text: BEACON
         color: white
         formula: 1
-      - text: 'true'
+      - text: 'ON'
         color: cyan
         framed: false
         formula: ${sim/cockpit/electrical/beacon_lights_on} 1 eq
@@ -120,7 +120,7 @@ buttons:
       - text: ICE
         color: white
         formula: 1
-      - text: 'true'
+      - text: 'ON'
         color: cyan
         framed: false
         formula: ${sim/cockpit2/switches/spot_light_on} 1 eq

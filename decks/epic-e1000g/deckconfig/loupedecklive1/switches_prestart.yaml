@@ -69,7 +69,7 @@ buttons:
         color: cyan
         framed: false
         formula: ${sim/cockpit2/switches/avionics_power_on} 1 eq
-- index: 3
+- index: 4
   name: L FUEL PUMP
   activation:
     type: sweep
@@ -92,7 +92,7 @@ buttons:
         color: cyan
         framed: false
         formula: ${aerobask/lt_pump_L} 1 eq
-- index: 4
+- index: 5
   name: R FUEL PUMP
   activation:
     type: sweep
@@ -115,7 +115,7 @@ buttons:
         color: cyan
         framed: false
         formula: ${aerobask/lt_pump_R} 1 eq
-- index: 5
+- index: 6
   name: GEN
   activation:
     type: sweep
