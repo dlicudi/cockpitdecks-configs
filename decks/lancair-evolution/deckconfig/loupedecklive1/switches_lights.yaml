@@ -1,0 +1,99 @@
+description: LIGHTS
+includes:
+- pager
+- encoders/encoders_fcu
+name: switches_lights
+default-text-size: 14
+default-annunciator-color: '#222222'
+buttons:
+- index: 0
+  name: NAV
+  activation:
+    type: sweep
+    dataref: sim/cockpit/electrical/nav_lights_on
+    positions:
+    - sim/lights/nav_lights_on
+    - sim/lights/nav_lights_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: NAV
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit/electrical/nav_lights_on} 1 eq
+- index: 1
+  name: STROBE
+  activation:
+    type: sweep
+    dataref: sim/cockpit/electrical/strobe_lights_on
+    positions:
+    - sim/lights/strobe_lights_on
+    - sim/lights/strobe_lights_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: STROBE
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit/electrical/strobe_lights_on} 1 eq
+- index: 2
+  name: LANDING
+  activation:
+    type: sweep
+    dataref: sim/cockpit/electrical/landing_lights_on
+    positions:
+    - sim/lights/landing_01_light_on
+    - sim/lights/landing_01_light_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: LAND
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit/electrical/landing_lights_on} 1 eq
+- index: 8
+  name: Back
+  activation:
+    type: page
+    page: switches_engine
+  representation:
+    type: text
+    label: ENGINE
+    label-color: Gold
+    label-size: 10
+    text: ←
+    text-font: fontawesome.otf
+    text-size: 36
+    text-color: Gold
+- index: 11
+  name: Next
+  activation:
+    type: page
+    page: switches_ice
+  representation:
+    type: text
+    label: ICE
+    label-color: Gold
+    label-size: 10
+    text: →
+    text-font: fontawesome.otf
+    text-size: 36
+    text-color: Gold

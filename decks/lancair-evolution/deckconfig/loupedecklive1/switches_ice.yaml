@@ -1,0 +1,128 @@
+description: ICE
+includes:
+- pager
+- encoders/encoders_fcu
+name: switches_ice
+default-text-size: 14
+default-annunciator-color: '#222222'
+buttons:
+- index: 0
+  name: PART SEP
+  activation:
+    type: sweep
+    dataref: sim/cockpit/switches/anti_ice_engine_air[0]
+    positions:
+    - sim/altair/alternate_air_on_1
+    - sim/altair/alternate_air_off_1
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'PART
+
+          SEP'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit/switches/anti_ice_engine_air[0]} 1 eq
+- index: 1
+  name: PITOT HEAT
+  activation:
+    type: sweep
+    dataref: sim/cockpit/switches/pitot_heat_on
+    positions:
+    - sim/ice/pitot_heat0_on
+    - sim/ice/pitot_heat0_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'PITOT
+
+          HEAT'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit/switches/pitot_heat_on} 1 eq
+- index: 2
+  name: PROP HEAT
+  activation:
+    type: sweep
+    dataref: sim/cockpit/switches/anti_ice_prop_heat
+    positions:
+    - sim/ice/prop_heat0_on
+    - sim/ice/prop_heat0_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'PROP
+
+          HEAT'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit/switches/anti_ice_prop_heat} 1 eq
+- index: 3
+  name: INLET HEAT
+  activation:
+    type: sweep
+    dataref: sim/cockpit/switches/anti_ice_inlet_heat
+    positions:
+    - sim/ice/inlet_heat0_on
+    - sim/ice/inlet_heat0_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'INLET
+
+          HEAT'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit/switches/anti_ice_inlet_heat} 1 eq
+- index: 8
+  name: Back
+  activation:
+    type: page
+    page: switches_lights
+  representation:
+    type: text
+    label: LIGHTS
+    label-color: Gold
+    label-size: 10
+    text: ←
+    text-font: fontawesome.otf
+    text-size: 36
+    text-color: Gold
+- index: 11
+  name: Next
+  activation:
+    type: page
+    page: switches_systems
+  representation:
+    type: text
+    label: SYSTEMS
+    label-color: Gold
+    label-size: 10
+    text: →
+    text-font: fontawesome.otf
+    text-size: 36
+    text-color: Gold

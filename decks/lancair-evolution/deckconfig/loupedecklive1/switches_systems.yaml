@@ -1,0 +1,128 @@
+description: SYSTEMS
+includes:
+- pager
+- encoders/encoders_fcu
+name: switches_systems
+default-text-size: 14
+default-annunciator-color: '#222222'
+buttons:
+- index: 0
+  name: AUTOPILOT
+  activation:
+    type: sweep
+    dataref: sim/cockpit2/autopilot/autopilot_electric_master
+    positions:
+    - sim/autopilot/electric_master_on
+    - sim/autopilot/electric_master_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'AUTO
+
+          PILOT'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/autopilot/autopilot_electric_master} 1 eq
+- index: 1
+  name: BLEED AIR
+  activation:
+    type: sweep
+    dataref: sim/cockpit2/bleedair/actuators/engine_bleed_sov[0]
+    positions:
+    - sim/bleed_air/engine_1_on
+    - sim/bleed_air/engine_1_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'BLEED
+
+          AIR'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/bleedair/actuators/engine_bleed_sov[0]} 1 eq
+- index: 2
+  name: CBN DUMP
+  activation:
+    type: sweep
+    dataref: sim/cockpit2/pressurization/actuators/dump_all_on
+    positions:
+    - sim/pressurization/dump_on
+    - sim/pressurization/dump_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'CBN
+
+          DUMP'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/pressurization/actuators/dump_all_on} 1 eq
+- index: 3
+  name: DOOR SEALS
+  activation:
+    type: sweep
+    dataref: laminar/n844x/rocker/door_seals
+    positions:
+    - laminar/n844x/door_seals_on
+    - laminar/n844x/door_seals_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'DOOR
+
+          SEALS'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${laminar/n844x/rocker/door_seals} 1 eq
+- index: 8
+  name: Back
+  activation:
+    type: page
+    page: switches_ice
+  representation:
+    type: text
+    label: ICE
+    label-color: Gold
+    label-size: 10
+    text: ←
+    text-font: fontawesome.otf
+    text-size: 36
+    text-color: Gold
+- index: 11
+  name: Next
+  activation:
+    type: page
+    page: switches_electrical
+  representation:
+    type: text
+    label: ELECTRICAL
+    label-color: Gold
+    label-size: 10
+    text: →
+    text-font: fontawesome.otf
+    text-size: 36
+    text-color: Gold

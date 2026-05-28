@@ -1,0 +1,155 @@
+description: ENGINE
+includes:
+- pager
+- encoders/encoders_fcu
+name: switches_engine
+default-text-size: 14
+default-annunciator-color: '#222222'
+buttons:
+- index: 0
+  name: IGN
+  activation:
+    type: sweep
+    dataref: sim/cockpit/engine/igniters_on[0]
+    positions:
+    - sim/igniters/igniter_contin_on_1
+    - sim/igniters/igniter_contin_off_1
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: IGN
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit/engine/igniters_on[0]} 1 eq
+- index: 1
+  name: FUEL PUMP
+  activation:
+    type: sweep
+    dataref: sim/cockpit/engine/fuel_pump_on[0]
+    positions:
+    - sim/fuel/fuel_pump_1_on
+    - sim/fuel/fuel_pump_1_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'FUEL
+
+          PUMP'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit/engine/fuel_pump_on[0]} 1 eq
+- index: 2
+  name: FUEL LEFT
+  activation:
+    type: push
+    commands:
+      press: sim/fuel/fuel_selector_1
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'FUEL L'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 1 eq
+  vibrate: SHORT
+- index: 3
+  name: FUEL RIGHT
+  activation:
+    type: push
+    commands:
+      press: sim/fuel/fuel_selector_3
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'FUEL R'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/fuel/fuel_tank_selector} 3 eq
+  vibrate: SHORT
+- index: 4
+  name: IGNITION
+  activation:
+    type: long-press
+    commands:
+      press: sim/ignition/engage_starter_1
+  representation:
+    type: multi-texts
+    label: IGNITION
+    label-color: Gold
+    label-size: 10
+    text-bg-color: '#222222'
+    multi-texts:
+    - text: 'OFF'
+      text-color: White
+      text-size: 18
+      text-font: D-DINCondensed-Bold.otf
+    - text: R
+      text-color: Orange
+      text-size: 18
+      text-font: D-DINCondensed-Bold.otf
+    - text: L
+      text-color: Orange
+      text-size: 18
+      text-font: D-DINCondensed-Bold.otf
+    - text: BOTH
+      text-color: Orange
+      text-size: 18
+      text-font: D-DINCondensed-Bold.otf
+    - text: START
+      text-color: cyan
+      text-size: 18
+      text-font: D-DINCondensed-Bold.otf
+    formula: ${sim/cockpit2/engine/actuators/ignition_key[0]}
+  vibrate: LONG
+- index: 8
+  name: Back
+  activation:
+    type: page
+    page: switches_electrical
+  representation:
+    type: text
+    label: ELECTRICAL
+    label-color: Gold
+    label-size: 10
+    text: ←
+    text-font: fontawesome.otf
+    text-size: 36
+    text-color: Gold
+- index: 11
+  name: Next
+  activation:
+    type: page
+    page: switches_lights
+  representation:
+    type: text
+    label: LIGHTS
+    label-color: Gold
+    label-size: 10
+    text: →
+    text-font: fontawesome.otf
+    text-size: 36
+    text-color: Gold

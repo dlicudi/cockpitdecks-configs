@@ -14,7 +14,7 @@ buttons:
     type: text
     text: TRK
     text-color: white
-    text-size: 40
+    text-size: 24
     text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: black
@@ -51,7 +51,7 @@ buttons:
     type: text
     text: REV
     text-color: white
-    text-size: 40
+    text-size: 24
     text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: black
@@ -65,7 +65,7 @@ buttons:
     type: text
     text: ALT
     text-color: white
-    text-size: 40
+    text-size: 24
     text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: black
@@ -103,7 +103,7 @@ buttons:
     type: text
     text: VNAV
     text-color: white
-    text-size: 40
+    text-size: 24
     text-font: D-DINCondensed.otf
     text-position: cm
     text-bg-color: black

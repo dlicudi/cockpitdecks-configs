@@ -1,0 +1,166 @@
+description: ELECTRICAL
+includes:
+- pager
+- encoders/encoders_fcu
+name: switches_electrical
+default-text-size: 14
+default-annunciator-color: '#222222'
+buttons:
+- index: 0
+  name: GND PWR
+  activation:
+    type: sweep
+    dataref: sim/cockpit/electrical/gpu_on
+    positions:
+    - sim/electrical/GPU_on
+    - sim/electrical/GPU_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'GND
+
+          PWR'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit/electrical/gpu_on} 1 eq
+- index: 1
+  name: BAT 1
+  activation:
+    type: sweep
+    dataref: sim/cockpit2/electrical/battery_on[0]
+    positions:
+    - sim/electrical/battery_1_on
+    - sim/electrical/battery_1_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: BAT 1
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/battery_on[0]} 1 eq
+- index: 2
+  name: BAT 2
+  activation:
+    type: sweep
+    dataref: sim/cockpit2/electrical/battery_on[1]
+    positions:
+    - sim/electrical/battery_2_on
+    - sim/electrical/battery_2_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: BAT 2
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/battery_on[1]} 1 eq
+- index: 3
+  name: GEN
+  activation:
+    type: sweep
+    dataref: sim/cockpit2/electrical/generator_on[0]
+    positions:
+    - sim/electrical/generator_1_on
+    - sim/electrical/generator_1_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: GEN
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/generator_on[0]} 1 eq
+- index: 4
+  name: ALT
+  activation:
+    type: sweep
+    dataref: sim/cockpit2/electrical/generator_on[1]
+    positions:
+    - sim/electrical/generator_2_on
+    - sim/electrical/generator_2_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: ALT
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/generator_on[1]} 1 eq
+- index: 5
+  name: DC PWR
+  activation:
+    type: sweep
+    dataref: sim/cockpit2/electrical/cross_tie
+    positions:
+    - sim/electrical/cross_tie_on
+    - sim/electrical/cross_tie_off
+  representation:
+    type: annunciator
+    annunciator:
+      model: B
+      size: full
+      parts:
+      - text: 'DC
+
+          PWR'
+        color: white
+        formula: 1
+      - text: 'ON'
+        color: cyan
+        framed: false
+        formula: ${sim/cockpit2/electrical/cross_tie} 1 eq
+- index: 8
+  name: Back
+  activation:
+    type: page
+    page: switches_systems
+  representation:
+    type: text
+    label: SYSTEMS
+    label-color: Gold
+    label-size: 10
+    text: ←
+    text-font: fontawesome.otf
+    text-size: 36
+    text-color: Gold
+- index: 11
+  name: Next
+  activation:
+    type: page
+    page: switches_engine
+  representation:
+    type: text
+    label: ENGINE
+    label-color: Gold
+    label-size: 10
+    text: →
+    text-font: fontawesome.otf
+    text-size: 36
+    text-color: Gold
